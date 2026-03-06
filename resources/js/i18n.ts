@@ -11,8 +11,17 @@ const messages: Record<string, Record<string, string>> = { en, it, es, fr, de, p
 
 export const availableLocales = ['en', 'it', 'es', 'fr', 'de', 'pt'];
 
+function detectLocale(): string {
+    const langs = navigator.languages ?? [navigator.language];
+    for (const lang of langs) {
+        const code = lang.split('-')[0].toLowerCase();
+        if (availableLocales.includes(code)) return code;
+    }
+    return 'en';
+}
+
 export const currentLocale = ref(
-    localStorage.getItem('locale') ?? (navigator.language.startsWith('it') ? 'it' : 'en'),
+    localStorage.getItem('locale') ?? detectLocale(),
 );
 
 export function trans(key: string): string {
