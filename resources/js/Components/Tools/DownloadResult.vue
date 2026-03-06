@@ -18,12 +18,17 @@ const emit = defineEmits<{
 const adContainer = ref<HTMLElement | null>(null);
 
 onMounted(() => {
-    if (adContainer.value && !(window as any).ethicalads) {
+    if (!adContainer.value) return;
+    if (!(window as any).adsbygoogle) {
         const script = document.createElement('script');
-        script.src = 'https://media.ethicalads.io/media/client/ethicalads.min.js';
+        script.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5726322074030092';
         script.async = true;
+        script.crossOrigin = 'anonymous';
         document.head.appendChild(script);
     }
+    try {
+        ((window as any).adsbygoogle = (window as any).adsbygoogle || []).push({});
+    } catch {}
 });
 
 function formatFileSize(bytes: number): string {
@@ -106,14 +111,15 @@ function formatFileSize(bytes: number): string {
             </button>
         </div>
 
-        <!-- EthicalAds banner -->
-        <div class="border-t border-green-200 px-6 py-4">
-            <div
-                ref="adContainer"
-                class="mx-auto max-w-md"
-                data-ea-publisher="pdfworker"
-                data-ea-type="text"
-            ></div>
+        <!-- Google AdSense banner -->
+        <div ref="adContainer" class="border-t border-green-200 px-6 py-4">
+            <ins
+                class="adsbygoogle"
+                style="display:block"
+                data-ad-client="ca-pub-5726322074030092"
+                data-ad-format="auto"
+                data-full-width-responsive="true"
+            ></ins>
         </div>
     </div>
 </template>
