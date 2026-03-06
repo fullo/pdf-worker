@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { onMounted } from 'vue';
 import { trans } from '@/i18n';
+import { useSeoMeta } from '@/Composables/useSeoMeta';
 import HeroSection from '@/Components/UI/HeroSection.vue';
 import ToolCard from '@/Components/UI/ToolCard.vue';
 
@@ -11,7 +12,12 @@ interface ToolItem {
     bgColor: string;
 }
 
-onMounted(() => { document.title = `${trans('home.title')} - PDF Worker`; });
+onMounted(() => {
+    useSeoMeta(
+        'PDF Worker - Free Online PDF Tools',
+        trans('home.description'),
+    );
+});
 
 const tools: ToolItem[] = [
     {
@@ -133,6 +139,18 @@ const tools: ToolItem[] = [
         icon: '\uD83D\uDCDD',
         color: 'text-orange-600',
         bgColor: 'bg-orange-50',
+    },
+    {
+        slug: 'flatten-pdf',
+        icon: '\uD83D\uDDDC\uFE0F',
+        color: 'text-amber-600',
+        bgColor: 'bg-amber-50',
+    },
+    {
+        slug: 'pdf-to-text',
+        icon: '\uD83D\uDCDD',
+        color: 'text-blue-600',
+        bgColor: 'bg-blue-50',
     },
 ];
 </script>

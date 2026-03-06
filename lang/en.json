@@ -232,5 +232,13 @@
 
     "cookie.message": "This site uses cookies for advertising via Google AdSense. Your PDF files are never uploaded or shared. See our ",
     "cookie.accept": "Accept",
-    "cookie.decline": "Decline"
+    "cookie.decline": "Decline",
+
+    "tools.flatten-pdf.name": "Flatten PDF",
+    "tools.flatten-pdf.description": "Flatten form fields and annotations into static content.",
+    "tool.flatten.action": "Flatten PDF",
+
+    "tools.pdf-to-text.name": "PDF to Text",
+    "tools.pdf-to-text.description": "Extract all text content from a PDF document.",
+    "tool.pdftotext.action": "Extract Text"
 }

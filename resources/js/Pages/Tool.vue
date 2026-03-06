@@ -11,6 +11,7 @@ import RedactTool from '@/Components/Tools/RedactTool.vue';
 import SignTool from '@/Components/Tools/SignTool.vue';
 import EditTool from '@/Components/Tools/EditTool.vue';
 import CropTool from '@/Components/Tools/CropTool.vue';
+import OrganizeTool from '@/Components/Tools/OrganizeTool.vue';
 import { useFileHandler } from '@/Composables/useFileHandler';
 import { usePdfTool } from '@/Composables/usePdfTool';
 
@@ -34,6 +35,8 @@ import { extractImages } from '@/Services/pdf/extractImages';
 import { grayscalePdf } from '@/Services/pdf/grayscale';
 import { resizePages, type PaperSize } from '@/Services/pdf/resizePage';
 import { addHeaderFooter, type HeaderFooterOptions } from '@/Services/pdf/headerFooter';
+import { flattenPdf } from '@/Services/pdf/flatten';
+import { pdfToText } from '@/Services/pdf/pdfToText';
 
 import JSZip from 'jszip';
 import { saveAs } from 'file-saver';
@@ -78,6 +81,8 @@ const toolConfig = computed(() => {
         'grayscale-pdf': { accept: '.pdf', multiple: false, color: 'bg-stone-500', bgColor: 'bg-stone-50' },
         'resize-pdf': { accept: '.pdf', multiple: false, color: 'bg-pink-500', bgColor: 'bg-pink-50' },
         'header-footer': { accept: '.pdf', multiple: false, color: 'bg-orange-500', bgColor: 'bg-orange-50' },
+        'flatten-pdf': { accept: '.pdf', multiple: false, color: 'bg-amber-500', bgColor: 'bg-amber-50' },
+        'pdf-to-text': { accept: '.pdf', multiple: false, color: 'bg-blue-500', bgColor: 'bg-blue-50' },
     };
     return configs[props.tool] ?? configs['merge-pdf'];
 });
@@ -131,6 +136,8 @@ const redactToolRef = ref<InstanceType<typeof RedactTool> | null>(null);
 const signToolRef = ref<InstanceType<typeof SignTool> | null>(null);
 // Edit ref
 const editToolRef = ref<InstanceType<typeof EditTool> | null>(null);
+// Organize ref
+const organizeToolRef = ref<InstanceType<typeof OrganizeTool> | null>(null);
 
 // Multi-file results
 const multiResults = ref<{ name: string; blob: Blob }[]>([]);
@@ -157,6 +164,8 @@ const actionLabel = computed(() => {
         'grayscale-pdf': 'tool.grayscale.action',
         'resize-pdf': 'tool.resize.action',
         'header-footer': 'tool.headerfooter.action',
+        'flatten-pdf': 'tool.flatten.action',
+        'pdf-to-text': 'tool.pdftotext.action',
     };
     return trans(labels[props.tool] ?? 'tool.process');
 });
@@ -245,8 +254,9 @@ async function process() {
                 break;
             }
             case 'organize-pdf': {
-                // For now, just pass through (the organize UI would need a page reorder component)
-                const blob = await organizePdf(rawFiles[0], { type: 'reorder', pageOrder: [] }, updateProgress);
+                const pageOrder = organizeToolRef.value?.getPageOrder() ?? [];
+                if (pageOrder.length === 0) break;
+                const blob = await organizePdf(rawFiles[0], { type: 'reorder', pageOrder }, updateProgress);
                 setResult(blob, `organized_${rawFiles[0].name}`);
                 break;
             }
@@ -312,6 +322,17 @@ async function process() {
                 setResult(blob, `headerfooter_${rawFiles[0].name}`);
                 break;
             }
+            case 'flatten-pdf': {
+                const blob = await flattenPdf(rawFiles[0], updateProgress);
+                setResult(blob, `flattened_${rawFiles[0].name}`);
+                break;
+            }
+            case 'pdf-to-text': {
+                const blob = await pdfToText(rawFiles[0], updateProgress);
+                const name = rawFiles[0].name.replace(/\.pdf$/i, '.txt');
+                setResult(blob, name);
+                break;
+            }
         }
         finishProcessing();
     } catch (err) {
@@ -352,7 +373,7 @@ function onAddMoreFiles(event: Event) {
 }
 
 // Tools that don't need extra options panel
-const noOptionsTools = ['merge-pdf', 'extract-images', 'grayscale-pdf'];
+const noOptionsTools = ['merge-pdf', 'extract-images', 'grayscale-pdf', 'flatten-pdf', 'pdf-to-text'];
 </script>
 
 <template>
@@ -583,10 +604,8 @@ const noOptionsTools = ['merge-pdf', 'extract-images', 'grayscale-pdf'];
                     <!-- EDIT PDF -->
                     <EditTool v-else-if="tool === 'edit-pdf'" ref="editToolRef" :pdf-file="hasFiles ? files[0]?.file ?? null : null" />
 
-                    <!-- ORGANIZE - placeholder -->
-                    <div v-else-if="tool === 'organize-pdf'" class="text-center text-sm text-gray-500">
-                        {{ trans(`tools.${tool}.description`) }}
-                    </div>
+                    <!-- ORGANIZE PDF -->
+                    <OrganizeTool v-else-if="tool === 'organize-pdf'" ref="organizeToolRef" :pdf-file="hasFiles ? files[0]?.file ?? null : null" />
 
                     <!-- Default: no extra options -->
                     <div v-else class="text-center text-sm text-gray-500">

@@ -232,5 +232,13 @@
 
     "cookie.message": "Este site usa cookies para publicidade através do Google AdSense. Os seus ficheiros PDF nunca são enviados ou partilhados. Consulte a nossa ",
     "cookie.accept": "Aceitar",
-    "cookie.decline": "Recusar"
+    "cookie.decline": "Recusar",
+
+    "tools.flatten-pdf.name": "Achatar PDF",
+    "tools.flatten-pdf.description": "Achatar campos de formulário e anotações em conteúdo estático.",
+    "tool.flatten.action": "Achatar PDF",
+
+    "tools.pdf-to-text.name": "PDF para Texto",
+    "tools.pdf-to-text.description": "Extrair todo o texto de um documento PDF.",
+    "tool.pdftotext.action": "Extrair Texto"
 }

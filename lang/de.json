@@ -232,5 +232,13 @@
 
     "cookie.message": "Diese Website verwendet Cookies für Werbung über Google AdSense. Ihre PDF-Dateien werden niemals hochgeladen oder weitergegeben. Siehe unsere ",
     "cookie.accept": "Akzeptieren",
-    "cookie.decline": "Ablehnen"
+    "cookie.decline": "Ablehnen",
+
+    "tools.flatten-pdf.name": "PDF glätten",
+    "tools.flatten-pdf.description": "Formularfelder und Anmerkungen in statischen Inhalt umwandeln.",
+    "tool.flatten.action": "PDF glätten",
+
+    "tools.pdf-to-text.name": "PDF zu Text",
+    "tools.pdf-to-text.description": "Gesamten Text aus einem PDF-Dokument extrahieren.",
+    "tool.pdftotext.action": "Text extrahieren"
 }

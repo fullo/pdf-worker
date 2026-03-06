@@ -232,5 +232,13 @@
 
     "cookie.message": "Ce site utilise des cookies pour la publicité via Google AdSense. Vos fichiers PDF ne sont jamais téléchargés ni partagés. Consultez notre ",
     "cookie.accept": "Accepter",
-    "cookie.decline": "Refuser"
+    "cookie.decline": "Refuser",
+
+    "tools.flatten-pdf.name": "Aplatir PDF",
+    "tools.flatten-pdf.description": "Aplatir les champs de formulaire et annotations en contenu statique.",
+    "tool.flatten.action": "Aplatir PDF",
+
+    "tools.pdf-to-text.name": "PDF en Texte",
+    "tools.pdf-to-text.description": "Extraire tout le texte d'un document PDF.",
+    "tool.pdftotext.action": "Extraire le Texte"
 }

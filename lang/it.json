@@ -232,5 +232,13 @@
 
     "cookie.message": "Questo sito utilizza cookie per la pubblicità tramite Google AdSense. I tuoi file PDF non vengono mai caricati o condivisi. Consulta la nostra ",
     "cookie.accept": "Accetta",
-    "cookie.decline": "Rifiuta"
+    "cookie.decline": "Rifiuta",
+
+    "tools.flatten-pdf.name": "Appiattisci PDF",
+    "tools.flatten-pdf.description": "Appiattisci campi modulo e annotazioni in contenuto statico.",
+    "tool.flatten.action": "Appiattisci PDF",
+
+    "tools.pdf-to-text.name": "PDF in Testo",
+    "tools.pdf-to-text.description": "Estrai tutto il testo da un documento PDF.",
+    "tool.pdftotext.action": "Estrai Testo"
 }
