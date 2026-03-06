@@ -1,18 +1,11 @@
 <script setup lang="ts">
-import { ref, computed, watchEffect } from 'vue';
+import { ref, computed, watchEffect, defineAsyncComponent } from 'vue';
 import { trans } from '@/i18n';
 import { useSeoMeta } from '@/Composables/useSeoMeta';
 import FileUploader from '@/Components/Tools/FileUploader.vue';
 import FileList from '@/Components/Tools/FileList.vue';
 import ProcessButton from '@/Components/Tools/ProcessButton.vue';
 import DownloadResult from '@/Components/Tools/DownloadResult.vue';
-import WatermarkTool from '@/Components/Tools/WatermarkTool.vue';
-import RedactTool from '@/Components/Tools/RedactTool.vue';
-import SignTool from '@/Components/Tools/SignTool.vue';
-import EditTool from '@/Components/Tools/EditTool.vue';
-import CropTool from '@/Components/Tools/CropTool.vue';
-import OrganizeTool from '@/Components/Tools/OrganizeTool.vue';
-import ToolLanding from '@/Components/Tools/ToolLanding.vue';
 import { useFileHandler } from '@/Composables/useFileHandler';
 import { usePdfTool } from '@/Composables/usePdfTool';
 
@@ -23,8 +16,14 @@ import type { CompressionLevel } from '@/Services/pdf/compress';
 import type { SplitMode } from '@/Services/pdf/split';
 import type { RotationAngle } from '@/Services/pdf/rotate';
 
-import JSZip from 'jszip';
-import { saveAs } from 'file-saver';
+// Lazy-loaded heavy tool components
+const WatermarkTool = defineAsyncComponent(() => import('@/Components/Tools/WatermarkTool.vue'));
+const RedactTool = defineAsyncComponent(() => import('@/Components/Tools/RedactTool.vue'));
+const SignTool = defineAsyncComponent(() => import('@/Components/Tools/SignTool.vue'));
+const EditTool = defineAsyncComponent(() => import('@/Components/Tools/EditTool.vue'));
+const CropTool = defineAsyncComponent(() => import('@/Components/Tools/CropTool.vue'));
+const OrganizeTool = defineAsyncComponent(() => import('@/Components/Tools/OrganizeTool.vue'));
+const ToolLanding = defineAsyncComponent(() => import('@/Components/Tools/ToolLanding.vue'));
 
 const props = defineProps<{ tool: string }>();
 
@@ -324,6 +323,10 @@ async function process() {
 }
 
 async function downloadAllAsZip() {
+    const [{ default: JSZip }, { saveAs }] = await Promise.all([
+        import('jszip'),
+        import('file-saver'),
+    ]);
     const zip = new JSZip();
     for (const result of multiResults.value) {
         zip.file(result.name, result.blob);
@@ -596,7 +599,7 @@ const noOptionsTools = ['merge-pdf', 'extract-images', 'grayscale-pdf', 'flatten
                 </div>
 
                 <!-- Process Button -->
-                <ProcessButton :status="state.status" :progress="state.progress" :label="actionLabel" :color="toolConfig.color" @process="process" />
+                <ProcessButton :status="state.status" :progress="state.progress" :label="actionLabel" :color="toolConfig.color" :error-message="state.message" @process="process" />
             </div>
 
             <!-- Single Result Download -->

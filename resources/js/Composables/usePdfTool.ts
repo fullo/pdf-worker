@@ -1,7 +1,6 @@
 import { ref, computed } from 'vue';
 import type { Ref, ComputedRef } from 'vue';
 import type { ProcessingState } from '@/types';
-import { saveAs } from 'file-saver';
 
 export function usePdfTool() {
     const state: Ref<ProcessingState> = ref({
@@ -68,8 +67,9 @@ export function usePdfTool() {
         resultFileName.value = fileName;
     }
 
-    function downloadResult(): void {
+    async function downloadResult(): Promise<void> {
         if (resultBlob.value && resultFileName.value) {
+            const { saveAs } = await import('file-saver');
             saveAs(resultBlob.value, resultFileName.value);
         }
     }

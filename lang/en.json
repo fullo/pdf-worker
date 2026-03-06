@@ -408,5 +408,7 @@
     "tools.pdf-to-text.step_2": "Click Extract Text.",
     "tools.pdf-to-text.step_3": "Download the extracted text file.",
     "tools.pdf-to-text.faq_1_q": "Does this work with scanned PDFs?",
-    "tools.pdf-to-text.faq_1_a": "No. This extracts embedded text only. Scanned documents contain images and would require OCR."
+    "tools.pdf-to-text.faq_1_a": "No. This extracts embedded text only. Scanned documents contain images and would require OCR.",
+    "error.title": "Something went wrong",
+    "error.retry": "Reload page"
 }

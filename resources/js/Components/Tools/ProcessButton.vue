@@ -6,11 +6,13 @@ interface Props {
     progress?: number;
     label: string;
     color?: string;
+    errorMessage?: string;
 }
 
 const props = withDefaults(defineProps<Props>(), {
     progress: 0,
     color: 'bg-red-500',
+    errorMessage: '',
 });
 
 const emit = defineEmits<{
@@ -123,7 +125,7 @@ function hoverColor(bg: string): string {
 
         <!-- Error message -->
         <p v-if="status === 'error'" class="text-center text-sm text-red-500">
-            {{ trans('tool.error_occurred') }}
+            {{ errorMessage || trans('tool.error_occurred') }}
         </p>
     </div>
 </template>

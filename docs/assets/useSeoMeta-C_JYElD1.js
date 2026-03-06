@@ -1,0 +1,1 @@
+function i(n,o){document.title=n;const e=(r,a,c)=>{let t=document.querySelector(`meta[${r}="${a}"]`);t||(t=document.createElement("meta"),t.setAttribute(r,a),document.head.appendChild(t)),t.setAttribute("content",c)};e("name","description",o),e("property","og:title",n),e("property","og:description",o),e("name","twitter:title",n),e("name","twitter:description",o)}export{i as u};

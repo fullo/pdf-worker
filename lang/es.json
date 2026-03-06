@@ -398,5 +398,7 @@
     "tools.pdf-to-text.step_2": "Espera a que se procese y extraiga el contenido",
     "tools.pdf-to-text.step_3": "Copia o descarga el texto extraído del PDF",
     "tools.pdf-to-text.faq_1_q": "¿Funciona con PDFs escaneados o que contienen solo imágenes?",
-    "tools.pdf-to-text.faq_1_a": "Esta herramienta extrae texto de PDFs que contienen texto digital. Los PDFs escaneados que solo contienen imágenes requieren tecnología OCR, que no está incluida en esta herramienta."
+    "tools.pdf-to-text.faq_1_a": "Esta herramienta extrae texto de PDFs que contienen texto digital. Los PDFs escaneados que solo contienen imágenes requieren tecnología OCR, que no está incluida en esta herramienta.",
+    "error.title": "Algo salió mal",
+    "error.retry": "Recargar página"
 }

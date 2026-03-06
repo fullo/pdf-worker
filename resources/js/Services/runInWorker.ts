@@ -57,6 +57,8 @@ function getWorker(): Worker {
  * @param onProgress - Progress callback (0-100)
  * @returns Single Blob for single-result tools, or array of { name, blob } for multi-result tools.
  */
+const WORKER_TIMEOUT_MS = 5 * 60 * 1000; // 5 minutes
+
 export function runInWorker(
     tool: string,
     files: File[],
@@ -67,10 +69,20 @@ export function runInWorker(
         try {
             const w = getWorker();
             const id = ++requestId;
-            pending.set(id, { resolve, reject, onProgress });
+
+            const timer = setTimeout(() => {
+                pending.delete(id);
+                reject(new Error('Operation timed out after 5 minutes'));
+            }, WORKER_TIMEOUT_MS);
+
+            pending.set(id, {
+                resolve: (value) => { clearTimeout(timer); resolve(value); },
+                reject: (reason) => { clearTimeout(timer); reject(reason); },
+                onProgress,
+            });
+
             w.postMessage({ id, tool, files, options });
         } catch {
-            // Workers not supported — should not happen in modern browsers
             reject(new Error('Web Workers not supported'));
         }
     });
