@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { ref, computed, watchEffect } from 'vue';
 import { trans } from '@/i18n';
+import { useSeoMeta } from '@/Composables/useSeoMeta';
 import FileUploader from '@/Components/Tools/FileUploader.vue';
 import FileList from '@/Components/Tools/FileList.vue';
 import ProcessButton from '@/Components/Tools/ProcessButton.vue';
@@ -39,7 +40,12 @@ import { saveAs } from 'file-saver';
 
 const props = defineProps<{ tool: string }>();
 
-watchEffect(() => { document.title = `${trans(`tools.${props.tool}.name`)} - PDF Worker`; });
+watchEffect(() => {
+    useSeoMeta(
+        `${trans(`tools.${props.tool}.name`)} - PDF Worker`,
+        trans(`tools.${props.tool}.description`),
+    );
+});
 
 const multiResultUrls = ref<string[]>([]);
 

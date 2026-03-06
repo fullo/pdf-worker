@@ -1,8 +1,14 @@
 <script setup lang="ts">
 import { onMounted } from 'vue';
 import { trans } from '@/i18n';
+import { useSeoMeta } from '@/Composables/useSeoMeta';
 
-onMounted(() => { document.title = `${trans('privacy.title')} - PDF Worker`; });
+onMounted(() => {
+    useSeoMeta(
+        `${trans('privacy.title')} - PDF Worker`,
+        trans('privacy.intro'),
+    );
+});
 </script>
 
 <template>

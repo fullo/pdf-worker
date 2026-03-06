@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://fullo.github.io/pdf-worker/sitemap.xml
