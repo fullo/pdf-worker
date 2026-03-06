@@ -16,6 +16,16 @@ import { trans } from '@/i18n';
             <p class="mx-auto max-w-2xl text-base leading-relaxed text-blue-100/80 sm:text-lg">
                 {{ trans('home.description') }}
             </p>
+
+            <a
+                href="https://paypal.me/fullo/2"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="mt-8 inline-flex items-center gap-2 rounded-full bg-yellow-400 px-6 py-2.5 text-sm font-semibold text-gray-900 shadow-lg transition-all duration-200 hover:bg-yellow-300 hover:shadow-xl"
+            >
+                <span class="text-lg">&#9749;</span>
+                {{ trans('footer.buy_coffee') }}
+            </a>
         </div>
     </section>
 </template>
