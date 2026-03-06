@@ -12,6 +12,7 @@ import SignTool from '@/Components/Tools/SignTool.vue';
 import EditTool from '@/Components/Tools/EditTool.vue';
 import CropTool from '@/Components/Tools/CropTool.vue';
 import OrganizeTool from '@/Components/Tools/OrganizeTool.vue';
+import ToolLanding from '@/Components/Tools/ToolLanding.vue';
 import { useFileHandler } from '@/Composables/useFileHandler';
 import { usePdfTool } from '@/Composables/usePdfTool';
 
@@ -381,10 +382,10 @@ const noOptionsTools = ['merge-pdf', 'extract-images', 'grayscale-pdf', 'flatten
         <!-- Tool Header -->
         <section :class="[toolConfig.bgColor, 'px-4 py-12 sm:py-16']">
             <div class="mx-auto max-w-3xl text-center">
-                <h1 class="mb-3 text-3xl font-bold text-gray-900 sm:text-4xl">
+                <h1 class="mb-3 text-3xl font-bold text-gray-900 sm:text-4xl dark:text-white">
                     {{ trans(`tools.${tool}.name`) }}
                 </h1>
-                <p class="text-lg text-gray-600">
+                <p class="text-lg text-gray-600 dark:text-gray-300">
                     {{ trans(`tools.${tool}.description`) }}
                 </p>
             </div>
@@ -412,7 +413,7 @@ const noOptionsTools = ['merge-pdf', 'extract-images', 'grayscale-pdf', 'flatten
                 />
 
                 <!-- ==================== TOOL OPTIONS ==================== -->
-                <div v-if="!noOptionsTools.includes(tool)" class="rounded-xl border border-gray-200 bg-white p-6">
+                <div v-if="!noOptionsTools.includes(tool)" class="rounded-xl border border-gray-200 bg-white p-6 dark:border-gray-700 dark:bg-gray-800">
 
                     <!-- WATERMARK (enhanced with drag & drop) -->
                     <div v-if="tool === 'watermark-pdf'">
@@ -424,7 +425,7 @@ const noOptionsTools = ['merge-pdf', 'extract-images', 'grayscale-pdf', 'flatten
 
                     <!-- SPLIT PDF -->
                     <div v-else-if="tool === 'split-pdf'" class="space-y-4">
-                        <h3 class="font-semibold text-gray-900">{{ trans('tool.split.action') }}</h3>
+                        <h3 class="font-semibold text-gray-900 dark:text-white">{{ trans('tool.split.action') }}</h3>
                         <div class="flex flex-col gap-3">
                             <label class="flex items-center gap-3 cursor-pointer">
                                 <input v-model="splitMode" type="radio" value="all" class="h-4 w-4 text-orange-500 focus:ring-orange-500" />
@@ -434,13 +435,13 @@ const noOptionsTools = ['merge-pdf', 'extract-images', 'grayscale-pdf', 'flatten
                                 <input v-model="splitMode" type="radio" value="range" class="h-4 w-4 text-orange-500 focus:ring-orange-500" />
                                 <span>{{ trans('tool.split.mode_range') }}</span>
                             </label>
-                            <input v-if="splitMode === 'range'" v-model="splitRanges" type="text" :placeholder="trans('tool.split.range_placeholder')" class="mt-1 rounded-lg border border-gray-300 px-4 py-2 text-sm focus:border-orange-500 focus:ring-orange-500" />
+                            <input v-if="splitMode === 'range'" v-model="splitRanges" type="text" :placeholder="trans('tool.split.range_placeholder')" class="mt-1 rounded-lg border border-gray-300 px-4 py-2 text-sm dark:border-gray-600 dark:bg-gray-700 dark:text-gray-200 focus:border-orange-500 focus:ring-orange-500" />
                         </div>
                     </div>
 
                     <!-- COMPRESS PDF -->
                     <div v-else-if="tool === 'compress-pdf'" class="space-y-4">
-                        <h3 class="font-semibold text-gray-900">{{ trans('tool.compress.action') }}</h3>
+                        <h3 class="font-semibold text-gray-900 dark:text-white">{{ trans('tool.compress.action') }}</h3>
                         <div class="flex flex-col gap-3">
                             <label v-for="level in (['low', 'medium', 'high'] as const)" :key="level" class="flex items-center gap-3 cursor-pointer">
                                 <input v-model="compressionLevel" type="radio" :value="level" class="h-4 w-4 text-green-500 focus:ring-green-500" />
@@ -451,9 +452,9 @@ const noOptionsTools = ['merge-pdf', 'extract-images', 'grayscale-pdf', 'flatten
 
                     <!-- ROTATE PDF -->
                     <div v-else-if="tool === 'rotate-pdf'" class="space-y-4">
-                        <h3 class="font-semibold text-gray-900">{{ trans('tool.rotate.action') }}</h3>
+                        <h3 class="font-semibold text-gray-900 dark:text-white">{{ trans('tool.rotate.action') }}</h3>
                         <div class="flex flex-wrap gap-3">
-                            <button v-for="opt in ([{ angle: 90, label: 'tool.rotate.cw', icon: '↻' }, { angle: 180, label: 'tool.rotate.180', icon: '↕' }, { angle: 270, label: 'tool.rotate.ccw', icon: '↺' }] as const)" :key="opt.angle" type="button" class="flex items-center gap-2 rounded-lg border-2 px-4 py-3 text-sm font-medium transition-colors" :class="rotationAngle === opt.angle ? 'border-blue-500 bg-blue-50 text-blue-700' : 'border-gray-200 bg-white text-gray-700 hover:border-gray-300'" @click="rotationAngle = opt.angle">
+                            <button v-for="opt in ([{ angle: 90, label: 'tool.rotate.cw', icon: '↻' }, { angle: 180, label: 'tool.rotate.180', icon: '↕' }, { angle: 270, label: 'tool.rotate.ccw', icon: '↺' }] as const)" :key="opt.angle" type="button" class="flex items-center gap-2 rounded-lg border-2 px-4 py-3 text-sm font-medium transition-colors" :class="rotationAngle === opt.angle ? 'border-blue-500 bg-blue-50 text-blue-700' : 'border-gray-200 bg-white text-gray-700 hover:border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-gray-200'" @click="rotationAngle = opt.angle">
                                 <span class="text-lg">{{ opt.icon }}</span>
                                 {{ trans(opt.label) }}
                             </button>
@@ -462,18 +463,18 @@ const noOptionsTools = ['merge-pdf', 'extract-images', 'grayscale-pdf', 'flatten
 
                     <!-- PAGE NUMBERS -->
                     <div v-else-if="tool === 'page-numbers'" class="space-y-4">
-                        <h3 class="font-semibold text-gray-900">{{ trans('tool.pagenumbers.action') }}</h3>
+                        <h3 class="font-semibold text-gray-900 dark:text-white">{{ trans('tool.pagenumbers.action') }}</h3>
                         <div class="space-y-3">
                             <div>
-                                <label class="block text-sm font-medium text-gray-700 mb-1">{{ trans('tool.pagenumbers.position') }}</label>
+                                <label class="block text-sm font-medium text-gray-700 mb-1 dark:text-gray-300">{{ trans('tool.pagenumbers.position') }}</label>
                                 <div class="flex flex-wrap gap-2">
-                                    <button v-for="pos in (['bottom-left', 'bottom-center', 'bottom-right'] as const)" :key="pos" type="button" class="rounded-lg border-2 px-3 py-2 text-sm font-medium transition-colors" :class="pageNumberPosition === pos ? 'border-teal-500 bg-teal-50 text-teal-700' : 'border-gray-200 text-gray-700 hover:border-gray-300'" @click="pageNumberPosition = pos">
+                                    <button v-for="pos in (['bottom-left', 'bottom-center', 'bottom-right'] as const)" :key="pos" type="button" class="rounded-lg border-2 px-3 py-2 text-sm font-medium transition-colors" :class="pageNumberPosition === pos ? 'border-teal-500 bg-teal-50 text-teal-700' : 'border-gray-200 text-gray-700 hover:border-gray-300 dark:border-gray-600 dark:text-gray-300'" @click="pageNumberPosition = pos">
                                         {{ trans(`tool.pagenumbers.position_${pos.replace(/-/g, '_')}`) }}
                                     </button>
                                 </div>
                             </div>
                             <div>
-                                <label class="block text-sm font-medium text-gray-700 mb-1">{{ trans('tool.pagenumbers.format') }}</label>
+                                <label class="block text-sm font-medium text-gray-700 mb-1 dark:text-gray-300">{{ trans('tool.pagenumbers.format') }}</label>
                                 <div class="flex gap-3">
                                     <label class="flex items-center gap-2 cursor-pointer"><input v-model="pageNumberFormat" type="radio" value="number" class="h-4 w-4 text-teal-500" /><span class="text-sm">1, 2, 3...</span></label>
                                     <label class="flex items-center gap-2 cursor-pointer"><input v-model="pageNumberFormat" type="radio" value="page-of-total" class="h-4 w-4 text-teal-500" /><span class="text-sm">1 / 10</span></label>
@@ -484,29 +485,29 @@ const noOptionsTools = ['merge-pdf', 'extract-images', 'grayscale-pdf', 'flatten
 
                     <!-- PDF TO JPG -->
                     <div v-else-if="tool === 'pdf-to-jpg'" class="space-y-4">
-                        <h3 class="font-semibold text-gray-900">{{ trans('tool.pdftojpg.action') }}</h3>
+                        <h3 class="font-semibold text-gray-900 dark:text-white">{{ trans('tool.pdftojpg.action') }}</h3>
                         <div>
-                            <label class="block text-sm font-medium text-gray-700 mb-1">{{ trans('tool.pdftojpg.quality') }}: {{ Math.round(jpgQuality * 100) }}%</label>
+                            <label class="block text-sm font-medium text-gray-700 mb-1 dark:text-gray-300">{{ trans('tool.pdftojpg.quality') }}: {{ Math.round(jpgQuality * 100) }}%</label>
                             <input v-model.number="jpgQuality" type="range" min="0.1" max="1" step="0.1" class="w-full accent-amber-500" />
                         </div>
                     </div>
 
                     <!-- JPG TO PDF -->
                     <div v-else-if="tool === 'jpg-to-pdf'" class="space-y-4">
-                        <h3 class="font-semibold text-gray-900">{{ trans('tool.jpgtopdf.action') }}</h3>
+                        <h3 class="font-semibold text-gray-900 dark:text-white">{{ trans('tool.jpgtopdf.action') }}</h3>
                         <div class="space-y-3">
                             <div>
-                                <label class="block text-sm font-medium text-gray-700 mb-1">{{ trans('tool.jpgtopdf.orientation') }}</label>
+                                <label class="block text-sm font-medium text-gray-700 mb-1 dark:text-gray-300">{{ trans('tool.jpgtopdf.orientation') }}</label>
                                 <div class="flex gap-3">
-                                    <button v-for="orient in (['portrait', 'landscape'] as const)" :key="orient" type="button" class="rounded-lg border-2 px-4 py-2 text-sm font-medium transition-colors" :class="jpgOrientation === orient ? 'border-indigo-500 bg-indigo-50 text-indigo-700' : 'border-gray-200 text-gray-700 hover:border-gray-300'" @click="jpgOrientation = orient">
+                                    <button v-for="orient in (['portrait', 'landscape'] as const)" :key="orient" type="button" class="rounded-lg border-2 px-4 py-2 text-sm font-medium transition-colors" :class="jpgOrientation === orient ? 'border-indigo-500 bg-indigo-50 text-indigo-700' : 'border-gray-200 text-gray-700 hover:border-gray-300 dark:border-gray-600 dark:text-gray-300'" @click="jpgOrientation = orient">
                                         {{ trans(`tool.jpgtopdf.${orient}`) }}
                                     </button>
                                 </div>
                             </div>
                             <div>
-                                <label class="block text-sm font-medium text-gray-700 mb-1">{{ trans('tool.jpgtopdf.margin') }}</label>
+                                <label class="block text-sm font-medium text-gray-700 mb-1 dark:text-gray-300">{{ trans('tool.jpgtopdf.margin') }}</label>
                                 <div class="flex gap-2">
-                                    <button v-for="m in (['none', 'small', 'large'] as const)" :key="m" type="button" class="rounded-lg border-2 px-3 py-2 text-sm font-medium transition-colors" :class="jpgMargin === m ? 'border-indigo-500 bg-indigo-50 text-indigo-700' : 'border-gray-200 text-gray-700 hover:border-gray-300'" @click="jpgMargin = m">
+                                    <button v-for="m in (['none', 'small', 'large'] as const)" :key="m" type="button" class="rounded-lg border-2 px-3 py-2 text-sm font-medium transition-colors" :class="jpgMargin === m ? 'border-indigo-500 bg-indigo-50 text-indigo-700' : 'border-gray-200 text-gray-700 hover:border-gray-300 dark:border-gray-600 dark:text-gray-300'" @click="jpgMargin = m">
                                         {{ trans(`tool.jpgtopdf.${m === 'none' ? 'no_margin' : m + '_margin'}`) }}
                                     </button>
                                 </div>
@@ -516,18 +517,18 @@ const noOptionsTools = ['merge-pdf', 'extract-images', 'grayscale-pdf', 'flatten
 
                     <!-- PROTECT PDF -->
                     <div v-else-if="tool === 'protect-pdf'" class="space-y-4">
-                        <h3 class="font-semibold text-gray-900">{{ trans('tool.protect.action') }}</h3>
+                        <h3 class="font-semibold text-gray-900 dark:text-white">{{ trans('tool.protect.action') }}</h3>
                         <div class="space-y-3">
                             <div>
-                                <label class="block text-sm font-medium text-gray-700 mb-1">{{ trans('tool.protect.user_password') }}</label>
-                                <input v-model="protectUserPassword" type="password" class="w-full rounded-lg border border-gray-300 px-4 py-2 text-sm focus:border-yellow-500 focus:ring-yellow-500" />
+                                <label class="block text-sm font-medium text-gray-700 mb-1 dark:text-gray-300">{{ trans('tool.protect.user_password') }}</label>
+                                <input v-model="protectUserPassword" type="password" class="w-full rounded-lg border border-gray-300 px-4 py-2 text-sm dark:border-gray-600 dark:bg-gray-700 dark:text-gray-200 focus:border-yellow-500 focus:ring-yellow-500" />
                             </div>
                             <div>
-                                <label class="block text-sm font-medium text-gray-700 mb-1">{{ trans('tool.protect.owner_password') }}</label>
-                                <input v-model="protectOwnerPassword" type="password" class="w-full rounded-lg border border-gray-300 px-4 py-2 text-sm focus:border-yellow-500 focus:ring-yellow-500" />
+                                <label class="block text-sm font-medium text-gray-700 mb-1 dark:text-gray-300">{{ trans('tool.protect.owner_password') }}</label>
+                                <input v-model="protectOwnerPassword" type="password" class="w-full rounded-lg border border-gray-300 px-4 py-2 text-sm dark:border-gray-600 dark:bg-gray-700 dark:text-gray-200 focus:border-yellow-500 focus:ring-yellow-500" />
                             </div>
                             <div>
-                                <label class="block text-sm font-medium text-gray-700 mb-2">{{ trans('tool.protect.permissions') }}</label>
+                                <label class="block text-sm font-medium text-gray-700 mb-2 dark:text-gray-300">{{ trans('tool.protect.permissions') }}</label>
                                 <div class="flex flex-col gap-2">
                                     <label class="flex items-center gap-2 cursor-pointer"><input v-model="allowPrinting" type="checkbox" class="h-4 w-4 rounded text-yellow-500" /><span class="text-sm">{{ trans('tool.protect.allow_printing') }}</span></label>
                                     <label class="flex items-center gap-2 cursor-pointer"><input v-model="allowCopying" type="checkbox" class="h-4 w-4 rounded text-yellow-500" /><span class="text-sm">{{ trans('tool.protect.allow_copying') }}</span></label>
@@ -539,10 +540,10 @@ const noOptionsTools = ['merge-pdf', 'extract-images', 'grayscale-pdf', 'flatten
 
                     <!-- UNLOCK PDF -->
                     <div v-else-if="tool === 'unlock-pdf'" class="space-y-4">
-                        <h3 class="font-semibold text-gray-900">{{ trans('tool.unlock.action') }}</h3>
+                        <h3 class="font-semibold text-gray-900 dark:text-white">{{ trans('tool.unlock.action') }}</h3>
                         <div>
-                            <label class="block text-sm font-medium text-gray-700 mb-1">{{ trans('tool.unlock.password') }}</label>
-                            <input v-model="unlockPassword" type="password" class="w-full rounded-lg border border-gray-300 px-4 py-2 text-sm focus:border-lime-500 focus:ring-lime-500" />
+                            <label class="block text-sm font-medium text-gray-700 mb-1 dark:text-gray-300">{{ trans('tool.unlock.password') }}</label>
+                            <input v-model="unlockPassword" type="password" class="w-full rounded-lg border border-gray-300 px-4 py-2 text-sm dark:border-gray-600 dark:bg-gray-700 dark:text-gray-200 focus:border-lime-500 focus:ring-lime-500" />
                         </div>
                     </div>
 
@@ -551,7 +552,7 @@ const noOptionsTools = ['merge-pdf', 'extract-images', 'grayscale-pdf', 'flatten
 
                     <!-- PDF TO PNG -->
                     <div v-else-if="tool === 'pdf-to-png'" class="space-y-4">
-                        <h3 class="font-semibold text-gray-900">{{ trans('tool.pdftopng.action') }}</h3>
+                        <h3 class="font-semibold text-gray-900 dark:text-white">{{ trans('tool.pdftopng.action') }}</h3>
                         <label class="flex items-center gap-3 cursor-pointer">
                             <input v-model="pngTransparent" type="checkbox" class="h-4 w-4 rounded text-fuchsia-500" />
                             <span>{{ trans('tool.pdftopng.transparent') }}</span>
@@ -563,11 +564,11 @@ const noOptionsTools = ['merge-pdf', 'extract-images', 'grayscale-pdf', 'flatten
 
                     <!-- RESIZE PDF -->
                     <div v-else-if="tool === 'resize-pdf'" class="space-y-4">
-                        <h3 class="font-semibold text-gray-900">{{ trans('tool.resize.action') }}</h3>
+                        <h3 class="font-semibold text-gray-900 dark:text-white">{{ trans('tool.resize.action') }}</h3>
                         <div>
-                            <label class="block text-sm font-medium text-gray-700 mb-1">{{ trans('tool.resize.target_size') }}</label>
+                            <label class="block text-sm font-medium text-gray-700 mb-1 dark:text-gray-300">{{ trans('tool.resize.target_size') }}</label>
                             <div class="flex flex-wrap gap-2">
-                                <button v-for="size in (['a4', 'a3', 'letter', 'legal'] as const)" :key="size" type="button" class="rounded-lg border-2 px-4 py-2 text-sm font-medium uppercase transition-colors" :class="resizeTarget === size ? 'border-pink-500 bg-pink-50 text-pink-700' : 'border-gray-200 text-gray-700 hover:border-gray-300'" @click="resizeTarget = size">
+                                <button v-for="size in (['a4', 'a3', 'letter', 'legal'] as const)" :key="size" type="button" class="rounded-lg border-2 px-4 py-2 text-sm font-medium uppercase transition-colors" :class="resizeTarget === size ? 'border-pink-500 bg-pink-50 text-pink-700' : 'border-gray-200 text-gray-700 hover:border-gray-300 dark:border-gray-600 dark:text-gray-300'" @click="resizeTarget = size">
                                     {{ size }}
                                 </button>
                             </div>
@@ -576,21 +577,21 @@ const noOptionsTools = ['merge-pdf', 'extract-images', 'grayscale-pdf', 'flatten
 
                     <!-- HEADER & FOOTER -->
                     <div v-else-if="tool === 'header-footer'" class="space-y-4">
-                        <h3 class="font-semibold text-gray-900">{{ trans('tool.headerfooter.action') }}</h3>
+                        <h3 class="font-semibold text-gray-900 dark:text-white">{{ trans('tool.headerfooter.action') }}</h3>
                         <div class="space-y-3">
                             <div>
-                                <label class="block text-sm font-medium text-gray-700 mb-1">{{ trans('tool.headerfooter.header_text') }}</label>
-                                <input v-model="headerText" type="text" class="w-full rounded-lg border border-gray-300 px-4 py-2 text-sm focus:border-orange-500 focus:ring-orange-500" />
+                                <label class="block text-sm font-medium text-gray-700 mb-1 dark:text-gray-300">{{ trans('tool.headerfooter.header_text') }}</label>
+                                <input v-model="headerText" type="text" class="w-full rounded-lg border border-gray-300 px-4 py-2 text-sm dark:border-gray-600 dark:bg-gray-700 dark:text-gray-200 focus:border-orange-500 focus:ring-orange-500" />
                             </div>
                             <div>
-                                <label class="block text-sm font-medium text-gray-700 mb-1">{{ trans('tool.headerfooter.footer_text') }}</label>
-                                <input v-model="footerText" type="text" class="w-full rounded-lg border border-gray-300 px-4 py-2 text-sm focus:border-orange-500 focus:ring-orange-500" />
+                                <label class="block text-sm font-medium text-gray-700 mb-1 dark:text-gray-300">{{ trans('tool.headerfooter.footer_text') }}</label>
+                                <input v-model="footerText" type="text" class="w-full rounded-lg border border-gray-300 px-4 py-2 text-sm dark:border-gray-600 dark:bg-gray-700 dark:text-gray-200 focus:border-orange-500 focus:ring-orange-500" />
                             </div>
                             <p class="text-xs text-gray-400">{{ trans('tool.headerfooter.placeholder_hint') }}</p>
                             <div>
-                                <label class="block text-sm font-medium text-gray-700 mb-1">{{ trans('tool.headerfooter.alignment') }}</label>
+                                <label class="block text-sm font-medium text-gray-700 mb-1 dark:text-gray-300">{{ trans('tool.headerfooter.alignment') }}</label>
                                 <div class="flex gap-2">
-                                    <button v-for="a in (['left', 'center', 'right'] as const)" :key="a" type="button" class="rounded-lg border-2 px-4 py-2 text-sm font-medium transition-colors" :class="hfAlign === a ? 'border-orange-500 bg-orange-50 text-orange-700' : 'border-gray-200 text-gray-700 hover:border-gray-300'" @click="hfAlign = a">
+                                    <button v-for="a in (['left', 'center', 'right'] as const)" :key="a" type="button" class="rounded-lg border-2 px-4 py-2 text-sm font-medium transition-colors" :class="hfAlign === a ? 'border-orange-500 bg-orange-50 text-orange-700' : 'border-gray-200 text-gray-700 hover:border-gray-300 dark:border-gray-600 dark:text-gray-300'" @click="hfAlign = a">
                                         {{ trans(`tool.headerfooter.align_${a}`) }}
                                     </button>
                                 </div>
@@ -635,9 +636,9 @@ const noOptionsTools = ['merge-pdf', 'extract-images', 'grayscale-pdf', 'flatten
                     {{ trans('tool.download_all') }} (ZIP)
                 </button>
                 <div class="grid gap-2">
-                    <div v-for="(result, index) in multiResults" :key="index" class="flex items-center justify-between rounded-lg border border-gray-200 bg-white px-4 py-3">
-                        <span class="text-sm font-medium text-gray-700 truncate">{{ result.name }}</span>
-                        <a :href="createObjectURL(result.blob)" :download="result.name" class="shrink-0 rounded-lg bg-gray-100 px-3 py-1.5 text-sm font-medium text-gray-700 hover:bg-gray-200 transition-colors">{{ trans('tool.download') }}</a>
+                    <div v-for="(result, index) in multiResults" :key="index" class="flex items-center justify-between rounded-lg border border-gray-200 bg-white px-4 py-3 dark:border-gray-700 dark:bg-gray-800">
+                        <span class="text-sm font-medium text-gray-700 truncate dark:text-gray-200">{{ result.name }}</span>
+                        <a :href="createObjectURL(result.blob)" :download="result.name" class="shrink-0 rounded-lg bg-gray-100 px-3 py-1.5 text-sm font-medium text-gray-700 hover:bg-gray-200 transition-colors dark:bg-gray-700 dark:text-gray-200 dark:hover:bg-gray-600">{{ trans('tool.download') }}</a>
                     </div>
                 </div>
                 <div class="text-center">
@@ -645,5 +646,8 @@ const noOptionsTools = ['merge-pdf', 'extract-images', 'grayscale-pdf', 'flatten
                 </div>
             </div>
         </div>
+
+        <!-- SEO Landing Section -->
+        <ToolLanding :tool="tool" />
     </div>
 </template>

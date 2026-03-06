@@ -44,7 +44,7 @@ function toggle() {
     <div ref="wrapperRef" class="relative">
         <button
             type="button"
-            class="flex items-center gap-1.5 rounded-md px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 transition-colors"
+            class="flex items-center gap-1.5 rounded-md px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 transition-colors dark:text-gray-300 dark:hover:bg-gray-700"
             @click="toggle"
         >
             <span class="text-lg leading-none">{{ currentFlag }}</span>
@@ -71,15 +71,15 @@ function toggle() {
         >
             <div
                 v-if="isOpen"
-                class="absolute right-0 z-50 mt-1 w-40 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black/5"
+                class="absolute right-0 z-50 mt-1 w-40 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black/5 dark:bg-gray-700 dark:ring-gray-600"
             >
                 <div class="py-1">
                     <button
                         v-for="locale in availableLocales"
                         :key="locale"
                         type="button"
-                        class="flex w-full items-center gap-2 px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition-colors"
-                        :class="{ 'bg-gray-50 font-semibold': locale === currentLocale }"
+                        class="flex w-full items-center gap-2 px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition-colors dark:text-gray-200 dark:hover:bg-gray-600"
+                        :class="{ 'bg-gray-50 font-semibold dark:bg-gray-600': locale === currentLocale }"
                         @click="switchLocale(locale)"
                     >
                         <span class="text-lg leading-none">{{ flags[locale] }}</span>

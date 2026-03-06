@@ -77,8 +77,8 @@ function onDrop(event: DragEvent) {
         class="relative flex cursor-pointer flex-col items-center justify-center rounded-2xl border-2 border-dashed px-6 py-16 transition-all duration-200"
         :class="[
             isDragging
-                ? 'border-red-400 bg-red-50'
-                : 'border-gray-300 bg-white hover:border-gray-400 hover:bg-gray-50',
+                ? 'border-red-400 bg-red-50 dark:bg-red-950'
+                : 'border-gray-300 bg-white hover:border-gray-400 hover:bg-gray-50 dark:border-gray-600 dark:bg-gray-800 dark:hover:border-gray-500 dark:hover:bg-gray-750',
         ]"
         @dragenter="onDragEnter"
         @dragover="onDragOver"
@@ -116,12 +116,12 @@ function onDrop(event: DragEvent) {
         </div>
 
         <!-- Title -->
-        <h3 class="mb-1 text-lg font-semibold text-gray-700">
+        <h3 class="mb-1 text-lg font-semibold text-gray-700 dark:text-gray-200">
             {{ trans('tool.upload_title') }}
         </h3>
 
         <!-- Description -->
-        <p class="mb-4 text-sm text-gray-500">
+        <p class="mb-4 text-sm text-gray-500 dark:text-gray-400">
             {{ trans('tool.upload_description') }}
         </p>
 

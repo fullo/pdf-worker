@@ -35,11 +35,11 @@ function formatFileSize(bytes: number): string {
         <div
             v-for="file in files"
             :key="file.id"
-            class="flex items-center gap-4 rounded-xl bg-white p-4 shadow-sm ring-1 ring-gray-200"
+            class="flex items-center gap-4 rounded-xl bg-white p-4 shadow-sm ring-1 ring-gray-200 dark:bg-gray-800 dark:ring-gray-700"
         >
             <!-- Thumbnail / preview -->
             <div
-                class="flex h-12 w-12 shrink-0 items-center justify-center overflow-hidden rounded-lg bg-gray-100"
+                class="flex h-12 w-12 shrink-0 items-center justify-center overflow-hidden rounded-lg bg-gray-100 dark:bg-gray-700"
             >
                 <img
                     v-if="file.preview"
@@ -66,10 +66,10 @@ function formatFileSize(bytes: number): string {
 
             <!-- File info -->
             <div class="min-w-0 flex-1">
-                <p class="truncate text-sm font-medium text-gray-700">
+                <p class="truncate text-sm font-medium text-gray-700 dark:text-gray-200">
                     {{ file.name }}
                 </p>
-                <p class="text-xs text-gray-500">
+                <p class="text-xs text-gray-500 dark:text-gray-400">
                     {{ formatFileSize(file.size) }}
                     <span v-if="file.pageCount" class="ml-1">
                         &middot; {{ file.pageCount }} {{ file.pageCount === 1 ? 'page' : 'pages' }}

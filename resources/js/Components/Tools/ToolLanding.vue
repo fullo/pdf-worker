@@ -35,10 +35,10 @@ const faqs = computed(() => {
 <template>
     <section v-if="hasLanding" class="mx-auto max-w-3xl px-4 py-16 sm:px-6">
         <!-- How it works -->
-        <h2 class="mb-6 text-2xl font-bold text-gray-900">
+        <h2 class="mb-6 text-2xl font-bold text-gray-900 dark:text-white">
             {{ trans(`tools.${tool}.how_title`) }}
         </h2>
-        <p class="mb-8 text-gray-600 leading-relaxed">
+        <p class="mb-8 text-gray-600 leading-relaxed dark:text-gray-400">
             {{ trans(`tools.${tool}.how_text`) }}
         </p>
 
@@ -47,28 +47,28 @@ const faqs = computed(() => {
             <div
                 v-for="(step, i) in steps"
                 :key="i"
-                class="flex items-start gap-3 rounded-xl border border-gray-100 bg-white p-4 shadow-sm"
+                class="flex items-start gap-3 rounded-xl border border-gray-100 bg-white p-4 shadow-sm dark:border-gray-700 dark:bg-gray-800"
             >
-                <span class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-blue-100 text-sm font-bold text-blue-700">
+                <span class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-blue-100 text-sm font-bold text-blue-700 dark:bg-blue-900 dark:text-blue-300">
                     {{ i + 1 }}
                 </span>
-                <span class="text-sm text-gray-700">{{ step }}</span>
+                <span class="text-sm text-gray-700 dark:text-gray-300">{{ step }}</span>
             </div>
         </div>
 
         <!-- FAQ -->
         <div v-if="faqs.length > 0">
-            <h3 class="mb-4 text-xl font-semibold text-gray-900">FAQ</h3>
+            <h3 class="mb-4 text-xl font-semibold text-gray-900 dark:text-white">FAQ</h3>
             <div class="space-y-4">
                 <details
                     v-for="(faq, i) in faqs"
                     :key="i"
-                    class="rounded-xl border border-gray-100 bg-white shadow-sm"
+                    class="rounded-xl border border-gray-100 bg-white shadow-sm dark:border-gray-700 dark:bg-gray-800"
                 >
-                    <summary class="cursor-pointer px-5 py-4 font-medium text-gray-900 hover:text-blue-600">
+                    <summary class="cursor-pointer px-5 py-4 font-medium text-gray-900 hover:text-blue-600 dark:text-gray-100 dark:hover:text-blue-400">
                         {{ faq.q }}
                     </summary>
-                    <p class="px-5 pb-4 text-sm text-gray-600 leading-relaxed">
+                    <p class="px-5 pb-4 text-sm text-gray-600 leading-relaxed dark:text-gray-400">
                         {{ faq.a }}
                     </p>
                 </details>

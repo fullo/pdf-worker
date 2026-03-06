@@ -114,17 +114,17 @@ defineExpose({ getPageOrder });
         </div>
 
         <div v-else-if="pages.length > 0">
-            <p class="mb-4 text-sm text-gray-500">{{ trans('tool.organize.drag_hint') }}</p>
+            <p class="mb-4 text-sm text-gray-500 dark:text-gray-400">{{ trans('tool.organize.drag_hint') }}</p>
 
             <div class="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4">
                 <div
                     v-for="(page, i) in pages"
                     :key="`${page.index}-${i}`"
                     draggable="true"
-                    class="group relative cursor-grab rounded-lg border-2 bg-white p-2 shadow-sm transition-all"
+                    class="group relative cursor-grab rounded-lg border-2 bg-white p-2 shadow-sm transition-all dark:bg-gray-800"
                     :class="{
                         'border-cyan-400 ring-2 ring-cyan-200': dragOverIndex === i,
-                        'border-gray-200 hover:border-gray-300 hover:shadow-md': dragOverIndex !== i,
+                        'border-gray-200 hover:border-gray-300 hover:shadow-md dark:border-gray-600 dark:hover:border-gray-500': dragOverIndex !== i,
                         'opacity-50': dragIndex === i,
                     }"
                     @dragstart="onDragStart(i)"
