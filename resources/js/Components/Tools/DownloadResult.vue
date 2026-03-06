@@ -16,9 +16,12 @@ const emit = defineEmits<{
 }>();
 
 const adContainer = ref<HTMLElement | null>(null);
+const showAd = ref(false);
 
 onMounted(() => {
+    if (localStorage.getItem('cookie_consent') !== 'accepted') return;
     if (!adContainer.value) return;
+    showAd.value = true;
     if (!(window as any).adsbygoogle) {
         const script = document.createElement('script');
         script.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5726322074030092';
@@ -111,8 +114,8 @@ function formatFileSize(bytes: number): string {
             </button>
         </div>
 
-        <!-- Google AdSense banner -->
-        <div ref="adContainer" class="border-t border-green-200 px-6 py-4">
+        <!-- Google AdSense banner (only if cookies accepted) -->
+        <div v-if="showAd" ref="adContainer" class="border-t border-green-200 px-6 py-4">
             <ins
                 class="adsbygoogle"
                 style="display:block"
