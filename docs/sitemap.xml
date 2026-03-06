@@ -1,112 +1,112 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-        <loc>https://fullo.github.io/pdf-worker/</loc>
+        <loc>https://www.pdfworker.eu/</loc>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>https://fullo.github.io/pdf-worker/#/merge-pdf</loc>
+        <loc>https://www.pdfworker.eu/#/merge-pdf</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://fullo.github.io/pdf-worker/#/split-pdf</loc>
+        <loc>https://www.pdfworker.eu/#/split-pdf</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://fullo.github.io/pdf-worker/#/compress-pdf</loc>
+        <loc>https://www.pdfworker.eu/#/compress-pdf</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://fullo.github.io/pdf-worker/#/rotate-pdf</loc>
+        <loc>https://www.pdfworker.eu/#/rotate-pdf</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://fullo.github.io/pdf-worker/#/watermark-pdf</loc>
+        <loc>https://www.pdfworker.eu/#/watermark-pdf</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://fullo.github.io/pdf-worker/#/page-numbers</loc>
+        <loc>https://www.pdfworker.eu/#/page-numbers</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://fullo.github.io/pdf-worker/#/pdf-to-jpg</loc>
+        <loc>https://www.pdfworker.eu/#/pdf-to-jpg</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://fullo.github.io/pdf-worker/#/jpg-to-pdf</loc>
+        <loc>https://www.pdfworker.eu/#/jpg-to-pdf</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://fullo.github.io/pdf-worker/#/protect-pdf</loc>
+        <loc>https://www.pdfworker.eu/#/protect-pdf</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://fullo.github.io/pdf-worker/#/unlock-pdf</loc>
+        <loc>https://www.pdfworker.eu/#/unlock-pdf</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://fullo.github.io/pdf-worker/#/organize-pdf</loc>
+        <loc>https://www.pdfworker.eu/#/organize-pdf</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://fullo.github.io/pdf-worker/#/crop-pdf</loc>
+        <loc>https://www.pdfworker.eu/#/crop-pdf</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://fullo.github.io/pdf-worker/#/pdf-to-png</loc>
+        <loc>https://www.pdfworker.eu/#/pdf-to-png</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://fullo.github.io/pdf-worker/#/redact-pdf</loc>
+        <loc>https://www.pdfworker.eu/#/redact-pdf</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://fullo.github.io/pdf-worker/#/edit-pdf</loc>
+        <loc>https://www.pdfworker.eu/#/edit-pdf</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://fullo.github.io/pdf-worker/#/sign-pdf</loc>
+        <loc>https://www.pdfworker.eu/#/sign-pdf</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://fullo.github.io/pdf-worker/#/extract-images</loc>
+        <loc>https://www.pdfworker.eu/#/extract-images</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://fullo.github.io/pdf-worker/#/grayscale-pdf</loc>
+        <loc>https://www.pdfworker.eu/#/grayscale-pdf</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://fullo.github.io/pdf-worker/#/resize-pdf</loc>
+        <loc>https://www.pdfworker.eu/#/resize-pdf</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://fullo.github.io/pdf-worker/#/header-footer</loc>
+        <loc>https://www.pdfworker.eu/#/header-footer</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://fullo.github.io/pdf-worker/#/privacy</loc>
+        <loc>https://www.pdfworker.eu/#/privacy</loc>
         <changefreq>yearly</changefreq>
         <priority>0.3</priority>
     </url>

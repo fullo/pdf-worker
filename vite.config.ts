@@ -13,7 +13,7 @@ export default defineConfig({
             '@': path.resolve(__dirname, 'resources/js'),
         },
     },
-    base: './',
+    base: '/',
     build: {
         outDir: 'docs',
         emptyOutDir: true,
