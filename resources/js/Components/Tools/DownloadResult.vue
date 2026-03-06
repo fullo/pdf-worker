@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { onMounted, ref } from 'vue';
 import { trans } from '@/i18n';
 
 interface Props {
@@ -13,6 +14,17 @@ const emit = defineEmits<{
     download: [];
     reset: [];
 }>();
+
+const adContainer = ref<HTMLElement | null>(null);
+
+onMounted(() => {
+    if (adContainer.value && !(window as any).ethicalads) {
+        const script = document.createElement('script');
+        script.src = 'https://media.ethicalads.io/media/client/ethicalads.min.js';
+        script.async = true;
+        document.head.appendChild(script);
+    }
+});
 
 function formatFileSize(bytes: number): string {
     if (bytes === 0) return '0 B';
@@ -92,6 +104,16 @@ function formatFileSize(bytes: number): string {
             >
                 {{ trans('tool.process_another') }}
             </button>
+        </div>
+
+        <!-- EthicalAds banner -->
+        <div class="border-t border-green-200 px-6 py-4">
+            <div
+                ref="adContainer"
+                class="mx-auto max-w-md"
+                data-ea-publisher="pdfworker"
+                data-ea-type="text"
+            ></div>
         </div>
     </div>
 </template>
