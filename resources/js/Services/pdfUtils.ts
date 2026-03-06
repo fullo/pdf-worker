@@ -24,12 +24,40 @@ export async function savePdfAsBlob(pdfDoc: PDFDocument): Promise<Blob> {
 }
 
 /**
+ * Create a canvas that works in both main thread and web worker contexts.
+ */
+export function createCanvas(width: number, height: number): HTMLCanvasElement | OffscreenCanvas {
+    if (typeof document !== 'undefined') {
+        const canvas = document.createElement('canvas');
+        canvas.width = width;
+        canvas.height = height;
+        return canvas;
+    }
+    return new OffscreenCanvas(width, height);
+}
+
+/**
+ * Convert a canvas to a Blob. Works with both HTMLCanvasElement and OffscreenCanvas.
+ */
+export async function canvasToBlob(
+    canvas: HTMLCanvasElement | OffscreenCanvas,
+    type: string = 'image/png',
+    quality?: number
+): Promise<Blob> {
+    if (canvas instanceof OffscreenCanvas) {
+        return canvas.convertToBlob({ type: type as any, quality });
+    }
+    return new Promise<Blob>((resolve, reject) => {
+        canvas.toBlob(
+            (blob) => blob ? resolve(blob) : reject(new Error('Failed to convert canvas to blob')),
+            type,
+            quality
+        );
+    });
+}
+
+/**
  * Render a single page of a PDF as an image Blob using pdf.js.
- *
- * @param file   - The source PDF file or blob.
- * @param pageNum - 1-based page number.
- * @param scale   - Render scale factor (default 2.0 for high quality).
- * @returns A Blob containing the rendered page as a PNG image.
  */
 export async function renderPageAsImage(
     file: File | Blob,
@@ -39,32 +67,14 @@ export async function renderPageAsImage(
     const arrayBuffer = await file.arrayBuffer();
     const pdfDoc = await pdfjsLib.getDocument({ data: new Uint8Array(arrayBuffer) }).promise;
     const page = await pdfDoc.getPage(pageNum);
-
     const viewport = page.getViewport({ scale });
 
-    const canvas = document.createElement('canvas');
-    canvas.width = viewport.width;
-    canvas.height = viewport.height;
-
+    const canvas = createCanvas(viewport.width, viewport.height);
     const context = canvas.getContext('2d');
-    if (!context) {
-        throw new Error('Failed to get canvas 2d context');
-    }
+    if (!context) throw new Error('Failed to get canvas 2d context');
 
-    await page.render({ canvas, canvasContext: context, viewport }).promise;
-
-    return new Promise<Blob>((resolve, reject) => {
-        canvas.toBlob(
-            (blob) => {
-                if (blob) {
-                    resolve(blob);
-                } else {
-                    reject(new Error('Failed to convert canvas to blob'));
-                }
-            },
-            'image/png'
-        );
-    });
+    await page.render({ canvas: canvas as any, canvasContext: context as any, viewport }).promise;
+    return canvasToBlob(canvas, 'image/png');
 }
 
 /**
@@ -81,11 +91,9 @@ export async function getPageCount(file: File | Blob): Promise<number> {
  */
 export function formatFileSize(bytes: number): string {
     if (bytes === 0) return '0 B';
-
     const units = ['B', 'KB', 'MB', 'GB', 'TB'];
     const k = 1024;
     const i = Math.floor(Math.log(bytes) / Math.log(k));
     const size = bytes / Math.pow(k, i);
-
     return `${size.toFixed(i === 0 ? 0 : 2)} ${units[i]}`;
 }

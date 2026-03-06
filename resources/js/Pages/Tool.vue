@@ -16,28 +16,12 @@ import ToolLanding from '@/Components/Tools/ToolLanding.vue';
 import { useFileHandler } from '@/Composables/useFileHandler';
 import { usePdfTool } from '@/Composables/usePdfTool';
 
-// PDF Services
-import { mergePdfs } from '@/Services/pdf/merge';
-import { splitPdf, type SplitMode } from '@/Services/pdf/split';
-import { compressPdf, type CompressionLevel } from '@/Services/pdf/compress';
-import { rotatePdf, type RotationAngle } from '@/Services/pdf/rotate';
-import { addWatermark, type WatermarkOptions } from '@/Services/pdf/watermark';
-import { addPageNumbers, type PageNumberOptions } from '@/Services/pdf/pageNumbers';
-import { pdfToJpg, type PdfToJpgOptions } from '@/Services/pdf/pdfToJpg';
-import { jpgToPdf, type JpgToPdfOptions } from '@/Services/pdf/jpgToPdf';
-import { protectPdf, type ProtectOptions } from '@/Services/pdf/protect';
-import { unlockPdf } from '@/Services/pdf/unlock';
-import { organizePdf } from '@/Services/pdf/organize';
-import { cropPdf, type CropOptions } from '@/Services/pdf/crop';
-import { pdfToPng, type PdfToPngOptions } from '@/Services/pdf/pdfToPng';
-import { redactPdf } from '@/Services/pdf/redact';
-import { signPdf } from '@/Services/pdf/sign';
-import { extractImages } from '@/Services/pdf/extractImages';
-import { grayscalePdf } from '@/Services/pdf/grayscale';
-import { resizePages, type PaperSize } from '@/Services/pdf/resizePage';
-import { addHeaderFooter, type HeaderFooterOptions } from '@/Services/pdf/headerFooter';
-import { flattenPdf } from '@/Services/pdf/flatten';
-import { pdfToText } from '@/Services/pdf/pdfToText';
+import { runInWorker } from '@/Services/runInWorker';
+import type { WatermarkOptions } from '@/Services/pdf/watermark';
+import type { PaperSize } from '@/Services/pdf/resizePage';
+import type { CompressionLevel } from '@/Services/pdf/compress';
+import type { SplitMode } from '@/Services/pdf/split';
+import type { RotationAngle } from '@/Services/pdf/rotate';
 
 import JSZip from 'jszip';
 import { saveAs } from 'file-saver';
@@ -186,12 +170,12 @@ async function process() {
 
         switch (props.tool) {
             case 'merge-pdf': {
-                const blob = await mergePdfs(rawFiles, updateProgress);
+                const blob = await runInWorker('merge-pdf', rawFiles, {}, updateProgress) as Blob;
                 setResult(blob, 'merged.pdf');
                 break;
             }
             case 'split-pdf': {
-                const results = await splitPdf(rawFiles[0], splitMode.value, splitRanges.value || undefined, updateProgress);
+                const results = await runInWorker('split-pdf', rawFiles, { mode: splitMode.value, ranges: splitRanges.value || undefined }, updateProgress) as { name: string; blob: Blob }[];
                 if (results.length === 1) {
                     setResult(results[0].blob, results[0].name);
                 } else {
@@ -200,12 +184,12 @@ async function process() {
                 break;
             }
             case 'compress-pdf': {
-                const blob = await compressPdf(rawFiles[0], compressionLevel.value, updateProgress);
+                const blob = await runInWorker('compress-pdf', rawFiles, { level: compressionLevel.value }, updateProgress) as Blob;
                 setResult(blob, `compressed_${rawFiles[0].name}`);
                 break;
             }
             case 'rotate-pdf': {
-                const blob = await rotatePdf(rawFiles[0], rotationAngle.value, undefined, updateProgress);
+                const blob = await runInWorker('rotate-pdf', rawFiles, { angle: rotationAngle.value }, updateProgress) as Blob;
                 setResult(blob, `rotated_${rawFiles[0].name}`);
                 break;
             }
@@ -213,91 +197,88 @@ async function process() {
                 const wmTool = watermarkToolRef.value;
                 if (!wmTool) break;
                 const opts = wmTool.getWatermarkOptions() as WatermarkOptions;
-                // If image type, read image bytes
                 if (opts.type === 'image' && wmTool.watermarkImageFile) {
                     const ab = await wmTool.watermarkImageFile.arrayBuffer();
                     opts.imageBytes = new Uint8Array(ab);
                     opts.imageMimeType = wmTool.watermarkImageFile.type;
                 }
-                const blob = await addWatermark(rawFiles[0], opts, updateProgress);
+                const blob = await runInWorker('watermark-pdf', rawFiles, opts, updateProgress) as Blob;
                 setResult(blob, `watermarked_${rawFiles[0].name}`);
                 break;
             }
             case 'page-numbers': {
-                const opts: PageNumberOptions = { position: pageNumberPosition.value, format: pageNumberFormat.value };
-                const blob = await addPageNumbers(rawFiles[0], opts, updateProgress);
+                const blob = await runInWorker('page-numbers', rawFiles, { position: pageNumberPosition.value, format: pageNumberFormat.value }, updateProgress) as Blob;
                 setResult(blob, `numbered_${rawFiles[0].name}`);
                 break;
             }
             case 'pdf-to-jpg': {
-                const results = await pdfToJpg(rawFiles[0], { quality: jpgQuality.value }, updateProgress);
+                const results = await runInWorker('pdf-to-jpg', rawFiles, { quality: jpgQuality.value }, updateProgress) as { name: string; blob: Blob }[];
                 multiResults.value = results;
                 break;
             }
             case 'jpg-to-pdf': {
-                const blob = await jpgToPdf(rawFiles, { orientation: jpgOrientation.value, margin: jpgMargin.value }, updateProgress);
+                const blob = await runInWorker('jpg-to-pdf', rawFiles, { orientation: jpgOrientation.value, margin: jpgMargin.value }, updateProgress) as Blob;
                 setResult(blob, 'images.pdf');
                 break;
             }
             case 'protect-pdf': {
-                const opts: ProtectOptions = {
+                const opts = {
                     userPassword: protectUserPassword.value,
                     ownerPassword: protectOwnerPassword.value || protectUserPassword.value,
                     permissions: { printing: allowPrinting.value, copying: allowCopying.value, modifying: allowModifying.value },
                 };
-                const blob = await protectPdf(rawFiles[0], opts, updateProgress);
+                const blob = await runInWorker('protect-pdf', rawFiles, opts, updateProgress) as Blob;
                 setResult(blob, `protected_${rawFiles[0].name}`);
                 break;
             }
             case 'unlock-pdf': {
-                const blob = await unlockPdf(rawFiles[0], unlockPassword.value, updateProgress);
+                const blob = await runInWorker('unlock-pdf', rawFiles, { password: unlockPassword.value }, updateProgress) as Blob;
                 setResult(blob, `unlocked_${rawFiles[0].name}`);
                 break;
             }
             case 'organize-pdf': {
                 const pageOrder = organizeToolRef.value?.getPageOrder() ?? [];
                 if (pageOrder.length === 0) break;
-                const blob = await organizePdf(rawFiles[0], { type: 'reorder', pageOrder }, updateProgress);
+                const blob = await runInWorker('organize-pdf', rawFiles, { type: 'reorder', pageOrder }, updateProgress) as Blob;
                 setResult(blob, `organized_${rawFiles[0].name}`);
                 break;
             }
             case 'crop-pdf': {
                 const opts = cropToolRef.value?.getCropOptions();
                 if (!opts) break;
-                const blob = await cropPdf(rawFiles[0], opts, updateProgress);
+                const blob = await runInWorker('crop-pdf', rawFiles, opts, updateProgress) as Blob;
                 setResult(blob, `cropped_${rawFiles[0].name}`);
                 break;
             }
             case 'pdf-to-png': {
-                const results = await pdfToPng(rawFiles[0], { transparent: pngTransparent.value }, updateProgress);
+                const results = await runInWorker('pdf-to-png', rawFiles, { transparent: pngTransparent.value }, updateProgress) as { name: string; blob: Blob }[];
                 multiResults.value = results;
                 break;
             }
             case 'redact-pdf': {
                 const areas = redactToolRef.value?.getRedactAreas() ?? [];
                 if (areas.length === 0) throw new Error(trans('tool.redact.no_areas'));
-                const blob = await redactPdf(rawFiles[0], areas, updateProgress);
+                const blob = await runInWorker('redact-pdf', rawFiles, { areas }, updateProgress) as Blob;
                 setResult(blob, `redacted_${rawFiles[0].name}`);
                 break;
             }
             case 'sign-pdf': {
                 const sigOpts = signToolRef.value?.getSignatureOptions();
                 if (!sigOpts) throw new Error('No signature provided');
-                const blob = await signPdf(rawFiles[0], sigOpts, updateProgress);
+                const blob = await runInWorker('sign-pdf', rawFiles, sigOpts, updateProgress) as Blob;
                 setResult(blob, `signed_${rawFiles[0].name}`);
                 break;
             }
             case 'edit-pdf': {
                 const elements = editToolRef.value?.getEditElements() ?? [];
                 if (elements.length === 0) throw new Error(trans('tool.edit.no_elements'));
-                const { editPdf } = await import('@/Services/pdf/editPdf');
-                const blob = await editPdf(rawFiles[0], elements, updateProgress);
+                const blob = await runInWorker('edit-pdf', rawFiles, { elements }, updateProgress) as Blob;
                 setResult(blob, `edited_${rawFiles[0].name}`);
                 break;
             }
             case 'extract-images': {
                 try {
-                    const results = await extractImages(rawFiles[0], updateProgress);
+                    const results = await runInWorker('extract-images', rawFiles, {}, updateProgress) as { name: string; blob: Blob }[];
                     multiResults.value = results;
                 } catch {
                     throw new Error(trans('tool.extract.no_images'));
@@ -305,31 +286,31 @@ async function process() {
                 break;
             }
             case 'grayscale-pdf': {
-                const blob = await grayscalePdf(rawFiles[0], updateProgress);
+                const blob = await runInWorker('grayscale-pdf', rawFiles, {}, updateProgress) as Blob;
                 setResult(blob, `grayscale_${rawFiles[0].name}`);
                 break;
             }
             case 'resize-pdf': {
-                const blob = await resizePages(rawFiles[0], resizeTarget.value, updateProgress);
+                const blob = await runInWorker('resize-pdf', rawFiles, { targetSize: resizeTarget.value }, updateProgress) as Blob;
                 setResult(blob, `resized_${rawFiles[0].name}`);
                 break;
             }
             case 'header-footer': {
-                const opts: HeaderFooterOptions = {
+                const opts = {
                     header: headerText.value ? { text: headerText.value, align: hfAlign.value } : undefined,
                     footer: footerText.value ? { text: footerText.value, align: hfAlign.value } : undefined,
                 };
-                const blob = await addHeaderFooter(rawFiles[0], opts, updateProgress);
+                const blob = await runInWorker('header-footer', rawFiles, opts, updateProgress) as Blob;
                 setResult(blob, `headerfooter_${rawFiles[0].name}`);
                 break;
             }
             case 'flatten-pdf': {
-                const blob = await flattenPdf(rawFiles[0], updateProgress);
+                const blob = await runInWorker('flatten-pdf', rawFiles, {}, updateProgress) as Blob;
                 setResult(blob, `flattened_${rawFiles[0].name}`);
                 break;
             }
             case 'pdf-to-text': {
-                const blob = await pdfToText(rawFiles[0], updateProgress);
+                const blob = await runInWorker('pdf-to-text', rawFiles, {}, updateProgress) as Blob;
                 const name = rawFiles[0].name.replace(/\.pdf$/i, '.txt');
                 setResult(blob, name);
                 break;

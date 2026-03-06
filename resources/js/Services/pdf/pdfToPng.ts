@@ -1,4 +1,5 @@
 import * as pdfjsLib from 'pdfjs-dist';
+import { createCanvas, canvasToBlob } from '../pdfUtils';
 
 export interface PdfToPngOptions {
     scale?: number;       // render scale, default 2.0
@@ -9,15 +10,6 @@ const DEFAULT_SCALE = 2.0;
 
 /**
  * Convert all pages of a PDF to PNG images.
- *
- * Uses pdf.js to render each page to a canvas, then exports each canvas
- * as a PNG blob. Supports transparent backgrounds when the transparent
- * option is enabled (otherwise fills with white before rendering).
- *
- * @param file       - The source PDF File.
- * @param options    - Conversion options (scale, transparent background).
- * @param onProgress - Optional callback reporting progress from 0 to 100.
- * @returns Array of objects with a name and blob for each page image.
  */
 export async function pdfToPng(
     file: File,
@@ -38,35 +30,18 @@ export async function pdfToPng(
         const page = await pdfDoc.getPage(i);
         const viewport = page.getViewport({ scale });
 
-        const canvas = document.createElement('canvas');
-        canvas.width = viewport.width;
-        canvas.height = viewport.height;
-
+        const canvas = createCanvas(viewport.width, viewport.height);
         const context = canvas.getContext('2d');
-        if (!context) {
-            throw new Error('Failed to get canvas 2d context');
-        }
+        if (!context) throw new Error('Failed to get canvas 2d context');
 
-        // If not transparent, fill the canvas with white before rendering
-        // so the PDF content appears on a white background.
-        // For transparent mode, we leave the canvas clear (transparent).
         if (!transparent) {
-            context.fillStyle = '#ffffff';
-            context.fillRect(0, 0, canvas.width, canvas.height);
+            (context as any).fillStyle = '#ffffff';
+            (context as any).fillRect(0, 0, canvas.width, canvas.height);
         }
 
-        await page.render({ canvas, canvasContext: context, viewport }).promise;
+        await page.render({ canvas: canvas as any, canvasContext: context as any, viewport }).promise;
 
-        // Convert canvas to PNG blob
-        const blob = await new Promise<Blob>((resolve, reject) => {
-            canvas.toBlob(
-                (b) => {
-                    if (b) resolve(b);
-                    else reject(new Error(`Failed to convert page ${i} to PNG`));
-                },
-                'image/png'
-            );
-        });
+        const blob = await canvasToBlob(canvas, 'image/png');
 
         results.push({
             name: `${baseName}_page_${i}.png`,

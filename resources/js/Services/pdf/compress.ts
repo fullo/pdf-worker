@@ -1,22 +1,15 @@
-import { PDFDocument, PDFName, PDFRawStream, PDFRef, PDFStream } from 'pdf-lib';
+import { PDFDocument } from 'pdf-lib';
 import * as pdfjsLib from 'pdfjs-dist';
-import { savePdfAsBlob } from '../pdfUtils';
+import { savePdfAsBlob, createCanvas, canvasToBlob } from '../pdfUtils';
 
 export type CompressionLevel = 'low' | 'medium' | 'high';
 
-/**
- * Quality mapping for each compression level.
- * The value is the JPEG quality used when re-encoding images.
- */
 const QUALITY_MAP: Record<CompressionLevel, number> = {
     low: 0.8,
     medium: 0.5,
     high: 0.3,
 };
 
-/**
- * Scale factor for image dimensions at each compression level.
- */
 const SCALE_MAP: Record<CompressionLevel, number> = {
     low: 1.0,
     medium: 0.75,
@@ -25,72 +18,41 @@ const SCALE_MAP: Record<CompressionLevel, number> = {
 
 /**
  * Re-encode an image from raw data to JPEG using canvas.
- *
- * @param imageBytes - The raw image bytes (PNG, JPEG, etc.).
- * @param quality    - JPEG quality (0.0 - 1.0).
- * @param scale      - Scale factor for image dimensions.
- * @returns The re-encoded JPEG bytes as Uint8Array.
+ * Uses createImageBitmap for worker compatibility.
  */
 async function reencodeImageAsJpeg(
     imageBytes: Uint8Array,
     quality: number,
     scale: number
 ): Promise<Uint8Array> {
-    return new Promise((resolve, reject) => {
+    let bitmap: ImageBitmap;
+    try {
         const blob = new Blob([imageBytes as BlobPart]);
-        const url = URL.createObjectURL(blob);
-        const img = new Image();
+        bitmap = await createImageBitmap(blob);
+    } catch {
+        // If the image can't be decoded, skip reencoding
+        return imageBytes;
+    }
 
-        img.onload = () => {
-            const width = Math.round(img.width * scale);
-            const height = Math.round(img.height * scale);
+    const width = Math.round(bitmap.width * scale);
+    const height = Math.round(bitmap.height * scale);
 
-            const canvas = document.createElement('canvas');
-            canvas.width = width;
-            canvas.height = height;
+    const canvas = createCanvas(width, height);
+    const ctx = canvas.getContext('2d');
+    if (!ctx) {
+        bitmap.close();
+        return imageBytes;
+    }
 
-            const ctx = canvas.getContext('2d');
-            if (!ctx) {
-                URL.revokeObjectURL(url);
-                reject(new Error('Failed to get canvas context'));
-                return;
-            }
+    (ctx as any).drawImage(bitmap, 0, 0, width, height);
+    bitmap.close();
 
-            ctx.drawImage(img, 0, 0, width, height);
-            URL.revokeObjectURL(url);
-
-            canvas.toBlob(
-                async (resultBlob) => {
-                    if (!resultBlob) {
-                        reject(new Error('Failed to convert canvas to blob'));
-                        return;
-                    }
-                    const arrayBuffer = await resultBlob.arrayBuffer();
-                    resolve(new Uint8Array(arrayBuffer));
-                },
-                'image/jpeg',
-                quality
-            );
-        };
-
-        img.onerror = () => {
-            URL.revokeObjectURL(url);
-            // If the image can't be decoded (e.g. unusual format), skip reencoding
-            resolve(imageBytes);
-        };
-
-        img.src = url;
-    });
+    const jpegBlob = await canvasToBlob(canvas, 'image/jpeg', quality);
+    return new Uint8Array(await jpegBlob.arrayBuffer());
 }
 
 /**
- * Render each page at reduced quality using pdf.js and reassemble
- * into a new PDF. This is the most reliable way to "compress" in the browser
- * because it flattens everything (images, fonts, vectors) into raster images
- * and then re-embeds them.
- *
- * For 'low' level we simply re-save to strip redundant data.
- * For 'medium' and 'high' we render pages to JPEG and rebuild the PDF.
+ * Render each page at reduced quality using pdf.js and reassemble.
  */
 async function renderBasedCompress(
     file: File,
@@ -103,40 +65,22 @@ async function renderBasedCompress(
 
     const pdfDoc = await pdfjsLib.getDocument({ data: new Uint8Array(arrayBuffer) }).promise;
     const pageCount = pdfDoc.numPages;
-
     const newPdf = await PDFDocument.create();
 
     for (let i = 1; i <= pageCount; i++) {
         const page = await pdfDoc.getPage(i);
         const viewport = page.getViewport({ scale });
 
-        const canvas = document.createElement('canvas');
-        canvas.width = viewport.width;
-        canvas.height = viewport.height;
-
+        const canvas = createCanvas(viewport.width, viewport.height);
         const ctx = canvas.getContext('2d');
-        if (!ctx) {
-            throw new Error('Failed to get canvas context');
-        }
+        if (!ctx) throw new Error('Failed to get canvas context');
 
-        await page.render({ canvas, canvasContext: ctx, viewport }).promise;
+        await page.render({ canvas: canvas as any, canvasContext: ctx as any, viewport }).promise;
 
-        // Convert canvas to JPEG blob
-        const jpegBlob = await new Promise<Blob>((resolve, reject) => {
-            canvas.toBlob(
-                (blob) => {
-                    if (blob) resolve(blob);
-                    else reject(new Error('Failed to convert page to JPEG'));
-                },
-                'image/jpeg',
-                quality
-            );
-        });
-
+        const jpegBlob = await canvasToBlob(canvas, 'image/jpeg', quality);
         const jpegBytes = new Uint8Array(await jpegBlob.arrayBuffer());
         const jpegImage = await newPdf.embedJpg(jpegBytes);
 
-        // Create a page with the same dimensions as the original (at full scale)
         const origViewport = page.getViewport({ scale: 1.0 });
         const newPage = newPdf.addPage([origViewport.width, origViewport.height]);
 
@@ -155,7 +99,6 @@ async function renderBasedCompress(
 
 /**
  * Light compression: reload the PDF with pdf-lib and re-save it.
- * This strips unused objects, redundant metadata, and normalizes the structure.
  */
 async function lightCompress(
     file: File,
@@ -167,7 +110,6 @@ async function lightCompress(
     const pdfDoc = await PDFDocument.load(arrayBuffer, { ignoreEncryption: true });
     onProgress?.(60);
 
-    // Strip metadata for additional savings
     pdfDoc.setTitle('');
     pdfDoc.setAuthor('');
     pdfDoc.setSubject('');
@@ -178,21 +120,11 @@ async function lightCompress(
 
     const blob = await savePdfAsBlob(pdfDoc);
     onProgress?.(100);
-
     return blob;
 }
 
 /**
  * Compress a PDF file.
- *
- * - 'low': Re-save the document to strip redundant data and metadata.
- * - 'medium': Render pages at 75% scale as medium-quality JPEGs.
- * - 'high': Render pages at 50% scale as low-quality JPEGs for maximum compression.
- *
- * @param file       - The source PDF File.
- * @param level      - Compression level.
- * @param onProgress - Optional callback reporting progress from 0 to 100.
- * @returns A Blob containing the compressed PDF.
  */
 export async function compressPdf(
     file: File,
@@ -202,6 +134,5 @@ export async function compressPdf(
     if (level === 'low') {
         return lightCompress(file, onProgress);
     }
-
     return renderBasedCompress(file, level, onProgress);
 }

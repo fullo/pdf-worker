@@ -1,4 +1,5 @@
 import * as pdfjsLib from 'pdfjs-dist';
+import { createCanvas, canvasToBlob } from '../pdfUtils';
 
 export interface PdfToJpgOptions {
     quality: number; // 0.1 to 1.0
@@ -9,14 +10,6 @@ const DEFAULT_SCALE = 2.0;
 
 /**
  * Convert all pages of a PDF to JPG images.
- *
- * Uses pdf.js to render each page to a canvas, then exports each canvas
- * as a JPEG blob.
- *
- * @param file       - The source PDF File.
- * @param options    - Conversion options (quality, scale).
- * @param onProgress - Optional callback reporting progress from 0 to 100.
- * @returns Array of objects with a name and blob for each page image.
  */
 export async function pdfToJpg(
     file: File,
@@ -37,28 +30,13 @@ export async function pdfToJpg(
         const page = await pdfDoc.getPage(i);
         const viewport = page.getViewport({ scale });
 
-        const canvas = document.createElement('canvas');
-        canvas.width = viewport.width;
-        canvas.height = viewport.height;
-
+        const canvas = createCanvas(viewport.width, viewport.height);
         const context = canvas.getContext('2d');
-        if (!context) {
-            throw new Error('Failed to get canvas 2d context');
-        }
+        if (!context) throw new Error('Failed to get canvas 2d context');
 
-        await page.render({ canvas, canvasContext: context, viewport }).promise;
+        await page.render({ canvas: canvas as any, canvasContext: context as any, viewport }).promise;
 
-        // Convert canvas to JPEG blob
-        const blob = await new Promise<Blob>((resolve, reject) => {
-            canvas.toBlob(
-                (b) => {
-                    if (b) resolve(b);
-                    else reject(new Error(`Failed to convert page ${i} to JPEG`));
-                },
-                'image/jpeg',
-                quality
-            );
-        });
+        const blob = await canvasToBlob(canvas, 'image/jpeg', quality);
 
         results.push({
             name: `${baseName}_page_${i}.jpg`,
