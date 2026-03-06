@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref } from 'vue';
-import { Link } from '@inertiajs/vue3';
-import { trans } from 'laravel-vue-i18n';
+import { RouterLink } from 'vue-router';
+import { trans } from '@/i18n';
 import LanguageSwitcher from './LanguageSwitcher.vue';
 
 const mobileMenuOpen = ref(false);
@@ -17,10 +17,10 @@ function toggleMobileMenu() {
             <div class="flex h-16 items-center justify-between">
                 <!-- Logo -->
                 <div class="flex items-center">
-                    <Link href="/" class="flex items-center gap-2 text-xl font-bold text-gray-900 hover:opacity-80 transition-opacity">
+                    <RouterLink to="/" class="flex items-center gap-2 text-xl font-bold text-gray-900 hover:opacity-80 transition-opacity">
                         <span class="text-2xl">🔧</span>
                         <span>PDF Worker</span>
-                    </Link>
+                    </RouterLink>
                 </div>
 
                 <!-- Desktop right section -->

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { trans } from 'laravel-vue-i18n';
+import { trans } from '@/i18n';
 import type { UploadedFile } from '@/types';
 
 interface Props {

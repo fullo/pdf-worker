@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { trans } from 'laravel-vue-i18n';
+import { trans } from '@/i18n';
 
 const currentYear = new Date().getFullYear();
 </script>

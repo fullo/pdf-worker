@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref, watch, nextTick, onMounted, computed } from 'vue';
-import { trans } from 'laravel-vue-i18n';
+import { trans } from '@/i18n';
 import * as pdfjsLib from 'pdfjs-dist';
 import type { CropOptions } from '@/Services/pdf/crop';
 

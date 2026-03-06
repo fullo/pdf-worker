@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { Link } from '@inertiajs/vue3';
-import { trans } from 'laravel-vue-i18n';
+import { RouterLink } from 'vue-router';
+import { trans } from '@/i18n';
 
 interface Props {
     slug: string;
@@ -13,8 +13,8 @@ const props = defineProps<Props>();
 </script>
 
 <template>
-    <Link
-        :href="`/${slug}`"
+    <RouterLink
+        :to="`/${slug}`"
         class="group block rounded-2xl bg-white p-6 shadow-sm ring-1 ring-gray-200 transition-all duration-200 hover:scale-[1.03] hover:shadow-lg hover:ring-gray-300"
     >
         <div class="flex flex-col items-center text-center">
@@ -36,5 +36,5 @@ const props = defineProps<Props>();
                 {{ trans(`tools.${slug}.description`) }}
             </p>
         </div>
-    </Link>
+    </RouterLink>
 </template>

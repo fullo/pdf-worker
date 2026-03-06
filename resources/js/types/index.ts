@@ -21,13 +21,3 @@ export interface ProcessingState {
     progress: number;
     message: string;
 }
-
-export interface PageProps {
-    locale: string;
-    availableLocales: string[];
-    [key: string]: unknown;
-}
-
-export interface ToolPageProps extends PageProps {
-    tool: string;
-}

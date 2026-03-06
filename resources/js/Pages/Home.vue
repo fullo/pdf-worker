@@ -1,7 +1,6 @@
 <script setup lang="ts">
-import { Head } from '@inertiajs/vue3';
-import { trans } from 'laravel-vue-i18n';
-import AppLayout from '@/Components/Layout/AppLayout.vue';
+import { onMounted } from 'vue';
+import { trans } from '@/i18n';
 import HeroSection from '@/Components/UI/HeroSection.vue';
 import ToolCard from '@/Components/UI/ToolCard.vue';
 
@@ -11,6 +10,8 @@ interface ToolItem {
     color: string;
     bgColor: string;
 }
+
+onMounted(() => { document.title = `${trans('home.title')} - PDF Worker`; });
 
 const tools: ToolItem[] = [
     {
@@ -137,9 +138,7 @@ const tools: ToolItem[] = [
 </script>
 
 <template>
-    <AppLayout>
-        <Head :title="trans('home.title')" />
-
+    <div>
         <HeroSection />
 
         <section class="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:px-8">
@@ -154,5 +153,5 @@ const tools: ToolItem[] = [
                 />
             </div>
         </section>
-    </AppLayout>
+    </div>
 </template>

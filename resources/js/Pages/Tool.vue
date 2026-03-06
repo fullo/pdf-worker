@@ -1,8 +1,6 @@
 <script setup lang="ts">
-import { ref, computed } from 'vue';
-import { Head } from '@inertiajs/vue3';
-import { trans } from 'laravel-vue-i18n';
-import AppLayout from '@/Components/Layout/AppLayout.vue';
+import { ref, computed, watchEffect } from 'vue';
+import { trans } from '@/i18n';
 import FileUploader from '@/Components/Tools/FileUploader.vue';
 import FileList from '@/Components/Tools/FileList.vue';
 import ProcessButton from '@/Components/Tools/ProcessButton.vue';
@@ -40,6 +38,8 @@ import JSZip from 'jszip';
 import { saveAs } from 'file-saver';
 
 const props = defineProps<{ tool: string }>();
+
+watchEffect(() => { document.title = `${trans(`tools.${props.tool}.name`)} - PDF Worker`; });
 
 const multiResultUrls = ref<string[]>([]);
 
@@ -350,9 +350,7 @@ const noOptionsTools = ['merge-pdf', 'extract-images', 'grayscale-pdf'];
 </script>
 
 <template>
-    <AppLayout>
-        <Head :title="trans(`tools.${tool}.name`)" />
-
+    <div>
         <!-- Tool Header -->
         <section :class="[toolConfig.bgColor, 'px-4 py-12 sm:py-16']">
             <div class="mx-auto max-w-3xl text-center">
@@ -622,5 +620,5 @@ const noOptionsTools = ['merge-pdf', 'extract-images', 'grayscale-pdf'];
                 </div>
             </div>
         </div>
-    </AppLayout>
+    </div>
 </template>

@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref } from 'vue';
-import { trans } from 'laravel-vue-i18n';
+import { trans } from '@/i18n';
 
 interface Props {
     accept: string;

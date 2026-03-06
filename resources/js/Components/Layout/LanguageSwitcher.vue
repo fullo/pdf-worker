@@ -1,9 +1,6 @@
 <script setup lang="ts">
 import { ref, computed, onMounted, onBeforeUnmount } from 'vue';
-import { usePage, router } from '@inertiajs/vue3';
-import type { PageProps } from '@/types';
-
-const page = usePage<PageProps>();
+import { currentLocale, availableLocales, setLocale } from '@/i18n';
 
 const isOpen = ref(false);
 const wrapperRef = ref<HTMLDivElement | null>(null);
@@ -26,9 +23,6 @@ const flags: Record<string, string> = {
     pt: '\u{1F1E7}\u{1F1F7}',
 };
 
-const currentLocale = computed(() => page.props.locale);
-const availableLocales = computed(() => page.props.availableLocales);
-
 const currentFlag = computed(() => flags[currentLocale.value] ?? '');
 
 function switchLocale(locale: string) {
@@ -37,20 +31,12 @@ function switchLocale(locale: string) {
         return;
     }
     isOpen.value = false;
-    router.post('/locale', { locale }, {
-        preserveScroll: true,
-        onSuccess: () => {
-            window.location.reload();
-        },
-    });
+    setLocale(locale);
+    window.location.reload();
 }
 
 function toggle() {
     isOpen.value = !isOpen.value;
-}
-
-function close() {
-    isOpen.value = false;
 }
 </script>
 
