@@ -408,5 +408,6 @@
     "toast.invalid_file": "Nicht unterstütztes Dateiformat",
 
     "home.search_placeholder": "Werkzeuge suchen...",
-    "home.no_results": "Keine Werkzeuge gefunden. Versuchen Sie eine andere Suche."
+    "home.no_results": "Keine Werkzeuge gefunden. Versuchen Sie eine andere Suche.",
+    "nav.blog": "Blog"
 }

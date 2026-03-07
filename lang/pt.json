@@ -406,5 +406,6 @@
     "toast.invalid_file": "Formato de arquivo não suportado",
 
     "home.search_placeholder": "Pesquisar ferramentas...",
-    "home.no_results": "Nenhuma ferramenta encontrada. Tente outra pesquisa."
+    "home.no_results": "Nenhuma ferramenta encontrada. Tente outra pesquisa.",
+    "nav.blog": "Blog"
 }

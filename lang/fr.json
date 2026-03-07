@@ -408,5 +408,6 @@
     "toast.invalid_file": "Format de fichier non pris en charge",
 
     "home.search_placeholder": "Rechercher des outils...",
-    "home.no_results": "Aucun outil trouvé. Essayez une autre recherche."
+    "home.no_results": "Aucun outil trouvé. Essayez une autre recherche.",
+    "nav.blog": "Blog"
 }

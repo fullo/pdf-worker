@@ -416,5 +416,18 @@
     "toast.invalid_file": "Unsupported file format",
 
     "home.search_placeholder": "Search tools...",
-    "home.no_results": "No tools found. Try a different search."
+    "home.no_results": "No tools found. Try a different search.",
+
+    "nav.blog": "Blog",
+    "blog.title": "Blog",
+    "blog.subtitle": "Tips, tutorials and guides for working with PDF files",
+    "blog.meta_description": "Discover tips, tutorials and best practices for working with PDF files. Free guides on merging, splitting, compressing, converting and editing PDFs online.",
+    "blog.filter_language": "Filter by language",
+    "blog.all_languages": "All",
+    "blog.articles": "articles",
+    "blog.no_articles": "No articles found.",
+    "blog.not_found": "Article not found",
+    "blog.back_to_blog": "Back to Blog",
+    "blog.try_tool": "Ready to try it yourself?",
+    "blog.related_articles": "Related Articles"
 }

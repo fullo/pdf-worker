@@ -40,6 +40,10 @@ const currentYear = new Date().getFullYear();
                 <div class="flex items-center gap-3 text-xs text-gray-500">
                     <span>&copy; {{ currentYear }} PDF Worker. {{ trans('All rights reserved.') }}</span>
                     <span class="text-gray-600">|</span>
+                    <RouterLink to="/blog" class="underline underline-offset-2 transition-colors hover:text-gray-300">
+                        {{ trans('nav.blog') }}
+                    </RouterLink>
+                    <span class="text-gray-600">|</span>
                     <RouterLink to="/privacy" class="underline underline-offset-2 transition-colors hover:text-gray-300">
                         {{ trans('privacy.title') }}
                     </RouterLink>
