@@ -1,38 +1,62 @@
 # PDF Worker
 
-A client-side PDF toolkit that runs entirely in your browser. Your files never leave your device.
+A privacy-first, client-side PDF toolkit that runs entirely in your browser. **Your files never leave your device** — all processing happens locally using Web Workers.
 
 **Live demo:** [https://fullo.github.io/pdf-worker/](https://fullo.github.io/pdf-worker/)
 
 ## Features
 
-- **Merge PDF** - Combine multiple PDFs into one
-- **Split PDF** - Extract pages or split into multiple documents
-- **Compress PDF** - Reduce file size while maintaining quality
-- **Rotate PDF** - Rotate pages by 90, 180, or 270 degrees
-- **Watermark** - Add text or image watermarks
-- **Page Numbers** - Add page numbers to documents
-- **PDF to JPG / PNG** - Convert PDF pages to images
-- **JPG to PDF** - Convert images to PDF
-- **Protect / Unlock PDF** - Add or remove password protection
-- **Crop PDF** - Interactive visual crop with draggable borders
-- **Redact PDF** - Draw redaction areas over sensitive content
-- **Edit PDF** - Add text blocks with drag-and-drop positioning
-- **Sign PDF** - Draw or type signatures and place them on pages
-- **Extract Images** - Extract embedded images from PDFs
-- **Grayscale PDF** - Convert to black and white
-- **Resize PDF** - Change page size (A4, A3, Letter, Legal)
-- **Header & Footer** - Add headers and footers with placeholders
-- **Organize PDF** - Reorder pages
+| Tool | Description |
+|------|-------------|
+| Merge PDF | Combine multiple PDFs into one |
+| Split PDF | Extract pages or split into individual documents |
+| Compress PDF | Reduce file size with three compression levels |
+| Rotate PDF | Rotate pages by 90, 180, or 270 degrees |
+| Watermark | Add text or image watermarks with opacity and positioning |
+| Page Numbers | Add page numbers with customizable format and position |
+| Header & Footer | Add headers/footers with `{page}` and `{total}` placeholders |
+| PDF to JPG / PNG | Convert PDF pages to images |
+| JPG to PDF | Convert images to PDF with orientation and margin options |
+| Markdown to PDF | Convert Markdown text to styled PDF documents |
+| Protect PDF | Add password protection and permission restrictions |
+| Unlock PDF | Remove password protection from PDFs |
+| Crop PDF | Interactive visual crop with draggable borders |
+| Resize PDF | Change page size (A4, A3, Letter, Legal) |
+| Redact PDF | Draw redaction areas over sensitive content |
+| Edit PDF | Add text, rectangles, lines, and freehand drawings |
+| Sign PDF | Draw or upload signatures and place them on pages |
+| Flatten PDF | Merge form fields and annotations into page content |
+| Grayscale PDF | Convert all pages to black and white |
+| Organize PDF | Reorder, duplicate, or remove pages via drag-and-drop |
+| Extract Images | Extract embedded images from PDFs |
+| Edit Metadata | View and edit PDF metadata (title, author, keywords, etc.) |
+| PDF to Text | Extract text content from PDF documents |
+
+All output PDFs are automatically stamped with `creator: pdfworker.eu` and relevant keywords.
 
 ## Tech Stack
 
-- **Vue 3** + TypeScript
+- **Vue 3** + TypeScript + Composition API
 - **Vue Router** (hash mode for static hosting)
-- **Tailwind CSS 4**
-- **pdf-lib** - PDF creation and manipulation
-- **pdfjs-dist** - PDF rendering and preview
-- **Vite** - Build tool
+- **Tailwind CSS 4** (Vite plugin)
+- **pdf-lib** — PDF creation and manipulation
+- **pdfjs-dist** — PDF rendering and page preview
+- **Vite 7** — Build tool with code splitting
+- **VitePWA** — Progressive Web App with offline support
+
+## Architecture
+
+- **Web Workers** — All PDF processing runs in a dedicated worker thread to keep the UI responsive
+- **Code splitting** — Each tool component, blog language, and heavy library is lazy-loaded on demand
+- **Batch processing** — Most tools support processing multiple files at once, with ZIP download
+- **SEO** — Dynamic meta tags, canonical URLs, JSON-LD structured data, and sitemap
+- **Blog** — Multilingual blog with lazy-loaded articles per language and infinite scroll
+
+## Multilingual
+
+Supports 15 languages: English, Italian, German, French, Portuguese, Spanish, Dutch, Swedish, Finnish, Danish, Norwegian, Belgian French, Greek, Slovenian, and Czech.
+
+Language preference is detected automatically and saved in localStorage.
 
 ## Development
 
@@ -49,11 +73,13 @@ npm run build
 
 Output goes to `docs/` for GitHub Pages deployment.
 
-## Multilingual
+## Privacy
 
-Supports 6 languages: English, Italian, Spanish, French, German, Portuguese.
-Language preference is saved in localStorage.
+- No file uploads — all processing is client-side
+- No tracking or analytics
+- No cookies (only localStorage for language preference)
+- Google AdSense for ads (optional cookies)
 
 ## License
 
-MIT
+[MIT](LICENSE)
