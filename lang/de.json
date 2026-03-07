@@ -422,5 +422,24 @@
     "blog.not_found": "Artikel nicht gefunden",
     "blog.back_to_blog": "Zurück zum Blog",
     "blog.try_tool": "Bereit es auszuprobieren?",
-    "blog.related_articles": "Verwandte Artikel"
+    "blog.related_articles": "Verwandte Artikel",
+
+    "tools.markdown-to-pdf.name": "Markdown zu PDF",
+    "tools.markdown-to-pdf.description": "Konvertieren Sie Markdown-Text in ein formatiertes PDF-Dokument.",
+    "tool.markdown.action": "PDF generieren",
+    "tool.markdown.title": "Markdown eingeben",
+    "tool.markdown.placeholder": "# Mein Dokument\n\nSchreiben Sie Ihren **Markdown**-Inhalt hier...\n\n- Aufzählungslisten\n- *Kursiver Text*\n- `Code-Snippets`\n\n1. Nummerierte Listen\n2. Zweiter Punkt\n\n---\n\n### Unterüberschrift\n\nAbsätze mit **fetter** und *kursiver* Formatierung.",
+    "tool.markdown.hint": "Unterstützt Überschriften (#), Fett (**), Kursiv (*), Aufzählungslisten (-), nummerierte Listen (1.), Codeblöcke (```), und horizontale Linien (---).",
+
+    "tools.markdown-to-pdf.how_title": "Wie man Markdown in PDF konvertiert",
+    "tools.markdown-to-pdf.how_text": "Schreiben oder fügen Sie Ihren Markdown-Text ein und konvertieren Sie ihn in ein formatiertes PDF-Dokument, direkt in Ihrem Browser.",
+    "tools.markdown-to-pdf.step_1": "Schreiben oder fügen Sie Ihren Markdown-Inhalt in das Textfeld ein.",
+    "tools.markdown-to-pdf.step_2": "Prüfen Sie die unterstützte Formatierung: Überschriften, Fett, Kursiv, Listen, Codeblöcke.",
+    "tools.markdown-to-pdf.step_3": "Klicken Sie auf PDF generieren und laden Sie Ihr Dokument herunter.",
+    "tools.markdown-to-pdf.faq_1_q": "Welche Markdown-Funktionen werden unterstützt?",
+    "tools.markdown-to-pdf.faq_1_a": "Überschriften (# bis ###), Fett (**Text**), Kursiv (*Text*), Aufzählungslisten (- Element), nummerierte Listen (1. Element), Codeblöcke (```) und horizontale Linien (---).",
+    "tools.markdown-to-pdf.faq_2_q": "Wird die Konvertierung online durchgeführt?",
+    "tools.markdown-to-pdf.faq_2_a": "Nein. Alles geschieht lokal in Ihrem Browser. Ihr Text wird niemals an einen Server gesendet.",
+    "tools.markdown-to-pdf.faq_3_q": "Welches Seitenformat wird verwendet?",
+    "tools.markdown-to-pdf.faq_3_a": "Das generierte PDF verwendet das A4-Format mit Standardrändern."
 }

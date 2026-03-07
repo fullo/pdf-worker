@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref, computed, onMounted, onBeforeUnmount, watch, nextTick } from 'vue';
 import { trans } from '@/i18n';
-import * as pdfjsLib from 'pdfjs-dist';
+import pdfjsLib from '@/Services/pdfjsSetup';
 import type { WatermarkOptions } from '@/Services/pdf/watermark';
 
 const props = defineProps<{

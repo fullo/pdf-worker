@@ -119,6 +119,7 @@ const toolConfig = computed(() => {
         'header-footer': { accept: '.pdf', multiple: true, color: 'bg-orange-500', bgColor: 'bg-orange-50' },
         'flatten-pdf': { accept: '.pdf', multiple: true, color: 'bg-amber-500', bgColor: 'bg-amber-50' },
         'pdf-to-text': { accept: '.pdf', multiple: true, color: 'bg-blue-500', bgColor: 'bg-blue-50' },
+        'markdown-to-pdf': { accept: '', multiple: false, color: 'bg-violet-500', bgColor: 'bg-violet-50' },
     };
     return configs[props.tool] ?? configs['merge-pdf'];
 });
@@ -176,6 +177,8 @@ const signToolRef = ref<InstanceType<typeof SignTool> | null>(null);
 const editToolRef = ref<InstanceType<typeof EditTool> | null>(null);
 // Organize ref
 const organizeToolRef = ref<InstanceType<typeof OrganizeTool> | null>(null);
+// Markdown to PDF
+const markdownText = ref('');
 
 // Multi-file results
 const multiResults = ref<{ name: string; blob: Blob }[]>([]);
@@ -210,6 +213,7 @@ const actionLabel = computed(() => {
         'header-footer': 'tool.headerfooter.action',
         'flatten-pdf': 'tool.flatten.action',
         'pdf-to-text': 'tool.pdftotext.action',
+        'markdown-to-pdf': 'tool.markdown.action',
     };
     return trans(labels[props.tool] ?? 'tool.process');
 });
@@ -299,7 +303,8 @@ async function processSingleFile(
 
 // Main process function
 async function process() {
-    if (!hasFiles.value) return;
+    if (!hasFiles.value && !isTextInputTool.value) return;
+    if (isTextInputTool.value && !hasTextContent.value) return;
     startProcessing();
     multiResults.value = [];
 
@@ -475,6 +480,11 @@ async function process() {
                     setResult(blob, name);
                     break;
                 }
+                case 'markdown-to-pdf': {
+                    const blob = await runInWorker('markdown-to-pdf', [], { markdown: markdownText.value }, updateProgress) as Blob;
+                    setResult(blob, 'markdown.pdf');
+                    break;
+                }
             }
         }
         finishProcessing();
@@ -506,6 +516,7 @@ function resetTool() {
     multiResults.value = [];
     multiResultUrls.value.forEach(url => URL.revokeObjectURL(url));
     multiResultUrls.value = [];
+    markdownText.value = '';
 }
 
 const addMoreInput = ref<HTMLInputElement | null>(null);
@@ -524,6 +535,10 @@ function onAddMoreFiles(event: Event) {
 
 // Tools that don't need extra options panel
 const noOptionsTools = ['merge-pdf', 'extract-images', 'grayscale-pdf', 'flatten-pdf', 'pdf-to-text'];
+
+// Text-input tools (no file upload)
+const isTextInputTool = computed(() => props.tool === 'markdown-to-pdf');
+const hasTextContent = computed(() => markdownText.value.trim().length > 0);
 </script>
 
 <template>
@@ -544,6 +559,30 @@ const noOptionsTools = ['merge-pdf', 'extract-images', 'grayscale-pdf', 'flatten
             <!-- Hidden inputs -->
             <input ref="addMoreInput" type="file" class="hidden" aria-label="Add more files" :accept="toolConfig.accept" :multiple="toolConfig.multiple" @change="onAddMoreFiles" />
 
+            <!-- Text Input Tools (markdown-to-pdf) -->
+            <Transition
+                enter-active-class="transition ease-out duration-300"
+                enter-from-class="opacity-0 scale-95"
+                enter-to-class="opacity-100 scale-100"
+                leave-active-class="transition ease-in duration-200"
+                leave-from-class="opacity-100"
+                leave-to-class="opacity-0"
+            >
+            <div v-if="isTextInputTool && state.status !== 'done'" class="space-y-6">
+                <div class="rounded-xl border border-gray-200 bg-white p-6 dark:border-gray-700 dark:bg-gray-800">
+                    <h3 class="mb-3 font-semibold text-gray-900 dark:text-white">{{ trans('tool.markdown.title') }}</h3>
+                    <textarea
+                        v-model="markdownText"
+                        rows="14"
+                        class="w-full rounded-lg border border-gray-300 bg-gray-50 px-4 py-3 font-mono text-sm text-gray-800 placeholder-gray-400 focus:border-violet-500 focus:ring-violet-500 dark:border-gray-600 dark:bg-gray-700 dark:text-gray-200 dark:placeholder-gray-500"
+                        :placeholder="trans('tool.markdown.placeholder')"
+                    />
+                    <p class="mt-2 text-xs text-gray-400">{{ trans('tool.markdown.hint') }}</p>
+                </div>
+                <ProcessButton :status="state.status" :progress="state.progress" :label="actionLabel" :color="toolConfig.color" :error-message="state.message" @process="process" />
+            </div>
+            </Transition>
+
             <!-- Upload Area -->
             <Transition
                 enter-active-class="transition ease-out duration-300"
@@ -553,7 +592,7 @@ const noOptionsTools = ['merge-pdf', 'extract-images', 'grayscale-pdf', 'flatten
                 leave-from-class="opacity-100"
                 leave-to-class="opacity-0"
             >
-            <div v-if="!hasFiles && state.status === 'idle'">
+            <div v-if="!isTextInputTool && !hasFiles && state.status === 'idle'">
                 <FileUploader
                     :accept="toolConfig.accept"
                     :multiple="toolConfig.multiple"
@@ -572,7 +611,7 @@ const noOptionsTools = ['merge-pdf', 'extract-images', 'grayscale-pdf', 'flatten
                 leave-from-class="opacity-100"
                 leave-to-class="opacity-0"
             >
-            <div v-if="hasFiles && state.status !== 'done'" class="space-y-6">
+            <div v-if="!isTextInputTool && hasFiles && state.status !== 'done'" class="space-y-6">
                 <!-- File list (hide for watermark since WatermarkTool shows its own preview) -->
                 <FileList
                     v-if="tool !== 'watermark-pdf'"

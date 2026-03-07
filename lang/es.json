@@ -420,5 +420,24 @@
     "blog.not_found": "Artículo no encontrado",
     "blog.back_to_blog": "Volver al Blog",
     "blog.try_tool": "¿Listo para probarlo?",
-    "blog.related_articles": "Artículos relacionados"
+    "blog.related_articles": "Artículos relacionados",
+
+    "tools.markdown-to-pdf.name": "Markdown a PDF",
+    "tools.markdown-to-pdf.description": "Convierte texto Markdown en un documento PDF formateado.",
+    "tool.markdown.action": "Generar PDF",
+    "tool.markdown.title": "Introduce Markdown",
+    "tool.markdown.placeholder": "# Mi documento\n\nEscribe tu contenido **Markdown** aquí...\n\n- Listas con viñetas\n- *Texto en cursiva*\n- `fragmentos de código`\n\n1. Listas numeradas\n2. Segundo elemento\n\n---\n\n### Subtítulo\n\nPárrafos con formato **negrita** y *cursiva*.",
+    "tool.markdown.hint": "Soporta encabezados (#), negrita (**), cursiva (*), listas con viñetas (-), listas numeradas (1.), bloques de código (```), y líneas horizontales (---).",
+
+    "tools.markdown-to-pdf.how_title": "Cómo convertir Markdown a PDF",
+    "tools.markdown-to-pdf.how_text": "Escribe o pega tu texto Markdown y conviértelo en un documento PDF formateado, directamente en tu navegador.",
+    "tools.markdown-to-pdf.step_1": "Escribe o pega tu contenido Markdown en el área de texto.",
+    "tools.markdown-to-pdf.step_2": "Revisa el formato soportado: encabezados, negrita, cursiva, listas, bloques de código.",
+    "tools.markdown-to-pdf.step_3": "Haz clic en Generar PDF y descarga tu documento.",
+    "tools.markdown-to-pdf.faq_1_q": "¿Qué características de Markdown están soportadas?",
+    "tools.markdown-to-pdf.faq_1_a": "Encabezados (# a ###), negrita (**texto**), cursiva (*texto*), listas con viñetas (- elemento), listas numeradas (1. elemento), bloques de código (```) y líneas horizontales (---).",
+    "tools.markdown-to-pdf.faq_2_q": "¿La conversión se realiza en línea?",
+    "tools.markdown-to-pdf.faq_2_a": "No. Todo sucede localmente en tu navegador. Tu texto nunca se envía a ningún servidor.",
+    "tools.markdown-to-pdf.faq_3_q": "¿Qué tamaño de página se utiliza?",
+    "tools.markdown-to-pdf.faq_3_a": "El PDF generado utiliza el tamaño A4 con márgenes estándar."
 }

@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref, watch, nextTick, onMounted, computed } from 'vue';
 import { trans } from '@/i18n';
-import * as pdfjsLib from 'pdfjs-dist';
+import pdfjsLib from '@/Services/pdfjsSetup';
 import type { CropOptions } from '@/Services/pdf/crop';
 
 const props = defineProps<{

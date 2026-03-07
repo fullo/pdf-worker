@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref, computed, watch, nextTick, onMounted, onBeforeUnmount } from 'vue';
 import { trans } from '@/i18n';
-import * as pdfjsLib from 'pdfjs-dist';
+import pdfjsLib from '@/Services/pdfjsSetup';
 import type { SignatureOptions } from '@/Services/pdf/sign';
 
 const props = defineProps<{

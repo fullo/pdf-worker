@@ -431,5 +431,24 @@
     "blog.not_found": "Articolo non trovato",
     "blog.back_to_blog": "Torna al Blog",
     "blog.try_tool": "Pronto a provare?",
-    "blog.related_articles": "Articoli correlati"
+    "blog.related_articles": "Articoli correlati",
+
+    "tools.markdown-to-pdf.name": "Markdown in PDF",
+    "tools.markdown-to-pdf.description": "Converti testo Markdown in un documento PDF formattato.",
+    "tool.markdown.action": "Genera PDF",
+    "tool.markdown.title": "Inserisci Markdown",
+    "tool.markdown.placeholder": "# Il mio documento\n\nScrivi il tuo contenuto **Markdown** qui...\n\n- Elenchi puntati\n- *Testo in corsivo*\n- `frammenti di codice`\n\n1. Elenchi numerati\n2. Secondo elemento\n\n---\n\n### Sottotitolo\n\nParagrafi con formattazione **grassetto** e *corsivo*.",
+    "tool.markdown.hint": "Supporta intestazioni (#), grassetto (**), corsivo (*), elenchi puntati (-), elenchi numerati (1.), blocchi di codice (```), e linee orizzontali (---).",
+
+    "tools.markdown-to-pdf.how_title": "Come convertire Markdown in PDF",
+    "tools.markdown-to-pdf.how_text": "Scrivi o incolla il tuo testo Markdown e convertilo in un documento PDF formattato, tutto nel tuo browser.",
+    "tools.markdown-to-pdf.step_1": "Scrivi o incolla il contenuto Markdown nell'area di testo.",
+    "tools.markdown-to-pdf.step_2": "Controlla la formattazione: intestazioni, grassetto, corsivo, elenchi, blocchi di codice.",
+    "tools.markdown-to-pdf.step_3": "Clicca Genera PDF e scarica il documento.",
+    "tools.markdown-to-pdf.faq_1_q": "Quali funzionalità Markdown sono supportate?",
+    "tools.markdown-to-pdf.faq_1_a": "Intestazioni (da # a ###), grassetto (**testo**), corsivo (*testo*), elenchi puntati (- elemento), elenchi numerati (1. elemento), blocchi di codice (```) e linee orizzontali (---).",
+    "tools.markdown-to-pdf.faq_2_q": "La conversione avviene online?",
+    "tools.markdown-to-pdf.faq_2_a": "No. Tutto avviene localmente nel tuo browser. Il testo non viene mai inviato a nessun server.",
+    "tools.markdown-to-pdf.faq_3_q": "Quale formato di pagina viene utilizzato?",
+    "tools.markdown-to-pdf.faq_3_a": "Il PDF generato utilizza il formato A4 con margini standard."
 }

@@ -422,5 +422,24 @@
     "blog.not_found": "Article non trouvé",
     "blog.back_to_blog": "Retour au Blog",
     "blog.try_tool": "Prêt à essayer ?",
-    "blog.related_articles": "Articles associés"
+    "blog.related_articles": "Articles associés",
+
+    "tools.markdown-to-pdf.name": "Markdown en PDF",
+    "tools.markdown-to-pdf.description": "Convertissez du texte Markdown en un document PDF formaté.",
+    "tool.markdown.action": "Générer le PDF",
+    "tool.markdown.title": "Saisir le Markdown",
+    "tool.markdown.placeholder": "# Mon document\n\nÉcrivez votre contenu **Markdown** ici...\n\n- Listes à puces\n- *Texte en italique*\n- `extraits de code`\n\n1. Listes numérotées\n2. Deuxième élément\n\n---\n\n### Sous-titre\n\nParagraphes avec mise en forme **gras** et *italique*.",
+    "tool.markdown.hint": "Prend en charge les titres (#), gras (**), italique (*), listes à puces (-), listes numérotées (1.), blocs de code (```), et lignes horizontales (---).",
+
+    "tools.markdown-to-pdf.how_title": "Comment convertir du Markdown en PDF",
+    "tools.markdown-to-pdf.how_text": "Écrivez ou collez votre texte Markdown et convertissez-le en un document PDF formaté, directement dans votre navigateur.",
+    "tools.markdown-to-pdf.step_1": "Écrivez ou collez votre contenu Markdown dans la zone de texte.",
+    "tools.markdown-to-pdf.step_2": "Vérifiez la mise en forme prise en charge : titres, gras, italique, listes, blocs de code.",
+    "tools.markdown-to-pdf.step_3": "Cliquez sur Générer le PDF et téléchargez votre document.",
+    "tools.markdown-to-pdf.faq_1_q": "Quelles fonctionnalités Markdown sont prises en charge ?",
+    "tools.markdown-to-pdf.faq_1_a": "Titres (# à ###), gras (**texte**), italique (*texte*), listes à puces (- élément), listes numérotées (1. élément), blocs de code (```) et lignes horizontales (---).",
+    "tools.markdown-to-pdf.faq_2_q": "La conversion se fait-elle en ligne ?",
+    "tools.markdown-to-pdf.faq_2_a": "Non. Tout se passe localement dans votre navigateur. Votre texte n'est jamais envoyé à un serveur.",
+    "tools.markdown-to-pdf.faq_3_q": "Quel format de page est utilisé ?",
+    "tools.markdown-to-pdf.faq_3_a": "Le PDF généré utilise le format A4 avec des marges standard."
 }

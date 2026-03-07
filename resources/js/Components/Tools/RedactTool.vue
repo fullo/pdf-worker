@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref, watch, nextTick, onMounted, onBeforeUnmount, computed } from 'vue';
 import { trans } from '@/i18n';
-import * as pdfjsLib from 'pdfjs-dist';
+import pdfjsLib from '@/Services/pdfjsSetup';
 import type { RedactArea } from '@/Services/pdf/redact';
 
 const props = defineProps<{

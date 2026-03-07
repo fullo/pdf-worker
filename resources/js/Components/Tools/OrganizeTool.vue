@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref, watch, onUnmounted } from 'vue';
 import { trans } from '@/i18n';
-import * as pdfjsLib from 'pdfjs-dist';
+import pdfjsLib from '@/Services/pdfjsSetup';
 
 const props = defineProps<{ pdfFile: File | null }>();
 
