@@ -661,4 +661,86 @@ export const blogPostsEs: BlogPost[] = [
         tool: 'merge-pdf',
         tags: ['combinar', 'dividir', 'guia'],
     },
+    {
+        slug: 'guia-convertir-markdown-a-pdf',
+        lang: 'es',
+        title: 'Como convertir Markdown a PDF: una guia completa',
+        excerpt: 'Transforma tus archivos Markdown en documentos PDF con formato profesional directamente en el navegador. Sin servidores, sin instalaciones.',
+        body: `<p>Markdown es el formato preferido para escribir documentacion, notas y contenido tecnico. Pero cuando se trata de compartir con colegas no tecnicos o imprimir, el PDF es el estandar.</p>
+<h2>Por que convertir Markdown a PDF?</h2>
+<ul>
+<li><strong>Apariencia profesional</strong> — los PDFs preservan el formato en todos los dispositivos y plataformas</li>
+<li><strong>Facil de compartir</strong> — los destinatarios no necesitan un visor de Markdown para leer tus documentos</li>
+<li><strong>Listo para imprimir</strong> — los PDFs estan disenados tanto para pantalla como para impresion</li>
+</ul>
+<h2>Como funciona</h2>
+<p>La herramienta <a href="/#/markdown-to-pdf">Markdown a PDF</a> renderiza tu contenido Markdown con soporte completo para encabezados, listas, bloques de codigo, tablas y mas. Simplemente pega o escribe tu Markdown, previsualiza el resultado y descarga el PDF.</p>
+<h2>Caracteristicas de Markdown soportadas</h2>
+<p>El convertidor maneja toda la sintaxis Markdown estandar incluyendo negrita, cursiva, enlaces, imagenes, citas, listas ordenadas y desordenadas, bloques de codigo con resaltado de sintaxis y tablas. Tu contenido se procesa completamente en el navegador para total privacidad.</p>`,
+        date: '2026-03-05',
+        tool: 'markdown-to-pdf',
+        tags: ['markdown', 'convertir', 'documentacion'],
+    },
+    {
+        slug: 'firmas-digitales-vs-firmas-electronicas-pdf',
+        lang: 'es',
+        title: 'Firmas digitales vs firmas electronicas en PDF: lo que necesitas saber',
+        excerpt: 'Entiende las diferencias entre firmas digitales y electronicas, y aprende como agregarlas a tus documentos PDF.',
+        body: `<p>Firmar documentos digitalmente se ha vuelto esencial en el entorno actual de trabajo remoto. Pero existe una distincion importante entre firmas electronicas y firmas digitales.</p>
+<h2>Firmas electronicas</h2>
+<p>Una firma electronica es cualquier marca, simbolo o proceso adjunto a un documento para indicar consentimiento. Esto incluye nombres escritos, firmas manuscritas escaneadas o firmas dibujadas.</p>
+<p>La herramienta <a href="/#/sign-pdf">Firmar PDF</a> te permite crear firmas electronicas dibujando, escribiendo o subiendo una imagen de tu firma — todo procesado localmente en tu navegador.</p>
+<h2>Firmas digitales</h2>
+<p>Las firmas digitales utilizan tecnologia criptografica para verificar la identidad del firmante y garantizar que el documento no ha sido alterado. Requieren un certificado digital de una autoridad confiable.</p>
+<h2>Cual deberias usar?</h2>
+<p>Para la mayoria de los documentos cotidianos como aprobaciones internas, formularios de consentimiento y acuerdos informales, las firmas electronicas son suficientes y legalmente reconocidas en la mayoria de las jurisdicciones. Para contratos de alto valor o documentos regulatorios, las firmas digitales proporcionan una validez legal mas solida.</p>`,
+        date: '2026-02-18',
+        tool: 'sign-pdf',
+        tags: ['firma', 'firma-digital', 'firma-electronica'],
+    },
+    {
+        slug: 'hacer-pdf-accesible-guia',
+        lang: 'es',
+        title: 'Como hacer accesibles tus documentos PDF',
+        excerpt: 'Aprende las mejores practicas para crear documentos PDF accesibles que todos puedan leer, incluidas personas que usan lectores de pantalla.',
+        body: `<p>Los PDFs accesibles garantizan que todos, incluidas las personas con discapacidades, puedan acceder y comprender tu contenido. La accesibilidad no es solo una buena practica — a menudo es un requisito legal.</p>
+<h2>Caracteristicas clave de accesibilidad</h2>
+<ul>
+<li><strong>Encabezados claros</strong> — usa una jerarquia logica de encabezados para estructurar el contenido</li>
+<li><strong>Texto alternativo para imagenes</strong> — describe el contenido visual para usuarios de lectores de pantalla</li>
+<li><strong>Fuentes legibles</strong> — elige fuentes faciles de leer en varios tamanos</li>
+<li><strong>Contraste suficiente</strong> — asegura que el texto tenga contraste adecuado con el fondo</li>
+</ul>
+<h2>Herramientas que ayudan</h2>
+<p>La herramienta <a href="/#/edit-pdf">Editar PDF</a> te permite agregar anotaciones de texto y etiquetas a tus documentos. Usala para agregar texto descriptivo cerca de las imagenes o aclarar diagramas complejos.</p>
+<p>Para documentos escaneados, usa la herramienta <a href="/#/pdf-to-text">PDF a Texto</a> para verificar que el contenido textual sea correctamente extraible, lo cual es esencial para los lectores de pantalla.</p>
+<h2>Probar la accesibilidad</h2>
+<p>Siempre prueba tus PDFs con un lector de pantalla antes de distribuirlos. Las verificaciones simples incluyen comprobar que el texto pueda seleccionarse y copiarse, y que el orden de lectura tenga sentido.</p>`,
+        date: '2026-01-22',
+        tool: 'edit-pdf',
+        tags: ['accesibilidad', 'inclusivo', 'lector-de-pantalla'],
+    },
+    {
+        slug: 'automatizacion-flujo-trabajo-pdf-consejos',
+        lang: 'es',
+        title: 'Automatizacion del flujo de trabajo PDF: consejos para maxima productividad',
+        excerpt: 'Optimiza tu flujo de trabajo documental con consejos practicos para automatizar tareas PDF repetitivas usando herramientas basadas en navegador.',
+        body: `<p>Manejar PDFs es una tarea diaria para muchos profesionales. Desde comprimir archivos adjuntos de correo hasta combinar informes, estas tareas repetitivas pueden consumir tiempo valioso.</p>
+<h2>Cuellos de botella comunes en el flujo de trabajo</h2>
+<ul>
+<li>Comprimir archivos manualmente antes de enviar correos</li>
+<li>Convertir imagenes a PDF una a la vez</li>
+<li>Agregar numeros de pagina o encabezados a multiples documentos</li>
+<li>Dividir documentos grandes en secciones individuales</li>
+</ul>
+<h2>Ventajas de las herramientas basadas en navegador</h2>
+<p>A diferencia del software instalado, las herramientas PDF basadas en navegador como <a href="/">PDF Worker</a> no requieren configuracion ni actualizaciones. Abre una pestana, procesa tu archivo y continua. Sin costos de licencia, sin problemas de compatibilidad.</p>
+<h2>Procesamiento por lotes</h2>
+<p>Muchas herramientas admiten el procesamiento de multiples archivos a la vez. Sube varios PDFs a la herramienta <a href="/#/compress-pdf">Comprimir PDF</a> y descarga todos los resultados juntos como un archivo ZIP. Lo mismo aplica para la <a href="/#/rotate-pdf">rotacion</a>, la <a href="/#/grayscale-pdf">conversion a escala de grises</a> y otras operaciones.</p>
+<h2>Encadenar operaciones</h2>
+<p>Para flujos de trabajo complejos, encadena operaciones: primero <a href="/#/unlock-pdf">desbloquea</a> un PDF protegido, luego <a href="/#/split-pdf">dividelo</a> en secciones, <a href="/#/compress-pdf">comprime</a> cada seccion y finalmente <a href="/#/merge-pdf">combina</a> las piezas que necesitas.</p>`,
+        date: '2026-02-05',
+        tool: 'compress-pdf',
+        tags: ['flujo-de-trabajo', 'automatizacion', 'productividad'],
+    },
 ];

@@ -661,4 +661,86 @@ export const blogPostsDe: BlogPost[] = [
         tool: 'merge-pdf',
         tags: ['zusammenf\u00fchren', 'teilen', 'leitfaden'],
     },
+    {
+        slug: 'markdown-in-pdf-umwandeln-leitfaden',
+        lang: 'de',
+        title: 'Markdown in PDF umwandeln: Ein vollst\u00e4ndiger Leitfaden',
+        excerpt: 'Verwandeln Sie Ihre Markdown-Dateien in sch\u00f6n formatierte PDF-Dokumente direkt im Browser. Keine Server, keine Installationen.',
+        body: `<p>Markdown ist das bevorzugte Format zum Schreiben von Dokumentation, Notizen und technischen Inhalten. Aber wenn es darum geht, Inhalte mit nicht-technischen Kollegen zu teilen oder zu drucken, ist PDF der Standard.</p>
+<h2>Warum Markdown in PDF umwandeln?</h2>
+<ul>
+<li><strong>Professionelles Erscheinungsbild</strong> \u2014 PDFs bewahren die Formatierung auf allen Ger\u00e4ten und Plattformen</li>
+<li><strong>Einfaches Teilen</strong> \u2014 Empf\u00e4nger ben\u00f6tigen keinen Markdown-Viewer, um Ihre Dokumente zu lesen</li>
+<li><strong>Druckfertig</strong> \u2014 PDFs sind sowohl f\u00fcr die Bildschirm- als auch f\u00fcr die Druckausgabe konzipiert</li>
+</ul>
+<h2>So funktioniert es</h2>
+<p>Das <a href="/#/markdown-to-pdf">Markdown-zu-PDF-Tool</a> rendert Ihren Markdown-Inhalt mit voller Unterst\u00fctzung f\u00fcr \u00dcberschriften, Listen, Codebl\u00f6cke, Tabellen und mehr. F\u00fcgen Sie einfach Ihren Markdown ein oder geben Sie ihn ein, sehen Sie sich die Vorschau an und laden Sie das PDF herunter.</p>
+<h2>Unterst\u00fctzte Markdown-Funktionen</h2>
+<p>Der Konverter verarbeitet die gesamte Standard-Markdown-Syntax einschlie\u00dflich Fettschrift, Kursivschrift, Links, Bilder, Blockzitate, geordnete und ungeordnete Listen, Code-Fencing mit Syntaxhervorhebung und Tabellen. Ihre Inhalte werden vollst\u00e4ndig im Browser verarbeitet, um Ihre Privatsph\u00e4re zu gew\u00e4hrleisten.</p>`,
+        date: '2026-03-05',
+        tool: 'markdown-to-pdf',
+        tags: ['markdown', 'konvertieren', 'dokumentation'],
+    },
+    {
+        slug: 'digitale-vs-elektronische-signaturen-pdf',
+        lang: 'de',
+        title: 'Digitale vs. elektronische Signaturen bei PDFs: Was Sie wissen m\u00fcssen',
+        excerpt: 'Verstehen Sie die Unterschiede zwischen digitalen und elektronischen Signaturen und erfahren Sie, wie Sie diese zu Ihren PDF-Dokumenten hinzuf\u00fcgen.',
+        body: `<p>Das digitale Unterschreiben von Dokumenten ist in der heutigen Remote-Arbeitswelt unverzichtbar geworden. Aber es gibt einen wichtigen Unterschied zwischen elektronischen Signaturen und digitalen Signaturen.</p>
+<h2>Elektronische Signaturen</h2>
+<p>Eine elektronische Signatur ist jede Markierung, jedes Symbol oder jeder Prozess, der an ein Dokument angeh\u00e4ngt wird, um Zustimmung anzuzeigen. Dies umfasst getippte Namen, gescannte handschriftliche Unterschriften oder gezeichnete Signaturen.</p>
+<p>Das <a href="/#/sign-pdf">PDF-Signieren-Tool</a> erm\u00f6glicht es Ihnen, elektronische Signaturen durch Zeichnen, Tippen oder Hochladen eines Bildes Ihrer Unterschrift zu erstellen \u2014 alles wird lokal in Ihrem Browser verarbeitet.</p>
+<h2>Digitale Signaturen</h2>
+<p>Digitale Signaturen verwenden kryptografische Technologie, um die Identit\u00e4t des Unterzeichners zu \u00fcberpr\u00fcfen und sicherzustellen, dass das Dokument nicht manipuliert wurde. Sie erfordern ein digitales Zertifikat von einer vertrauensw\u00fcrdigen Stelle.</p>
+<h2>Welche sollten Sie verwenden?</h2>
+<p>F\u00fcr die meisten allt\u00e4glichen Dokumente wie interne Genehmigungen, Einverst\u00e4ndniserkl\u00e4rungen und informelle Vereinbarungen sind elektronische Signaturen ausreichend und in den meisten Rechtsordnungen rechtlich anerkannt. F\u00fcr hochwertige Vertr\u00e4ge oder regulatorische Dokumente bieten digitale Signaturen eine st\u00e4rkere Rechtsstellung.</p>`,
+        date: '2026-02-18',
+        tool: 'sign-pdf',
+        tags: ['signieren', 'digitale-signatur', 'elektronische-signatur'],
+    },
+    {
+        slug: 'pdf-barrierefrei-machen-leitfaden',
+        lang: 'de',
+        title: 'So machen Sie Ihre PDF-Dokumente barrierefrei',
+        excerpt: 'Lernen Sie bew\u00e4hrte Methoden zur Erstellung barrierefreier PDF-Dokumente, die jeder lesen kann, einschlie\u00dflich Personen, die Screenreader verwenden.',
+        body: `<p>Barrierefreie PDFs stellen sicher, dass alle Menschen, einschlie\u00dflich Menschen mit Behinderungen, auf Ihre Inhalte zugreifen und sie verstehen k\u00f6nnen. Barrierefreiheit ist nicht nur gute Praxis \u2014 sie ist oft eine gesetzliche Anforderung.</p>
+<h2>Wichtige Barrierefreiheitsfunktionen</h2>
+<ul>
+<li><strong>Klare \u00dcberschriften</strong> \u2014 verwenden Sie eine logische \u00dcberschriftenhierarchie zur Strukturierung von Inhalten</li>
+<li><strong>Alternativtext f\u00fcr Bilder</strong> \u2014 beschreiben Sie visuelle Inhalte f\u00fcr Screenreader-Nutzer</li>
+<li><strong>Lesbare Schriftarten</strong> \u2014 w\u00e4hlen Sie Schriftarten, die in verschiedenen Gr\u00f6\u00dfen leicht lesbar sind</li>
+<li><strong>Ausreichender Kontrast</strong> \u2014 stellen Sie sicher, dass der Text ausreichend Kontrast zum Hintergrund hat</li>
+</ul>
+<h2>Hilfreiche Werkzeuge</h2>
+<p>Das <a href="/#/edit-pdf">PDF-Bearbeiten-Tool</a> erm\u00f6glicht es Ihnen, Textanmerkungen und Beschriftungen zu Ihren Dokumenten hinzuzuf\u00fcgen. Verwenden Sie es, um beschreibenden Text neben Bildern hinzuzuf\u00fcgen oder komplexe Diagramme zu erl\u00e4utern.</p>
+<p>F\u00fcr gescannte Dokumente verwenden Sie das <a href="/#/pdf-to-text">PDF-zu-Text-Tool</a>, um zu \u00fcberpr\u00fcfen, ob der Textinhalt ordnungsgem\u00e4\u00df extrahierbar ist, was f\u00fcr Screenreader unerl\u00e4sslich ist.</p>
+<h2>Barrierefreiheit testen</h2>
+<p>Testen Sie Ihre PDFs immer mit einem Screenreader, bevor Sie sie verteilen. Einfache Pr\u00fcfungen umfassen die \u00dcberpr\u00fcfung, ob Text ausgew\u00e4hlt und kopiert werden kann und ob die Lesereihenfolge sinnvoll ist.</p>`,
+        date: '2026-01-22',
+        tool: 'edit-pdf',
+        tags: ['barrierefreiheit', 'inklusiv', 'screenreader'],
+    },
+    {
+        slug: 'pdf-workflow-automatisierung-tipps',
+        lang: 'de',
+        title: 'PDF-Workflow-Automatisierung: Tipps f\u00fcr maximale Produktivit\u00e4t',
+        excerpt: 'Optimieren Sie Ihren Dokumenten-Workflow mit praktischen Tipps zur Automatisierung wiederkehrender PDF-Aufgaben mithilfe browserbasierter Werkzeuge.',
+        body: `<p>Der Umgang mit PDFs ist f\u00fcr viele Berufst\u00e4tige eine t\u00e4gliche Aufgabe. Vom Komprimieren von E-Mail-Anh\u00e4ngen bis zum Zusammenf\u00fchren von Berichten k\u00f6nnen diese sich wiederholenden Aufgaben wertvolle Zeit kosten.</p>
+<h2>H\u00e4ufige Workflow-Engp\u00e4sse</h2>
+<ul>
+<li>Manuelles Komprimieren von Dateien vor dem Versenden von E-Mails</li>
+<li>Einzelnes Umwandeln von Bildern in PDF</li>
+<li>Hinzuf\u00fcgen von Seitenzahlen oder Kopfzeilen zu mehreren Dokumenten</li>
+<li>Aufteilen gro\u00dfer Dokumente in einzelne Abschnitte</li>
+</ul>
+<h2>Vorteile browserbasierter Werkzeuge</h2>
+<p>Im Gegensatz zu installierter Software erfordern browserbasierte PDF-Werkzeuge wie <a href="/">PDF Worker</a> keine Einrichtung oder Updates. \u00d6ffnen Sie einen Tab, verarbeiten Sie Ihre Datei und machen Sie weiter. Keine Lizenzgeb\u00fchren, keine Kompatibilit\u00e4tsprobleme.</p>
+<h2>Stapelverarbeitung</h2>
+<p>Viele Werkzeuge unterst\u00fctzen die gleichzeitige Verarbeitung mehrerer Dateien. Laden Sie mehrere PDFs in das <a href="/#/compress-pdf">PDF-Komprimieren-Tool</a> und laden Sie alle Ergebnisse zusammen als ZIP-Datei herunter. Das Gleiche gilt f\u00fcr <a href="/#/rotate-pdf">Drehung</a>, <a href="/#/grayscale-pdf">Graustufen-Umwandlung</a> und andere Operationen.</p>
+<h2>Operationen verketten</h2>
+<p>F\u00fcr komplexe Workflows verketten Sie Operationen: Zuerst ein gesch\u00fctztes PDF <a href="/#/unlock-pdf">entsperren</a>, dann in Abschnitte <a href="/#/split-pdf">aufteilen</a>, jeden Abschnitt <a href="/#/compress-pdf">komprimieren</a> und schlie\u00dflich die ben\u00f6tigten Teile <a href="/#/merge-pdf">zusammenf\u00fchren</a>.</p>`,
+        date: '2026-02-05',
+        tool: 'compress-pdf',
+        tags: ['workflow', 'automatisierung', 'produktivitaet'],
+    },
 ];

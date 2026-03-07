@@ -659,4 +659,86 @@ export const blogPostsFr: BlogPost[] = [
         tool: 'merge-pdf',
         tags: ['fusionner', 'diviser', 'guide'],
     },
+    {
+        slug: 'guide-convertir-markdown-en-pdf',
+        lang: 'fr',
+        title: 'Comment Convertir du Markdown en PDF : Guide Complet',
+        excerpt: 'Transformez vos fichiers Markdown en documents PDF magnifiquement formatés directement dans le navigateur. Aucun serveur, aucune installation.',
+        body: `<p>Le Markdown est le format de prédilection pour rédiger de la documentation, des notes et du contenu technique. Mais lorsqu'il s'agit de partager avec des collègues non techniques ou d'imprimer, le PDF est la norme.</p>
+<h2>Pourquoi Convertir du Markdown en PDF ?</h2>
+<ul>
+<li><strong>Apparence professionnelle</strong> — les PDF préservent la mise en forme sur tous les appareils et plateformes</li>
+<li><strong>Partage facile</strong> — les destinataires n'ont pas besoin d'un lecteur Markdown pour lire vos documents</li>
+<li><strong>Prêt pour l'impression</strong> — les PDF sont conçus pour l'affichage à l'écran et l'impression</li>
+</ul>
+<h2>Comment Ça Fonctionne</h2>
+<p>L'outil <a href="/#/markdown-to-pdf">Markdown vers PDF</a> rend votre contenu Markdown avec une prise en charge complète des titres, listes, blocs de code, tableaux et plus encore. Collez ou saisissez votre Markdown, prévisualisez le résultat et téléchargez le PDF.</p>
+<h2>Fonctionnalités Markdown Prises en Charge</h2>
+<p>Le convertisseur gère toute la syntaxe Markdown standard incluant le gras, l'italique, les liens, les images, les citations, les listes ordonnées et non ordonnées, les blocs de code avec coloration syntaxique et les tableaux. Votre contenu est traité entièrement dans le navigateur pour une confidentialité totale.</p>`,
+        date: '2026-03-05',
+        tool: 'markdown-to-pdf',
+        tags: ['markdown', 'convertir', 'documentation'],
+    },
+    {
+        slug: 'signatures-numeriques-vs-signatures-electroniques-pdf',
+        lang: 'fr',
+        title: 'Signatures Numériques vs Signatures Électroniques sur les PDF : Ce Qu\'il Faut Savoir',
+        excerpt: 'Comprenez les différences entre signatures numériques et électroniques, et apprenez à les ajouter à vos documents PDF.',
+        body: `<p>Signer des documents de manière numérique est devenu essentiel dans l'environnement actuel de travail à distance. Mais il existe une distinction importante entre les signatures électroniques et les signatures numériques.</p>
+<h2>Signatures Électroniques</h2>
+<p>Une signature électronique est toute marque, symbole ou processus attaché à un document pour indiquer un consentement. Cela inclut les noms tapés, les signatures manuscrites numérisées ou les signatures dessinées.</p>
+<p>L'outil <a href="/#/sign-pdf">Signer PDF</a> vous permet de créer des signatures électroniques en dessinant, tapant ou téléchargeant une image de votre signature — le tout traité localement dans votre navigateur.</p>
+<h2>Signatures Numériques</h2>
+<p>Les signatures numériques utilisent une technologie cryptographique pour vérifier l'identité du signataire et garantir que le document n'a pas été falsifié. Elles nécessitent un certificat numérique délivré par une autorité de confiance.</p>
+<h2>Laquelle Devriez-Vous Utiliser ?</h2>
+<p>Pour la plupart des documents quotidiens comme les approbations internes, les formulaires de consentement et les accords informels, les signatures électroniques sont suffisantes et juridiquement reconnues dans la plupart des juridictions. Pour les contrats à forte valeur ou les documents réglementaires, les signatures numériques offrent une validité juridique plus solide.</p>`,
+        date: '2026-02-18',
+        tool: 'sign-pdf',
+        tags: ['signature', 'signature-numerique', 'signature-electronique'],
+    },
+    {
+        slug: 'rendre-pdf-accessibles-guide',
+        lang: 'fr',
+        title: 'Comment Rendre Vos Documents PDF Accessibles',
+        excerpt: 'Découvrez les meilleures pratiques pour créer des documents PDF accessibles que tout le monde peut lire, y compris les personnes utilisant des lecteurs d\'écran.',
+        body: `<p>Les PDF accessibles garantissent que chacun, y compris les personnes en situation de handicap, puisse accéder à votre contenu et le comprendre. L'accessibilité n'est pas qu'une bonne pratique — c'est souvent une obligation légale.</p>
+<h2>Caractéristiques Clés d'Accessibilité</h2>
+<ul>
+<li><strong>Titres clairs</strong> — utilisez une hiérarchie logique de titres pour structurer le contenu</li>
+<li><strong>Texte alternatif pour les images</strong> — décrivez le contenu visuel pour les utilisateurs de lecteurs d'écran</li>
+<li><strong>Polices lisibles</strong> — choisissez des polices faciles à lire à différentes tailles</li>
+<li><strong>Contraste suffisant</strong> — assurez-vous que le texte a un contraste adéquat avec l'arrière-plan</li>
+</ul>
+<h2>Outils Utiles</h2>
+<p>L'outil <a href="/#/edit-pdf">Modifier PDF</a> vous permet d'ajouter des annotations textuelles et des étiquettes à vos documents. Utilisez-le pour ajouter du texte descriptif près des images ou clarifier des diagrammes complexes.</p>
+<p>Pour les documents numérisés, utilisez l'outil <a href="/#/pdf-to-text">PDF vers Texte</a> pour vérifier que le contenu textuel est correctement extractible, ce qui est essentiel pour les lecteurs d'écran.</p>
+<h2>Tester l'Accessibilité</h2>
+<p>Testez toujours vos PDF avec un lecteur d'écran avant de les distribuer. Les vérifications simples incluent s'assurer que le texte peut être sélectionné et copié, et que l'ordre de lecture est logique.</p>`,
+        date: '2026-01-22',
+        tool: 'edit-pdf',
+        tags: ['accessibilité', 'inclusif', 'lecteur-écran'],
+    },
+    {
+        slug: 'automatisation-flux-travail-pdf-conseils',
+        lang: 'fr',
+        title: 'Automatisation du Flux de Travail PDF : Conseils pour une Productivité Maximale',
+        excerpt: 'Optimisez votre flux de travail documentaire avec des conseils pratiques pour automatiser les tâches PDF répétitives à l\'aide d\'outils basés sur navigateur.',
+        body: `<p>Gérer des PDF est une tâche quotidienne pour de nombreux professionnels. De la compression des pièces jointes d'e-mail à la fusion de rapports, ces tâches répétitives peuvent consommer un temps précieux.</p>
+<h2>Goulots d'Étranglement Courants du Flux de Travail</h2>
+<ul>
+<li>Compresser manuellement les fichiers avant d'envoyer des e-mails</li>
+<li>Convertir des images en PDF une par une</li>
+<li>Ajouter des numéros de page ou des en-têtes à plusieurs documents</li>
+<li>Diviser de gros documents en sections individuelles</li>
+</ul>
+<h2>Avantages des Outils Basés sur Navigateur</h2>
+<p>Contrairement aux logiciels installés, les outils PDF basés sur navigateur comme <a href="/">PDF Worker</a> ne nécessitent aucune configuration ni mise à jour. Ouvrez un onglet, traitez votre fichier et passez à autre chose. Pas de frais de licence, pas de problèmes de compatibilité.</p>
+<h2>Traitement par Lots</h2>
+<p>De nombreux outils prennent en charge le traitement de plusieurs fichiers à la fois. Téléchargez plusieurs PDF dans l'outil <a href="/#/compress-pdf">Compresser PDF</a> et téléchargez tous les résultats ensemble sous forme de fichier ZIP. Il en va de même pour la <a href="/#/rotate-pdf">rotation</a>, la <a href="/#/grayscale-pdf">conversion en niveaux de gris</a> et d'autres opérations.</p>
+<h2>Enchaîner les Opérations</h2>
+<p>Pour les flux de travail complexes, enchaînez les opérations : d'abord <a href="/#/unlock-pdf">déverrouillez</a> un PDF protégé, puis <a href="/#/split-pdf">divisez-le</a> en sections, <a href="/#/compress-pdf">compressez</a> chaque section et enfin <a href="/#/merge-pdf">fusionnez</a> les parties dont vous avez besoin.</p>`,
+        date: '2026-02-05',
+        tool: 'compress-pdf',
+        tags: ['flux-de-travail', 'automatisation', 'productivité'],
+    },
 ];

@@ -21,6 +21,15 @@ const flags: Record<string, string> = {
     fr: '\u{1F1EB}\u{1F1F7}',
     de: '\u{1F1E9}\u{1F1EA}',
     pt: '\u{1F1E7}\u{1F1F7}',
+    nl: '\u{1F1F3}\u{1F1F1}',
+    sv: '\u{1F1F8}\u{1F1EA}',
+    fi: '\u{1F1EB}\u{1F1EE}',
+    da: '\u{1F1E9}\u{1F1F0}',
+    no: '\u{1F1F3}\u{1F1F4}',
+    be: '\u{1F1E7}\u{1F1EA}',
+    el: '\u{1F1EC}\u{1F1F7}',
+    sl: '\u{1F1F8}\u{1F1EE}',
+    cs: '\u{1F1E8}\u{1F1FF}',
 };
 
 const currentFlag = computed(() => flags[currentLocale.value] ?? '');

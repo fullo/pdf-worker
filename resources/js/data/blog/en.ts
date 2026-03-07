@@ -661,4 +661,86 @@ export const blogPostsEn: BlogPost[] = [
         tool: 'merge-pdf',
         tags: ['merge', 'split', 'guide'],
     },
+    {
+        slug: 'convert-markdown-to-pdf-guide',
+        lang: 'en',
+        title: 'How to Convert Markdown to PDF: A Complete Guide',
+        excerpt: 'Transform your Markdown files into beautifully formatted PDF documents directly in the browser. No servers, no installations.',
+        body: `<p>Markdown is the go-to format for writing documentation, notes, and technical content. But when it comes to sharing with non-technical colleagues or printing, PDF is the standard.</p>
+<h2>Why Convert Markdown to PDF?</h2>
+<ul>
+<li><strong>Professional appearance</strong> — PDFs preserve formatting across all devices and platforms</li>
+<li><strong>Easy sharing</strong> — recipients don't need a Markdown viewer to read your documents</li>
+<li><strong>Print-ready</strong> — PDFs are designed for both screen and print output</li>
+</ul>
+<h2>How It Works</h2>
+<p>The <a href="/#/markdown-to-pdf">Markdown to PDF tool</a> renders your Markdown content with full support for headings, lists, code blocks, tables, and more. Simply paste or type your Markdown, preview the result, and download the PDF.</p>
+<h2>Supported Markdown Features</h2>
+<p>The converter handles all standard Markdown syntax including bold, italic, links, images, blockquotes, ordered and unordered lists, code fencing with syntax highlighting, and tables. Your content is processed entirely in the browser for complete privacy.</p>`,
+        date: '2026-03-05',
+        tool: 'markdown-to-pdf',
+        tags: ['markdown', 'convert', 'documentation'],
+    },
+    {
+        slug: 'digital-signatures-vs-electronic-signatures-pdf',
+        lang: 'en',
+        title: 'Digital vs Electronic Signatures on PDFs: What You Need to Know',
+        excerpt: 'Understand the differences between digital and electronic signatures, and learn how to add them to your PDF documents.',
+        body: `<p>Signing documents digitally has become essential in today's remote work environment. But there's an important distinction between electronic signatures and digital signatures.</p>
+<h2>Electronic Signatures</h2>
+<p>An electronic signature is any mark, symbol, or process attached to a document to indicate consent. This includes typed names, scanned handwritten signatures, or drawn signatures.</p>
+<p>The <a href="/#/sign-pdf">Sign PDF tool</a> allows you to create electronic signatures by drawing, typing, or uploading an image of your signature — all processed locally in your browser.</p>
+<h2>Digital Signatures</h2>
+<p>Digital signatures use cryptographic technology to verify the signer's identity and ensure the document hasn't been tampered with. They require a digital certificate from a trusted authority.</p>
+<h2>Which Should You Use?</h2>
+<p>For most everyday documents like internal approvals, consent forms, and informal agreements, electronic signatures are sufficient and legally recognized in most jurisdictions. For high-value contracts or regulatory documents, digital signatures provide stronger legal standing.</p>`,
+        date: '2026-02-18',
+        tool: 'sign-pdf',
+        tags: ['sign', 'digital-signature', 'electronic-signature'],
+    },
+    {
+        slug: 'make-pdf-accessible-guide',
+        lang: 'en',
+        title: 'How to Make Your PDF Documents Accessible',
+        excerpt: 'Learn best practices for creating accessible PDF documents that everyone can read, including people using screen readers.',
+        body: `<p>Accessible PDFs ensure that everyone, including people with disabilities, can access and understand your content. Accessibility is not just good practice — it's often a legal requirement.</p>
+<h2>Key Accessibility Features</h2>
+<ul>
+<li><strong>Clear headings</strong> — use a logical heading hierarchy to structure content</li>
+<li><strong>Alt text for images</strong> — describe visual content for screen reader users</li>
+<li><strong>Readable fonts</strong> — choose fonts that are easy to read at various sizes</li>
+<li><strong>Sufficient contrast</strong> — ensure text has adequate contrast against the background</li>
+</ul>
+<h2>Tools That Help</h2>
+<p>The <a href="/#/edit-pdf">Edit PDF tool</a> lets you add text annotations and labels to your documents. Use it to add descriptive text near images or clarify complex diagrams.</p>
+<p>For scanned documents, use the <a href="/#/pdf-to-text">PDF to Text tool</a> to verify that text content is properly extractable, which is essential for screen readers.</p>
+<h2>Testing Accessibility</h2>
+<p>Always test your PDFs with a screen reader before distributing them. Simple checks include verifying that text can be selected and copied, and that the reading order makes sense.</p>`,
+        date: '2026-01-22',
+        tool: 'edit-pdf',
+        tags: ['accessibility', 'inclusive', 'screen-reader'],
+    },
+    {
+        slug: 'pdf-workflow-automation-tips',
+        lang: 'en',
+        title: 'PDF Workflow Automation: Tips for Maximum Productivity',
+        excerpt: 'Streamline your document workflow with practical tips for automating repetitive PDF tasks using browser-based tools.',
+        body: `<p>Handling PDFs is a daily task for many professionals. From compressing email attachments to merging reports, these repetitive tasks can eat up valuable time.</p>
+<h2>Common Workflow Bottlenecks</h2>
+<ul>
+<li>Manually compressing files before sending emails</li>
+<li>Converting images to PDF one at a time</li>
+<li>Adding page numbers or headers to multiple documents</li>
+<li>Splitting large documents into individual sections</li>
+</ul>
+<h2>Browser-Based Advantages</h2>
+<p>Unlike installed software, browser-based PDF tools like <a href="/">PDF Worker</a> require no setup or updates. Open a tab, process your file, and move on. No license fees, no compatibility issues.</p>
+<h2>Batch Processing</h2>
+<p>Many tools support processing multiple files at once. Upload several PDFs to the <a href="/#/compress-pdf">Compress PDF tool</a> and download all results together as a ZIP file. The same applies to <a href="/#/rotate-pdf">rotation</a>, <a href="/#/grayscale-pdf">grayscale conversion</a>, and other operations.</p>
+<h2>Chaining Operations</h2>
+<p>For complex workflows, chain operations: first <a href="/#/unlock-pdf">unlock</a> a protected PDF, then <a href="/#/split-pdf">split</a> it into sections, <a href="/#/compress-pdf">compress</a> each section, and finally <a href="/#/merge-pdf">merge</a> the pieces you need.</p>`,
+        date: '2026-02-05',
+        tool: 'compress-pdf',
+        tags: ['workflow', 'automation', 'productivity'],
+    },
 ];
