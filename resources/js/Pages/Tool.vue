@@ -98,27 +98,27 @@ function createObjectURL(blob: Blob): string {
 const toolConfig = computed(() => {
     const configs: Record<string, { accept: string; multiple: boolean; color: string; bgColor: string }> = {
         'merge-pdf': { accept: '.pdf', multiple: true, color: 'bg-red-500', bgColor: 'bg-red-50' },
-        'split-pdf': { accept: '.pdf', multiple: false, color: 'bg-orange-500', bgColor: 'bg-orange-50' },
-        'compress-pdf': { accept: '.pdf', multiple: false, color: 'bg-green-500', bgColor: 'bg-green-50' },
-        'rotate-pdf': { accept: '.pdf', multiple: false, color: 'bg-blue-500', bgColor: 'bg-blue-50' },
+        'split-pdf': { accept: '.pdf', multiple: true, color: 'bg-orange-500', bgColor: 'bg-orange-50' },
+        'compress-pdf': { accept: '.pdf', multiple: true, color: 'bg-green-500', bgColor: 'bg-green-50' },
+        'rotate-pdf': { accept: '.pdf', multiple: true, color: 'bg-blue-500', bgColor: 'bg-blue-50' },
         'watermark-pdf': { accept: '.pdf', multiple: false, color: 'bg-purple-500', bgColor: 'bg-purple-50' },
-        'page-numbers': { accept: '.pdf', multiple: false, color: 'bg-teal-500', bgColor: 'bg-teal-50' },
-        'pdf-to-jpg': { accept: '.pdf', multiple: false, color: 'bg-amber-500', bgColor: 'bg-amber-50' },
+        'page-numbers': { accept: '.pdf', multiple: true, color: 'bg-teal-500', bgColor: 'bg-teal-50' },
+        'pdf-to-jpg': { accept: '.pdf', multiple: true, color: 'bg-amber-500', bgColor: 'bg-amber-50' },
         'jpg-to-pdf': { accept: '.jpg,.jpeg,.png,.webp', multiple: true, color: 'bg-indigo-500', bgColor: 'bg-indigo-50' },
-        'protect-pdf': { accept: '.pdf', multiple: false, color: 'bg-yellow-500', bgColor: 'bg-yellow-50' },
-        'unlock-pdf': { accept: '.pdf', multiple: false, color: 'bg-lime-500', bgColor: 'bg-lime-50' },
+        'protect-pdf': { accept: '.pdf', multiple: true, color: 'bg-yellow-500', bgColor: 'bg-yellow-50' },
+        'unlock-pdf': { accept: '.pdf', multiple: true, color: 'bg-lime-500', bgColor: 'bg-lime-50' },
         'organize-pdf': { accept: '.pdf', multiple: false, color: 'bg-cyan-500', bgColor: 'bg-cyan-50' },
         'crop-pdf': { accept: '.pdf', multiple: false, color: 'bg-rose-500', bgColor: 'bg-rose-50' },
-        'pdf-to-png': { accept: '.pdf', multiple: false, color: 'bg-fuchsia-500', bgColor: 'bg-fuchsia-50' },
+        'pdf-to-png': { accept: '.pdf', multiple: true, color: 'bg-fuchsia-500', bgColor: 'bg-fuchsia-50' },
         'redact-pdf': { accept: '.pdf', multiple: false, color: 'bg-gray-500', bgColor: 'bg-gray-100' },
         'edit-pdf': { accept: '.pdf', multiple: false, color: 'bg-sky-500', bgColor: 'bg-sky-50' },
         'sign-pdf': { accept: '.pdf', multiple: false, color: 'bg-emerald-500', bgColor: 'bg-emerald-50' },
-        'extract-images': { accept: '.pdf', multiple: false, color: 'bg-violet-500', bgColor: 'bg-violet-50' },
-        'grayscale-pdf': { accept: '.pdf', multiple: false, color: 'bg-stone-500', bgColor: 'bg-stone-50' },
-        'resize-pdf': { accept: '.pdf', multiple: false, color: 'bg-pink-500', bgColor: 'bg-pink-50' },
-        'header-footer': { accept: '.pdf', multiple: false, color: 'bg-orange-500', bgColor: 'bg-orange-50' },
-        'flatten-pdf': { accept: '.pdf', multiple: false, color: 'bg-amber-500', bgColor: 'bg-amber-50' },
-        'pdf-to-text': { accept: '.pdf', multiple: false, color: 'bg-blue-500', bgColor: 'bg-blue-50' },
+        'extract-images': { accept: '.pdf', multiple: true, color: 'bg-violet-500', bgColor: 'bg-violet-50' },
+        'grayscale-pdf': { accept: '.pdf', multiple: true, color: 'bg-stone-500', bgColor: 'bg-stone-50' },
+        'resize-pdf': { accept: '.pdf', multiple: true, color: 'bg-pink-500', bgColor: 'bg-pink-50' },
+        'header-footer': { accept: '.pdf', multiple: true, color: 'bg-orange-500', bgColor: 'bg-orange-50' },
+        'flatten-pdf': { accept: '.pdf', multiple: true, color: 'bg-amber-500', bgColor: 'bg-amber-50' },
+        'pdf-to-text': { accept: '.pdf', multiple: true, color: 'bg-blue-500', bgColor: 'bg-blue-50' },
     };
     return configs[props.tool] ?? configs['merge-pdf'];
 });
@@ -208,9 +208,88 @@ const actionLabel = computed(() => {
     return trans(labels[props.tool] ?? 'tool.process');
 });
 
-const showMultiDownload = computed(() =>
-    ['split-pdf', 'pdf-to-jpg', 'pdf-to-png', 'extract-images'].includes(props.tool) && multiResults.value.length > 0
+// Batch processing: tools that support processing multiple files independently
+const batchEligibleTools = [
+    'compress-pdf', 'rotate-pdf', 'grayscale-pdf', 'flatten-pdf',
+    'resize-pdf', 'page-numbers', 'header-footer', 'protect-pdf', 'unlock-pdf',
+    'pdf-to-jpg', 'pdf-to-png', 'extract-images', 'pdf-to-text', 'split-pdf',
+];
+const isBatchMode = computed(() =>
+    batchEligibleTools.includes(props.tool) && files.value.length > 1
 );
+
+const showMultiDownload = computed(() => multiResults.value.length > 0);
+
+// Process a single file for batch-eligible tools
+async function processSingleFile(
+    toolName: string,
+    file: File,
+    onProgress: (p: number) => void,
+): Promise<{ name: string; blob: Blob } | { name: string; blob: Blob }[]> {
+    const baseName = file.name.replace(/\.pdf$/i, '');
+
+    switch (toolName) {
+        case 'compress-pdf': {
+            const blob = await runInWorker('compress-pdf', [file], { level: compressionLevel.value }, onProgress) as Blob;
+            return { name: `compressed_${file.name}`, blob };
+        }
+        case 'rotate-pdf': {
+            const blob = await runInWorker('rotate-pdf', [file], { angle: rotationAngle.value }, onProgress) as Blob;
+            return { name: `rotated_${file.name}`, blob };
+        }
+        case 'grayscale-pdf': {
+            const blob = await runInWorker('grayscale-pdf', [file], {}, onProgress) as Blob;
+            return { name: `grayscale_${file.name}`, blob };
+        }
+        case 'flatten-pdf': {
+            const blob = await runInWorker('flatten-pdf', [file], {}, onProgress) as Blob;
+            return { name: `flattened_${file.name}`, blob };
+        }
+        case 'resize-pdf': {
+            const blob = await runInWorker('resize-pdf', [file], { targetSize: resizeTarget.value }, onProgress) as Blob;
+            return { name: `resized_${file.name}`, blob };
+        }
+        case 'page-numbers': {
+            const blob = await runInWorker('page-numbers', [file], { position: pageNumberPosition.value, format: pageNumberFormat.value }, onProgress) as Blob;
+            return { name: `numbered_${file.name}`, blob };
+        }
+        case 'header-footer': {
+            const opts = {
+                header: headerText.value ? { text: headerText.value, align: hfAlign.value } : undefined,
+                footer: footerText.value ? { text: footerText.value, align: hfAlign.value } : undefined,
+            };
+            const blob = await runInWorker('header-footer', [file], opts, onProgress) as Blob;
+            return { name: `headerfooter_${file.name}`, blob };
+        }
+        case 'protect-pdf': {
+            const opts = {
+                userPassword: protectUserPassword.value,
+                ownerPassword: protectOwnerPassword.value || protectUserPassword.value,
+                permissions: { printing: allowPrinting.value, copying: allowCopying.value, modifying: allowModifying.value },
+            };
+            const blob = await runInWorker('protect-pdf', [file], opts, onProgress) as Blob;
+            return { name: `protected_${file.name}`, blob };
+        }
+        case 'unlock-pdf': {
+            const blob = await runInWorker('unlock-pdf', [file], { password: unlockPassword.value }, onProgress) as Blob;
+            return { name: `unlocked_${file.name}`, blob };
+        }
+        case 'pdf-to-jpg':
+            return await runInWorker('pdf-to-jpg', [file], { quality: jpgQuality.value }, onProgress) as { name: string; blob: Blob }[];
+        case 'pdf-to-png':
+            return await runInWorker('pdf-to-png', [file], { transparent: pngTransparent.value }, onProgress) as { name: string; blob: Blob }[];
+        case 'extract-images':
+            return await runInWorker('extract-images', [file], {}, onProgress) as { name: string; blob: Blob }[];
+        case 'pdf-to-text': {
+            const blob = await runInWorker('pdf-to-text', [file], {}, onProgress) as Blob;
+            return { name: `${baseName}.txt`, blob };
+        }
+        case 'split-pdf':
+            return await runInWorker('split-pdf', [file], { mode: splitMode.value, ranges: splitRanges.value || undefined }, onProgress) as { name: string; blob: Blob }[];
+        default:
+            throw new Error(`Tool ${toolName} does not support batch processing`);
+    }
+}
 
 // Main process function
 async function process() {
@@ -221,152 +300,175 @@ async function process() {
     try {
         const rawFiles = files.value.map((f) => f.file);
 
-        switch (props.tool) {
-            case 'merge-pdf': {
-                const blob = await runInWorker('merge-pdf', rawFiles, {}, updateProgress) as Blob;
-                setResult(blob, 'merged.pdf');
-                break;
-            }
-            case 'split-pdf': {
-                const results = await runInWorker('split-pdf', rawFiles, { mode: splitMode.value, ranges: splitRanges.value || undefined }, updateProgress) as { name: string; blob: Blob }[];
-                if (results.length === 1) {
-                    setResult(results[0].blob, results[0].name);
+        // Batch mode: process each file independently
+        if (isBatchMode.value) {
+            const totalFiles = rawFiles.length;
+            for (let i = 0; i < totalFiles; i++) {
+                const file = rawFiles[i];
+                const baseProgress = (i / totalFiles) * 100;
+                const fileWeight = 100 / totalFiles;
+                const batchProgress = (p: number) => updateProgress(baseProgress + (p / 100) * fileWeight);
+
+                const result = await processSingleFile(props.tool, file, batchProgress);
+
+                if (Array.isArray(result)) {
+                    const prefix = file.name.replace(/\.pdf$/i, '');
+                    for (const r of result) {
+                        multiResults.value.push({ name: `${prefix}_${r.name}`, blob: r.blob });
+                    }
                 } else {
+                    multiResults.value.push(result);
+                }
+            }
+        } else {
+            // Single-file mode: original switch logic
+            switch (props.tool) {
+                case 'merge-pdf': {
+                    const blob = await runInWorker('merge-pdf', rawFiles, {}, updateProgress) as Blob;
+                    setResult(blob, 'merged.pdf');
+                    break;
+                }
+                case 'split-pdf': {
+                    const results = await runInWorker('split-pdf', rawFiles, { mode: splitMode.value, ranges: splitRanges.value || undefined }, updateProgress) as { name: string; blob: Blob }[];
+                    if (results.length === 1) {
+                        setResult(results[0].blob, results[0].name);
+                    } else {
+                        multiResults.value = results;
+                    }
+                    break;
+                }
+                case 'compress-pdf': {
+                    const blob = await runInWorker('compress-pdf', rawFiles, { level: compressionLevel.value }, updateProgress) as Blob;
+                    setResult(blob, `compressed_${rawFiles[0].name}`);
+                    break;
+                }
+                case 'rotate-pdf': {
+                    const blob = await runInWorker('rotate-pdf', rawFiles, { angle: rotationAngle.value }, updateProgress) as Blob;
+                    setResult(blob, `rotated_${rawFiles[0].name}`);
+                    break;
+                }
+                case 'watermark-pdf': {
+                    const wmTool = watermarkToolRef.value;
+                    if (!wmTool) break;
+                    const opts = wmTool.getWatermarkOptions() as WatermarkOptions;
+                    if (opts.type === 'image' && wmTool.watermarkImageFile) {
+                        const ab = await wmTool.watermarkImageFile.arrayBuffer();
+                        opts.imageBytes = new Uint8Array(ab);
+                        opts.imageMimeType = wmTool.watermarkImageFile.type;
+                    }
+                    const blob = await runInWorker('watermark-pdf', rawFiles, opts, updateProgress) as Blob;
+                    setResult(blob, `watermarked_${rawFiles[0].name}`);
+                    break;
+                }
+                case 'page-numbers': {
+                    const blob = await runInWorker('page-numbers', rawFiles, { position: pageNumberPosition.value, format: pageNumberFormat.value }, updateProgress) as Blob;
+                    setResult(blob, `numbered_${rawFiles[0].name}`);
+                    break;
+                }
+                case 'pdf-to-jpg': {
+                    const results = await runInWorker('pdf-to-jpg', rawFiles, { quality: jpgQuality.value }, updateProgress) as { name: string; blob: Blob }[];
                     multiResults.value = results;
+                    break;
                 }
-                break;
-            }
-            case 'compress-pdf': {
-                const blob = await runInWorker('compress-pdf', rawFiles, { level: compressionLevel.value }, updateProgress) as Blob;
-                setResult(blob, `compressed_${rawFiles[0].name}`);
-                break;
-            }
-            case 'rotate-pdf': {
-                const blob = await runInWorker('rotate-pdf', rawFiles, { angle: rotationAngle.value }, updateProgress) as Blob;
-                setResult(blob, `rotated_${rawFiles[0].name}`);
-                break;
-            }
-            case 'watermark-pdf': {
-                const wmTool = watermarkToolRef.value;
-                if (!wmTool) break;
-                const opts = wmTool.getWatermarkOptions() as WatermarkOptions;
-                if (opts.type === 'image' && wmTool.watermarkImageFile) {
-                    const ab = await wmTool.watermarkImageFile.arrayBuffer();
-                    opts.imageBytes = new Uint8Array(ab);
-                    opts.imageMimeType = wmTool.watermarkImageFile.type;
+                case 'jpg-to-pdf': {
+                    const blob = await runInWorker('jpg-to-pdf', rawFiles, { orientation: jpgOrientation.value, margin: jpgMargin.value }, updateProgress) as Blob;
+                    setResult(blob, 'images.pdf');
+                    break;
                 }
-                const blob = await runInWorker('watermark-pdf', rawFiles, opts, updateProgress) as Blob;
-                setResult(blob, `watermarked_${rawFiles[0].name}`);
-                break;
-            }
-            case 'page-numbers': {
-                const blob = await runInWorker('page-numbers', rawFiles, { position: pageNumberPosition.value, format: pageNumberFormat.value }, updateProgress) as Blob;
-                setResult(blob, `numbered_${rawFiles[0].name}`);
-                break;
-            }
-            case 'pdf-to-jpg': {
-                const results = await runInWorker('pdf-to-jpg', rawFiles, { quality: jpgQuality.value }, updateProgress) as { name: string; blob: Blob }[];
-                multiResults.value = results;
-                break;
-            }
-            case 'jpg-to-pdf': {
-                const blob = await runInWorker('jpg-to-pdf', rawFiles, { orientation: jpgOrientation.value, margin: jpgMargin.value }, updateProgress) as Blob;
-                setResult(blob, 'images.pdf');
-                break;
-            }
-            case 'protect-pdf': {
-                const opts = {
-                    userPassword: protectUserPassword.value,
-                    ownerPassword: protectOwnerPassword.value || protectUserPassword.value,
-                    permissions: { printing: allowPrinting.value, copying: allowCopying.value, modifying: allowModifying.value },
-                };
-                const blob = await runInWorker('protect-pdf', rawFiles, opts, updateProgress) as Blob;
-                setResult(blob, `protected_${rawFiles[0].name}`);
-                break;
-            }
-            case 'unlock-pdf': {
-                const blob = await runInWorker('unlock-pdf', rawFiles, { password: unlockPassword.value }, updateProgress) as Blob;
-                setResult(blob, `unlocked_${rawFiles[0].name}`);
-                break;
-            }
-            case 'organize-pdf': {
-                const pageOrder = organizeToolRef.value?.getPageOrder() ?? [];
-                if (pageOrder.length === 0) break;
-                const blob = await runInWorker('organize-pdf', rawFiles, { type: 'reorder', pageOrder }, updateProgress) as Blob;
-                setResult(blob, `organized_${rawFiles[0].name}`);
-                break;
-            }
-            case 'crop-pdf': {
-                const opts = cropToolRef.value?.getCropOptions();
-                if (!opts) break;
-                const blob = await runInWorker('crop-pdf', rawFiles, opts, updateProgress) as Blob;
-                setResult(blob, `cropped_${rawFiles[0].name}`);
-                break;
-            }
-            case 'pdf-to-png': {
-                const results = await runInWorker('pdf-to-png', rawFiles, { transparent: pngTransparent.value }, updateProgress) as { name: string; blob: Blob }[];
-                multiResults.value = results;
-                break;
-            }
-            case 'redact-pdf': {
-                const areas = redactToolRef.value?.getRedactAreas() ?? [];
-                if (areas.length === 0) throw new Error(trans('tool.redact.no_areas'));
-                const blob = await runInWorker('redact-pdf', rawFiles, { areas }, updateProgress) as Blob;
-                setResult(blob, `redacted_${rawFiles[0].name}`);
-                break;
-            }
-            case 'sign-pdf': {
-                const sigOpts = signToolRef.value?.getSignatureOptions();
-                if (!sigOpts) throw new Error('No signature provided');
-                const blob = await runInWorker('sign-pdf', rawFiles, sigOpts, updateProgress) as Blob;
-                setResult(blob, `signed_${rawFiles[0].name}`);
-                break;
-            }
-            case 'edit-pdf': {
-                const elements = editToolRef.value?.getEditElements() ?? [];
-                if (elements.length === 0) throw new Error(trans('tool.edit.no_elements'));
-                const blob = await runInWorker('edit-pdf', rawFiles, { elements }, updateProgress) as Blob;
-                setResult(blob, `edited_${rawFiles[0].name}`);
-                break;
-            }
-            case 'extract-images': {
-                try {
-                    const results = await runInWorker('extract-images', rawFiles, {}, updateProgress) as { name: string; blob: Blob }[];
+                case 'protect-pdf': {
+                    const opts = {
+                        userPassword: protectUserPassword.value,
+                        ownerPassword: protectOwnerPassword.value || protectUserPassword.value,
+                        permissions: { printing: allowPrinting.value, copying: allowCopying.value, modifying: allowModifying.value },
+                    };
+                    const blob = await runInWorker('protect-pdf', rawFiles, opts, updateProgress) as Blob;
+                    setResult(blob, `protected_${rawFiles[0].name}`);
+                    break;
+                }
+                case 'unlock-pdf': {
+                    const blob = await runInWorker('unlock-pdf', rawFiles, { password: unlockPassword.value }, updateProgress) as Blob;
+                    setResult(blob, `unlocked_${rawFiles[0].name}`);
+                    break;
+                }
+                case 'organize-pdf': {
+                    const pageOrder = organizeToolRef.value?.getPageOrder() ?? [];
+                    if (pageOrder.length === 0) break;
+                    const blob = await runInWorker('organize-pdf', rawFiles, { type: 'reorder', pageOrder }, updateProgress) as Blob;
+                    setResult(blob, `organized_${rawFiles[0].name}`);
+                    break;
+                }
+                case 'crop-pdf': {
+                    const opts = cropToolRef.value?.getCropOptions();
+                    if (!opts) break;
+                    const blob = await runInWorker('crop-pdf', rawFiles, opts, updateProgress) as Blob;
+                    setResult(blob, `cropped_${rawFiles[0].name}`);
+                    break;
+                }
+                case 'pdf-to-png': {
+                    const results = await runInWorker('pdf-to-png', rawFiles, { transparent: pngTransparent.value }, updateProgress) as { name: string; blob: Blob }[];
                     multiResults.value = results;
-                } catch {
-                    throw new Error(trans('tool.extract.no_images'));
+                    break;
                 }
-                break;
-            }
-            case 'grayscale-pdf': {
-                const blob = await runInWorker('grayscale-pdf', rawFiles, {}, updateProgress) as Blob;
-                setResult(blob, `grayscale_${rawFiles[0].name}`);
-                break;
-            }
-            case 'resize-pdf': {
-                const blob = await runInWorker('resize-pdf', rawFiles, { targetSize: resizeTarget.value }, updateProgress) as Blob;
-                setResult(blob, `resized_${rawFiles[0].name}`);
-                break;
-            }
-            case 'header-footer': {
-                const opts = {
-                    header: headerText.value ? { text: headerText.value, align: hfAlign.value } : undefined,
-                    footer: footerText.value ? { text: footerText.value, align: hfAlign.value } : undefined,
-                };
-                const blob = await runInWorker('header-footer', rawFiles, opts, updateProgress) as Blob;
-                setResult(blob, `headerfooter_${rawFiles[0].name}`);
-                break;
-            }
-            case 'flatten-pdf': {
-                const blob = await runInWorker('flatten-pdf', rawFiles, {}, updateProgress) as Blob;
-                setResult(blob, `flattened_${rawFiles[0].name}`);
-                break;
-            }
-            case 'pdf-to-text': {
-                const blob = await runInWorker('pdf-to-text', rawFiles, {}, updateProgress) as Blob;
-                const name = rawFiles[0].name.replace(/\.pdf$/i, '.txt');
-                setResult(blob, name);
-                break;
+                case 'redact-pdf': {
+                    const areas = redactToolRef.value?.getRedactAreas() ?? [];
+                    if (areas.length === 0) throw new Error(trans('tool.redact.no_areas'));
+                    const blob = await runInWorker('redact-pdf', rawFiles, { areas }, updateProgress) as Blob;
+                    setResult(blob, `redacted_${rawFiles[0].name}`);
+                    break;
+                }
+                case 'sign-pdf': {
+                    const sigOpts = signToolRef.value?.getSignatureOptions();
+                    if (!sigOpts) throw new Error('No signature provided');
+                    const blob = await runInWorker('sign-pdf', rawFiles, sigOpts, updateProgress) as Blob;
+                    setResult(blob, `signed_${rawFiles[0].name}`);
+                    break;
+                }
+                case 'edit-pdf': {
+                    const elements = editToolRef.value?.getEditElements() ?? [];
+                    if (elements.length === 0) throw new Error(trans('tool.edit.no_elements'));
+                    const blob = await runInWorker('edit-pdf', rawFiles, { elements }, updateProgress) as Blob;
+                    setResult(blob, `edited_${rawFiles[0].name}`);
+                    break;
+                }
+                case 'extract-images': {
+                    try {
+                        const results = await runInWorker('extract-images', rawFiles, {}, updateProgress) as { name: string; blob: Blob }[];
+                        multiResults.value = results;
+                    } catch {
+                        throw new Error(trans('tool.extract.no_images'));
+                    }
+                    break;
+                }
+                case 'grayscale-pdf': {
+                    const blob = await runInWorker('grayscale-pdf', rawFiles, {}, updateProgress) as Blob;
+                    setResult(blob, `grayscale_${rawFiles[0].name}`);
+                    break;
+                }
+                case 'resize-pdf': {
+                    const blob = await runInWorker('resize-pdf', rawFiles, { targetSize: resizeTarget.value }, updateProgress) as Blob;
+                    setResult(blob, `resized_${rawFiles[0].name}`);
+                    break;
+                }
+                case 'header-footer': {
+                    const opts = {
+                        header: headerText.value ? { text: headerText.value, align: hfAlign.value } : undefined,
+                        footer: footerText.value ? { text: footerText.value, align: hfAlign.value } : undefined,
+                    };
+                    const blob = await runInWorker('header-footer', rawFiles, opts, updateProgress) as Blob;
+                    setResult(blob, `headerfooter_${rawFiles[0].name}`);
+                    break;
+                }
+                case 'flatten-pdf': {
+                    const blob = await runInWorker('flatten-pdf', rawFiles, {}, updateProgress) as Blob;
+                    setResult(blob, `flattened_${rawFiles[0].name}`);
+                    break;
+                }
+                case 'pdf-to-text': {
+                    const blob = await runInWorker('pdf-to-text', rawFiles, {}, updateProgress) as Blob;
+                    const name = rawFiles[0].name.replace(/\.pdf$/i, '.txt');
+                    setResult(blob, name);
+                    break;
+                }
             }
         }
         finishProcessing();
