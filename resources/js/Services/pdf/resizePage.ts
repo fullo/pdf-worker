@@ -1,6 +1,6 @@
 import { PDFDocument } from 'pdf-lib';
 import * as pdfjsLib from 'pdfjs-dist';
-import { savePdfAsBlob, createCanvas, canvasToBlob } from '../pdfUtils';
+import { savePdfAsBlob, stampDefaultMetadata, createCanvas, canvasToBlob } from '../pdfUtils';
 
 export type PaperSize = 'a4' | 'a3' | 'letter' | 'legal';
 
@@ -61,5 +61,6 @@ export async function resizePages(
         onProgress?.(Math.round((i / pageCount) * 100));
     }
 
+    stampDefaultMetadata(newPdf, 'resize pdf');
     return savePdfAsBlob(newPdf);
 }

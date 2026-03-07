@@ -1,5 +1,5 @@
 import { PDFDocument } from 'pdf-lib';
-import { savePdfAsBlob } from '../pdfUtils';
+import { savePdfAsBlob, stampDefaultMetadata } from '../pdfUtils';
 
 export interface MetadataOptions {
     title?: string;
@@ -29,6 +29,9 @@ export async function editMetadata(
     const pdfDoc = await PDFDocument.load(arrayBuffer, { ignoreEncryption: true });
 
     onProgress?.(40);
+
+    // Set defaults first; user overrides below take precedence
+    stampDefaultMetadata(pdfDoc, 'edit pdf metadata');
 
     if (options.title !== undefined) pdfDoc.setTitle(options.title);
     if (options.author !== undefined) pdfDoc.setAuthor(options.author);

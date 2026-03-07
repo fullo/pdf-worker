@@ -1,5 +1,5 @@
 import { rgb, StandardFonts } from 'pdf-lib';
-import { loadPdf, savePdfAsBlob } from '../pdfUtils';
+import { loadPdf, savePdfAsBlob, stampDefaultMetadata } from '../pdfUtils';
 
 export interface HeaderFooterOptions {
     header?: {
@@ -117,5 +117,6 @@ export async function addHeaderFooter(
         onProgress?.(Math.round(((i + 1) / pages.length) * 100));
     }
 
+    stampDefaultMetadata(pdfDoc, 'header footer');
     return savePdfAsBlob(pdfDoc);
 }

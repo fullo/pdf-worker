@@ -1,5 +1,5 @@
 import { PDFDocument, rgb, degrees, StandardFonts, PDFPage } from 'pdf-lib';
-import { loadPdf, savePdfAsBlob } from '../pdfUtils';
+import { loadPdf, savePdfAsBlob, stampDefaultMetadata } from '../pdfUtils';
 
 export interface WatermarkOptions {
     type: 'text' | 'image';
@@ -161,5 +161,6 @@ export async function addWatermark(
         throw new Error(`Unknown watermark type: ${(options as any).type}`);
     }
 
+    stampDefaultMetadata(pdfDoc, 'watermark pdf');
     return savePdfAsBlob(pdfDoc);
 }

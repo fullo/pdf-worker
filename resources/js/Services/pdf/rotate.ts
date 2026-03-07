@@ -1,5 +1,5 @@
 import { degrees } from 'pdf-lib';
-import { loadPdf, savePdfAsBlob } from '../pdfUtils';
+import { loadPdf, savePdfAsBlob, stampDefaultMetadata } from '../pdfUtils';
 
 export type RotationAngle = 90 | 180 | 270;
 
@@ -47,5 +47,6 @@ export async function rotatePdf(
         onProgress?.(Math.round(((i + 1) / indicesToRotate.length) * 100));
     }
 
+    stampDefaultMetadata(pdfDoc, 'rotate pdf');
     return savePdfAsBlob(pdfDoc);
 }

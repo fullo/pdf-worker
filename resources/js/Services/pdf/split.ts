@@ -1,5 +1,5 @@
 import { PDFDocument } from 'pdf-lib';
-import { savePdfAsBlob } from '../pdfUtils';
+import { savePdfAsBlob, stampDefaultMetadata } from '../pdfUtils';
 
 export type SplitMode = 'all' | 'range';
 
@@ -83,6 +83,7 @@ export async function splitPdf(
             const [copiedPage] = await newPdf.copyPages(sourcePdf, [i]);
             newPdf.addPage(copiedPage);
 
+            stampDefaultMetadata(newPdf, 'split pdf');
             const blob = await savePdfAsBlob(newPdf);
             results.push({
                 name: `${baseName}_page_${i + 1}.pdf`,
@@ -109,6 +110,7 @@ export async function splitPdf(
             onProgress?.(Math.round(((i + 1) / copiedPages.length) * 100));
         }
 
+        stampDefaultMetadata(newPdf, 'split pdf');
         const blob = await savePdfAsBlob(newPdf);
         const rangeLabel = ranges.replace(/\s+/g, '').replace(/,/g, '_');
         results.push({

@@ -1,6 +1,6 @@
 import { PDFDocument } from 'pdf-lib';
 import * as pdfjsLib from 'pdfjs-dist';
-import { savePdfAsBlob, createCanvas, canvasToBlob } from '../pdfUtils';
+import { savePdfAsBlob, stampDefaultMetadata, createCanvas, canvasToBlob } from '../pdfUtils';
 
 export type CompressionLevel = 'low' | 'medium' | 'high';
 
@@ -94,6 +94,7 @@ async function renderBasedCompress(
         onProgress?.(Math.round((i / pageCount) * 100));
     }
 
+    stampDefaultMetadata(newPdf, 'compress pdf');
     return savePdfAsBlob(newPdf);
 }
 
@@ -116,6 +117,7 @@ async function lightCompress(
     pdfDoc.setKeywords([]);
     pdfDoc.setProducer('');
     pdfDoc.setCreator('');
+    stampDefaultMetadata(pdfDoc, 'compress pdf');
     onProgress?.(80);
 
     const blob = await savePdfAsBlob(pdfDoc);

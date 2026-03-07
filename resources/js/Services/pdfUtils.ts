@@ -24,6 +24,16 @@ export async function savePdfAsBlob(pdfDoc: PDFDocument): Promise<Blob> {
 }
 
 /**
+ * Stamp default metadata (creator + keywords) on a PDFDocument.
+ * Call before saving. For edit-metadata, call before user overrides
+ * so explicit user values take precedence.
+ */
+export function stampDefaultMetadata(pdfDoc: PDFDocument, toolName: string): void {
+    pdfDoc.setCreator('pdfworker.eu');
+    pdfDoc.setKeywords(['pdf worker', 'pdfworker.eu', toolName]);
+}
+
+/**
  * Create a canvas that works in both main thread and web worker contexts.
  */
 export function createCanvas(width: number, height: number): HTMLCanvasElement | OffscreenCanvas {

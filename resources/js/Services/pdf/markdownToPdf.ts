@@ -1,5 +1,5 @@
 import { PDFDocument, StandardFonts, rgb, PDFFont, PDFPage } from 'pdf-lib';
-import { savePdfAsBlob } from '../pdfUtils';
+import { savePdfAsBlob, stampDefaultMetadata } from '../pdfUtils';
 
 /**
  * Convert Markdown text to a styled PDF document.
@@ -240,6 +240,7 @@ export async function markdownToPdf(
         onProgress?.(Math.round(((i + 1) / total) * 100));
     }
 
+    stampDefaultMetadata(pdfDoc, 'markdown to pdf');
     return savePdfAsBlob(pdfDoc);
 
     // ---- Inline formatting helpers ----

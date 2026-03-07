@@ -1,4 +1,4 @@
-import { loadPdf, savePdfAsBlob } from '../pdfUtils';
+import { loadPdf, savePdfAsBlob, stampDefaultMetadata } from '../pdfUtils';
 
 export interface SignatureOptions {
     type: 'draw' | 'image';
@@ -99,6 +99,7 @@ export async function signPdf(
 
     onProgress?.(80);
 
+    stampDefaultMetadata(pdfDoc, 'sign pdf');
     const blob = await savePdfAsBlob(pdfDoc);
     onProgress?.(100);
 

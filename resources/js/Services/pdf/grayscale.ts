@@ -1,6 +1,6 @@
 import { PDFDocument } from 'pdf-lib';
 import * as pdfjsLib from 'pdfjs-dist';
-import { savePdfAsBlob, createCanvas, canvasToBlob } from '../pdfUtils';
+import { savePdfAsBlob, stampDefaultMetadata, createCanvas, canvasToBlob } from '../pdfUtils';
 
 const JPEG_QUALITY = 0.85;
 const RENDER_SCALE = 2.0;
@@ -59,5 +59,6 @@ export async function grayscalePdf(
         onProgress?.(Math.round((i / pageCount) * 100));
     }
 
+    stampDefaultMetadata(newPdf, 'grayscale pdf');
     return savePdfAsBlob(newPdf);
 }

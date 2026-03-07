@@ -1,5 +1,5 @@
 import { rgb, StandardFonts, type PDFDocument, type PDFFont } from 'pdf-lib';
-import { loadPdf, savePdfAsBlob } from '../pdfUtils';
+import { loadPdf, savePdfAsBlob, stampDefaultMetadata } from '../pdfUtils';
 
 export type EditElement =
     | {
@@ -218,5 +218,6 @@ export async function editPdf(
         onProgress?.(Math.round(((i + 1) / elements.length) * 100));
     }
 
+    stampDefaultMetadata(pdfDoc, 'edit pdf');
     return savePdfAsBlob(pdfDoc);
 }

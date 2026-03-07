@@ -1,4 +1,5 @@
 import { PDFDocument } from 'pdf-lib';
+import { stampDefaultMetadata } from '../pdfUtils';
 
 export interface ProtectOptions {
     userPassword: string;
@@ -59,6 +60,7 @@ export async function protectPdf(
         },
     };
 
+    stampDefaultMetadata(pdfDoc, 'protect pdf');
     const pdfBytes = await pdfDoc.save(saveOptions as any);
 
     onProgress?.(100);

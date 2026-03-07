@@ -1,4 +1,4 @@
-import { loadPdf, savePdfAsBlob } from '../pdfUtils';
+import { loadPdf, savePdfAsBlob, stampDefaultMetadata } from '../pdfUtils';
 
 export interface CropOptions {
     top: number;    // points to trim from top
@@ -87,5 +87,6 @@ export async function cropPdf(
         onProgress?.(Math.round(((i + 1) / indicesToCrop.length) * 100));
     }
 
+    stampDefaultMetadata(pdfDoc, 'crop pdf');
     return savePdfAsBlob(pdfDoc);
 }

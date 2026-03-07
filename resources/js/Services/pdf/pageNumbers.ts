@@ -1,5 +1,5 @@
 import { rgb, StandardFonts } from 'pdf-lib';
-import { loadPdf, savePdfAsBlob } from '../pdfUtils';
+import { loadPdf, savePdfAsBlob, stampDefaultMetadata } from '../pdfUtils';
 
 export interface PageNumberOptions {
     position: 'bottom-center' | 'bottom-right' | 'bottom-left';
@@ -75,5 +75,6 @@ export async function addPageNumbers(
         onProgress?.(Math.round(((i + 1) / pages.length) * 100));
     }
 
+    stampDefaultMetadata(pdfDoc, 'page numbers');
     return savePdfAsBlob(pdfDoc);
 }

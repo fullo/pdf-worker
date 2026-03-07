@@ -1,5 +1,5 @@
 import { PDFDocument } from 'pdf-lib';
-import { savePdfAsBlob } from '../pdfUtils';
+import { savePdfAsBlob, stampDefaultMetadata } from '../pdfUtils';
 
 export interface OrganizeAction {
     type: 'reorder';
@@ -53,5 +53,6 @@ export async function organizePdf(
         onProgress?.(Math.round(((i + 1) / totalPages) * 100));
     }
 
+    stampDefaultMetadata(newPdf, 'organize pdf');
     return savePdfAsBlob(newPdf);
 }

@@ -1,5 +1,5 @@
 import { PDFDocument } from 'pdf-lib';
-import { savePdfAsBlob } from '../pdfUtils';
+import { savePdfAsBlob, stampDefaultMetadata } from '../pdfUtils';
 
 /**
  * Flatten a PDF by merging all form fields and annotations into the page content.
@@ -29,6 +29,7 @@ export async function flattenPdf(
 
     onProgress?.(80);
 
+    stampDefaultMetadata(pdfDoc, 'flatten pdf');
     const blob = await savePdfAsBlob(pdfDoc);
 
     onProgress?.(100);

@@ -1,5 +1,5 @@
 import { rgb } from 'pdf-lib';
-import { loadPdf, savePdfAsBlob } from '../pdfUtils';
+import { loadPdf, savePdfAsBlob, stampDefaultMetadata } from '../pdfUtils';
 
 export interface RedactArea {
     pageIndex: number; // 0-based
@@ -78,5 +78,6 @@ export async function redactPdf(
         }
     }
 
+    stampDefaultMetadata(pdfDoc, 'redact pdf');
     return savePdfAsBlob(pdfDoc);
 }

@@ -1,5 +1,5 @@
 import { PDFDocument } from 'pdf-lib';
-import { savePdfAsBlob } from '../pdfUtils';
+import { savePdfAsBlob, stampDefaultMetadata } from '../pdfUtils';
 
 export interface JpgToPdfOptions {
     orientation: 'portrait' | 'landscape';
@@ -131,5 +131,6 @@ export async function jpgToPdf(
         onProgress?.(Math.round(((i + 1) / files.length) * 100));
     }
 
+    stampDefaultMetadata(pdfDoc, 'jpg to pdf');
     return savePdfAsBlob(pdfDoc);
 }

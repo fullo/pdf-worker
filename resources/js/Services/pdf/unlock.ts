@@ -1,5 +1,5 @@
 import { PDFDocument } from 'pdf-lib';
-import { savePdfAsBlob } from '../pdfUtils';
+import { savePdfAsBlob, stampDefaultMetadata } from '../pdfUtils';
 
 /**
  * Remove password protection from a PDF.
@@ -47,6 +47,7 @@ export async function unlockPdf(
     onProgress?.(60);
 
     // Save without encryption options, producing an unprotected PDF
+    stampDefaultMetadata(pdfDoc, 'unlock pdf');
     const blob = await savePdfAsBlob(pdfDoc);
 
     onProgress?.(100);
