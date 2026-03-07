@@ -741,4 +741,33 @@ export const blogPostsCs: BlogPost[] = [
         tool: 'compress-pdf',
         tags: ['pracovni-postup', 'automatizace', 'produktivita'],
     },
+    {
+        slug: 'jak-zobrazit-a-upravit-metadata-pdf',
+        lang: 'cs',
+        title: 'Jak zobrazit a upravit metadata PDF',
+        excerpt: 'Naučte se, jak prohlížet a měnit vlastnosti PDF dokumentu, jako jsou název, autor, předmět a klíčová slova — zcela ve vašem prohlížeči.',
+        body: `<p>Každý soubor PDF obsahuje skryté informace známé jako metadata. Patří sem název dokumentu, jméno autora, předmět, klíčová slova a software použitý k jeho vytvoření. Úprava metadat je důležitá pro organizaci souborů, zlepšení výsledků vyhledávání a udržování profesionálních standardů.</p>
+<h2>Co jsou metadata PDF?</h2>
+<p>Metadata PDF jsou soubor vlastností vložených do souboru dokumentu. Běžná pole zahrnují název, autora, předmět, klíčová slova, tvůrce a producenta. Tato pole využívají operační systémy, vyhledávače a systémy správy dokumentů k indexování a kategorizaci souborů.</p>
+<h2>Proč upravovat metadata PDF?</h2>
+<ul>
+<li>Nastavte smysluplný název místo výchozího názvu souboru</li>
+<li>Přidejte své jméno nebo organizaci jako autora</li>
+<li>Zahrňte klíčová slova, která usnadní nalezení dokumentu</li>
+<li>Odstraňte metadata z citlivých dokumentů před sdílením</li>
+</ul>
+<h2>Jak upravit metadata s PDF Worker</h2>
+<ol>
+<li>Otevřete nástroj <a href="#/edit-metadata">Upravit metadata</a></li>
+<li>Nahrajte svůj soubor PDF</li>
+<li>Zkontrolujte aktuální hodnoty metadat zobrazené ve formuláři</li>
+<li>Upravte libovolné pole — název, autor, předmět, klíčová slova, tvůrce nebo producent</li>
+<li>Klikněte na "Uložit metadata" a stáhněte aktualizovaný PDF</li>
+</ol>
+<h2>Soukromí a bezpečnost</h2>
+<p>Veškeré zpracování probíhá lokálně ve vašem prohlížeči. Vaše soubory se nikdy nenahrávají na žádný server, takže můžete bezpečně upravovat metadata na důvěrných dokumentech bez obav o soukromí.</p>`,
+        date: '2026-03-07',
+        tool: 'edit-metadata',
+        tags: ['metadata', 'properties', 'edit', 'privacy'],
+    },
 ];

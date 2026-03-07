@@ -741,4 +741,33 @@ export const blogPostsNo: BlogPost[] = [
         tool: 'compress-pdf',
         tags: ['arbeidsflyt', 'automatisering', 'produktivitet'],
     },
+    {
+        slug: 'vis-og-rediger-pdf-metadata',
+        lang: 'no',
+        title: 'Slik viser og redigerer du PDF-metadata',
+        excerpt: 'Laer hvordan du inspiserer og endrer PDF-dokumentegenskaper som tittel, forfatter, emne og noekkelord — helt i nettleseren din.',
+        body: `<p>Hver PDF-fil inneholder skjult informasjon kjent som metadata. Dette inkluderer dokumenttittel, forfatternavn, emne, noekkelord og programvaren som ble brukt til aa lage den. Redigering av metadata er viktig for aa organisere filer, forbedre soekeresultater og opprettholde profesjonelle standarder.</p>
+<h2>Hva er PDF-metadata?</h2>
+<p>PDF-metadata er et sett med egenskaper som er innebygd i dokumentfilen. Vanlige felt inkluderer tittel, forfatter, emne, noekkelord, skaper og produsent. Disse feltene brukes av operativsystemer, soekemotorer og dokumenthaandteringssystemer til aa indeksere og kategorisere filer.</p>
+<h2>Hvorfor redigere PDF-metadata?</h2>
+<ul>
+<li>Angi en meningsfull tittel i stedet for standard filnavn</li>
+<li>Legg til navnet ditt eller organisasjonen din som forfatter</li>
+<li>Inkluder noekkelord som gjoer dokumentet enklere aa finne</li>
+<li>Fjern metadata fra sensitive dokumenter foer deling</li>
+</ul>
+<h2>Slik redigerer du metadata med PDF Worker</h2>
+<ol>
+<li>Aapne verktoeyet <a href="#/edit-metadata">Rediger Metadata</a></li>
+<li>Last opp PDF-filen din</li>
+<li>Se gjennom gjeldende metadataverdier som vises i skjemaet</li>
+<li>Rediger et hvilket som helst felt — tittel, forfatter, emne, noekkelord, skaper eller produsent</li>
+<li>Klikk paa "Lagre metadata" og last ned den oppdaterte PDF-en</li>
+</ol>
+<h2>Personvern og sikkerhet</h2>
+<p>All behandling skjer lokalt i nettleseren din. Filene dine lastes aldri opp til noen server, saa du kan trygt redigere metadata paa konfidensielle dokumenter uten personvernbekymringer.</p>`,
+        date: '2026-03-07',
+        tool: 'edit-metadata',
+        tags: ['metadata', 'properties', 'edit', 'privacy'],
+    },
 ];

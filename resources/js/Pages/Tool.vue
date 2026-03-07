@@ -24,6 +24,7 @@ const SignTool = defineAsyncComponent(() => import('@/Components/Tools/SignTool.
 const EditTool = defineAsyncComponent(() => import('@/Components/Tools/EditTool.vue'));
 const CropTool = defineAsyncComponent(() => import('@/Components/Tools/CropTool.vue'));
 const OrganizeTool = defineAsyncComponent(() => import('@/Components/Tools/OrganizeTool.vue'));
+const EditMetadataTool = defineAsyncComponent(() => import('@/Components/Tools/EditMetadataTool.vue'));
 const ToolLanding = defineAsyncComponent(() => import('@/Components/Tools/ToolLanding.vue'));
 
 const props = defineProps<{ tool: string }>();
@@ -120,6 +121,7 @@ const toolConfig = computed(() => {
         'flatten-pdf': { accept: '.pdf', multiple: true, color: 'bg-amber-500', bgColor: 'bg-amber-50' },
         'pdf-to-text': { accept: '.pdf', multiple: true, color: 'bg-blue-500', bgColor: 'bg-blue-50' },
         'markdown-to-pdf': { accept: '', multiple: false, color: 'bg-violet-500', bgColor: 'bg-violet-50' },
+        'edit-metadata': { accept: '.pdf', multiple: true, color: 'bg-cyan-500', bgColor: 'bg-cyan-50' },
     };
     return configs[props.tool] ?? configs['merge-pdf'];
 });
@@ -177,6 +179,8 @@ const signToolRef = ref<InstanceType<typeof SignTool> | null>(null);
 const editToolRef = ref<InstanceType<typeof EditTool> | null>(null);
 // Organize ref
 const organizeToolRef = ref<InstanceType<typeof OrganizeTool> | null>(null);
+// Edit Metadata ref
+const editMetadataToolRef = ref<InstanceType<typeof EditMetadataTool> | null>(null);
 // Markdown to PDF
 const markdownText = ref('');
 
@@ -214,6 +218,7 @@ const actionLabel = computed(() => {
         'flatten-pdf': 'tool.flatten.action',
         'pdf-to-text': 'tool.pdftotext.action',
         'markdown-to-pdf': 'tool.markdown.action',
+        'edit-metadata': 'tool.metadata.action',
     };
     return trans(labels[props.tool] ?? 'tool.process');
 });
@@ -223,6 +228,7 @@ const batchEligibleTools = [
     'compress-pdf', 'rotate-pdf', 'grayscale-pdf', 'flatten-pdf',
     'resize-pdf', 'page-numbers', 'header-footer', 'protect-pdf', 'unlock-pdf',
     'pdf-to-jpg', 'pdf-to-png', 'extract-images', 'pdf-to-text', 'split-pdf',
+    'edit-metadata',
 ];
 const isBatchMode = computed(() =>
     batchEligibleTools.includes(props.tool) && files.value.length > 1
@@ -296,6 +302,11 @@ async function processSingleFile(
         }
         case 'split-pdf':
             return await runInWorker('split-pdf', [file], { mode: splitMode.value, ranges: splitRanges.value || undefined }, onProgress) as { name: string; blob: Blob }[];
+        case 'edit-metadata': {
+            const opts = editMetadataToolRef.value?.getMetadataOptions() ?? {};
+            const blob = await runInWorker('edit-metadata', [file], opts, onProgress) as Blob;
+            return { name: `metadata_${file.name}`, blob };
+        }
         default:
             throw new Error(`Tool ${toolName} does not support batch processing`);
     }
@@ -483,6 +494,12 @@ async function process() {
                 case 'markdown-to-pdf': {
                     const blob = await runInWorker('markdown-to-pdf', [], { markdown: markdownText.value }, updateProgress) as Blob;
                     setResult(blob, 'markdown.pdf');
+                    break;
+                }
+                case 'edit-metadata': {
+                    const opts = editMetadataToolRef.value?.getMetadataOptions() ?? {};
+                    const blob = await runInWorker('edit-metadata', rawFiles, opts, updateProgress) as Blob;
+                    setResult(blob, `metadata_${rawFiles[0].name}`);
                     break;
                 }
             }
@@ -819,6 +836,9 @@ const hasTextContent = computed(() => markdownText.value.trim().length > 0);
 
                     <!-- ORGANIZE PDF -->
                     <OrganizeTool v-else-if="tool === 'organize-pdf'" ref="organizeToolRef" :pdf-file="hasFiles ? files[0]?.file ?? null : null" />
+
+                    <!-- EDIT METADATA -->
+                    <EditMetadataTool v-else-if="tool === 'edit-metadata'" ref="editMetadataToolRef" :pdf-file="hasFiles ? files[0]?.file ?? null : null" />
 
                     <!-- Default: no extra options -->
                     <div v-else class="text-center text-sm text-gray-500">

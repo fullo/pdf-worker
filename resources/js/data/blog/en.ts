@@ -743,4 +743,33 @@ export const blogPostsEn: BlogPost[] = [
         tool: 'compress-pdf',
         tags: ['workflow', 'automation', 'productivity'],
     },
+    {
+        slug: 'edit-pdf-metadata-guide',
+        lang: 'en',
+        title: 'How to View and Edit PDF Metadata',
+        excerpt: 'Learn how to inspect and modify PDF document properties such as title, author, subject, and keywords — entirely in your browser.',
+        body: `<p>Every PDF file carries hidden information known as metadata. This includes the document title, author name, subject, keywords, and the software used to create it. Editing metadata is important for organizing files, improving search results, and maintaining professional standards.</p>
+<h2>What Is PDF Metadata?</h2>
+<p>PDF metadata is a set of properties embedded in the document file. Common fields include title, author, subject, keywords, creator, and producer. These fields are used by operating systems, search engines, and document management systems to index and categorize files.</p>
+<h2>Why Edit PDF Metadata?</h2>
+<ul>
+<li>Set a meaningful title instead of the default file name</li>
+<li>Add your name or organization as the author</li>
+<li>Include keywords that make the document easier to find</li>
+<li>Remove metadata from sensitive documents before sharing</li>
+</ul>
+<h2>How to Edit Metadata with PDF Worker</h2>
+<ol>
+<li>Open the <a href="#/edit-metadata">Edit Metadata</a> tool</li>
+<li>Upload your PDF file</li>
+<li>Review the current metadata values displayed in the form</li>
+<li>Edit any field — title, author, subject, keywords, creator, or producer</li>
+<li>Click "Save Metadata" and download the updated PDF</li>
+</ol>
+<h2>Privacy and Security</h2>
+<p>All processing happens locally in your browser. Your files are never uploaded to any server, so you can safely edit metadata on confidential documents without privacy concerns.</p>`,
+        date: '2026-03-07',
+        tool: 'edit-metadata',
+        tags: ['metadata', 'properties', 'edit', 'privacy'],
+    },
 ];

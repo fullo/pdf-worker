@@ -48,6 +48,7 @@ const tools: ToolItem[] = [
     { slug: 'flatten-pdf', icon: '\uD83D\uDDDC\uFE0F', color: 'text-amber-600', bgColor: 'bg-amber-50' },
     { slug: 'pdf-to-text', icon: '\uD83D\uDCDD', color: 'text-blue-600', bgColor: 'bg-blue-50' },
     { slug: 'markdown-to-pdf', icon: '\uD83D\uDCDD', color: 'text-violet-600', bgColor: 'bg-violet-50' },
+    { slug: 'edit-metadata', icon: '📋', color: 'text-cyan-700', bgColor: 'bg-cyan-50' },
 ];
 
 const filteredTools = computed(() => {

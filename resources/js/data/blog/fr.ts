@@ -741,4 +741,41 @@ export const blogPostsFr: BlogPost[] = [
         tool: 'compress-pdf',
         tags: ['flux-de-travail', 'automatisation', 'productivité'],
     },
+    {
+        slug: 'guide-modifier-metadonnees-pdf',
+        lang: 'fr',
+        title: 'Comment Afficher et Modifier les Métadonnées PDF',
+        excerpt: 'Apprenez à inspecter et modifier les propriétés des documents PDF telles que le titre, l\'auteur, le sujet et les mots-clés — directement dans votre navigateur.',
+        body: `<p>Chaque fichier PDF contient des informations cachées appelées métadonnées. Ces propriétés du document incluent le titre, l'auteur, le sujet, les mots-clés, la date de création et le logiciel utilisé pour générer le fichier. Bien qu'invisibles dans le contenu principal, les métadonnées peuvent révéler des détails sensibles sur votre identité ou votre organisation.</p>
+<h2>Que Sont les Métadonnées PDF ?</h2>
+<p>Les métadonnées sont des informations intégrées dans le fichier PDF qui décrivent le document lui-même. Les champs les plus courants incluent :</p>
+<ul>
+<li><strong>Titre</strong> — le nom officiel du document</li>
+<li><strong>Auteur</strong> — qui a créé le fichier</li>
+<li><strong>Sujet</strong> — une brève description du contenu</li>
+<li><strong>Mots-clés</strong> — des balises pour faciliter la recherche et la classification</li>
+<li><strong>Créateur et Producteur</strong> — le logiciel utilisé pour créer et convertir le PDF</li>
+</ul>
+<h2>Pourquoi Modifier les Métadonnées ?</h2>
+<p>Il existe plusieurs raisons pour lesquelles vous pourriez vouloir modifier les métadonnées d'un PDF :</p>
+<ul>
+<li><strong>Confidentialité</strong> — supprimer les informations personnelles comme votre nom ou celui de votre entreprise avant de partager un fichier</li>
+<li><strong>Organisation</strong> — ajouter des titres et des mots-clés significatifs pour faciliter la recherche</li>
+<li><strong>Professionnalisme</strong> — s'assurer que les documents partagés possèdent des propriétés propres et cohérentes</li>
+<li><strong>Conformité</strong> — satisfaire les exigences d'archivage ou réglementaires nécessitant des métadonnées spécifiques</li>
+</ul>
+<h2>Comment Modifier les Métadonnées avec PDF Worker</h2>
+<ol>
+<li>Ouvrez l'outil <a href="#/edit-metadata">Modifier les Métadonnées PDF</a></li>
+<li>Téléchargez votre fichier PDF — tout est traité localement dans votre navigateur</li>
+<li>Consultez les propriétés actuelles du document</li>
+<li>Modifiez, ajoutez ou supprimez les champs de métadonnées selon vos besoins</li>
+<li>Téléchargez le PDF mis à jour avec les nouvelles propriétés</li>
+</ol>
+<h2>Note sur la Confidentialité</h2>
+<p>Lorsque vous partagez des PDF avec d'autres personnes, les métadonnées peuvent révéler des informations que vous préféreriez garder privées. L'outil <a href="#/edit-metadata">Modifier les Métadonnées</a> vous permet de vérifier et de nettoyer ces propriétés cachées avant la distribution, garantissant que seules les informations souhaitées accompagnent votre document.</p>`,
+        date: '2026-03-07',
+        tool: 'edit-metadata',
+        tags: ['metadata', 'properties', 'edit', 'privacy'],
+    },
 ];

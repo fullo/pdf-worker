@@ -741,4 +741,41 @@ export const blogPostsPt: BlogPost[] = [
         tool: 'compress-pdf',
         tags: ['fluxo-de-trabalho', 'automacao', 'produtividade'],
     },
+    {
+        slug: 'guia-editar-metadados-pdf',
+        lang: 'pt',
+        title: 'Como Visualizar e Editar Metadados PDF',
+        excerpt: 'Saiba como inspecionar e modificar as propriedades de documentos PDF como título, autor, assunto e palavras-chave — diretamente no seu browser.',
+        body: `<p>Cada ficheiro PDF contém informações ocultas conhecidas como metadados. Estas propriedades do documento incluem o título, o autor, o assunto, as palavras-chave, a data de criação e o software utilizado para gerar o ficheiro. Embora invisíveis no conteúdo principal, os metadados podem revelar detalhes sensíveis sobre a sua identidade ou organização.</p>
+<h2>O Que São Metadados PDF?</h2>
+<p>Os metadados são informações incorporadas no ficheiro PDF que descrevem o próprio documento. Os campos mais comuns incluem:</p>
+<ul>
+<li><strong>Título</strong> — o nome oficial do documento</li>
+<li><strong>Autor</strong> — quem criou o ficheiro</li>
+<li><strong>Assunto</strong> — uma breve descrição do conteúdo</li>
+<li><strong>Palavras-chave</strong> — etiquetas para facilitar a pesquisa e classificação</li>
+<li><strong>Criador e Produtor</strong> — o software utilizado para criar e converter o PDF</li>
+</ul>
+<h2>Porquê Editar os Metadados?</h2>
+<p>Existem várias razões pelas quais poderá querer editar os metadados de um PDF:</p>
+<ul>
+<li><strong>Privacidade</strong> — remover informações pessoais como o seu nome ou o nome da sua empresa antes de partilhar um ficheiro</li>
+<li><strong>Organização</strong> — adicionar títulos e palavras-chave significativos para facilitar a pesquisa</li>
+<li><strong>Profissionalismo</strong> — garantir que os documentos partilhados tenham propriedades limpas e consistentes</li>
+<li><strong>Conformidade</strong> — cumprir requisitos de arquivo ou regulamentares que exigem metadados específicos</li>
+</ul>
+<h2>Como Editar Metadados com o PDF Worker</h2>
+<ol>
+<li>Abra a ferramenta <a href="#/edit-metadata">Editar Metadados PDF</a></li>
+<li>Carregue o seu ficheiro PDF — tudo é processado localmente no seu browser</li>
+<li>Visualize as propriedades atuais do documento</li>
+<li>Edite, adicione ou remova os campos de metadados conforme necessário</li>
+<li>Descarregue o PDF atualizado com as novas propriedades</li>
+</ol>
+<h2>Nota sobre Privacidade</h2>
+<p>Ao partilhar PDFs com outras pessoas, os metadados podem revelar informações que preferiria manter privadas. A ferramenta <a href="#/edit-metadata">Editar Metadados</a> permite-lhe verificar e limpar estas propriedades ocultas antes da distribuição, garantindo que apenas as informações desejadas acompanhem o seu documento.</p>`,
+        date: '2026-03-07',
+        tool: 'edit-metadata',
+        tags: ['metadata', 'properties', 'edit', 'privacy'],
+    },
 ];

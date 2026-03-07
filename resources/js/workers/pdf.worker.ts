@@ -26,6 +26,7 @@ import { flattenPdf } from '@/Services/pdf/flatten';
 import { pdfToText } from '@/Services/pdf/pdfToText';
 import { editPdf } from '@/Services/pdf/editPdf';
 import { markdownToPdf } from '@/Services/pdf/markdownToPdf';
+import { editMetadata, type MetadataOptions } from '@/Services/pdf/editMetadata';
 
 self.onmessage = async (e: MessageEvent) => {
     const { id, tool, files, options } = e.data;
@@ -128,6 +129,10 @@ self.onmessage = async (e: MessageEvent) => {
 
             case 'markdown-to-pdf':
                 result = await markdownToPdf(options.markdown as string, onProgress);
+                break;
+
+            case 'edit-metadata':
+                result = await editMetadata(files[0], options as MetadataOptions, onProgress);
                 break;
 
             default:

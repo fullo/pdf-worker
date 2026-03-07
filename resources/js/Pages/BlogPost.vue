@@ -1,19 +1,34 @@
 <script setup lang="ts">
-import { computed, watchEffect } from 'vue';
+import { ref, computed, watchEffect } from 'vue';
 import { RouterLink } from 'vue-router';
-import { trans } from '@/i18n';
+import { trans, currentLocale } from '@/i18n';
 import { useSeoMeta } from '@/Composables/useSeoMeta';
-import { blogPosts } from '@/data/blogPosts';
+import { findPostBySlug, type BlogPost } from '@/data/blogPosts';
 
 const props = defineProps<{ slug: string }>();
 
-const post = computed(() => blogPosts.find((p) => p.slug === props.slug));
+const post = ref<BlogPost | null>(null);
+const sameLangPosts = ref<BlogPost[]>([]);
+const loading = ref(true);
 
 const relatedPosts = computed(() => {
     if (!post.value) return [];
-    return blogPosts
+    return sameLangPosts.value
         .filter((p) => p.tool === post.value!.tool && p.slug !== post.value!.slug)
         .slice(0, 3);
+});
+
+watchEffect(async () => {
+    loading.value = true;
+    const result = await findPostBySlug(props.slug, currentLocale.value);
+    if (result) {
+        post.value = result.post;
+        sameLangPosts.value = result.allPosts;
+    } else {
+        post.value = null;
+        sameLangPosts.value = [];
+    }
+    loading.value = false;
 });
 
 watchEffect(() => {
@@ -54,17 +69,20 @@ function formatDate(dateStr: string): string {
     const d = new Date(dateStr);
     return d.toLocaleDateString(undefined, { year: 'numeric', month: 'long', day: 'numeric' });
 }
-
-const langFlag: Record<string, string> = {
-    en: '\uD83C\uDDEC\uD83C\uDDE7',
-    it: '\uD83C\uDDEE\uD83C\uDDF9',
-};
 </script>
 
 <template>
     <div>
+        <!-- Loading state -->
+        <div v-if="loading" class="flex items-center justify-center py-20">
+            <svg class="h-6 w-6 animate-spin text-blue-500 mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4" />
+                <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z" />
+            </svg>
+        </div>
+
         <!-- 404 state -->
-        <div v-if="!post" class="mx-auto max-w-3xl px-4 py-20 text-center">
+        <div v-else-if="!post" class="mx-auto max-w-3xl px-4 py-20 text-center">
             <h1 class="mb-4 text-2xl font-bold text-gray-900 dark:text-white">{{ trans('blog.not_found') }}</h1>
             <RouterLink to="/blog" class="text-blue-600 underline hover:text-blue-800 dark:text-blue-400">
                 {{ trans('blog.back_to_blog') }}
@@ -88,10 +106,7 @@ const langFlag: Record<string, string> = {
             <!-- Article -->
             <article class="mx-auto max-w-3xl px-4 py-10 sm:px-6">
                 <!-- Meta -->
-                <div class="mb-6 flex items-center gap-3 text-sm text-gray-500 dark:text-gray-400">
-                    <span class="inline-flex items-center gap-1 rounded-full bg-gray-100 px-2.5 py-0.5 dark:bg-gray-700">
-                        {{ langFlag[post.lang] }} {{ post.lang.toUpperCase() }}
-                    </span>
+                <div class="mb-6 text-sm text-gray-500 dark:text-gray-400">
                     <time :datetime="post.date">{{ formatDate(post.date) }}</time>
                 </div>
 
@@ -152,8 +167,7 @@ const langFlag: Record<string, string> = {
                             :to="`/blog/${rp.slug}`"
                             class="rounded-lg border border-gray-200 bg-white p-4 transition-shadow hover:shadow-md dark:border-gray-700 dark:bg-gray-800"
                         >
-                            <div class="mb-2 flex items-center gap-2 text-xs text-gray-500 dark:text-gray-400">
-                                <span>{{ langFlag[rp.lang] }}</span>
+                            <div class="mb-2 text-xs text-gray-500 dark:text-gray-400">
                                 <time :datetime="rp.date">{{ formatDate(rp.date) }}</time>
                             </div>
                             <h3 class="text-sm font-semibold text-gray-900 dark:text-white">{{ rp.title }}</h3>

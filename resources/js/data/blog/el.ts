@@ -741,4 +741,33 @@ export const blogPostsEl: BlogPost[] = [
         tool: 'compress-pdf',
         tags: ['roi-ergasias', 'aftomat opoiisi', 'paragogikotita'],
     },
+    {
+        slug: 'pos-na-deite-kai-epexergasteite-metadedomena-pdf',
+        lang: 'el',
+        title: 'Pos na Deite kai Epexergasteite ta Metadedomena PDF',
+        excerpt: 'Mathete pos na elegxete kai na tropopoiisete tis idiotites eggrafon PDF opos titlo, syggrafea, thema kai lekseis-kleidia — apolyta ston perigiti sas.',
+        body: `<p>Kathe arxeio PDF periexei kryfes plirofories pou onomazontai metadedomena. Afta perilamvanoun ton titlo tou eggrafou, to onoma tou syggrafea, to thema, tis lekseis-kleidia kai to logismiko pou xrisimopoiithike gia ti dimiourgia tou. I epexergasia metadedomenon einai simantiki gia tin organosi arxeion, ti veltiosi ton apotelesmaton anazitisis kai ti diatirisiprofesionalikon protypon.</p>
+<h2>Ti Einai ta Metadedomena PDF;</h2>
+<p>Ta metadedomena PDF einai ena synolo idiotton pou einai ensomatomenes sto arxeio eggrafou. Ta syxna pedia perilamvanoun titlo, syggrafea, thema, lekseis-kleidia, dimioyrgo kai paragogo. Afta ta pedia xrisimopoiountai apo leitourgika systimata, mixanes anazitisis kai systimata diaxeirisis eggrafon gia tin eftairetiriasi kai tin katigoriopolisi arxeion.</p>
+<h2>Giati na Epexergasteite ta Metadedomena PDF;</h2>
+<ul>
+<li>Oriste enan ousiastiko titlo anti tou proepilegmenou onomatos arxeiou</li>
+<li>Prostheste to onoma i ton organismo sas os syggrafea</li>
+<li>Symperilavete lekseis-kleidia pou kanoun to eggrafo pio efkolo sti anazitisi</li>
+<li>Afaireste ta metadedomena apo evaisthita eggrafa prin ta moirastete</li>
+</ul>
+<h2>Pos na Epexergasteite Metadedomena me to PDF Worker</h2>
+<ol>
+<li>Anoixte to ergaleio <a href="#/edit-metadata">Epexergasia Metadedomenon</a></li>
+<li>Anevaste to arxeio PDF sas</li>
+<li>Elegxte tis trexouses times metadedomenon pou emfanizontai sti forma</li>
+<li>Epexergasteite opoiodipote pedio — titlo, syggrafea, thema, lekseis-kleidia, dimioyrgo i paragogo</li>
+<li>Kanete klik sto "Apothikefsi Metadedomenon" kai katevaste to enimeromena PDF</li>
+</ol>
+<h2>Aporreto kai Asfaleia</h2>
+<p>Oli i epexergasia ginetai topika ston perigiti sas. Ta arxeia sas den anevainoun pote se kanena exypiretiiti, opote mporeiteme asfaleia na epexergasteite ta metadedomena se empisteytika eggrafa xoris anisyxies gia to aporreto.</p>`,
+        date: '2026-03-07',
+        tool: 'edit-metadata',
+        tags: ['metadata', 'properties', 'edit', 'privacy'],
+    },
 ];

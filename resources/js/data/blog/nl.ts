@@ -741,4 +741,33 @@ export const blogPostsNl: BlogPost[] = [
         tool: 'compress-pdf',
         tags: ['workflow', 'automatisering', 'productiviteit'],
     },
+    {
+        slug: 'pdf-metadata-bekijken-en-bewerken',
+        lang: 'nl',
+        title: 'Hoe PDF-metadata Bekijken en Bewerken',
+        excerpt: 'Leer hoe je PDF-documenteigenschappen zoals titel, auteur, onderwerp en trefwoorden kunt bekijken en bewerken — volledig in je browser.',
+        body: `<p>Elk PDF-bestand bevat verborgen informatie die metadata wordt genoemd. Dit omvat de documenttitel, auteursnaam, onderwerp, trefwoorden en de software waarmee het is gemaakt. Het bewerken van metadata is belangrijk voor het organiseren van bestanden, het verbeteren van zoekresultaten en het handhaven van professionele standaarden.</p>
+<h2>Wat is PDF-metadata?</h2>
+<p>PDF-metadata is een set eigenschappen die in het documentbestand zijn ingebed. Veelvoorkomende velden zijn titel, auteur, onderwerp, trefwoorden, maker en producent. Deze velden worden gebruikt door besturingssystemen, zoekmachines en documentbeheersystemen om bestanden te indexeren en te categoriseren.</p>
+<h2>Waarom PDF-metadata bewerken?</h2>
+<ul>
+<li>Stel een betekenisvolle titel in in plaats van de standaard bestandsnaam</li>
+<li>Voeg je naam of organisatie toe als auteur</li>
+<li>Voeg trefwoorden toe die het document makkelijker vindbaar maken</li>
+<li>Verwijder metadata uit gevoelige documenten voordat je ze deelt</li>
+</ul>
+<h2>Hoe metadata bewerken met PDF Worker</h2>
+<ol>
+<li>Open de <a href="#/edit-metadata">Metadata Bewerken</a> tool</li>
+<li>Upload je PDF-bestand</li>
+<li>Bekijk de huidige metadatawaarden die in het formulier worden weergegeven</li>
+<li>Bewerk elk veld — titel, auteur, onderwerp, trefwoorden, maker of producent</li>
+<li>Klik op "Metadata Opslaan" en download de bijgewerkte PDF</li>
+</ol>
+<h2>Privacy en Veiligheid</h2>
+<p>Alle verwerking vindt lokaal plaats in je browser. Je bestanden worden nooit naar een server geüpload, zodat je veilig metadata kunt bewerken van vertrouwelijke documenten zonder privacyzorgen.</p>`,
+        date: '2026-03-07',
+        tool: 'edit-metadata',
+        tags: ['metadata', 'properties', 'edit', 'privacy'],
+    },
 ];

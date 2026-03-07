@@ -743,4 +743,41 @@ export const blogPostsDe: BlogPost[] = [
         tool: 'compress-pdf',
         tags: ['workflow', 'automatisierung', 'produktivitaet'],
     },
+    {
+        slug: 'anleitung-pdf-metadaten-bearbeiten',
+        lang: 'de',
+        title: 'PDF-Metadaten anzeigen und bearbeiten',
+        excerpt: 'Erfahren Sie, wie Sie PDF-Dokumenteigenschaften wie Titel, Autor, Betreff und Schlüsselwörter prüfen und ändern — direkt in Ihrem Browser.',
+        body: `<p>Jede PDF-Datei enthält versteckte Informationen, die als Metadaten bekannt sind. Diese Dokumenteigenschaften umfassen den Titel, den Autor, den Betreff, Schlüsselwörter, das Erstellungsdatum und die Software, mit der die Datei erstellt wurde. Obwohl sie im Hauptinhalt unsichtbar sind, können Metadaten sensible Details über Ihre Identität oder Organisation preisgeben.</p>
+<h2>Was sind PDF-Metadaten?</h2>
+<p>Metadaten sind in die PDF-Datei eingebettete Informationen, die das Dokument selbst beschreiben. Die häufigsten Felder umfassen:</p>
+<ul>
+<li><strong>Titel</strong> — der offizielle Name des Dokuments</li>
+<li><strong>Autor</strong> — wer die Datei erstellt hat</li>
+<li><strong>Betreff</strong> — eine kurze Beschreibung des Inhalts</li>
+<li><strong>Schlüsselwörter</strong> — Tags zur Erleichterung der Suche und Klassifizierung</li>
+<li><strong>Ersteller und Produzent</strong> — die Software, die zum Erstellen und Konvertieren des PDFs verwendet wurde</li>
+</ul>
+<h2>Warum Metadaten bearbeiten?</h2>
+<p>Es gibt mehrere Gründe, warum Sie die Metadaten einer PDF-Datei bearbeiten möchten:</p>
+<ul>
+<li><strong>Datenschutz</strong> — persönliche Informationen wie Ihren Namen oder Firmennamen vor dem Teilen einer Datei entfernen</li>
+<li><strong>Organisation</strong> — aussagekräftige Titel und Schlüsselwörter hinzufügen, um die Suche zu erleichtern</li>
+<li><strong>Professionalität</strong> — sicherstellen, dass geteilte Dokumente saubere und konsistente Eigenschaften aufweisen</li>
+<li><strong>Compliance</strong> — Archivierungs- oder behördliche Anforderungen erfüllen, die bestimmte Metadaten vorschreiben</li>
+</ul>
+<h2>Metadaten mit PDF Worker bearbeiten</h2>
+<ol>
+<li>Öffnen Sie das <a href="#/edit-metadata">PDF-Metadaten-bearbeiten-Tool</a></li>
+<li>Laden Sie Ihre PDF-Datei hoch — alles wird lokal in Ihrem Browser verarbeitet</li>
+<li>Sehen Sie sich die aktuellen Dokumenteigenschaften an</li>
+<li>Bearbeiten, ergänzen oder entfernen Sie Metadatenfelder nach Bedarf</li>
+<li>Laden Sie das aktualisierte PDF mit den neuen Eigenschaften herunter</li>
+</ol>
+<h2>Hinweis zum Datenschutz</h2>
+<p>Wenn Sie PDFs mit anderen teilen, können Metadaten Informationen preisgeben, die Sie lieber privat halten würden. Das <a href="#/edit-metadata">Metadaten-bearbeiten-Tool</a> ermöglicht es Ihnen, diese versteckten Eigenschaften vor der Weitergabe zu überprüfen und zu bereinigen, sodass nur die gewünschten Informationen Ihr Dokument begleiten.</p>`,
+        date: '2026-03-07',
+        tool: 'edit-metadata',
+        tags: ['metadata', 'properties', 'edit', 'privacy'],
+    },
 ];

@@ -741,4 +741,33 @@ export const blogPostsBe: BlogPost[] = [
         tool: 'compress-pdf',
         tags: ['werkstroom', 'automatisering', 'productiviteit'],
     },
+    {
+        slug: 'pdf-metadata-bekijken-en-bewerken',
+        lang: 'be',
+        title: 'Hoe PDF-metadata bekijken en bewerken',
+        excerpt: 'Leer hoe ge de eigenschappen van een PDF-document kunt inspecteren en aanpassen, zoals titel, auteur, onderwerp en trefwoorden — volledig in uw browser.',
+        body: `<p>Elk PDF-bestand bevat verborgen informatie die metadata wordt genoemd. Dit omvat de documenttitel, auteursnaam, onderwerp, trefwoorden en de software waarmee het is aangemaakt. Het bewerken van metadata is belangrijk voor het organiseren van bestanden, het verbeteren van zoekresultaten en het handhaven van professionele normen.</p>
+<h2>Wat is PDF-metadata?</h2>
+<p>PDF-metadata is een reeks eigenschappen die in het documentbestand zijn ingebed. Veelvoorkomende velden zijn titel, auteur, onderwerp, trefwoorden, maker en producent. Deze velden worden gebruikt door besturingssystemen, zoekmachines en documentbeheersystemen om bestanden te indexeren en te categoriseren.</p>
+<h2>Waarom PDF-metadata bewerken?</h2>
+<ul>
+<li>Een betekenisvolle titel instellen in plaats van de standaard bestandsnaam</li>
+<li>Uw naam of organisatie als auteur toevoegen</li>
+<li>Trefwoorden opnemen die het document gemakkelijker vindbaar maken</li>
+<li>Metadata verwijderen uit gevoelige documenten voor het delen</li>
+</ul>
+<h2>Hoe metadata bewerken met PDF Worker</h2>
+<ol>
+<li>Open de <a href="#/edit-metadata">Metadata Bewerken</a>-tool</li>
+<li>Upload uw PDF-bestand</li>
+<li>Bekijk de huidige metadatawaarden die in het formulier worden weergegeven</li>
+<li>Bewerk elk veld — titel, auteur, onderwerp, trefwoorden, maker of producent</li>
+<li>Klik op "Metadata Opslaan" en download de bijgewerkte PDF</li>
+</ol>
+<h2>Privacy en veiligheid</h2>
+<p>Alle verwerking gebeurt lokaal in uw browser. Uw bestanden worden nooit naar een server geüpload, zodat ge veilig metadata kunt bewerken op vertrouwelijke documenten zonder zorgen over privacy.</p>`,
+        date: '2026-03-07',
+        tool: 'edit-metadata',
+        tags: ['metadata', 'properties', 'edit', 'privacy'],
+    },
 ];

@@ -121,6 +121,11 @@
         <priority>0.8</priority>
     </url>
     <url>
+        <loc>https://www.pdfworker.eu/#/edit-metadata</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
         <loc>https://www.pdfworker.eu/#/privacy</loc>
         <changefreq>yearly</changefreq>
         <priority>0.3</priority>
@@ -311,6 +316,11 @@
         <priority>0.6</priority>
     </url>
     <url>
+        <loc>https://www.pdfworker.eu/#/blog/edit-pdf-metadata-guide</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
         <loc>https://www.pdfworker.eu/#/blog/come-unire-pdf-online-gratis</loc>
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>
@@ -487,6 +497,11 @@
     </url>
     <url>
         <loc>https://www.pdfworker.eu/#/blog/automazione-flusso-lavoro-pdf-consigli</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://www.pdfworker.eu/#/blog/guida-modifica-metadati-pdf</loc>
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>
     </url>
@@ -671,6 +686,11 @@
         <priority>0.6</priority>
     </url>
     <url>
+        <loc>https://www.pdfworker.eu/#/blog/anleitung-pdf-metadaten-bearbeiten</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
         <loc>https://www.pdfworker.eu/#/blog/comment-fusionner-fichiers-pdf-en-ligne</loc>
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>
@@ -847,6 +867,11 @@
     </url>
     <url>
         <loc>https://www.pdfworker.eu/#/blog/automatisation-flux-travail-pdf-conseils</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://www.pdfworker.eu/#/blog/guide-modifier-metadonnees-pdf</loc>
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>
     </url>
@@ -1031,6 +1056,11 @@
         <priority>0.6</priority>
     </url>
     <url>
+        <loc>https://www.pdfworker.eu/#/blog/guia-editar-metadados-pdf</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
         <loc>https://www.pdfworker.eu/#/blog/como-combinar-archivos-pdf-en-linea</loc>
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>
@@ -1207,6 +1237,11 @@
     </url>
     <url>
         <loc>https://www.pdfworker.eu/#/blog/automatizacion-flujo-trabajo-pdf-consejos</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://www.pdfworker.eu/#/blog/guia-editar-metadatos-pdf</loc>
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>
     </url>
@@ -1391,6 +1426,11 @@
         <priority>0.6</priority>
     </url>
     <url>
+        <loc>https://www.pdfworker.eu/#/blog/pdf-metadata-bekijken-en-bewerken</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
         <loc>https://www.pdfworker.eu/#/blog/sammanfoga-pdf-filer-online</loc>
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>
@@ -1567,6 +1607,11 @@
     </url>
     <url>
         <loc>https://www.pdfworker.eu/#/blog/pdf-arbetsflode-automatisering-tips</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://www.pdfworker.eu/#/blog/visa-och-redigera-pdf-metadata</loc>
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>
     </url>
@@ -1751,6 +1796,11 @@
         <priority>0.6</priority>
     </url>
     <url>
+        <loc>https://www.pdfworker.eu/#/blog/pdf-metatietojen-tarkastelu-ja-muokkaus</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
         <loc>https://www.pdfworker.eu/#/blog/saadan-sammenfojer-du-pdf-filer-online</loc>
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>
@@ -1927,6 +1977,11 @@
     </url>
     <url>
         <loc>https://www.pdfworker.eu/#/blog/pdf-arbejdsgangs-automatisering-tips</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://www.pdfworker.eu/#/blog/vis-og-rediger-pdf-metadata</loc>
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>
     </url>
@@ -2111,6 +2166,11 @@
         <priority>0.6</priority>
     </url>
     <url>
+        <loc>https://www.pdfworker.eu/#/blog/vis-og-rediger-pdf-metadata</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
         <loc>https://www.pdfworker.eu/#/blog/hoe-pdf-bestanden-online-samenvoegen</loc>
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>
@@ -2287,6 +2347,11 @@
     </url>
     <url>
         <loc>https://www.pdfworker.eu/#/blog/pdf-werkstroom-automatisering-tips</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://www.pdfworker.eu/#/blog/pdf-metadata-bekijken-en-bewerken</loc>
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>
     </url>
@@ -2471,6 +2536,11 @@
         <priority>0.6</priority>
     </url>
     <url>
+        <loc>https://www.pdfworker.eu/#/blog/pos-na-deite-kai-epexergasteite-metadedomena-pdf</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
         <loc>https://www.pdfworker.eu/#/blog/kako-zdruziti-pdf-datoteke-na-spletu</loc>
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>
@@ -2651,6 +2721,11 @@
         <priority>0.6</priority>
     </url>
     <url>
+        <loc>https://www.pdfworker.eu/#/blog/kako-pregledati-in-urediti-metapodatke-pdf</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
         <loc>https://www.pdfworker.eu/#/blog/jak-spojit-pdf-soubory-online</loc>
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>
@@ -2827,6 +2902,11 @@
     </url>
     <url>
         <loc>https://www.pdfworker.eu/#/blog/tipy-pro-automatizaci-pdf-pracovniho-postupu</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://www.pdfworker.eu/#/blog/jak-zobrazit-a-upravit-metadata-pdf</loc>
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>
     </url>

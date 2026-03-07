@@ -741,4 +741,33 @@ export const blogPostsSl: BlogPost[] = [
         tool: 'compress-pdf',
         tags: ['potek-dela', 'avtomatizacija', 'produktivnost'],
     },
+    {
+        slug: 'kako-pregledati-in-urediti-metapodatke-pdf',
+        lang: 'sl',
+        title: 'Kako pregledati in urediti metapodatke PDF',
+        excerpt: 'Naučite se, kako pregledati in spremeniti lastnosti PDF dokumenta, kot so naslov, avtor, zadeva in ključne besede — v celoti v vašem brskalniku.',
+        body: `<p>Vsaka datoteka PDF vsebuje skrite informacije, znane kot metapodatki. Ti vključujejo naslov dokumenta, ime avtorja, zadevo, ključne besede in programsko opremo, ki je bila uporabljena za ustvarjanje. Urejanje metapodatkov je pomembno za organizacijo datotek, izboljšanje rezultatov iskanja in ohranjanje profesionalnih standardov.</p>
+<h2>Kaj so metapodatki PDF?</h2>
+<p>Metapodatki PDF so nabor lastnosti, vdelanih v datoteko dokumenta. Pogosta polja vključujejo naslov, avtorja, zadevo, ključne besede, ustvarjalca in producenta. Ta polja uporabljajo operacijski sistemi, iskalniki in sistemi za upravljanje dokumentov za indeksiranje in kategorizacijo datotek.</p>
+<h2>Zakaj urejati metapodatke PDF?</h2>
+<ul>
+<li>Nastavite smiseln naslov namesto privzetega imena datoteke</li>
+<li>Dodajte svoje ime ali organizacijo kot avtorja</li>
+<li>Vključite ključne besede, ki olajšajo iskanje dokumenta</li>
+<li>Odstranite metapodatke iz občutljivih dokumentov pred deljenjem</li>
+</ul>
+<h2>Kako urediti metapodatke s PDF Worker</h2>
+<ol>
+<li>Odprite orodje <a href="#/edit-metadata">Uredi metapodatke</a></li>
+<li>Naložite svojo datoteko PDF</li>
+<li>Preglejte trenutne vrednosti metapodatkov, prikazane v obrazcu</li>
+<li>Uredite katero koli polje — naslov, avtor, zadeva, ključne besede, ustvarjalec ali producent</li>
+<li>Kliknite "Shrani metapodatke" in prenesite posodobljeni PDF</li>
+</ol>
+<h2>Zasebnost in varnost</h2>
+<p>Vsa obdelava poteka lokalno v vašem brskalniku. Vaše datoteke se nikoli ne naložijo na noben strežnik, zato lahko varno urejate metapodatke na zaupnih dokumentih brez skrbi glede zasebnosti.</p>`,
+        date: '2026-03-07',
+        tool: 'edit-metadata',
+        tags: ['metadata', 'properties', 'edit', 'privacy'],
+    },
 ];

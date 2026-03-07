@@ -741,4 +741,33 @@ export const blogPostsFi: BlogPost[] = [
         tool: 'compress-pdf',
         tags: ['tyonkulku', 'automatisointi', 'tuottavuus'],
     },
+    {
+        slug: 'pdf-metatietojen-tarkastelu-ja-muokkaus',
+        lang: 'fi',
+        title: 'PDF-metatietojen tarkastelu ja muokkaus',
+        excerpt: 'Opi tarkastelemaan ja muokkaamaan PDF-asiakirjan ominaisuuksia, kuten otsikkoa, tekijaa, aihetta ja avainsanoja — kokonaan selaimessasi.',
+        body: `<p>Jokaisessa PDF-tiedostossa on piilotettua tietoa, jota kutsutaan metatiedoiksi. Tama sisaltaa asiakirjan otsikon, tekijan nimen, aiheen, avainsanat ja luomiseen kaytetyn ohjelmiston. Metatietojen muokkaaminen on tarkeaa tiedostojen jarjestamisessa, hakutulosten parantamisessa ja ammattimaisten standardien yllapitamisessa.</p>
+<h2>Mita PDF-metatiedot ovat?</h2>
+<p>PDF-metatiedot ovat joukko asiakirjatiedostoon upotettuja ominaisuuksia. Yleisia kenttia ovat otsikko, tekija, aihe, avainsanat, luoja ja tuottaja. Naita kenttia kayttavat kayttojarjestelmat, hakukoneet ja asiakirjanhallintajarjestelmat tiedostojen indeksointiin ja luokitteluun.</p>
+<h2>Miksi muokata PDF-metatietoja?</h2>
+<ul>
+<li>Aseta merkityksellinen otsikko oletustiedostonimen sijaan</li>
+<li>Lisaa nimesi tai organisaatiosi tekijaksi</li>
+<li>Lisaa avainsanoja, jotka tekevat asiakirjasta helpommin loydettavan</li>
+<li>Poista metatiedot arkaluontoisista asiakirjoista ennen jakamista</li>
+</ul>
+<h2>Metatietojen muokkaus PDF Workerilla</h2>
+<ol>
+<li>Avaa <a href="#/edit-metadata">Muokkaa metatietoja</a> -tyokalu</li>
+<li>Lataa PDF-tiedostosi</li>
+<li>Tarkista lomakkeessa naytettavat nykyiset metatietoarvot</li>
+<li>Muokkaa mita tahansa kenttaa — otsikko, tekija, aihe, avainsanat, luoja tai tuottaja</li>
+<li>Napsauta "Tallenna metatiedot" ja lataa paivitetty PDF</li>
+</ol>
+<h2>Yksityisyys ja turvallisuus</h2>
+<p>Kaikki kasittely tapahtuu paikallisesti selaimessasi. Tiedostojasi ei koskaan ladeta millekaan palvelimelle, joten voit turvallisesti muokata luottamuksellisten asiakirjojen metatietoja ilman yksityisyyshuolia.</p>`,
+        date: '2026-03-07',
+        tool: 'edit-metadata',
+        tags: ['metadata', 'properties', 'edit', 'privacy'],
+    },
 ];

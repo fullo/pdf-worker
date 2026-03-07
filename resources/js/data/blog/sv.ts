@@ -741,4 +741,33 @@ export const blogPostsSv: BlogPost[] = [
         tool: 'compress-pdf',
         tags: ['arbetsflode', 'automatisering', 'produktivitet'],
     },
+    {
+        slug: 'visa-och-redigera-pdf-metadata',
+        lang: 'sv',
+        title: 'Hur man Visar och Redigerar PDF-metadata',
+        excerpt: 'Lar dig hur du inspekterar och andrar PDF-dokumentegenskaper som titel, forfattare, amne och nyckelord — helt i din webblasare.',
+        body: `<p>Varje PDF-fil innehaller dold information som kallas metadata. Detta inkluderar dokumenttitel, forfattarnamn, amne, nyckelord och programvaran som anvandes for att skapa den. Att redigera metadata ar viktigt for att organisera filer, forbattra sokresultat och uppratthalla professionella standarder.</p>
+<h2>Vad ar PDF-metadata?</h2>
+<p>PDF-metadata ar en uppsattning egenskaper som ar inbaddade i dokumentfilen. Vanliga falt inkluderar titel, forfattare, amne, nyckelord, skapare och producent. Dessa falt anvands av operativsystem, sokmotorer och dokumenthanteringssystem for att indexera och kategorisera filer.</p>
+<h2>Varfor redigera PDF-metadata?</h2>
+<ul>
+<li>Ange en meningsfull titel istallet for standardfilnamnet</li>
+<li>Lagg till ditt namn eller din organisation som forfattare</li>
+<li>Inkludera nyckelord som gor dokumentet lattare att hitta</li>
+<li>Ta bort metadata fran kansliga dokument innan delning</li>
+</ul>
+<h2>Hur man redigerar metadata med PDF Worker</h2>
+<ol>
+<li>Oppna verktyget <a href="#/edit-metadata">Redigera Metadata</a></li>
+<li>Ladda upp din PDF-fil</li>
+<li>Granska de aktuella metadatavardena som visas i formularet</li>
+<li>Redigera valfritt falt — titel, forfattare, amne, nyckelord, skapare eller producent</li>
+<li>Klicka pa "Spara Metadata" och ladda ner den uppdaterade PDF:en</li>
+</ol>
+<h2>Integritet och Sakerhet</h2>
+<p>All bearbetning sker lokalt i din webblasare. Dina filer laddas aldrig upp till nagon server, sa du kan sakert redigera metadata pa konfidentiella dokument utan integritetsproblem.</p>`,
+        date: '2026-03-07',
+        tool: 'edit-metadata',
+        tags: ['metadata', 'properties', 'edit', 'privacy'],
+    },
 ];
