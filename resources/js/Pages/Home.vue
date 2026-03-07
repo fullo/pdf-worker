@@ -16,6 +16,8 @@ onMounted(() => {
     useSeoMeta(
         'PDF Worker - Free Online PDF Tools',
         trans('home.description'),
+        '/',
+        null,
     );
 });
 

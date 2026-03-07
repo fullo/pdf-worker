@@ -54,6 +54,7 @@ function formatFileSize(bytes: number): string {
                 class="mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-green-100"
             >
                 <svg
+                    aria-hidden="true"
                     class="h-8 w-8 text-green-600"
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
@@ -88,6 +89,7 @@ function formatFileSize(bytes: number): string {
                 @click="emit('download')"
             >
                 <svg
+                    aria-hidden="true"
                     class="h-5 w-5"
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"

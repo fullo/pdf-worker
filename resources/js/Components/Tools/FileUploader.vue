@@ -74,6 +74,9 @@ function onDrop(event: DragEvent) {
 
 <template>
     <div
+        role="button"
+        tabindex="0"
+        :aria-label="trans('tool.upload_title')"
         class="relative flex cursor-pointer flex-col items-center justify-center rounded-2xl border-2 border-dashed px-6 py-16 transition-all duration-200"
         :class="[
             isDragging
@@ -85,11 +88,14 @@ function onDrop(event: DragEvent) {
         @dragleave="onDragLeave"
         @drop="onDrop"
         @click="openFileBrowser"
+        @keydown.enter="openFileBrowser"
+        @keydown.space.prevent="openFileBrowser"
     >
         <input
             ref="fileInput"
             type="file"
             class="hidden"
+            aria-label="Select files"
             :accept="accept"
             :multiple="multiple"
             @change="onFileInputChange"
@@ -99,6 +105,7 @@ function onDrop(event: DragEvent) {
         <!-- Upload cloud icon -->
         <div class="mb-4">
             <svg
+                aria-hidden="true"
                 class="h-16 w-16 transition-colors duration-200"
                 :class="isDragging ? 'text-red-400' : 'text-gray-400'"
                 xmlns="http://www.w3.org/2000/svg"

@@ -44,12 +44,17 @@ function toggle() {
     <div ref="wrapperRef" class="relative">
         <button
             type="button"
+            aria-label="Change language"
+            aria-haspopup="true"
+            :aria-expanded="isOpen"
             class="flex items-center gap-1.5 rounded-md px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 transition-colors dark:text-gray-300 dark:hover:bg-gray-700"
             @click="toggle"
+            @keydown.escape="isOpen = false"
         >
             <span class="text-lg leading-none">{{ currentFlag }}</span>
             <span class="uppercase">{{ currentLocale }}</span>
             <svg
+                aria-hidden="true"
                 class="h-4 w-4 text-gray-400 transition-transform"
                 :class="{ 'rotate-180': isOpen }"
                 fill="none"
@@ -71,13 +76,17 @@ function toggle() {
         >
             <div
                 v-if="isOpen"
+                role="menu"
                 class="absolute right-0 z-50 mt-1 w-40 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black/5 dark:bg-gray-700 dark:ring-gray-600"
+                @keydown.escape="isOpen = false"
             >
                 <div class="py-1">
                     <button
                         v-for="locale in availableLocales"
                         :key="locale"
                         type="button"
+                        role="menuitem"
+                        :aria-current="locale === currentLocale ? 'true' : undefined"
                         class="flex w-full items-center gap-2 px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition-colors dark:text-gray-200 dark:hover:bg-gray-600"
                         :class="{ 'bg-gray-50 font-semibold dark:bg-gray-600': locale === currentLocale }"
                         @click="switchLocale(locale)"

@@ -28,10 +28,61 @@ const ToolLanding = defineAsyncComponent(() => import('@/Components/Tools/ToolLa
 const props = defineProps<{ tool: string }>();
 
 watchEffect(() => {
-    useSeoMeta(
-        `${trans(`tools.${props.tool}.name`)} - PDF Worker`,
-        trans(`tools.${props.tool}.description`),
-    );
+    const toolName = trans(`tools.${props.tool}.name`);
+    const toolDesc = trans(`tools.${props.tool}.description`);
+
+    // Build HowTo steps from i18n keys
+    const steps: { name: string }[] = [];
+    for (let i = 1; i <= 4; i++) {
+        const key = `tools.${props.tool}.step_${i}`;
+        const val = trans(key);
+        if (val !== key) steps.push({ name: val });
+    }
+
+    // Build FAQ entries from i18n keys
+    const faqEntries: { q: string; a: string }[] = [];
+    for (let i = 1; i <= 3; i++) {
+        const qKey = `tools.${props.tool}.faq_${i}_q`;
+        const aKey = `tools.${props.tool}.faq_${i}_a`;
+        const q = trans(qKey);
+        const a = trans(aKey);
+        if (q !== qKey && a !== aKey) faqEntries.push({ q, a });
+    }
+
+    const graph: Record<string, unknown>[] = [];
+
+    if (steps.length > 0) {
+        graph.push({
+            '@type': 'HowTo',
+            name: `How to ${toolName}`,
+            description: toolDesc,
+            step: steps.map((s, idx) => ({
+                '@type': 'HowToStep',
+                position: idx + 1,
+                name: s.name,
+                text: s.name,
+            })),
+            tool: { '@type': 'HowToTool', name: 'PDF Worker' },
+            totalTime: 'PT1M',
+        });
+    }
+
+    if (faqEntries.length > 0) {
+        graph.push({
+            '@type': 'FAQPage',
+            mainEntity: faqEntries.map(f => ({
+                '@type': 'Question',
+                name: f.q,
+                acceptedAnswer: { '@type': 'Answer', text: f.a },
+            })),
+        });
+    }
+
+    const jsonLd = graph.length > 0
+        ? { '@context': 'https://schema.org', '@graph': graph }
+        : null;
+
+    useSeoMeta(`${toolName} - PDF Worker`, toolDesc, `/#/${props.tool}`, jsonLd);
 });
 
 const multiResultUrls = ref<string[]>([]);
@@ -377,7 +428,7 @@ const noOptionsTools = ['merge-pdf', 'extract-images', 'grayscale-pdf', 'flatten
 
         <div class="mx-auto max-w-4xl px-4 py-10 sm:px-6">
             <!-- Hidden inputs -->
-            <input ref="addMoreInput" type="file" class="hidden" :accept="toolConfig.accept" :multiple="toolConfig.multiple" @change="onAddMoreFiles" />
+            <input ref="addMoreInput" type="file" class="hidden" aria-label="Add more files" :accept="toolConfig.accept" :multiple="toolConfig.multiple" @change="onAddMoreFiles" />
 
             <!-- Upload Area -->
             <div v-if="!hasFiles && state.status === 'idle'">

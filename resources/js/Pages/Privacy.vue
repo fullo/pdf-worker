@@ -7,6 +7,8 @@ onMounted(() => {
     useSeoMeta(
         `${trans('privacy.title')} - PDF Worker`,
         trans('privacy.intro'),
+        '/#/privacy',
+        null,
     );
 });
 </script>

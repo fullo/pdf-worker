@@ -49,6 +49,7 @@ function formatFileSize(bytes: number): string {
                 />
                 <svg
                     v-else
+                    aria-hidden="true"
                     class="h-6 w-6 text-gray-400"
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
@@ -83,10 +84,12 @@ function formatFileSize(bytes: number): string {
             <!-- Remove button -->
             <button
                 type="button"
+                :aria-label="'Remove ' + file.name"
                 class="shrink-0 rounded-lg p-1.5 text-gray-400 transition-colors hover:bg-red-50 hover:text-red-500"
                 @click="emit('remove', file.id)"
             >
                 <svg
+                    aria-hidden="true"
                     class="h-5 w-5"
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
@@ -113,6 +116,7 @@ function formatFileSize(bytes: number): string {
                 @click="emit('add-more')"
             >
                 <svg
+                    aria-hidden="true"
                     class="h-4 w-4"
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"

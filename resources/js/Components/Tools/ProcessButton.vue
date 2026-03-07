@@ -29,7 +29,7 @@ function hoverColor(bg: string): string {
 </script>
 
 <template>
-    <div class="space-y-3">
+    <div class="space-y-3" role="status" aria-live="polite" aria-atomic="true">
         <!-- Main button -->
         <button
             type="button"
@@ -53,6 +53,7 @@ function hoverColor(bg: string): string {
             >
                 <span class="flex items-center gap-2">
                     <svg
+                        aria-hidden="true"
                         class="h-5 w-5 animate-spin"
                         xmlns="http://www.w3.org/2000/svg"
                         fill="none"
@@ -76,7 +77,13 @@ function hoverColor(bg: string): string {
                 </span>
 
                 <!-- Progress bar -->
-                <div class="mt-1 h-1.5 w-full overflow-hidden rounded-full bg-white/30">
+                <div
+                    role="progressbar"
+                    :aria-valuenow="Math.round(progress)"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                    class="mt-1 h-1.5 w-full overflow-hidden rounded-full bg-white/30"
+                >
                     <div
                         class="h-full rounded-full bg-white transition-all duration-300 ease-out"
                         :style="{ width: `${progress}%` }"
@@ -87,6 +94,7 @@ function hoverColor(bg: string): string {
             <!-- Done state -->
             <span v-else-if="status === 'done'" class="flex items-center justify-center gap-2">
                 <svg
+                    aria-hidden="true"
                     class="h-6 w-6"
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
@@ -106,6 +114,7 @@ function hoverColor(bg: string): string {
             <!-- Error state -->
             <span v-else-if="status === 'error'" class="flex items-center justify-center gap-2">
                 <svg
+                    aria-hidden="true"
                     class="h-6 w-6"
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"

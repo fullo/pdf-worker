@@ -1,6 +1,6 @@
 import { createRouter, createWebHashHistory } from 'vue-router';
+import Home from '@/Pages/Home.vue';
 
-const Home = () => import('@/Pages/Home.vue');
 const Tool = () => import('@/Pages/Tool.vue');
 const Privacy = () => import('@/Pages/Privacy.vue');
 
