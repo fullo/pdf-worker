@@ -8,16 +8,16 @@ export const blogPostsSv: BlogPost[] = [
         excerpt: 'Lar dig hur du kombinerar flera PDF-dokument till en enda fil utan att installera nagon programvara. Snabbt, sakert och helt gratis.',
         body: `<p>Att sammanfoga PDF-filer ar en av de vanligaste uppgifterna vid arbete med dokument. Oavsett om du behover kombinera rapporter, kontrakt eller presentationer gor ett palitligt verktyg hela skillnaden.</p>
 <h2>Varfor Sammanfoga PDF:er Online?</h2>
-<p>Traditionell skrivbordsprogramvara kan vara dyr och kraver ofta installation. Med <a href="/#/merge-pdf">PDF Workers Sammanfoga PDF-verktyg</a> kan du kombinera filer direkt i din webblasare — inga uppladdningar, inga servrar, fullstandig integritet.</p>
+<p>Traditionell skrivbordsprogramvara kan vara dyr och kraver ofta installation. Med <a href="#/merge-pdf">PDF Workers Sammanfoga PDF-verktyg</a> kan du kombinera filer direkt i din webblasare — inga uppladdningar, inga servrar, fullstandig integritet.</p>
 <h2>Steg-for-Steg Guide</h2>
 <ol>
-<li>Oppna verktyget <a href="/#/merge-pdf">Sammanfoga PDF</a></li>
+<li>Oppna verktyget <a href="#/merge-pdf">Sammanfoga PDF</a></li>
 <li>Dra och slapp dina PDF-filer eller klicka for att blagddra</li>
 <li>Ordna om filerna genom att dra dem i onskad ordning</li>
 <li>Klicka pa "Sammanfoga PDF" och ladda ner ditt kombinerade dokument</li>
 </ol>
 <h2>Tips for Basta Resultat</h2>
-<p>Se till att dina PDF:er inte ar losenordsskyddade innan du sammanfogar dem. Om de ar det, anvand <a href="/#/unlock-pdf">Las upp PDF</a>-verktyget forst for att ta bort skyddet.</p>
+<p>Se till att dina PDF:er inte ar losenordsskyddade innan du sammanfogar dem. Om de ar det, anvand <a href="#/unlock-pdf">Las upp PDF</a>-verktyget forst for att ta bort skyddet.</p>
 <p>For stora mangder filer hanterar verktyget dussintals dokument effektivt eftersom all bearbetning sker lokalt pa din enhet.</p>`,
         date: '2023-06-15',
         tool: 'merge-pdf',
@@ -30,7 +30,7 @@ export const blogPostsSv: BlogPost[] = [
         excerpt: 'Minska PDF-filstorleken utan kvalitetsforlust. Tre komprimeringsniver for att balansera storlek och skarpa.',
         body: `<p>Stora PDF-filer kan vara problematiska vid delning via e-post eller uppladdning till webbplatser. Komprimering hjalper till att minska filstorleken med bibehallen acceptabel kvalitet.</p>
 <h2>Forsta Komprimeringsniverna</h2>
-<p><a href="/#/compress-pdf">Komprimera PDF-verktyget</a> erbjuder tre nivaer:</p>
+<p><a href="#/compress-pdf">Komprimera PDF-verktyget</a> erbjuder tre nivaer:</p>
 <ul>
 <li><strong>Lag komprimering</strong> — minimal storleksminskning, nara originalkvalitet</li>
 <li><strong>Medelhog komprimering</strong> — bra balans mellan storlek och kvalitet</li>
@@ -50,7 +50,7 @@ export const blogPostsSv: BlogPost[] = [
         excerpt: 'Extrahera enskilda sidor eller sidintervall fran PDF-dokument. Ladda ner varje sida separat eller som ett ZIP-arkiv.',
         body: `<p>Ibland behover du bara nagra sidor fran ett stort PDF-dokument. Delning gor det mojligt att extrahera exakt det du behover.</p>
 <h2>Tva Delningslagar</h2>
-<p><a href="/#/split-pdf">Dela PDF-verktyget</a> erbjuder tva tillvagagangssatt:</p>
+<p><a href="#/split-pdf">Dela PDF-verktyget</a> erbjuder tva tillvagagangssatt:</p>
 <ul>
 <li><strong>Dela alla sidor</strong> — extraherar varje sida som en individuell PDF-fil</li>
 <li><strong>Sidintervall</strong> — ange exakta sidor som "1-3, 5, 7-9"</li>
@@ -69,7 +69,7 @@ export const blogPostsSv: BlogPost[] = [
         excerpt: 'Rotera skannade dokument eller fixa uppochnedvanda sidor. Stodjer 90, 180 och 270 graders rotation for alla sidor.',
         body: `<p>Skannade dokument hamnar ofta i fel orientering. En snabb rotationsfix gor dem lasbara igen.</p>
 <h2>Rotationsalternativ</h2>
-<p><a href="/#/rotate-pdf">Rotera PDF-verktyget</a> stodjer tre rotationsvinklar:</p>
+<p><a href="#/rotate-pdf">Rotera PDF-verktyget</a> stodjer tre rotationsvinklar:</p>
 <ul>
 <li><strong>90 grader medurs</strong> — for liggande sidor som ska vara staende</li>
 <li><strong>180 grader</strong> — for uppochnedvanda skanningar</li>
@@ -77,7 +77,7 @@ export const blogPostsSv: BlogPost[] = [
 </ul>
 <h2>Vanliga Anvandningsfall</h2>
 <p>Mobiltelefonskanningar, fotokopierade dokument och faxade PDF:er behover ofta rotation. Verktyget tillamparer rotationen pa alla sidor samtidigt, vilket sparar tid.</p>
-<p>For mer detaljerad kontroll over enskilda sidor, anvand <a href="/#/organize-pdf">Organisera PDF</a>-verktyget som later dig hantera sidor individuellt.</p>`,
+<p>For mer detaljerad kontroll over enskilda sidor, anvand <a href="#/organize-pdf">Organisera PDF</a>-verktyget som later dig hantera sidor individuellt.</p>`,
         date: '2022-08-12',
         tool: 'rotate-pdf',
         tags: ['rotera', 'orientering', 'skanna'],
@@ -89,7 +89,7 @@ export const blogPostsSv: BlogPost[] = [
         excerpt: 'Skydda dina dokument med text- eller bildvattenstamplar. Anpassa position, opacitet, storlek och rotation.',
         body: `<p>Vattenstamplar hjalper till att skydda immaterialratt och markera dokument som konfidentiella, utkast eller proprietara.</p>
 <h2>Text- vs Bildvattenstamplar</h2>
-<p><a href="/#/watermark-pdf">Vattenstampelverktyget</a> stodjer bada typerna:</p>
+<p><a href="#/watermark-pdf">Vattenstampelverktyget</a> stodjer bada typerna:</p>
 <ul>
 <li><strong>Textvattenstamplar</strong> — lagg till ord som "KONFIDENTIELLT" eller "UTKAST" med anpassat teckensnitt, farg och rotation</li>
 <li><strong>Bildvattenstamplar</strong> — lagg ditt foretagslogotyp eller stampel over dokumentet med justerbar opacitet och storlek</li>
@@ -107,14 +107,14 @@ export const blogPostsSv: BlogPost[] = [
         excerpt: 'Omvandla varje PDF-sida till en hogkvalitativ JPG-bild. Justera kvalitetsinstellningar for perfekt balans mellan storlek och skarpa.',
         body: `<p>Att konvertera PDF-sidor till bilder ar anvandbart for presentationer, inlagg i sociala medier eller nar du behover infoga PDF-innehall i andra dokument.</p>
 <h2>Kvalitetsinstellningar</h2>
-<p><a href="/#/pdf-to-jpg">PDF till JPG-verktyget</a> later dig justera bildkvaliteten fran 10% till 100%. Hogre kvalitet innebar storre filer men skarpare bilder.</p>
+<p><a href="#/pdf-to-jpg">PDF till JPG-verktyget</a> later dig justera bildkvaliteten fran 10% till 100%. Hogre kvalitet innebar storre filer men skarpare bilder.</p>
 <h2>Rekommenderade Installningar</h2>
 <ul>
 <li><strong>80%</strong> — bast for de flesta anvandningsfall, bra kvalitet med rimlig filstorlek</li>
 <li><strong>100%</strong> — maximal kvalitet for tryck eller professionellt bruk</li>
 <li><strong>50-60%</strong> — mindre filer for webb eller e-post</li>
 </ul>
-<p>Varje sida blir en separat JPG-fil. Ladda ner dem individuellt eller som ett ZIP-arkiv. For transparenta bakgrunder, overvag <a href="/#/pdf-to-png">PDF till PNG</a>-konverteraren istallet.</p>`,
+<p>Varje sida blir en separat JPG-fil. Ladda ner dem individuellt eller som ett ZIP-arkiv. For transparenta bakgrunder, overvag <a href="#/pdf-to-png">PDF till PNG</a>-konverteraren istallet.</p>`,
         date: '2021-05-18',
         tool: 'pdf-to-jpg',
         tags: ['konvertera', 'jpg', 'bilder'],
@@ -126,7 +126,7 @@ export const blogPostsSv: BlogPost[] = [
         excerpt: 'Konvertera flera bilder till ett enda PDF-dokument. Valj orientering, marginaler och sidlayout.',
         body: `<p>Behover du sammanstalla foton, skanningar eller skarmbilder i ett enda dokument? Att konvertera bilder till PDF skapar en professionell, lattdelad fil.</p>
 <h2>Format som Stods</h2>
-<p><a href="/#/jpg-to-pdf">JPG till PDF-verktyget</a> accepterar JPG, JPEG, PNG och WebP-bilder. Blanda olika format i en enda konvertering.</p>
+<p><a href="#/jpg-to-pdf">JPG till PDF-verktyget</a> accepterar JPG, JPEG, PNG och WebP-bilder. Blanda olika format i en enda konvertering.</p>
 <h2>Layoutalternativ</h2>
 <ul>
 <li><strong>Orientering</strong> — valj staende eller liggande</li>
@@ -144,14 +144,14 @@ export const blogPostsSv: BlogPost[] = [
         excerpt: 'Sakra dina PDF:er med anvander- och agarlosen. Kontrollera behorigheter for utskrift, kopiering och redigering.',
         body: `<p>Att skydda kansliga dokument med losenord forhindrar obehorigad atkomst och styr vad mottagarna kan gora med filen.</p>
 <h2>Anvandardlosen vs Agarlosen</h2>
-<p><a href="/#/protect-pdf">Skydda PDF-verktyget</a> stodjer tva typer av losenord:</p>
+<p><a href="#/protect-pdf">Skydda PDF-verktyget</a> stodjer tva typer av losenord:</p>
 <ul>
 <li><strong>Anvandardlosen</strong> — kravs for att oppna och visa dokumentet</li>
 <li><strong>Agarlosen</strong> — styr behorigheter for utskrift, kopiering och redigering</li>
 </ul>
 <h2>Behorighetskontroll</h2>
 <p>Du kan tillata eller begransa utskrift, textkopiering och dokumentandringar. Detta ar anvandbart for att distribuera skrivskyddade rapporter eller kontrakt.</p>
-<p>Behover du ta bort skyddet senare? Anvand <a href="/#/unlock-pdf">Las upp PDF</a>-verktyget med ratt losenord.</p>`,
+<p>Behover du ta bort skyddet senare? Anvand <a href="#/unlock-pdf">Las upp PDF</a>-verktyget med ratt losenord.</p>`,
         date: '2023-09-10',
         tool: 'protect-pdf',
         tags: ['skydda', 'losenord', 'sakerhet'],
@@ -163,7 +163,7 @@ export const blogPostsSv: BlogPost[] = [
         excerpt: 'Las upp losenordsskyddade PDF:er nar du kanner till losenordet. Ta bort begransningar for utskrift och kopiering.',
         body: `<p>Om du har losenordet for en skyddad PDF kan du ta bort begransningen for att gora dokumentet fritt tillgangligt.</p>
 <h2>Hur det Fungerar</h2>
-<p><a href="/#/unlock-pdf">Las upp PDF-verktyget</a> tar din skyddade PDF och ratt losenord och producerar en oskyddad kopia. Originalfilen forblir oforandrad.</p>
+<p><a href="#/unlock-pdf">Las upp PDF-verktyget</a> tar din skyddade PDF och ratt losenord och producerar en oskyddad kopia. Originalfilen forblir oforandrad.</p>
 <h2>Viktiga Anmarkningar</h2>
 <ul>
 <li>Du maste kanna till ratt losenord — detta verktyg knacker eller kringgar inte losenord</li>
@@ -181,14 +181,14 @@ export const blogPostsSv: BlogPost[] = [
         excerpt: 'Hantera PDF-sidor visuellt med dra-och-slapp. Ordna om sidor, ta bort onskade sidor eller duplicera viktiga sektioner.',
         body: `<p>Att hantera strukturen i ett PDF-dokument ar viktigt vid forberedelse av rapporter, portfolios eller presentationer.</p>
 <h2>Visuell Sidhantering</h2>
-<p><a href="/#/organize-pdf">Organisera PDF-verktyget</a> visar miniatyrbilder av varje sida, vilket gor det latt att se dokumentets struktur med en blick.</p>
+<p><a href="#/organize-pdf">Organisera PDF-verktyget</a> visar miniatyrbilder av varje sida, vilket gor det latt att se dokumentets struktur med en blick.</p>
 <h2>Tillgangliga Atgarder</h2>
 <ul>
 <li><strong>Ordna om</strong> — dra och slapp sidor for att andra deras position</li>
 <li><strong>Ta bort</strong> — ta bort onskade sidor (kan inte ta bort sista sidan)</li>
 <li><strong>Duplicera</strong> — skapa kopior av viktiga sidor</li>
 </ul>
-<p>Detta verktyg fungerar utmarkt i kombination med <a href="/#/merge-pdf">Sammanfoga PDF</a> — sammanfoga forst flera filer och organisera sedan de kombinerade sidorna.</p>`,
+<p>Detta verktyg fungerar utmarkt i kombination med <a href="#/merge-pdf">Sammanfoga PDF</a> — sammanfoga forst flera filer och organisera sedan de kombinerade sidorna.</p>`,
         date: '2023-04-22',
         tool: 'organize-pdf',
         tags: ['organisera', 'ordna-om', 'sidor'],
@@ -200,7 +200,7 @@ export const blogPostsSv: BlogPost[] = [
         excerpt: 'Ta bort onskade marginaler eller beskar PDF-sidor for att fokusera pa specifika innehallsomraden. Visuell forhandsgranskning med justerbara beskarningsvarden.',
         body: `<p>PDF:er har ofta overdrivna marginaler fran utskriftslayouter eller skannade kanter. Beskarning tar bort dessa extra utrymmen.</p>
 <h2>Hur man Beskar</h2>
-<p><a href="/#/crop-pdf">Beskar PDF-verktyget</a> tillhandahaller en visuell forhandsgranskning dar du kan dra i kanterna for att definiera beskarningsomradet. Stall in varden for toppen, botten, vanster och hoger oberoende.</p>
+<p><a href="#/crop-pdf">Beskar PDF-verktyget</a> tillhandahaller en visuell forhandsgranskning dar du kan dra i kanterna for att definiera beskarningsomradet. Stall in varden for toppen, botten, vanster och hoger oberoende.</p>
 <h2>Anvandningsomraden</h2>
 <ul>
 <li>Ta bort breda skrivarmarginaler fran skannade dokument</li>
@@ -219,7 +219,7 @@ export const blogPostsSv: BlogPost[] = [
         excerpt: 'Ta bort konfidentiell data permanent fran PDF:er. Svarta over text, bilder eller annat innehall som inte bor delas.',
         body: `<p>Maskering tar permanent bort kanslig information fran dokument fore delning. Till skillnad fran markering eller tackning med former kan maskerat innehall inte aterstallas.</p>
 <h2>Hur Maskering Fungerar</h2>
-<p><a href="/#/redact-pdf">Maskera PDF-verktyget</a> later dig rita svarta rektanglar over omraden du vill censurera permanent. Innehallet under forstors — det doljs inte bara.</p>
+<p><a href="#/redact-pdf">Maskera PDF-verktyget</a> later dig rita svarta rektanglar over omraden du vill censurera permanent. Innehallet under forstors — det doljs inte bara.</p>
 <h2>Vad ska Maskeras</h2>
 <ul>
 <li>Personlig information (namn, adresser, telefonnummer)</li>
@@ -240,7 +240,7 @@ export const blogPostsSv: BlogPost[] = [
         excerpt: 'Lagg till anteckningar, textblock, rektanglar och frihandsritningar i dina PDF-dokument utan nagot skrivbordsprogram.',
         body: `<p>Behover du annotera en PDF, lagga till anteckningar eller markera ett dokument? Redigeringsverktyget later dig lagga till innehall direkt pa dina PDF-sidor.</p>
 <h2>Tillgangliga Verktyg</h2>
-<p><a href="/#/edit-pdf">Redigera PDF-verktyget</a> erbjuder flera anteckningsalternativ:</p>
+<p><a href="#/edit-pdf">Redigera PDF-verktyget</a> erbjuder flera anteckningsalternativ:</p>
 <ul>
 <li><strong>Textblock</strong> — lagg till anpassad text med justerbar teckenstorlek, farg och bakgrund</li>
 <li><strong>Rektanglar</strong> — markera omraden eller skapa ramar</li>
@@ -248,7 +248,7 @@ export const blogPostsSv: BlogPost[] = [
 </ul>
 <h2>Tips</h2>
 <p>Dubbelklicka pa ett textblock for att redigera dess innehall. Dra element for att flytta dem. Anvand flera sidor for att annotera olika delar av dokumentet.</p>
-<p>For att specifikt lagga till en signatur ar <a href="/#/sign-pdf">Signera PDF</a>-verktyget mer praktiskt.</p>`,
+<p>For att specifikt lagga till en signatur ar <a href="#/sign-pdf">Signera PDF</a>-verktyget mer praktiskt.</p>`,
         date: '2025-01-15',
         tool: 'edit-pdf',
         tags: ['redigera', 'annotera', 'text'],
@@ -260,7 +260,7 @@ export const blogPostsSv: BlogPost[] = [
         excerpt: 'Lagg till din signatur pa PDF-filer. Rita en signatur eller ladda upp en signaturbild och placera den exakt pa dokumentet.',
         body: `<p>Att signera dokument digitalt sparar tid och papper. Lagg till din handskrivna signatur pa vilken PDF som helst pa nagra sekunder.</p>
 <h2>Tva Signaturmetoder</h2>
-<p><a href="/#/sign-pdf">Signera PDF-verktyget</a> erbjuder tva satt att signera:</p>
+<p><a href="#/sign-pdf">Signera PDF-verktyget</a> erbjuder tva satt att signera:</p>
 <ul>
 <li><strong>Rita</strong> — anvand musen eller pekskarm for att rita din signatur</li>
 <li><strong>Bild</strong> — ladda upp en PNG- eller JPG-bild av din signatur</li>
@@ -280,7 +280,7 @@ export const blogPostsSv: BlogPost[] = [
         excerpt: 'Hamta alla inbaddade bilder fran PDF-dokument. Spara dem individuellt eller ladda ner allt som ett ZIP-arkiv.',
         body: `<p>PDF:er innehaller ofta vardefulla bilder — foton, diagram, tabeller eller logotyper — som du kan behova ateranvanda pa annat hall.</p>
 <h2>Hur det Fungerar</h2>
-<p><a href="/#/extract-images">Extrahera Bilder-verktyget</a> skannar din PDF efter alla inbaddade bilder och extraherar dem som individuella PNG-filer.</p>
+<p><a href="#/extract-images">Extrahera Bilder-verktyget</a> skannar din PDF efter alla inbaddade bilder och extraherar dem som individuella PNG-filer.</p>
 <h2>Vad som Extraheras</h2>
 <ul>
 <li>Fotografier och illustrationer</li>
@@ -288,7 +288,7 @@ export const blogPostsSv: BlogPost[] = [
 <li>Diagram och tabeller</li>
 <li>Bakgrundsbilder</li>
 </ul>
-<p>Ladda ner varje bild individuellt eller hamta allt pa en gang med ZIP-nedladdningsalternativet. Observera: detta verktyg extraherar inbaddade bilder, inte renderade sidskarmbilder. For helsidebilder, anvand <a href="/#/pdf-to-png">PDF till PNG</a> istallet.</p>`,
+<p>Ladda ner varje bild individuellt eller hamta allt pa en gang med ZIP-nedladdningsalternativet. Observera: detta verktyg extraherar inbaddade bilder, inte renderade sidskarmbilder. For helsidebilder, anvand <a href="#/pdf-to-png">PDF till PNG</a> istallet.</p>`,
         date: '2022-12-05',
         tool: 'extract-images',
         tags: ['extrahera', 'bilder', 'foton'],
@@ -305,8 +305,8 @@ export const blogPostsSv: BlogPost[] = [
 <li><strong>Inlamningar</strong> — vissa institutioner kraver svartvita dokument</li>
 <li><strong>Enhetlighet</strong> — skapa ett enhetligt utseende for dokument fran olika kallor</li>
 </ul>
-<p><a href="/#/grayscale-pdf">Graskal PDF-verktyget</a> konverterar alla farger till deras graskalmotsvarigheter. Texten forblir skarp och lasbar, medan bilder och grafik blir monokroma.</p>
-<p>For att ytterligare minska filstorleken efter graskalkonvertering, kor resultatet genom <a href="/#/compress-pdf">Komprimera PDF</a>-verktyget.</p>`,
+<p><a href="#/grayscale-pdf">Graskal PDF-verktyget</a> konverterar alla farger till deras graskalmotsvarigheter. Texten forblir skarp och lasbar, medan bilder och grafik blir monokroma.</p>
+<p>For att ytterligare minska filstorleken efter graskalkonvertering, kor resultatet genom <a href="#/compress-pdf">Komprimera PDF</a>-verktyget.</p>`,
         date: '2023-08-17',
         tool: 'grayscale-pdf',
         tags: ['graskalor', 'svartvit', 'utskrift'],
@@ -318,14 +318,14 @@ export const blogPostsSv: BlogPost[] = [
         excerpt: 'Lagg automatiskt till sidnumrering i din PDF. Valj position, format och stil for professionell dokumentpaginering.',
         body: `<p>Sidnummer hjalper lasare att navigera i langa dokument och ar nodvandiga for professionella rapporter, manualer och avhandlingar.</p>
 <h2>Numreringsalternativ</h2>
-<p><a href="/#/page-numbers">Sidnummerverktyget</a> erbjuder flexibel formatering:</p>
+<p><a href="#/page-numbers">Sidnummerverktyget</a> erbjuder flexibel formatering:</p>
 <ul>
 <li><strong>Position</strong> — nedre vanster, nedre mitten eller nedre hoger</li>
 <li><strong>Format</strong> — enkelt nummer (1, 2, 3) eller "sida/totalt" format (1/10, 2/10)</li>
 </ul>
 <h2>Basta Praxis</h2>
 <p>Nedre mitten ar den vanligaste positionen for formella dokument. Formatet "sida/totalt" ar anvandbart for juridiska dokument dar mottagarna behover verifiera fullstandighet.</p>
-<p>For mer anpassning erbjuder <a href="/#/header-footer">Sidhuvud och Sidfot</a>-verktyget ytterligare alternativ inklusive anpassad text.</p>`,
+<p>For mer anpassning erbjuder <a href="#/header-footer">Sidhuvud och Sidfot</a>-verktyget ytterligare alternativ inklusive anpassad text.</p>`,
         date: '2020-09-30',
         tool: 'page-numbers',
         tags: ['sidnummer', 'paginering', 'numrering'],
@@ -337,7 +337,7 @@ export const blogPostsSv: BlogPost[] = [
         excerpt: 'Andra PDF-sidmatt till standardpappersstorlekar. Konvertera enkelt mellan A4, A3, Letter och Legal.',
         body: `<p>Olika lander och branscher anvander olika pappersstorlekar. Storleksandring sakerstaller att din PDF matchar det forvantade formatet for utskrift eller inlamning.</p>
 <h2>Storlekar som Stods</h2>
-<p><a href="/#/resize-pdf">Andra storlek PDF-verktyget</a> stodjer:</p>
+<p><a href="#/resize-pdf">Andra storlek PDF-verktyget</a> stodjer:</p>
 <ul>
 <li><strong>A4</strong> (210 x 297 mm) — den internationella standarden</li>
 <li><strong>A3</strong> (297 x 420 mm) — for storre utskrifter och affischer</li>
@@ -362,7 +362,7 @@ export const blogPostsSv: BlogPost[] = [
 <li><strong>Kompatibilitet</strong> — vissa visningsprogram visar interaktiva falt felaktigt</li>
 <li><strong>Utskrift</strong> — sakerstall att formulardata visas korrekt vid utskrift</li>
 </ul>
-<p><a href="/#/flatten-pdf">Platta till PDF-verktyget</a> bearbetar dokumentet med ett klick. Den resulterande filen ser identisk ut men alla interaktiva element ar nu en del av sidinnehallet.</p>`,
+<p><a href="#/flatten-pdf">Platta till PDF-verktyget</a> bearbetar dokumentet med ett klick. Den resulterande filen ser identisk ut men alla interaktiva element ar nu en del av sidinnehallet.</p>`,
         date: '2025-02-10',
         tool: 'flatten-pdf',
         tags: ['platta-till', 'formular', 'anteckningar'],
@@ -374,14 +374,14 @@ export const blogPostsSv: BlogPost[] = [
         excerpt: 'Konvertera PDF-innehall till ren text. Extrahera all lasbar text fran din PDF for redigering, sokning eller databearbetning.',
         body: `<p>Att extrahera text fran PDF:er ar anvandbart for att kopiera innehall till andra dokument, soka igenom stora filer eller bearbeta data fran rapporter.</p>
 <h2>Hur det Fungerar</h2>
-<p><a href="/#/pdf-to-text">PDF till Text-verktyget</a> laser all inbaddad text fran din PDF och sparar den som en ren textfil (.txt). Texten bevarar lasordning och styckestruktur.</p>
+<p><a href="#/pdf-to-text">PDF till Text-verktyget</a> laser all inbaddad text fran din PDF och sparar den som en ren textfil (.txt). Texten bevarar lasordning och styckestruktur.</p>
 <h2>Begransningar</h2>
 <ul>
 <li>Fungerar bara med PDF:er som innehaller valbar text (digital text)</li>
 <li>Skannade dokument (PDF:er med bara bilder) kraver OCR-teknik, som inte ingar</li>
 <li>Komplexa layouter med kolumner eller tabeller kanske inte bevarar formateringen perfekt</li>
 </ul>
-<p>For att bevara den visuella layouten av sidor, overvag att konvertera till bilder med <a href="/#/pdf-to-jpg">PDF till JPG</a> eller <a href="/#/pdf-to-png">PDF till PNG</a>.</p>`,
+<p>For att bevara den visuella layouten av sidor, overvag att konvertera till bilder med <a href="#/pdf-to-jpg">PDF till JPG</a> eller <a href="#/pdf-to-png">PDF till PNG</a>.</p>`,
         date: '2024-08-22',
         tool: 'pdf-to-text',
         tags: ['text', 'extrahera', 'konvertera'],
@@ -397,14 +397,14 @@ export const blogPostsSv: BlogPost[] = [
 <li><strong>PNG</strong> — forlustfri komprimering, transparensstod, storre filer</li>
 <li><strong>JPG</strong> — komprimering med forlust, ingen transparens, mindre filer</li>
 </ul>
-<p><a href="/#/pdf-to-png">PDF till PNG-verktyget</a> konverterar varje sida till en separat PNG-bild. Du kan valfritt aktivera transparenta bakgrunder.</p>
+<p><a href="#/pdf-to-png">PDF till PNG-verktyget</a> konverterar varje sida till en separat PNG-bild. Du kan valfritt aktivera transparenta bakgrunder.</p>
 <h2>Basta Anvandningsomraden</h2>
 <ul>
 <li>Badda in diagram och tabeller i presentationer</li>
 <li>Skapa webbgrafik fran PDF-designer</li>
 <li>Extrahera hogkvalitativa sidskarmbilder</li>
 </ul>
-<p>Om filstorlek ar viktigare an kvalitet, overvag <a href="/#/pdf-to-jpg">PDF till JPG</a>-konverteraren istallet.</p>`,
+<p>Om filstorlek ar viktigare an kvalitet, overvag <a href="#/pdf-to-jpg">PDF till JPG</a>-konverteraren istallet.</p>`,
         date: '2024-03-10',
         tool: 'pdf-to-png',
         tags: ['konvertera', 'png', 'transparent'],
@@ -416,7 +416,7 @@ export const blogPostsSv: BlogPost[] = [
         excerpt: 'Infoga personlig text langst upp och langst ner pa varje PDF-sida. Anvand platshallare for automatiska sidnummer.',
         body: `<p>Sidhuvuden och sidfotter ger sammanhang och professionalism till dokument. De ar nodvandiga for rapporter, manualer och officiella dokument.</p>
 <h2>Hur det Fungerar</h2>
-<p><a href="/#/header-footer">Sidhuvud och Sidfot-verktyget</a> later dig lagga till anpassad text langst upp och langst ner pa varje sida i din PDF.</p>
+<p><a href="#/header-footer">Sidhuvud och Sidfot-verktyget</a> later dig lagga till anpassad text langst upp och langst ner pa varje sida i din PDF.</p>
 <h2>Tillgangliga Platshallare</h2>
 <ul>
 <li><code>{page}</code> — infogar aktuellt sidnummer</li>
@@ -425,7 +425,7 @@ export const blogPostsSv: BlogPost[] = [
 <h2>Exempel</h2>
 <p>Sidhuvud: "Arsredovisning 2024" — Sidfot: "Sida {page} av {total}"</p>
 <p>Valj justering (vanster, mitten, hoger) for att placera texten som du onskar.</p>
-<p>For att bara lagga till sidnummer utan ytterligare text, anvand det enklare <a href="/#/page-numbers">Sidnummer</a>-verktyget.</p>`,
+<p>For att bara lagga till sidnummer utan ytterligare text, anvand det enklare <a href="#/page-numbers">Sidnummer</a>-verktyget.</p>`,
         date: '2020-07-15',
         tool: 'header-footer',
         tags: ['sidhuvud', 'sidfot', 'anpassa'],
@@ -438,11 +438,11 @@ export const blogPostsSv: BlogPost[] = [
         body: `<p>Studenter hanterar PDF:er dagligen — forelasningsbilder, forskningsartiklar, uppgifter och laorobocker. Ratt verktyg gor det akademiska livet mycket enklare.</p>
 <h2>Nodvandiga Verktyg for Studenter</h2>
 <ul>
-<li><strong><a href="/#/merge-pdf">Sammanfoga PDF</a></strong> — kombinera forelasningsanteckningar fran flera tillfallen i ett dokument</li>
-<li><strong><a href="/#/compress-pdf">Komprimera PDF</a></strong> — minska filstorleken innan du lamnar in uppgifter via e-post eller LMS</li>
-<li><strong><a href="/#/split-pdf">Dela PDF</a></strong> — extrahera specifika kapitel fran laorobocker eller lasning</li>
-<li><strong><a href="/#/pdf-to-text">PDF till Text</a></strong> — extrahera text for anteckningar, citat eller studieguider</li>
-<li><strong><a href="/#/page-numbers">Sidnummer</a></strong> — lagg till paginering i din uppsats eller avhandling</li>
+<li><strong><a href="#/merge-pdf">Sammanfoga PDF</a></strong> — kombinera forelasningsanteckningar fran flera tillfallen i ett dokument</li>
+<li><strong><a href="#/compress-pdf">Komprimera PDF</a></strong> — minska filstorleken innan du lamnar in uppgifter via e-post eller LMS</li>
+<li><strong><a href="#/split-pdf">Dela PDF</a></strong> — extrahera specifika kapitel fran laorobocker eller lasning</li>
+<li><strong><a href="#/pdf-to-text">PDF till Text</a></strong> — extrahera text for anteckningar, citat eller studieguider</li>
+<li><strong><a href="#/page-numbers">Sidnummer</a></strong> — lagg till paginering i din uppsats eller avhandling</li>
 </ul>
 <h2>Integritetsfodel</h2>
 <p>Alla verktyg bearbetar filer lokalt i din webblasare. Dina forskningsartiklar och akademiska arbeten lamnar aldrig din enhet — viktigt nar du arbetar med opublicerad forskning.</p>`,
@@ -458,9 +458,9 @@ export const blogPostsSv: BlogPost[] = [
         body: `<p>Oavsett om du hanterar kontrakt, finansiella rapporter eller personliga register ar det avgande att sakra dina PDF-dokument for att forhindra obehorigad atkomst och datalackor.</p>
 <h2>Tre Lager av PDF-sakerhet</h2>
 <ol>
-<li><strong>Losenordsskydd</strong> — anvand <a href="/#/protect-pdf">Skydda PDF</a>-verktyget for att lagga till anvandard- och agarlosen. Kontrollera vem som kan oppna, skriva ut eller andra dokumentet.</li>
-<li><strong>Maskering</strong> — ta bort kansliga data permanent med <a href="/#/redact-pdf">Maskera PDF</a>-verktyget. Maskerat innehall kan inte aterstallas.</li>
-<li><strong>Tillplattning</strong> — anvand <a href="/#/flatten-pdf">Platta till PDF</a>-verktyget for att konvertera formularfalt och anteckningar till statiskt innehall fore delning.</li>
+<li><strong>Losenordsskydd</strong> — anvand <a href="#/protect-pdf">Skydda PDF</a>-verktyget for att lagga till anvandard- och agarlosen. Kontrollera vem som kan oppna, skriva ut eller andra dokumentet.</li>
+<li><strong>Maskering</strong> — ta bort kansliga data permanent med <a href="#/redact-pdf">Maskera PDF</a>-verktyget. Maskerat innehall kan inte aterstallas.</li>
+<li><strong>Tillplattning</strong> — anvand <a href="#/flatten-pdf">Platta till PDF</a>-verktyget for att konvertera formularfalt och anteckningar till statiskt innehall fore delning.</li>
 </ol>
 <h2>Vanliga Misstag att Undvika</h2>
 <ul>
@@ -482,11 +482,11 @@ export const blogPostsSv: BlogPost[] = [
 <p>Ladda helt enkelt upp flera PDF-filer till valfritt verktyg som stodjer det. Varje fil bearbetas oberoende och du kan ladda ner alla resultat individuellt eller som ett ZIP-arkiv.</p>
 <h2>Verktyg som Stodjer Batchbearbetning</h2>
 <ul>
-<li><strong><a href="/#/compress-pdf">Komprimera PDF</a></strong> — minska storleken pa flera dokument pa en gang</li>
-<li><strong><a href="/#/rotate-pdf">Rotera PDF</a></strong> — fixa orientering pa en batch skannade filer</li>
-<li><strong><a href="/#/grayscale-pdf">Graskal PDF</a></strong> — konvertera flera fargdokument till svartvitt</li>
-<li><strong><a href="/#/pdf-to-jpg">PDF till JPG</a></strong> / <strong><a href="/#/pdf-to-png">PDF till PNG</a></strong> — konvertera flera PDF:er till bilder</li>
-<li><strong><a href="/#/flatten-pdf">Platta till PDF</a></strong>, <strong><a href="/#/resize-pdf">Andra storlek</a></strong>, <strong><a href="/#/page-numbers">Sidnummer</a></strong> och mer</li>
+<li><strong><a href="#/compress-pdf">Komprimera PDF</a></strong> — minska storleken pa flera dokument pa en gang</li>
+<li><strong><a href="#/rotate-pdf">Rotera PDF</a></strong> — fixa orientering pa en batch skannade filer</li>
+<li><strong><a href="#/grayscale-pdf">Graskal PDF</a></strong> — konvertera flera fargdokument till svartvitt</li>
+<li><strong><a href="#/pdf-to-jpg">PDF till JPG</a></strong> / <strong><a href="#/pdf-to-png">PDF till PNG</a></strong> — konvertera flera PDF:er till bilder</li>
+<li><strong><a href="#/flatten-pdf">Platta till PDF</a></strong>, <strong><a href="#/resize-pdf">Andra storlek</a></strong>, <strong><a href="#/page-numbers">Sidnummer</a></strong> och mer</li>
 </ul>
 <h2>Prestanda</h2>
 <p>All bearbetning sker lokalt pa din enhet, sa hastigheten beror pa din dator. De flesta operationer avslutas pa nagra sekunder aven for stora batcher.</p>`,
@@ -502,10 +502,10 @@ export const blogPostsSv: BlogPost[] = [
         body: `<p>PDF:er avsedda for webbvisning eller nedladdning behover optimeras for snabb laddning och skarmbarhet.</p>
 <h2>Optimeringsstrategier</h2>
 <ol>
-<li><strong>Komprimera</strong> — anvand <a href="/#/compress-pdf">Komprimera PDF</a>-verktyget med medelhog eller hog komprimering for att minska filstorleken avsevart</li>
-<li><strong>Andra storlek</strong> — justera sidmatt med <a href="/#/resize-pdf">Andra storlek PDF</a>-verktyget for att matcha vanliga skarmstorlekar</li>
-<li><strong>Konvertera till bilder</strong> — for enkel visning, konvertera sidor till JPG med <a href="/#/pdf-to-jpg">PDF till JPG</a> for snabbare webbladdning</li>
-<li><strong>Graskalor</strong> — om farg inte ar nodvandig minskar <a href="/#/grayscale-pdf">Graskal PDF</a> filstorleken ytterligare</li>
+<li><strong>Komprimera</strong> — anvand <a href="#/compress-pdf">Komprimera PDF</a>-verktyget med medelhog eller hog komprimering for att minska filstorleken avsevart</li>
+<li><strong>Andra storlek</strong> — justera sidmatt med <a href="#/resize-pdf">Andra storlek PDF</a>-verktyget for att matcha vanliga skarmstorlekar</li>
+<li><strong>Konvertera till bilder</strong> — for enkel visning, konvertera sidor till JPG med <a href="#/pdf-to-jpg">PDF till JPG</a> for snabbare webbladdning</li>
+<li><strong>Graskalor</strong> — om farg inte ar nodvandig minskar <a href="#/grayscale-pdf">Graskal PDF</a> filstorleken ytterligare</li>
 </ol>
 <h2>Riktlinjer for Filstorlek</h2>
 <ul>
@@ -533,7 +533,7 @@ export const blogPostsSv: BlogPost[] = [
 <li><strong>Inga filstorleksbegransningar</strong> — din dators minne ar den enda begransningen</li>
 </ul>
 <h2>Tillgangliga Verktyg</h2>
-<p>Alla 22 verktyg fungerar offline: fran <a href="/#/merge-pdf">sammanfogning</a> och <a href="/#/compress-pdf">komprimering</a> till <a href="/#/sign-pdf">signering</a> och <a href="/#/redact-pdf">maskering</a>. Varje operation kor lokalt, vilket ger dig fullstandig kontroll over dina data.</p>`,
+<p>Alla 22 verktyg fungerar offline: fran <a href="#/merge-pdf">sammanfogning</a> och <a href="#/compress-pdf">komprimering</a> till <a href="#/sign-pdf">signering</a> och <a href="#/redact-pdf">maskering</a>. Varje operation kor lokalt, vilket ger dig fullstandig kontroll over dina data.</p>`,
         date: '2025-08-12',
         tool: 'compress-pdf',
         tags: ['integritet', 'gratis', 'offline'],
@@ -546,11 +546,11 @@ export const blogPostsSv: BlogPost[] = [
         body: `<p>Innan du skickar en PDF till tryck kan nagra justeringar sakerstalla basta resultat och undvika vanliga utskriftsproblem.</p>
 <h2>Checklista for Utskriftsforberedelse</h2>
 <ol>
-<li><strong>Andra sidstorlek</strong> — anvand <a href="/#/resize-pdf">Andra storlek PDF</a>-verktyget for att matcha din malpappersstorlek (A4, Letter, A3)</li>
-<li><strong>Beskara marginaler</strong> — ta bort overflodig vit yta med <a href="/#/crop-pdf">Beskar PDF</a>-verktyget</li>
-<li><strong>Konvertera till graskalor</strong> — om du skriver ut i svartvitt, anvand <a href="/#/grayscale-pdf">Graskal PDF</a> for att forhandsgranska resultatet och spara black</li>
-<li><strong>Platta till formular</strong> — sakerstall att formulardata skrivs ut korrekt genom att <a href="/#/flatten-pdf">platta till PDF:en</a></li>
-<li><strong>Komprimera</strong> — om du skickar till en trycktjanst, <a href="/#/compress-pdf">komprimera</a> med laga installningar for att minska overfodingstiden</li>
+<li><strong>Andra sidstorlek</strong> — anvand <a href="#/resize-pdf">Andra storlek PDF</a>-verktyget for att matcha din malpappersstorlek (A4, Letter, A3)</li>
+<li><strong>Beskara marginaler</strong> — ta bort overflodig vit yta med <a href="#/crop-pdf">Beskar PDF</a>-verktyget</li>
+<li><strong>Konvertera till graskalor</strong> — om du skriver ut i svartvitt, anvand <a href="#/grayscale-pdf">Graskal PDF</a> for att forhandsgranska resultatet och spara black</li>
+<li><strong>Platta till formular</strong> — sakerstall att formulardata skrivs ut korrekt genom att <a href="#/flatten-pdf">platta till PDF:en</a></li>
+<li><strong>Komprimera</strong> — om du skickar till en trycktjanst, <a href="#/compress-pdf">komprimera</a> med laga installningar for att minska overfodingstiden</li>
 </ol>
 <h2>Vanliga Utskriftsproblem</h2>
 <ul>
@@ -570,8 +570,8 @@ export const blogPostsSv: BlogPost[] = [
         body: `<p>Interaktiva PDF-formular med ifyllbara falt anvands ofta for ansokningar, enkaater och officiella dokument. Att forsta hur man hanterar dem korrekt sparar tid och forebygger problem.</p>
 <h2>Formulararbetsfldet</h2>
 <ol>
-<li><strong>Fylla i</strong> — fyll i formularfalten i din PDF-visare eller anvand <a href="/#/edit-pdf">Redigera PDF</a>-verktyget for att lagga till text direkt pa sidan</li>
-<li><strong>Platta till</strong> — anvand <a href="/#/flatten-pdf">Platta till PDF</a>-verktyget for att konvertera interaktiva falt till statiskt innehall och lasa dina inmatningar</li>
+<li><strong>Fylla i</strong> — fyll i formularfalten i din PDF-visare eller anvand <a href="#/edit-pdf">Redigera PDF</a>-verktyget for att lagga till text direkt pa sidan</li>
+<li><strong>Platta till</strong> — anvand <a href="#/flatten-pdf">Platta till PDF</a>-verktyget for att konvertera interaktiva falt till statiskt innehall och lasa dina inmatningar</li>
 <li><strong>Dela</strong> — distribuera den tillplattade PDF:en i vetskap om att mottagarna inte kan andra dina data</li>
 </ol>
 <h2>Varfor Platta till fore Delning?</h2>
@@ -580,7 +580,7 @@ export const blogPostsSv: BlogPost[] = [
 <li>Sakerstaller att dokumentet ser identiskt ut i varje PDF-visare</li>
 <li>Bevarar det ifyllda formularet for langsiktig arkivering</li>
 </ul>
-<p>For extra sakerhet, <a href="/#/protect-pdf">losenordsskydda</a> den tillplattade PDF:en fore delning.</p>`,
+<p>For extra sakerhet, <a href="#/protect-pdf">losenordsskydda</a> den tillplattade PDF:en fore delning.</p>`,
         date: '2026-02-05',
         tool: 'flatten-pdf',
         tags: ['formular', 'platta-till', 'fylla-i'],
@@ -598,7 +598,7 @@ export const blogPostsSv: BlogPost[] = [
 <li>Inget transparensstod</li>
 <li>Bast for: delning, e-post, sociala medier, fototunga PDF:er</li>
 </ul>
-<p>Anvand <a href="/#/pdf-to-jpg">PDF till JPG</a>-verktyget for de flesta allmanna konverteringar.</p>
+<p>Anvand <a href="#/pdf-to-jpg">PDF till JPG</a>-verktyget for de flesta allmanna konverteringar.</p>
 <h2>PNG — Bast for Grafik och Transparens</h2>
 <ul>
 <li>Storre filer pa grund av forlustfri komprimering</li>
@@ -606,7 +606,7 @@ export const blogPostsSv: BlogPost[] = [
 <li>Stodjer transparenta bakgrunder</li>
 <li>Bast for: diagram, skarmbilder, webbgrafik, presentationer</li>
 </ul>
-<p>Anvand <a href="/#/pdf-to-png">PDF till PNG</a>-verktyget nar kvalitet och transparens ar viktigt.</p>
+<p>Anvand <a href="#/pdf-to-png">PDF till PNG</a>-verktyget nar kvalitet och transparens ar viktigt.</p>
 <h2>Snabb Beslutsguide</h2>
 <p>Behover sma filer for webb eller e-post? Valj JPG. Behover perfekt kvalitet eller transparenta bakgrunder? Valj PNG.</p>`,
         date: '2025-07-25',
@@ -621,11 +621,11 @@ export const blogPostsSv: BlogPost[] = [
         body: `<p>Kontor hanterar hundratals PDF-dokument dagligen — fakturor, kontrakt, rapporter och korrespondens. Effektiv PDF-hantering sparar timmar av arbete.</p>
 <h2>Vanliga Kontorsuppgifter</h2>
 <ul>
-<li><strong>Kombinera rapporter</strong> — anvand <a href="/#/merge-pdf">Sammanfoga PDF</a> for att sammanstalla manadsrapporter till kvartalssammanfattningar</li>
-<li><strong>Organisera dokument</strong> — <a href="/#/organize-pdf">ordna om, ta bort eller duplicera sidor</a> for att omstrukturera langa dokument</li>
-<li><strong>Lagg till paginering</strong> — infoga <a href="/#/page-numbers">sidnummer</a> eller <a href="/#/header-footer">sidhuvuden och sidfotter</a> for professionell presentation</li>
-<li><strong>Skydda filer</strong> — <a href="/#/protect-pdf">losenordsskydda</a> konfidentiella dokument fore distribution</li>
-<li><strong>Komprimera for e-post</strong> — <a href="/#/compress-pdf">minska filstorleken</a> for att uppfylla e-postbilagebegransningar</li>
+<li><strong>Kombinera rapporter</strong> — anvand <a href="#/merge-pdf">Sammanfoga PDF</a> for att sammanstalla manadsrapporter till kvartalssammanfattningar</li>
+<li><strong>Organisera dokument</strong> — <a href="#/organize-pdf">ordna om, ta bort eller duplicera sidor</a> for att omstrukturera langa dokument</li>
+<li><strong>Lagg till paginering</strong> — infoga <a href="#/page-numbers">sidnummer</a> eller <a href="#/header-footer">sidhuvuden och sidfotter</a> for professionell presentation</li>
+<li><strong>Skydda filer</strong> — <a href="#/protect-pdf">losenordsskydda</a> konfidentiella dokument fore distribution</li>
+<li><strong>Komprimera for e-post</strong> — <a href="#/compress-pdf">minska filstorleken</a> for att uppfylla e-postbilagebegransningar</li>
 </ul>
 <h2>Arbetsflodestips</h2>
 <p>Borja med att sammanfoga relaterade filer, organisera sedan sidorna, lagg till sidnummer och slutligen komprimera resultatet for distribution.</p>`,
@@ -645,14 +645,14 @@ export const blogPostsSv: BlogPost[] = [
 <li>Skapa en portfolio eller dossier fran enskilda filer</li>
 <li>Sammanstalla skannade sidor fran olika tillfallen</li>
 </ul>
-<p>Anvand <a href="/#/merge-pdf">Sammanfoga PDF</a>-verktyget for att dra, slapna och ordna om dina filer innan du kombinerar dem.</p>
+<p>Anvand <a href="#/merge-pdf">Sammanfoga PDF</a>-verktyget for att dra, slapna och ordna om dina filer innan du kombinerar dem.</p>
 <h2>Nar ska man Dela</h2>
 <ul>
 <li>Extrahera specifika sidor fran ett stort dokument</li>
 <li>Dela upp en bok i enskilda kapitel</li>
 <li>Separera en PDF med flera fakturor till enskilda fakturor</li>
 </ul>
-<p><a href="/#/split-pdf">Dela PDF</a>-verktyget stodjer bade delning av alla sidor och extrahering av specifika sidintervall.</p>
+<p><a href="#/split-pdf">Dela PDF</a>-verktyget stodjer bade delning av alla sidor och extrahering av specifika sidintervall.</p>
 <h2>Kombinera Bada Operationerna</h2>
 <p>Behover du sidor fran flera dokument? Dela forst varje kallfil for att extrahera de sidor du behover, sammanfoga sedan de extraherade sidorna till ditt slutliga dokument.</p>`,
         date: '2026-03-01',
@@ -672,7 +672,7 @@ export const blogPostsSv: BlogPost[] = [
 <li><strong>Tryckfardigt</strong> — PDF:er ar designade for bade skarm- och tryckutskrift</li>
 </ul>
 <h2>Hur det Fungerar</h2>
-<p><a href="/#/markdown-to-pdf">Markdown till PDF-verktyget</a> renderar ditt Markdown-innehall med fullt stod for rubriker, listor, kodblock, tabeller och mer. Klistra in eller skriv din Markdown, forhandsgranska resultatet och ladda ner PDF:en.</p>
+<p><a href="#/markdown-to-pdf">Markdown till PDF-verktyget</a> renderar ditt Markdown-innehall med fullt stod for rubriker, listor, kodblock, tabeller och mer. Klistra in eller skriv din Markdown, forhandsgranska resultatet och ladda ner PDF:en.</p>
 <h2>Markdown-funktioner som Stods</h2>
 <p>Konverteraren hanterar all standard Markdown-syntax inklusive fetstil, kursiv, lankar, bilder, blockcitat, ordnade och oordnade listor, kodavgransning med syntaxmarkering och tabeller. Ditt innehall bearbetas helt i webblasaren for fullstandig integritet.</p>`,
         date: '2026-03-05',
@@ -687,7 +687,7 @@ export const blogPostsSv: BlogPost[] = [
         body: `<p>Att signera dokument digitalt har blivit avgande i dagens distansarbetsmiljo. Men det finns en viktig distinktion mellan elektroniska signaturer och digitala signaturer.</p>
 <h2>Elektroniska Signaturer</h2>
 <p>En elektronisk signatur ar valfri markering, symbol eller process som bifogas ett dokument for att indikera samtycke. Detta inkluderar skrivna namn, skannade handskrivna signaturer eller ritade signaturer.</p>
-<p><a href="/#/sign-pdf">Signera PDF-verktyget</a> later dig skapa elektroniska signaturer genom att rita, skriva eller ladda upp en bild av din signatur — allt bearbetat lokalt i din webblasare.</p>
+<p><a href="#/sign-pdf">Signera PDF-verktyget</a> later dig skapa elektroniska signaturer genom att rita, skriva eller ladda upp en bild av din signatur — allt bearbetat lokalt i din webblasare.</p>
 <h2>Digitala Signaturer</h2>
 <p>Digitala signaturer anvander kryptografisk teknik for att verifiera undertecknarens identitet och sakerstalla att dokumentet inte har manipulerats. De kraver ett digitalt certifikat fran en betrodd utfardare.</p>
 <h2>Vilken ska du Anvanda?</h2>
@@ -710,8 +710,8 @@ export const blogPostsSv: BlogPost[] = [
 <li><strong>Tillracklig kontrast</strong> — sakerstall att text har tillracklig kontrast mot bakgrunden</li>
 </ul>
 <h2>Verktyg som Hjalper</h2>
-<p><a href="/#/edit-pdf">Redigera PDF-verktyget</a> later dig lagga till textanteckningar och etiketter i dina dokument. Anvand det for att lagga till beskrivande text nara bilder eller fortydliga komplexa diagram.</p>
-<p>For skannade dokument, anvand <a href="/#/pdf-to-text">PDF till Text-verktyget</a> for att verifiera att textinnehall kan extraheras korrekt, vilket ar avgande for skaromlasare.</p>
+<p><a href="#/edit-pdf">Redigera PDF-verktyget</a> later dig lagga till textanteckningar och etiketter i dina dokument. Anvand det for att lagga till beskrivande text nara bilder eller fortydliga komplexa diagram.</p>
+<p>For skannade dokument, anvand <a href="#/pdf-to-text">PDF till Text-verktyget</a> for att verifiera att textinnehall kan extraheras korrekt, vilket ar avgande for skaromlasare.</p>
 <h2>Testa Tillganglighet</h2>
 <p>Testa alltid dina PDF:er med en skaromlasare innan du distribuerar dem. Enkla kontroller inkluderar att verifiera att text kan markeras och kopieras, och att lasordningen ar logisk.</p>`,
         date: '2026-01-22',
@@ -734,9 +734,9 @@ export const blogPostsSv: BlogPost[] = [
 <h2>Webblaserbaserade Fordelar</h2>
 <p>Till skillnad fran installerad programvara kraver webblaserbaserade PDF-verktyg som <a href="/">PDF Worker</a> ingen installation eller uppdateringar. Oppna en flik, bearbeta din fil och ga vidare. Inga licenskostnader, inga kompatibilitetsproblem.</p>
 <h2>Batchbearbetning</h2>
-<p>Manga verktyg stodjer bearbetning av flera filer pa en gang. Ladda upp flera PDF:er till <a href="/#/compress-pdf">Komprimera PDF-verktyget</a> och ladda ner alla resultat tillsammans som en ZIP-fil. Detsamma galler for <a href="/#/rotate-pdf">rotation</a>, <a href="/#/grayscale-pdf">graskalkonvertering</a> och andra operationer.</p>
+<p>Manga verktyg stodjer bearbetning av flera filer pa en gang. Ladda upp flera PDF:er till <a href="#/compress-pdf">Komprimera PDF-verktyget</a> och ladda ner alla resultat tillsammans som en ZIP-fil. Detsamma galler for <a href="#/rotate-pdf">rotation</a>, <a href="#/grayscale-pdf">graskalkonvertering</a> och andra operationer.</p>
 <h2>Kedja Operationer</h2>
-<p>For komplexa arbetsfloden, kedja operationer: <a href="/#/unlock-pdf">las forst upp</a> en skyddad PDF, <a href="/#/split-pdf">dela</a> den sedan i sektioner, <a href="/#/compress-pdf">komprimera</a> varje sektion och <a href="/#/merge-pdf">sammanfoga</a> slutligen de delar du behover.</p>`,
+<p>For komplexa arbetsfloden, kedja operationer: <a href="#/unlock-pdf">las forst upp</a> en skyddad PDF, <a href="#/split-pdf">dela</a> den sedan i sektioner, <a href="#/compress-pdf">komprimera</a> varje sektion och <a href="#/merge-pdf">sammanfoga</a> slutligen de delar du behover.</p>`,
         date: '2026-02-05',
         tool: 'compress-pdf',
         tags: ['arbetsflode', 'automatisering', 'produktivitet'],

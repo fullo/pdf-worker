@@ -8,16 +8,16 @@ export const blogPostsFi: BlogPost[] = [
         excerpt: 'Opi yhdistamaan useita PDF-asiakirjoja yhdeksi tiedostoksi ilman ohjelmiston asentamista. Nopeaa, turvallista ja taysin ilmaista.',
         body: `<p>PDF-tiedostojen yhdistaminen on yksi yleisimmista tehtavista asiakirjojen kanssa tyoskenneltaessa. Tarvitsetpa sitten yhdistaa raportteja, sopimuksia tai esityksia, luotettava tyokalu tekee kaiken eron.</p>
 <h2>Miksi yhdistaa PDF-tiedostoja verkossa?</h2>
-<p>Perinteinen tyopoytaohjelmisto voi olla kallista ja vaatii usein asennuksen. <a href="/#/merge-pdf">PDF Workerin PDF-yhdistamistyokalulla</a> voit yhdistaa tiedostoja suoraan selaimessasi — ei latausta, ei palvelimia, taysi yksityisyys.</p>
+<p>Perinteinen tyopoytaohjelmisto voi olla kallista ja vaatii usein asennuksen. <a href="#/merge-pdf">PDF Workerin PDF-yhdistamistyokalulla</a> voit yhdistaa tiedostoja suoraan selaimessasi — ei latausta, ei palvelimia, taysi yksityisyys.</p>
 <h2>Vaiheittainen opas</h2>
 <ol>
-<li>Avaa <a href="/#/merge-pdf">Yhdista PDF</a> -tyokalu</li>
+<li>Avaa <a href="#/merge-pdf">Yhdista PDF</a> -tyokalu</li>
 <li>Vedä ja pudota PDF-tiedostosi tai napsauta selataksesi</li>
 <li>Jarjesta tiedostot vetamalla ne haluttuun jarjestykseen</li>
 <li>Napsauta "Yhdista PDF" ja lataa yhdistetty asiakirja</li>
 </ol>
 <h2>Vinkkeja parhaisiin tuloksiin</h2>
-<p>Varmista, etta mikaan PDF-tiedostoistasi ei ole salasanasuojattu ennen yhdistamista. Jos ne ovat, kayta ensin <a href="/#/unlock-pdf">PDF-lukituksen avaus</a> -tyokalua suojauksen poistamiseen.</p>
+<p>Varmista, etta mikaan PDF-tiedostoistasi ei ole salasanasuojattu ennen yhdistamista. Jos ne ovat, kayta ensin <a href="#/unlock-pdf">PDF-lukituksen avaus</a> -tyokalua suojauksen poistamiseen.</p>
 <p>Suurille tiedostomaarille tyokalu kasittelee kymmenia asiakirjoja tehokkaasti, koska kaikki kasittely tapahtuu paikallisesti laitteellasi.</p>`,
         date: '2023-06-15',
         tool: 'merge-pdf',
@@ -30,7 +30,7 @@ export const blogPostsFi: BlogPost[] = [
         excerpt: 'Pienenna PDF-tiedostokokoa ilman laadun heikkenemista. Kolme pakkaustasoa taydelliseen tasapainoon koon ja selkeyden valilla sahkopostia, verkkoa tai arkistointia varten.',
         body: `<p>Suuret PDF-tiedostot voivat olla ongelmallisia jaettaessa sahkopostitse tai ladattaessa verkkosivustoille. Pakkaaminen auttaa pienentamaan tiedostokokoa sailyttaen hyvaksyttavan laadun.</p>
 <h2>Pakkaustasojen ymmartaminen</h2>
-<p><a href="/#/compress-pdf">PDF-pakkaustyokalu</a> tarjoaa kolme tasoa:</p>
+<p><a href="#/compress-pdf">PDF-pakkaustyokalu</a> tarjoaa kolme tasoa:</p>
 <ul>
 <li><strong>Matala pakkaus</strong> — minimaalinen koon pienennys, lahes alkuperainen laatu</li>
 <li><strong>Keskitason pakkaus</strong> — hyva tasapaino koon ja laadun valilla</li>
@@ -50,7 +50,7 @@ export const blogPostsFi: BlogPost[] = [
         excerpt: 'Poimi yksittaisia sivuja tai sivualueita PDF-asiakirjoista. Lataa jokainen sivu erikseen tai ZIP-arkistona.',
         body: `<p>Joskus tarvitset vain muutaman sivun suuresta PDF-asiakirjasta. Jakaminen mahdollistaa tarkalleen tarvitsemasi sisallon poimimisen.</p>
 <h2>Kaksi jakamistilaa</h2>
-<p><a href="/#/split-pdf">PDF-jakamistyokalu</a> tarjoaa kaksi lahestymistapaa:</p>
+<p><a href="#/split-pdf">PDF-jakamistyokalu</a> tarjoaa kaksi lahestymistapaa:</p>
 <ul>
 <li><strong>Jaa kaikki sivut</strong> — poimii jokaisen sivun yksittaiseksi PDF-tiedostoksi</li>
 <li><strong>Sivualue</strong> — maarita tarkat sivut kuten "1-3, 5, 7-9"</li>
@@ -69,7 +69,7 @@ export const blogPostsFi: BlogPost[] = [
         excerpt: 'Kierra skannattuja asiakirjoja tai korjaa ylosalaisin olevat sivut. Tukee 90, 180 ja 270 asteen kiertoa kaikille sivuille.',
         body: `<p>Skannatut asiakirjat paatyvat usein vaaran suuntaisiksi. Nopea kiertokorjaus tekee niista jälleen luettavia.</p>
 <h2>Kiertoasetukset</h2>
-<p><a href="/#/rotate-pdf">PDF-kiertotyokalu</a> tukee kolmea kiertokulmaa:</p>
+<p><a href="#/rotate-pdf">PDF-kiertotyokalu</a> tukee kolmea kiertokulmaa:</p>
 <ul>
 <li><strong>90 astetta myotapaivaan</strong> — vaakasuuntaisille sivuille, joiden pitaisi olla pystysuunnassa</li>
 <li><strong>180 astetta</strong> — ylosalaisin skannatuille asiakirjoille</li>
@@ -77,7 +77,7 @@ export const blogPostsFi: BlogPost[] = [
 </ul>
 <h2>Yleiset kayttotapaukset</h2>
 <p>Matkapuhelinskannaukset, valokopioidut asiakirjat ja faksatut PDF-tiedostot tarvitsevat usein kiertoa. Tyokalu soveltaa kierron kaikkiin sivuihin kerralla, mika saastaa aikaa.</p>
-<p>Tarkempaan yksittaisten sivujen hallintaan kayta <a href="/#/organize-pdf">PDF-jarjestelytyokalua</a>, jolla voit hallita sivuja yksittain.</p>`,
+<p>Tarkempaan yksittaisten sivujen hallintaan kayta <a href="#/organize-pdf">PDF-jarjestelytyokalua</a>, jolla voit hallita sivuja yksittain.</p>`,
         date: '2022-08-12',
         tool: 'rotate-pdf',
         tags: ['kierto', 'suunta', 'skannaus'],
@@ -89,7 +89,7 @@ export const blogPostsFi: BlogPost[] = [
         excerpt: 'Suojaa asiakirjasi teksti- tai kuvavesileimoilla. Mukauta sijaintia, lampinakyvyytta, kokoa ja kiertoa.',
         body: `<p>Vesileimat auttavat suojaamaan henkista omaisuutta ja merkitsemaan asiakirjat luottamuksellisiksi, luonnoksiksi tai omistusoikeudella suojatuiksi.</p>
 <h2>Teksti- ja kuvavesileimat</h2>
-<p><a href="/#/watermark-pdf">Vesileimatyokalu</a> tukee molempia tyyppeja:</p>
+<p><a href="#/watermark-pdf">Vesileimatyokalu</a> tukee molempia tyyppeja:</p>
 <ul>
 <li><strong>Tekstivesileimat</strong> — lisaa sanoja kuten "LUOTTAMUKSELLINEN" tai "LUONNOS" mukautetulla kirjasinkoolla, varilla ja kierrolla</li>
 <li><strong>Kuvavesileimat</strong> — aseta yrityksesi logo tai leima saadettavalla lampinakyvyydella ja koolla</li>
@@ -107,14 +107,14 @@ export const blogPostsFi: BlogPost[] = [
         excerpt: 'Muunna jokainen PDF-sivu laadukkaaksi JPG-kuvaksi. Saada laatuasetuksia taydelliseen tasapainoon koon ja selkeyden valilla.',
         body: `<p>PDF-sivujen muuntaminen kuviksi on hyodyllista esityksiin, sosiaalisen median julkaisuihin tai kun PDF-sisaltoa taytyy upottaa muihin asiakirjoihin.</p>
 <h2>Laatuasetukset</h2>
-<p><a href="/#/pdf-to-jpg">PDF JPG:ksi -tyokalu</a> antaa saataa kuvanlaadun 10%:sta 100%:iin. Korkeampi laatu tarkoittaa suurempia tiedostoja mutta teravampia kuvia.</p>
+<p><a href="#/pdf-to-jpg">PDF JPG:ksi -tyokalu</a> antaa saataa kuvanlaadun 10%:sta 100%:iin. Korkeampi laatu tarkoittaa suurempia tiedostoja mutta teravampia kuvia.</p>
 <h2>Suositellut asetukset</h2>
 <ul>
 <li><strong>80%</strong> — paras useimpiin kayttoihin, hyva laatu kohtuullisella tiedostokoolla</li>
 <li><strong>100%</strong> — maksimilaatu painatukseen tai ammattimaiseen kayttoon</li>
 <li><strong>50-60%</strong> — pienemmat tiedostot verkkoa tai sahkopostia varten</li>
 </ul>
-<p>Jokainen sivu tulee erilliseksi JPG-tiedostoksi. Lataa ne yksittain tai ZIP-arkistona. Lapinakyvia taustoja varten harkitse <a href="/#/pdf-to-png">PDF PNG:ksi</a> -muunninta.</p>`,
+<p>Jokainen sivu tulee erilliseksi JPG-tiedostoksi. Lataa ne yksittain tai ZIP-arkistona. Lapinakyvia taustoja varten harkitse <a href="#/pdf-to-png">PDF PNG:ksi</a> -muunninta.</p>`,
         date: '2021-05-18',
         tool: 'pdf-to-jpg',
         tags: ['muuntaminen', 'jpg', 'kuvat'],
@@ -126,7 +126,7 @@ export const blogPostsFi: BlogPost[] = [
         excerpt: 'Muunna useita kuvia yhdeksi PDF-asiakirjaksi. Valitse suunta, marginaalit ja sivun asettelu.',
         body: `<p>Pitaako koota valokuvia, skannauksia tai nayttokuvia yhdeksi asiakirjaksi? Kuvien muuntaminen PDF:ksi luo ammattimaisen, helposti jaettavan tiedoston.</p>
 <h2>Tuetut muodot</h2>
-<p><a href="/#/jpg-to-pdf">JPG PDF:ksi -tyokalu</a> hyvaksyy JPG-, JPEG-, PNG- ja WebP-kuvia. Sekoita eri muotoja yhdessa muunnoksessa.</p>
+<p><a href="#/jpg-to-pdf">JPG PDF:ksi -tyokalu</a> hyvaksyy JPG-, JPEG-, PNG- ja WebP-kuvia. Sekoita eri muotoja yhdessa muunnoksessa.</p>
 <h2>Asetteluvaihtoehdot</h2>
 <ul>
 <li><strong>Suunta</strong> — valitse pysty tai vaaka</li>
@@ -144,14 +144,14 @@ export const blogPostsFi: BlogPost[] = [
         excerpt: 'Suojaa PDF-tiedostosi kayttaja- ja omistajasalasanoilla. Hallitse tulostus-, kopiointi- ja muokkausoikeuksia.',
         body: `<p>Arkaluonteisten asiakirjojen suojaaminen salasanoilla estaa luvattoman pääsyn ja hallitsee, mita vastaanottajat voivat tehdä tiedostolla.</p>
 <h2>Kayttaja- ja omistajasalasana</h2>
-<p><a href="/#/protect-pdf">PDF-suojaustyokalu</a> tukee kahta salasanatyyppia:</p>
+<p><a href="#/protect-pdf">PDF-suojaustyokalu</a> tukee kahta salasanatyyppia:</p>
 <ul>
 <li><strong>Kayttajasalasana</strong> — vaaditaan asiakirjan avaamiseen ja katseluun</li>
 <li><strong>Omistajasalasana</strong> — hallitsee tulostus-, kopiointi- ja muokkausoikeuksia</li>
 </ul>
 <h2>Oikeuksien hallinta</h2>
 <p>Voit sallia tai rajoittaa tulostamista, tekstin kopiointia ja asiakirjan muokkaamista. Tama on hyodyllista vain luku -raporttien tai sopimusten jakeluun.</p>
-<p>Pitaako poistaa suojaus myohemmin? Kayta <a href="/#/unlock-pdf">PDF-lukituksen avaus</a> -tyokalua oikealla salasanalla.</p>`,
+<p>Pitaako poistaa suojaus myohemmin? Kayta <a href="#/unlock-pdf">PDF-lukituksen avaus</a> -tyokalua oikealla salasanalla.</p>`,
         date: '2023-09-10',
         tool: 'protect-pdf',
         tags: ['suojaus', 'salasana', 'tietoturva'],
@@ -163,7 +163,7 @@ export const blogPostsFi: BlogPost[] = [
         excerpt: 'Avaa salasanasuojatut PDF-tiedostot, kun tiedat salasanan. Poista tulostus- ja kopiointirajoitukset.',
         body: `<p>Jos sinulla on suojatun PDF-tiedoston salasana, voit poistaa rajoituksen tehdaksesi asiakirjan vapaasti saatavaksi.</p>
 <h2>Kuinka se toimii</h2>
-<p><a href="/#/unlock-pdf">PDF-lukituksen avaustyokalu</a> ottaa suojatun PDF-tiedostosi ja oikean salasanan ja tuottaa sitten suojaamattoman kopion. Alkuperainen tiedosto pysyy muuttumattomana.</p>
+<p><a href="#/unlock-pdf">PDF-lukituksen avaustyokalu</a> ottaa suojatun PDF-tiedostosi ja oikean salasanan ja tuottaa sitten suojaamattoman kopion. Alkuperainen tiedosto pysyy muuttumattomana.</p>
 <h2>Tarkeita huomautuksia</h2>
 <ul>
 <li>Sinun taytyy tietaa oikea salasana — tama tyokalu ei murra tai ohita salasanoja</li>
@@ -181,14 +181,14 @@ export const blogPostsFi: BlogPost[] = [
         excerpt: 'Hallitse PDF-sivuja visuaalisesti veda-ja-pudota-toiminnolla. Jarjesta sivut uudelleen, poista tarpeettomat tai kopioi tarkeita osia.',
         body: `<p>PDF-asiakirjan rakenteen hallinta on oleellista raporttien, portfolioiden tai esitysten valmistelussa.</p>
 <h2>Visuaalinen sivujen hallinta</h2>
-<p><a href="/#/organize-pdf">PDF-jarjestelytyokalu</a> nayttaa pienoisnakymat jokaisesta sivusta, jolloin asiakirjan rakenteen nakyy helposti yhdella silmayksella.</p>
+<p><a href="#/organize-pdf">PDF-jarjestelytyokalu</a> nayttaa pienoisnakymat jokaisesta sivusta, jolloin asiakirjan rakenteen nakyy helposti yhdella silmayksella.</p>
 <h2>Kaytettavissa olevat toiminnot</h2>
 <ul>
 <li><strong>Uudelleenjarjestely</strong> — veda ja pudota sivuja niiden sijainnin muuttamiseksi</li>
 <li><strong>Poistaminen</strong> — poista tarpeettomat sivut (viimeista sivua ei voi poistaa)</li>
 <li><strong>Kopiointi</strong> — luo kopioita tarkeista sivuista</li>
 </ul>
-<p>Tama tyokalu toimii erinomaisesti yhdessa <a href="/#/merge-pdf">PDF-yhdistamisen</a> kanssa — yhdista ensin useita tiedostoja ja jarjesta sitten yhdistetyt sivut.</p>`,
+<p>Tama tyokalu toimii erinomaisesti yhdessa <a href="#/merge-pdf">PDF-yhdistamisen</a> kanssa — yhdista ensin useita tiedostoja ja jarjesta sitten yhdistetyt sivut.</p>`,
         date: '2023-04-22',
         tool: 'organize-pdf',
         tags: ['jarjestaminen', 'uudelleenjarjestely', 'sivut'],
@@ -200,7 +200,7 @@ export const blogPostsFi: BlogPost[] = [
         excerpt: 'Poista tarpeettomat marginaalit tai rajaa PDF-sivut keskittymaan tiettyyn sisaltoon. Visuaalinen esikatselu saadettavilla rajausarvoilla.',
         body: `<p>PDF-tiedostoissa on usein liiallisia marginaaleja tulostusasetteluista tai skannatuista reunoista. Rajaaminen poistaa nama ylimaaraiset tilat.</p>
 <h2>Kuinka rajata</h2>
-<p><a href="/#/crop-pdf">PDF-rajaustyokalu</a> tarjoaa visuaalisen esikatselun, jossa voit vetaa reunoja rajausralueen maarittamiseksi. Aseta arvot ylareunalle, alareunalle, vasemmalle ja oikealle itsenaisesti.</p>
+<p><a href="#/crop-pdf">PDF-rajaustyokalu</a> tarjoaa visuaalisen esikatselun, jossa voit vetaa reunoja rajausralueen maarittamiseksi. Aseta arvot ylareunalle, alareunalle, vasemmalle ja oikealle itsenaisesti.</p>
 <h2>Kayttotapaukset</h2>
 <ul>
 <li>Leveiden tulostinmarginaalien poistaminen skannatuista asiakirjoista</li>
@@ -219,7 +219,7 @@ export const blogPostsFi: BlogPost[] = [
         excerpt: 'Poista luottamukselliset tiedot pysyvasti PDF-tiedostoista. Pimenna tekstia, kuvia tai muuta sisaltoa, jota ei tulisi jakaa.',
         body: `<p>Peittaminen poistaa pysyvasti arkaluonteiset tiedot asiakirjoista ennen jakamista. Toisin kuin korostus tai muodoilla peittaminen, peitettya sisaltoa ei voida palauttaa.</p>
 <h2>Kuinka peittaminen toimii</h2>
-<p><a href="/#/redact-pdf">PDF-peittamistyokalu</a> antaa piirtaa mustia suorakulmioita alueille, jotka haluat pysyvasti sensuroida. Alla oleva sisalto tuhotaan — ei vain piiloteta.</p>
+<p><a href="#/redact-pdf">PDF-peittamistyokalu</a> antaa piirtaa mustia suorakulmioita alueille, jotka haluat pysyvasti sensuroida. Alla oleva sisalto tuhotaan — ei vain piiloteta.</p>
 <h2>Mita peittaa</h2>
 <ul>
 <li>Henkilotiedot (nimet, osoitteet, puhelinnumerot)</li>
@@ -240,7 +240,7 @@ export const blogPostsFi: BlogPost[] = [
         excerpt: 'Lisaa merkintoja, tekstilohkoja, suorakulmioita ja vapaakasipiirroksia PDF-asiakirjoihisi ilman tyopoytaohjelmistoa.',
         body: `<p>Pitaako merkita PDF, lisata muistiinpanoja tai kommentoida asiakirjaa? Muokkaustyokalu antaa lisata sisaltoa suoraan PDF-sivuillesi.</p>
 <h2>Kaytettavissa olevat tyokalut</h2>
-<p><a href="/#/edit-pdf">PDF-muokkaustyokalu</a> tarjoaa useita merkintavaihtoehtoja:</p>
+<p><a href="#/edit-pdf">PDF-muokkaustyokalu</a> tarjoaa useita merkintavaihtoehtoja:</p>
 <ul>
 <li><strong>Tekstilohkot</strong> — lisaa mukautettua tekstia saadettavalla kirjasinkoolla, varilla ja taustalla</li>
 <li><strong>Suorakulmiot</strong> — korosta alueita tai luo reunuksia</li>
@@ -248,7 +248,7 @@ export const blogPostsFi: BlogPost[] = [
 </ul>
 <h2>Vinkkeja</h2>
 <p>Kaksoisnapsauta tekstilohkoa muokataksesi sen sisaltoa. Veda elementteja siirtaaksesi niita. Kayta useita sivuja merkitaksesi asiakirjan eri osioita.</p>
-<p>Erityisesti allekirjoituksen lisaamiseen <a href="/#/sign-pdf">PDF-allekirjoitustyokalu</a> on kaytevampi.</p>`,
+<p>Erityisesti allekirjoituksen lisaamiseen <a href="#/sign-pdf">PDF-allekirjoitustyokalu</a> on kaytevampi.</p>`,
         date: '2025-01-15',
         tool: 'edit-pdf',
         tags: ['muokkaus', 'merkinta', 'teksti'],
@@ -260,7 +260,7 @@ export const blogPostsFi: BlogPost[] = [
         excerpt: 'Lisaa allekirjoituksesi PDF-tiedostoihin. Piirra allekirjoitus tai lataa allekirjoituskuva ja sijoita se tarkasti asiakirjaan.',
         body: `<p>Asiakirjojen digitaalinen allekirjoittaminen saastaa aikaa ja paperia. Lisaa kasinallekirjoituksesi mihin tahansa PDF-tiedostoon sekunneissa.</p>
 <h2>Kaksi allekirjoitustapaa</h2>
-<p><a href="/#/sign-pdf">PDF-allekirjoitustyokalu</a> tarjoaa kaksi tapaa allekirjoittaa:</p>
+<p><a href="#/sign-pdf">PDF-allekirjoitustyokalu</a> tarjoaa kaksi tapaa allekirjoittaa:</p>
 <ul>
 <li><strong>Piirtaminen</strong> — kayta hiirta tai kosketusnayttoa allekirjoituksesi piirtamiseen</li>
 <li><strong>Kuva</strong> — lataa PNG- tai JPG-kuva allekirjoituksestasi</li>
@@ -280,7 +280,7 @@ export const blogPostsFi: BlogPost[] = [
         excerpt: 'Poimi kaikki upotetut kuvat PDF-asiakirjoista. Tallenna ne yksittain tai lataa kaikki ZIP-arkistona.',
         body: `<p>PDF-tiedostot sisaltavat usein arvokkaita kuvia — valokuvia, kaavioita, grafiikoita tai logoja — joita saatat tarvita muualla.</p>
 <h2>Kuinka se toimii</h2>
-<p><a href="/#/extract-images">Kuvien poimintatyokalu</a> skannaa PDF-tiedostosi kaikkien upotettujen kuvien varalta ja poimii ne yksittaisiksi PNG-tiedostoiksi.</p>
+<p><a href="#/extract-images">Kuvien poimintatyokalu</a> skannaa PDF-tiedostosi kaikkien upotettujen kuvien varalta ja poimii ne yksittaisiksi PNG-tiedostoiksi.</p>
 <h2>Mita poimitaan</h2>
 <ul>
 <li>Valokuvat ja kuvitukset</li>
@@ -288,7 +288,7 @@ export const blogPostsFi: BlogPost[] = [
 <li>Kaaviot ja diagrammit</li>
 <li>Taustakuvat</li>
 </ul>
-<p>Lataa jokainen kuva yksittain tai hae kaikki kerralla ZIP-latausvaihtoehdolla. Huomaa: tama tyokalu poimii upotettuja kuvia, ei renderöityjä sivun nayttokuvia. Koko sivun kuvia varten kayta <a href="/#/pdf-to-png">PDF PNG:ksi</a> -tyokalua.</p>`,
+<p>Lataa jokainen kuva yksittain tai hae kaikki kerralla ZIP-latausvaihtoehdolla. Huomaa: tama tyokalu poimii upotettuja kuvia, ei renderöityjä sivun nayttokuvia. Koko sivun kuvia varten kayta <a href="#/pdf-to-png">PDF PNG:ksi</a> -tyokalua.</p>`,
         date: '2022-12-05',
         tool: 'extract-images',
         tags: ['poimiminen', 'kuvat', 'valokuvat'],
@@ -305,8 +305,8 @@ export const blogPostsFi: BlogPost[] = [
 <li><strong>Palautukset</strong> — jotkut laitokset vaativat mustavalkoisia asiakirjoja</li>
 <li><strong>Yhdenmukaisuus</strong> — luo yhtennainen ulkoasu eri lahteista perasin oleville asiakirjoille</li>
 </ul>
-<p><a href="/#/grayscale-pdf">PDF-harmaasavytyokalu</a> muuntaa kaikki varit niita vastaaviksi harmaasavyiksi. Teksti pysyy teravana ja luettavana, kun taas kuvat ja grafiikat muuttuvat yksivörisiksi.</p>
-<p>Tiedostokoon pienentamiseksi entisestaan harmaasavymuunnoksen jalkeen aja tulos <a href="/#/compress-pdf">PDF-pakkaustyokalun</a> lapi.</p>`,
+<p><a href="#/grayscale-pdf">PDF-harmaasavytyokalu</a> muuntaa kaikki varit niita vastaaviksi harmaasavyiksi. Teksti pysyy teravana ja luettavana, kun taas kuvat ja grafiikat muuttuvat yksivörisiksi.</p>
+<p>Tiedostokoon pienentamiseksi entisestaan harmaasavymuunnoksen jalkeen aja tulos <a href="#/compress-pdf">PDF-pakkaustyokalun</a> lapi.</p>`,
         date: '2023-08-17',
         tool: 'grayscale-pdf',
         tags: ['harmaasavy', 'mustavalkoinen', 'tulostaminen'],
@@ -318,14 +318,14 @@ export const blogPostsFi: BlogPost[] = [
         excerpt: 'Lisaa automaattinen sivunumerointi PDF-tiedostoosi. Valitse sijainti, muoto ja tyyli ammattimaiseen asiakirjapaginointiin.',
         body: `<p>Sivunumerot auttavat lukijoita navigoimaan pitkissa asiakirjoissa ja ovat valttamattomia ammattimaisissa raporteissa, kaskirjoissa ja opinnaytetöissä.</p>
 <h2>Numerointivaihtoehdot</h2>
-<p><a href="/#/page-numbers">Sivunumerotyokalu</a> tarjoaa joustavan muotoilun:</p>
+<p><a href="#/page-numbers">Sivunumerotyokalu</a> tarjoaa joustavan muotoilun:</p>
 <ul>
 <li><strong>Sijainti</strong> — vasen alareuna, keskialareuna tai oikea alareuna</li>
 <li><strong>Muoto</strong> — yksinkertainen numero (1, 2, 3) tai "sivu/yhteensa"-muoto (1/10, 2/10)</li>
 </ul>
 <h2>Parhaat kaytannot</h2>
 <p>Keskialareuna on yleisin sijainti virallisissa asiakirjoissa. "Sivu/yhteensa"-muoto on hyodyllinen oikeudellisissa asiakirjoissa, joissa vastaanottajien on varmistettava taydellisuus.</p>
-<p>Lisaa mukautusta varten <a href="/#/header-footer">Ylatunniste ja alatunniste</a> -tyokalu tarjoaa lisakesasetuksia, kuten mukautettua tekstia.</p>`,
+<p>Lisaa mukautusta varten <a href="#/header-footer">Ylatunniste ja alatunniste</a> -tyokalu tarjoaa lisakesasetuksia, kuten mukautettua tekstia.</p>`,
         date: '2020-09-30',
         tool: 'page-numbers',
         tags: ['sivunumerot', 'sivutus', 'numerointi'],
@@ -337,7 +337,7 @@ export const blogPostsFi: BlogPost[] = [
         excerpt: 'Muuta PDF-sivujen mitat standardipaperikokoihin. Muunna helposti A4-, A3-, Letter- ja Legal-muotojen valilla.',
         body: `<p>Eri maat ja toimialat kayttavat eri paperikokoja. Koon muuttaminen varmistaa, etta PDF-tiedostosi vastaa odotettua muotoa tulostusta tai palautusta varten.</p>
 <h2>Tuetut koot</h2>
-<p><a href="/#/resize-pdf">PDF-koon muutostyokalu</a> tukee:</p>
+<p><a href="#/resize-pdf">PDF-koon muutostyokalu</a> tukee:</p>
 <ul>
 <li><strong>A4</strong> (210 x 297 mm) — kansainvalinen standardi</li>
 <li><strong>A3</strong> (297 x 420 mm) — suurempia tulosteita ja julisteita varten</li>
@@ -362,7 +362,7 @@ export const blogPostsFi: BlogPost[] = [
 <li><strong>Yhteensopivuus</strong> — jotkut katseluohjelmat nayttavat interaktiiviset kentat virheellisesti</li>
 <li><strong>Tulostaminen</strong> — varmista, etta lomaketiedot tulostuvat oikein</li>
 </ul>
-<p><a href="/#/flatten-pdf">PDF-litistystyokalu</a> kasittelee asiakirjan yhdella napsautuksella. Tuloksena oleva tiedosto nayttaa samalta, mutta kaikki interaktiiviset elementit ovat nyt osa sivun sisaltoa.</p>`,
+<p><a href="#/flatten-pdf">PDF-litistystyokalu</a> kasittelee asiakirjan yhdella napsautuksella. Tuloksena oleva tiedosto nayttaa samalta, mutta kaikki interaktiiviset elementit ovat nyt osa sivun sisaltoa.</p>`,
         date: '2025-02-10',
         tool: 'flatten-pdf',
         tags: ['litistaminen', 'lomakkeet', 'merkinnat'],
@@ -374,14 +374,14 @@ export const blogPostsFi: BlogPost[] = [
         excerpt: 'Muunna PDF-sisalto pelkaksi tekstiksi. Poimi kaikki luettava teksti PDF-tiedostostasi muokkausta, hakua tai tietojenkasittelya varten.',
         body: `<p>Tekstin poimiminen PDF-tiedostoista on hyodyllista sisallon kopioimiseen muihin asiakirjoihin, suurten tiedostojen lapi hakemiseen tai raporttien tietojen kasittelyyn.</p>
 <h2>Kuinka se toimii</h2>
-<p><a href="/#/pdf-to-text">PDF tekstiksi -tyokalu</a> lukee kaiken upotetun tekstin PDF-tiedostostasi ja tallentaa sen pelkkana tekstitiedostona (.txt). Teksti sailyttaa lukujarjestyksen ja kappalerakenteen.</p>
+<p><a href="#/pdf-to-text">PDF tekstiksi -tyokalu</a> lukee kaiken upotetun tekstin PDF-tiedostostasi ja tallentaa sen pelkkana tekstitiedostona (.txt). Teksti sailyttaa lukujarjestyksen ja kappalerakenteen.</p>
 <h2>Rajoitukset</h2>
 <ul>
 <li>Toimii vain PDF-tiedostoissa, jotka sisaltavat valittavaa tekstia (digitaalista tekstia)</li>
 <li>Skannatut asiakirjat (pelkan kuvan PDF:t) vaativat OCR-tekniikkaa, joka ei sisally</li>
 <li>Monimutkaiset asettelut sarakkeilla tai taulukoilla eivat valttamatta sailyta muotoilua taydellisesti</li>
 </ul>
-<p>Sivujen visuaalisen asettelun sailyttamiseksi harkitse muuntamista kuviksi kayttamalla <a href="/#/pdf-to-jpg">PDF JPG:ksi</a> tai <a href="/#/pdf-to-png">PDF PNG:ksi</a> -tyokalua.</p>`,
+<p>Sivujen visuaalisen asettelun sailyttamiseksi harkitse muuntamista kuviksi kayttamalla <a href="#/pdf-to-jpg">PDF JPG:ksi</a> tai <a href="#/pdf-to-png">PDF PNG:ksi</a> -tyokalua.</p>`,
         date: '2024-08-22',
         tool: 'pdf-to-text',
         tags: ['teksti', 'poimiminen', 'muuntaminen'],
@@ -397,14 +397,14 @@ export const blogPostsFi: BlogPost[] = [
 <li><strong>PNG</strong> — havioton pakkaus, lapinakyvyystuki, suuremmat tiedostot</li>
 <li><strong>JPG</strong> — haviollinen pakkaus, ei lapinakyvyytta, pienemmat tiedostot</li>
 </ul>
-<p><a href="/#/pdf-to-png">PDF PNG:ksi -tyokalu</a> muuntaa jokaisen sivun erilliseksi PNG-kuvaksi. Voit valinnaisesti ottaa kayttoon lapinakyat taustat.</p>
+<p><a href="#/pdf-to-png">PDF PNG:ksi -tyokalu</a> muuntaa jokaisen sivun erilliseksi PNG-kuvaksi. Voit valinnaisesti ottaa kayttoon lapinakyat taustat.</p>
 <h2>Parhaat kayttotapaukset</h2>
 <ul>
 <li>Kaavioiden ja diagrammien upottaminen esityksiin</li>
 <li>Verkkografiikoiden luominen PDF-suunnitelmista</li>
 <li>Laadukkaiden sivunayttokuvien poimiminen</li>
 </ul>
-<p>Jos tiedostokoko on tärkeampi kuin laatu, harkitse <a href="/#/pdf-to-jpg">PDF JPG:ksi</a> -muunninta.</p>`,
+<p>Jos tiedostokoko on tärkeampi kuin laatu, harkitse <a href="#/pdf-to-jpg">PDF JPG:ksi</a> -muunninta.</p>`,
         date: '2024-03-10',
         tool: 'pdf-to-png',
         tags: ['muuntaminen', 'png', 'lapinakyva'],
@@ -416,7 +416,7 @@ export const blogPostsFi: BlogPost[] = [
         excerpt: 'Lisaa henkilokohtaista tekstia jokaisen PDF-sivun yla- ja alaosaan. Kayta paikkamerkkeja automaattisia sivunumeroita varten.',
         body: `<p>Ylatunnisteet ja alatunnisteet tuovat kontekstia ja ammattimaisuutta asiakirjoihin. Ne ovat valttamattomia raporteissa, kaskirjoissa ja virallisissa asiakirjoissa.</p>
 <h2>Kuinka se toimii</h2>
-<p><a href="/#/header-footer">Ylatunniste ja alatunniste -tyokalu</a> antaa lisata mukautettua tekstia jokaisen PDF-sivun yla- ja alaosaan.</p>
+<p><a href="#/header-footer">Ylatunniste ja alatunniste -tyokalu</a> antaa lisata mukautettua tekstia jokaisen PDF-sivun yla- ja alaosaan.</p>
 <h2>Kaytettavissa olevat paikkamerkit</h2>
 <ul>
 <li><code>{page}</code> — lisaa nykyisen sivunumeron</li>
@@ -425,7 +425,7 @@ export const blogPostsFi: BlogPost[] = [
 <h2>Esimerkkeja</h2>
 <p>Ylatunniste: "Vuosikertomus 2024" — Alatunniste: "Sivu {page} / {total}"</p>
 <p>Valitse tasaus (vasen, keski, oikea) tekstin sijoittamiseksi haluamallasi tavalla.</p>
-<p>Pelkkien sivunumeroiden lisaamiseksi ilman lisatekstiä kayta yksinkertaisempaa <a href="/#/page-numbers">Sivunumerot</a>-tyokalua.</p>`,
+<p>Pelkkien sivunumeroiden lisaamiseksi ilman lisatekstiä kayta yksinkertaisempaa <a href="#/page-numbers">Sivunumerot</a>-tyokalua.</p>`,
         date: '2020-07-15',
         tool: 'header-footer',
         tags: ['ylatunniste', 'alatunniste', 'mukauttaminen'],
@@ -438,11 +438,11 @@ export const blogPostsFi: BlogPost[] = [
         body: `<p>Opiskelijat kasittelevat PDF-tiedostoja paivittain — luentodiat, tutkimusartikkelit, tehtavat ja oppikirjat. Oikeiden tyokalujen omistaminen tekee akateemisesta elamasta paljon helpompaa.</p>
 <h2>Olennaiset tyokalut opiskelijoille</h2>
 <ul>
-<li><strong><a href="/#/merge-pdf">Yhdista PDF</a></strong> — yhdista luentomuistiinpanot useista istunnoista yhdeksi asiakirjaksi</li>
-<li><strong><a href="/#/compress-pdf">Pakkaa PDF</a></strong> — pienenna tiedostokokoa ennen tehtavien palauttamista sahkopostitse tai oppimisymparistossa</li>
-<li><strong><a href="/#/split-pdf">Jaa PDF</a></strong> — poimi tiettuja lukuja oppikirjoista tai lukemistosta</li>
-<li><strong><a href="/#/pdf-to-text">PDF tekstiksi</a></strong> — poimi teksti muistiinpanoja, lainauksia tai opinto-oppaita varten</li>
-<li><strong><a href="/#/page-numbers">Sivunumerot</a></strong> — lisaa sivutus opinnaytetyohosi tai vaitoskirjaasi</li>
+<li><strong><a href="#/merge-pdf">Yhdista PDF</a></strong> — yhdista luentomuistiinpanot useista istunnoista yhdeksi asiakirjaksi</li>
+<li><strong><a href="#/compress-pdf">Pakkaa PDF</a></strong> — pienenna tiedostokokoa ennen tehtavien palauttamista sahkopostitse tai oppimisymparistossa</li>
+<li><strong><a href="#/split-pdf">Jaa PDF</a></strong> — poimi tiettuja lukuja oppikirjoista tai lukemistosta</li>
+<li><strong><a href="#/pdf-to-text">PDF tekstiksi</a></strong> — poimi teksti muistiinpanoja, lainauksia tai opinto-oppaita varten</li>
+<li><strong><a href="#/page-numbers">Sivunumerot</a></strong> — lisaa sivutus opinnaytetyohosi tai vaitoskirjaasi</li>
 </ul>
 <h2>Yksityisyysetu</h2>
 <p>Kaikki tyokalut kasittelevat tiedostoja paikallisesti selaimessasi. Tutkimusartikkelisi ja akateemiset tyosi eivat koskaan poistu laitteeltasi — tarkeaa kun tyoskentelet julkaisemattoman tutkimuksen parissa.</p>`,
@@ -458,9 +458,9 @@ export const blogPostsFi: BlogPost[] = [
         body: `<p>Kasittelepa sitten sopimuksia, talousraportteja tai henkilokohtaisia asiakirjoja, PDF-asiakirjojesi suojaaminen on ratkaisevan tarkeaa luvattoman pääsyn ja tietovuotojen estamiseksi.</p>
 <h2>Kolme PDF-tietoturvan tasoa</h2>
 <ol>
-<li><strong>Salasanasuojaus</strong> — kayta <a href="/#/protect-pdf">PDF-suojaustyokalua</a> kayttaja- ja omistajasalasanojen lisaamiseen. Hallitse, kuka voi avata, tulostaa tai muokata asiakirjaa.</li>
-<li><strong>Peittaminen</strong> — poista arkaluonteiset tiedot pysyvasti <a href="/#/redact-pdf">PDF-peittamistyokalulla</a>. Peittettya sisaltoa ei voida palauttaa.</li>
-<li><strong>Litistaminen</strong> — kayta <a href="/#/flatten-pdf">PDF-litistystyokalua</a> lomakekenttien ja merkintöjen muuntamiseen staattiseksi sisalloksi ennen jakamista.</li>
+<li><strong>Salasanasuojaus</strong> — kayta <a href="#/protect-pdf">PDF-suojaustyokalua</a> kayttaja- ja omistajasalasanojen lisaamiseen. Hallitse, kuka voi avata, tulostaa tai muokata asiakirjaa.</li>
+<li><strong>Peittaminen</strong> — poista arkaluonteiset tiedot pysyvasti <a href="#/redact-pdf">PDF-peittamistyokalulla</a>. Peittettya sisaltoa ei voida palauttaa.</li>
+<li><strong>Litistaminen</strong> — kayta <a href="#/flatten-pdf">PDF-litistystyokalua</a> lomakekenttien ja merkintöjen muuntamiseen staattiseksi sisalloksi ennen jakamista.</li>
 </ol>
 <h2>Yleisia valtettavia virheita</h2>
 <ul>
@@ -482,11 +482,11 @@ export const blogPostsFi: BlogPost[] = [
 <p>Lataa yksinkertaisesti useita PDF-tiedostoja mihin tahansa tuettuun tyokaluun. Jokainen tiedosto kasitellaan itsenaisesti ja voit ladata kaikki tulokset yksittain tai ZIP-arkistona.</p>
 <h2>Erakasittelya tukevat tyokalut</h2>
 <ul>
-<li><strong><a href="/#/compress-pdf">Pakkaa PDF</a></strong> — pienenna useiden asiakirjojen kokoa kerralla</li>
-<li><strong><a href="/#/rotate-pdf">Kierra PDF</a></strong> — korjaa suunta skannattujen tiedostojen eralle</li>
-<li><strong><a href="/#/grayscale-pdf">Harmaasavy-PDF</a></strong> — muunna useita variasiakirjoja mustavalkoisiksi</li>
-<li><strong><a href="/#/pdf-to-jpg">PDF JPG:ksi</a></strong> / <strong><a href="/#/pdf-to-png">PDF PNG:ksi</a></strong> — muunna useita PDF-tiedostoja kuviksi</li>
-<li><strong><a href="/#/flatten-pdf">Litista PDF</a></strong>, <strong><a href="/#/resize-pdf">Muuta kokoa</a></strong>, <strong><a href="/#/page-numbers">Sivunumerot</a></strong> ja muita</li>
+<li><strong><a href="#/compress-pdf">Pakkaa PDF</a></strong> — pienenna useiden asiakirjojen kokoa kerralla</li>
+<li><strong><a href="#/rotate-pdf">Kierra PDF</a></strong> — korjaa suunta skannattujen tiedostojen eralle</li>
+<li><strong><a href="#/grayscale-pdf">Harmaasavy-PDF</a></strong> — muunna useita variasiakirjoja mustavalkoisiksi</li>
+<li><strong><a href="#/pdf-to-jpg">PDF JPG:ksi</a></strong> / <strong><a href="#/pdf-to-png">PDF PNG:ksi</a></strong> — muunna useita PDF-tiedostoja kuviksi</li>
+<li><strong><a href="#/flatten-pdf">Litista PDF</a></strong>, <strong><a href="#/resize-pdf">Muuta kokoa</a></strong>, <strong><a href="#/page-numbers">Sivunumerot</a></strong> ja muita</li>
 </ul>
 <h2>Suorituskyky</h2>
 <p>Kaikki kasittely tapahtuu paikallisesti laitteellasi, joten nopeus riippuu tietokoneestasi. Useimmat toiminnot valmistuvat sekunneissa jopa suurille erille.</p>`,
@@ -502,10 +502,10 @@ export const blogPostsFi: BlogPost[] = [
         body: `<p>Verkkokatselua tai latausta varten tarkoitetut PDF-tiedostot taytyy optimoida nopeaa latautumista ja nayttoluettavuutta varten.</p>
 <h2>Optimointistrategiat</h2>
 <ol>
-<li><strong>Pakkaaminen</strong> — kayta <a href="/#/compress-pdf">PDF-pakkaustyokalua</a> keskitason tai korkean pakkauksen kanssa tiedostokoon merkittavaan pienentamiseen</li>
-<li><strong>Koon muuttaminen</strong> — saada sivumittoja <a href="/#/resize-pdf">PDF-koon muutostyokalulla</a> vastaamaan yleisia nayttokokoja</li>
-<li><strong>Muuntaminen kuviksi</strong> — yksinkertaista katselua varten muunna sivut JPG-muotoon kayttamalla <a href="/#/pdf-to-jpg">PDF JPG:ksi</a> nopeampaa verkkolatausta varten</li>
-<li><strong>Harmaasavy</strong> — jos vari ei ole valttamaton, <a href="/#/grayscale-pdf">Harmaasavy-PDF</a> pienentaa tiedostokokoa entisestaan</li>
+<li><strong>Pakkaaminen</strong> — kayta <a href="#/compress-pdf">PDF-pakkaustyokalua</a> keskitason tai korkean pakkauksen kanssa tiedostokoon merkittavaan pienentamiseen</li>
+<li><strong>Koon muuttaminen</strong> — saada sivumittoja <a href="#/resize-pdf">PDF-koon muutostyokalulla</a> vastaamaan yleisia nayttokokoja</li>
+<li><strong>Muuntaminen kuviksi</strong> — yksinkertaista katselua varten muunna sivut JPG-muotoon kayttamalla <a href="#/pdf-to-jpg">PDF JPG:ksi</a> nopeampaa verkkolatausta varten</li>
+<li><strong>Harmaasavy</strong> — jos vari ei ole valttamaton, <a href="#/grayscale-pdf">Harmaasavy-PDF</a> pienentaa tiedostokokoa entisestaan</li>
 </ol>
 <h2>Tiedostokoko-ohjeet</h2>
 <ul>
@@ -533,7 +533,7 @@ export const blogPostsFi: BlogPost[] = [
 <li><strong>Ei tiedostokokorajoituksia</strong> — tietokoneesi muisti on ainoa rajoitus</li>
 </ul>
 <h2>Kaytettavissa olevat tyokalut</h2>
-<p>Kaikki 22 tyokalua toimivat offline-tilassa: <a href="/#/merge-pdf">yhdistamisesta</a> ja <a href="/#/compress-pdf">pakkaamisesta</a> <a href="/#/sign-pdf">allekirjoittamiseen</a> ja <a href="/#/redact-pdf">peittamiseen</a>. Jokainen toiminto suoritetaan paikallisesti, jolloin sinulla on taysi hallinta tietoihisi.</p>`,
+<p>Kaikki 22 tyokalua toimivat offline-tilassa: <a href="#/merge-pdf">yhdistamisesta</a> ja <a href="#/compress-pdf">pakkaamisesta</a> <a href="#/sign-pdf">allekirjoittamiseen</a> ja <a href="#/redact-pdf">peittamiseen</a>. Jokainen toiminto suoritetaan paikallisesti, jolloin sinulla on taysi hallinta tietoihisi.</p>`,
         date: '2025-08-12',
         tool: 'compress-pdf',
         tags: ['yksityisyys', 'ilmainen', 'offline'],
@@ -546,11 +546,11 @@ export const blogPostsFi: BlogPost[] = [
         body: `<p>Ennen PDF:n lahettamista tulostettavaksi muutama saato voi taata parhaat tulokset ja valttaa yleiset tulostusongelmat.</p>
 <h2>Tulostuksen valmisteluohje</h2>
 <ol>
-<li><strong>Muuta sivukokoa</strong> — kayta <a href="/#/resize-pdf">PDF-koon muutostyokalua</a> vastaamaan kohdepaperikokoa (A4, Letter, A3)</li>
-<li><strong>Rajaa marginaalit</strong> — poista ylimaarainen tyhjä tila <a href="/#/crop-pdf">PDF-rajaustyokalulla</a></li>
-<li><strong>Muunna harmaasavyksi</strong> — jos tulostat mustavalkoisena, kayta <a href="/#/grayscale-pdf">Harmaasavy-PDF:aa</a> tuloksen esikatseluun ja musteen saastamiseen</li>
-<li><strong>Litista lomakkeet</strong> — varmista, etta lomaketiedot tulostuvat oikein <a href="/#/flatten-pdf">litistamalla PDF</a></li>
-<li><strong>Pakkaa</strong> — jos lahetat tulostuspalveluun, <a href="/#/compress-pdf">pakkaa</a> matalilla asetuksilla siirtoajan lyhentamiseksi</li>
+<li><strong>Muuta sivukokoa</strong> — kayta <a href="#/resize-pdf">PDF-koon muutostyokalua</a> vastaamaan kohdepaperikokoa (A4, Letter, A3)</li>
+<li><strong>Rajaa marginaalit</strong> — poista ylimaarainen tyhjä tila <a href="#/crop-pdf">PDF-rajaustyokalulla</a></li>
+<li><strong>Muunna harmaasavyksi</strong> — jos tulostat mustavalkoisena, kayta <a href="#/grayscale-pdf">Harmaasavy-PDF:aa</a> tuloksen esikatseluun ja musteen saastamiseen</li>
+<li><strong>Litista lomakkeet</strong> — varmista, etta lomaketiedot tulostuvat oikein <a href="#/flatten-pdf">litistamalla PDF</a></li>
+<li><strong>Pakkaa</strong> — jos lahetat tulostuspalveluun, <a href="#/compress-pdf">pakkaa</a> matalilla asetuksilla siirtoajan lyhentamiseksi</li>
 </ol>
 <h2>Yleiset tulostusongelmat</h2>
 <ul>
@@ -570,8 +570,8 @@ export const blogPostsFi: BlogPost[] = [
         body: `<p>Interaktiivisia PDF-lomakkeita, joissa on taytettavia kenttia, kaytetaan yleisesti hakemuksiin, kyselyihin ja virallisiin asiakirjoihin. Niiden oikean kasittelyn ymmartaminen saastaa aikaa ja ehkaisee ongelmia.</p>
 <h2>Lomakkeen tyonkulku</h2>
 <ol>
-<li><strong>Taytta</strong> — tayta lomakekentat PDF-katseluohjelmassasi tai kayta <a href="/#/edit-pdf">PDF-muokkaustyokalua</a> tekstin lisaamiseen suoraan sivulle</li>
-<li><strong>Litista</strong> — kayta <a href="/#/flatten-pdf">PDF-litistystyokalua</a> interaktiivisten kenttien muuntamiseen staattiseksi sisalloksi, lukiten syotteesi</li>
+<li><strong>Taytta</strong> — tayta lomakekentat PDF-katseluohjelmassasi tai kayta <a href="#/edit-pdf">PDF-muokkaustyokalua</a> tekstin lisaamiseen suoraan sivulle</li>
+<li><strong>Litista</strong> — kayta <a href="#/flatten-pdf">PDF-litistystyokalua</a> interaktiivisten kenttien muuntamiseen staattiseksi sisalloksi, lukiten syotteesi</li>
 <li><strong>Jaa</strong> — jaa litistetty PDF tietaen, etta vastaanottajat eivat voi muokata tietojasi</li>
 </ol>
 <h2>Miksi litistaa ennen jakamista?</h2>
@@ -580,7 +580,7 @@ export const blogPostsFi: BlogPost[] = [
 <li>Varmistaa, etta asiakirja nayttaa samalta jokaisessa PDF-katseluohjelmassa</li>
 <li>Sailyttaa taytetyn lomakkeen pitkaaikaisarkistointia varten</li>
 </ul>
-<p>Lisaksi turvallisuutta varten <a href="/#/protect-pdf">salasanasuojaa</a> litistetty PDF ennen jakamista.</p>`,
+<p>Lisaksi turvallisuutta varten <a href="#/protect-pdf">salasanasuojaa</a> litistetty PDF ennen jakamista.</p>`,
         date: '2026-02-05',
         tool: 'flatten-pdf',
         tags: ['lomakkeet', 'litistaminen', 'tayttaminen'],
@@ -598,7 +598,7 @@ export const blogPostsFi: BlogPost[] = [
 <li>Ei lapinakvyystukea</li>
 <li>Paras: jakamiseen, sahkopostiin, sosiaaliseen mediaan, kuvarikkaisiin PDF-tiedostoihin</li>
 </ul>
-<p>Kayta <a href="/#/pdf-to-jpg">PDF JPG:ksi</a> -tyokalua useimpiin yleisiin muunnoksiin.</p>
+<p>Kayta <a href="#/pdf-to-jpg">PDF JPG:ksi</a> -tyokalua useimpiin yleisiin muunnoksiin.</p>
 <h2>PNG — paras grafiikkoihin ja lapinakvyyteen</h2>
 <ul>
 <li>Suuremmat tiedostot haviottoman pakkauksen vuoksi</li>
@@ -606,7 +606,7 @@ export const blogPostsFi: BlogPost[] = [
 <li>Tukee lapinakyvia taustoja</li>
 <li>Paras: kaavioihin, nayttokuviin, verkkografiikkoihin, esityksiin</li>
 </ul>
-<p>Kayta <a href="/#/pdf-to-png">PDF PNG:ksi</a> -tyokalua, kun laatu ja lapinakvyys ovat tarkeita.</p>
+<p>Kayta <a href="#/pdf-to-png">PDF PNG:ksi</a> -tyokalua, kun laatu ja lapinakvyys ovat tarkeita.</p>
 <h2>Nopea paatoksenteko-opas</h2>
 <p>Tarvitsetko pienia tiedostoja verkkoa tai sahkopostia varten? Valitse JPG. Tarvitsetko taydellista laatua tai lapinakyvia taustoja? Valitse PNG.</p>`,
         date: '2025-07-25',
@@ -621,11 +621,11 @@ export const blogPostsFi: BlogPost[] = [
         body: `<p>Toimistot kasittelevat paivittain satoja PDF-asiakirjoja — laskuja, sopimuksia, raportteja ja kirjeenvaihtoa. Tehokas PDF-hallinta saastaa tunteja tyota.</p>
 <h2>Yleiset toimistotehtavat</h2>
 <ul>
-<li><strong>Raporttien yhdistaminen</strong> — kayta <a href="/#/merge-pdf">PDF-yhdistamista</a> kuukausiraporttien kokoamiseen neljännesvuosikatsauksiksi</li>
-<li><strong>Asiakirjojen jarjestaminen</strong> — <a href="/#/organize-pdf">jarjesta, poista tai kopioi sivuja</a> pitkien asiakirjojen uudelleenrakenteellistamiseksi</li>
-<li><strong>Sivutuksen lisaaminen</strong> — lisaa <a href="/#/page-numbers">sivunumerot</a> tai <a href="/#/header-footer">ylatunnisteet ja alatunnisteet</a> ammattimaiseen esitykseen</li>
-<li><strong>Tiedostojen suojaaminen</strong> — <a href="/#/protect-pdf">salasanasuojaa</a> luottamukselliset asiakirjat ennen jakelua</li>
-<li><strong>Pakkaaminen sahkopostia varten</strong> — <a href="/#/compress-pdf">pienenna tiedostokokoa</a> sahkopostiliitteiden kokorajoitusten tayttamiseksi</li>
+<li><strong>Raporttien yhdistaminen</strong> — kayta <a href="#/merge-pdf">PDF-yhdistamista</a> kuukausiraporttien kokoamiseen neljännesvuosikatsauksiksi</li>
+<li><strong>Asiakirjojen jarjestaminen</strong> — <a href="#/organize-pdf">jarjesta, poista tai kopioi sivuja</a> pitkien asiakirjojen uudelleenrakenteellistamiseksi</li>
+<li><strong>Sivutuksen lisaaminen</strong> — lisaa <a href="#/page-numbers">sivunumerot</a> tai <a href="#/header-footer">ylatunnisteet ja alatunnisteet</a> ammattimaiseen esitykseen</li>
+<li><strong>Tiedostojen suojaaminen</strong> — <a href="#/protect-pdf">salasanasuojaa</a> luottamukselliset asiakirjat ennen jakelua</li>
+<li><strong>Pakkaaminen sahkopostia varten</strong> — <a href="#/compress-pdf">pienenna tiedostokokoa</a> sahkopostiliitteiden kokorajoitusten tayttamiseksi</li>
 </ul>
 <h2>Tyonkulkuvinkki</h2>
 <p>Aloita yhdistamalla aiheeseen liittyvat tiedostot, jarjesta sitten sivut, lisaa sivunumerot ja lopuksi pakkaa tulos jakelua varten.</p>`,
@@ -645,14 +645,14 @@ export const blogPostsFi: BlogPost[] = [
 <li>Portfolion tai kansion kokoaminen yksittaisista tiedostoista</li>
 <li>Eri istunnoista skannattujen sivujen yhdistaminen</li>
 </ul>
-<p>Kayta <a href="/#/merge-pdf">PDF-yhdistamistyokalua</a> vetaaksesi, pudottaaksesi ja jarjestaaksesi tiedostosi ennen niiden yhdistamista.</p>
+<p>Kayta <a href="#/merge-pdf">PDF-yhdistamistyokalua</a> vetaaksesi, pudottaaksesi ja jarjestaaksesi tiedostosi ennen niiden yhdistamista.</p>
 <h2>Milloin jakaa</h2>
 <ul>
 <li>Tiettyjen sivujen poimiminen suuresta asiakirjasta</li>
 <li>Kirjan jakaminen yksittaisiin lukuihin</li>
 <li>Usean laskun PDF:n erottaminen yksittaisiksi laskuiksi</li>
 </ul>
-<p><a href="/#/split-pdf">PDF-jakamistyokalu</a> tukee seka kaikkien sivujen jakamista etta tiettyjen sivualueiden poimimista.</p>
+<p><a href="#/split-pdf">PDF-jakamistyokalu</a> tukee seka kaikkien sivujen jakamista etta tiettyjen sivualueiden poimimista.</p>
 <h2>Molempien toimintojen yhdistaminen</h2>
 <p>Tarvitsetko sivuja useista asiakirjoista? Jaa ensin jokainen lahdetiedosto tarvitsemiesi sivujen poimimiseksi ja yhdista sitten poimitut sivut lopulliseksi asiakirjaksi.</p>`,
         date: '2026-03-01',
@@ -672,7 +672,7 @@ export const blogPostsFi: BlogPost[] = [
 <li><strong>Tulostusvalmis</strong> — PDF-tiedostot on suunniteltu seka naytto- etta tulostuskayttoon</li>
 </ul>
 <h2>Kuinka se toimii</h2>
-<p><a href="/#/markdown-to-pdf">Markdown PDF:ksi -tyokalu</a> renderoi Markdown-sisaltosi taydella tuella otsikoille, listoille, koodilohkoille, taulukoille ja muulle. Liita tai kirjoita yksinkertaisesti Markdownisi, esikatsele tulos ja lataa PDF.</p>
+<p><a href="#/markdown-to-pdf">Markdown PDF:ksi -tyokalu</a> renderoi Markdown-sisaltosi taydella tuella otsikoille, listoille, koodilohkoille, taulukoille ja muulle. Liita tai kirjoita yksinkertaisesti Markdownisi, esikatsele tulos ja lataa PDF.</p>
 <h2>Tuetut Markdown-ominaisuudet</h2>
 <p>Muunnin kasittelee kaiken standardi Markdown-syntaksin, mukaan lukien lihavointi, kursiivi, linkit, kuvat, lainaukset, jarjestetyt ja jarjestamattömat listat, koodilohkot syntaksikorostuksella ja taulukot. Sisaltosi kasitellaan taysin selaimessa tayden yksityisyyden takaamiseksi.</p>`,
         date: '2026-03-05',
@@ -687,7 +687,7 @@ export const blogPostsFi: BlogPost[] = [
         body: `<p>Asiakirjojen digitaalinen allekirjoittaminen on tullut valttamattomaksi nykypaivan etaiyoymparistossa. Mutta sahkoisten allekirjoitusten ja digitaalisten allekirjoitusten valilla on tarkea ero.</p>
 <h2>Sahkoiset allekirjoitukset</h2>
 <p>Sahkoinen allekirjoitus on mika tahansa merkki, symboli tai prosessi, joka on liitetty asiakirjaan osoittamaan suostumusta. Tama sisaltaa kirjoitetut nimet, skannatut kasinallekirjoitukset tai piirretyt allekirjoitukset.</p>
-<p><a href="/#/sign-pdf">PDF-allekirjoitustyokalu</a> mahdollistaa sahkoisten allekirjoitusten luomisen piirtamalla, kirjoittamalla tai lataamalla kuvan allekirjoituksestasi — kaikki kasitellaan paikallisesti selaimessasi.</p>
+<p><a href="#/sign-pdf">PDF-allekirjoitustyokalu</a> mahdollistaa sahkoisten allekirjoitusten luomisen piirtamalla, kirjoittamalla tai lataamalla kuvan allekirjoituksestasi — kaikki kasitellaan paikallisesti selaimessasi.</p>
 <h2>Digitaaliset allekirjoitukset</h2>
 <p>Digitaaliset allekirjoitukset kayttavat kryptografista tekniikkaa allekirjoittajan henkilollisyyden todentamiseen ja sen varmistamiseen, ettei asiakirjaa ole peukaloitu. Ne vaativat digitaalisen sertifikaatin luotetulta viranomaiselta.</p>
 <h2>Kumpaa sinun tulisi kayttaa?</h2>
@@ -710,8 +710,8 @@ export const blogPostsFi: BlogPost[] = [
 <li><strong>Riittava kontrasti</strong> — varmista, etta tekstilla on riittava kontrasti taustaa vasten</li>
 </ul>
 <h2>Auttavat tyokalut</h2>
-<p><a href="/#/edit-pdf">PDF-muokkaustyokalu</a> antaa lisata tekstimerkintoja ja tunnisteita asiakirjoihisi. Kayta sita kuvien laheisyyteen kuvailevan tekstin lisaamiseen tai monimutkaisten kaavioiden selventamiseen.</p>
-<p>Skannattuja asiakirjoja varten kayta <a href="/#/pdf-to-text">PDF tekstiksi -tyokalua</a> varmistaaksesi, etta tekstisisalto on oikein poimittavissa, mika on oleellista naytönlukijoille.</p>
+<p><a href="#/edit-pdf">PDF-muokkaustyokalu</a> antaa lisata tekstimerkintoja ja tunnisteita asiakirjoihisi. Kayta sita kuvien laheisyyteen kuvailevan tekstin lisaamiseen tai monimutkaisten kaavioiden selventamiseen.</p>
+<p>Skannattuja asiakirjoja varten kayta <a href="#/pdf-to-text">PDF tekstiksi -tyokalua</a> varmistaaksesi, etta tekstisisalto on oikein poimittavissa, mika on oleellista naytönlukijoille.</p>
 <h2>Saavutettavuuden testaaminen</h2>
 <p>Testaa PDF-tiedostosi aina naytönlukijalla ennen niiden jakelua. Yksinkertaisiin tarkistuksiin kuuluu sen varmistaminen, etta teksti voidaan valita ja kopioida, ja etta lukujarjestys on looginen.</p>`,
         date: '2026-01-22',
@@ -734,9 +734,9 @@ export const blogPostsFi: BlogPost[] = [
 <h2>Selainpohjaisten tyokalujen edut</h2>
 <p>Toisin kuin asennettu ohjelmisto, selainpohjaiset PDF-tyokalut kuten <a href="/">PDF Worker</a> eivat vaadi asennusta tai paivityksia. Avaa valilehti, kasittele tiedostosi ja jatka eteenpain. Ei lisenssimaksuja, ei yhteensopivuusongelmia.</p>
 <h2>Erakasittely</h2>
-<p>Monet tyokalut tukevat useiden tiedostojen kasittelya kerralla. Lataa useita PDF-tiedostoja <a href="/#/compress-pdf">PDF-pakkaustyokaluun</a> ja lataa kaikki tulokset yhdessa ZIP-tiedostona. Sama patee <a href="/#/rotate-pdf">kiertoon</a>, <a href="/#/grayscale-pdf">harmaasavymuunnokseen</a> ja muihin toimintoihin.</p>
+<p>Monet tyokalut tukevat useiden tiedostojen kasittelya kerralla. Lataa useita PDF-tiedostoja <a href="#/compress-pdf">PDF-pakkaustyokaluun</a> ja lataa kaikki tulokset yhdessa ZIP-tiedostona. Sama patee <a href="#/rotate-pdf">kiertoon</a>, <a href="#/grayscale-pdf">harmaasavymuunnokseen</a> ja muihin toimintoihin.</p>
 <h2>Toimintojen ketjuttaminen</h2>
-<p>Monimutkaisiin tyonkulkuihin ketjuta toiminnot: ensin <a href="/#/unlock-pdf">avaa</a> suojattu PDF, sitten <a href="/#/split-pdf">jaa</a> se osioihin, <a href="/#/compress-pdf">pakkaa</a> jokainen osio ja lopuksi <a href="/#/merge-pdf">yhdista</a> tarvitsemasi osat.</p>`,
+<p>Monimutkaisiin tyonkulkuihin ketjuta toiminnot: ensin <a href="#/unlock-pdf">avaa</a> suojattu PDF, sitten <a href="#/split-pdf">jaa</a> se osioihin, <a href="#/compress-pdf">pakkaa</a> jokainen osio ja lopuksi <a href="#/merge-pdf">yhdista</a> tarvitsemasi osat.</p>`,
         date: '2026-02-05',
         tool: 'compress-pdf',
         tags: ['tyonkulku', 'automatisointi', 'tuottavuus'],

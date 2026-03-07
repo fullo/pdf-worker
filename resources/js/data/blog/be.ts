@@ -8,16 +8,16 @@ export const blogPostsBe: BlogPost[] = [
         excerpt: 'Leer hoe ge meerdere PDF-documenten kunt combineren tot een enkel bestand zonder software te installeren. Snel, veilig en helemaal gratis.',
         body: `<p>Het samenvoegen van PDF-bestanden is een van de meest voorkomende taken bij het werken met documenten. Of ge nu rapporten, contracten of presentaties moet combineren, een betrouwbare tool maakt het verschil.</p>
 <h2>Waarom PDF's online samenvoegen?</h2>
-<p>Traditionele desktopsoftware kan duur zijn en vereist vaak installatie. Met de <a href="/#/merge-pdf">PDF Samenvoegen-tool van PDF Worker</a> kunt ge bestanden rechtstreeks in uw browser combineren — geen uploads, geen servers, volledige privacy.</p>
+<p>Traditionele desktopsoftware kan duur zijn en vereist vaak installatie. Met de <a href="#/merge-pdf">PDF Samenvoegen-tool van PDF Worker</a> kunt ge bestanden rechtstreeks in uw browser combineren — geen uploads, geen servers, volledige privacy.</p>
 <h2>Stap-voor-stap handleiding</h2>
 <ol>
-<li>Open de <a href="/#/merge-pdf">PDF Samenvoegen</a>-tool</li>
+<li>Open de <a href="#/merge-pdf">PDF Samenvoegen</a>-tool</li>
 <li>Sleep uw PDF-bestanden of klik om te bladeren</li>
 <li>Herschik de bestanden door ze in de gewenste volgorde te slepen</li>
 <li>Klik op "PDF Samenvoegen" en download uw gecombineerd document</li>
 </ol>
 <h2>Tips voor het beste resultaat</h2>
-<p>Zorg ervoor dat geen van uw PDF's met een wachtwoord beveiligd is voor het samenvoegen. Als dat wel zo is, gebruik dan eerst de <a href="/#/unlock-pdf">PDF Ontgrendelen</a>-tool om de beveiliging te verwijderen.</p>
+<p>Zorg ervoor dat geen van uw PDF's met een wachtwoord beveiligd is voor het samenvoegen. Als dat wel zo is, gebruik dan eerst de <a href="#/unlock-pdf">PDF Ontgrendelen</a>-tool om de beveiliging te verwijderen.</p>
 <p>Voor grote aantallen bestanden verwerkt de tool tientallen documenten efficient, aangezien alle verwerking lokaal op uw toestel gebeurt.</p>`,
         date: '2023-06-15',
         tool: 'merge-pdf',
@@ -30,7 +30,7 @@ export const blogPostsBe: BlogPost[] = [
         excerpt: 'Verklein de PDF-bestandsgrootte zonder kwaliteitsverlies. Drie compressieniveaus om grootte en helderheid in evenwicht te brengen voor e-mail, web of archivering.',
         body: `<p>Grote PDF-bestanden kunnen problematisch zijn bij het delen via e-mail of het uploaden naar websites. Compressie helpt om de bestandsgrootte te verkleinen met behoud van aanvaardbare kwaliteit.</p>
 <h2>Compressieniveaus begrijpen</h2>
-<p>De <a href="/#/compress-pdf">PDF Comprimeren-tool</a> biedt drie niveaus:</p>
+<p>De <a href="#/compress-pdf">PDF Comprimeren-tool</a> biedt drie niveaus:</p>
 <ul>
 <li><strong>Lage compressie</strong> — minimale verkleining, bijna originele kwaliteit</li>
 <li><strong>Medium compressie</strong> — goeie balans tussen grootte en kwaliteit</li>
@@ -50,7 +50,7 @@ export const blogPostsBe: BlogPost[] = [
         excerpt: 'Extraheer individuele paginas of paginabereiken uit PDF-documenten. Download elke pagina apart of als een ZIP-archief.',
         body: `<p>Soms hebt ge maar een paar paginas nodig uit een groot PDF-document. Splitsen laat u toe om precies te extraheren wat ge nodig hebt.</p>
 <h2>Twee splitsmethoden</h2>
-<p>De <a href="/#/split-pdf">PDF Splitsen-tool</a> biedt twee benaderingen:</p>
+<p>De <a href="#/split-pdf">PDF Splitsen-tool</a> biedt twee benaderingen:</p>
 <ul>
 <li><strong>Alle paginas splitsen</strong> — extraheert elke pagina als een individueel PDF-bestand</li>
 <li><strong>Paginabereik</strong> — geef exacte paginas op zoals "1-3, 5, 7-9"</li>
@@ -69,7 +69,7 @@ export const blogPostsBe: BlogPost[] = [
         excerpt: 'Draai gescande documenten of corrigeer ondersteboven staande paginas. Ondersteunt 90, 180 en 270 graden rotatie voor alle paginas.',
         body: `<p>Gescande documenten komen dikwijls terecht met de verkeerde orientatie. Een snelle rotatiecorrectie maakt ze opnieuw leesbaar.</p>
 <h2>Rotatiemogelijkheden</h2>
-<p>De <a href="/#/rotate-pdf">PDF Draaien-tool</a> ondersteunt drie rotatiehoeken:</p>
+<p>De <a href="#/rotate-pdf">PDF Draaien-tool</a> ondersteunt drie rotatiehoeken:</p>
 <ul>
 <li><strong>90 graden met de klok mee</strong> — voor liggende paginas die staand moeten zijn</li>
 <li><strong>180 graden</strong> — voor scans die ondersteboven staan</li>
@@ -77,7 +77,7 @@ export const blogPostsBe: BlogPost[] = [
 </ul>
 <h2>Veelvoorkomende toepassingen</h2>
 <p>Scans van gsm's, gefotokopieerde documenten en gefaxte PDF's hebben dikwijls rotatie nodig. De tool past de rotatie op alle paginas tegelijk toe, wat u tijd bespaart.</p>
-<p>Voor meer gedetailleerde controle over individuele paginas kunt ge de <a href="/#/organize-pdf">PDF Ordenen</a>-tool gebruiken waarmee ge paginas individueel kunt beheren.</p>`,
+<p>Voor meer gedetailleerde controle over individuele paginas kunt ge de <a href="#/organize-pdf">PDF Ordenen</a>-tool gebruiken waarmee ge paginas individueel kunt beheren.</p>`,
         date: '2022-08-12',
         tool: 'rotate-pdf',
         tags: ['draaien', 'orientatie', 'scan'],
@@ -89,7 +89,7 @@ export const blogPostsBe: BlogPost[] = [
         excerpt: 'Bescherm uw documenten met tekst- of afbeeldingswatermerken. Pas positie, transparantie, grootte en rotatie aan.',
         body: `<p>Watermerken helpen om intellectueel eigendom te beschermen en documenten te markeren als vertrouwelijk, ontwerp of eigendomsrechtelijk beschermd.</p>
 <h2>Tekst- vs. afbeeldingswatermerken</h2>
-<p>De <a href="/#/watermark-pdf">Watermerk-tool</a> ondersteunt beide types:</p>
+<p>De <a href="#/watermark-pdf">Watermerk-tool</a> ondersteunt beide types:</p>
 <ul>
 <li><strong>Tekstwatermerken</strong> — voeg woorden toe zoals "VERTROUWELIJK" of "ONTWERP" met aangepaste lettergrootte, kleur en rotatie</li>
 <li><strong>Afbeeldingswatermerken</strong> — plaats uw bedrijfslogo of stempel met instelbare transparantie en grootte</li>
@@ -107,14 +107,14 @@ export const blogPostsBe: BlogPost[] = [
         excerpt: 'Zet elke PDF-pagina om naar een JPG-afbeelding van hoge kwaliteit. Pas kwaliteitsinstellingen aan voor de perfecte balans tussen grootte en helderheid.',
         body: `<p>PDF-paginas converteren naar afbeeldingen is handig voor presentaties, posts op sociale media, of wanneer ge PDF-inhoud in andere documenten moet inbedden.</p>
 <h2>Kwaliteitsinstellingen</h2>
-<p>De <a href="/#/pdf-to-jpg">PDF naar JPG-tool</a> laat u toe de beeldkwaliteit aan te passen van 10% tot 100%. Hogere kwaliteit betekent grotere bestanden maar scherpere afbeeldingen.</p>
+<p>De <a href="#/pdf-to-jpg">PDF naar JPG-tool</a> laat u toe de beeldkwaliteit aan te passen van 10% tot 100%. Hogere kwaliteit betekent grotere bestanden maar scherpere afbeeldingen.</p>
 <h2>Aanbevolen instellingen</h2>
 <ul>
 <li><strong>80%</strong> — best voor de meeste toepassingen, goeie kwaliteit met redelijke bestandsgrootte</li>
 <li><strong>100%</strong> — maximale kwaliteit voor drukwerk of professioneel gebruik</li>
 <li><strong>50-60%</strong> — kleinere bestanden voor web of e-mail</li>
 </ul>
-<p>Elke pagina wordt een apart JPG-bestand. Download ze individueel of als een ZIP-archief. Voor transparante achtergronden kunt ge de <a href="/#/pdf-to-png">PDF naar PNG</a>-converter overwegen.</p>`,
+<p>Elke pagina wordt een apart JPG-bestand. Download ze individueel of als een ZIP-archief. Voor transparante achtergronden kunt ge de <a href="#/pdf-to-png">PDF naar PNG</a>-converter overwegen.</p>`,
         date: '2021-05-18',
         tool: 'pdf-to-jpg',
         tags: ['converteren', 'jpg', 'afbeeldingen'],
@@ -126,7 +126,7 @@ export const blogPostsBe: BlogPost[] = [
         excerpt: 'Converteer meerdere afbeeldingen naar een enkel PDF-document. Kies orientatie, marges en paginalay-out.',
         body: `<p>Moet ge fotos, scans of schermafbeeldingen samenbrengen in een enkel document? Afbeeldingen converteren naar PDF creert een professioneel, gemakkelijk deelbaar bestand.</p>
 <h2>Ondersteunde formaten</h2>
-<p>De <a href="/#/jpg-to-pdf">JPG naar PDF-tool</a> aanvaardt JPG, JPEG, PNG en WebP-afbeeldingen. Meng verschillende formaten in een enkele conversie.</p>
+<p>De <a href="#/jpg-to-pdf">JPG naar PDF-tool</a> aanvaardt JPG, JPEG, PNG en WebP-afbeeldingen. Meng verschillende formaten in een enkele conversie.</p>
 <h2>Lay-outopties</h2>
 <ul>
 <li><strong>Orientatie</strong> — kies staand of liggend</li>
@@ -144,14 +144,14 @@ export const blogPostsBe: BlogPost[] = [
         excerpt: 'Beveilig uw PDF-bestanden met gebruikers- en eigenaarswachtwoorden. Beheer rechten voor afdrukken, kopieren en wijzigen.',
         body: `<p>Gevoelige documenten beveiligen met wachtwoorden voorkomt ongeautoriseerde toegang en beheert wat ontvangers met het bestand kunnen doen.</p>
 <h2>Gebruikers- vs. eigenaarswachtwoord</h2>
-<p>De <a href="/#/protect-pdf">PDF Beveiligen-tool</a> ondersteunt twee soorten wachtwoorden:</p>
+<p>De <a href="#/protect-pdf">PDF Beveiligen-tool</a> ondersteunt twee soorten wachtwoorden:</p>
 <ul>
 <li><strong>Gebruikerswachtwoord</strong> — vereist om het document te openen en te bekijken</li>
 <li><strong>Eigenaarswachtwoord</strong> — beheert rechten voor afdrukken, kopieren en bewerken</li>
 </ul>
 <h2>Rechtenbeheer</h2>
 <p>Ge kunt afdrukken, tekst kopieren en het document wijzigen toelaten of beperken. Dit is handig voor de verspreiding van alleen-lezen rapporten of contracten.</p>
-<p>Moet ge de beveiliging later verwijderen? Gebruik de <a href="/#/unlock-pdf">PDF Ontgrendelen</a>-tool met het correcte wachtwoord.</p>`,
+<p>Moet ge de beveiliging later verwijderen? Gebruik de <a href="#/unlock-pdf">PDF Ontgrendelen</a>-tool met het correcte wachtwoord.</p>`,
         date: '2023-09-10',
         tool: 'protect-pdf',
         tags: ['beveiligen', 'wachtwoord', 'veiligheid'],
@@ -163,7 +163,7 @@ export const blogPostsBe: BlogPost[] = [
         excerpt: 'Ontgrendel wachtwoordbeveiligde PDF-bestanden als ge het wachtwoord kent. Verwijder beperkingen op afdrukken en kopieren.',
         body: `<p>Als ge het wachtwoord hebt van een beveiligde PDF, kunt ge de beperking verwijderen om het document vrij toegankelijk te maken.</p>
 <h2>Hoe het werkt</h2>
-<p>De <a href="/#/unlock-pdf">PDF Ontgrendelen-tool</a> neemt uw beveiligde PDF en het correcte wachtwoord, en produceert dan een onbeveiligde kopie. Het originele bestand blijft ongewijzigd.</p>
+<p>De <a href="#/unlock-pdf">PDF Ontgrendelen-tool</a> neemt uw beveiligde PDF en het correcte wachtwoord, en produceert dan een onbeveiligde kopie. Het originele bestand blijft ongewijzigd.</p>
 <h2>Belangrijke opmerkingen</h2>
 <ul>
 <li>Ge moet het correcte wachtwoord kennen — deze tool kraakt of omzeilt geen wachtwoorden</li>
@@ -181,14 +181,14 @@ export const blogPostsBe: BlogPost[] = [
         excerpt: 'Beheer PDF-paginas visueel met slepen-en-neerzetten. Herschik paginas, verwijder ongewenste, of dupliceer belangrijke secties.',
         body: `<p>Het beheren van de structuur van een PDF-document is essentieel bij het voorbereiden van rapporten, portfolios of presentaties.</p>
 <h2>Visueel paginabeheer</h2>
-<p>De <a href="/#/organize-pdf">PDF Ordenen-tool</a> toont miniatuurvoorbeelden van elke pagina, zodat ge de structuur van uw document gemakkelijk in een oogopslag kunt zien.</p>
+<p>De <a href="#/organize-pdf">PDF Ordenen-tool</a> toont miniatuurvoorbeelden van elke pagina, zodat ge de structuur van uw document gemakkelijk in een oogopslag kunt zien.</p>
 <h2>Beschikbare acties</h2>
 <ul>
 <li><strong>Herschikken</strong> — sleep paginas om hun positie te wijzigen</li>
 <li><strong>Verwijderen</strong> — verwijder ongewenste paginas (de laatste pagina kan niet verwijderd worden)</li>
 <li><strong>Dupliceren</strong> — maak kopies van belangrijke paginas</li>
 </ul>
-<p>Deze tool werkt uitstekend in combinatie met <a href="/#/merge-pdf">PDF Samenvoegen</a> — voeg eerst meerdere bestanden samen en orden dan de gecombineerde paginas.</p>`,
+<p>Deze tool werkt uitstekend in combinatie met <a href="#/merge-pdf">PDF Samenvoegen</a> — voeg eerst meerdere bestanden samen en orden dan de gecombineerde paginas.</p>`,
         date: '2023-04-22',
         tool: 'organize-pdf',
         tags: ['ordenen', 'herschikken', 'paginas'],
@@ -200,7 +200,7 @@ export const blogPostsBe: BlogPost[] = [
         excerpt: 'Verwijder ongewenste marges of snij PDF-paginas bij om op specifieke inhoud te focussen. Visueel voorbeeld met instelbare bijsnijwaarden.',
         body: `<p>PDF-bestanden hebben dikwijls overmatige marges van afdruklay-outs of gescande randen. Bijsnijden verwijdert deze extra ruimtes.</p>
 <h2>Hoe bij te snijden</h2>
-<p>De <a href="/#/crop-pdf">PDF Bijsnijden-tool</a> biedt een visueel voorbeeld waar ge de randen kunt slepen om het bijsnijgebied te definieren. Stel waarden in voor boven, onder, links en rechts onafhankelijk van mekaar.</p>
+<p>De <a href="#/crop-pdf">PDF Bijsnijden-tool</a> biedt een visueel voorbeeld waar ge de randen kunt slepen om het bijsnijgebied te definieren. Stel waarden in voor boven, onder, links en rechts onafhankelijk van mekaar.</p>
 <h2>Toepassingen</h2>
 <ul>
 <li>Brede printermarges verwijderen van gescande documenten</li>
@@ -219,7 +219,7 @@ export const blogPostsBe: BlogPost[] = [
         excerpt: 'Verwijder permanent vertrouwelijke gegevens uit PDF-bestanden. Zwart tekst, afbeeldingen of inhoud uit die niet gedeeld mag worden.',
         body: `<p>Censureren verwijdert permanent gevoelige informatie uit documenten voor het delen. In tegenstelling tot markeren of bedekken met vormen kan gecensureerde inhoud niet hersteld worden.</p>
 <h2>Hoe censureren werkt</h2>
-<p>De <a href="/#/redact-pdf">PDF Censureren-tool</a> laat u toe zwarte rechthoeken te tekenen over gebieden die ge permanent wilt censureren. De inhoud eronder wordt vernietigd — niet enkel verborgen.</p>
+<p>De <a href="#/redact-pdf">PDF Censureren-tool</a> laat u toe zwarte rechthoeken te tekenen over gebieden die ge permanent wilt censureren. De inhoud eronder wordt vernietigd — niet enkel verborgen.</p>
 <h2>Wat te censureren</h2>
 <ul>
 <li>Persoonlijke informatie (namen, adressen, telefoonnummers)</li>
@@ -240,7 +240,7 @@ export const blogPostsBe: BlogPost[] = [
         excerpt: 'Voeg annotaties, tekstblokken, rechthoeken en vrije tekeningen toe aan uw PDF-documenten zonder desktopsoftware.',
         body: `<p>Moet ge een PDF annoteren, notities toevoegen of een document markeren? De bewerkingstool laat u toe inhoud rechtstreeks op uw PDF-paginas toe te voegen.</p>
 <h2>Beschikbare tools</h2>
-<p>De <a href="/#/edit-pdf">PDF Bewerken-tool</a> biedt verschillende annotatiemogelijkheden:</p>
+<p>De <a href="#/edit-pdf">PDF Bewerken-tool</a> biedt verschillende annotatiemogelijkheden:</p>
 <ul>
 <li><strong>Tekstblokken</strong> — voeg aangepaste tekst toe met instelbare lettergrootte, kleur en achtergrond</li>
 <li><strong>Rechthoeken</strong> — markeer gebieden of maak kaders</li>
@@ -248,7 +248,7 @@ export const blogPostsBe: BlogPost[] = [
 </ul>
 <h2>Tips</h2>
 <p>Dubbelklik op een tekstblok om de inhoud te bewerken. Sleep elementen om ze te herpositioneren. Gebruik meerdere paginas om verschillende secties van het document te annoteren.</p>
-<p>Om specifiek een handtekening toe te voegen is de <a href="/#/sign-pdf">PDF Ondertekenen</a>-tool handiger.</p>`,
+<p>Om specifiek een handtekening toe te voegen is de <a href="#/sign-pdf">PDF Ondertekenen</a>-tool handiger.</p>`,
         date: '2025-01-15',
         tool: 'edit-pdf',
         tags: ['bewerken', 'annoteren', 'tekst'],
@@ -260,7 +260,7 @@ export const blogPostsBe: BlogPost[] = [
         excerpt: 'Voeg uw handtekening toe aan PDF-bestanden. Teken een handtekening of upload een handtekeningafbeelding en positioneer die precies op het document.',
         body: `<p>Documenten digitaal ondertekenen bespaart tijd en papier. Voeg uw handgeschreven handtekening toe aan eender welke PDF in enkele seconden.</p>
 <h2>Twee handtekeningmethoden</h2>
-<p>De <a href="/#/sign-pdf">PDF Ondertekenen-tool</a> biedt twee manieren om te ondertekenen:</p>
+<p>De <a href="#/sign-pdf">PDF Ondertekenen-tool</a> biedt twee manieren om te ondertekenen:</p>
 <ul>
 <li><strong>Tekenen</strong> — gebruik uw muis of touchscreen om uw handtekening te tekenen</li>
 <li><strong>Afbeelding</strong> — upload een PNG- of JPG-afbeelding van uw handtekening</li>
@@ -280,7 +280,7 @@ export const blogPostsBe: BlogPost[] = [
         excerpt: 'Haal alle ingebedde afbeeldingen uit PDF-documenten. Bewaar ze individueel of download alles als een ZIP-archief.',
         body: `<p>PDF-bestanden bevatten dikwijls waardevolle afbeeldingen — fotos, diagrammen, grafieken of logos — die ge misschien elders wilt hergebruiken.</p>
 <h2>Hoe het werkt</h2>
-<p>De <a href="/#/extract-images">Afbeeldingen Extraheren-tool</a> scant uw PDF op alle ingebedde afbeeldingen en extraheert ze als individuele PNG-bestanden.</p>
+<p>De <a href="#/extract-images">Afbeeldingen Extraheren-tool</a> scant uw PDF op alle ingebedde afbeeldingen en extraheert ze als individuele PNG-bestanden.</p>
 <h2>Wat wordt geextraheerd</h2>
 <ul>
 <li>Fotos en illustraties</li>
@@ -288,7 +288,7 @@ export const blogPostsBe: BlogPost[] = [
 <li>Grafieken en diagrammen</li>
 <li>Achtergrondafbeeldingen</li>
 </ul>
-<p>Download elke afbeelding individueel of haal alles in een keer op met de ZIP-downloadoptie. Opmerking: deze tool extraheert ingebedde afbeeldingen, geen gerenderde paginaschermafbeeldingen. Voor volledige pagina-afbeeldingen gebruikt ge <a href="/#/pdf-to-png">PDF naar PNG</a>.</p>`,
+<p>Download elke afbeelding individueel of haal alles in een keer op met de ZIP-downloadoptie. Opmerking: deze tool extraheert ingebedde afbeeldingen, geen gerenderde paginaschermafbeeldingen. Voor volledige pagina-afbeeldingen gebruikt ge <a href="#/pdf-to-png">PDF naar PNG</a>.</p>`,
         date: '2022-12-05',
         tool: 'extract-images',
         tags: ['extraheren', 'afbeeldingen', 'fotos'],
@@ -305,8 +305,8 @@ export const blogPostsBe: BlogPost[] = [
 <li><strong>Indieningsvereisten</strong> — sommige instellingen vereisen zwart-witdocumenten</li>
 <li><strong>Consistentie</strong> — creeer een uniform uiterlijk voor documenten uit verschillende bronnen</li>
 </ul>
-<p>De <a href="/#/grayscale-pdf">Grijstinten PDF-tool</a> converteert alle kleuren naar hun grijstintequivalenten. Tekst blijft scherp en leesbaar, terwijl afbeeldingen en grafieken monochroom worden.</p>
-<p>Om de bestandsgrootte nog verder te verkleinen na grijstintconversie kunt ge het resultaat door de <a href="/#/compress-pdf">PDF Comprimeren</a>-tool halen.</p>`,
+<p>De <a href="#/grayscale-pdf">Grijstinten PDF-tool</a> converteert alle kleuren naar hun grijstintequivalenten. Tekst blijft scherp en leesbaar, terwijl afbeeldingen en grafieken monochroom worden.</p>
+<p>Om de bestandsgrootte nog verder te verkleinen na grijstintconversie kunt ge het resultaat door de <a href="#/compress-pdf">PDF Comprimeren</a>-tool halen.</p>`,
         date: '2023-08-17',
         tool: 'grayscale-pdf',
         tags: ['grijstinten', 'zwart-wit', 'afdrukken'],
@@ -318,14 +318,14 @@ export const blogPostsBe: BlogPost[] = [
         excerpt: 'Voeg automatisch paginanummering toe aan uw PDF. Kies positie, formaat en stijl voor professionele documentpaginering.',
         body: `<p>Paginanummers helpen lezers bij het navigeren door lange documenten en zijn onmisbaar voor professionele rapporten, handleidingen en proefschriften.</p>
 <h2>Nummeringsopties</h2>
-<p>De <a href="/#/page-numbers">Paginanummers-tool</a> biedt flexibele opmaak:</p>
+<p>De <a href="#/page-numbers">Paginanummers-tool</a> biedt flexibele opmaak:</p>
 <ul>
 <li><strong>Positie</strong> — linksonder, middenonder of rechtsonder</li>
 <li><strong>Formaat</strong> — eenvoudig nummer (1, 2, 3) of "pagina/totaal"-formaat (1/10, 2/10)</li>
 </ul>
 <h2>Beste praktijken</h2>
 <p>Middenonder is de meest gangbare positie voor formele documenten. Het "pagina/totaal"-formaat is handig voor juridische documenten waar ontvangers de volledigheid moeten verifieren.</p>
-<p>Voor meer aanpassing biedt de <a href="/#/header-footer">Koptekst en voettekst</a>-tool bijkomende mogelijkheden, waaronder aangepaste tekst.</p>`,
+<p>Voor meer aanpassing biedt de <a href="#/header-footer">Koptekst en voettekst</a>-tool bijkomende mogelijkheden, waaronder aangepaste tekst.</p>`,
         date: '2020-09-30',
         tool: 'page-numbers',
         tags: ['paginanummers', 'paginering', 'nummering'],
@@ -337,7 +337,7 @@ export const blogPostsBe: BlogPost[] = [
         excerpt: 'Wijzig PDF-paginadimensies naar standaard papierformaten. Converteer gemakkelijk tussen A4, A3, Letter en Legal-formaten.',
         body: `<p>Verschillende landen en sectoren gebruiken verschillende papierformaten. Formaatwijziging zorgt ervoor dat uw PDF overeenkomt met het verwachte formaat voor afdrukken of indiening.</p>
 <h2>Ondersteunde formaten</h2>
-<p>De <a href="/#/resize-pdf">PDF Formaat Wijzigen-tool</a> ondersteunt:</p>
+<p>De <a href="#/resize-pdf">PDF Formaat Wijzigen-tool</a> ondersteunt:</p>
 <ul>
 <li><strong>A4</strong> (210 x 297 mm) — de internationale standaard</li>
 <li><strong>A3</strong> (297 x 420 mm) — voor grotere afdrukken en posters</li>
@@ -362,7 +362,7 @@ export const blogPostsBe: BlogPost[] = [
 <li><strong>Compatibiliteit</strong> — sommige PDF-lezers tonen interactieve velden verkeerd</li>
 <li><strong>Afdrukken</strong> — zorg dat formuliergegevens correct verschijnen bij het afdrukken</li>
 </ul>
-<p>De <a href="/#/flatten-pdf">PDF Afvlakken-tool</a> verwerkt het document met een enkele klik. Het resulterende bestand ziet er identiek uit, maar alle interactieve elementen maken nu deel uit van de pagina-inhoud.</p>`,
+<p>De <a href="#/flatten-pdf">PDF Afvlakken-tool</a> verwerkt het document met een enkele klik. Het resulterende bestand ziet er identiek uit, maar alle interactieve elementen maken nu deel uit van de pagina-inhoud.</p>`,
         date: '2025-02-10',
         tool: 'flatten-pdf',
         tags: ['afvlakken', 'formulieren', 'annotaties'],
@@ -374,14 +374,14 @@ export const blogPostsBe: BlogPost[] = [
         excerpt: 'Converteer PDF-inhoud naar platte tekst. Extraheer alle leesbare tekst uit uw PDF voor bewerking, zoeken of gegevensverwerking.',
         body: `<p>Tekst extraheren uit PDF-bestanden is handig om inhoud naar andere documenten te kopieren, door grote bestanden te zoeken, of gegevens uit rapporten te verwerken.</p>
 <h2>Hoe het werkt</h2>
-<p>De <a href="/#/pdf-to-text">PDF naar Tekst-tool</a> leest alle ingebedde tekst uit uw PDF en bewaart die als een plat tekstbestand (.txt). De tekst behoudt de leesvolgorde en alineastructuur.</p>
+<p>De <a href="#/pdf-to-text">PDF naar Tekst-tool</a> leest alle ingebedde tekst uit uw PDF en bewaart die als een plat tekstbestand (.txt). De tekst behoudt de leesvolgorde en alineastructuur.</p>
 <h2>Beperkingen</h2>
 <ul>
 <li>Werkt enkel met PDF-bestanden die selecteerbare tekst bevatten (digitale tekst)</li>
 <li>Gescande documenten (enkel afbeelding-PDF's) vereisen OCR-technologie, die niet inbegrepen is</li>
 <li>Complexe lay-outs met kolommen of tabellen behouden de opmaak misschien niet perfect</li>
 </ul>
-<p>Om de visuele paginalay-out te behouden kunt ge overwegen om naar afbeeldingen te converteren met <a href="/#/pdf-to-jpg">PDF naar JPG</a> of <a href="/#/pdf-to-png">PDF naar PNG</a>.</p>`,
+<p>Om de visuele paginalay-out te behouden kunt ge overwegen om naar afbeeldingen te converteren met <a href="#/pdf-to-jpg">PDF naar JPG</a> of <a href="#/pdf-to-png">PDF naar PNG</a>.</p>`,
         date: '2024-08-22',
         tool: 'pdf-to-text',
         tags: ['tekst', 'extraheren', 'converteren'],
@@ -397,14 +397,14 @@ export const blogPostsBe: BlogPost[] = [
 <li><strong>PNG</strong> — verliesvrije compressie, transparantie-ondersteuning, grotere bestanden</li>
 <li><strong>JPG</strong> — verliescompressie, geen transparantie, kleinere bestanden</li>
 </ul>
-<p>De <a href="/#/pdf-to-png">PDF naar PNG-tool</a> converteert elke pagina naar een apart PNG-bestand. Ge kunt optioneel transparante achtergronden activeren.</p>
+<p>De <a href="#/pdf-to-png">PDF naar PNG-tool</a> converteert elke pagina naar een apart PNG-bestand. Ge kunt optioneel transparante achtergronden activeren.</p>
 <h2>Beste toepassingen</h2>
 <ul>
 <li>Grafieken en diagrammen inbedden in presentaties</li>
 <li>Webgrafieken maken van PDF-ontwerpen</li>
 <li>Schermafbeeldingen van hoge kwaliteit extraheren</li>
 </ul>
-<p>Als bestandsgrootte belangrijker is dan kwaliteit, overweeg dan de <a href="/#/pdf-to-jpg">PDF naar JPG</a>-converter.</p>`,
+<p>Als bestandsgrootte belangrijker is dan kwaliteit, overweeg dan de <a href="#/pdf-to-jpg">PDF naar JPG</a>-converter.</p>`,
         date: '2024-03-10',
         tool: 'pdf-to-png',
         tags: ['converteren', 'png', 'transparant'],
@@ -416,7 +416,7 @@ export const blogPostsBe: BlogPost[] = [
         excerpt: 'Voeg gepersonaliseerde tekst in boven- en onderaan elke PDF-pagina. Gebruik tijdelijke aanduidingen voor automatische paginanummers.',
         body: `<p>Kopteksten en voetteksten voegen context en professionaliteit toe aan documenten. Ze zijn onmisbaar voor rapporten, handleidingen en officiele documenten.</p>
 <h2>Hoe het werkt</h2>
-<p>De <a href="/#/header-footer">Koptekst en Voettekst-tool</a> laat u toe aangepaste tekst boven- en onderaan elke pagina van uw PDF toe te voegen.</p>
+<p>De <a href="#/header-footer">Koptekst en Voettekst-tool</a> laat u toe aangepaste tekst boven- en onderaan elke pagina van uw PDF toe te voegen.</p>
 <h2>Beschikbare tijdelijke aanduidingen</h2>
 <ul>
 <li><code>{page}</code> — voegt het huidige paginanummer in</li>
@@ -425,7 +425,7 @@ export const blogPostsBe: BlogPost[] = [
 <h2>Voorbeelden</h2>
 <p>Koptekst: "Jaarverslag 2024" — Voettekst: "Pagina {page} van {total}"</p>
 <p>Kies de uitlijning (links, midden, rechts) om de tekst te positioneren naar uw voorkeur.</p>
-<p>Om enkel paginanummers toe te voegen zonder bijkomende tekst kunt ge de eenvoudigere <a href="/#/page-numbers">Paginanummers</a>-tool gebruiken.</p>`,
+<p>Om enkel paginanummers toe te voegen zonder bijkomende tekst kunt ge de eenvoudigere <a href="#/page-numbers">Paginanummers</a>-tool gebruiken.</p>`,
         date: '2020-07-15',
         tool: 'header-footer',
         tags: ['koptekst', 'voettekst', 'aanpassen'],
@@ -438,11 +438,11 @@ export const blogPostsBe: BlogPost[] = [
         body: `<p>Studenten werken dagelijks met PDF-bestanden — collegefilmpjes, onderzoeksartikels, opdrachten en handboeken. De juiste tools maken het academische leven veel gemakkelijker.</p>
 <h2>Onmisbare tools voor studenten</h2>
 <ul>
-<li><strong><a href="/#/merge-pdf">PDF Samenvoegen</a></strong> — combineer collegaantekeningen uit meerdere sessies tot een document</li>
-<li><strong><a href="/#/compress-pdf">PDF Comprimeren</a></strong> — verklein de bestandsgrootte voor het indienen van opdrachten via e-mail of LMS</li>
-<li><strong><a href="/#/split-pdf">PDF Splitsen</a></strong> — extraheer specifieke hoofdstukken uit handboeken of leesmateriaal</li>
-<li><strong><a href="/#/pdf-to-text">PDF naar Tekst</a></strong> — extraheer tekst voor notities, citaten of studiegidsen</li>
-<li><strong><a href="/#/page-numbers">Paginanummers</a></strong> — voeg paginering toe aan uw thesis of proefschrift</li>
+<li><strong><a href="#/merge-pdf">PDF Samenvoegen</a></strong> — combineer collegaantekeningen uit meerdere sessies tot een document</li>
+<li><strong><a href="#/compress-pdf">PDF Comprimeren</a></strong> — verklein de bestandsgrootte voor het indienen van opdrachten via e-mail of LMS</li>
+<li><strong><a href="#/split-pdf">PDF Splitsen</a></strong> — extraheer specifieke hoofdstukken uit handboeken of leesmateriaal</li>
+<li><strong><a href="#/pdf-to-text">PDF naar Tekst</a></strong> — extraheer tekst voor notities, citaten of studiegidsen</li>
+<li><strong><a href="#/page-numbers">Paginanummers</a></strong> — voeg paginering toe aan uw thesis of proefschrift</li>
 </ul>
 <h2>Privacyvoordeel</h2>
 <p>Alle tools verwerken bestanden lokaal in uw browser. Uw onderzoeksartikels en academisch werk verlaten nooit uw toestel — belangrijk bij het werken met ongepubliceerd onderzoek.</p>`,
@@ -458,9 +458,9 @@ export const blogPostsBe: BlogPost[] = [
         body: `<p>Of ge nu contracten, financiele rapporten of persoonlijke dossiers behandelt, het beveiligen van uw PDF-documenten is cruciaal om ongeautoriseerde toegang en gegevenslekken te voorkomen.</p>
 <h2>Drie lagen van PDF-veiligheid</h2>
 <ol>
-<li><strong>Wachtwoordbeveiliging</strong> — gebruik de <a href="/#/protect-pdf">PDF Beveiligen</a>-tool om gebruikers- en eigenaarswachtwoorden toe te voegen. Beheer wie het document kan openen, afdrukken of wijzigen.</li>
-<li><strong>Censurering</strong> — verwijder permanent gevoelige gegevens met de <a href="/#/redact-pdf">PDF Censureren</a>-tool. Gecensureerde inhoud kan niet hersteld worden.</li>
-<li><strong>Afvlakking</strong> — gebruik de <a href="/#/flatten-pdf">PDF Afvlakken</a>-tool om formuliervelden en annotaties naar statische inhoud te converteren voor het delen.</li>
+<li><strong>Wachtwoordbeveiliging</strong> — gebruik de <a href="#/protect-pdf">PDF Beveiligen</a>-tool om gebruikers- en eigenaarswachtwoorden toe te voegen. Beheer wie het document kan openen, afdrukken of wijzigen.</li>
+<li><strong>Censurering</strong> — verwijder permanent gevoelige gegevens met de <a href="#/redact-pdf">PDF Censureren</a>-tool. Gecensureerde inhoud kan niet hersteld worden.</li>
+<li><strong>Afvlakking</strong> — gebruik de <a href="#/flatten-pdf">PDF Afvlakken</a>-tool om formuliervelden en annotaties naar statische inhoud te converteren voor het delen.</li>
 </ol>
 <h2>Veelgemaakte fouten om te vermijden</h2>
 <ul>
@@ -482,11 +482,11 @@ export const blogPostsBe: BlogPost[] = [
 <p>Upload gewoon meerdere PDF-bestanden naar eender welke ondersteunde tool. Elk bestand wordt onafhankelijk verwerkt, en ge kunt alle resultaten individueel of als een ZIP-archief downloaden.</p>
 <h2>Ondersteunde tools voor batchverwerking</h2>
 <ul>
-<li><strong><a href="/#/compress-pdf">PDF Comprimeren</a></strong> — verklein meerdere documenten tegelijk</li>
-<li><strong><a href="/#/rotate-pdf">PDF Draaien</a></strong> — corrigeer de orientatie van een batch gescande bestanden</li>
-<li><strong><a href="/#/grayscale-pdf">Grijstinten PDF</a></strong> — converteer meerdere kleurdocumenten naar zwart-wit</li>
-<li><strong><a href="/#/pdf-to-jpg">PDF naar JPG</a></strong> / <strong><a href="/#/pdf-to-png">PDF naar PNG</a></strong> — converteer meerdere PDF-bestanden naar afbeeldingen</li>
-<li><strong><a href="/#/flatten-pdf">PDF Afvlakken</a></strong>, <strong><a href="/#/resize-pdf">Formaat Wijzigen</a></strong>, <strong><a href="/#/page-numbers">Paginanummers</a></strong> en meer</li>
+<li><strong><a href="#/compress-pdf">PDF Comprimeren</a></strong> — verklein meerdere documenten tegelijk</li>
+<li><strong><a href="#/rotate-pdf">PDF Draaien</a></strong> — corrigeer de orientatie van een batch gescande bestanden</li>
+<li><strong><a href="#/grayscale-pdf">Grijstinten PDF</a></strong> — converteer meerdere kleurdocumenten naar zwart-wit</li>
+<li><strong><a href="#/pdf-to-jpg">PDF naar JPG</a></strong> / <strong><a href="#/pdf-to-png">PDF naar PNG</a></strong> — converteer meerdere PDF-bestanden naar afbeeldingen</li>
+<li><strong><a href="#/flatten-pdf">PDF Afvlakken</a></strong>, <strong><a href="#/resize-pdf">Formaat Wijzigen</a></strong>, <strong><a href="#/page-numbers">Paginanummers</a></strong> en meer</li>
 </ul>
 <h2>Prestatie</h2>
 <p>Alle verwerking gebeurt lokaal op uw toestel, dus de snelheid hangt af van uw computer. De meeste bewerkingen zijn in seconden klaar, zelfs voor grote batches.</p>`,
@@ -502,10 +502,10 @@ export const blogPostsBe: BlogPost[] = [
         body: `<p>PDF-bestanden bedoeld voor webweergave of download moeten geoptimaliseerd worden voor snel laden en schermleesbaarneid.</p>
 <h2>Optimalisatiestrategieen</h2>
 <ol>
-<li><strong>Comprimeren</strong> — gebruik de <a href="/#/compress-pdf">PDF Comprimeren</a>-tool met medium of hoge compressie om de bestandsgrootte aanzienlijk te verkleinen</li>
-<li><strong>Formaat wijzigen</strong> — pas paginadimensies aan met de <a href="/#/resize-pdf">PDF Formaat Wijzigen</a>-tool zodat ze overeenkomen met gangbare schermformaten</li>
-<li><strong>Naar afbeeldingen converteren</strong> — voor eenvoudige weergave, converteer paginas naar JPG met <a href="/#/pdf-to-jpg">PDF naar JPG</a> voor sneller laden op het web</li>
-<li><strong>Grijstinten</strong> — als kleur niet essentieel is, verkleint <a href="/#/grayscale-pdf">Grijstinten PDF</a> de bestandsgrootte nog verder</li>
+<li><strong>Comprimeren</strong> — gebruik de <a href="#/compress-pdf">PDF Comprimeren</a>-tool met medium of hoge compressie om de bestandsgrootte aanzienlijk te verkleinen</li>
+<li><strong>Formaat wijzigen</strong> — pas paginadimensies aan met de <a href="#/resize-pdf">PDF Formaat Wijzigen</a>-tool zodat ze overeenkomen met gangbare schermformaten</li>
+<li><strong>Naar afbeeldingen converteren</strong> — voor eenvoudige weergave, converteer paginas naar JPG met <a href="#/pdf-to-jpg">PDF naar JPG</a> voor sneller laden op het web</li>
+<li><strong>Grijstinten</strong> — als kleur niet essentieel is, verkleint <a href="#/grayscale-pdf">Grijstinten PDF</a> de bestandsgrootte nog verder</li>
 </ol>
 <h2>Richtlijnen voor bestandsgrootte</h2>
 <ul>
@@ -533,7 +533,7 @@ export const blogPostsBe: BlogPost[] = [
 <li><strong>Geen bestandsgroottelimieten</strong> — het geheugen van uw computer is de enige beperking</li>
 </ul>
 <h2>Beschikbare tools</h2>
-<p>Alle 22 tools werken offline: van <a href="/#/merge-pdf">samenvoegen</a> en <a href="/#/compress-pdf">comprimeren</a> tot <a href="/#/sign-pdf">ondertekenen</a> en <a href="/#/redact-pdf">censureren</a>. Elke bewerking draait lokaal en geeft u volledige controle over uw gegevens.</p>`,
+<p>Alle 22 tools werken offline: van <a href="#/merge-pdf">samenvoegen</a> en <a href="#/compress-pdf">comprimeren</a> tot <a href="#/sign-pdf">ondertekenen</a> en <a href="#/redact-pdf">censureren</a>. Elke bewerking draait lokaal en geeft u volledige controle over uw gegevens.</p>`,
         date: '2025-08-12',
         tool: 'compress-pdf',
         tags: ['privacy', 'gratis', 'offline'],
@@ -546,11 +546,11 @@ export const blogPostsBe: BlogPost[] = [
         body: `<p>Voor ge een PDF naar de drukker stuurt, kunnen enkele aanpassingen de beste resultaten garanderen en veelvoorkomende afdrukproblemen vermijden.</p>
 <h2>Checklist voor afdrukvoorbereiding</h2>
 <ol>
-<li><strong>Paginaformaat wijzigen</strong> — gebruik de <a href="/#/resize-pdf">PDF Formaat Wijzigen</a>-tool om overeen te komen met het doelpapierformaat (A4, Letter, A3)</li>
-<li><strong>Marges bijsnijden</strong> — verwijder overtollige witruimte met de <a href="/#/crop-pdf">PDF Bijsnijden</a>-tool</li>
-<li><strong>Naar grijstinten converteren</strong> — als ge in zwart-wit afdrukt, gebruik <a href="/#/grayscale-pdf">Grijstinten PDF</a> om het resultaat voor te bekijken en inkt te besparen</li>
-<li><strong>Formulieren afvlakken</strong> — zorg dat formuliergegevens correct afgedrukt worden door <a href="/#/flatten-pdf">de PDF af te vlakken</a></li>
-<li><strong>Comprimeren</strong> — als ge naar een drukdienst stuurt, <a href="/#/compress-pdf">comprimeer</a> met lage instellingen om de overdrachtstijd te verkleinen</li>
+<li><strong>Paginaformaat wijzigen</strong> — gebruik de <a href="#/resize-pdf">PDF Formaat Wijzigen</a>-tool om overeen te komen met het doelpapierformaat (A4, Letter, A3)</li>
+<li><strong>Marges bijsnijden</strong> — verwijder overtollige witruimte met de <a href="#/crop-pdf">PDF Bijsnijden</a>-tool</li>
+<li><strong>Naar grijstinten converteren</strong> — als ge in zwart-wit afdrukt, gebruik <a href="#/grayscale-pdf">Grijstinten PDF</a> om het resultaat voor te bekijken en inkt te besparen</li>
+<li><strong>Formulieren afvlakken</strong> — zorg dat formuliergegevens correct afgedrukt worden door <a href="#/flatten-pdf">de PDF af te vlakken</a></li>
+<li><strong>Comprimeren</strong> — als ge naar een drukdienst stuurt, <a href="#/compress-pdf">comprimeer</a> met lage instellingen om de overdrachtstijd te verkleinen</li>
 </ol>
 <h2>Veelvoorkomende afdrukproblemen</h2>
 <ul>
@@ -570,8 +570,8 @@ export const blogPostsBe: BlogPost[] = [
         body: `<p>Interactieve PDF-formulieren met invulbare velden worden vaak gebruikt voor aanvragen, enquetes en officiele documenten. Begrijpen hoe ge ze correct behandelt bespaart tijd en voorkomt problemen.</p>
 <h2>De formulier-werkstroom</h2>
 <ol>
-<li><strong>Invullen</strong> — vul de formuliervelden in uw PDF-lezer in of gebruik de <a href="/#/edit-pdf">PDF Bewerken</a>-tool om tekst rechtstreeks op de pagina toe te voegen</li>
-<li><strong>Afvlakken</strong> — gebruik de <a href="/#/flatten-pdf">PDF Afvlakken</a>-tool om interactieve velden naar statische inhoud te converteren en uw invoer te vergrendelen</li>
+<li><strong>Invullen</strong> — vul de formuliervelden in uw PDF-lezer in of gebruik de <a href="#/edit-pdf">PDF Bewerken</a>-tool om tekst rechtstreeks op de pagina toe te voegen</li>
+<li><strong>Afvlakken</strong> — gebruik de <a href="#/flatten-pdf">PDF Afvlakken</a>-tool om interactieve velden naar statische inhoud te converteren en uw invoer te vergrendelen</li>
 <li><strong>Delen</strong> — verspreid de afgevlakte PDF in de wetenschap dat ontvangers uw gegevens niet kunnen wijzigen</li>
 </ol>
 <h2>Waarom afvlakken voor het delen?</h2>
@@ -580,7 +580,7 @@ export const blogPostsBe: BlogPost[] = [
 <li>Zorgt ervoor dat het document er identiek uitziet in elke PDF-lezer</li>
 <li>Bewaart het ingevulde formulier voor langetermijnarchivering</li>
 </ul>
-<p>Voor extra veiligheid kunt ge de afgevlakte PDF <a href="/#/protect-pdf">met een wachtwoord beveiligen</a> voor het delen.</p>`,
+<p>Voor extra veiligheid kunt ge de afgevlakte PDF <a href="#/protect-pdf">met een wachtwoord beveiligen</a> voor het delen.</p>`,
         date: '2026-02-05',
         tool: 'flatten-pdf',
         tags: ['formulieren', 'afvlakken', 'invullen'],
@@ -598,7 +598,7 @@ export const blogPostsBe: BlogPost[] = [
 <li>Geen transparantie-ondersteuning</li>
 <li>Best voor: delen, e-mail, sociale media, fotorijke PDF-bestanden</li>
 </ul>
-<p>Gebruik de <a href="/#/pdf-to-jpg">PDF naar JPG</a>-tool voor de meeste algemene conversies.</p>
+<p>Gebruik de <a href="#/pdf-to-jpg">PDF naar JPG</a>-tool voor de meeste algemene conversies.</p>
 <h2>PNG — Best voor grafieken en transparantie</h2>
 <ul>
 <li>Grotere bestanden door verliesvrije compressie</li>
@@ -606,7 +606,7 @@ export const blogPostsBe: BlogPost[] = [
 <li>Ondersteunt transparante achtergronden</li>
 <li>Best voor: diagrammen, schermafbeeldingen, webgrafieken, presentaties</li>
 </ul>
-<p>Gebruik de <a href="/#/pdf-to-png">PDF naar PNG</a>-tool wanneer kwaliteit en transparantie belangrijk zijn.</p>
+<p>Gebruik de <a href="#/pdf-to-png">PDF naar PNG</a>-tool wanneer kwaliteit en transparantie belangrijk zijn.</p>
 <h2>Snelle keuzegids</h2>
 <p>Kleine bestanden nodig voor web of e-mail? Kies JPG. Perfecte kwaliteit of transparante achtergronden nodig? Kies PNG.</p>`,
         date: '2025-07-25',
@@ -621,11 +621,11 @@ export const blogPostsBe: BlogPost[] = [
         body: `<p>Kantoren verwerken dagelijks honderden PDF-documenten — facturen, contracten, rapporten en briefwisseling. Efficient PDF-beheer bespaart uren werk.</p>
 <h2>Veelvoorkomende kantoortaken</h2>
 <ul>
-<li><strong>Rapporten combineren</strong> — gebruik <a href="/#/merge-pdf">PDF Samenvoegen</a> om maandelijkse rapporten samen te brengen tot kwartaaloverzichten</li>
-<li><strong>Documenten ordenen</strong> — <a href="/#/organize-pdf">paginas herschikken, verwijderen of dupliceren</a> om lange documenten te herstructureren</li>
-<li><strong>Paginering toevoegen</strong> — voeg <a href="/#/page-numbers">paginanummers</a> of <a href="/#/header-footer">kopteksten en voetteksten</a> in voor een professionele presentatie</li>
-<li><strong>Bestanden beveiligen</strong> — <a href="/#/protect-pdf">beveilig</a> vertrouwelijke documenten met een wachtwoord voor verspreiding</li>
-<li><strong>Comprimeren voor e-mail</strong> — <a href="/#/compress-pdf">verklein de bestandsgrootte</a> om de limieten van e-mailbijlagen te respecteren</li>
+<li><strong>Rapporten combineren</strong> — gebruik <a href="#/merge-pdf">PDF Samenvoegen</a> om maandelijkse rapporten samen te brengen tot kwartaaloverzichten</li>
+<li><strong>Documenten ordenen</strong> — <a href="#/organize-pdf">paginas herschikken, verwijderen of dupliceren</a> om lange documenten te herstructureren</li>
+<li><strong>Paginering toevoegen</strong> — voeg <a href="#/page-numbers">paginanummers</a> of <a href="#/header-footer">kopteksten en voetteksten</a> in voor een professionele presentatie</li>
+<li><strong>Bestanden beveiligen</strong> — <a href="#/protect-pdf">beveilig</a> vertrouwelijke documenten met een wachtwoord voor verspreiding</li>
+<li><strong>Comprimeren voor e-mail</strong> — <a href="#/compress-pdf">verklein de bestandsgrootte</a> om de limieten van e-mailbijlagen te respecteren</li>
 </ul>
 <h2>Werkstroomtip</h2>
 <p>Begin met het samenvoegen van gerelateerde bestanden, orden daarna de paginas, voeg paginanummers toe, en comprimeer ten slotte het resultaat voor verspreiding.</p>`,
@@ -645,14 +645,14 @@ export const blogPostsBe: BlogPost[] = [
 <li>Een portfolio of dossier aanmaken uit individuele bestanden</li>
 <li>Gescande paginas uit verschillende sessies samenbrengen</li>
 </ul>
-<p>Gebruik de <a href="/#/merge-pdf">PDF Samenvoegen</a>-tool om uw bestanden te slepen, neer te zetten en te herschikken voor het combineren.</p>
+<p>Gebruik de <a href="#/merge-pdf">PDF Samenvoegen</a>-tool om uw bestanden te slepen, neer te zetten en te herschikken voor het combineren.</p>
 <h2>Wanneer splitsen</h2>
 <ul>
 <li>Specifieke paginas extraheren uit een groot document</li>
 <li>Een boek opdelen in individuele hoofdstukken</li>
 <li>Een PDF met meerdere facturen scheiden in individuele facturen</li>
 </ul>
-<p>De <a href="/#/split-pdf">PDF Splitsen</a>-tool ondersteunt zowel het splitsen van alle paginas als het extraheren van specifieke paginabereiken.</p>
+<p>De <a href="#/split-pdf">PDF Splitsen</a>-tool ondersteunt zowel het splitsen van alle paginas als het extraheren van specifieke paginabereiken.</p>
 <h2>Beide bewerkingen combineren</h2>
 <p>Hebt ge paginas nodig uit meerdere documenten? Splits eerst elk bronbestand om de paginas te extraheren die ge nodig hebt, en voeg dan de geextraheerde paginas samen tot uw uiteindelijke document.</p>`,
         date: '2026-03-01',
@@ -672,7 +672,7 @@ export const blogPostsBe: BlogPost[] = [
 <li><strong>Drukklaar</strong> — PDF-bestanden zijn ontworpen voor zowel scherm- als afdrukweergave</li>
 </ul>
 <h2>Hoe het werkt</h2>
-<p>De <a href="/#/markdown-to-pdf">Markdown naar PDF-tool</a> rendert uw Markdown-inhoud met volledige ondersteuning voor koppen, lijsten, codeblokken, tabellen en meer. Plak of typ gewoon uw Markdown, bekijk het resultaat en download de PDF.</p>
+<p>De <a href="#/markdown-to-pdf">Markdown naar PDF-tool</a> rendert uw Markdown-inhoud met volledige ondersteuning voor koppen, lijsten, codeblokken, tabellen en meer. Plak of typ gewoon uw Markdown, bekijk het resultaat en download de PDF.</p>
 <h2>Ondersteunde Markdown-functies</h2>
 <p>De converter verwerkt alle standaard Markdown-syntax inclusief vet, cursief, koppelingen, afbeeldingen, citaten, geordende en ongeordende lijsten, codeblokken met syntaxiskleuring en tabellen. Uw inhoud wordt volledig in de browser verwerkt voor complete privacy.</p>`,
         date: '2026-03-05',
@@ -687,7 +687,7 @@ export const blogPostsBe: BlogPost[] = [
         body: `<p>Documenten digitaal ondertekenen is onmisbaar geworden in de hedendaagse wereld van thuiswerk. Maar er is een belangrijk verschil tussen elektronische handtekeningen en digitale handtekeningen.</p>
 <h2>Elektronische handtekeningen</h2>
 <p>Een elektronische handtekening is elk teken, symbool of proces verbonden aan een document om toestemming aan te geven. Dit omvat getypte namen, gescande handgeschreven handtekeningen of getekende handtekeningen.</p>
-<p>De <a href="/#/sign-pdf">PDF Ondertekenen-tool</a> laat u toe elektronische handtekeningen aan te maken door te tekenen, te typen of een afbeelding van uw handtekening te uploaden — alles lokaal verwerkt in uw browser.</p>
+<p>De <a href="#/sign-pdf">PDF Ondertekenen-tool</a> laat u toe elektronische handtekeningen aan te maken door te tekenen, te typen of een afbeelding van uw handtekening te uploaden — alles lokaal verwerkt in uw browser.</p>
 <h2>Digitale handtekeningen</h2>
 <p>Digitale handtekeningen gebruiken cryptografische technologie om de identiteit van de ondertekenaar te verifieren en te garanderen dat het document niet gemanipuleerd is. Ze vereisen een digitaal certificaat van een vertrouwde instantie.</p>
 <h2>Wat moet ge gebruiken?</h2>
@@ -710,8 +710,8 @@ export const blogPostsBe: BlogPost[] = [
 <li><strong>Voldoende contrast</strong> — zorg dat tekst voldoende contrast heeft tegen de achtergrond</li>
 </ul>
 <h2>Tools die helpen</h2>
-<p>De <a href="/#/edit-pdf">PDF Bewerken-tool</a> laat u toe tekstannotaties en labels aan uw documenten toe te voegen. Gebruik het om beschrijvende tekst bij afbeeldingen te plaatsen of complexe diagrammen te verduidelijken.</p>
-<p>Voor gescande documenten kunt ge de <a href="/#/pdf-to-text">PDF naar Tekst-tool</a> gebruiken om te controleren of tekstinhoud correct geextraheerd kan worden, wat essentieel is voor schermlezers.</p>
+<p>De <a href="#/edit-pdf">PDF Bewerken-tool</a> laat u toe tekstannotaties en labels aan uw documenten toe te voegen. Gebruik het om beschrijvende tekst bij afbeeldingen te plaatsen of complexe diagrammen te verduidelijken.</p>
+<p>Voor gescande documenten kunt ge de <a href="#/pdf-to-text">PDF naar Tekst-tool</a> gebruiken om te controleren of tekstinhoud correct geextraheerd kan worden, wat essentieel is voor schermlezers.</p>
 <h2>Toegankelijkheid testen</h2>
 <p>Test uw PDF-bestanden altijd met een schermlezer voor verspreiding. Eenvoudige controles omvatten het verifieren dat tekst geselecteerd en gekopieerd kan worden, en dat de leesvolgorde logisch is.</p>`,
         date: '2026-01-22',
@@ -734,9 +734,9 @@ export const blogPostsBe: BlogPost[] = [
 <h2>Voordelen van browsergebaseerde tools</h2>
 <p>In tegenstelling tot geinstalleerde software vereisen browsergebaseerde PDF-tools zoals <a href="/">PDF Worker</a> geen installatie of updates. Open een tabblad, verwerk uw bestand en ga verder. Geen licentiekosten, geen compatibiliteitsproblemen.</p>
 <h2>Batchverwerking</h2>
-<p>Veel tools ondersteunen de verwerking van meerdere bestanden tegelijk. Upload verschillende PDF-bestanden naar de <a href="/#/compress-pdf">PDF Comprimeren-tool</a> en download alle resultaten samen als een ZIP-bestand. Hetzelfde geldt voor <a href="/#/rotate-pdf">rotatie</a>, <a href="/#/grayscale-pdf">grijstintconversie</a> en andere bewerkingen.</p>
+<p>Veel tools ondersteunen de verwerking van meerdere bestanden tegelijk. Upload verschillende PDF-bestanden naar de <a href="#/compress-pdf">PDF Comprimeren-tool</a> en download alle resultaten samen als een ZIP-bestand. Hetzelfde geldt voor <a href="#/rotate-pdf">rotatie</a>, <a href="#/grayscale-pdf">grijstintconversie</a> en andere bewerkingen.</p>
 <h2>Bewerkingen koppelen</h2>
-<p>Voor complexe werkstromen kunt ge bewerkingen koppelen: eerst een beveiligde PDF <a href="/#/unlock-pdf">ontgrendelen</a>, dan <a href="/#/split-pdf">splitsen</a> in secties, elke sectie <a href="/#/compress-pdf">comprimeren</a>, en ten slotte de delen die ge nodig hebt <a href="/#/merge-pdf">samenvoegen</a>.</p>`,
+<p>Voor complexe werkstromen kunt ge bewerkingen koppelen: eerst een beveiligde PDF <a href="#/unlock-pdf">ontgrendelen</a>, dan <a href="#/split-pdf">splitsen</a> in secties, elke sectie <a href="#/compress-pdf">comprimeren</a>, en ten slotte de delen die ge nodig hebt <a href="#/merge-pdf">samenvoegen</a>.</p>`,
         date: '2026-02-05',
         tool: 'compress-pdf',
         tags: ['werkstroom', 'automatisering', 'productiviteit'],

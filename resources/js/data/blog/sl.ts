@@ -8,16 +8,16 @@ export const blogPostsSl: BlogPost[] = [
         excerpt: 'Naučite se, kako združiti več PDF dokumentov v eno samo datoteko brez namestitve kakršnekoli programske opreme. Hitro, varno in popolnoma brezplačno.',
         body: `<p>Združevanje PDF datotek je ena najpogostejših nalog pri delu z dokumenti. Ne glede na to, ali morate združiti poročila, pogodbe ali predstavitve, zanesljivo orodje naredi vso razliko.</p>
 <h2>Zakaj združevati PDF-je na spletu?</h2>
-<p>Tradicionalna namizna programska oprema je lahko draga in pogosto zahteva namestitev. Z <a href="/#/merge-pdf">orodjem za združevanje PDF-jev PDF Worker</a> lahko združite datoteke neposredno v brskalniku — brez nalaganja, brez strežnikov, popolna zasebnost.</p>
+<p>Tradicionalna namizna programska oprema je lahko draga in pogosto zahteva namestitev. Z <a href="#/merge-pdf">orodjem za združevanje PDF-jev PDF Worker</a> lahko združite datoteke neposredno v brskalniku — brez nalaganja, brez strežnikov, popolna zasebnost.</p>
 <h2>Vodnik po korakih</h2>
 <ol>
-<li>Odprite orodje <a href="/#/merge-pdf">Združi PDF</a></li>
+<li>Odprite orodje <a href="#/merge-pdf">Združi PDF</a></li>
 <li>Povlecite in spustite PDF datoteke ali kliknite za brskanje</li>
 <li>Preuredite datoteke tako, da jih povlečete v želeni vrstni red</li>
 <li>Kliknite "Združi PDF" in prenesite združeni dokument</li>
 </ol>
 <h2>Nasveti za najboljše rezultate</h2>
-<p>Prepričajte se, da vaši PDF-ji niso zaščiteni z geslom, preden jih združite. Če so, najprej uporabite orodje <a href="/#/unlock-pdf">Odkleni PDF</a> za odstranitev zaščite.</p>
+<p>Prepričajte se, da vaši PDF-ji niso zaščiteni z geslom, preden jih združite. Če so, najprej uporabite orodje <a href="#/unlock-pdf">Odkleni PDF</a> za odstranitev zaščite.</p>
 <p>Za velike serije datotek orodje učinkovito obravnava na desetine dokumentov, saj se vsa obdelava izvaja lokalno na vaši napravi.</p>`,
         date: '2023-06-15',
         tool: 'merge-pdf',
@@ -30,7 +30,7 @@ export const blogPostsSl: BlogPost[] = [
         excerpt: 'Zmanjšajte velikost PDF datoteke brez izgube kakovosti. Tri ravni stiskanja za ravnotežje med velikostjo in jasnostjo za e-pošto, splet ali arhiviranje.',
         body: `<p>Velike PDF datoteke so lahko problematične pri pošiljanju po e-pošti ali nalaganju na spletna mesta. Stiskanje pomaga zmanjšati velikost datoteke ob ohranjanju sprejemljive kakovosti.</p>
 <h2>Razumevanje ravni stiskanja</h2>
-<p><a href="/#/compress-pdf">Orodje za stiskanje PDF</a> ponuja tri ravni:</p>
+<p><a href="#/compress-pdf">Orodje za stiskanje PDF</a> ponuja tri ravni:</p>
 <ul>
 <li><strong>Nizko stiskanje</strong> — minimalno zmanjšanje velikosti, kakovost blizu izvirnika</li>
 <li><strong>Srednje stiskanje</strong> — dobro ravnotežje med velikostjo in kakovostjo</li>
@@ -50,7 +50,7 @@ export const blogPostsSl: BlogPost[] = [
         excerpt: 'Izvlecite posamezne strani ali obsege strani iz PDF dokumentov. Prenesite vsako stran posebej ali kot ZIP arhiv.',
         body: `<p>Včasih potrebujete le nekaj strani iz velikega PDF dokumenta. Razdelitev vam omogoča, da izvlečete natanko tisto, kar potrebujete.</p>
 <h2>Dva načina razdelitve</h2>
-<p><a href="/#/split-pdf">Orodje za razdelitev PDF</a> ponuja dva pristopa:</p>
+<p><a href="#/split-pdf">Orodje za razdelitev PDF</a> ponuja dva pristopa:</p>
 <ul>
 <li><strong>Razdelitev vseh strani</strong> — izvleče vsako stran kot posamezno PDF datoteko</li>
 <li><strong>Obseg strani</strong> — določite natančne strani, kot je "1-3, 5, 7-9"</li>
@@ -69,7 +69,7 @@ export const blogPostsSl: BlogPost[] = [
         excerpt: 'Zasukajte optično prebrane dokumente ali popravite obrnjene strani. Podpora za zasuk za 90, 180 in 270 stopinj za vse strani.',
         body: `<p>Optično prebrani dokumenti se pogosto končajo z napačno usmerjenostjo. Hiter popravek zasuka jih naredi spet berljive.</p>
 <h2>Možnosti zasuka</h2>
-<p><a href="/#/rotate-pdf">Orodje za zasuk PDF</a> podpira tri kote zasuka:</p>
+<p><a href="#/rotate-pdf">Orodje za zasuk PDF</a> podpira tri kote zasuka:</p>
 <ul>
 <li><strong>90 stopinj v smeri urinega kazalca</strong> — za ležeče strani, ki bi morale biti pokončne</li>
 <li><strong>180 stopinj</strong> — za na glavo obrnjene optične prebire</li>
@@ -77,7 +77,7 @@ export const blogPostsSl: BlogPost[] = [
 </ul>
 <h2>Pogosti primeri uporabe</h2>
 <p>Optični prebiri z mobilnega telefona, fotokopije dokumentov in faksirani PDF-ji pogosto potrebujejo zasuk. Orodje uporabi zasuk na vseh straneh naenkrat, kar vam prihrani čas.</p>
-<p>Za natančnejši nadzor nad posameznimi stranmi uporabite orodje <a href="/#/organize-pdf">Organiziraj PDF</a>, ki vam omogoča upravljanje strani posamezno.</p>`,
+<p>Za natančnejši nadzor nad posameznimi stranmi uporabite orodje <a href="#/organize-pdf">Organiziraj PDF</a>, ki vam omogoča upravljanje strani posamezno.</p>`,
         date: '2022-08-12',
         tool: 'rotate-pdf',
         tags: ['zasuk', 'usmerjenost', 'optično-branje'],
@@ -89,7 +89,7 @@ export const blogPostsSl: BlogPost[] = [
         excerpt: 'Zaščitite svoje dokumente z besedilnimi ali slikovnimi vodnimi znaki. Prilagodite položaj, prosojnost, velikost in zasuk.',
         body: `<p>Vodni znaki pomagajo zaščititi intelektualno lastnino in označiti dokumente kot zaupne, osnutke ali lastniške.</p>
 <h2>Besedilni in slikovni vodni znaki</h2>
-<p><a href="/#/watermark-pdf">Orodje za vodni znak</a> podpira obe vrsti:</p>
+<p><a href="#/watermark-pdf">Orodje za vodni znak</a> podpira obe vrsti:</p>
 <ul>
 <li><strong>Besedilni vodni znaki</strong> — dodajte besede, kot so "ZAUPNO" ali "OSNUTEK", s prilagojeno velikostjo pisave, barvo in zasukom</li>
 <li><strong>Slikovni vodni znaki</strong> — prekrijte z logotipom vašega podjetja ali žigom s prilagodljivo prosojnostjo in velikostjo</li>
@@ -107,14 +107,14 @@ export const blogPostsSl: BlogPost[] = [
         excerpt: 'Pretvorite vsako stran PDF v visokokakovostno sliko JPG. Prilagodite nastavitve kakovosti za popolno ravnotežje med velikostjo in jasnostjo.',
         body: `<p>Pretvarjanje strani PDF v slike je uporabno za predstavitve, objave na družbenih omrežjih ali kadar morate vdelati vsebino PDF v druge dokumente.</p>
 <h2>Nastavitve kakovosti</h2>
-<p><a href="/#/pdf-to-jpg">Orodje PDF v JPG</a> vam omogoča prilagajanje kakovosti slike od 10 % do 100 %. Višja kakovost pomeni večje datoteke, a ostrejše slike.</p>
+<p><a href="#/pdf-to-jpg">Orodje PDF v JPG</a> vam omogoča prilagajanje kakovosti slike od 10 % do 100 %. Višja kakovost pomeni večje datoteke, a ostrejše slike.</p>
 <h2>Priporočene nastavitve</h2>
 <ul>
 <li><strong>80 %</strong> — najboljše za večino uporab, dobra kakovost z razumno velikostjo datoteke</li>
 <li><strong>100 %</strong> — maksimalna kakovost za tisk ali profesionalno uporabo</li>
 <li><strong>50-60 %</strong> — manjše datoteke za splet ali e-pošto</li>
 </ul>
-<p>Vsaka stran postane ločena JPG datoteka. Prenesite jih posamezno ali kot ZIP arhiv. Za prosojno ozadje razmislite o uporabi pretvornika <a href="/#/pdf-to-png">PDF v PNG</a>.</p>`,
+<p>Vsaka stran postane ločena JPG datoteka. Prenesite jih posamezno ali kot ZIP arhiv. Za prosojno ozadje razmislite o uporabi pretvornika <a href="#/pdf-to-png">PDF v PNG</a>.</p>`,
         date: '2021-05-18',
         tool: 'pdf-to-jpg',
         tags: ['pretvorba', 'jpg', 'slike'],
@@ -126,7 +126,7 @@ export const blogPostsSl: BlogPost[] = [
         excerpt: 'Pretvorite več slik v en sam PDF dokument. Izberite usmerjenost, robove in postavitev strani.',
         body: `<p>Morate združiti fotografije, optične prebire ali posnetke zaslona v en dokument? Pretvorba slik v PDF ustvari profesionalno, enostavno deljivo datoteko.</p>
 <h2>Podprte oblike zapisa</h2>
-<p><a href="/#/jpg-to-pdf">Orodje JPG v PDF</a> sprejema slike JPG, JPEG, PNG in WebP. Mešajte različne oblike zapisa v eni sami pretvorbi.</p>
+<p><a href="#/jpg-to-pdf">Orodje JPG v PDF</a> sprejema slike JPG, JPEG, PNG in WebP. Mešajte različne oblike zapisa v eni sami pretvorbi.</p>
 <h2>Možnosti postavitve</h2>
 <ul>
 <li><strong>Usmerjenost</strong> — izberite pokončno ali ležečo</li>
@@ -144,14 +144,14 @@ export const blogPostsSl: BlogPost[] = [
         excerpt: 'Zavarujte vaše PDF-je z uporabniškim in lastniškim geslom. Nadzirajte dovoljenja za tiskanje, kopiranje in urejanje.',
         body: `<p>Zaščita občutljivih dokumentov z gesli preprečuje nepooblaščen dostop in nadzira, kaj lahko prejemniki počnejo z datoteko.</p>
 <h2>Uporabniško in lastniško geslo</h2>
-<p><a href="/#/protect-pdf">Orodje za zaščito PDF</a> podpira dve vrsti gesel:</p>
+<p><a href="#/protect-pdf">Orodje za zaščito PDF</a> podpira dve vrsti gesel:</p>
 <ul>
 <li><strong>Uporabniško geslo</strong> — potrebno za odpiranje in ogled dokumenta</li>
 <li><strong>Lastniško geslo</strong> — nadzira dovoljenja za tiskanje, kopiranje in urejanje</li>
 </ul>
 <h2>Nadzor dovoljenj</h2>
 <p>Lahko dovolite ali omejite tiskanje, kopiranje besedila in spreminjanje dokumenta. To je uporabno za distribucijo poročil samo za branje ali pogodb.</p>
-<p>Morate pozneje odstraniti zaščito? Uporabite orodje <a href="/#/unlock-pdf">Odkleni PDF</a> s pravilnim geslom.</p>`,
+<p>Morate pozneje odstraniti zaščito? Uporabite orodje <a href="#/unlock-pdf">Odkleni PDF</a> s pravilnim geslom.</p>`,
         date: '2023-09-10',
         tool: 'protect-pdf',
         tags: ['zaščita', 'geslo', 'varnost'],
@@ -163,7 +163,7 @@ export const blogPostsSl: BlogPost[] = [
         excerpt: 'Odklenite z geslom zaščitene PDF-je, ko poznate geslo. Odstranite omejitve tiskanja in kopiranja.',
         body: `<p>Če poznate geslo zaščitenega PDF-ja, lahko odstranite omejitev, da bo dokument prosto dostopen.</p>
 <h2>Kako deluje</h2>
-<p><a href="/#/unlock-pdf">Orodje za odklepanje PDF</a> vzame vaš zaščiteni PDF in pravilno geslo ter ustvari nezaščiteno kopijo. Izvirna datoteka ostane nespremenjena.</p>
+<p><a href="#/unlock-pdf">Orodje za odklepanje PDF</a> vzame vaš zaščiteni PDF in pravilno geslo ter ustvari nezaščiteno kopijo. Izvirna datoteka ostane nespremenjena.</p>
 <h2>Pomembne opombe</h2>
 <ul>
 <li>Morate poznati pravilno geslo — to orodje ne razveljavlja in ne obhodi gesel</li>
@@ -181,14 +181,14 @@ export const blogPostsSl: BlogPost[] = [
         excerpt: 'Vizualno upravljajte strani PDF z vleci in spusti. Preuredite strani, izbrišite neželene ali podvojite pomembne razdelke.',
         body: `<p>Upravljanje strukture PDF dokumenta je bistveno pri pripravi poročil, portfolijev ali predstavitev.</p>
 <h2>Vizualno upravljanje strani</h2>
-<p><a href="/#/organize-pdf">Orodje za organiziranje PDF</a> prikaže sličice predogledov vsake strani, kar olajša pregled strukture dokumenta na prvi pogled.</p>
+<p><a href="#/organize-pdf">Orodje za organiziranje PDF</a> prikaže sličice predogledov vsake strani, kar olajša pregled strukture dokumenta na prvi pogled.</p>
 <h2>Razpoložljiva dejanja</h2>
 <ul>
 <li><strong>Preureditev</strong> — povlecite in spustite strani za spremembo njihovega položaja</li>
 <li><strong>Brisanje</strong> — odstranite neželene strani (zadnje strani ni mogoče izbrisati)</li>
 <li><strong>Podvajanje</strong> — ustvarite kopije pomembnih strani</li>
 </ul>
-<p>To orodje odlično deluje v kombinaciji z <a href="/#/merge-pdf">Združi PDF</a> — najprej združite več datotek, nato organizirajte združene strani.</p>`,
+<p>To orodje odlično deluje v kombinaciji z <a href="#/merge-pdf">Združi PDF</a> — najprej združite več datotek, nato organizirajte združene strani.</p>`,
         date: '2023-04-22',
         tool: 'organize-pdf',
         tags: ['organiziranje', 'preureditev', 'strani'],
@@ -200,7 +200,7 @@ export const blogPostsSl: BlogPost[] = [
         excerpt: 'Odstranite neželene robove ali obrežite strani PDF, da se osredotočite na določena vsebinska področja. Vizualni predogled s prilagodljivimi vrednostmi obrezovanja.',
         body: `<p>PDF-ji imajo pogosto prekomerne robove iz tiskalniških postavitev ali optično prebranih okvirjev. Obrezovanje odstrani te odvečne prostore.</p>
 <h2>Kako obrezati</h2>
-<p><a href="/#/crop-pdf">Orodje za obrezovanje PDF</a> zagotavlja vizualni predogled, kjer lahko povlečete robove za določitev področja obrezovanja. Nastavite vrednosti za zgornji, spodnji, levi in desni rob neodvisno.</p>
+<p><a href="#/crop-pdf">Orodje za obrezovanje PDF</a> zagotavlja vizualni predogled, kjer lahko povlečete robove za določitev področja obrezovanja. Nastavite vrednosti za zgornji, spodnji, levi in desni rob neodvisno.</p>
 <h2>Primeri uporabe</h2>
 <ul>
 <li>Odstranitev širokih tiskalniških robov iz optično prebranih dokumentov</li>
@@ -219,7 +219,7 @@ export const blogPostsSl: BlogPost[] = [
         excerpt: 'Trajno odstranite zaupne podatke iz PDF-jev. Začrnite besedilo, slike ali katero koli vsebino, ki ne sme biti deljena.',
         body: `<p>Redigiranje trajno odstrani občutljive informacije iz dokumentov pred deljenjem. Za razliko od označevanja ali prekrivanja z oblikami, redigirane vsebine ni mogoče obnoviti.</p>
 <h2>Kako redigiranje deluje</h2>
-<p><a href="/#/redact-pdf">Orodje za redigiranje PDF</a> vam omogoča risanje črnih pravokotnikov čez področja, ki jih želite trajno cenzurirati. Vsebina pod njimi je uničena — ne samo skrita.</p>
+<p><a href="#/redact-pdf">Orodje za redigiranje PDF</a> vam omogoča risanje črnih pravokotnikov čez področja, ki jih želite trajno cenzurirati. Vsebina pod njimi je uničena — ne samo skrita.</p>
 <h2>Kaj redigirati</h2>
 <ul>
 <li>Osebne podatke (imena, naslove, telefonske številke)</li>
@@ -240,7 +240,7 @@ export const blogPostsSl: BlogPost[] = [
         excerpt: 'Dodajte opombe, besedilne bloke, pravokotnike in prostoročne risbe v PDF dokumente brez namizne programske opreme.',
         body: `<p>Morate označiti PDF, dodati opombe ali komentirati dokument? Orodje za urejanje vam omogoča dodajanje vsebine neposredno na strani PDF.</p>
 <h2>Razpoložljiva orodja</h2>
-<p><a href="/#/edit-pdf">Orodje za urejanje PDF</a> ponuja več možnosti označevanja:</p>
+<p><a href="#/edit-pdf">Orodje za urejanje PDF</a> ponuja več možnosti označevanja:</p>
 <ul>
 <li><strong>Besedilni bloki</strong> — dodajte prilagojeno besedilo s prilagodljivo velikostjo pisave, barvo in ozadjem</li>
 <li><strong>Pravokotniki</strong> — označite področja ali ustvarite okvire</li>
@@ -248,7 +248,7 @@ export const blogPostsSl: BlogPost[] = [
 </ul>
 <h2>Nasveti</h2>
 <p>Dvokliknite besedilni blok za urejanje njegove vsebine. Povlecite elemente za prerazporeditev. Uporabite več strani za označevanje različnih razdelkov dokumenta.</p>
-<p>Za dodajanje podpisa posebej je orodje <a href="/#/sign-pdf">Podpiši PDF</a> bolj priročno.</p>`,
+<p>Za dodajanje podpisa posebej je orodje <a href="#/sign-pdf">Podpiši PDF</a> bolj priročno.</p>`,
         date: '2025-01-15',
         tool: 'edit-pdf',
         tags: ['urejanje', 'označevanje', 'besedilo'],
@@ -260,7 +260,7 @@ export const blogPostsSl: BlogPost[] = [
         excerpt: 'Dodajte svoj podpis v PDF datoteke. Narišite podpis ali naložite sliko podpisa in ga natančno pozicionirajte na dokumentu.',
         body: `<p>Digitalno podpisovanje dokumentov prihrani čas in papir. Dodajte svoj ročni podpis v kateri koli PDF v nekaj sekundah.</p>
 <h2>Dva načina podpisovanja</h2>
-<p><a href="/#/sign-pdf">Orodje za podpis PDF</a> ponuja dva načina podpisovanja:</p>
+<p><a href="#/sign-pdf">Orodje za podpis PDF</a> ponuja dva načina podpisovanja:</p>
 <ul>
 <li><strong>Risanje</strong> — uporabite miško ali zaslon na dotik za risanje podpisa</li>
 <li><strong>Slika</strong> — naložite PNG ali JPG sliko vašega podpisa</li>
@@ -280,7 +280,7 @@ export const blogPostsSl: BlogPost[] = [
         excerpt: 'Pridobite vse vdelane slike iz PDF dokumentov. Shranite jih posamezno ali prenesite vse kot ZIP arhiv.',
         body: `<p>PDF-ji pogosto vsebujejo dragocene slike — fotografije, diagrame, grafikone ali logotipe — ki jih boste morda morali uporabiti drugje.</p>
 <h2>Kako deluje</h2>
-<p><a href="/#/extract-images">Orodje za izvlečenje slik</a> pregleda vaš PDF za vse vdelane slike in jih izvleče kot posamezne PNG datoteke.</p>
+<p><a href="#/extract-images">Orodje za izvlečenje slik</a> pregleda vaš PDF za vse vdelane slike in jih izvleče kot posamezne PNG datoteke.</p>
 <h2>Kaj se izvleče</h2>
 <ul>
 <li>Fotografije in ilustracije</li>
@@ -288,7 +288,7 @@ export const blogPostsSl: BlogPost[] = [
 <li>Grafikoni in diagrami</li>
 <li>Slike ozadja</li>
 </ul>
-<p>Prenesite vsako sliko posamezno ali vse naenkrat z možnostjo prenosa ZIP. Opomba: to orodje izvleče vdelane slike, ne posnetkov zaslona strani. Za celostranke slike uporabite <a href="/#/pdf-to-png">PDF v PNG</a>.</p>`,
+<p>Prenesite vsako sliko posamezno ali vse naenkrat z možnostjo prenosa ZIP. Opomba: to orodje izvleče vdelane slike, ne posnetkov zaslona strani. Za celostranke slike uporabite <a href="#/pdf-to-png">PDF v PNG</a>.</p>`,
         date: '2022-12-05',
         tool: 'extract-images',
         tags: ['izvlečenje', 'slike', 'fotografije'],
@@ -305,8 +305,8 @@ export const blogPostsSl: BlogPost[] = [
 <li><strong>Oddaje</strong> — nekatere ustanove zahtevajo črno-bele dokumente</li>
 <li><strong>Doslednost</strong> — ustvarite enoten videz v dokumentih iz različnih virov</li>
 </ul>
-<p><a href="/#/grayscale-pdf">Orodje PDF v sivine</a> pretvori vse barve v njihove ekvivalente sivin. Besedilo ostane ostro in berljivo, slike in grafike pa postanejo monokromatske.</p>
-<p>Za nadaljnje zmanjšanje velikosti datoteke po pretvorbi v sivine, rezultat obdelajte z orodjem <a href="/#/compress-pdf">Stisni PDF</a>.</p>`,
+<p><a href="#/grayscale-pdf">Orodje PDF v sivine</a> pretvori vse barve v njihove ekvivalente sivin. Besedilo ostane ostro in berljivo, slike in grafike pa postanejo monokromatske.</p>
+<p>Za nadaljnje zmanjšanje velikosti datoteke po pretvorbi v sivine, rezultat obdelajte z orodjem <a href="#/compress-pdf">Stisni PDF</a>.</p>`,
         date: '2023-08-17',
         tool: 'grayscale-pdf',
         tags: ['sivine', 'črno-belo', 'tiskanje'],
@@ -318,14 +318,14 @@ export const blogPostsSl: BlogPost[] = [
         excerpt: 'Samodejno dodajte oštevilčevanje strani v vaš PDF. Izberite položaj, obliko zapisa in slog za profesionalno oštevilčevanje dokumentov.',
         body: `<p>Številke strani pomagajo bralcem pri navigaciji po dolgih dokumentih in so bistvene za profesionalna poročila, priročnike in diplomske naloge.</p>
 <h2>Možnosti oštevilčevanja</h2>
-<p><a href="/#/page-numbers">Orodje za številke strani</a> ponuja prilagodljivo oblikovanje:</p>
+<p><a href="#/page-numbers">Orodje za številke strani</a> ponuja prilagodljivo oblikovanje:</p>
 <ul>
 <li><strong>Položaj</strong> — spodaj levo, spodaj na sredini ali spodaj desno</li>
 <li><strong>Oblika zapisa</strong> — preprosta številka (1, 2, 3) ali oblika "stran/skupaj" (1/10, 2/10)</li>
 </ul>
 <h2>Najboljše prakse</h2>
 <p>Spodaj na sredini je najpogostejši položaj za uradne dokumente. Oblika "stran/skupaj" je uporabna za pravne dokumente, kjer morajo prejemniki preveriti popolnost.</p>
-<p>Za več prilagoditev orodje <a href="/#/header-footer">Glava in noga</a> ponuja dodatne možnosti, vključno s prilagojenim besedilom.</p>`,
+<p>Za več prilagoditev orodje <a href="#/header-footer">Glava in noga</a> ponuja dodatne možnosti, vključno s prilagojenim besedilom.</p>`,
         date: '2020-09-30',
         tool: 'page-numbers',
         tags: ['številke-strani', 'oštevilčevanje', 'paginacija'],
@@ -337,7 +337,7 @@ export const blogPostsSl: BlogPost[] = [
         excerpt: 'Spremenite dimenzije strani PDF v standardne velikosti papirja. Enostavno pretvarjajte med A4, A3, Letter in Legal.',
         body: `<p>Različne države in panoge uporabljajo različne velikosti papirja. Spreminjanje velikosti zagotavlja, da vaš PDF ustreza pričakovani obliki za tiskanje ali oddajo.</p>
 <h2>Podprte velikosti</h2>
-<p><a href="/#/resize-pdf">Orodje za spreminjanje velikosti PDF</a> podpira:</p>
+<p><a href="#/resize-pdf">Orodje za spreminjanje velikosti PDF</a> podpira:</p>
 <ul>
 <li><strong>A4</strong> (210 x 297 mm) — mednarodni standard</li>
 <li><strong>A3</strong> (297 x 420 mm) — za večje odtise in plakate</li>
@@ -362,7 +362,7 @@ export const blogPostsSl: BlogPost[] = [
 <li><strong>Združljivost</strong> — nekateri pregledovalniki nepravilno prikazujejo interaktivna polja</li>
 <li><strong>Tiskanje</strong> — zagotovite pravilno prikazovanje podatkov obrazca pri tiskanju</li>
 </ul>
-<p><a href="/#/flatten-pdf">Orodje za sploščitev PDF</a> obdela dokument z enim klikom. Rezultirajoča datoteka izgleda enako, vendar so vsi interaktivni elementi zdaj del vsebine strani.</p>`,
+<p><a href="#/flatten-pdf">Orodje za sploščitev PDF</a> obdela dokument z enim klikom. Rezultirajoča datoteka izgleda enako, vendar so vsi interaktivni elementi zdaj del vsebine strani.</p>`,
         date: '2025-02-10',
         tool: 'flatten-pdf',
         tags: ['sploščitev', 'obrazci', 'označbe'],
@@ -374,14 +374,14 @@ export const blogPostsSl: BlogPost[] = [
         excerpt: 'Pretvorite vsebino PDF v golo besedilo. Izvlecite vse berljivo besedilo iz vašega PDF za urejanje, iskanje ali obdelavo podatkov.',
         body: `<p>Izvlečenje besedila iz PDF-jev je uporabno za kopiranje vsebine v druge dokumente, iskanje po velikih datotekah ali obdelavo podatkov iz poročil.</p>
 <h2>Kako deluje</h2>
-<p><a href="/#/pdf-to-text">Orodje PDF v besedilo</a> prebere vse vdelano besedilo iz vašega PDF-ja in ga shrani kot datoteko golega besedila (.txt). Besedilo ohranja vrstni red branja in strukturo odstavkov.</p>
+<p><a href="#/pdf-to-text">Orodje PDF v besedilo</a> prebere vse vdelano besedilo iz vašega PDF-ja in ga shrani kot datoteko golega besedila (.txt). Besedilo ohranja vrstni red branja in strukturo odstavkov.</p>
 <h2>Omejitve</h2>
 <ul>
 <li>Deluje samo s PDF-ji, ki vsebujejo izbirljivo besedilo (digitalno besedilo)</li>
 <li>Optično prebrani dokumenti (PDF-ji samo s slikami) zahtevajo tehnologijo OCR, ki ni vključena</li>
 <li>Zapletene postavitve s stolpci ali tabelami morda ne ohranijo oblikovanja popolnoma</li>
 </ul>
-<p>Za ohranjanje vizualne postavitve strani razmislite o pretvorbi v slike z uporabo <a href="/#/pdf-to-jpg">PDF v JPG</a> ali <a href="/#/pdf-to-png">PDF v PNG</a>.</p>`,
+<p>Za ohranjanje vizualne postavitve strani razmislite o pretvorbi v slike z uporabo <a href="#/pdf-to-jpg">PDF v JPG</a> ali <a href="#/pdf-to-png">PDF v PNG</a>.</p>`,
         date: '2024-08-22',
         tool: 'pdf-to-text',
         tags: ['besedilo', 'izvlečenje', 'pretvorba'],
@@ -397,14 +397,14 @@ export const blogPostsSl: BlogPost[] = [
 <li><strong>PNG</strong> — brezizgubno stiskanje, podpora za prosojnost, večje datoteke</li>
 <li><strong>JPG</strong> — izgubno stiskanje, brez prosojnosti, manjše datoteke</li>
 </ul>
-<p><a href="/#/pdf-to-png">Orodje PDF v PNG</a> pretvori vsako stran v ločeno sliko PNG. Po želji lahko omogočite prosojna ozadja.</p>
+<p><a href="#/pdf-to-png">Orodje PDF v PNG</a> pretvori vsako stran v ločeno sliko PNG. Po želji lahko omogočite prosojna ozadja.</p>
 <h2>Najboljši primeri uporabe</h2>
 <ul>
 <li>Vdelava grafikonov in diagramov v predstavitve</li>
 <li>Ustvarjanje spletne grafike iz PDF oblik</li>
 <li>Izvlečenje visokokakovostnih posnetkov zaslona strani</li>
 </ul>
-<p>Če je velikost datoteke pomembnejša od kakovosti, razmislite o pretvorniku <a href="/#/pdf-to-jpg">PDF v JPG</a>.</p>`,
+<p>Če je velikost datoteke pomembnejša od kakovosti, razmislite o pretvorniku <a href="#/pdf-to-jpg">PDF v JPG</a>.</p>`,
         date: '2024-03-10',
         tool: 'pdf-to-png',
         tags: ['pretvorba', 'png', 'prosojno'],
@@ -416,7 +416,7 @@ export const blogPostsSl: BlogPost[] = [
         excerpt: 'Vstavite prilagojeno besedilo na vrh in dno vsake strani PDF. Uporabite ogradnike za samodejne številke strani.',
         body: `<p>Glave in noge dodajo kontekst in profesionalnost dokumentom. So bistvene za poročila, priročnike in uradne dokumente.</p>
 <h2>Kako deluje</h2>
-<p><a href="/#/header-footer">Orodje za glavo in nogo</a> vam omogoča dodajanje prilagojenega besedila na vrh in dno vsake strani v vašem PDF-ju.</p>
+<p><a href="#/header-footer">Orodje za glavo in nogo</a> vam omogoča dodajanje prilagojenega besedila na vrh in dno vsake strani v vašem PDF-ju.</p>
 <h2>Razpoložljivi ogradniki</h2>
 <ul>
 <li><code>{page}</code> — vstavi trenutno številko strani</li>
@@ -425,7 +425,7 @@ export const blogPostsSl: BlogPost[] = [
 <h2>Primeri</h2>
 <p>Glava: "Letno poročilo 2024" — Noga: "Stran {page} od {total}"</p>
 <p>Izberite poravnavo (levo, na sredino, desno) za pozicioniranje besedila po vaši želji.</p>
-<p>Za dodajanje samo številk strani brez dodatnega besedila uporabite preprostejše orodje <a href="/#/page-numbers">Številke strani</a>.</p>`,
+<p>Za dodajanje samo številk strani brez dodatnega besedila uporabite preprostejše orodje <a href="#/page-numbers">Številke strani</a>.</p>`,
         date: '2020-07-15',
         tool: 'header-footer',
         tags: ['glava', 'noga', 'prilagoditev'],
@@ -438,11 +438,11 @@ export const blogPostsSl: BlogPost[] = [
         body: `<p>Študentje dnevno delajo s PDF-ji — prosojnice predavanj, raziskovalni članki, naloge in učbeniki. Prava orodja zelo olajšajo akademsko življenje.</p>
 <h2>Bistvena orodja za študente</h2>
 <ul>
-<li><strong><a href="/#/merge-pdf">Združi PDF</a></strong> — združite zapiske predavanj iz več srečanj v en dokument</li>
-<li><strong><a href="/#/compress-pdf">Stisni PDF</a></strong> — zmanjšajte velikost datoteke pred oddajo nalog po e-pošti ali LMS</li>
-<li><strong><a href="/#/split-pdf">Razdeli PDF</a></strong> — izvlecite določena poglavja iz učbenikov ali branj</li>
-<li><strong><a href="/#/pdf-to-text">PDF v besedilo</a></strong> — izvlecite besedilo za zapiske, citate ali študijske vodnike</li>
-<li><strong><a href="/#/page-numbers">Številke strani</a></strong> — dodajte oštevilčevanje diplomski ali magistrski nalogi</li>
+<li><strong><a href="#/merge-pdf">Združi PDF</a></strong> — združite zapiske predavanj iz več srečanj v en dokument</li>
+<li><strong><a href="#/compress-pdf">Stisni PDF</a></strong> — zmanjšajte velikost datoteke pred oddajo nalog po e-pošti ali LMS</li>
+<li><strong><a href="#/split-pdf">Razdeli PDF</a></strong> — izvlecite določena poglavja iz učbenikov ali branj</li>
+<li><strong><a href="#/pdf-to-text">PDF v besedilo</a></strong> — izvlecite besedilo za zapiske, citate ali študijske vodnike</li>
+<li><strong><a href="#/page-numbers">Številke strani</a></strong> — dodajte oštevilčevanje diplomski ali magistrski nalogi</li>
 </ul>
 <h2>Prednost zasebnosti</h2>
 <p>Vsa orodja obdelujejo datoteke lokalno v vašem brskalniku. Vaši raziskovalni članki in akademsko delo nikoli ne zapustijo vaše naprave — pomembno pri delu z neobjavljenimi raziskavami.</p>`,
@@ -458,9 +458,9 @@ export const blogPostsSl: BlogPost[] = [
         body: `<p>Ne glede na to, ali obravnavate pogodbe, finančna poročila ali osebne zapise, je varovanje vaših PDF dokumentov ključnega pomena za preprečevanje nepooblaščenega dostopa in uhajanja podatkov.</p>
 <h2>Tri ravni varnosti PDF</h2>
 <ol>
-<li><strong>Zaščita z geslom</strong> — uporabite orodje <a href="/#/protect-pdf">Zaščiti PDF</a> za dodajanje uporabniških in lastniških gesel. Nadzirajte, kdo lahko odpre, tiska ali spremeni dokument.</li>
-<li><strong>Redigiranje</strong> — trajno odstranite občutljive podatke z orodjem <a href="/#/redact-pdf">Redigiraj PDF</a>. Redigirane vsebine ni mogoče obnoviti.</li>
-<li><strong>Sploščitev</strong> — uporabite orodje <a href="/#/flatten-pdf">Splošči PDF</a> za pretvorbo polj obrazcev in označb v statično vsebino pred deljenjem.</li>
+<li><strong>Zaščita z geslom</strong> — uporabite orodje <a href="#/protect-pdf">Zaščiti PDF</a> za dodajanje uporabniških in lastniških gesel. Nadzirajte, kdo lahko odpre, tiska ali spremeni dokument.</li>
+<li><strong>Redigiranje</strong> — trajno odstranite občutljive podatke z orodjem <a href="#/redact-pdf">Redigiraj PDF</a>. Redigirane vsebine ni mogoče obnoviti.</li>
+<li><strong>Sploščitev</strong> — uporabite orodje <a href="#/flatten-pdf">Splošči PDF</a> za pretvorbo polj obrazcev in označb v statično vsebino pred deljenjem.</li>
 </ol>
 <h2>Pogoste napake, ki se jim je treba izogniti</h2>
 <ul>
@@ -482,11 +482,11 @@ export const blogPostsSl: BlogPost[] = [
 <p>Preprosto naložite več PDF datotek v katero koli podprto orodje. Vsaka datoteka se obdela neodvisno in vse rezultate lahko prenesete posamezno ali kot ZIP arhiv.</p>
 <h2>Podprta orodja za paketno obdelavo</h2>
 <ul>
-<li><strong><a href="/#/compress-pdf">Stisni PDF</a></strong> — zmanjšajte velikost več dokumentov naenkrat</li>
-<li><strong><a href="/#/rotate-pdf">Zasukaj PDF</a></strong> — popravite usmerjenost serije optično prebranih datotek</li>
-<li><strong><a href="/#/grayscale-pdf">PDF v sivine</a></strong> — pretvorite več barvnih dokumentov v črno-belo</li>
-<li><strong><a href="/#/pdf-to-jpg">PDF v JPG</a></strong> / <strong><a href="/#/pdf-to-png">PDF v PNG</a></strong> — pretvorite več PDF-jev v slike</li>
-<li><strong><a href="/#/flatten-pdf">Splošči PDF</a></strong>, <strong><a href="/#/resize-pdf">Spremeni velikost</a></strong>, <strong><a href="/#/page-numbers">Številke strani</a></strong> in več</li>
+<li><strong><a href="#/compress-pdf">Stisni PDF</a></strong> — zmanjšajte velikost več dokumentov naenkrat</li>
+<li><strong><a href="#/rotate-pdf">Zasukaj PDF</a></strong> — popravite usmerjenost serije optično prebranih datotek</li>
+<li><strong><a href="#/grayscale-pdf">PDF v sivine</a></strong> — pretvorite več barvnih dokumentov v črno-belo</li>
+<li><strong><a href="#/pdf-to-jpg">PDF v JPG</a></strong> / <strong><a href="#/pdf-to-png">PDF v PNG</a></strong> — pretvorite več PDF-jev v slike</li>
+<li><strong><a href="#/flatten-pdf">Splošči PDF</a></strong>, <strong><a href="#/resize-pdf">Spremeni velikost</a></strong>, <strong><a href="#/page-numbers">Številke strani</a></strong> in več</li>
 </ul>
 <h2>Zmogljivost</h2>
 <p>Vsa obdelava poteka lokalno na vaši napravi, zato hitrost zavisi od vašega računalnika. Večina operacij se zaključi v sekundah tudi za velike serije.</p>`,
@@ -502,10 +502,10 @@ export const blogPostsSl: BlogPost[] = [
         body: `<p>PDF-ji, namenjeni za ogled ali prenos na spletu, morajo biti optimizirani za hitro nalaganje in berljivost na zaslonu.</p>
 <h2>Strategije optimizacije</h2>
 <ol>
-<li><strong>Stiskanje</strong> — uporabite orodje <a href="/#/compress-pdf">Stisni PDF</a> s srednjim ali visokim stiskanjem za občutno zmanjšanje velikosti datoteke</li>
-<li><strong>Spreminjanje velikosti</strong> — prilagodite dimenzije strani z orodjem <a href="/#/resize-pdf">Spremeni velikost PDF</a>, da ustrezajo pogostim velikostim zaslona</li>
-<li><strong>Pretvorba v slike</strong> — za preprost ogled pretvorite strani v JPG z uporabo <a href="/#/pdf-to-jpg">PDF v JPG</a> za hitrejše spletno nalaganje</li>
-<li><strong>Sivine</strong> — če barva ni bistvena, <a href="/#/grayscale-pdf">PDF v sivine</a> dodatno zmanjša velikost datoteke</li>
+<li><strong>Stiskanje</strong> — uporabite orodje <a href="#/compress-pdf">Stisni PDF</a> s srednjim ali visokim stiskanjem za občutno zmanjšanje velikosti datoteke</li>
+<li><strong>Spreminjanje velikosti</strong> — prilagodite dimenzije strani z orodjem <a href="#/resize-pdf">Spremeni velikost PDF</a>, da ustrezajo pogostim velikostim zaslona</li>
+<li><strong>Pretvorba v slike</strong> — za preprost ogled pretvorite strani v JPG z uporabo <a href="#/pdf-to-jpg">PDF v JPG</a> za hitrejše spletno nalaganje</li>
+<li><strong>Sivine</strong> — če barva ni bistvena, <a href="#/grayscale-pdf">PDF v sivine</a> dodatno zmanjša velikost datoteke</li>
 </ol>
 <h2>Smernice za velikost datoteke</h2>
 <ul>
@@ -533,7 +533,7 @@ export const blogPostsSl: BlogPost[] = [
 <li><strong>Brez omejitev velikosti datotek</strong> — pomnilnik vašega računalnika je edina omejitev</li>
 </ul>
 <h2>Razpoložljiva orodja</h2>
-<p>Vseh 22 orodij deluje brez povezave: od <a href="/#/merge-pdf">združevanja</a> in <a href="/#/compress-pdf">stiskanja</a> do <a href="/#/sign-pdf">podpisovanja</a> in <a href="/#/redact-pdf">redigiranja</a>. Vsaka operacija se izvaja lokalno, kar vam daje popoln nadzor nad vašimi podatki.</p>`,
+<p>Vseh 22 orodij deluje brez povezave: od <a href="#/merge-pdf">združevanja</a> in <a href="#/compress-pdf">stiskanja</a> do <a href="#/sign-pdf">podpisovanja</a> in <a href="#/redact-pdf">redigiranja</a>. Vsaka operacija se izvaja lokalno, kar vam daje popoln nadzor nad vašimi podatki.</p>`,
         date: '2025-08-12',
         tool: 'compress-pdf',
         tags: ['zasebnost', 'brezplačno', 'brez-povezave'],
@@ -546,11 +546,11 @@ export const blogPostsSl: BlogPost[] = [
         body: `<p>Preden pošljete PDF v tisk, lahko nekaj prilagoditev zagotovi najboljše rezultate in prepreči pogoste težave pri tiskanju.</p>
 <h2>Kontrolni seznam priprave za tisk</h2>
 <ol>
-<li><strong>Spremenite velikost strani</strong> — uporabite orodje <a href="/#/resize-pdf">Spremeni velikost PDF</a> za ujemanje s ciljno velikostjo papirja (A4, Letter, A3)</li>
-<li><strong>Obrežite robove</strong> — odstranite odvečni beli prostor z orodjem <a href="/#/crop-pdf">Obreži PDF</a></li>
-<li><strong>Pretvorite v sivine</strong> — če tiskate črno-belo, uporabite <a href="/#/grayscale-pdf">PDF v sivine</a> za predogled rezultata in prihranek črnila</li>
-<li><strong>Sploščite obrazce</strong> — zagotovite pravilno tiskanje podatkov obrazca s <a href="/#/flatten-pdf">sploščitvijo PDF-ja</a></li>
-<li><strong>Stisnite</strong> — če pošiljate tiskarski storitvi, <a href="/#/compress-pdf">stisnite</a> z nizkimi nastavitvami za zmanjšanje časa prenosa</li>
+<li><strong>Spremenite velikost strani</strong> — uporabite orodje <a href="#/resize-pdf">Spremeni velikost PDF</a> za ujemanje s ciljno velikostjo papirja (A4, Letter, A3)</li>
+<li><strong>Obrežite robove</strong> — odstranite odvečni beli prostor z orodjem <a href="#/crop-pdf">Obreži PDF</a></li>
+<li><strong>Pretvorite v sivine</strong> — če tiskate črno-belo, uporabite <a href="#/grayscale-pdf">PDF v sivine</a> za predogled rezultata in prihranek črnila</li>
+<li><strong>Sploščite obrazce</strong> — zagotovite pravilno tiskanje podatkov obrazca s <a href="#/flatten-pdf">sploščitvijo PDF-ja</a></li>
+<li><strong>Stisnite</strong> — če pošiljate tiskarski storitvi, <a href="#/compress-pdf">stisnite</a> z nizkimi nastavitvami za zmanjšanje časa prenosa</li>
 </ol>
 <h2>Pogoste težave pri tiskanju</h2>
 <ul>
@@ -570,8 +570,8 @@ export const blogPostsSl: BlogPost[] = [
         body: `<p>Interaktivni PDF obrazci z izpolnljivimi polji se pogosto uporabljajo za vloge, ankete in uradne dokumente. Razumevanje pravilnega ravnanja z njimi prihrani čas in prepreči težave.</p>
 <h2>Potek dela z obrazci</h2>
 <ol>
-<li><strong>Izpolnite</strong> — izpolnite polja obrazca v vašem pregledovalniku PDF ali uporabite orodje <a href="/#/edit-pdf">Uredi PDF</a> za dodajanje besedila neposredno na stran</li>
-<li><strong>Sploščite</strong> — uporabite orodje <a href="/#/flatten-pdf">Splošči PDF</a> za pretvorbo interaktivnih polj v statično vsebino, s čimer zaklenete vaše vnose</li>
+<li><strong>Izpolnite</strong> — izpolnite polja obrazca v vašem pregledovalniku PDF ali uporabite orodje <a href="#/edit-pdf">Uredi PDF</a> za dodajanje besedila neposredno na stran</li>
+<li><strong>Sploščite</strong> — uporabite orodje <a href="#/flatten-pdf">Splošči PDF</a> za pretvorbo interaktivnih polj v statično vsebino, s čimer zaklenete vaše vnose</li>
 <li><strong>Delite</strong> — distribuirajte sploščeni PDF z zavedanjem, da prejemniki ne morejo spremeniti vaših podatkov</li>
 </ol>
 <h2>Zakaj sploščiti pred deljenjem?</h2>
@@ -580,7 +580,7 @@ export const blogPostsSl: BlogPost[] = [
 <li>Zagotavlja, da dokument izgleda enako v vsakem pregledovalniku PDF</li>
 <li>Ohranja izpolnjeni obrazec za dolgoročno arhiviranje</li>
 </ul>
-<p>Za dodatno varnost <a href="/#/protect-pdf">zaščitite z geslom</a> sploščeni PDF pred deljenjem.</p>`,
+<p>Za dodatno varnost <a href="#/protect-pdf">zaščitite z geslom</a> sploščeni PDF pred deljenjem.</p>`,
         date: '2026-02-05',
         tool: 'flatten-pdf',
         tags: ['obrazci', 'sploščitev', 'izpolnjevanje'],
@@ -598,7 +598,7 @@ export const blogPostsSl: BlogPost[] = [
 <li>Brez podpore za prosojnost</li>
 <li>Najboljši za: deljenje, e-pošto, družbena omrežja, PDF-je s številnimi fotografijami</li>
 </ul>
-<p>Uporabite orodje <a href="/#/pdf-to-jpg">PDF v JPG</a> za večino splošnih pretvorb.</p>
+<p>Uporabite orodje <a href="#/pdf-to-jpg">PDF v JPG</a> za večino splošnih pretvorb.</p>
 <h2>PNG — najboljši za grafiko in prosojnost</h2>
 <ul>
 <li>Večje datoteke zaradi brezizgubnega stiskanja</li>
@@ -606,7 +606,7 @@ export const blogPostsSl: BlogPost[] = [
 <li>Podpira prosojna ozadja</li>
 <li>Najboljši za: diagrame, posnetke zaslona, spletno grafiko, predstavitve</li>
 </ul>
-<p>Uporabite orodje <a href="/#/pdf-to-png">PDF v PNG</a>, ko sta kakovost in prosojnost pomembni.</p>
+<p>Uporabite orodje <a href="#/pdf-to-png">PDF v PNG</a>, ko sta kakovost in prosojnost pomembni.</p>
 <h2>Hiter odločitveni vodnik</h2>
 <p>Potrebujete majhne datoteke za splet ali e-pošto? Izberite JPG. Potrebujete popolno kakovost ali prosojna ozadja? Izberite PNG.</p>`,
         date: '2025-07-25',
@@ -621,11 +621,11 @@ export const blogPostsSl: BlogPost[] = [
         body: `<p>Pisarne dnevno obravnavajo na stotine PDF dokumentov — račune, pogodbe, poročila in korespondenco. Učinkovito upravljanje PDF-jev prihrani ure dela.</p>
 <h2>Pogoste pisarniške naloge</h2>
 <ul>
-<li><strong>Združevanje poročil</strong> — uporabite <a href="/#/merge-pdf">Združi PDF</a> za sestavo mesečnih poročil v četrtletne povzetke</li>
-<li><strong>Organiziranje dokumentov</strong> — <a href="/#/organize-pdf">preuredite, izbrišite ali podvojite strani</a> za prestrukturiranje dolgih dokumentov</li>
-<li><strong>Dodajanje oštevilčevanja</strong> — vstavite <a href="/#/page-numbers">številke strani</a> ali <a href="/#/header-footer">glave in noge</a> za profesionalno predstavitev</li>
-<li><strong>Zaščita datotek</strong> — <a href="/#/protect-pdf">zaščitite z geslom</a> zaupne dokumente pred distribucijo</li>
-<li><strong>Stiskanje za e-pošto</strong> — <a href="/#/compress-pdf">zmanjšajte velikost datoteke</a> za izpolnjevanje omejitev prilog e-pošte</li>
+<li><strong>Združevanje poročil</strong> — uporabite <a href="#/merge-pdf">Združi PDF</a> za sestavo mesečnih poročil v četrtletne povzetke</li>
+<li><strong>Organiziranje dokumentov</strong> — <a href="#/organize-pdf">preuredite, izbrišite ali podvojite strani</a> za prestrukturiranje dolgih dokumentov</li>
+<li><strong>Dodajanje oštevilčevanja</strong> — vstavite <a href="#/page-numbers">številke strani</a> ali <a href="#/header-footer">glave in noge</a> za profesionalno predstavitev</li>
+<li><strong>Zaščita datotek</strong> — <a href="#/protect-pdf">zaščitite z geslom</a> zaupne dokumente pred distribucijo</li>
+<li><strong>Stiskanje za e-pošto</strong> — <a href="#/compress-pdf">zmanjšajte velikost datoteke</a> za izpolnjevanje omejitev prilog e-pošte</li>
 </ul>
 <h2>Nasvet za potek dela</h2>
 <p>Začnite z združevanjem povezanih datotek, nato organizirajte strani, dodajte številke strani in na koncu stisnite rezultat za distribucijo.</p>`,
@@ -645,14 +645,14 @@ export const blogPostsSl: BlogPost[] = [
 <li>Ustvarjanje portfolija ali dosjejev iz posameznih datotek</li>
 <li>Sestavljanje optično prebranih strani iz različnih srečanj</li>
 </ul>
-<p>Uporabite orodje <a href="/#/merge-pdf">Združi PDF</a> za vlečenje, spuščanje in preureditev datotek pred kombiniranjem.</p>
+<p>Uporabite orodje <a href="#/merge-pdf">Združi PDF</a> za vlečenje, spuščanje in preureditev datotek pred kombiniranjem.</p>
 <h2>Kdaj razdeliti</h2>
 <ul>
 <li>Izvlečenje določenih strani iz velikega dokumenta</li>
 <li>Razdelitev knjige v posamezna poglavja</li>
 <li>Ločevanje PDF-ja z več računi v posamezne račune</li>
 </ul>
-<p>Orodje <a href="/#/split-pdf">Razdeli PDF</a> podpira razdelitev vseh strani in izvlečenje določenih obsegov strani.</p>
+<p>Orodje <a href="#/split-pdf">Razdeli PDF</a> podpira razdelitev vseh strani in izvlečenje določenih obsegov strani.</p>
 <h2>Kombiniranje obeh operacij</h2>
 <p>Potrebujete strani iz več dokumentov? Najprej razdelite vsako izvorno datoteko za izvlečenje strani, ki jih potrebujete, nato združite izvlečene strani v vaš končni dokument.</p>`,
         date: '2026-03-01',
@@ -672,7 +672,7 @@ export const blogPostsSl: BlogPost[] = [
 <li><strong>Pripravljeno za tisk</strong> — PDF-ji so zasnovani za prikaz na zaslonu in tiskanje</li>
 </ul>
 <h2>Kako deluje</h2>
-<p>Orodje <a href="/#/markdown-to-pdf">Markdown v PDF</a> upodobi vašo vsebino Markdown s polno podporo za naslove, sezname, bloke kode, tabele in še več. Preprosto prilepite ali vnesite svoj Markdown, si oglejte predogled in prenesite PDF.</p>
+<p>Orodje <a href="#/markdown-to-pdf">Markdown v PDF</a> upodobi vašo vsebino Markdown s polno podporo za naslove, sezname, bloke kode, tabele in še več. Preprosto prilepite ali vnesite svoj Markdown, si oglejte predogled in prenesite PDF.</p>
 <h2>Podprte funkcije Markdown</h2>
 <p>Pretvornik obravnava vso standardno sintakso Markdown, vključno s krepkim tiskom, ležečim tiskom, povezavami, slikami, citati, urejenimi in neurejenimi seznami, kodnimi bloki z barvnim označevanjem sintakse ter tabelami. Vaša vsebina se obdela v celoti v brskalniku za popolno zasebnost.</p>`,
         date: '2026-03-05',
@@ -687,7 +687,7 @@ export const blogPostsSl: BlogPost[] = [
         body: `<p>Digitalno podpisovanje dokumentov je postalo bistveno v današnjem okolju dela na daljavo. Obstaja pa pomembna razlika med elektronskimi podpisi in digitalnimi podpisi.</p>
 <h2>Elektronski podpisi</h2>
 <p>Elektronski podpis je katera koli oznaka, simbol ali postopek, priložen dokumentu za izražanje soglasja. To vključuje vtipkana imena, optično prebrane ročne podpise ali narisane podpise.</p>
-<p>Orodje <a href="/#/sign-pdf">Podpiši PDF</a> vam omogoča ustvarjanje elektronskih podpisov z risanjem, tipkanjem ali nalaganjem slike vašega podpisa — vse se obdela lokalno v vašem brskalniku.</p>
+<p>Orodje <a href="#/sign-pdf">Podpiši PDF</a> vam omogoča ustvarjanje elektronskih podpisov z risanjem, tipkanjem ali nalaganjem slike vašega podpisa — vse se obdela lokalno v vašem brskalniku.</p>
 <h2>Digitalni podpisi</h2>
 <p>Digitalni podpisi uporabljajo kriptografsko tehnologijo za preverjanje identitete podpisnika in zagotavljanje, da dokument ni bil spremenjen. Zahtevajo digitalno potrdilo od zaupanja vredne institucije.</p>
 <h2>Katerega uporabiti?</h2>
@@ -710,8 +710,8 @@ export const blogPostsSl: BlogPost[] = [
 <li><strong>Zadosten kontrast</strong> — zagotovite, da ima besedilo ustrezen kontrast glede na ozadje</li>
 </ul>
 <h2>Orodja, ki pomagajo</h2>
-<p>Orodje <a href="/#/edit-pdf">Uredi PDF</a> vam omogoča dodajanje besedilnih opomb in oznak v dokumente. Uporabite ga za dodajanje opisnega besedila ob slikah ali pojasnjevanje zapletenih diagramov.</p>
-<p>Za optično prebrane dokumente uporabite orodje <a href="/#/pdf-to-text">PDF v besedilo</a>, da preverite, ali je besedilna vsebina pravilno izvlečljiva, kar je bistveno za bralnike zaslona.</p>
+<p>Orodje <a href="#/edit-pdf">Uredi PDF</a> vam omogoča dodajanje besedilnih opomb in oznak v dokumente. Uporabite ga za dodajanje opisnega besedila ob slikah ali pojasnjevanje zapletenih diagramov.</p>
+<p>Za optično prebrane dokumente uporabite orodje <a href="#/pdf-to-text">PDF v besedilo</a>, da preverite, ali je besedilna vsebina pravilno izvlečljiva, kar je bistveno za bralnike zaslona.</p>
 <h2>Testiranje dostopnosti</h2>
 <p>Vedno preizkusite svoje PDF-je z bralnikom zaslona, preden jih razpošljete. Preprosti preizkusi vključujejo preverjanje, ali je besedilo mogoče izbrati in kopirati ter ali je vrstni red branja smiseln.</p>`,
         date: '2026-01-22',
@@ -734,9 +734,9 @@ export const blogPostsSl: BlogPost[] = [
 <h2>Prednosti brskalniških orodij</h2>
 <p>Za razliko od nameščene programske opreme brskalniška orodja za PDF, kot je <a href="/">PDF Worker</a>, ne zahtevajo nobene namestitve ali posodobitev. Odprite zavihek, obdelajte datoteko in nadaljujte. Brez licenčnin, brez težav z združljivostjo.</p>
 <h2>Paketna obdelava</h2>
-<p>Mnoga orodja podpirajo obdelavo več datotek hkrati. Naložite več PDF-jev v orodje <a href="/#/compress-pdf">Stisni PDF</a> in prenesite vse rezultate skupaj kot datoteko ZIP. Enako velja za <a href="/#/rotate-pdf">vrtenje</a>, <a href="/#/grayscale-pdf">pretvorbo v sivine</a> in druge operacije.</p>
+<p>Mnoga orodja podpirajo obdelavo več datotek hkrati. Naložite več PDF-jev v orodje <a href="#/compress-pdf">Stisni PDF</a> in prenesite vse rezultate skupaj kot datoteko ZIP. Enako velja za <a href="#/rotate-pdf">vrtenje</a>, <a href="#/grayscale-pdf">pretvorbo v sivine</a> in druge operacije.</p>
 <h2>Veriženje operacij</h2>
-<p>Za zapletene poteke dela verižite operacije: najprej <a href="/#/unlock-pdf">odklenite</a> zaščiteni PDF, nato ga <a href="/#/split-pdf">razdelite</a> v razdelke, <a href="/#/compress-pdf">stisnite</a> vsak razdelek in na koncu <a href="/#/merge-pdf">združite</a> dele, ki jih potrebujete.</p>`,
+<p>Za zapletene poteke dela verižite operacije: najprej <a href="#/unlock-pdf">odklenite</a> zaščiteni PDF, nato ga <a href="#/split-pdf">razdelite</a> v razdelke, <a href="#/compress-pdf">stisnite</a> vsak razdelek in na koncu <a href="#/merge-pdf">združite</a> dele, ki jih potrebujete.</p>`,
         date: '2026-02-05',
         tool: 'compress-pdf',
         tags: ['potek-dela', 'avtomatizacija', 'produktivnost'],

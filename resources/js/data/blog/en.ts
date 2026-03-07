@@ -8,16 +8,16 @@ export const blogPostsEn: BlogPost[] = [
         excerpt: 'Learn how to combine multiple PDF documents into a single file without installing any software. Fast, secure, and completely free.',
         body: `<p>Merging PDF files is one of the most common tasks when working with documents. Whether you need to combine reports, contracts, or presentations, having a reliable tool makes all the difference.</p>
 <h2>Why Merge PDFs Online?</h2>
-<p>Traditional desktop software can be expensive and often requires installation. With <a href="/#/merge-pdf">PDF Worker's Merge PDF tool</a>, you can combine files directly in your browser — no uploads, no servers, complete privacy.</p>
+<p>Traditional desktop software can be expensive and often requires installation. With <a href="#/merge-pdf">PDF Worker's Merge PDF tool</a>, you can combine files directly in your browser — no uploads, no servers, complete privacy.</p>
 <h2>Step-by-Step Guide</h2>
 <ol>
-<li>Open the <a href="/#/merge-pdf">Merge PDF</a> tool</li>
+<li>Open the <a href="#/merge-pdf">Merge PDF</a> tool</li>
 <li>Drag and drop your PDF files or click to browse</li>
 <li>Reorder files by dragging them into the desired sequence</li>
 <li>Click "Merge PDF" and download your combined document</li>
 </ol>
 <h2>Tips for Best Results</h2>
-<p>Make sure all your PDFs are not password-protected before merging. If they are, use the <a href="/#/unlock-pdf">Unlock PDF</a> tool first to remove the protection.</p>
+<p>Make sure all your PDFs are not password-protected before merging. If they are, use the <a href="#/unlock-pdf">Unlock PDF</a> tool first to remove the protection.</p>
 <p>For large batches of files, the tool handles dozens of documents efficiently since all processing happens locally on your device.</p>`,
         date: '2023-06-15',
         tool: 'merge-pdf',
@@ -30,7 +30,7 @@ export const blogPostsEn: BlogPost[] = [
         excerpt: 'Reduce PDF file size without losing quality. Three compression levels to balance size and clarity for email, web, or archiving.',
         body: `<p>Large PDF files can be problematic when sharing via email or uploading to websites. Compression helps reduce file size while maintaining acceptable quality.</p>
 <h2>Understanding Compression Levels</h2>
-<p>The <a href="/#/compress-pdf">Compress PDF tool</a> offers three levels:</p>
+<p>The <a href="#/compress-pdf">Compress PDF tool</a> offers three levels:</p>
 <ul>
 <li><strong>Low compression</strong> — minimal size reduction, near-original quality</li>
 <li><strong>Medium compression</strong> — good balance between size and quality</li>
@@ -50,7 +50,7 @@ export const blogPostsEn: BlogPost[] = [
         excerpt: 'Extract individual pages or page ranges from PDF documents. Download each page separately or as a ZIP archive.',
         body: `<p>Sometimes you only need a few pages from a large PDF document. Splitting allows you to extract exactly what you need.</p>
 <h2>Two Splitting Modes</h2>
-<p>The <a href="/#/split-pdf">Split PDF tool</a> offers two approaches:</p>
+<p>The <a href="#/split-pdf">Split PDF tool</a> offers two approaches:</p>
 <ul>
 <li><strong>Split all pages</strong> — extracts every page as an individual PDF file</li>
 <li><strong>Page range</strong> — specify exact pages like "1-3, 5, 7-9"</li>
@@ -69,7 +69,7 @@ export const blogPostsEn: BlogPost[] = [
         excerpt: 'Rotate scanned documents or fix upside-down pages. Supports 90, 180, and 270 degree rotation for all pages.',
         body: `<p>Scanned documents often end up with the wrong orientation. A quick rotation fix makes them readable again.</p>
 <h2>Rotation Options</h2>
-<p>The <a href="/#/rotate-pdf">Rotate PDF tool</a> supports three rotation angles:</p>
+<p>The <a href="#/rotate-pdf">Rotate PDF tool</a> supports three rotation angles:</p>
 <ul>
 <li><strong>90 degrees clockwise</strong> — for landscape pages that should be portrait</li>
 <li><strong>180 degrees</strong> — for upside-down scans</li>
@@ -77,7 +77,7 @@ export const blogPostsEn: BlogPost[] = [
 </ul>
 <h2>Common Use Cases</h2>
 <p>Mobile phone scans, photocopied documents, and faxed PDFs frequently need rotation. The tool applies the rotation to all pages at once, saving you time.</p>
-<p>For more granular control over individual pages, use the <a href="/#/organize-pdf">Organize PDF</a> tool which lets you manage pages individually.</p>`,
+<p>For more granular control over individual pages, use the <a href="#/organize-pdf">Organize PDF</a> tool which lets you manage pages individually.</p>`,
         date: '2022-08-12',
         tool: 'rotate-pdf',
         tags: ['rotate', 'orientation', 'scan'],
@@ -89,7 +89,7 @@ export const blogPostsEn: BlogPost[] = [
         excerpt: 'Protect your documents with text or image watermarks. Customize position, opacity, size, and rotation.',
         body: `<p>Watermarks help protect intellectual property and mark documents as confidential, draft, or proprietary.</p>
 <h2>Text vs Image Watermarks</h2>
-<p>The <a href="/#/watermark-pdf">Watermark tool</a> supports both types:</p>
+<p>The <a href="#/watermark-pdf">Watermark tool</a> supports both types:</p>
 <ul>
 <li><strong>Text watermarks</strong> — add words like "CONFIDENTIAL" or "DRAFT" with custom font size, color, and rotation</li>
 <li><strong>Image watermarks</strong> — overlay your company logo or stamp with adjustable opacity and size</li>
@@ -107,14 +107,14 @@ export const blogPostsEn: BlogPost[] = [
         excerpt: 'Transform each PDF page into a high-quality JPG image. Adjust quality settings for the perfect balance between size and clarity.',
         body: `<p>Converting PDF pages to images is useful for presentations, social media posts, or when you need to embed PDF content in other documents.</p>
 <h2>Quality Settings</h2>
-<p>The <a href="/#/pdf-to-jpg">PDF to JPG tool</a> lets you adjust image quality from 10% to 100%. Higher quality means larger files but sharper images.</p>
+<p>The <a href="#/pdf-to-jpg">PDF to JPG tool</a> lets you adjust image quality from 10% to 100%. Higher quality means larger files but sharper images.</p>
 <h2>Recommended Settings</h2>
 <ul>
 <li><strong>80%</strong> — best for most uses, good quality with reasonable file size</li>
 <li><strong>100%</strong> — maximum quality for print or professional use</li>
 <li><strong>50-60%</strong> — smaller files for web or email</li>
 </ul>
-<p>Each page becomes a separate JPG file. Download them individually or as a ZIP archive. For transparent backgrounds, consider using the <a href="/#/pdf-to-png">PDF to PNG</a> converter instead.</p>`,
+<p>Each page becomes a separate JPG file. Download them individually or as a ZIP archive. For transparent backgrounds, consider using the <a href="#/pdf-to-png">PDF to PNG</a> converter instead.</p>`,
         date: '2021-05-18',
         tool: 'pdf-to-jpg',
         tags: ['convert', 'jpg', 'images'],
@@ -126,7 +126,7 @@ export const blogPostsEn: BlogPost[] = [
         excerpt: 'Convert multiple images into a single PDF document. Choose orientation, margins, and page layout.',
         body: `<p>Need to compile photos, scans, or screenshots into a single document? Converting images to PDF creates a professional, easily shareable file.</p>
 <h2>Supported Formats</h2>
-<p>The <a href="/#/jpg-to-pdf">JPG to PDF tool</a> accepts JPG, JPEG, PNG, and WebP images. Mix different formats in a single conversion.</p>
+<p>The <a href="#/jpg-to-pdf">JPG to PDF tool</a> accepts JPG, JPEG, PNG, and WebP images. Mix different formats in a single conversion.</p>
 <h2>Layout Options</h2>
 <ul>
 <li><strong>Orientation</strong> — choose portrait or landscape</li>
@@ -144,14 +144,14 @@ export const blogPostsEn: BlogPost[] = [
         excerpt: 'Secure your PDFs with user and owner passwords. Control printing, copying, and modification permissions.',
         body: `<p>Protecting sensitive documents with passwords prevents unauthorized access and controls what recipients can do with the file.</p>
 <h2>User vs Owner Password</h2>
-<p>The <a href="/#/protect-pdf">Protect PDF tool</a> supports two types of passwords:</p>
+<p>The <a href="#/protect-pdf">Protect PDF tool</a> supports two types of passwords:</p>
 <ul>
 <li><strong>User password</strong> — required to open and view the document</li>
 <li><strong>Owner password</strong> — controls permissions for printing, copying, and editing</li>
 </ul>
 <h2>Permission Controls</h2>
 <p>You can allow or restrict printing, copying text, and modifying the document. This is useful for distributing read-only reports or contracts.</p>
-<p>Need to remove protection later? Use the <a href="/#/unlock-pdf">Unlock PDF</a> tool with the correct password.</p>`,
+<p>Need to remove protection later? Use the <a href="#/unlock-pdf">Unlock PDF</a> tool with the correct password.</p>`,
         date: '2023-09-10',
         tool: 'protect-pdf',
         tags: ['protect', 'password', 'security'],
@@ -163,7 +163,7 @@ export const blogPostsEn: BlogPost[] = [
         excerpt: 'Unlock password-protected PDFs when you know the password. Remove restrictions on printing and copying.',
         body: `<p>If you have the password for a protected PDF, you can remove the restriction to make the document freely accessible.</p>
 <h2>How It Works</h2>
-<p>The <a href="/#/unlock-pdf">Unlock PDF tool</a> takes your protected PDF and the correct password, then produces an unprotected copy. The original file remains unchanged.</p>
+<p>The <a href="#/unlock-pdf">Unlock PDF tool</a> takes your protected PDF and the correct password, then produces an unprotected copy. The original file remains unchanged.</p>
 <h2>Important Notes</h2>
 <ul>
 <li>You must know the correct password — this tool does not crack or bypass passwords</li>
@@ -181,14 +181,14 @@ export const blogPostsEn: BlogPost[] = [
         excerpt: 'Visually manage PDF pages with drag-and-drop. Reorder pages, delete unwanted ones, or duplicate important sections.',
         body: `<p>Managing the structure of a PDF document is essential when preparing reports, portfolios, or presentations.</p>
 <h2>Visual Page Management</h2>
-<p>The <a href="/#/organize-pdf">Organize PDF tool</a> displays thumbnail previews of every page, making it easy to see your document's structure at a glance.</p>
+<p>The <a href="#/organize-pdf">Organize PDF tool</a> displays thumbnail previews of every page, making it easy to see your document's structure at a glance.</p>
 <h2>Available Actions</h2>
 <ul>
 <li><strong>Reorder</strong> — drag and drop pages to change their position</li>
 <li><strong>Delete</strong> — remove unwanted pages (cannot delete the last page)</li>
 <li><strong>Duplicate</strong> — create copies of important pages</li>
 </ul>
-<p>This tool works great in combination with <a href="/#/merge-pdf">Merge PDF</a> — first merge multiple files, then organize the combined pages.</p>`,
+<p>This tool works great in combination with <a href="#/merge-pdf">Merge PDF</a> — first merge multiple files, then organize the combined pages.</p>`,
         date: '2023-04-22',
         tool: 'organize-pdf',
         tags: ['organize', 'reorder', 'pages'],
@@ -200,7 +200,7 @@ export const blogPostsEn: BlogPost[] = [
         excerpt: 'Remove unwanted margins or crop PDF pages to focus on specific content areas. Visual preview with adjustable crop values.',
         body: `<p>PDFs often have excessive margins from printing layouts or scanned borders. Cropping removes these extra spaces.</p>
 <h2>How to Crop</h2>
-<p>The <a href="/#/crop-pdf">Crop PDF tool</a> provides a visual preview where you can drag the edges to define the crop area. Set values for top, bottom, left, and right independently.</p>
+<p>The <a href="#/crop-pdf">Crop PDF tool</a> provides a visual preview where you can drag the edges to define the crop area. Set values for top, bottom, left, and right independently.</p>
 <h2>Use Cases</h2>
 <ul>
 <li>Remove wide printer margins from scanned documents</li>
@@ -219,7 +219,7 @@ export const blogPostsEn: BlogPost[] = [
         excerpt: 'Permanently remove confidential data from PDFs. Black out text, images, or any content that should not be shared.',
         body: `<p>Redaction permanently removes sensitive information from documents before sharing. Unlike highlighting or covering with shapes, redacted content cannot be recovered.</p>
 <h2>How Redaction Works</h2>
-<p>The <a href="/#/redact-pdf">Redact PDF tool</a> lets you draw black rectangles over areas you want to permanently censor. The content underneath is destroyed — not just hidden.</p>
+<p>The <a href="#/redact-pdf">Redact PDF tool</a> lets you draw black rectangles over areas you want to permanently censor. The content underneath is destroyed — not just hidden.</p>
 <h2>What to Redact</h2>
 <ul>
 <li>Personal information (names, addresses, phone numbers)</li>
@@ -240,7 +240,7 @@ export const blogPostsEn: BlogPost[] = [
         excerpt: 'Add annotations, text blocks, rectangles, and freehand drawings to your PDF documents without any desktop software.',
         body: `<p>Need to annotate a PDF, add notes, or mark up a document? The edit tool lets you add content directly onto your PDF pages.</p>
 <h2>Available Tools</h2>
-<p>The <a href="/#/edit-pdf">Edit PDF tool</a> provides several annotation options:</p>
+<p>The <a href="#/edit-pdf">Edit PDF tool</a> provides several annotation options:</p>
 <ul>
 <li><strong>Text blocks</strong> — add custom text with adjustable font size, color, and background</li>
 <li><strong>Rectangles</strong> — highlight areas or create borders</li>
@@ -248,7 +248,7 @@ export const blogPostsEn: BlogPost[] = [
 </ul>
 <h2>Tips</h2>
 <p>Double-click a text block to edit its content. Drag elements to reposition them. Use multiple pages to annotate different sections of the document.</p>
-<p>For adding a signature specifically, the <a href="/#/sign-pdf">Sign PDF</a> tool is more convenient.</p>`,
+<p>For adding a signature specifically, the <a href="#/sign-pdf">Sign PDF</a> tool is more convenient.</p>`,
         date: '2025-01-15',
         tool: 'edit-pdf',
         tags: ['edit', 'annotate', 'text'],
@@ -260,7 +260,7 @@ export const blogPostsEn: BlogPost[] = [
         excerpt: 'Add your signature to PDF files. Draw a signature or upload a signature image and position it precisely on the document.',
         body: `<p>Signing documents digitally saves time and paper. Add your handwritten signature to any PDF in seconds.</p>
 <h2>Two Signature Methods</h2>
-<p>The <a href="/#/sign-pdf">Sign PDF tool</a> offers two ways to sign:</p>
+<p>The <a href="#/sign-pdf">Sign PDF tool</a> offers two ways to sign:</p>
 <ul>
 <li><strong>Draw</strong> — use your mouse or touchscreen to draw your signature</li>
 <li><strong>Image</strong> — upload a PNG or JPG image of your signature</li>
@@ -280,7 +280,7 @@ export const blogPostsEn: BlogPost[] = [
         excerpt: 'Pull out all embedded images from PDF documents. Save them individually or download everything as a ZIP archive.',
         body: `<p>PDFs often contain valuable images — photos, diagrams, charts, or logos — that you might need to reuse elsewhere.</p>
 <h2>How It Works</h2>
-<p>The <a href="/#/extract-images">Extract Images tool</a> scans your PDF for all embedded images and extracts them as individual PNG files.</p>
+<p>The <a href="#/extract-images">Extract Images tool</a> scans your PDF for all embedded images and extracts them as individual PNG files.</p>
 <h2>What Gets Extracted</h2>
 <ul>
 <li>Photographs and illustrations</li>
@@ -288,7 +288,7 @@ export const blogPostsEn: BlogPost[] = [
 <li>Charts and diagrams</li>
 <li>Background images</li>
 </ul>
-<p>Download each image individually or grab everything at once with the ZIP download option. Note: this tool extracts embedded images, not rendered page screenshots. For full-page images, use <a href="/#/pdf-to-png">PDF to PNG</a> instead.</p>`,
+<p>Download each image individually or grab everything at once with the ZIP download option. Note: this tool extracts embedded images, not rendered page screenshots. For full-page images, use <a href="#/pdf-to-png">PDF to PNG</a> instead.</p>`,
         date: '2022-12-05',
         tool: 'extract-images',
         tags: ['extract', 'images', 'photos'],
@@ -305,8 +305,8 @@ export const blogPostsEn: BlogPost[] = [
 <li><strong>Submissions</strong> — some institutions require black-and-white documents</li>
 <li><strong>Consistency</strong> — create a uniform look across documents from different sources</li>
 </ul>
-<p>The <a href="/#/grayscale-pdf">Grayscale PDF tool</a> converts all colors to their grayscale equivalents. Text remains sharp and readable, while images and graphics become monochrome.</p>
-<p>To further reduce file size after grayscale conversion, run the result through the <a href="/#/compress-pdf">Compress PDF</a> tool.</p>`,
+<p>The <a href="#/grayscale-pdf">Grayscale PDF tool</a> converts all colors to their grayscale equivalents. Text remains sharp and readable, while images and graphics become monochrome.</p>
+<p>To further reduce file size after grayscale conversion, run the result through the <a href="#/compress-pdf">Compress PDF</a> tool.</p>`,
         date: '2023-08-17',
         tool: 'grayscale-pdf',
         tags: ['grayscale', 'black-white', 'print'],
@@ -318,14 +318,14 @@ export const blogPostsEn: BlogPost[] = [
         excerpt: 'Automatically add page numbering to your PDF. Choose position, format, and style for professional document pagination.',
         body: `<p>Page numbers help readers navigate long documents and are essential for professional reports, manuals, and theses.</p>
 <h2>Numbering Options</h2>
-<p>The <a href="/#/page-numbers">Page Numbers tool</a> offers flexible formatting:</p>
+<p>The <a href="#/page-numbers">Page Numbers tool</a> offers flexible formatting:</p>
 <ul>
 <li><strong>Position</strong> — bottom-left, bottom-center, or bottom-right</li>
 <li><strong>Format</strong> — simple number (1, 2, 3) or "page/total" format (1/10, 2/10)</li>
 </ul>
 <h2>Best Practices</h2>
 <p>Bottom-center is the most common position for formal documents. The "page/total" format is useful for legal documents where recipients need to verify completeness.</p>
-<p>For more customization, the <a href="/#/header-footer">Header & Footer</a> tool provides additional options including custom text.</p>`,
+<p>For more customization, the <a href="#/header-footer">Header & Footer</a> tool provides additional options including custom text.</p>`,
         date: '2020-09-30',
         tool: 'page-numbers',
         tags: ['page-numbers', 'pagination', 'numbering'],
@@ -337,7 +337,7 @@ export const blogPostsEn: BlogPost[] = [
         excerpt: 'Change PDF page dimensions to standard paper sizes. Convert between A4, A3, Letter, and Legal formats easily.',
         body: `<p>Different countries and industries use different paper sizes. Resizing ensures your PDF matches the expected format for printing or submission.</p>
 <h2>Supported Sizes</h2>
-<p>The <a href="/#/resize-pdf">Resize PDF tool</a> supports:</p>
+<p>The <a href="#/resize-pdf">Resize PDF tool</a> supports:</p>
 <ul>
 <li><strong>A4</strong> (210 x 297 mm) — the international standard</li>
 <li><strong>A3</strong> (297 x 420 mm) — for larger prints and posters</li>
@@ -362,7 +362,7 @@ export const blogPostsEn: BlogPost[] = [
 <li><strong>Compatibility</strong> — some viewers display interactive fields incorrectly</li>
 <li><strong>Printing</strong> — ensure form data appears correctly when printed</li>
 </ul>
-<p>The <a href="/#/flatten-pdf">Flatten PDF tool</a> processes the document in one click. The resulting file looks identical but all interactive elements are now part of the page content.</p>`,
+<p>The <a href="#/flatten-pdf">Flatten PDF tool</a> processes the document in one click. The resulting file looks identical but all interactive elements are now part of the page content.</p>`,
         date: '2025-02-10',
         tool: 'flatten-pdf',
         tags: ['flatten', 'forms', 'annotations'],
@@ -374,14 +374,14 @@ export const blogPostsEn: BlogPost[] = [
         excerpt: 'Convert PDF content to plain text. Extract all readable text from your PDF for editing, searching, or data processing.',
         body: `<p>Extracting text from PDFs is useful for copying content into other documents, searching through large files, or processing data from reports.</p>
 <h2>How It Works</h2>
-<p>The <a href="/#/pdf-to-text">PDF to Text tool</a> reads all embedded text from your PDF and saves it as a plain text (.txt) file. The text preserves reading order and paragraph structure.</p>
+<p>The <a href="#/pdf-to-text">PDF to Text tool</a> reads all embedded text from your PDF and saves it as a plain text (.txt) file. The text preserves reading order and paragraph structure.</p>
 <h2>Limitations</h2>
 <ul>
 <li>Works only with PDFs that contain selectable text (digital text)</li>
 <li>Scanned documents (image-only PDFs) require OCR technology, which is not included</li>
 <li>Complex layouts with columns or tables may not preserve formatting perfectly</li>
 </ul>
-<p>For preserving the visual layout of pages, consider converting to images using <a href="/#/pdf-to-jpg">PDF to JPG</a> or <a href="/#/pdf-to-png">PDF to PNG</a> instead.</p>`,
+<p>For preserving the visual layout of pages, consider converting to images using <a href="#/pdf-to-jpg">PDF to JPG</a> or <a href="#/pdf-to-png">PDF to PNG</a> instead.</p>`,
         date: '2024-08-22',
         tool: 'pdf-to-text',
         tags: ['text', 'extract', 'convert'],
@@ -398,14 +398,14 @@ export const blogPostsEn: BlogPost[] = [
 <li><strong>PNG</strong> — lossless compression, transparency support, larger files</li>
 <li><strong>JPG</strong> — lossy compression, no transparency, smaller files</li>
 </ul>
-<p>The <a href="/#/pdf-to-png">PDF to PNG tool</a> converts each page into a separate PNG image. You can optionally enable transparent backgrounds.</p>
+<p>The <a href="#/pdf-to-png">PDF to PNG tool</a> converts each page into a separate PNG image. You can optionally enable transparent backgrounds.</p>
 <h2>Best Use Cases</h2>
 <ul>
 <li>Embedding charts and diagrams in presentations</li>
 <li>Creating web graphics from PDF designs</li>
 <li>Extracting high-quality page screenshots</li>
 </ul>
-<p>If file size is more important than quality, consider the <a href="/#/pdf-to-jpg">PDF to JPG</a> converter instead.</p>`,
+<p>If file size is more important than quality, consider the <a href="#/pdf-to-jpg">PDF to JPG</a> converter instead.</p>`,
         date: '2024-03-10',
         tool: 'pdf-to-png',
         tags: ['convert', 'png', 'transparent'],
@@ -417,7 +417,7 @@ export const blogPostsEn: BlogPost[] = [
         excerpt: 'Insert personalized text at the top and bottom of every PDF page. Use placeholders for automatic page numbers.',
         body: `<p>Headers and footers add context and professionalism to documents. They are essential for reports, manuals, and official documents.</p>
 <h2>How It Works</h2>
-<p>The <a href="/#/header-footer">Header & Footer tool</a> lets you add custom text at the top and bottom of every page in your PDF.</p>
+<p>The <a href="#/header-footer">Header & Footer tool</a> lets you add custom text at the top and bottom of every page in your PDF.</p>
 <h2>Available Placeholders</h2>
 <ul>
 <li><code>{page}</code> — inserts the current page number</li>
@@ -426,7 +426,7 @@ export const blogPostsEn: BlogPost[] = [
 <h2>Examples</h2>
 <p>Header: "Annual Report 2024" — Footer: "Page {page} of {total}"</p>
 <p>Choose alignment (left, center, right) to position the text as you prefer.</p>
-<p>For adding only page numbers without additional text, use the simpler <a href="/#/page-numbers">Page Numbers</a> tool.</p>`,
+<p>For adding only page numbers without additional text, use the simpler <a href="#/page-numbers">Page Numbers</a> tool.</p>`,
         date: '2020-07-15',
         tool: 'header-footer',
         tags: ['header', 'footer', 'customize'],
@@ -440,11 +440,11 @@ export const blogPostsEn: BlogPost[] = [
         body: `<p>Students deal with PDFs daily — lecture slides, research papers, assignments, and textbooks. Having the right tools makes academic life much easier.</p>
 <h2>Essential Tools for Students</h2>
 <ul>
-<li><strong><a href="/#/merge-pdf">Merge PDF</a></strong> — combine lecture notes from multiple sessions into one document</li>
-<li><strong><a href="/#/compress-pdf">Compress PDF</a></strong> — reduce file size before submitting assignments via email or LMS</li>
-<li><strong><a href="/#/split-pdf">Split PDF</a></strong> — extract specific chapters from textbooks or readings</li>
-<li><strong><a href="/#/pdf-to-text">PDF to Text</a></strong> — extract text for notes, citations, or study guides</li>
-<li><strong><a href="/#/page-numbers">Page Numbers</a></strong> — add pagination to your thesis or dissertation</li>
+<li><strong><a href="#/merge-pdf">Merge PDF</a></strong> — combine lecture notes from multiple sessions into one document</li>
+<li><strong><a href="#/compress-pdf">Compress PDF</a></strong> — reduce file size before submitting assignments via email or LMS</li>
+<li><strong><a href="#/split-pdf">Split PDF</a></strong> — extract specific chapters from textbooks or readings</li>
+<li><strong><a href="#/pdf-to-text">PDF to Text</a></strong> — extract text for notes, citations, or study guides</li>
+<li><strong><a href="#/page-numbers">Page Numbers</a></strong> — add pagination to your thesis or dissertation</li>
 </ul>
 <h2>Privacy Advantage</h2>
 <p>All tools process files locally in your browser. Your research papers and academic work never leave your device — important when working with unpublished research.</p>`,
@@ -460,9 +460,9 @@ export const blogPostsEn: BlogPost[] = [
         body: `<p>Whether you handle contracts, financial reports, or personal records, securing your PDF documents is crucial to prevent unauthorized access and data leaks.</p>
 <h2>Three Layers of PDF Security</h2>
 <ol>
-<li><strong>Password Protection</strong> — use the <a href="/#/protect-pdf">Protect PDF</a> tool to add user and owner passwords. Control who can open, print, or modify the document.</li>
-<li><strong>Redaction</strong> — permanently remove sensitive data with the <a href="/#/redact-pdf">Redact PDF</a> tool. Redacted content cannot be recovered.</li>
-<li><strong>Flattening</strong> — use the <a href="/#/flatten-pdf">Flatten PDF</a> tool to convert form fields and annotations into static content before sharing.</li>
+<li><strong>Password Protection</strong> — use the <a href="#/protect-pdf">Protect PDF</a> tool to add user and owner passwords. Control who can open, print, or modify the document.</li>
+<li><strong>Redaction</strong> — permanently remove sensitive data with the <a href="#/redact-pdf">Redact PDF</a> tool. Redacted content cannot be recovered.</li>
+<li><strong>Flattening</strong> — use the <a href="#/flatten-pdf">Flatten PDF</a> tool to convert form fields and annotations into static content before sharing.</li>
 </ol>
 <h2>Common Mistakes to Avoid</h2>
 <ul>
@@ -484,11 +484,11 @@ export const blogPostsEn: BlogPost[] = [
 <p>Simply upload multiple PDF files to any supported tool. Each file is processed independently, and you can download all results individually or as a ZIP archive.</p>
 <h2>Supported Tools for Batch Processing</h2>
 <ul>
-<li><strong><a href="/#/compress-pdf">Compress PDF</a></strong> — reduce the size of multiple documents at once</li>
-<li><strong><a href="/#/rotate-pdf">Rotate PDF</a></strong> — fix orientation on a batch of scanned files</li>
-<li><strong><a href="/#/grayscale-pdf">Grayscale PDF</a></strong> — convert multiple color documents to black and white</li>
-<li><strong><a href="/#/pdf-to-jpg">PDF to JPG</a></strong> / <strong><a href="/#/pdf-to-png">PDF to PNG</a></strong> — convert multiple PDFs to images</li>
-<li><strong><a href="/#/flatten-pdf">Flatten PDF</a></strong>, <strong><a href="/#/resize-pdf">Resize</a></strong>, <strong><a href="/#/page-numbers">Page Numbers</a></strong>, and more</li>
+<li><strong><a href="#/compress-pdf">Compress PDF</a></strong> — reduce the size of multiple documents at once</li>
+<li><strong><a href="#/rotate-pdf">Rotate PDF</a></strong> — fix orientation on a batch of scanned files</li>
+<li><strong><a href="#/grayscale-pdf">Grayscale PDF</a></strong> — convert multiple color documents to black and white</li>
+<li><strong><a href="#/pdf-to-jpg">PDF to JPG</a></strong> / <strong><a href="#/pdf-to-png">PDF to PNG</a></strong> — convert multiple PDFs to images</li>
+<li><strong><a href="#/flatten-pdf">Flatten PDF</a></strong>, <strong><a href="#/resize-pdf">Resize</a></strong>, <strong><a href="#/page-numbers">Page Numbers</a></strong>, and more</li>
 </ul>
 <h2>Performance</h2>
 <p>All processing happens locally on your device, so speed depends on your computer. Most operations complete in seconds even for large batches.</p>`,
@@ -504,10 +504,10 @@ export const blogPostsEn: BlogPost[] = [
         body: `<p>PDFs meant for web viewing or download need to be optimized for fast loading and screen readability.</p>
 <h2>Optimization Strategies</h2>
 <ol>
-<li><strong>Compress</strong> — use the <a href="/#/compress-pdf">Compress PDF</a> tool with medium or high compression to reduce file size significantly</li>
-<li><strong>Resize</strong> — adjust page dimensions with the <a href="/#/resize-pdf">Resize PDF</a> tool to match common screen sizes</li>
-<li><strong>Convert to images</strong> — for simple viewing, convert pages to JPG using <a href="/#/pdf-to-jpg">PDF to JPG</a> for faster web loading</li>
-<li><strong>Grayscale</strong> — if color is not essential, <a href="/#/grayscale-pdf">Grayscale PDF</a> reduces file size further</li>
+<li><strong>Compress</strong> — use the <a href="#/compress-pdf">Compress PDF</a> tool with medium or high compression to reduce file size significantly</li>
+<li><strong>Resize</strong> — adjust page dimensions with the <a href="#/resize-pdf">Resize PDF</a> tool to match common screen sizes</li>
+<li><strong>Convert to images</strong> — for simple viewing, convert pages to JPG using <a href="#/pdf-to-jpg">PDF to JPG</a> for faster web loading</li>
+<li><strong>Grayscale</strong> — if color is not essential, <a href="#/grayscale-pdf">Grayscale PDF</a> reduces file size further</li>
 </ol>
 <h2>File Size Guidelines</h2>
 <ul>
@@ -535,7 +535,7 @@ export const blogPostsEn: BlogPost[] = [
 <li><strong>No file size limits</strong> — your computer's memory is the only constraint</li>
 </ul>
 <h2>Available Tools</h2>
-<p>All 22 tools work offline: from <a href="/#/merge-pdf">merging</a> and <a href="/#/compress-pdf">compressing</a> to <a href="/#/sign-pdf">signing</a> and <a href="/#/redact-pdf">redacting</a>. Every operation runs locally, giving you complete control over your data.</p>`,
+<p>All 22 tools work offline: from <a href="#/merge-pdf">merging</a> and <a href="#/compress-pdf">compressing</a> to <a href="#/sign-pdf">signing</a> and <a href="#/redact-pdf">redacting</a>. Every operation runs locally, giving you complete control over your data.</p>`,
         date: '2025-08-12',
         tool: 'compress-pdf',
         tags: ['privacy', 'free', 'offline'],
@@ -548,11 +548,11 @@ export const blogPostsEn: BlogPost[] = [
         body: `<p>Before sending a PDF to print, a few adjustments can ensure the best results and avoid common printing issues.</p>
 <h2>Print Preparation Checklist</h2>
 <ol>
-<li><strong>Resize pages</strong> — use the <a href="/#/resize-pdf">Resize PDF</a> tool to match your target paper size (A4, Letter, A3)</li>
-<li><strong>Crop margins</strong> — remove excess whitespace with the <a href="/#/crop-pdf">Crop PDF</a> tool</li>
-<li><strong>Convert to grayscale</strong> — if printing in black and white, use <a href="/#/grayscale-pdf">Grayscale PDF</a> to preview the result and save ink</li>
-<li><strong>Flatten forms</strong> — ensure form data prints correctly by <a href="/#/flatten-pdf">flattening the PDF</a></li>
-<li><strong>Compress</strong> — if sending to a print service, <a href="/#/compress-pdf">compress</a> with low settings to reduce transfer time</li>
+<li><strong>Resize pages</strong> — use the <a href="#/resize-pdf">Resize PDF</a> tool to match your target paper size (A4, Letter, A3)</li>
+<li><strong>Crop margins</strong> — remove excess whitespace with the <a href="#/crop-pdf">Crop PDF</a> tool</li>
+<li><strong>Convert to grayscale</strong> — if printing in black and white, use <a href="#/grayscale-pdf">Grayscale PDF</a> to preview the result and save ink</li>
+<li><strong>Flatten forms</strong> — ensure form data prints correctly by <a href="#/flatten-pdf">flattening the PDF</a></li>
+<li><strong>Compress</strong> — if sending to a print service, <a href="#/compress-pdf">compress</a> with low settings to reduce transfer time</li>
 </ol>
 <h2>Common Printing Issues</h2>
 <ul>
@@ -572,8 +572,8 @@ export const blogPostsEn: BlogPost[] = [
         body: `<p>Interactive PDF forms with fillable fields are commonly used for applications, surveys, and official documents. Understanding how to handle them properly saves time and prevents issues.</p>
 <h2>The Form Workflow</h2>
 <ol>
-<li><strong>Fill</strong> — complete the form fields in your PDF viewer or use the <a href="/#/edit-pdf">Edit PDF</a> tool to add text directly onto the page</li>
-<li><strong>Flatten</strong> — use the <a href="/#/flatten-pdf">Flatten PDF</a> tool to convert interactive fields into static content, locking your entries</li>
+<li><strong>Fill</strong> — complete the form fields in your PDF viewer or use the <a href="#/edit-pdf">Edit PDF</a> tool to add text directly onto the page</li>
+<li><strong>Flatten</strong> — use the <a href="#/flatten-pdf">Flatten PDF</a> tool to convert interactive fields into static content, locking your entries</li>
 <li><strong>Share</strong> — distribute the flattened PDF knowing recipients cannot modify your data</li>
 </ol>
 <h2>Why Flatten Before Sharing?</h2>
@@ -582,7 +582,7 @@ export const blogPostsEn: BlogPost[] = [
 <li>Ensures the document looks identical in every PDF viewer</li>
 <li>Preserves the completed form for long-term archiving</li>
 </ul>
-<p>For extra security, <a href="/#/protect-pdf">password-protect</a> the flattened PDF before sharing.</p>`,
+<p>For extra security, <a href="#/protect-pdf">password-protect</a> the flattened PDF before sharing.</p>`,
         date: '2026-02-05',
         tool: 'flatten-pdf',
         tags: ['forms', 'flatten', 'fill'],
@@ -600,7 +600,7 @@ export const blogPostsEn: BlogPost[] = [
 <li>No transparency support</li>
 <li>Best for: sharing, email, social media, photo-heavy PDFs</li>
 </ul>
-<p>Use the <a href="/#/pdf-to-jpg">PDF to JPG</a> tool for most general conversions.</p>
+<p>Use the <a href="#/pdf-to-jpg">PDF to JPG</a> tool for most general conversions.</p>
 <h2>PNG — Best for Graphics and Transparency</h2>
 <ul>
 <li>Larger files due to lossless compression</li>
@@ -608,7 +608,7 @@ export const blogPostsEn: BlogPost[] = [
 <li>Supports transparent backgrounds</li>
 <li>Best for: diagrams, screenshots, web graphics, presentations</li>
 </ul>
-<p>Use the <a href="/#/pdf-to-png">PDF to PNG</a> tool when quality and transparency matter.</p>
+<p>Use the <a href="#/pdf-to-png">PDF to PNG</a> tool when quality and transparency matter.</p>
 <h2>Quick Decision Guide</h2>
 <p>Need small files for web or email? Choose JPG. Need perfect quality or transparent backgrounds? Choose PNG.</p>`,
         date: '2025-07-25',
@@ -623,11 +623,11 @@ export const blogPostsEn: BlogPost[] = [
         body: `<p>Offices deal with hundreds of PDF documents daily — invoices, contracts, reports, and correspondence. Efficient PDF management saves hours of work.</p>
 <h2>Common Office Tasks</h2>
 <ul>
-<li><strong>Combine reports</strong> — use <a href="/#/merge-pdf">Merge PDF</a> to compile monthly reports into quarterly summaries</li>
-<li><strong>Organize documents</strong> — <a href="/#/organize-pdf">reorder, delete, or duplicate pages</a> to restructure long documents</li>
-<li><strong>Add pagination</strong> — insert <a href="/#/page-numbers">page numbers</a> or <a href="/#/header-footer">headers and footers</a> for professional presentation</li>
-<li><strong>Protect files</strong> — <a href="/#/protect-pdf">password-protect</a> confidential documents before distribution</li>
-<li><strong>Compress for email</strong> — <a href="/#/compress-pdf">reduce file size</a> to meet email attachment limits</li>
+<li><strong>Combine reports</strong> — use <a href="#/merge-pdf">Merge PDF</a> to compile monthly reports into quarterly summaries</li>
+<li><strong>Organize documents</strong> — <a href="#/organize-pdf">reorder, delete, or duplicate pages</a> to restructure long documents</li>
+<li><strong>Add pagination</strong> — insert <a href="#/page-numbers">page numbers</a> or <a href="#/header-footer">headers and footers</a> for professional presentation</li>
+<li><strong>Protect files</strong> — <a href="#/protect-pdf">password-protect</a> confidential documents before distribution</li>
+<li><strong>Compress for email</strong> — <a href="#/compress-pdf">reduce file size</a> to meet email attachment limits</li>
 </ul>
 <h2>Workflow Tip</h2>
 <p>Start by merging related files, then organize the pages, add page numbers, and finally compress the result for distribution.</p>`,
@@ -647,14 +647,14 @@ export const blogPostsEn: BlogPost[] = [
 <li>Creating a portfolio or dossier from individual files</li>
 <li>Compiling scanned pages from different sessions</li>
 </ul>
-<p>Use the <a href="/#/merge-pdf">Merge PDF</a> tool to drag, drop, and reorder your files before combining them.</p>
+<p>Use the <a href="#/merge-pdf">Merge PDF</a> tool to drag, drop, and reorder your files before combining them.</p>
 <h2>When to Split</h2>
 <ul>
 <li>Extracting specific pages from a large document</li>
 <li>Breaking a book into individual chapters</li>
 <li>Separating a multi-invoice PDF into individual invoices</li>
 </ul>
-<p>The <a href="/#/split-pdf">Split PDF</a> tool supports both splitting all pages and extracting specific page ranges.</p>
+<p>The <a href="#/split-pdf">Split PDF</a> tool supports both splitting all pages and extracting specific page ranges.</p>
 <h2>Combining Both Operations</h2>
 <p>Need pages from multiple documents? First split each source file to extract the pages you need, then merge the extracted pages into your final document.</p>`,
         date: '2026-03-01',
@@ -674,7 +674,7 @@ export const blogPostsEn: BlogPost[] = [
 <li><strong>Print-ready</strong> — PDFs are designed for both screen and print output</li>
 </ul>
 <h2>How It Works</h2>
-<p>The <a href="/#/markdown-to-pdf">Markdown to PDF tool</a> renders your Markdown content with full support for headings, lists, code blocks, tables, and more. Simply paste or type your Markdown, preview the result, and download the PDF.</p>
+<p>The <a href="#/markdown-to-pdf">Markdown to PDF tool</a> renders your Markdown content with full support for headings, lists, code blocks, tables, and more. Simply paste or type your Markdown, preview the result, and download the PDF.</p>
 <h2>Supported Markdown Features</h2>
 <p>The converter handles all standard Markdown syntax including bold, italic, links, images, blockquotes, ordered and unordered lists, code fencing with syntax highlighting, and tables. Your content is processed entirely in the browser for complete privacy.</p>`,
         date: '2026-03-05',
@@ -689,7 +689,7 @@ export const blogPostsEn: BlogPost[] = [
         body: `<p>Signing documents digitally has become essential in today's remote work environment. But there's an important distinction between electronic signatures and digital signatures.</p>
 <h2>Electronic Signatures</h2>
 <p>An electronic signature is any mark, symbol, or process attached to a document to indicate consent. This includes typed names, scanned handwritten signatures, or drawn signatures.</p>
-<p>The <a href="/#/sign-pdf">Sign PDF tool</a> allows you to create electronic signatures by drawing, typing, or uploading an image of your signature — all processed locally in your browser.</p>
+<p>The <a href="#/sign-pdf">Sign PDF tool</a> allows you to create electronic signatures by drawing, typing, or uploading an image of your signature — all processed locally in your browser.</p>
 <h2>Digital Signatures</h2>
 <p>Digital signatures use cryptographic technology to verify the signer's identity and ensure the document hasn't been tampered with. They require a digital certificate from a trusted authority.</p>
 <h2>Which Should You Use?</h2>
@@ -712,8 +712,8 @@ export const blogPostsEn: BlogPost[] = [
 <li><strong>Sufficient contrast</strong> — ensure text has adequate contrast against the background</li>
 </ul>
 <h2>Tools That Help</h2>
-<p>The <a href="/#/edit-pdf">Edit PDF tool</a> lets you add text annotations and labels to your documents. Use it to add descriptive text near images or clarify complex diagrams.</p>
-<p>For scanned documents, use the <a href="/#/pdf-to-text">PDF to Text tool</a> to verify that text content is properly extractable, which is essential for screen readers.</p>
+<p>The <a href="#/edit-pdf">Edit PDF tool</a> lets you add text annotations and labels to your documents. Use it to add descriptive text near images or clarify complex diagrams.</p>
+<p>For scanned documents, use the <a href="#/pdf-to-text">PDF to Text tool</a> to verify that text content is properly extractable, which is essential for screen readers.</p>
 <h2>Testing Accessibility</h2>
 <p>Always test your PDFs with a screen reader before distributing them. Simple checks include verifying that text can be selected and copied, and that the reading order makes sense.</p>`,
         date: '2026-01-22',
@@ -736,9 +736,9 @@ export const blogPostsEn: BlogPost[] = [
 <h2>Browser-Based Advantages</h2>
 <p>Unlike installed software, browser-based PDF tools like <a href="/">PDF Worker</a> require no setup or updates. Open a tab, process your file, and move on. No license fees, no compatibility issues.</p>
 <h2>Batch Processing</h2>
-<p>Many tools support processing multiple files at once. Upload several PDFs to the <a href="/#/compress-pdf">Compress PDF tool</a> and download all results together as a ZIP file. The same applies to <a href="/#/rotate-pdf">rotation</a>, <a href="/#/grayscale-pdf">grayscale conversion</a>, and other operations.</p>
+<p>Many tools support processing multiple files at once. Upload several PDFs to the <a href="#/compress-pdf">Compress PDF tool</a> and download all results together as a ZIP file. The same applies to <a href="#/rotate-pdf">rotation</a>, <a href="#/grayscale-pdf">grayscale conversion</a>, and other operations.</p>
 <h2>Chaining Operations</h2>
-<p>For complex workflows, chain operations: first <a href="/#/unlock-pdf">unlock</a> a protected PDF, then <a href="/#/split-pdf">split</a> it into sections, <a href="/#/compress-pdf">compress</a> each section, and finally <a href="/#/merge-pdf">merge</a> the pieces you need.</p>`,
+<p>For complex workflows, chain operations: first <a href="#/unlock-pdf">unlock</a> a protected PDF, then <a href="#/split-pdf">split</a> it into sections, <a href="#/compress-pdf">compress</a> each section, and finally <a href="#/merge-pdf">merge</a> the pieces you need.</p>`,
         date: '2026-02-05',
         tool: 'compress-pdf',
         tags: ['workflow', 'automation', 'productivity'],

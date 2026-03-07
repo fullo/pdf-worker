@@ -8,16 +8,16 @@ export const blogPostsFr: BlogPost[] = [
         excerpt: 'Apprenez à combiner plusieurs documents PDF en un seul fichier sans installer de logiciel. Rapide, sécurisé et entièrement gratuit.',
         body: `<p>La fusion de fichiers PDF est l'une des tâches les plus courantes lorsqu'on travaille avec des documents. Que vous ayez besoin de combiner des rapports, des contrats ou des présentations, disposer d'un outil fiable fait toute la différence.</p>
 <h2>Pourquoi Fusionner des PDF en Ligne ?</h2>
-<p>Les logiciels de bureau traditionnels peuvent être coûteux et nécessitent souvent une installation. Avec <a href="/#/merge-pdf">l'outil Fusionner PDF de PDF Worker</a>, vous pouvez combiner des fichiers directement dans votre navigateur — sans téléversement, sans serveur, en toute confidentialité.</p>
+<p>Les logiciels de bureau traditionnels peuvent être coûteux et nécessitent souvent une installation. Avec <a href="#/merge-pdf">l'outil Fusionner PDF de PDF Worker</a>, vous pouvez combiner des fichiers directement dans votre navigateur — sans téléversement, sans serveur, en toute confidentialité.</p>
 <h2>Guide Étape par Étape</h2>
 <ol>
-<li>Ouvrez l'outil <a href="/#/merge-pdf">Fusionner PDF</a></li>
+<li>Ouvrez l'outil <a href="#/merge-pdf">Fusionner PDF</a></li>
 <li>Glissez-déposez vos fichiers PDF ou cliquez pour parcourir</li>
 <li>Réorganisez les fichiers en les faisant glisser dans l'ordre souhaité</li>
 <li>Cliquez sur « Fusionner PDF » et téléchargez votre document combiné</li>
 </ol>
 <h2>Conseils pour de Meilleurs Résultats</h2>
-<p>Assurez-vous que tous vos PDF ne sont pas protégés par mot de passe avant la fusion. Si c'est le cas, utilisez d'abord l'outil <a href="/#/unlock-pdf">Déverrouiller PDF</a> pour supprimer la protection.</p>
+<p>Assurez-vous que tous vos PDF ne sont pas protégés par mot de passe avant la fusion. Si c'est le cas, utilisez d'abord l'outil <a href="#/unlock-pdf">Déverrouiller PDF</a> pour supprimer la protection.</p>
 <p>Pour de grands lots de fichiers, l'outil gère des dizaines de documents efficacement car tout le traitement s'effectue localement sur votre appareil.</p>`,
         date: '2023-06-15',
         tool: 'merge-pdf',
@@ -30,7 +30,7 @@ export const blogPostsFr: BlogPost[] = [
         excerpt: 'Réduisez la taille de vos fichiers PDF sans perdre en qualité. Trois niveaux de compression pour équilibrer taille et clarté pour l\'e-mail, le web ou l\'archivage.',
         body: `<p>Les fichiers PDF volumineux peuvent poser problème lors du partage par e-mail ou du téléversement sur des sites web. La compression aide à réduire la taille du fichier tout en maintenant une qualité acceptable.</p>
 <h2>Comprendre les Niveaux de Compression</h2>
-<p>L'outil <a href="/#/compress-pdf">Compresser PDF</a> propose trois niveaux :</p>
+<p>L'outil <a href="#/compress-pdf">Compresser PDF</a> propose trois niveaux :</p>
 <ul>
 <li><strong>Compression faible</strong> — réduction minimale de la taille, qualité proche de l'original</li>
 <li><strong>Compression moyenne</strong> — bon équilibre entre taille et qualité</li>
@@ -50,7 +50,7 @@ export const blogPostsFr: BlogPost[] = [
         excerpt: 'Extrayez des pages individuelles ou des plages de pages à partir de documents PDF. Téléchargez chaque page séparément ou sous forme d\'archive ZIP.',
         body: `<p>Parfois, vous n'avez besoin que de quelques pages d'un document PDF volumineux. La division vous permet d'extraire exactement ce dont vous avez besoin.</p>
 <h2>Deux Modes de Division</h2>
-<p>L'outil <a href="/#/split-pdf">Diviser PDF</a> propose deux approches :</p>
+<p>L'outil <a href="#/split-pdf">Diviser PDF</a> propose deux approches :</p>
 <ul>
 <li><strong>Diviser toutes les pages</strong> — extrait chaque page en tant que fichier PDF individuel</li>
 <li><strong>Plage de pages</strong> — spécifiez les pages exactes comme « 1-3, 5, 7-9 »</li>
@@ -69,7 +69,7 @@ export const blogPostsFr: BlogPost[] = [
         excerpt: 'Faites pivoter les documents numérisés ou corrigez les pages à l\'envers. Rotation de 90, 180 et 270 degrés pour toutes les pages.',
         body: `<p>Les documents numérisés se retrouvent souvent avec une mauvaise orientation. Une rotation rapide les rend à nouveau lisibles.</p>
 <h2>Options de Rotation</h2>
-<p>L'outil <a href="/#/rotate-pdf">Pivoter PDF</a> prend en charge trois angles de rotation :</p>
+<p>L'outil <a href="#/rotate-pdf">Pivoter PDF</a> prend en charge trois angles de rotation :</p>
 <ul>
 <li><strong>90 degrés dans le sens horaire</strong> — pour les pages en paysage qui devraient être en portrait</li>
 <li><strong>180 degrés</strong> — pour les numérisations à l'envers</li>
@@ -77,7 +77,7 @@ export const blogPostsFr: BlogPost[] = [
 </ul>
 <h2>Cas d'Utilisation Courants</h2>
 <p>Les numérisations depuis un téléphone portable, les documents photocopiés et les PDF faxés nécessitent fréquemment une rotation. L'outil applique la rotation à toutes les pages en même temps, vous faisant gagner du temps.</p>
-<p>Pour un contrôle plus précis sur les pages individuelles, utilisez l'outil <a href="/#/organize-pdf">Organiser PDF</a> qui vous permet de gérer les pages individuellement.</p>`,
+<p>Pour un contrôle plus précis sur les pages individuelles, utilisez l'outil <a href="#/organize-pdf">Organiser PDF</a> qui vous permet de gérer les pages individuellement.</p>`,
         date: '2022-08-12',
         tool: 'rotate-pdf',
         tags: ['pivoter', 'orientation', 'numérisation'],
@@ -89,7 +89,7 @@ export const blogPostsFr: BlogPost[] = [
         excerpt: 'Protégez vos documents avec des filigranes texte ou image. Personnalisez la position, l\'opacité, la taille et la rotation.',
         body: `<p>Les filigranes aident à protéger la propriété intellectuelle et à marquer les documents comme confidentiels, brouillons ou propriétaires.</p>
 <h2>Filigranes Texte vs Image</h2>
-<p>L'outil <a href="/#/watermark-pdf">Filigrane</a> prend en charge les deux types :</p>
+<p>L'outil <a href="#/watermark-pdf">Filigrane</a> prend en charge les deux types :</p>
 <ul>
 <li><strong>Filigranes texte</strong> — ajoutez des mots comme « CONFIDENTIEL » ou « BROUILLON » avec une taille de police, une couleur et une rotation personnalisées</li>
 <li><strong>Filigranes image</strong> — superposez le logo de votre entreprise ou un tampon avec une opacité et une taille ajustables</li>
@@ -107,14 +107,14 @@ export const blogPostsFr: BlogPost[] = [
         excerpt: 'Transformez chaque page PDF en image JPG de haute qualité. Ajustez les paramètres de qualité pour l\'équilibre parfait entre taille et clarté.',
         body: `<p>Convertir des pages PDF en images est utile pour les présentations, les publications sur les réseaux sociaux ou lorsque vous devez intégrer du contenu PDF dans d'autres documents.</p>
 <h2>Paramètres de Qualité</h2>
-<p>L'outil <a href="/#/pdf-to-jpg">PDF vers JPG</a> vous permet d'ajuster la qualité de l'image de 10 % à 100 %. Une qualité plus élevée signifie des fichiers plus volumineux mais des images plus nettes.</p>
+<p>L'outil <a href="#/pdf-to-jpg">PDF vers JPG</a> vous permet d'ajuster la qualité de l'image de 10 % à 100 %. Une qualité plus élevée signifie des fichiers plus volumineux mais des images plus nettes.</p>
 <h2>Paramètres Recommandés</h2>
 <ul>
 <li><strong>80 %</strong> — idéal pour la plupart des utilisations, bonne qualité avec une taille de fichier raisonnable</li>
 <li><strong>100 %</strong> — qualité maximale pour l'impression ou un usage professionnel</li>
 <li><strong>50-60 %</strong> — fichiers plus petits pour le web ou l'e-mail</li>
 </ul>
-<p>Chaque page devient un fichier JPG séparé. Téléchargez-les individuellement ou sous forme d'archive ZIP. Pour des arrière-plans transparents, envisagez d'utiliser le convertisseur <a href="/#/pdf-to-png">PDF vers PNG</a> à la place.</p>`,
+<p>Chaque page devient un fichier JPG séparé. Téléchargez-les individuellement ou sous forme d'archive ZIP. Pour des arrière-plans transparents, envisagez d'utiliser le convertisseur <a href="#/pdf-to-png">PDF vers PNG</a> à la place.</p>`,
         date: '2021-05-18',
         tool: 'pdf-to-jpg',
         tags: ['convertir', 'jpg', 'images'],
@@ -126,7 +126,7 @@ export const blogPostsFr: BlogPost[] = [
         excerpt: 'Convertissez plusieurs images en un seul document PDF. Choisissez l\'orientation, les marges et la mise en page.',
         body: `<p>Besoin de compiler des photos, des numérisations ou des captures d'écran en un seul document ? La conversion d'images en PDF crée un fichier professionnel et facilement partageable.</p>
 <h2>Formats Pris en Charge</h2>
-<p>L'outil <a href="/#/jpg-to-pdf">JPG vers PDF</a> accepte les images JPG, JPEG, PNG et WebP. Mélangez différents formats dans une seule conversion.</p>
+<p>L'outil <a href="#/jpg-to-pdf">JPG vers PDF</a> accepte les images JPG, JPEG, PNG et WebP. Mélangez différents formats dans une seule conversion.</p>
 <h2>Options de Mise en Page</h2>
 <ul>
 <li><strong>Orientation</strong> — choisissez portrait ou paysage</li>
@@ -144,14 +144,14 @@ export const blogPostsFr: BlogPost[] = [
         excerpt: 'Sécurisez vos PDF avec des mots de passe utilisateur et propriétaire. Contrôlez les autorisations d\'impression, de copie et de modification.',
         body: `<p>Protéger les documents sensibles avec des mots de passe empêche l'accès non autorisé et contrôle ce que les destinataires peuvent faire avec le fichier.</p>
 <h2>Mot de Passe Utilisateur vs Propriétaire</h2>
-<p>L'outil <a href="/#/protect-pdf">Protéger PDF</a> prend en charge deux types de mots de passe :</p>
+<p>L'outil <a href="#/protect-pdf">Protéger PDF</a> prend en charge deux types de mots de passe :</p>
 <ul>
 <li><strong>Mot de passe utilisateur</strong> — requis pour ouvrir et visualiser le document</li>
 <li><strong>Mot de passe propriétaire</strong> — contrôle les autorisations d'impression, de copie et de modification</li>
 </ul>
 <h2>Contrôle des Autorisations</h2>
 <p>Vous pouvez autoriser ou restreindre l'impression, la copie de texte et la modification du document. Ceci est utile pour distribuer des rapports ou des contrats en lecture seule.</p>
-<p>Besoin de supprimer la protection plus tard ? Utilisez l'outil <a href="/#/unlock-pdf">Déverrouiller PDF</a> avec le mot de passe correct.</p>`,
+<p>Besoin de supprimer la protection plus tard ? Utilisez l'outil <a href="#/unlock-pdf">Déverrouiller PDF</a> avec le mot de passe correct.</p>`,
         date: '2023-09-10',
         tool: 'protect-pdf',
         tags: ['protéger', 'mot-de-passe', 'sécurité'],
@@ -163,7 +163,7 @@ export const blogPostsFr: BlogPost[] = [
         excerpt: 'Déverrouillez les PDF protégés par mot de passe lorsque vous connaissez le mot de passe. Supprimez les restrictions d\'impression et de copie.',
         body: `<p>Si vous avez le mot de passe d'un PDF protégé, vous pouvez supprimer la restriction pour rendre le document librement accessible.</p>
 <h2>Comment Ça Fonctionne</h2>
-<p>L'outil <a href="/#/unlock-pdf">Déverrouiller PDF</a> prend votre PDF protégé et le mot de passe correct, puis produit une copie non protégée. Le fichier original reste inchangé.</p>
+<p>L'outil <a href="#/unlock-pdf">Déverrouiller PDF</a> prend votre PDF protégé et le mot de passe correct, puis produit une copie non protégée. Le fichier original reste inchangé.</p>
 <h2>Notes Importantes</h2>
 <ul>
 <li>Vous devez connaître le mot de passe correct — cet outil ne craque ni ne contourne les mots de passe</li>
@@ -181,14 +181,14 @@ export const blogPostsFr: BlogPost[] = [
         excerpt: 'Gérez visuellement les pages PDF par glisser-déposer. Réordonnez les pages, supprimez les indésirables ou dupliquez les sections importantes.',
         body: `<p>Gérer la structure d'un document PDF est essentiel lors de la préparation de rapports, portfolios ou présentations.</p>
 <h2>Gestion Visuelle des Pages</h2>
-<p>L'outil <a href="/#/organize-pdf">Organiser PDF</a> affiche des aperçus miniatures de chaque page, facilitant la visualisation de la structure de votre document en un coup d'œil.</p>
+<p>L'outil <a href="#/organize-pdf">Organiser PDF</a> affiche des aperçus miniatures de chaque page, facilitant la visualisation de la structure de votre document en un coup d'œil.</p>
 <h2>Actions Disponibles</h2>
 <ul>
 <li><strong>Réordonner</strong> — glissez-déposez les pages pour changer leur position</li>
 <li><strong>Supprimer</strong> — supprimez les pages indésirables (impossible de supprimer la dernière page)</li>
 <li><strong>Dupliquer</strong> — créez des copies des pages importantes</li>
 </ul>
-<p>Cet outil fonctionne très bien en combinaison avec <a href="/#/merge-pdf">Fusionner PDF</a> — fusionnez d'abord plusieurs fichiers, puis organisez les pages combinées.</p>`,
+<p>Cet outil fonctionne très bien en combinaison avec <a href="#/merge-pdf">Fusionner PDF</a> — fusionnez d'abord plusieurs fichiers, puis organisez les pages combinées.</p>`,
         date: '2023-04-22',
         tool: 'organize-pdf',
         tags: ['organiser', 'réordonner', 'pages'],
@@ -200,7 +200,7 @@ export const blogPostsFr: BlogPost[] = [
         excerpt: 'Supprimez les marges indésirables ou rognez les pages PDF pour vous concentrer sur des zones de contenu spécifiques. Aperçu visuel avec valeurs de rognage ajustables.',
         body: `<p>Les PDF ont souvent des marges excessives provenant de mises en page d'impression ou de bordures numérisées. Le rognage supprime ces espaces supplémentaires.</p>
 <h2>Comment Rogner</h2>
-<p>L'outil <a href="/#/crop-pdf">Rogner PDF</a> fournit un aperçu visuel où vous pouvez faire glisser les bords pour définir la zone de rognage. Définissez les valeurs pour le haut, le bas, la gauche et la droite indépendamment.</p>
+<p>L'outil <a href="#/crop-pdf">Rogner PDF</a> fournit un aperçu visuel où vous pouvez faire glisser les bords pour définir la zone de rognage. Définissez les valeurs pour le haut, le bas, la gauche et la droite indépendamment.</p>
 <h2>Cas d'Utilisation</h2>
 <ul>
 <li>Supprimer les larges marges d'impression des documents numérisés</li>
@@ -219,7 +219,7 @@ export const blogPostsFr: BlogPost[] = [
         excerpt: 'Supprimez définitivement les données confidentielles des PDF. Masquez le texte, les images ou tout contenu qui ne doit pas être partagé.',
         body: `<p>Le caviardage supprime définitivement les informations sensibles des documents avant leur partage. Contrairement au surlignage ou à la couverture par des formes, le contenu caviardé ne peut pas être récupéré.</p>
 <h2>Comment Fonctionne le Caviardage</h2>
-<p>L'outil <a href="/#/redact-pdf">Caviarder PDF</a> vous permet de dessiner des rectangles noirs sur les zones que vous souhaitez censurer de manière permanente. Le contenu en dessous est détruit — pas simplement masqué.</p>
+<p>L'outil <a href="#/redact-pdf">Caviarder PDF</a> vous permet de dessiner des rectangles noirs sur les zones que vous souhaitez censurer de manière permanente. Le contenu en dessous est détruit — pas simplement masqué.</p>
 <h2>Quoi Caviarder</h2>
 <ul>
 <li>Informations personnelles (noms, adresses, numéros de téléphone)</li>
@@ -240,7 +240,7 @@ export const blogPostsFr: BlogPost[] = [
         excerpt: 'Ajoutez des annotations, des blocs de texte, des rectangles et des dessins à main levée à vos documents PDF sans logiciel de bureau.',
         body: `<p>Besoin d'annoter un PDF, d'ajouter des notes ou de marquer un document ? L'outil d'édition vous permet d'ajouter du contenu directement sur vos pages PDF.</p>
 <h2>Outils Disponibles</h2>
-<p>L'outil <a href="/#/edit-pdf">Modifier PDF</a> propose plusieurs options d'annotation :</p>
+<p>L'outil <a href="#/edit-pdf">Modifier PDF</a> propose plusieurs options d'annotation :</p>
 <ul>
 <li><strong>Blocs de texte</strong> — ajoutez du texte personnalisé avec une taille de police, une couleur et un arrière-plan ajustables</li>
 <li><strong>Rectangles</strong> — surlignez des zones ou créez des bordures</li>
@@ -248,7 +248,7 @@ export const blogPostsFr: BlogPost[] = [
 </ul>
 <h2>Conseils</h2>
 <p>Double-cliquez sur un bloc de texte pour modifier son contenu. Faites glisser les éléments pour les repositionner. Utilisez plusieurs pages pour annoter différentes sections du document.</p>
-<p>Pour ajouter spécifiquement une signature, l'outil <a href="/#/sign-pdf">Signer PDF</a> est plus pratique.</p>`,
+<p>Pour ajouter spécifiquement une signature, l'outil <a href="#/sign-pdf">Signer PDF</a> est plus pratique.</p>`,
         date: '2025-01-15',
         tool: 'edit-pdf',
         tags: ['modifier', 'annoter', 'texte'],
@@ -260,7 +260,7 @@ export const blogPostsFr: BlogPost[] = [
         excerpt: 'Ajoutez votre signature aux fichiers PDF. Dessinez une signature ou téléversez une image de signature et positionnez-la précisément sur le document.',
         body: `<p>Signer des documents numériquement fait gagner du temps et du papier. Ajoutez votre signature manuscrite à n'importe quel PDF en quelques secondes.</p>
 <h2>Deux Méthodes de Signature</h2>
-<p>L'outil <a href="/#/sign-pdf">Signer PDF</a> offre deux façons de signer :</p>
+<p>L'outil <a href="#/sign-pdf">Signer PDF</a> offre deux façons de signer :</p>
 <ul>
 <li><strong>Dessiner</strong> — utilisez votre souris ou écran tactile pour dessiner votre signature</li>
 <li><strong>Image</strong> — téléversez une image PNG ou JPG de votre signature</li>
@@ -280,7 +280,7 @@ export const blogPostsFr: BlogPost[] = [
         excerpt: 'Récupérez toutes les images intégrées des documents PDF. Enregistrez-les individuellement ou téléchargez le tout sous forme d\'archive ZIP.',
         body: `<p>Les PDF contiennent souvent des images précieuses — photos, diagrammes, graphiques ou logos — que vous pourriez avoir besoin de réutiliser ailleurs.</p>
 <h2>Comment Ça Fonctionne</h2>
-<p>L'outil <a href="/#/extract-images">Extraire les Images</a> analyse votre PDF pour trouver toutes les images intégrées et les extrait en tant que fichiers PNG individuels.</p>
+<p>L'outil <a href="#/extract-images">Extraire les Images</a> analyse votre PDF pour trouver toutes les images intégrées et les extrait en tant que fichiers PNG individuels.</p>
 <h2>Ce Qui Est Extrait</h2>
 <ul>
 <li>Photographies et illustrations</li>
@@ -288,7 +288,7 @@ export const blogPostsFr: BlogPost[] = [
 <li>Graphiques et diagrammes</li>
 <li>Images d'arrière-plan</li>
 </ul>
-<p>Téléchargez chaque image individuellement ou récupérez tout d'un coup avec l'option de téléchargement ZIP. Note : cet outil extrait les images intégrées, pas les captures d'écran de pages rendues. Pour des images de pages complètes, utilisez <a href="/#/pdf-to-png">PDF vers PNG</a> à la place.</p>`,
+<p>Téléchargez chaque image individuellement ou récupérez tout d'un coup avec l'option de téléchargement ZIP. Note : cet outil extrait les images intégrées, pas les captures d'écran de pages rendues. Pour des images de pages complètes, utilisez <a href="#/pdf-to-png">PDF vers PNG</a> à la place.</p>`,
         date: '2022-12-05',
         tool: 'extract-images',
         tags: ['extraire', 'images', 'photos'],
@@ -305,8 +305,8 @@ export const blogPostsFr: BlogPost[] = [
 <li><strong>Soumissions</strong> — certaines institutions exigent des documents en noir et blanc</li>
 <li><strong>Cohérence</strong> — créer un aspect uniforme entre des documents provenant de différentes sources</li>
 </ul>
-<p>L'outil <a href="/#/grayscale-pdf">PDF en Niveaux de Gris</a> convertit toutes les couleurs en leurs équivalents en niveaux de gris. Le texte reste net et lisible, tandis que les images et graphiques deviennent monochromes.</p>
-<p>Pour réduire davantage la taille du fichier après la conversion en niveaux de gris, passez le résultat par l'outil <a href="/#/compress-pdf">Compresser PDF</a>.</p>`,
+<p>L'outil <a href="#/grayscale-pdf">PDF en Niveaux de Gris</a> convertit toutes les couleurs en leurs équivalents en niveaux de gris. Le texte reste net et lisible, tandis que les images et graphiques deviennent monochromes.</p>
+<p>Pour réduire davantage la taille du fichier après la conversion en niveaux de gris, passez le résultat par l'outil <a href="#/compress-pdf">Compresser PDF</a>.</p>`,
         date: '2023-08-17',
         tool: 'grayscale-pdf',
         tags: ['niveaux-de-gris', 'noir-blanc', 'impression'],
@@ -318,14 +318,14 @@ export const blogPostsFr: BlogPost[] = [
         excerpt: 'Ajoutez automatiquement la numérotation des pages à votre PDF. Choisissez la position, le format et le style pour une pagination professionnelle.',
         body: `<p>Les numéros de page aident les lecteurs à naviguer dans les longs documents et sont essentiels pour les rapports professionnels, les manuels et les thèses.</p>
 <h2>Options de Numérotation</h2>
-<p>L'outil <a href="/#/page-numbers">Numéros de Page</a> offre une mise en forme flexible :</p>
+<p>L'outil <a href="#/page-numbers">Numéros de Page</a> offre une mise en forme flexible :</p>
 <ul>
 <li><strong>Position</strong> — bas-gauche, bas-centre ou bas-droite</li>
 <li><strong>Format</strong> — numéro simple (1, 2, 3) ou format « page/total » (1/10, 2/10)</li>
 </ul>
 <h2>Bonnes Pratiques</h2>
 <p>Le bas-centre est la position la plus courante pour les documents formels. Le format « page/total » est utile pour les documents juridiques où les destinataires doivent vérifier l'intégralité.</p>
-<p>Pour plus de personnalisation, l'outil <a href="/#/header-footer">En-tête et Pied de page</a> offre des options supplémentaires incluant du texte personnalisé.</p>`,
+<p>Pour plus de personnalisation, l'outil <a href="#/header-footer">En-tête et Pied de page</a> offre des options supplémentaires incluant du texte personnalisé.</p>`,
         date: '2020-09-30',
         tool: 'page-numbers',
         tags: ['numéros-de-page', 'pagination', 'numérotation'],
@@ -337,7 +337,7 @@ export const blogPostsFr: BlogPost[] = [
         excerpt: 'Changez les dimensions des pages PDF vers des tailles de papier standard. Convertissez facilement entre les formats A4, A3, Letter et Legal.',
         body: `<p>Les différents pays et industries utilisent différentes tailles de papier. Le redimensionnement garantit que votre PDF correspond au format attendu pour l'impression ou la soumission.</p>
 <h2>Tailles Prises en Charge</h2>
-<p>L'outil <a href="/#/resize-pdf">Redimensionner PDF</a> prend en charge :</p>
+<p>L'outil <a href="#/resize-pdf">Redimensionner PDF</a> prend en charge :</p>
 <ul>
 <li><strong>A4</strong> (210 x 297 mm) — le standard international</li>
 <li><strong>A3</strong> (297 x 420 mm) — pour les impressions et affiches grand format</li>
@@ -362,7 +362,7 @@ export const blogPostsFr: BlogPost[] = [
 <li><strong>Compatibilité</strong> — certains lecteurs affichent incorrectement les champs interactifs</li>
 <li><strong>Impression</strong> — s'assurer que les données du formulaire apparaissent correctement à l'impression</li>
 </ul>
-<p>L'outil <a href="/#/flatten-pdf">Aplatir PDF</a> traite le document en un clic. Le fichier résultant a la même apparence mais tous les éléments interactifs font désormais partie du contenu de la page.</p>`,
+<p>L'outil <a href="#/flatten-pdf">Aplatir PDF</a> traite le document en un clic. Le fichier résultant a la même apparence mais tous les éléments interactifs font désormais partie du contenu de la page.</p>`,
         date: '2025-02-10',
         tool: 'flatten-pdf',
         tags: ['aplatir', 'formulaires', 'annotations'],
@@ -374,14 +374,14 @@ export const blogPostsFr: BlogPost[] = [
         excerpt: 'Convertissez le contenu PDF en texte brut. Extrayez tout le texte lisible de votre PDF pour l\'édition, la recherche ou le traitement de données.',
         body: `<p>Extraire le texte des PDF est utile pour copier du contenu dans d'autres documents, effectuer des recherches dans de grands fichiers ou traiter des données provenant de rapports.</p>
 <h2>Comment Ça Fonctionne</h2>
-<p>L'outil <a href="/#/pdf-to-text">PDF vers Texte</a> lit tout le texte intégré de votre PDF et l'enregistre en tant que fichier texte brut (.txt). Le texte préserve l'ordre de lecture et la structure des paragraphes.</p>
+<p>L'outil <a href="#/pdf-to-text">PDF vers Texte</a> lit tout le texte intégré de votre PDF et l'enregistre en tant que fichier texte brut (.txt). Le texte préserve l'ordre de lecture et la structure des paragraphes.</p>
 <h2>Limitations</h2>
 <ul>
 <li>Fonctionne uniquement avec les PDF contenant du texte sélectionnable (texte numérique)</li>
 <li>Les documents numérisés (PDF contenant uniquement des images) nécessitent la technologie OCR, qui n'est pas incluse</li>
 <li>Les mises en page complexes avec des colonnes ou des tableaux peuvent ne pas préserver parfaitement le formatage</li>
 </ul>
-<p>Pour préserver la mise en page visuelle des pages, envisagez de convertir en images en utilisant <a href="/#/pdf-to-jpg">PDF vers JPG</a> ou <a href="/#/pdf-to-png">PDF vers PNG</a> à la place.</p>`,
+<p>Pour préserver la mise en page visuelle des pages, envisagez de convertir en images en utilisant <a href="#/pdf-to-jpg">PDF vers JPG</a> ou <a href="#/pdf-to-png">PDF vers PNG</a> à la place.</p>`,
         date: '2024-08-22',
         tool: 'pdf-to-text',
         tags: ['texte', 'extraire', 'convertir'],
@@ -397,14 +397,14 @@ export const blogPostsFr: BlogPost[] = [
 <li><strong>PNG</strong> — compression sans perte, prise en charge de la transparence, fichiers plus volumineux</li>
 <li><strong>JPG</strong> — compression avec perte, pas de transparence, fichiers plus petits</li>
 </ul>
-<p>L'outil <a href="/#/pdf-to-png">PDF vers PNG</a> convertit chaque page en une image PNG séparée. Vous pouvez optionnellement activer les arrière-plans transparents.</p>
+<p>L'outil <a href="#/pdf-to-png">PDF vers PNG</a> convertit chaque page en une image PNG séparée. Vous pouvez optionnellement activer les arrière-plans transparents.</p>
 <h2>Meilleurs Cas d'Utilisation</h2>
 <ul>
 <li>Intégrer des graphiques et diagrammes dans des présentations</li>
 <li>Créer des graphiques web à partir de designs PDF</li>
 <li>Extraire des captures de pages en haute qualité</li>
 </ul>
-<p>Si la taille du fichier est plus importante que la qualité, envisagez le convertisseur <a href="/#/pdf-to-jpg">PDF vers JPG</a> à la place.</p>`,
+<p>Si la taille du fichier est plus importante que la qualité, envisagez le convertisseur <a href="#/pdf-to-jpg">PDF vers JPG</a> à la place.</p>`,
         date: '2024-03-10',
         tool: 'pdf-to-png',
         tags: ['convertir', 'png', 'transparent'],
@@ -416,7 +416,7 @@ export const blogPostsFr: BlogPost[] = [
         excerpt: 'Insérez du texte personnalisé en haut et en bas de chaque page PDF. Utilisez des espaces réservés pour les numéros de page automatiques.',
         body: `<p>Les en-têtes et pieds de page ajoutent du contexte et du professionnalisme aux documents. Ils sont essentiels pour les rapports, manuels et documents officiels.</p>
 <h2>Comment Ça Fonctionne</h2>
-<p>L'outil <a href="/#/header-footer">En-tête et Pied de page</a> vous permet d'ajouter du texte personnalisé en haut et en bas de chaque page de votre PDF.</p>
+<p>L'outil <a href="#/header-footer">En-tête et Pied de page</a> vous permet d'ajouter du texte personnalisé en haut et en bas de chaque page de votre PDF.</p>
 <h2>Espaces Réservés Disponibles</h2>
 <ul>
 <li><code>{page}</code> — insère le numéro de la page courante</li>
@@ -425,7 +425,7 @@ export const blogPostsFr: BlogPost[] = [
 <h2>Exemples</h2>
 <p>En-tête : « Rapport Annuel 2024 » — Pied de page : « Page {page} sur {total} »</p>
 <p>Choisissez l'alignement (gauche, centre, droite) pour positionner le texte comme vous le souhaitez.</p>
-<p>Pour ajouter uniquement des numéros de page sans texte supplémentaire, utilisez l'outil plus simple <a href="/#/page-numbers">Numéros de Page</a>.</p>`,
+<p>Pour ajouter uniquement des numéros de page sans texte supplémentaire, utilisez l'outil plus simple <a href="#/page-numbers">Numéros de Page</a>.</p>`,
         date: '2020-07-15',
         tool: 'header-footer',
         tags: ['en-tête', 'pied-de-page', 'personnaliser'],
@@ -438,11 +438,11 @@ export const blogPostsFr: BlogPost[] = [
         body: `<p>Les étudiants travaillent quotidiennement avec des PDF — diapositives de cours, articles de recherche, devoirs et manuels. Disposer des bons outils facilite grandement la vie universitaire.</p>
 <h2>Outils Essentiels pour les Étudiants</h2>
 <ul>
-<li><strong><a href="/#/merge-pdf">Fusionner PDF</a></strong> — combiner les notes de cours de plusieurs séances en un seul document</li>
-<li><strong><a href="/#/compress-pdf">Compresser PDF</a></strong> — réduire la taille des fichiers avant de soumettre des devoirs par e-mail ou LMS</li>
-<li><strong><a href="/#/split-pdf">Diviser PDF</a></strong> — extraire des chapitres spécifiques de manuels ou de lectures</li>
-<li><strong><a href="/#/pdf-to-text">PDF vers Texte</a></strong> — extraire du texte pour les notes, citations ou guides d'étude</li>
-<li><strong><a href="/#/page-numbers">Numéros de Page</a></strong> — ajouter la pagination à votre thèse ou mémoire</li>
+<li><strong><a href="#/merge-pdf">Fusionner PDF</a></strong> — combiner les notes de cours de plusieurs séances en un seul document</li>
+<li><strong><a href="#/compress-pdf">Compresser PDF</a></strong> — réduire la taille des fichiers avant de soumettre des devoirs par e-mail ou LMS</li>
+<li><strong><a href="#/split-pdf">Diviser PDF</a></strong> — extraire des chapitres spécifiques de manuels ou de lectures</li>
+<li><strong><a href="#/pdf-to-text">PDF vers Texte</a></strong> — extraire du texte pour les notes, citations ou guides d'étude</li>
+<li><strong><a href="#/page-numbers">Numéros de Page</a></strong> — ajouter la pagination à votre thèse ou mémoire</li>
 </ul>
 <h2>Avantage de la Confidentialité</h2>
 <p>Tous les outils traitent les fichiers localement dans votre navigateur. Vos articles de recherche et travaux universitaires ne quittent jamais votre appareil — important lorsque vous travaillez avec des recherches non publiées.</p>`,
@@ -458,9 +458,9 @@ export const blogPostsFr: BlogPost[] = [
         body: `<p>Que vous traitiez des contrats, des rapports financiers ou des documents personnels, sécuriser vos documents PDF est crucial pour prévenir les accès non autorisés et les fuites de données.</p>
 <h2>Trois Couches de Sécurité PDF</h2>
 <ol>
-<li><strong>Protection par mot de passe</strong> — utilisez l'outil <a href="/#/protect-pdf">Protéger PDF</a> pour ajouter des mots de passe utilisateur et propriétaire. Contrôlez qui peut ouvrir, imprimer ou modifier le document.</li>
-<li><strong>Caviardage</strong> — supprimez définitivement les données sensibles avec l'outil <a href="/#/redact-pdf">Caviarder PDF</a>. Le contenu caviardé ne peut pas être récupéré.</li>
-<li><strong>Aplatissement</strong> — utilisez l'outil <a href="/#/flatten-pdf">Aplatir PDF</a> pour convertir les champs de formulaire et les annotations en contenu statique avant le partage.</li>
+<li><strong>Protection par mot de passe</strong> — utilisez l'outil <a href="#/protect-pdf">Protéger PDF</a> pour ajouter des mots de passe utilisateur et propriétaire. Contrôlez qui peut ouvrir, imprimer ou modifier le document.</li>
+<li><strong>Caviardage</strong> — supprimez définitivement les données sensibles avec l'outil <a href="#/redact-pdf">Caviarder PDF</a>. Le contenu caviardé ne peut pas être récupéré.</li>
+<li><strong>Aplatissement</strong> — utilisez l'outil <a href="#/flatten-pdf">Aplatir PDF</a> pour convertir les champs de formulaire et les annotations en contenu statique avant le partage.</li>
 </ol>
 <h2>Erreurs Courantes à Éviter</h2>
 <ul>
@@ -482,11 +482,11 @@ export const blogPostsFr: BlogPost[] = [
 <p>Téléversez simplement plusieurs fichiers PDF vers n'importe quel outil pris en charge. Chaque fichier est traité indépendamment, et vous pouvez télécharger tous les résultats individuellement ou sous forme d'archive ZIP.</p>
 <h2>Outils Prenant en Charge le Traitement par Lot</h2>
 <ul>
-<li><strong><a href="/#/compress-pdf">Compresser PDF</a></strong> — réduire la taille de plusieurs documents à la fois</li>
-<li><strong><a href="/#/rotate-pdf">Pivoter PDF</a></strong> — corriger l'orientation d'un lot de fichiers numérisés</li>
-<li><strong><a href="/#/grayscale-pdf">PDF en Niveaux de Gris</a></strong> — convertir plusieurs documents couleur en noir et blanc</li>
-<li><strong><a href="/#/pdf-to-jpg">PDF vers JPG</a></strong> / <strong><a href="/#/pdf-to-png">PDF vers PNG</a></strong> — convertir plusieurs PDF en images</li>
-<li><strong><a href="/#/flatten-pdf">Aplatir PDF</a></strong>, <strong><a href="/#/resize-pdf">Redimensionner</a></strong>, <strong><a href="/#/page-numbers">Numéros de Page</a></strong>, et plus encore</li>
+<li><strong><a href="#/compress-pdf">Compresser PDF</a></strong> — réduire la taille de plusieurs documents à la fois</li>
+<li><strong><a href="#/rotate-pdf">Pivoter PDF</a></strong> — corriger l'orientation d'un lot de fichiers numérisés</li>
+<li><strong><a href="#/grayscale-pdf">PDF en Niveaux de Gris</a></strong> — convertir plusieurs documents couleur en noir et blanc</li>
+<li><strong><a href="#/pdf-to-jpg">PDF vers JPG</a></strong> / <strong><a href="#/pdf-to-png">PDF vers PNG</a></strong> — convertir plusieurs PDF en images</li>
+<li><strong><a href="#/flatten-pdf">Aplatir PDF</a></strong>, <strong><a href="#/resize-pdf">Redimensionner</a></strong>, <strong><a href="#/page-numbers">Numéros de Page</a></strong>, et plus encore</li>
 </ul>
 <h2>Performance</h2>
 <p>Tout le traitement s'effectue localement sur votre appareil, donc la vitesse dépend de votre ordinateur. La plupart des opérations se terminent en quelques secondes, même pour de grands lots.</p>`,
@@ -502,10 +502,10 @@ export const blogPostsFr: BlogPost[] = [
         body: `<p>Les PDF destinés à la consultation ou au téléchargement sur le web doivent être optimisés pour un chargement rapide et une lisibilité à l'écran.</p>
 <h2>Stratégies d'Optimisation</h2>
 <ol>
-<li><strong>Compresser</strong> — utilisez l'outil <a href="/#/compress-pdf">Compresser PDF</a> avec une compression moyenne ou élevée pour réduire significativement la taille du fichier</li>
-<li><strong>Redimensionner</strong> — ajustez les dimensions de page avec l'outil <a href="/#/resize-pdf">Redimensionner PDF</a> pour correspondre aux tailles d'écran courantes</li>
-<li><strong>Convertir en images</strong> — pour une simple consultation, convertissez les pages en JPG en utilisant <a href="/#/pdf-to-jpg">PDF vers JPG</a> pour un chargement web plus rapide</li>
-<li><strong>Niveaux de gris</strong> — si la couleur n'est pas essentielle, <a href="/#/grayscale-pdf">PDF en Niveaux de Gris</a> réduit davantage la taille du fichier</li>
+<li><strong>Compresser</strong> — utilisez l'outil <a href="#/compress-pdf">Compresser PDF</a> avec une compression moyenne ou élevée pour réduire significativement la taille du fichier</li>
+<li><strong>Redimensionner</strong> — ajustez les dimensions de page avec l'outil <a href="#/resize-pdf">Redimensionner PDF</a> pour correspondre aux tailles d'écran courantes</li>
+<li><strong>Convertir en images</strong> — pour une simple consultation, convertissez les pages en JPG en utilisant <a href="#/pdf-to-jpg">PDF vers JPG</a> pour un chargement web plus rapide</li>
+<li><strong>Niveaux de gris</strong> — si la couleur n'est pas essentielle, <a href="#/grayscale-pdf">PDF en Niveaux de Gris</a> réduit davantage la taille du fichier</li>
 </ol>
 <h2>Recommandations de Taille de Fichier</h2>
 <ul>
@@ -533,7 +533,7 @@ export const blogPostsFr: BlogPost[] = [
 <li><strong>Aucune limite de taille de fichier</strong> — la mémoire de votre ordinateur est la seule contrainte</li>
 </ul>
 <h2>Outils Disponibles</h2>
-<p>Les 22 outils fonctionnent hors ligne : de la <a href="/#/merge-pdf">fusion</a> et la <a href="/#/compress-pdf">compression</a> à la <a href="/#/sign-pdf">signature</a> et le <a href="/#/redact-pdf">caviardage</a>. Chaque opération s'exécute localement, vous donnant un contrôle total sur vos données.</p>`,
+<p>Les 22 outils fonctionnent hors ligne : de la <a href="#/merge-pdf">fusion</a> et la <a href="#/compress-pdf">compression</a> à la <a href="#/sign-pdf">signature</a> et le <a href="#/redact-pdf">caviardage</a>. Chaque opération s'exécute localement, vous donnant un contrôle total sur vos données.</p>`,
         date: '2025-08-12',
         tool: 'compress-pdf',
         tags: ['confidentialité', 'gratuit', 'hors-ligne'],
@@ -546,11 +546,11 @@ export const blogPostsFr: BlogPost[] = [
         body: `<p>Avant d'envoyer un PDF à l'impression, quelques ajustements peuvent garantir les meilleurs résultats et éviter les problèmes d'impression courants.</p>
 <h2>Liste de Vérification pour la Préparation à l'Impression</h2>
 <ol>
-<li><strong>Redimensionner les pages</strong> — utilisez l'outil <a href="/#/resize-pdf">Redimensionner PDF</a> pour correspondre à la taille de papier cible (A4, Letter, A3)</li>
-<li><strong>Rogner les marges</strong> — supprimez les espaces blancs excessifs avec l'outil <a href="/#/crop-pdf">Rogner PDF</a></li>
-<li><strong>Convertir en niveaux de gris</strong> — si l'impression est en noir et blanc, utilisez <a href="/#/grayscale-pdf">PDF en Niveaux de Gris</a> pour prévisualiser le résultat et économiser de l'encre</li>
-<li><strong>Aplatir les formulaires</strong> — assurez-vous que les données de formulaire s'impriment correctement en <a href="/#/flatten-pdf">aplatissant le PDF</a></li>
-<li><strong>Compresser</strong> — si vous envoyez à un service d'impression, <a href="/#/compress-pdf">compressez</a> avec des paramètres bas pour réduire le temps de transfert</li>
+<li><strong>Redimensionner les pages</strong> — utilisez l'outil <a href="#/resize-pdf">Redimensionner PDF</a> pour correspondre à la taille de papier cible (A4, Letter, A3)</li>
+<li><strong>Rogner les marges</strong> — supprimez les espaces blancs excessifs avec l'outil <a href="#/crop-pdf">Rogner PDF</a></li>
+<li><strong>Convertir en niveaux de gris</strong> — si l'impression est en noir et blanc, utilisez <a href="#/grayscale-pdf">PDF en Niveaux de Gris</a> pour prévisualiser le résultat et économiser de l'encre</li>
+<li><strong>Aplatir les formulaires</strong> — assurez-vous que les données de formulaire s'impriment correctement en <a href="#/flatten-pdf">aplatissant le PDF</a></li>
+<li><strong>Compresser</strong> — si vous envoyez à un service d'impression, <a href="#/compress-pdf">compressez</a> avec des paramètres bas pour réduire le temps de transfert</li>
 </ol>
 <h2>Problèmes d'Impression Courants</h2>
 <ul>
@@ -570,8 +570,8 @@ export const blogPostsFr: BlogPost[] = [
         body: `<p>Les formulaires PDF interactifs avec des champs à remplir sont couramment utilisés pour les candidatures, les sondages et les documents officiels. Comprendre comment les gérer correctement fait gagner du temps et évite les problèmes.</p>
 <h2>Le Flux de Travail des Formulaires</h2>
 <ol>
-<li><strong>Remplir</strong> — complétez les champs du formulaire dans votre lecteur PDF ou utilisez l'outil <a href="/#/edit-pdf">Modifier PDF</a> pour ajouter du texte directement sur la page</li>
-<li><strong>Aplatir</strong> — utilisez l'outil <a href="/#/flatten-pdf">Aplatir PDF</a> pour convertir les champs interactifs en contenu statique, verrouillant vos saisies</li>
+<li><strong>Remplir</strong> — complétez les champs du formulaire dans votre lecteur PDF ou utilisez l'outil <a href="#/edit-pdf">Modifier PDF</a> pour ajouter du texte directement sur la page</li>
+<li><strong>Aplatir</strong> — utilisez l'outil <a href="#/flatten-pdf">Aplatir PDF</a> pour convertir les champs interactifs en contenu statique, verrouillant vos saisies</li>
 <li><strong>Partager</strong> — distribuez le PDF aplati en sachant que les destinataires ne peuvent pas modifier vos données</li>
 </ol>
 <h2>Pourquoi Aplatir Avant de Partager ?</h2>
@@ -580,7 +580,7 @@ export const blogPostsFr: BlogPost[] = [
 <li>Garantit que le document a un aspect identique dans chaque lecteur PDF</li>
 <li>Préserve le formulaire complété pour l'archivage à long terme</li>
 </ul>
-<p>Pour une sécurité supplémentaire, <a href="/#/protect-pdf">protégez par mot de passe</a> le PDF aplati avant de le partager.</p>`,
+<p>Pour une sécurité supplémentaire, <a href="#/protect-pdf">protégez par mot de passe</a> le PDF aplati avant de le partager.</p>`,
         date: '2026-02-05',
         tool: 'flatten-pdf',
         tags: ['formulaires', 'aplatir', 'remplir'],
@@ -598,7 +598,7 @@ export const blogPostsFr: BlogPost[] = [
 <li>Pas de prise en charge de la transparence</li>
 <li>Idéal pour : le partage, l'e-mail, les réseaux sociaux, les PDF riches en photos</li>
 </ul>
-<p>Utilisez l'outil <a href="/#/pdf-to-jpg">PDF vers JPG</a> pour la plupart des conversions générales.</p>
+<p>Utilisez l'outil <a href="#/pdf-to-jpg">PDF vers JPG</a> pour la plupart des conversions générales.</p>
 <h2>PNG — Idéal pour les Graphiques et la Transparence</h2>
 <ul>
 <li>Fichiers plus volumineux en raison de la compression sans perte</li>
@@ -606,7 +606,7 @@ export const blogPostsFr: BlogPost[] = [
 <li>Prise en charge des arrière-plans transparents</li>
 <li>Idéal pour : les diagrammes, captures d'écran, graphiques web, présentations</li>
 </ul>
-<p>Utilisez l'outil <a href="/#/pdf-to-png">PDF vers PNG</a> lorsque la qualité et la transparence sont importantes.</p>
+<p>Utilisez l'outil <a href="#/pdf-to-png">PDF vers PNG</a> lorsque la qualité et la transparence sont importantes.</p>
 <h2>Guide de Décision Rapide</h2>
 <p>Besoin de fichiers légers pour le web ou l'e-mail ? Choisissez JPG. Besoin d'une qualité parfaite ou d'arrière-plans transparents ? Choisissez PNG.</p>`,
         date: '2025-07-25',
@@ -621,11 +621,11 @@ export const blogPostsFr: BlogPost[] = [
         body: `<p>Les bureaux traitent quotidiennement des centaines de documents PDF — factures, contrats, rapports et correspondances. Une gestion efficace des PDF fait gagner des heures de travail.</p>
 <h2>Tâches Courantes au Bureau</h2>
 <ul>
-<li><strong>Combiner des rapports</strong> — utilisez <a href="/#/merge-pdf">Fusionner PDF</a> pour compiler les rapports mensuels en résumés trimestriels</li>
-<li><strong>Organiser les documents</strong> — <a href="/#/organize-pdf">réordonnez, supprimez ou dupliquez des pages</a> pour restructurer de longs documents</li>
-<li><strong>Ajouter la pagination</strong> — insérez des <a href="/#/page-numbers">numéros de page</a> ou des <a href="/#/header-footer">en-têtes et pieds de page</a> pour une présentation professionnelle</li>
-<li><strong>Protéger les fichiers</strong> — <a href="/#/protect-pdf">protégez par mot de passe</a> les documents confidentiels avant leur distribution</li>
-<li><strong>Compresser pour l'e-mail</strong> — <a href="/#/compress-pdf">réduisez la taille des fichiers</a> pour respecter les limites de pièces jointes des e-mails</li>
+<li><strong>Combiner des rapports</strong> — utilisez <a href="#/merge-pdf">Fusionner PDF</a> pour compiler les rapports mensuels en résumés trimestriels</li>
+<li><strong>Organiser les documents</strong> — <a href="#/organize-pdf">réordonnez, supprimez ou dupliquez des pages</a> pour restructurer de longs documents</li>
+<li><strong>Ajouter la pagination</strong> — insérez des <a href="#/page-numbers">numéros de page</a> ou des <a href="#/header-footer">en-têtes et pieds de page</a> pour une présentation professionnelle</li>
+<li><strong>Protéger les fichiers</strong> — <a href="#/protect-pdf">protégez par mot de passe</a> les documents confidentiels avant leur distribution</li>
+<li><strong>Compresser pour l'e-mail</strong> — <a href="#/compress-pdf">réduisez la taille des fichiers</a> pour respecter les limites de pièces jointes des e-mails</li>
 </ul>
 <h2>Conseil de Flux de Travail</h2>
 <p>Commencez par fusionner les fichiers connexes, puis organisez les pages, ajoutez les numéros de page et enfin compressez le résultat pour la distribution.</p>`,
@@ -645,14 +645,14 @@ export const blogPostsFr: BlogPost[] = [
 <li>Créer un portfolio ou un dossier à partir de fichiers individuels</li>
 <li>Compiler des pages numérisées de différentes sessions</li>
 </ul>
-<p>Utilisez l'outil <a href="/#/merge-pdf">Fusionner PDF</a> pour glisser, déposer et réordonner vos fichiers avant de les combiner.</p>
+<p>Utilisez l'outil <a href="#/merge-pdf">Fusionner PDF</a> pour glisser, déposer et réordonner vos fichiers avant de les combiner.</p>
 <h2>Quand Diviser</h2>
 <ul>
 <li>Extraire des pages spécifiques d'un document volumineux</li>
 <li>Décomposer un livre en chapitres individuels</li>
 <li>Séparer un PDF multi-factures en factures individuelles</li>
 </ul>
-<p>L'outil <a href="/#/split-pdf">Diviser PDF</a> prend en charge à la fois la division de toutes les pages et l'extraction de plages de pages spécifiques.</p>
+<p>L'outil <a href="#/split-pdf">Diviser PDF</a> prend en charge à la fois la division de toutes les pages et l'extraction de plages de pages spécifiques.</p>
 <h2>Combiner les Deux Opérations</h2>
 <p>Besoin de pages provenant de plusieurs documents ? Divisez d'abord chaque fichier source pour extraire les pages nécessaires, puis fusionnez les pages extraites dans votre document final.</p>`,
         date: '2026-03-01',
@@ -672,7 +672,7 @@ export const blogPostsFr: BlogPost[] = [
 <li><strong>Prêt pour l'impression</strong> — les PDF sont conçus pour l'affichage à l'écran et l'impression</li>
 </ul>
 <h2>Comment Ça Fonctionne</h2>
-<p>L'outil <a href="/#/markdown-to-pdf">Markdown vers PDF</a> rend votre contenu Markdown avec une prise en charge complète des titres, listes, blocs de code, tableaux et plus encore. Collez ou saisissez votre Markdown, prévisualisez le résultat et téléchargez le PDF.</p>
+<p>L'outil <a href="#/markdown-to-pdf">Markdown vers PDF</a> rend votre contenu Markdown avec une prise en charge complète des titres, listes, blocs de code, tableaux et plus encore. Collez ou saisissez votre Markdown, prévisualisez le résultat et téléchargez le PDF.</p>
 <h2>Fonctionnalités Markdown Prises en Charge</h2>
 <p>Le convertisseur gère toute la syntaxe Markdown standard incluant le gras, l'italique, les liens, les images, les citations, les listes ordonnées et non ordonnées, les blocs de code avec coloration syntaxique et les tableaux. Votre contenu est traité entièrement dans le navigateur pour une confidentialité totale.</p>`,
         date: '2026-03-05',
@@ -687,7 +687,7 @@ export const blogPostsFr: BlogPost[] = [
         body: `<p>Signer des documents de manière numérique est devenu essentiel dans l'environnement actuel de travail à distance. Mais il existe une distinction importante entre les signatures électroniques et les signatures numériques.</p>
 <h2>Signatures Électroniques</h2>
 <p>Une signature électronique est toute marque, symbole ou processus attaché à un document pour indiquer un consentement. Cela inclut les noms tapés, les signatures manuscrites numérisées ou les signatures dessinées.</p>
-<p>L'outil <a href="/#/sign-pdf">Signer PDF</a> vous permet de créer des signatures électroniques en dessinant, tapant ou téléchargeant une image de votre signature — le tout traité localement dans votre navigateur.</p>
+<p>L'outil <a href="#/sign-pdf">Signer PDF</a> vous permet de créer des signatures électroniques en dessinant, tapant ou téléchargeant une image de votre signature — le tout traité localement dans votre navigateur.</p>
 <h2>Signatures Numériques</h2>
 <p>Les signatures numériques utilisent une technologie cryptographique pour vérifier l'identité du signataire et garantir que le document n'a pas été falsifié. Elles nécessitent un certificat numérique délivré par une autorité de confiance.</p>
 <h2>Laquelle Devriez-Vous Utiliser ?</h2>
@@ -710,8 +710,8 @@ export const blogPostsFr: BlogPost[] = [
 <li><strong>Contraste suffisant</strong> — assurez-vous que le texte a un contraste adéquat avec l'arrière-plan</li>
 </ul>
 <h2>Outils Utiles</h2>
-<p>L'outil <a href="/#/edit-pdf">Modifier PDF</a> vous permet d'ajouter des annotations textuelles et des étiquettes à vos documents. Utilisez-le pour ajouter du texte descriptif près des images ou clarifier des diagrammes complexes.</p>
-<p>Pour les documents numérisés, utilisez l'outil <a href="/#/pdf-to-text">PDF vers Texte</a> pour vérifier que le contenu textuel est correctement extractible, ce qui est essentiel pour les lecteurs d'écran.</p>
+<p>L'outil <a href="#/edit-pdf">Modifier PDF</a> vous permet d'ajouter des annotations textuelles et des étiquettes à vos documents. Utilisez-le pour ajouter du texte descriptif près des images ou clarifier des diagrammes complexes.</p>
+<p>Pour les documents numérisés, utilisez l'outil <a href="#/pdf-to-text">PDF vers Texte</a> pour vérifier que le contenu textuel est correctement extractible, ce qui est essentiel pour les lecteurs d'écran.</p>
 <h2>Tester l'Accessibilité</h2>
 <p>Testez toujours vos PDF avec un lecteur d'écran avant de les distribuer. Les vérifications simples incluent s'assurer que le texte peut être sélectionné et copié, et que l'ordre de lecture est logique.</p>`,
         date: '2026-01-22',
@@ -734,9 +734,9 @@ export const blogPostsFr: BlogPost[] = [
 <h2>Avantages des Outils Basés sur Navigateur</h2>
 <p>Contrairement aux logiciels installés, les outils PDF basés sur navigateur comme <a href="/">PDF Worker</a> ne nécessitent aucune configuration ni mise à jour. Ouvrez un onglet, traitez votre fichier et passez à autre chose. Pas de frais de licence, pas de problèmes de compatibilité.</p>
 <h2>Traitement par Lots</h2>
-<p>De nombreux outils prennent en charge le traitement de plusieurs fichiers à la fois. Téléchargez plusieurs PDF dans l'outil <a href="/#/compress-pdf">Compresser PDF</a> et téléchargez tous les résultats ensemble sous forme de fichier ZIP. Il en va de même pour la <a href="/#/rotate-pdf">rotation</a>, la <a href="/#/grayscale-pdf">conversion en niveaux de gris</a> et d'autres opérations.</p>
+<p>De nombreux outils prennent en charge le traitement de plusieurs fichiers à la fois. Téléchargez plusieurs PDF dans l'outil <a href="#/compress-pdf">Compresser PDF</a> et téléchargez tous les résultats ensemble sous forme de fichier ZIP. Il en va de même pour la <a href="#/rotate-pdf">rotation</a>, la <a href="#/grayscale-pdf">conversion en niveaux de gris</a> et d'autres opérations.</p>
 <h2>Enchaîner les Opérations</h2>
-<p>Pour les flux de travail complexes, enchaînez les opérations : d'abord <a href="/#/unlock-pdf">déverrouillez</a> un PDF protégé, puis <a href="/#/split-pdf">divisez-le</a> en sections, <a href="/#/compress-pdf">compressez</a> chaque section et enfin <a href="/#/merge-pdf">fusionnez</a> les parties dont vous avez besoin.</p>`,
+<p>Pour les flux de travail complexes, enchaînez les opérations : d'abord <a href="#/unlock-pdf">déverrouillez</a> un PDF protégé, puis <a href="#/split-pdf">divisez-le</a> en sections, <a href="#/compress-pdf">compressez</a> chaque section et enfin <a href="#/merge-pdf">fusionnez</a> les parties dont vous avez besoin.</p>`,
         date: '2026-02-05',
         tool: 'compress-pdf',
         tags: ['flux-de-travail', 'automatisation', 'productivité'],

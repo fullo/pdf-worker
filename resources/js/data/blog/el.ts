@@ -8,16 +8,16 @@ export const blogPostsEl: BlogPost[] = [
         excerpt: 'Mathetepossyna syndyasete polla eggrafa PDF se ena mono arxeio xoris na enkatasteisete kapoio logismiko. Grigora, asfales kai apolytadorean.',
         body: `<p>I synenosi arxeion PDF einai mia apo tis pio syxnes ergasies otan douleveteme eggrafa. Eite xreiazetai na syndyasete ektheseis, symvaseiseite parousiaseis, ena axiopisto ergaleio kanei ti diafora.</p>
 <h2>Giati na Synenosete PDF Online;</h2>
-<p>To paradosiako logismiko epifaneias ergasias mporei na einai akrivo kai syxna apaitei enkatastasi. Me to <a href="/#/merge-pdf">ergaleio Synenosis PDF tou PDF Worker</a>, mporeitena syndyasete arxeia apeftheias ston perigiti sas -- xoris metafortoseis, xoris exypiretiites, plyris aporreto.</p>
+<p>To paradosiako logismiko epifaneias ergasias mporei na einai akrivo kai syxna apaitei enkatastasi. Me to <a href="#/merge-pdf">ergaleio Synenosis PDF tou PDF Worker</a>, mporeitena syndyasete arxeia apeftheias ston perigiti sas -- xoris metafortoseis, xoris exypiretiites, plyris aporreto.</p>
 <h2>Odigos Vima pros Vima</h2>
 <ol>
-<li>Anoixte to ergaleio <a href="/#/merge-pdf">Synenosi PDF</a></li>
+<li>Anoixte to ergaleio <a href="#/merge-pdf">Synenosi PDF</a></li>
 <li>Syrete kai afinete ta arxeia PDF sas i kanete klik gia anazitisi</li>
 <li>Anadekataxte ta arxeia syrnontas ta stin epithymiti seira</li>
 <li>Kanete klik sto "Synenosi PDF" kai katevaste to synenomeno eggrafo</li>
 </ol>
 <h2>Symvoules gia Arista Apotelesmata</h2>
-<p>Vevaiothkite oti ola ta PDF sas den einai prostateymena me kodiko prosvasis prin ti synenosi. An einai, xrisimopoiisteto ergaleio <a href="/#/unlock-pdf">Xekleidoma PDF</a> prota gia na afairesete tin prostasia.</p>
+<p>Vevaiothkite oti ola ta PDF sas den einai prostateymena me kodiko prosvasis prin ti synenosi. An einai, xrisimopoiisteto ergaleio <a href="#/unlock-pdf">Xekleidoma PDF</a> prota gia na afairesete tin prostasia.</p>
 <p>Gia megales parties arxeion, to ergaleio diachirizite dekades eggrafon apotelesmatika afou oli i epexergasia ginetai topika sti syskevisas.</p>`,
         date: '2023-06-15',
         tool: 'merge-pdf',
@@ -30,7 +30,7 @@ export const blogPostsEl: BlogPost[] = [
         excerpt: 'Meioste to megethos arxeiou PDF xoris apolia poiotitas. Tria epipeda sympiesis gia isorropia metaxy megethous kai safinias gia email, diadiktyo i arxeiothetisi.',
         body: `<p>Ta megala arxeia PDF mporoun na einai provlimatika otan ta moirazeste mesoemail i ta anevasete se istotopos. I sympiesi voitha sti meiositou megethous arxeiou diatirontas apodekti poiotita.</p>
 <h2>Katanoontas ta Epipeda Sympiesis</h2>
-<p>To <a href="/#/compress-pdf">ergaleio Sympiesis PDF</a> prosferei tria epipeda:</p>
+<p>To <a href="#/compress-pdf">ergaleio Sympiesis PDF</a> prosferei tria epipeda:</p>
 <ul>
 <li><strong>Xamili sympiesi</strong> -- elaxisti meiosi megethous, poiotita kontas tin arxiki</li>
 <li><strong>Mesaia sympiesi</strong> -- kali isorropia metaxy megethous kai poiotitas</li>
@@ -50,7 +50,7 @@ export const blogPostsEl: BlogPost[] = [
         excerpt: 'Exagete memonomenes selides i sygkekrimena evri selidon apo eggrafa PDF. Katevaste kathe selida xexorista i os arxeio ZIP.',
         body: `<p>Merikesforesjreiazesteapla liges selides apo ena megalo eggrafo PDF. O diaxorismos sas epitrepei na exagete akrivos o,ti xreiazeste.</p>
 <h2>Dyo Tropoi Diaxorismou</h2>
-<p>To <a href="/#/split-pdf">ergaleio Diaxorismou PDF</a> prosferei dyo proseggiseis:</p>
+<p>To <a href="#/split-pdf">ergaleio Diaxorismou PDF</a> prosferei dyo proseggiseis:</p>
 <ul>
 <li><strong>Diaxorismos olon ton selidon</strong> -- exageikathe selida os xexoristo arxeio PDF</li>
 <li><strong>Evros selidon</strong> -- prosdioristesygkekrimenes selides opos "1-3, 5, 7-9"</li>
@@ -69,7 +69,7 @@ export const blogPostsEl: BlogPost[] = [
         excerpt: 'Peristrepste skanarismena eggrafa i diorthosteanapodes selides. Ypostirixipristrofis 90, 180 kai 270 moiron gia oles tis selides.',
         body: `<p>Ta skanarismena eggrafa syxna kataligoume lathos prosanatolismo. Mia grigori dior thosi peristrofis ta kanei anavagnosima xana.</p>
 <h2>Epiloges Peristrofis</h2>
-<p>To <a href="/#/rotate-pdf">ergaleio Peristrofis PDF</a> ypostirizei treis gonies peristrofis:</p>
+<p>To <a href="#/rotate-pdf">ergaleio Peristrofis PDF</a> ypostirizei treis gonies peristrofis:</p>
 <ul>
 <li><strong>90 moires dexiostrova</strong> -- gia selides topio pou prepei na einai porteto</li>
 <li><strong>180 moires</strong> -- gia anestramena skanarisma ta</li>
@@ -77,7 +77,7 @@ export const blogPostsEl: BlogPost[] = [
 </ul>
 <h2>Syxnes Periptoseis Xrisis</h2>
 <p>Skanarisma ta apo kinito tilefono, fototypimena eggrafa kai PDF apo fax syxna xreiazontai peristrof. To ergaleio efarmozeitin peristrofi se oles tis selides tautoxrona, exoikonomontas xrono.</p>
-<p>Gia pio leptomeri elenxo kathe selidas xexorista, xrisimopoiiste to ergaleio <a href="/#/organize-pdf">Organosi PDF</a> pou sas epitrepei na diachiristeiteis selides atomiika.</p>`,
+<p>Gia pio leptomeri elenxo kathe selidas xexorista, xrisimopoiiste to ergaleio <a href="#/organize-pdf">Organosi PDF</a> pou sas epitrepei na diachiristeiteis selides atomiika.</p>`,
         date: '2022-08-12',
         tool: 'rotate-pdf',
         tags: ['peristrof', 'prosanatolismos', 'skan'],
@@ -89,7 +89,7 @@ export const blogPostsEl: BlogPost[] = [
         excerpt: 'Prostatepste ta eggrafa sas me ydratika simata keimenouieikon as. Prosarmoste ti thesi, ti diavaneia, to megethos kai tin peristrof.',
         body: `<p>Ta ydratika simata voithoun stin prostasia tis pneumatikis idioktisias kai tin episimansi eggrafonos empisteftikonproschedioniidioktiston.</p>
 <h2>Ydratika Simata Keimenousys Eikonas</h2>
-<p>To <a href="/#/watermark-pdf">ergaleio Ydratikou Simatos</a> ypostirizei kai tous dyo typous:</p>
+<p>To <a href="#/watermark-pdf">ergaleio Ydratikou Simatos</a> ypostirizei kai tous dyo typous:</p>
 <ul>
 <li><strong>Ydratika simata keimenau</strong> -- prostheste lexeis opos "EMPISTEFTI KO" i "PROSXEDIO" me prosarmosmeno megethos grammatoseiras, xroma kai peristrof</li>
 <li><strong>Ydratika simata eikonas</strong> -- epitheste to logotypo tis etaireias sas me prosarmosimi diafaneia kai megethos</li>
@@ -107,14 +107,14 @@ export const blogPostsEl: BlogPost[] = [
         excerpt: 'Metatrepste kathe selida PDF se eikona JPG ypsilis poiotitas. Prosarmoste tis rythmiseis poiotitas gia tin teleia isorropia metaxy megethous kai safinias.',
         body: `<p>I metatropi selidon PDF se eikones einai xrisimi gia parousiaseis, dimosiefsis sta koinonika diktya i otan xreiazeste na enosomatosete perioxomeno PDF se alla eggrafa.</p>
 <h2>Rythmiseis Poiotitas</h2>
-<p>To <a href="/#/pdf-to-jpg">ergaleio PDF se JPG</a> sas epitrepei na prosarmosetein poiotita eikonas apo deka tois ekato eos ekato tois ekato. Ypsiloteripoiotita siminei megalytera arxeia alla pio eukrineis eikones.</p>
+<p>To <a href="#/pdf-to-jpg">ergaleio PDF se JPG</a> sas epitrepei na prosarmosetein poiotita eikonas apo deka tois ekato eos ekato tois ekato. Ypsiloteripoiotita siminei megalytera arxeia alla pio eukrineis eikones.</p>
 <h2>Protenomenes Rythmiseis</h2>
 <ul>
 <li><strong>80%</strong> -- kaliteri gia tis perisso teres xriseis, kali poiotita me logiko megethos arxeiou</li>
 <li><strong>100%</strong> -- megisti poiotita gia ektyposi i epaggelmatiki xrisi</li>
 <li><strong>50-60%</strong> -- mikrotera arxeia gia to diadiktyo i email</li>
 </ul>
-<p>Kathe selida ginetai xexoristo arxeio JPG. Katevaste ta xexorista i os arxeio ZIP. Gia diafanes ypo vathro, skefteite na xrisimopoiisete ton metatropea <a href="/#/pdf-to-png">PDF se PNG</a>.</p>`,
+<p>Kathe selida ginetai xexoristo arxeio JPG. Katevaste ta xexorista i os arxeio ZIP. Gia diafanes ypo vathro, skefteite na xrisimopoiisete ton metatropea <a href="#/pdf-to-png">PDF se PNG</a>.</p>`,
         date: '2021-05-18',
         tool: 'pdf-to-jpg',
         tags: ['metatropi', 'jpg', 'eikones'],
@@ -126,7 +126,7 @@ export const blogPostsEl: BlogPost[] = [
         excerpt: 'Metatrepste polles eikones se ena mono eggrafo PDF. Epilexte prosanatolismo, perithoria kai diataxiselidas.',
         body: `<p>Xreiazeste na sylexete fotografies, skanarisma ta i stigmiotypa se ena mono eggrafo; I metatropi eikonon se PDF dimiourgeie na epaggelmatiko, efkoladiamorizomeno arxeio.</p>
 <h2>Ypostirizomenes Morfes</h2>
-<p>To <a href="/#/jpg-to-pdf">ergaleio JPG se PDF</a> dexetai eikones JPG, JPEG, PNG kai WebP. Syndiaste diaforetikes morfes se mia monadiki metatropi.</p>
+<p>To <a href="#/jpg-to-pdf">ergaleio JPG se PDF</a> dexetai eikones JPG, JPEG, PNG kai WebP. Syndiaste diaforetikes morfes se mia monadiki metatropi.</p>
 <h2>Epiloges Diataxis</h2>
 <ul>
 <li><strong>Prosanatolismos</strong> -- epilexte portreto i topio</li>
@@ -144,14 +144,14 @@ export const blogPostsEl: BlogPost[] = [
         excerpt: 'Asfalisteta PDF sas me kodikous xristi kai idiokti ti. Elegxte ta dikeomata ektyposis, antigrafis kai tropopoiisis.',
         body: `<p>I prostasia efaiston eggrafonme kodikous prosvasis emopodizeitin mi exousiodotimeni prosvasi kai elengxei ti mporounnakanouno paradiptes me to arxeio.</p>
 <h2>Kodikos Xristi enantion Kodiko Idioktiti</h2>
-<p>To <a href="/#/protect-pdf">ergaleio Prostasias PDF</a> ypostirizei dyo typous kodikon prosvasis:</p>
+<p>To <a href="#/protect-pdf">ergaleio Prostasias PDF</a> ypostirizei dyo typous kodikon prosvasis:</p>
 <ul>
 <li><strong>Kodikos xristi</strong> -- apaiteitai gia to anoigma kai tin provolitu eggrafe</li>
 <li><strong>Kodikos idioktiti</strong> -- elengxei ta dikeomata ektyposis, antigrafis kai epexergasias</li>
 </ul>
 <h2>Elengxos Dikeomaton</h2>
 <p>Mporite na epitrepsete i na periorisete tin ektyposi, tin antigrafi keimenoukai tin tropopoiisi tou eggrafou. Afto einai xrisimo gia ti dianomi ektheseon mono gia anagnosi i symvaseon.</p>
-<p>Xreiazeste na afairesete tin prostasia argotera; Xrisimopoiiste to <a href="/#/unlock-pdf">ergaleio Xekleido matos PDF</a> me ton sosto kodiko prosvasis.</p>`,
+<p>Xreiazeste na afairesete tin prostasia argotera; Xrisimopoiiste to <a href="#/unlock-pdf">ergaleio Xekleido matos PDF</a> me ton sosto kodiko prosvasis.</p>`,
         date: '2023-09-10',
         tool: 'protect-pdf',
         tags: ['prostasia', 'kodikos', 'asfaleia'],
@@ -163,7 +163,7 @@ export const blogPostsEl: BlogPost[] = [
         excerpt: 'Xekleidoste prostateymena PDF otan gnorizete ton kodiko prosvasis. Afairesete periori smous ektyposis kai antigrafis.',
         body: `<p>An exete ton kodiko prosvasis enos prostateyme nou PDF, mporite na afairesete ton periorismo gia na kanete to eggrafo elefteraprosvasi mo.</p>
 <h2>Pos Leitourgei</h2>
-<p>To <a href="/#/unlock-pdf">ergaleio Xekleido matos PDF</a> dexetai to prostateymeno PDF sas kai ton sostokodikoposvasis kai paragei ena mi prostateymeno antigrafo. To arxiko arxeio paramenei ainalloioto.</p>
+<p>To <a href="#/unlock-pdf">ergaleio Xekleido matos PDF</a> dexetai to prostateymeno PDF sas kai ton sostokodikoposvasis kai paragei ena mi prostateymeno antigrafo. To arxiko arxeio paramenei ainalloioto.</p>
 <h2>Simantikes Simioseis</h2>
 <ul>
 <li>Prepei na gnorizete ton sosto kodiko prosvasis -- afto to ergaleio den sparaiei oute parakamtei kodikous prosvasis</li>
@@ -181,14 +181,14 @@ export const blogPostsEl: BlogPost[] = [
         excerpt: 'Diachiristeiteo ptika tis selides PDF me drag-and-drop. Anadekataxte selides, diagrapste anepithymites i antigrafsete simantika tmimata.',
         body: `<p>I diachirisi tis domis enos eggrafou PDF einai aparaititi otan etoimazete ektheseis, xartofy lakia i parousiaseis.</p>
 <h2>Optiki Diachirisi Selidon</h2>
-<p>To <a href="/#/organize-pdf">ergaleio Organosis PDF</a> emfanizei proepiskopiseis mikrografion kathe selidas, kanontas efkolo na deite ti domi tou eggrafou sas me mia matia.</p>
+<p>To <a href="#/organize-pdf">ergaleio Organosis PDF</a> emfanizei proepiskopiseis mikrografion kathe selidas, kanontas efkolo na deite ti domi tou eggrafou sas me mia matia.</p>
 <h2>Diathesimes Energeies</h2>
 <ul>
 <li><strong>Anadekataxis</strong> -- syrete kai afiste selides gia na allaxete ti thesi tous</li>
 <li><strong>Diagrafi</strong> -- afairesteanepithymites selides (den mporite na diagrapsete tin teleftaia selida)</li>
 <li><strong>Antigrafi</strong> -- dimiourgiste antitypa simantikonselidon</li>
 </ul>
-<p>Afto to ergaleio leitourgeiaristasesyn dyasmo me ti <a href="/#/merge-pdf">Synenosi PDF</a> -- prota synenoste polla arxeia kai meta organosteis syndedemenes selides.</p>`,
+<p>Afto to ergaleio leitourgeiaristasesyn dyasmo me ti <a href="#/merge-pdf">Synenosi PDF</a> -- prota synenoste polla arxeia kai meta organosteis syndedemenes selides.</p>`,
         date: '2023-04-22',
         tool: 'organize-pdf',
         tags: ['organosi', 'anadekataxis', 'selides'],
@@ -200,7 +200,7 @@ export const blogPostsEl: BlogPost[] = [
         excerpt: 'Afairesteanepithymitaperithoria i perikopste selides PDF gia na estiastese sygkekrimenes perioches perioxomenou. Optiki proepiskopisi me prosarmosimes times perikopis.',
         body: `<p>Ta PDF syxna exoun ypervolika perithoria apo diataxeis ektyposis i sinora skanrismatos. I perikopi afairei aftous tous epipleon xorous.</p>
 <h2>Pos na Perikopsete</h2>
-<p>To <a href="/#/crop-pdf">ergaleio Perikopis PDF</a> parexei mia optiki proepiskopisi opou mporite na syrete tis akres gia na orisete tin perioxi perikopis. Oristimes gia panome ros, kato meros, aristera kai dexia anexartita.</p>
+<p>To <a href="#/crop-pdf">ergaleio Perikopis PDF</a> parexei mia optiki proepiskopisi opou mporite na syrete tis akres gia na orisete tin perioxi perikopis. Oristimes gia panome ros, kato meros, aristera kai dexia anexartita.</p>
 <h2>Periptoseis Xrisis</h2>
 <ul>
 <li>Afairesi plateion perithori onektypoti apo skanarismena eggrafa</li>
@@ -219,7 +219,7 @@ export const blogPostsEl: BlogPost[] = [
         excerpt: 'Afairestemonima empisteytika dedomena apo PDF. Mavriste keimeno, eikones i opoiodipote perioxomeno pou den prepei na moirastei.',
         body: `<p>I apokrypsi afairei monima evaisthiteq plirofories apo ta eggrafa prin tin koinopoiisi. Seantitheisme tin episimansi i tin kalypsi me sximata, to apokrymmeno perioxomeno den mporei na anaktithei.</p>
 <h2>Pos Leitourgei i Apokrypsi</h2>
-<p>To <a href="/#/redact-pdf">ergaleio Apokrypsis PDF</a> sas epitrepei na sxediastemavra orthogonia pano se perioches pou thelete na logokrinete monima. To perioxomeno apo kato katastreafetai -- den apokryptete apla.</p>
+<p>To <a href="#/redact-pdf">ergaleio Apokrypsis PDF</a> sas epitrepei na sxediastemavra orthogonia pano se perioches pou thelete na logokrinete monima. To perioxomeno apo kato katastreafetai -- den apokryptete apla.</p>
 <h2>Ti na Apokrypsete</h2>
 <ul>
 <li>Prosopika stoixeia (onomata, diefthinsis, arithmoi tilefonou)</li>
@@ -240,7 +240,7 @@ export const blogPostsEl: BlogPost[] = [
         excerpt: 'Prostheste sxoliasmous, tmimata keimenon, orthogonia kai eleythera sxedia sta eggrafa PDF sas xoris kamia efarmogi epifaneias ergasias.',
         body: `<p>Xreiazeste na sxoliastee na PDF, na prosthesetefesimioseis i na episimanete ena eggrafo; To ergaleio epexergasias sas epitrepei na prosthesete perioxomeno apeftheias stis selides PDF sas.</p>
 <h2>Diathesima Ergaleia</h2>
-<p>To <a href="/#/edit-pdf">ergaleio Epexergasias PDF</a> parexei arketese piloges sxoliasmou:</p>
+<p>To <a href="#/edit-pdf">ergaleio Epexergasias PDF</a> parexei arketese piloges sxoliasmou:</p>
 <ul>
 <li><strong>Tmimata keimenon</strong> -- prostheste prosarmosmeno keimeno me prosarmosimo megethos grammatoseiras, xroma kai ypovathro</li>
 <li><strong>Orthogonia</strong> -- episimante perioches i dimiourgiste perigramma ta</li>
@@ -248,7 +248,7 @@ export const blogPostsEl: BlogPost[] = [
 </ul>
 <h2>Symvoules</h2>
 <p>Kanediplo klik se ena tmima keimenon gia na epexergasteite to perioxomeno tou. Syretestoixeia gia na ta topotheti sete ek neou. Xrisimopoiiste polles selides gia na sxoliastediaoretika tmimata tou eggrafou.</p>
-<p>Gia tin prosthiki ypografis sygkekrimena, to ergaleio <a href="/#/sign-pdf">Ypografi PDF</a> einai pio vroxmo.</p>`,
+<p>Gia tin prosthiki ypografis sygkekrimena, to ergaleio <a href="#/sign-pdf">Ypografi PDF</a> einai pio vroxmo.</p>`,
         date: '2025-01-15',
         tool: 'edit-pdf',
         tags: ['epexergasia', 'sxoliasmata', 'keimeno'],
@@ -260,7 +260,7 @@ export const blogPostsEl: BlogPost[] = [
         excerpt: 'Prostheste tin ypografi sas se arxeia PDF. Sxediaste mia ypografi i anevastemialeikonaypografis kai topothetiste tin me akrivia sto eggrafo.',
         body: `<p>I psifiaki ypografi eggrafon exoikonomei xrono kai xarti. Prostheste tin xeirografi ypografi sas se opoiodipote PDF mesa se defterolepta.</p>
 <h2>Dyo Methodoi Ypografis</h2>
-<p>To <a href="/#/sign-pdf">ergaleio Ypografis PDF</a> prosferei dyo tropous ypografis:</p>
+<p>To <a href="#/sign-pdf">ergaleio Ypografis PDF</a> prosferei dyo tropous ypografis:</p>
 <ul>
 <li><strong>Sxediasi</strong> -- xrisimopoiiste to pontiki sas i tin othoni afis gia na sxediasete tin ypografi sas</li>
 <li><strong>Eikona</strong> -- anevasteena arxeio PNG i JPG tis ypografis sas</li>
@@ -280,7 +280,7 @@ export const blogPostsEl: BlogPost[] = [
         excerpt: 'Travixte oles tis enosomatome neseikones apo eggrafa PDF. Sostetisx exoristai katevaste ta ola os arxeio ZIP.',
         body: `<p>Ta PDF syxna periexi oun politimeseikones -- fotografies, diagrammata, grafimata i logotypa -- pou mporei na xreiasteinate xrisimopoiiseteallou.</p>
 <h2>Pos Leitourgei</h2>
-<p>To <a href="/#/extract-images">ergaleio Eksagogis Eikonon</a> skanareito PDF sas gia oles tis enosomatome nes eikones kai tisexagei os atomikaanxei a PNG.</p>
+<p>To <a href="#/extract-images">ergaleio Eksagogis Eikonon</a> skanareito PDF sas gia oles tis enosomatome nes eikones kai tisexagei os atomikaanxei a PNG.</p>
 <h2>Ti Eksagetai</h2>
 <ul>
 <li>Fotografies kai eikonografiseis</li>
@@ -288,7 +288,7 @@ export const blogPostsEl: BlogPost[] = [
 <li>Grafimata kai diagrammata</li>
 <li>Eikones ypovathrou</li>
 </ul>
-<p>Katevaste kathe eikona xexorista i parete ta ola mazi me tin epilogi ZIP. Simiosi: afto to ergaleio exagei enosomatome nes eikones, oxi stigmiotypa selidas. Gia olokliresselides oseikones, xrisimopoiiste to <a href="/#/pdf-to-png">PDF se PNG</a>.</p>`,
+<p>Katevaste kathe eikona xexorista i parete ta ola mazi me tin epilogi ZIP. Simiosi: afto to ergaleio exagei enosomatome nes eikones, oxi stigmiotypa selidas. Gia olokliresselides oseikones, xrisimopoiiste to <a href="#/pdf-to-png">PDF se PNG</a>.</p>`,
         date: '2022-12-05',
         tool: 'extract-images',
         tags: ['eksagogi', 'eikones', 'fotografies'],
@@ -305,8 +305,8 @@ export const blogPostsEl: BlogPost[] = [
 <li><strong>Ypovoles</strong> -- orismena idrymata apaitoun asprmaura eggrafa</li>
 <li><strong>Synepeia</strong> -- dimiourgiste mia enaia emfanisi se eggrafa apo diaforetikes piges</li>
 </ul>
-<p>To <a href="/#/grayscale-pdf">ergaleio PDF se Klimaka tou Gkri</a> metatrepei ola ta xromata stis antistoixes times klimakas tou gkri. To keimeno paramenei efkrineskaia nagnosi mo, eno oi eikones kai ta grafika ginontai monoxima.</p>
-<p>Gia peraiteromeiositou megethous arxeiou meta ti metatropi se klimaka tou gkri, perasteto apotelesma apo to ergaleio <a href="/#/compress-pdf">Sympiesi PDF</a>.</p>`,
+<p>To <a href="#/grayscale-pdf">ergaleio PDF se Klimaka tou Gkri</a> metatrepei ola ta xromata stis antistoixes times klimakas tou gkri. To keimeno paramenei efkrineskaia nagnosi mo, eno oi eikones kai ta grafika ginontai monoxima.</p>
+<p>Gia peraiteromeiositou megethous arxeiou meta ti metatropi se klimaka tou gkri, perasteto apotelesma apo to ergaleio <a href="#/compress-pdf">Sympiesi PDF</a>.</p>`,
         date: '2023-08-17',
         tool: 'grayscale-pdf',
         tags: ['klimaka-gkri', 'aspromauro', 'ektyposi'],
@@ -318,14 +318,14 @@ export const blogPostsEl: BlogPost[] = [
         excerpt: 'Prostheste aftomata arithmisi selidon sto PDF sas. Epilexte thesi, morfi kai style gia epaggelmatiki arithmisi eggrafon.',
         body: `<p>Oi arithmoi selidon voithoun tous anagnostes na ploigithoun se megala eggrafa kai einai aparaitotoi gia epaggelmatikes ektheseis, egxeiridia kai diatri ves.</p>
 <h2>Epiloges Arithmisis</h2>
-<p>To <a href="/#/page-numbers">ergaleio Arithmon Selidon</a> prosferei efkampti morfopoiisi:</p>
+<p>To <a href="#/page-numbers">ergaleio Arithmon Selidon</a> prosferei efkampti morfopoiisi:</p>
 <ul>
 <li><strong>Thesi</strong> -- kato aristera, kato kentro i kato dexia</li>
 <li><strong>Morfi</strong> -- aplos arithmos (1, 2, 3) i morfi "selida/synolo" (1/10, 2/10)</li>
 </ul>
 <h2>Kaliteres Praktikes</h2>
 <p>Kato kentro einai i pio syxni thesi gia episima eggrafa. I morfi "selida/synolo" einai xrisimi gia nomika eggrafa opou oi paraliptes xreiazontai na epivaivasoun tin pliriotita.</p>
-<p>Gia perissoteri prosarmogi, to ergaleio <a href="/#/header-footer">Kefalida kai Yposelidon</a> parexei epiplonepiloges pou perilamvanounprosarmo smeno keimeno.</p>`,
+<p>Gia perissoteri prosarmogi, to ergaleio <a href="#/header-footer">Kefalida kai Yposelidon</a> parexei epiplonepiloges pou perilamvanounprosarmo smeno keimeno.</p>`,
         date: '2020-09-30',
         tool: 'page-numbers',
         tags: ['arithmoi-selidon', 'arithmisi', 'selido poiisi'],
@@ -337,7 +337,7 @@ export const blogPostsEl: BlogPost[] = [
         excerpt: 'Allaxte tis diastaseis selidon PDF se typopoiimena megethi xartiou. Metatrepste metaxy A4, A3, Letter kai Legal efkola.',
         body: `<p>Diaforetikes xores kai kliadoi xrisimopoioun diaforetika megethi xartiou. I allagi megethous diinsfalizeoti to PDF sas teriazei me tin anamenomeni morfi gia ektyposi i ypovoli.</p>
 <h2>Ypostirizomena Megethi</h2>
-<p>To <a href="/#/resize-pdf">ergaleio Allagis Megethous PDF</a> ypostirizei:</p>
+<p>To <a href="#/resize-pdf">ergaleio Allagis Megethous PDF</a> ypostirizei:</p>
 <ul>
 <li><strong>A4</strong> (210 x 297 mm) -- to diethnes protypo</li>
 <li><strong>A3</strong> (297 x 420 mm) -- gia megalyteres ektyposis kai afises</li>
@@ -362,7 +362,7 @@ export const blogPostsEl: BlogPost[] = [
 <li><strong>Symvatotita</strong> -- meriki progra mmata provolisemfanizoun pedia allo epodrastikon lathos</li>
 <li><strong>Ektyposi</strong> -- exasfalist eoti ta dedomena formon emfanizontai sosta otan ektypothoun</li>
 </ul>
-<p>To <a href="/#/flatten-pdf">ergaleio Isopedosis PDF</a> epexergazetai to eggrafo me ena klik. To prokypton arxeio fenetai taftosimo alla ola ta alloepo drastika stoixeia einai pleon meros tou perioxomenou selidas.</p>`,
+<p>To <a href="#/flatten-pdf">ergaleio Isopedosis PDF</a> epexergazetai to eggrafo me ena klik. To prokypton arxeio fenetai taftosimo alla ola ta alloepo drastika stoixeia einai pleon meros tou perioxomenou selidas.</p>`,
         date: '2025-02-10',
         tool: 'flatten-pdf',
         tags: ['isopedosi', 'formes', 'sxoliasmoi'],
@@ -374,14 +374,14 @@ export const blogPostsEl: BlogPost[] = [
         excerpt: 'Metatrepste perioxomeno PDF se aplo keimeno. Exagete olo to anavagnosimo keimeno apo to PDF sas gia epexergasia, anazitisi i epexergasia dedomenon.',
         body: `<p>I eksagogi keimenon apo PDF einai xrisimi gia tin antigrafi perioxomenou se alla eggrafa, tin anazitisi mesa se megala arxeia i tin epexergasia dedomenon apo ektheseis.</p>
 <h2>Pos Leitourgei</h2>
-<p>To <a href="/#/pdf-to-text">ergaleio PDF se Keimeno</a> diavazei olo to enosomatome no keimeno apo to PDF sas kai to apothikevei os arxeio aplou keimenon (.txt). To keimeno diatireiti seira anagnosis kai ti domi paragrafon.</p>
+<p>To <a href="#/pdf-to-text">ergaleio PDF se Keimeno</a> diavazei olo to enosomatome no keimeno apo to PDF sas kai to apothikevei os arxeio aplou keimenon (.txt). To keimeno diatireiti seira anagnosis kai ti domi paragrafon.</p>
 <h2>Periorismoi</h2>
 <ul>
 <li>Leitourgei mono me PDF pou periexi oun epilexsimo keimeno (psifiako keimeno)</li>
 <li>Ta skanarismena eggrafa (PDF mono me eikones) apaitoun texnologia OCR, pou den perilamvanetai</li>
 <li>Sinthetes diataxeis me stiles i pinakes mporei na min diatiroun ti morfopoiisi teleia</li>
 </ul>
-<p>Gia diatirisi tis optikis diataxis ton selidon, skefteite ti metatropi se eikones xrisimopoiontas <a href="/#/pdf-to-jpg">PDF se JPG</a> i <a href="/#/pdf-to-png">PDF se PNG</a>.</p>`,
+<p>Gia diatirisi tis optikis diataxis ton selidon, skefteite ti metatropi se eikones xrisimopoiontas <a href="#/pdf-to-jpg">PDF se JPG</a> i <a href="#/pdf-to-png">PDF se PNG</a>.</p>`,
         date: '2024-08-22',
         tool: 'pdf-to-text',
         tags: ['keimeno', 'eksagogi', 'metatropi'],
@@ -397,14 +397,14 @@ export const blogPostsEl: BlogPost[] = [
 <li><strong>PNG</strong> -- sympiesi xoris apolies, ypostirixi diafaneias, megalytera arxeia</li>
 <li><strong>JPG</strong> -- sympiesi me apolies, xoris diafaneia, mikrotera arxeia</li>
 </ul>
-<p>To <a href="/#/pdf-to-png">ergaleio PDF se PNG</a> metatrepei kathe selida se xexoristi eikona PNG. Mporite proairetika na energopoiisete diafani ypovathi.</p>
+<p>To <a href="#/pdf-to-png">ergaleio PDF se PNG</a> metatrepei kathe selida se xexoristi eikona PNG. Mporite proairetika na energopoiisete diafani ypovathi.</p>
 <h2>Kaliteres Periptoseis Xrisis</h2>
 <ul>
 <li>Enosomatosi grafimaton kai diagrammaton se parousiaseis</li>
 <li>Dimiourgia grafikon diadiktyou apo sxedia PDF</li>
 <li>Eksagogi stigmiotypon selidon ypsilis poiotitas</li>
 </ul>
-<p>An to megethos arxeiou einai pio simantiko apo tin poiotita, skefteite ton metatropea <a href="/#/pdf-to-jpg">PDF se JPG</a>.</p>`,
+<p>An to megethos arxeiou einai pio simantiko apo tin poiotita, skefteite ton metatropea <a href="#/pdf-to-jpg">PDF se JPG</a>.</p>`,
         date: '2024-03-10',
         tool: 'pdf-to-png',
         tags: ['metatropi', 'png', 'diafanes'],
@@ -416,7 +416,7 @@ export const blogPostsEl: BlogPost[] = [
         excerpt: 'Eisagete prosarmosmeno keimeno sto pano kai kato meros kathe selidas PDF. Xrisimopoiiste desmeftikes theseis gia aftomati arithmisi selidon.',
         body: `<p>Oi kefalides kai oi yposelides prostheton plaisio kai epaggelmatismos sta eggrafa. Einai aparaitites gia ektheseis, egxeiridia kai episimaeggrafa.</p>
 <h2>Pos Leitourgei</h2>
-<p>To <a href="/#/header-footer">ergaleio Kefalidos kai Yposelidos</a> sas epitrepei na prosthesete prosarmosmeno keimeno sto pano kai kato meros kathe selidas sto PDF sas.</p>
+<p>To <a href="#/header-footer">ergaleio Kefalidos kai Yposelidos</a> sas epitrepei na prosthesete prosarmosmeno keimeno sto pano kai kato meros kathe selidas sto PDF sas.</p>
 <h2>Diathesimes Desmeftikes Theseis</h2>
 <ul>
 <li><code>{page}</code> -- eisagei ton trexonta arithmo selidas</li>
@@ -425,7 +425,7 @@ export const blogPostsEl: BlogPost[] = [
 <h2>Paradeigmata</h2>
 <p>Kefalida: "Eteisia Ekthesi 2024" -- Yposelis: "Selida {page} apo {total}"</p>
 <p>Epilexte euthygra mmisi (aristera, kentro, dexia) gia na topothetisete to keimeno opos epithymeite.</p>
-<p>Gia tin prosthiki mono arithmon selidon xoris epipleon keimeno, xrisimopoiiste to aploystero ergaleio <a href="/#/page-numbers">Arithmoi Selidon</a>.</p>`,
+<p>Gia tin prosthiki mono arithmon selidon xoris epipleon keimeno, xrisimopoiiste to aploystero ergaleio <a href="#/page-numbers">Arithmoi Selidon</a>.</p>`,
         date: '2020-07-15',
         tool: 'header-footer',
         tags: ['kefalida', 'yposelis', 'prosarmogi'],
@@ -438,11 +438,11 @@ export const blogPostsEl: BlogPost[] = [
         body: `<p>Oi foitites asxolountai me PDF kathimerina -- diafaneies mathimaton, erevnitika arthra, ergasies kai vivlia. Exontas ta sosta ergaleia kanei tin akadi maiki zoi poli pio efkoli.</p>
 <h2>Aparaitita Ergaleia gia Foitites</h2>
 <ul>
-<li><strong><a href="/#/merge-pdf">Synenosi PDF</a></strong> -- syndyaste simioseis mathimaton apo polles synedries se ena eggrafo</li>
-<li><strong><a href="/#/compress-pdf">Sympiesi PDF</a></strong> -- meioste to megethos arxeiou prin tin ypovoli ergasion meso email i LMS</li>
-<li><strong><a href="/#/split-pdf">Diaxorismos PDF</a></strong> -- exagete sygkekrimena kefalaia apo vivlia i anagnosis</li>
-<li><strong><a href="/#/pdf-to-text">PDF se Keimeno</a></strong> -- exagete keimeno gia simioseis, parapompes i odigous melitis</li>
-<li><strong><a href="/#/page-numbers">Arithmoi Selidon</a></strong> -- prostheste arithmisi stin ptyxiaki i tin didaktoriki sas diatri vi</li>
+<li><strong><a href="#/merge-pdf">Synenosi PDF</a></strong> -- syndyaste simioseis mathimaton apo polles synedries se ena eggrafo</li>
+<li><strong><a href="#/compress-pdf">Sympiesi PDF</a></strong> -- meioste to megethos arxeiou prin tin ypovoli ergasion meso email i LMS</li>
+<li><strong><a href="#/split-pdf">Diaxorismos PDF</a></strong> -- exagete sygkekrimena kefalaia apo vivlia i anagnosis</li>
+<li><strong><a href="#/pdf-to-text">PDF se Keimeno</a></strong> -- exagete keimeno gia simioseis, parapompes i odigous melitis</li>
+<li><strong><a href="#/page-numbers">Arithmoi Selidon</a></strong> -- prostheste arithmisi stin ptyxiaki i tin didaktoriki sas diatri vi</li>
 </ul>
 <h2>Pleonektima Aporrytou</h2>
 <p>Ola ta ergaleia epexergazontai arxeia topika ston perigiti sas. Taerevnitika sas arthra kai oi akadimaikes sas ergasies den fevgoun pote apo ti syskevi sas -- simantikoo tan ergazeste me adimosievti erevna.</p>`,
@@ -458,9 +458,9 @@ export const blogPostsEl: BlogPost[] = [
         body: `<p>Eite diachirizeste symvaseis, oikonomikes ektheseis i prosopika arxeia, i asfalisi ton eggrafon PDF sas einai zoikis simasias gia tin apotropi mi exousiodotimenis prosvasis kai diasroron dedomenon.</p>
 <h2>Tria Epipeda Asfaleias PDF</h2>
 <ol>
-<li><strong>Prostasia me Kodiko</strong> -- xrisimopoiiste to ergaleio <a href="/#/protect-pdf">Prostasia PDF</a> gia na prosthesete kodikousk risti kai idioktiti. Elegxte pios mporei na anoi xei, na ektyposei i na tropopoiisei to eggrafo.</li>
-<li><strong>Apokrypsi</strong> -- afairestemonimaevaisthitadedomena me to ergaleio <a href="/#/redact-pdf">Apokrypsi PDF</a>. To apokrymmeno perioxomeno den mporei na anaktithei.</li>
-<li><strong>Isopedosi</strong> -- xrisimopoiiste to ergaleio <a href="/#/flatten-pdf">Isopedosi PDF</a> gia na metatrepsete pedia formon kai sxoliasmouse statiko perioxomeno prin tin koinopoiisi.</li>
+<li><strong>Prostasia me Kodiko</strong> -- xrisimopoiiste to ergaleio <a href="#/protect-pdf">Prostasia PDF</a> gia na prosthesete kodikousk risti kai idioktiti. Elegxte pios mporei na anoi xei, na ektyposei i na tropopoiisei to eggrafo.</li>
+<li><strong>Apokrypsi</strong> -- afairestemonimaevaisthitadedomena me to ergaleio <a href="#/redact-pdf">Apokrypsi PDF</a>. To apokrymmeno perioxomeno den mporei na anaktithei.</li>
+<li><strong>Isopedosi</strong> -- xrisimopoiiste to ergaleio <a href="#/flatten-pdf">Isopedosi PDF</a> gia na metatrepsete pedia formon kai sxoliasmouse statiko perioxomeno prin tin koinopoiisi.</li>
 </ol>
 <h2>Syxna Lathi pou Prepei na Apofevgontai</h2>
 <ul>
@@ -482,11 +482,11 @@ export const blogPostsEl: BlogPost[] = [
 <p>Apla anevastepo lla arxeia PDF se opoiodipote ypostirizomeno ergaleio. Kathe arxeio epexergazetai anexartita kai mporite na katevaste ola ta apotelesmata xexorista i os arxeio ZIP.</p>
 <h2>Ypostirizomena Ergaleia gia Omadiki Epexergasia</h2>
 <ul>
-<li><strong><a href="/#/compress-pdf">Sympiesi PDF</a></strong> -- meioste to megethos pollon eggrafon taftoxrona</li>
-<li><strong><a href="/#/rotate-pdf">Peristrof PDF</a></strong> -- diorthosteton prosanatolismo se mia paritia skanarismenon arxeion</li>
-<li><strong><a href="/#/grayscale-pdf">PDF se Klimaka tou Gkri</a></strong> -- metatrepste polla egxroma eggrafa se aspromauro</li>
-<li><strong><a href="/#/pdf-to-jpg">PDF se JPG</a></strong> / <strong><a href="/#/pdf-to-png">PDF se PNG</a></strong> -- metatrepste polla PDF se eikones</li>
-<li><strong><a href="/#/flatten-pdf">Isopedosi PDF</a></strong>, <strong><a href="/#/resize-pdf">Allagi Megethous</a></strong>, <strong><a href="/#/page-numbers">Arithmoi Selidon</a></strong> kai alla</li>
+<li><strong><a href="#/compress-pdf">Sympiesi PDF</a></strong> -- meioste to megethos pollon eggrafon taftoxrona</li>
+<li><strong><a href="#/rotate-pdf">Peristrof PDF</a></strong> -- diorthosteton prosanatolismo se mia paritia skanarismenon arxeion</li>
+<li><strong><a href="#/grayscale-pdf">PDF se Klimaka tou Gkri</a></strong> -- metatrepste polla egxroma eggrafa se aspromauro</li>
+<li><strong><a href="#/pdf-to-jpg">PDF se JPG</a></strong> / <strong><a href="#/pdf-to-png">PDF se PNG</a></strong> -- metatrepste polla PDF se eikones</li>
+<li><strong><a href="#/flatten-pdf">Isopedosi PDF</a></strong>, <strong><a href="#/resize-pdf">Allagi Megethous</a></strong>, <strong><a href="#/page-numbers">Arithmoi Selidon</a></strong> kai alla</li>
 </ul>
 <h2>Apodosi</h2>
 <p>Oli i epexergasia ginetai topika sti syskevi sas, opote i taxytita exartatai apo ton ypologisti sas. Oi perisso teres leitourgies oloklironontai se defterolepta akoma kai gia megales partes.</p>`,
@@ -502,10 +502,10 @@ export const blogPostsEl: BlogPost[] = [
         body: `<p>Ta PDF pou prorizontai gia provoli sto diadiktyo i litipsia xreiazontai aristopoiisi gia grigori fortosi kai anagnosi mosimotita se othoni.</p>
 <h2>Stratigikes Aristopoiisis</h2>
 <ol>
-<li><strong>Sympiesi</strong> -- xrisimopoiiste to ergaleio <a href="/#/compress-pdf">Sympiesi PDF</a> me mesaia i ypsili sympiesi gia simantiki meiosi tou megethous arxeiou</li>
-<li><strong>Allagi megethous</strong> -- prosarmoste tis diastaseis selidas me to ergaleio <a href="/#/resize-pdf">Allagi Megethous PDF</a> gia na teriaxoun me syxna megethi othonis</li>
-<li><strong>Metatropi se eikones</strong> -- gia apli provoli, metatrepste selides se JPG xrisimopoiontas to <a href="/#/pdf-to-jpg">PDF se JPG</a> gia grigoroterilipsi tosi sto diadiktyo</li>
-<li><strong>Klimaka tou gkri</strong> -- an to xroma den einai aparaitito, to <a href="/#/grayscale-pdf">PDF se Klimaka tou Gkri</a> mionei peretero to megethos arxeiou</li>
+<li><strong>Sympiesi</strong> -- xrisimopoiiste to ergaleio <a href="#/compress-pdf">Sympiesi PDF</a> me mesaia i ypsili sympiesi gia simantiki meiosi tou megethous arxeiou</li>
+<li><strong>Allagi megethous</strong> -- prosarmoste tis diastaseis selidas me to ergaleio <a href="#/resize-pdf">Allagi Megethous PDF</a> gia na teriaxoun me syxna megethi othonis</li>
+<li><strong>Metatropi se eikones</strong> -- gia apli provoli, metatrepste selides se JPG xrisimopoiontas to <a href="#/pdf-to-jpg">PDF se JPG</a> gia grigoroterilipsi tosi sto diadiktyo</li>
+<li><strong>Klimaka tou gkri</strong> -- an to xroma den einai aparaitito, to <a href="#/grayscale-pdf">PDF se Klimaka tou Gkri</a> mionei peretero to megethos arxeiou</li>
 </ol>
 <h2>Odigies Megethous Arxeiou</h2>
 <ul>
@@ -533,7 +533,7 @@ export const blogPostsEl: BlogPost[] = [
 <li><strong>Xoris oria megethous arxeiou</strong> -- i mnimi tou ypologisti sas einai o monos periorismo</li>
 </ul>
 <h2>Diathesima Ergaleia</h2>
-<p>Ola ta 22 ergaleia leitourgoun xoris syndesi: apo <a href="/#/merge-pdf">synenosi</a> kai <a href="/#/compress-pdf">sympiesi</a> eos <a href="/#/sign-pdf">ypograf</a> kai <a href="/#/redact-pdf">apokrypsi</a>. Kathe leitourgia trexei topika, dinontassas pliri elenxo ton dedomenon sas.</p>`,
+<p>Ola ta 22 ergaleia leitourgoun xoris syndesi: apo <a href="#/merge-pdf">synenosi</a> kai <a href="#/compress-pdf">sympiesi</a> eos <a href="#/sign-pdf">ypograf</a> kai <a href="#/redact-pdf">apokrypsi</a>. Kathe leitourgia trexei topika, dinontassas pliri elenxo ton dedomenon sas.</p>`,
         date: '2025-08-12',
         tool: 'compress-pdf',
         tags: ['aporritos', 'dorean', 'xoris-syndesi'],
@@ -546,11 +546,11 @@ export const blogPostsEl: BlogPost[] = [
         body: `<p>Prin steilete ena PDF gia ektyposi, merikes prosarmoges mporoun na diinsfaliso un ta kalytera apotelesmata kai na apofy goun syxna provlimata ektyposis.</p>
 <h2>Lista Elegxou Proetoimasias Ektyposis</h2>
 <ol>
-<li><strong>Allagi megethous selidon</strong> -- xrisimopoiiste to ergaleio <a href="/#/resize-pdf">Allagi Megethous PDF</a> gia na teriaxete me to stoxevomeno megethos xartiou (A4, Letter, A3)</li>
-<li><strong>Perikopi perithori on</strong> -- afaireseto perisseylefko xoro me to ergaleio <a href="/#/crop-pdf">Perikopi PDF</a></li>
-<li><strong>Metatropi se klimaka tou gkri</strong> -- an ektyponate se asprmauro, xrisimopoiiste to <a href="/#/grayscale-pdf">PDF se Klimaka tou Gkri</a> gia na deite to apotelesma kai na exoikonomisete melani</li>
-<li><strong>Isopedosi formon</strong> -- diins faliste oti ta dedomena formon ektypono tai sosta me <a href="/#/flatten-pdf">isopedosi tou PDF</a></li>
-<li><strong>Sympiesi</strong> -- an stelnetese ypiresiaektyposis, <a href="/#/compress-pdf">sympiesete</a> me xamiles rythmiseis gia na meiosete to xrono metaforas</li>
+<li><strong>Allagi megethous selidon</strong> -- xrisimopoiiste to ergaleio <a href="#/resize-pdf">Allagi Megethous PDF</a> gia na teriaxete me to stoxevomeno megethos xartiou (A4, Letter, A3)</li>
+<li><strong>Perikopi perithori on</strong> -- afaireseto perisseylefko xoro me to ergaleio <a href="#/crop-pdf">Perikopi PDF</a></li>
+<li><strong>Metatropi se klimaka tou gkri</strong> -- an ektyponate se asprmauro, xrisimopoiiste to <a href="#/grayscale-pdf">PDF se Klimaka tou Gkri</a> gia na deite to apotelesma kai na exoikonomisete melani</li>
+<li><strong>Isopedosi formon</strong> -- diins faliste oti ta dedomena formon ektypono tai sosta me <a href="#/flatten-pdf">isopedosi tou PDF</a></li>
+<li><strong>Sympiesi</strong> -- an stelnetese ypiresiaektyposis, <a href="#/compress-pdf">sympiesete</a> me xamiles rythmiseis gia na meiosete to xrono metaforas</li>
 </ol>
 <h2>Syxna Provlimata Ektyposis</h2>
 <ul>
@@ -570,8 +570,8 @@ export const blogPostsEl: BlogPost[] = [
         body: `<p>Oi allo epodrastikes formes PDF me sinplirosima pedia xrisimopoiountai syxna gia aitiseis, erevnes kai episima eggrafa. I katanoisi tou pos na tis diachiristite sosta exoikonomei xrono kai apotrep eiprovlimata.</p>
 <h2>I Roi Ergasias Formon</h2>
 <ol>
-<li><strong>Sinplirosi</strong> -- sinpliroste ta pedia formon sto progra mma provolis PDF sas i xrisimopoiiste to ergaleio <a href="/#/edit-pdf">Epexergasia PDF</a> gia na prosthesete keimeno apeftheias sti selida</li>
-<li><strong>Isopedosi</strong> -- xrisimopoiiste to ergaleio <a href="/#/flatten-pdf">Isopedosi PDF</a> gia na metatrepsete ta allo epodrastika pedia se statiko perioxomeno, kleido nontas tis kataxoriseis sas</li>
+<li><strong>Sinplirosi</strong> -- sinpliroste ta pedia formon sto progra mma provolis PDF sas i xrisimopoiiste to ergaleio <a href="#/edit-pdf">Epexergasia PDF</a> gia na prosthesete keimeno apeftheias sti selida</li>
+<li><strong>Isopedosi</strong> -- xrisimopoiiste to ergaleio <a href="#/flatten-pdf">Isopedosi PDF</a> gia na metatrepsete ta allo epodrastika pedia se statiko perioxomeno, kleido nontas tis kataxoriseis sas</li>
 <li><strong>Koinopoiisi</strong> -- moirasteto isopedomeno PDF gnorizontas oti oi paraliptes den mporoun na tropopoiisoun ta dedomena sas</li>
 </ol>
 <h2>Giati na Isopedo sete Prin tin Koinopoiisi;</h2>
@@ -580,7 +580,7 @@ export const blogPostsEl: BlogPost[] = [
 <li>Diins falisei oti to eggrafo fenetai taftosimo se kathe progra mma provolis PDF</li>
 <li>Diatirei ti sinpliro meni forma gia makroxroni arxeiothetisi</li>
 </ul>
-<p>Gia epipleon asfaleia, <a href="/#/protect-pdf">prostatepste me kodiko</a> to isopedomeno PDF prin tin koinopoiisi.</p>`,
+<p>Gia epipleon asfaleia, <a href="#/protect-pdf">prostatepste me kodiko</a> to isopedomeno PDF prin tin koinopoiisi.</p>`,
         date: '2026-02-05',
         tool: 'flatten-pdf',
         tags: ['formes', 'isopedosi', 'sinplirosi'],
@@ -598,7 +598,7 @@ export const blogPostsEl: BlogPost[] = [
 <li>Xoris ypostirixi diafaneias</li>
 <li>Kaliteri gia: koinopoiisi, email, koinonika diktya, PDF me polles fotografies</li>
 </ul>
-<p>Xrisimopoiiste to ergaleio <a href="/#/pdf-to-jpg">PDF se JPG</a> gia tis perisso teres genikes metatropes.</p>
+<p>Xrisimopoiiste to ergaleio <a href="#/pdf-to-jpg">PDF se JPG</a> gia tis perisso teres genikes metatropes.</p>
 <h2>PNG -- Kaliteri gia Grafika kai Diafaneia</h2>
 <ul>
 <li>Megalytera arxeia logo sympiesis xoris apolies</li>
@@ -606,7 +606,7 @@ export const blogPostsEl: BlogPost[] = [
 <li>Ypostirixi diafanon ypo vathron</li>
 <li>Kaliteri gia: diagrammata, stigmiotypa, grafika diadiktyou, parousiaseis</li>
 </ul>
-<p>Xrisimopoiiste to ergaleio <a href="/#/pdf-to-png">PDF se PNG</a> otan i poiotita kai i diafaneia einai simantikes.</p>
+<p>Xrisimopoiiste to ergaleio <a href="#/pdf-to-png">PDF se PNG</a> otan i poiotita kai i diafaneia einai simantikes.</p>
 <h2>Grigoros Odigos Apofasis</h2>
 <p>Xreiazeste mikra arxeia gia to diadiktyo i email; Epilexte JPG. Xreiazeste teleia poiotita i diafan ypovathro; Epilexte PNG.</p>`,
         date: '2025-07-25',
@@ -621,11 +621,11 @@ export const blogPostsEl: BlogPost[] = [
         body: `<p>Ta grafeia asxolountai me ekatontades eggrafa PDF kathimerina -- timologia, symvaseis, ektheseis kai alilografia. I apotelesmatiki diachirisi PDF exoikonomei ores douleias.</p>
 <h2>Syxnes Ergasies Grafeiou</h2>
 <ul>
-<li><strong>Syndyasmos ektheseon</strong> -- xrisimopoiiste ti <a href="/#/merge-pdf">Synenosi PDF</a> gia na sylexete miniaies ektheseis se triminiaiies perilipseis</li>
-<li><strong>Organosi eggrafon</strong> -- <a href="/#/organize-pdf">anadekataxte, diagrapste i antigrafoste selides</a> gia na anadiarthrosete megala eggrafa</li>
-<li><strong>Prosthiki arithmisis</strong> -- eisagete <a href="/#/page-numbers">arithmous selidon</a> i <a href="/#/header-footer">kefalides kai yposelides</a> gia epaggelmatiki parousiasi</li>
-<li><strong>Prostasia arxeion</strong> -- <a href="/#/protect-pdf">prostatepste me kodiko</a> empisteytika eggrafa prin ti dianomi</li>
-<li><strong>Sympiesi gia email</strong> -- <a href="/#/compress-pdf">meioste to megethos arxeiou</a> gia na pliroite ta oria synimmenon email</li>
+<li><strong>Syndyasmos ektheseon</strong> -- xrisimopoiiste ti <a href="#/merge-pdf">Synenosi PDF</a> gia na sylexete miniaies ektheseis se triminiaiies perilipseis</li>
+<li><strong>Organosi eggrafon</strong> -- <a href="#/organize-pdf">anadekataxte, diagrapste i antigrafoste selides</a> gia na anadiarthrosete megala eggrafa</li>
+<li><strong>Prosthiki arithmisis</strong> -- eisagete <a href="#/page-numbers">arithmous selidon</a> i <a href="#/header-footer">kefalides kai yposelides</a> gia epaggelmatiki parousiasi</li>
+<li><strong>Prostasia arxeion</strong> -- <a href="#/protect-pdf">prostatepste me kodiko</a> empisteytika eggrafa prin ti dianomi</li>
+<li><strong>Sympiesi gia email</strong> -- <a href="#/compress-pdf">meioste to megethos arxeiou</a> gia na pliroite ta oria synimmenon email</li>
 </ul>
 <h2>Symvouli Rois Ergasias</h2>
 <p>Xekiniste synenonontas sxetika arxeia, meta organosteis selides, prostheste arithmous selidon kai telos sympiesetoapotelesma gia dianomi.</p>`,
@@ -645,14 +645,14 @@ export const blogPostsEl: BlogPost[] = [
 <li>Dimiourgia xartofylakiou i fakelou apo atomi ka arxeia</li>
 <li>Sylogi skanarisme non selidon apo diaforetikes synedries</li>
 </ul>
-<p>Xrisimopoiiste to ergaleio <a href="/#/merge-pdf">Synenosi PDF</a> gia na syrete, afinete kai anadekataxete ta arxeia sas prin ton syndyasmo.</p>
+<p>Xrisimopoiiste to ergaleio <a href="#/merge-pdf">Synenosi PDF</a> gia na syrete, afinete kai anadekataxete ta arxeia sas prin ton syndyasmo.</p>
 <h2>Pote na Diaxorisete</h2>
 <ul>
 <li>Eksagogi sygkekrimenon selidon apo ena megalo eggrafo</li>
 <li>Diaxorismos enos vivliou se atomika kefalaia</li>
 <li>Diaxorismos enos PDF me polla timologia se atomika timologia</li>
 </ul>
-<p>To ergaleio <a href="/#/split-pdf">Diaxorismos PDF</a> ypostirizei toso ton diaxorismo olon ton selidon oso kai tin eksagogi sygke krimenon evron selidon.</p>
+<p>To ergaleio <a href="#/split-pdf">Diaxorismos PDF</a> ypostirizei toso ton diaxorismo olon ton selidon oso kai tin eksagogi sygke krimenon evron selidon.</p>
 <h2>Syndyasmos kai ton Dyo Leitourgion</h2>
 <p>Xreiazeste selides apo polla eggrafa; Protadiaxoristeka the arxeio proeleysis gia na exagete tis selides pou xreiazeste kai meta synenoste tis exagmenes selides sto teliko sas eggrafo.</p>`,
         date: '2026-03-01',
@@ -672,7 +672,7 @@ export const blogPostsEl: BlogPost[] = [
 <li><strong>Etoimo gia ektyposi</strong> — ta PDF einai sxediasmena gia provolistn othoni kai ektyposi</li>
 </ul>
 <h2>Pos Leitourgei</h2>
-<p>To ergaleio <a href="/#/markdown-to-pdf">Metatropi Markdown se PDF</a> apodidei to periexomeno Markdown sas me pliri ypostirixi gia epikefali des, listes, blocks kodikou, pinakes kai polla alla. Apla epikolliste i pliktrologiiste to Markdown sas, kanete proepiskopisi to apotelesma kai katevaste to PDF.</p>
+<p>To ergaleio <a href="#/markdown-to-pdf">Metatropi Markdown se PDF</a> apodidei to periexomeno Markdown sas me pliri ypostirixi gia epikefali des, listes, blocks kodikou, pinakes kai polla alla. Apla epikolliste i pliktrologiiste to Markdown sas, kanete proepiskopisi to apotelesma kai katevaste to PDF.</p>
 <h2>Ypostirizomena Xaraktiristika Markdown</h2>
 <p>O metatropeas xeirizetai oli tin protypi syntaxi Markdown, synbperilamvanonentos entonou, plagiou, syndesmon, eikonon, parattheseon, arithmimenon kai mi arithmimenon listen, perifyxeon kodikou me syntaktiki episimansi kai pinakes. To periexomeno sas epexergazetai olokliro ston perigiti gia pliri aporreto.</p>`,
         date: '2026-03-05',
@@ -687,7 +687,7 @@ export const blogPostsEl: BlogPost[] = [
         body: `<p>I psifiaki ypografi eggrafon exei ginei aparaititi sto simerino perivallonergasias apo apostasi. Yparxei omos mia simantiki diakri si metaxy ilektronikon ypografon kai psifiakon ypografon.</p>
 <h2>Ilektronikes Ypografes</h2>
 <p>Mia ilektroniki ypografi einai opoiodipote sima, symvolo i diadikasia pou synaptetai se ena eggrafo gia na dilosi synainesi. Afto perilamvanei pliktrologimena onomata, skanarismenes xeirografoiypografes i sxediasmenes ypografes.</p>
-<p>To ergaleio <a href="/#/sign-pdf">Ypografi PDF</a> sas epitrepei na dimiourgisete ilektronikes ypografes sxediazontas, pliktrologontas i anevazontas mia eikona tis ypografis sas — ola epexergazontai topika ston perigiti sas.</p>
+<p>To ergaleio <a href="#/sign-pdf">Ypografi PDF</a> sas epitrepei na dimiourgisete ilektronikes ypografes sxediazontas, pliktrologontas i anevazontas mia eikona tis ypografis sas — ola epexergazontai topika ston perigiti sas.</p>
 <h2>Psifiakes Ypografes</h2>
 <p>Oi psifiakes ypografes xrisimopoioun kryptografiki texnologia gia na epivevaiosoun tin taftotita tou ypografonta kai na diasfalisoun oti to eggrafo den exei paraviastei. Apaitoun psifiako pistopoiitiko apo mia emisti arxi.</p>
 <h2>Poia Prepei na Xrisimopoiisete;</h2>
@@ -710,8 +710,8 @@ export const blogPostsEl: BlogPost[] = [
 <li><strong>Eparkis antithe si</strong> — vevaiothiite oti to keimeno exei eparkiantithe si me to fonto</li>
 </ul>
 <h2>Ergaleia pou Voithoun</h2>
-<p>To ergaleio <a href="/#/edit-pdf">Epexergasia PDF</a> sas epitrepei na prosthesete simioseis keimenoukai etiketes sta eggrafa sas. Xrisimopoiiste to gia na prosthesete perigrafiko keimeno konta se eikones i na diefkrinisete poly ploka diagrammata.</p>
-<p>Gia skanarismena eggrafa, xrisimopoiiste to ergaleio <a href="/#/pdf-to-text">PDF se Keimeno</a> gia na epivevaiosete oti to periexomeno keimenoueinai sosta exagoximo, pragma aparaitito gia anagnostes othonis.</p>
+<p>To ergaleio <a href="#/edit-pdf">Epexergasia PDF</a> sas epitrepei na prosthesete simioseis keimenoukai etiketes sta eggrafa sas. Xrisimopoiiste to gia na prosthesete perigrafiko keimeno konta se eikones i na diefkrinisete poly ploka diagrammata.</p>
+<p>Gia skanarismena eggrafa, xrisimopoiiste to ergaleio <a href="#/pdf-to-text">PDF se Keimeno</a> gia na epivevaiosete oti to periexomeno keimenoueinai sosta exagoximo, pragma aparaitito gia anagnostes othonis.</p>
 <h2>Elegxos Prosvasimotitas</h2>
 <p>Panta elegxte ta PDF sas me enan anagnosti othonis prin ta dianei mete. Aploi elegxoi perilamvanoun tin epivevaios ioti to keimeno mporei na epilexthi kai na antigrafei kai oti i seira anagnosis exei noima.</p>`,
         date: '2026-01-22',
@@ -734,9 +734,9 @@ export const blogPostsEl: BlogPost[] = [
 <h2>Pleonektimata Ergaleion Perigiti</h2>
 <p>Se antithe si me to enkatesteimeno logismiko, ta ergaleia PDF perigiti opos to <a href="/">PDF Worker</a> den apaitoun rythmi si i enimerosis. Anoixte mia kartela, epexergasteite to arxeio sas kai proxorisete. Xoris teli adeias, xoris provlimata symvatotitas.</p>
 <h2>Omadiki Epexergasia</h2>
-<p>Polla ergaleia ypostirizoun tin epexergasia pollon arxeion taftoxrona. Anevaste arketa PDF sto ergaleio <a href="/#/compress-pdf">Sympiesi PDF</a> kai katevaste ola ta apotelesmata mazi os arxeio ZIP. To idio isxyei gia tin <a href="/#/rotate-pdf">peristrof i</a>, ti <a href="/#/grayscale-pdf">metatropi se klimaka tou gkri</a> kai alles leitourgies.</p>
+<p>Polla ergaleia ypostirizoun tin epexergasia pollon arxeion taftoxrona. Anevaste arketa PDF sto ergaleio <a href="#/compress-pdf">Sympiesi PDF</a> kai katevaste ola ta apotelesmata mazi os arxeio ZIP. To idio isxyei gia tin <a href="#/rotate-pdf">peristrof i</a>, ti <a href="#/grayscale-pdf">metatropi se klimaka tou gkri</a> kai alles leitourgies.</p>
 <h2>Alysidosi Leitourgion</h2>
-<p>Gia polymplokes roes ergasias, alysidoste leitourgies: prota <a href="/#/unlock-pdf">xekleidoste</a> ena prostatevmeno PDF, meta <a href="/#/split-pdf">diaxoriste</a> to se tmimata, <a href="/#/compress-pdf">sympieste</a> kathe tmima kai telos <a href="/#/merge-pdf">synenoste</a> ta kommati apou xreiazeste.</p>`,
+<p>Gia polymplokes roes ergasias, alysidoste leitourgies: prota <a href="#/unlock-pdf">xekleidoste</a> ena prostatevmeno PDF, meta <a href="#/split-pdf">diaxoriste</a> to se tmimata, <a href="#/compress-pdf">sympieste</a> kathe tmima kai telos <a href="#/merge-pdf">synenoste</a> ta kommati apou xreiazeste.</p>`,
         date: '2026-02-05',
         tool: 'compress-pdf',
         tags: ['roi-ergasias', 'aftomat opoiisi', 'paragogikotita'],
