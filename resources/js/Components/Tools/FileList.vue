@@ -1,21 +1,54 @@
 <script setup lang="ts">
+import { ref } from 'vue';
 import { trans } from '@/i18n';
 import type { UploadedFile } from '@/types';
 
 interface Props {
     files: UploadedFile[];
     showAddMore?: boolean;
+    reorderable?: boolean;
 }
 
 withDefaults(defineProps<Props>(), {
     showAddMore: true,
+    reorderable: false,
 });
 
 const emit = defineEmits<{
     remove: [id: string];
     'remove-all': [];
     'add-more': [];
+    reorder: [fromIndex: number, toIndex: number];
 }>();
+
+const dragIndex = ref<number | null>(null);
+const dragOverIndex = ref<number | null>(null);
+
+function onDragStart(index: number) {
+    dragIndex.value = index;
+}
+
+function onDragOver(event: DragEvent, index: number) {
+    event.preventDefault();
+    dragOverIndex.value = index;
+}
+
+function onDragLeave() {
+    dragOverIndex.value = null;
+}
+
+function onDrop(index: number) {
+    if (dragIndex.value !== null && dragIndex.value !== index) {
+        emit('reorder', dragIndex.value, index);
+    }
+    dragIndex.value = null;
+    dragOverIndex.value = null;
+}
+
+function onDragEnd() {
+    dragIndex.value = null;
+    dragOverIndex.value = null;
+}
 
 function formatFileSize(bytes: number): string {
     if (bytes === 0) return '0 B';
@@ -33,10 +66,27 @@ function formatFileSize(bytes: number): string {
     <div class="space-y-3">
         <!-- File cards -->
         <div
-            v-for="file in files"
+            v-for="(file, index) in files"
             :key="file.id"
-            class="flex items-center gap-4 rounded-xl bg-white p-4 shadow-sm ring-1 ring-gray-200 dark:bg-gray-800 dark:ring-gray-700"
+            class="flex items-center gap-4 rounded-xl bg-white p-4 shadow-sm ring-1 ring-gray-200 transition-all duration-200 dark:bg-gray-800 dark:ring-gray-700"
+            :class="{
+                'opacity-50': dragIndex === index,
+                'ring-2 ring-blue-400 dark:ring-blue-500': dragOverIndex === index && dragIndex !== index,
+            }"
+            :draggable="reorderable"
+            @dragstart="reorderable && onDragStart(index)"
+            @dragover="reorderable && onDragOver($event, index)"
+            @dragleave="reorderable && onDragLeave()"
+            @drop="reorderable && onDrop(index)"
+            @dragend="reorderable && onDragEnd()"
         >
+            <!-- Drag handle -->
+            <div v-if="reorderable" class="shrink-0 cursor-grab text-gray-400 active:cursor-grabbing dark:text-gray-500">
+                <svg aria-hidden="true" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                </svg>
+            </div>
+
             <!-- Thumbnail / preview -->
             <div
                 class="flex h-12 w-12 shrink-0 items-center justify-center overflow-hidden rounded-lg bg-gray-100 dark:bg-gray-700"

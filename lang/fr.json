@@ -402,5 +402,11 @@
     "tools.pdf-to-text.faq_1_q": "L'outil fonctionne-t-il avec les PDF scannés ?",
     "tools.pdf-to-text.faq_1_a": "Cet outil extrait le texte intégré dans le PDF. Les PDF scannés contenant uniquement des images nécessitent un outil OCR (reconnaissance optique de caractères) pour extraire le texte.",
     "error.title": "Une erreur s'est produite",
-    "error.retry": "Recharger la page"
+    "error.retry": "Recharger la page",
+
+    "toast.processing_complete": "Traitement terminé !",
+    "toast.invalid_file": "Format de fichier non pris en charge",
+
+    "home.search_placeholder": "Rechercher des outils...",
+    "home.no_results": "Aucun outil trouvé. Essayez une autre recherche."
 }

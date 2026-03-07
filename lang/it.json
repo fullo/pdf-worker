@@ -410,5 +410,11 @@
     "tools.pdf-to-text.faq_1_q": "Funziona con PDF scansionati?",
     "tools.pdf-to-text.faq_1_a": "No. Questo strumento estrae solo il testo incorporato. I documenti scansionati contengono immagini e richiederebbero OCR.",
     "error.title": "Si è verificato un errore",
-    "error.retry": "Ricarica pagina"
+    "error.retry": "Ricarica pagina",
+
+    "toast.processing_complete": "Elaborazione completata!",
+    "toast.invalid_file": "Formato file non supportato",
+
+    "home.search_placeholder": "Cerca strumenti...",
+    "home.no_results": "Nessuno strumento trovato. Prova una ricerca diversa."
 }

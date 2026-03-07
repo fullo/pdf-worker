@@ -410,5 +410,11 @@
     "tools.pdf-to-text.faq_1_q": "Does this work with scanned PDFs?",
     "tools.pdf-to-text.faq_1_a": "No. This extracts embedded text only. Scanned documents contain images and would require OCR.",
     "error.title": "Something went wrong",
-    "error.retry": "Reload page"
+    "error.retry": "Reload page",
+
+    "toast.processing_complete": "Processing complete!",
+    "toast.invalid_file": "Unsupported file format",
+
+    "home.search_placeholder": "Search tools...",
+    "home.no_results": "No tools found. Try a different search."
 }

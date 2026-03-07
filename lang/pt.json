@@ -400,5 +400,11 @@
     "tools.pdf-to-text.faq_1_q": "Funciona com PDFs escaneados?",
     "tools.pdf-to-text.faq_1_a": "Esta ferramenta extrai texto de PDFs que contêm texto selecionável. Para PDFs escaneados (imagens), o reconhecimento de texto (OCR) não é suportado no momento.",
     "error.title": "Algo deu errado",
-    "error.retry": "Recarregar página"
+    "error.retry": "Recarregar página",
+
+    "toast.processing_complete": "Processamento concluído!",
+    "toast.invalid_file": "Formato de arquivo não suportado",
+
+    "home.search_placeholder": "Pesquisar ferramentas...",
+    "home.no_results": "Nenhuma ferramenta encontrada. Tente outra pesquisa."
 }

@@ -402,5 +402,11 @@
     "tools.pdf-to-text.faq_1_q": "Funktioniert die Textextraktion bei gescannten PDFs?",
     "tools.pdf-to-text.faq_1_a": "Dieses Tool extrahiert eingebetteten Text aus dem PDF. Bei gescannten Dokumenten, die nur als Bild vorliegen, kann kein Text erkannt werden, da keine OCR-Funktion enthalten ist.",
     "error.title": "Etwas ist schiefgelaufen",
-    "error.retry": "Seite neu laden"
+    "error.retry": "Seite neu laden",
+
+    "toast.processing_complete": "Verarbeitung abgeschlossen!",
+    "toast.invalid_file": "Nicht unterstütztes Dateiformat",
+
+    "home.search_placeholder": "Werkzeuge suchen...",
+    "home.no_results": "Keine Werkzeuge gefunden. Versuchen Sie eine andere Suche."
 }

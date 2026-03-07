@@ -30,6 +30,13 @@ export function useFileHandler(accept: string, multiple: boolean) {
         files.value = files.value.filter((f) => f.id !== id);
     }
 
+    function moveFile(fromIndex: number, toIndex: number): void {
+        const arr = [...files.value];
+        const [item] = arr.splice(fromIndex, 1);
+        arr.splice(toIndex, 0, item);
+        files.value = arr;
+    }
+
     function removeAll(): void {
         files.value.forEach((file) => {
             if (file.preview) {
@@ -43,6 +50,7 @@ export function useFileHandler(accept: string, multiple: boolean) {
         files,
         addFiles,
         removeFile,
+        moveFile,
         removeAll,
         hasFiles,
     };

@@ -13,6 +13,7 @@ const props = withDefaults(defineProps<Props>(), {
 
 const emit = defineEmits<{
     'files-selected': [files: File[]];
+    'invalid-files': [names: string[]];
 }>();
 
 const isDragging = ref(false);
@@ -65,6 +66,11 @@ function onDrop(event: DragEvent) {
         const fileName = file.name.toLowerCase();
         return acceptedExtensions.some((ext) => fileName.endsWith(ext));
     });
+
+    const invalidFiles = droppedFiles.filter((file) => !validFiles.includes(file));
+    if (invalidFiles.length > 0) {
+        emit('invalid-files', invalidFiles.map((f) => f.name));
+    }
 
     if (validFiles.length > 0) {
         emit('files-selected', props.multiple ? validFiles : [validFiles[0]]);

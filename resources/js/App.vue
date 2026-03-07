@@ -2,6 +2,7 @@
 import AppLayout from '@/Components/Layout/AppLayout.vue';
 import CookieConsent from '@/Components/Layout/CookieConsent.vue';
 import ErrorBoundary from '@/Components/Layout/ErrorBoundary.vue';
+import ToastContainer from '@/Components/UI/ToastContainer.vue';
 </script>
 
 <template>
@@ -11,4 +12,5 @@ import ErrorBoundary from '@/Components/Layout/ErrorBoundary.vue';
         </ErrorBoundary>
     </AppLayout>
     <CookieConsent />
+    <ToastContainer />
 </template>

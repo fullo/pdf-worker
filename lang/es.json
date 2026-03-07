@@ -400,5 +400,11 @@
     "tools.pdf-to-text.faq_1_q": "¿Funciona con PDFs escaneados o que contienen solo imágenes?",
     "tools.pdf-to-text.faq_1_a": "Esta herramienta extrae texto de PDFs que contienen texto digital. Los PDFs escaneados que solo contienen imágenes requieren tecnología OCR, que no está incluida en esta herramienta.",
     "error.title": "Algo salió mal",
-    "error.retry": "Recargar página"
+    "error.retry": "Recargar página",
+
+    "toast.processing_complete": "Procesamiento completado!",
+    "toast.invalid_file": "Formato de archivo no soportado",
+
+    "home.search_placeholder": "Buscar herramientas...",
+    "home.no_results": "No se encontraron herramientas. Intenta otra búsqueda."
 }

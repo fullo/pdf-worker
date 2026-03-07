@@ -8,6 +8,7 @@ import ProcessButton from '@/Components/Tools/ProcessButton.vue';
 import DownloadResult from '@/Components/Tools/DownloadResult.vue';
 import { useFileHandler } from '@/Composables/useFileHandler';
 import { usePdfTool } from '@/Composables/usePdfTool';
+import { useToast } from '@/Composables/useToast';
 
 import { runInWorker } from '@/Services/runInWorker';
 import type { WatermarkOptions } from '@/Services/pdf/watermark';
@@ -122,7 +123,9 @@ const toolConfig = computed(() => {
     return configs[props.tool] ?? configs['merge-pdf'];
 });
 
-const { files, addFiles, removeFile, removeAll, hasFiles } = useFileHandler(
+const toast = useToast();
+
+const { files, addFiles, removeFile, moveFile, removeAll, hasFiles } = useFileHandler(
     toolConfig.value.accept,
     toolConfig.value.multiple,
 );
@@ -367,9 +370,12 @@ async function process() {
             }
         }
         finishProcessing();
+        toast.success(trans('toast.processing_complete'));
     } catch (err) {
         console.error(err);
-        setError(err instanceof Error ? err.message : 'Unknown error');
+        const msg = err instanceof Error ? err.message : 'Unknown error';
+        setError(msg);
+        toast.error(msg);
     }
 }
 
@@ -431,20 +437,44 @@ const noOptionsTools = ['merge-pdf', 'extract-images', 'grayscale-pdf', 'flatten
             <input ref="addMoreInput" type="file" class="hidden" aria-label="Add more files" :accept="toolConfig.accept" :multiple="toolConfig.multiple" @change="onAddMoreFiles" />
 
             <!-- Upload Area -->
+            <Transition
+                enter-active-class="transition ease-out duration-300"
+                enter-from-class="opacity-0 scale-95"
+                enter-to-class="opacity-100 scale-100"
+                leave-active-class="transition ease-in duration-200"
+                leave-from-class="opacity-100"
+                leave-to-class="opacity-0"
+            >
             <div v-if="!hasFiles && state.status === 'idle'">
-                <FileUploader :accept="toolConfig.accept" :multiple="toolConfig.multiple" @files-selected="addFiles" />
+                <FileUploader
+                    :accept="toolConfig.accept"
+                    :multiple="toolConfig.multiple"
+                    @files-selected="addFiles"
+                    @invalid-files="(names: string[]) => toast.warning(trans('toast.invalid_file') + ': ' + names.join(', '))"
+                />
             </div>
+            </Transition>
 
             <!-- Files + Options -->
+            <Transition
+                enter-active-class="transition ease-out duration-300"
+                enter-from-class="opacity-0 translate-y-4"
+                enter-to-class="opacity-100 translate-y-0"
+                leave-active-class="transition ease-in duration-200"
+                leave-from-class="opacity-100"
+                leave-to-class="opacity-0"
+            >
             <div v-if="hasFiles && state.status !== 'done'" class="space-y-6">
                 <!-- File list (hide for watermark since WatermarkTool shows its own preview) -->
                 <FileList
                     v-if="tool !== 'watermark-pdf'"
                     :files="files"
                     :show-add-more="toolConfig.multiple"
+                    :reorderable="tool === 'merge-pdf' || tool === 'jpg-to-pdf'"
                     @remove="removeFile"
                     @remove-all="removeAll"
                     @add-more="triggerAddMore"
+                    @reorder="moveFile"
                 />
 
                 <!-- ==================== TOOL OPTIONS ==================== -->
@@ -652,13 +682,25 @@ const noOptionsTools = ['merge-pdf', 'extract-images', 'grayscale-pdf', 'flatten
                 <!-- Process Button -->
                 <ProcessButton :status="state.status" :progress="state.progress" :label="actionLabel" :color="toolConfig.color" :error-message="state.message" @process="process" />
             </div>
+            </Transition>
 
             <!-- Single Result Download -->
+            <Transition
+                enter-active-class="transition ease-out duration-300"
+                enter-from-class="opacity-0 scale-95"
+                enter-to-class="opacity-100 scale-100"
+            >
             <div v-if="state.status === 'done' && resultBlob && !showMultiDownload">
                 <DownloadResult :file-name="resultFileName" :file-size="resultBlob.size" :download-url="resultUrl" @download="downloadResult" @reset="resetTool" />
             </div>
+            </Transition>
 
             <!-- Multi Result Download -->
+            <Transition
+                enter-active-class="transition ease-out duration-300"
+                enter-from-class="opacity-0 scale-95"
+                enter-to-class="opacity-100 scale-100"
+            >
             <div v-if="state.status === 'done' && showMultiDownload" class="space-y-4">
                 <div class="rounded-xl border border-green-200 bg-green-50 p-6 text-center">
                     <div class="mx-auto mb-3 flex h-12 w-12 items-center justify-center rounded-full bg-green-100">
@@ -680,6 +722,7 @@ const noOptionsTools = ['merge-pdf', 'extract-images', 'grayscale-pdf', 'flatten
                     <button type="button" class="text-sm text-gray-500 hover:text-gray-700 underline" @click="resetTool">{{ trans('tool.process') }}</button>
                 </div>
             </div>
+            </Transition>
         </div>
 
         <!-- SEO Landing Section -->
