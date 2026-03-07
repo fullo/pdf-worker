@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref, computed, watchEffect, defineAsyncComponent } from 'vue';
+import { ref, computed, watchEffect, defineAsyncComponent, onBeforeUnmount } from 'vue';
 import { trans } from '@/i18n';
 import { useSeoMeta } from '@/Composables/useSeoMeta';
 import FileUploader from '@/Components/Tools/FileUploader.vue';
@@ -179,6 +179,12 @@ const organizeToolRef = ref<InstanceType<typeof OrganizeTool> | null>(null);
 
 // Multi-file results
 const multiResults = ref<{ name: string; blob: Blob }[]>([]);
+
+// Clean up Object URLs when navigating away
+onBeforeUnmount(() => {
+    reset();
+    multiResults.value = [];
+});
 
 const actionLabel = computed(() => {
     const labels: Record<string, string> = {

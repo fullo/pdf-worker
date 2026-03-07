@@ -3,6 +3,7 @@
     "All processing happens in your browser. Your files never leave your device.": "Tout le traitement se fait dans votre navigateur. Vos fichiers ne quittent jamais votre appareil.",
     "All rights reserved.": "Tous droits réservés.",
     "footer.buy_coffee": "Offrez-moi un café",
+    "footer.sustainability": "Conforme aux W3C Web Sustainability Guidelines",
     "home.subtitle": "Tous les outils pour travailler avec vos PDF",
     "home.description": "Le traitement des PDF se fait directement dans votre navigateur. Vos fichiers ne quittent jamais votre appareil.",
     "home.tools_title": "Outils PDF",
@@ -125,6 +126,7 @@
     "tool.organize.drag_hint": "Glissez pour réorganiser. Cliquez sur X pour supprimer.",
     "tool.organize.duplicate": "Dupliquer",
     "tool.organize.delete": "Supprimer",
+    "tool.organize.error": "Impossible de charger les pages du PDF. Veuillez essayer un autre fichier.",
 
     "tool.crop.action": "Rogner PDF",
     "tool.crop.top": "Haut",
@@ -409,5 +411,16 @@
 
     "home.search_placeholder": "Rechercher des outils...",
     "home.no_results": "Aucun outil trouvé. Essayez une autre recherche.",
-    "nav.blog": "Blog"
+    "nav.blog": "Blog",
+    "blog.title": "Blog",
+    "blog.subtitle": "Conseils, tutoriels et guides pour travailler avec les fichiers PDF",
+    "blog.meta_description": "Découvrez des conseils, tutoriels et bonnes pratiques pour travailler avec les fichiers PDF. Guides gratuits pour fusionner, diviser, compresser, convertir et modifier des PDF en ligne.",
+    "blog.filter_language": "Filtrer par langue",
+    "blog.all_languages": "Toutes",
+    "blog.articles": "articles",
+    "blog.no_articles": "Aucun article trouvé.",
+    "blog.not_found": "Article non trouvé",
+    "blog.back_to_blog": "Retour au Blog",
+    "blog.try_tool": "Prêt à essayer ?",
+    "blog.related_articles": "Articles associés"
 }

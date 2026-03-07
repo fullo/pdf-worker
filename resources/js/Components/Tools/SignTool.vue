@@ -77,7 +77,7 @@ async function renderPreview() {
         const ctx = previewCanvas.value.getContext('2d');
         if (!ctx) return;
 
-        await page.render({ canvas: previewCanvas.value, canvasContext: ctx, viewport: scaledViewport }).promise;
+        await page.render({ canvas: previewCanvas.value, viewport: scaledViewport }).promise;
 
         previewScale.value = scale;
         pdfPageWidth.value = viewport.width;

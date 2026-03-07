@@ -25,12 +25,14 @@ onMounted(() => {
     );
 });
 
-const langFilter = ref<'all' | 'en' | 'it'>('all');
+type LangOption = 'all' | 'en' | 'it' | 'de' | 'fr' | 'pt' | 'es';
+const langOptions: LangOption[] = ['all', 'en', 'it', 'de', 'fr', 'pt', 'es'];
+const langFilter = ref<LangOption>('all');
 
 // Auto-select language filter based on current app language
 onMounted(() => {
-    const lang = currentLocale.value;
-    if (lang === 'it') langFilter.value = 'it';
+    const lang = currentLocale.value as LangOption;
+    if (langOptions.includes(lang)) langFilter.value = lang;
     else langFilter.value = 'en';
 });
 
@@ -51,6 +53,10 @@ function formatDate(dateStr: string): string {
 const langFlag: Record<string, string> = {
     en: '\uD83C\uDDEC\uD83C\uDDE7',
     it: '\uD83C\uDDEE\uD83C\uDDF9',
+    de: '\uD83C\uDDE9\uD83C\uDDEA',
+    fr: '\uD83C\uDDEB\uD83C\uDDF7',
+    pt: '\uD83C\uDDF5\uD83C\uDDF9',
+    es: '\uD83C\uDDEA\uD83C\uDDF8',
 };
 </script>
 
@@ -72,7 +78,7 @@ const langFlag: Record<string, string> = {
             <!-- Language filter tabs -->
             <div class="mb-8 flex justify-center gap-2" role="tablist" :aria-label="trans('blog.filter_language')">
                 <button
-                    v-for="opt in (['all', 'en', 'it'] as const)"
+                    v-for="opt in langOptions"
                     :key="opt"
                     type="button"
                     role="tab"

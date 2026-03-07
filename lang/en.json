@@ -3,6 +3,7 @@
     "All processing happens in your browser. Your files never leave your device.": "All processing happens in your browser. Your files never leave your device.",
     "All rights reserved.": "All rights reserved.",
     "footer.buy_coffee": "Buy me a coffee",
+    "footer.sustainability": "Compliant with W3C Web Sustainability Guidelines",
     "home.subtitle": "Every tool you need to work with PDFs",
     "home.description": "All PDF processing happens directly in your browser. Your files never leave your device.",
     "home.tools_title": "PDF Tools",
@@ -125,6 +126,7 @@
     "tool.organize.drag_hint": "Drag to reorder. Click X to delete.",
     "tool.organize.duplicate": "Duplicate",
     "tool.organize.delete": "Delete",
+    "tool.organize.error": "Failed to load PDF pages. Please try a different file.",
 
     "tool.crop.action": "Crop PDF",
     "tool.crop.top": "Top",

@@ -36,6 +36,14 @@ const currentYear = new Date().getFullYear();
                 <!-- Made in EU -->
                 <p class="text-xs text-gray-400">&#127466;&#127482; Proudly made in EU</p>
 
+                <!-- Sustainability -->
+                <p class="flex items-center gap-1.5 text-xs text-gray-500">
+                    <svg aria-hidden="true" class="h-3.5 w-3.5 shrink-0 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                    </svg>
+                    {{ trans('footer.sustainability') }}
+                </p>
+
                 <!-- Copyright + Privacy -->
                 <div class="flex items-center gap-3 text-xs text-gray-500">
                     <span>&copy; {{ currentYear }} PDF Worker. {{ trans('All rights reserved.') }}</span>

@@ -12,6 +12,7 @@ interface PageThumb {
 
 const pages = ref<PageThumb[]>([]);
 const loading = ref(false);
+const error = ref(false);
 const dragIndex = ref<number | null>(null);
 const dragOverIndex = ref<number | null>(null);
 
@@ -19,6 +20,7 @@ watch(() => props.pdfFile, async (file) => {
     cleanup();
     if (!file) return;
     loading.value = true;
+    error.value = false;
 
     try {
         const arrayBuffer = await file.arrayBuffer();
@@ -31,15 +33,16 @@ watch(() => props.pdfFile, async (file) => {
             const canvas = document.createElement('canvas');
             canvas.width = viewport.width;
             canvas.height = viewport.height;
-            const ctx = canvas.getContext('2d')!;
-            await page.render({ canvas, canvasContext: ctx, viewport }).promise;
+            await page.render({ canvas, viewport }).promise;
             thumbs.push({ index: i - 1, url: canvas.toDataURL('image/jpeg', 0.6) });
             page.cleanup();
         }
 
         pages.value = thumbs;
-    } catch {
+    } catch (err) {
+        console.error('OrganizeTool: Failed to render PDF pages:', err);
         pages.value = [];
+        error.value = true;
     } finally {
         loading.value = false;
     }
@@ -111,6 +114,10 @@ defineExpose({ getPageOrder });
     <div>
         <div v-if="loading" class="flex items-center justify-center py-12">
             <div class="h-8 w-8 animate-spin rounded-full border-4 border-cyan-500 border-t-transparent"></div>
+        </div>
+
+        <div v-else-if="error" class="py-8 text-center">
+            <p class="text-sm text-red-500 dark:text-red-400">{{ trans('tool.organize.error') }}</p>
         </div>
 
         <div v-else-if="pages.length > 0">

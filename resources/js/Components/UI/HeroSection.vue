@@ -5,7 +5,7 @@ import { trans } from '@/i18n';
 <template>
     <section class="bg-gradient-to-br from-sky-500 via-blue-600 to-indigo-700 px-4 py-20 text-white sm:py-28">
         <div class="mx-auto max-w-4xl text-center">
-            <h1 class="mb-4 text-5xl font-extrabold tracking-tight sm:text-6xl">
+            <h1 class="mb-4 text-5xl font-bold tracking-tight sm:text-6xl">
                 PDF <span class="text-blue-200">Worker</span>
             </h1>
 

@@ -5,13 +5,27 @@
 
 let worker: Worker | null = null;
 let requestId = 0;
+let idleTimer: ReturnType<typeof setTimeout> | null = null;
+const IDLE_TIMEOUT_MS = 60_000; // Terminate worker after 60s of inactivity
+
 const pending = new Map<number, {
     resolve: (value: any) => void;
     reject: (reason: any) => void;
     onProgress?: (progress: number) => void;
 }>();
 
+function resetIdleTimer() {
+    if (idleTimer) clearTimeout(idleTimer);
+    idleTimer = setTimeout(() => {
+        if (pending.size === 0 && worker) {
+            worker.terminate();
+            worker = null;
+        }
+    }, IDLE_TIMEOUT_MS);
+}
+
 function getWorker(): Worker {
+    if (idleTimer) clearTimeout(idleTimer);
     if (!worker) {
         worker = new Worker(
             new URL('../workers/pdf.worker.ts', import.meta.url),
@@ -28,9 +42,11 @@ function getWorker(): Worker {
             } else if (type === 'done') {
                 pending.delete(id);
                 handler.resolve(results ?? blob);
+                resetIdleTimer();
             } else if (type === 'error') {
                 pending.delete(id);
                 handler.reject(new Error(error));
+                resetIdleTimer();
             }
         };
 

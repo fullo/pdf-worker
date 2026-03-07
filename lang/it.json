@@ -3,6 +3,7 @@
     "All processing happens in your browser. Your files never leave your device.": "L'elaborazione avviene nel tuo browser. I tuoi file non lasciano mai il tuo dispositivo.",
     "All rights reserved.": "Tutti i diritti riservati.",
     "footer.buy_coffee": "Offrimi un caffè",
+    "footer.sustainability": "Conforme alle W3C Web Sustainability Guidelines",
     "home.subtitle": "Tutti gli strumenti per lavorare con i PDF",
     "home.description": "L'elaborazione dei PDF avviene direttamente nel tuo browser. I tuoi file non lasciano mai il tuo dispositivo.",
     "home.tools_title": "Strumenti PDF",
@@ -125,6 +126,7 @@
     "tool.organize.drag_hint": "Trascina per riordinare. Clicca X per eliminare.",
     "tool.organize.duplicate": "Duplica",
     "tool.organize.delete": "Elimina",
+    "tool.organize.error": "Impossibile caricare le pagine del PDF. Prova con un file diverso.",
 
     "tool.crop.action": "Ritaglia PDF",
     "tool.crop.top": "Alto",
