@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { ref, computed, watchEffect } from 'vue';
 import { RouterLink } from 'vue-router';
+import DOMPurify from 'dompurify';
 import { trans, currentLocale } from '@/i18n';
 import { useSeoMeta } from '@/Composables/useSeoMeta';
 import { findPostBySlug, type BlogPost } from '@/data/blogPosts';
@@ -69,6 +70,10 @@ function formatDate(dateStr: string): string {
     const d = new Date(dateStr);
     return d.toLocaleDateString(undefined, { year: 'numeric', month: 'long', day: 'numeric' });
 }
+
+const sanitizedBody = computed(() =>
+    post.value ? DOMPurify.sanitize(post.value.body) : ''
+);
 </script>
 
 <template>
@@ -123,7 +128,7 @@ function formatDate(dateStr: string): string {
                 <!-- Body -->
                 <div
                     class="prose prose-lg max-w-none dark:prose-invert prose-headings:font-bold prose-a:text-blue-600 prose-a:underline hover:prose-a:text-blue-800 dark:prose-a:text-blue-400"
-                    v-html="post.body"
+                    v-html="sanitizedBody"
                 />
 
                 <!-- Tags -->

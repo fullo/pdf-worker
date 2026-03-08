@@ -1,5 +1,5 @@
 import * as pdfjsLib from 'pdfjs-dist';
-import { createCanvas, canvasToBlob } from '../pdfUtils';
+import { createCanvas, canvasToBlob, MAX_PDF_PAGES } from '../pdfUtils';
 
 export interface PdfToPngOptions {
     scale?: number;       // render scale, default 2.0
@@ -22,6 +22,9 @@ export async function pdfToPng(
     const arrayBuffer = await file.arrayBuffer();
     const pdfDoc = await pdfjsLib.getDocument({ data: new Uint8Array(arrayBuffer) }).promise;
     const pageCount = pdfDoc.numPages;
+    if (pageCount > MAX_PDF_PAGES) {
+        throw new Error(`PDF has ${pageCount} pages (max ${MAX_PDF_PAGES})`);
+    }
     const baseName = file.name.replace(/\.pdf$/i, '');
 
     const results: { name: string; blob: Blob }[] = [];

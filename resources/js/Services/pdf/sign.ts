@@ -1,4 +1,4 @@
-import { loadPdf, savePdfAsBlob, stampDefaultMetadata } from '../pdfUtils';
+import { loadPdf, savePdfAsBlob, stampDefaultMetadata, MAX_IMAGE_DIMENSION } from '../pdfUtils';
 
 export interface SignatureOptions {
     type: 'draw' | 'image';
@@ -86,6 +86,10 @@ export async function signPdf(
         }
     } else {
         throw new Error(`Unknown signature type: ${options.type}`);
+    }
+
+    if (embeddedImage.width > MAX_IMAGE_DIMENSION || embeddedImage.height > MAX_IMAGE_DIMENSION) {
+        throw new Error(`Signature image is too large (${embeddedImage.width}x${embeddedImage.height}px, max ${MAX_IMAGE_DIMENSION}px per side)`);
     }
 
     onProgress?.(60);

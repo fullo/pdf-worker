@@ -1,5 +1,5 @@
 import * as pdfjsLib from 'pdfjs-dist';
-import { createCanvas, canvasToBlob } from '../pdfUtils';
+import { createCanvas, canvasToBlob, MAX_PDF_PAGES } from '../pdfUtils';
 
 /**
  * Convert image data from pdfjs to a PNG Blob.
@@ -35,6 +35,9 @@ export async function extractImages(
     const arrayBuffer = await file.arrayBuffer();
     const pdfDoc = await pdfjsLib.getDocument({ data: new Uint8Array(arrayBuffer) }).promise;
     const pageCount = pdfDoc.numPages;
+    if (pageCount > MAX_PDF_PAGES) {
+        throw new Error(`PDF has ${pageCount} pages (max ${MAX_PDF_PAGES})`);
+    }
     const results: { name: string; blob: Blob }[] = [];
 
     for (let pageNum = 1; pageNum <= pageCount; pageNum++) {

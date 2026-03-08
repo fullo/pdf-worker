@@ -7,12 +7,24 @@ pdfjsLib.GlobalWorkerOptions.workerSrc = new URL(
     import.meta.url
 ).href;
 
+/** Maximum number of pages allowed in a PDF to prevent CPU exhaustion. */
+export const MAX_PDF_PAGES = 5000;
+
+/** Maximum image dimension (width or height) in pixels. */
+export const MAX_IMAGE_DIMENSION = 10000;
+
 /**
  * Load a PDF from a File or Blob into a pdf-lib PDFDocument.
+ * Validates page count against MAX_PDF_PAGES.
  */
 export async function loadPdf(file: File | Blob): Promise<PDFDocument> {
     const arrayBuffer = await file.arrayBuffer();
-    return PDFDocument.load(arrayBuffer, { ignoreEncryption: true });
+    const pdfDoc = await PDFDocument.load(arrayBuffer, { ignoreEncryption: true });
+    const pageCount = pdfDoc.getPageCount();
+    if (pageCount > MAX_PDF_PAGES) {
+        throw new Error(`PDF has ${pageCount} pages (max ${MAX_PDF_PAGES})`);
+    }
+    return pdfDoc;
 }
 
 /**

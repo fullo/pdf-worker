@@ -1,6 +1,6 @@
 import { PDFDocument } from 'pdf-lib';
 import * as pdfjsLib from 'pdfjs-dist';
-import { savePdfAsBlob, stampDefaultMetadata, createCanvas, canvasToBlob } from '../pdfUtils';
+import { savePdfAsBlob, stampDefaultMetadata, createCanvas, canvasToBlob, MAX_PDF_PAGES } from '../pdfUtils';
 
 export type PaperSize = 'a4' | 'a3' | 'letter' | 'legal';
 
@@ -28,6 +28,9 @@ export async function resizePages(
     const arrayBuffer = await file.arrayBuffer();
     const pdfDoc = await pdfjsLib.getDocument({ data: new Uint8Array(arrayBuffer) }).promise;
     const pageCount = pdfDoc.numPages;
+    if (pageCount > MAX_PDF_PAGES) {
+        throw new Error(`PDF has ${pageCount} pages (max ${MAX_PDF_PAGES})`);
+    }
     const newPdf = await PDFDocument.create();
 
     for (let i = 1; i <= pageCount; i++) {

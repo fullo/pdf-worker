@@ -19,6 +19,32 @@ const emit = defineEmits<{
 const isDragging = ref(false);
 const fileInput = ref<HTMLInputElement | null>(null);
 
+/** Expected MIME types for common extensions. */
+const MIME_MAP: Record<string, string[]> = {
+    '.pdf': ['application/pdf'],
+    '.jpg': ['image/jpeg'],
+    '.jpeg': ['image/jpeg'],
+    '.png': ['image/png'],
+};
+
+/**
+ * Validate a file by extension and MIME type.
+ * Extension must match; MIME type is checked if available and mapped.
+ */
+function isValidFile(file: File, acceptedExtensions: string[]): boolean {
+    const fileName = file.name.toLowerCase();
+    const extMatch = acceptedExtensions.find((ext) => fileName.endsWith(ext));
+    if (!extMatch) return false;
+
+    // If MIME type is available and we have expected types, verify
+    const expectedMimes = MIME_MAP[extMatch];
+    if (expectedMimes && file.type && !expectedMimes.includes(file.type.toLowerCase())) {
+        return false;
+    }
+
+    return true;
+}
+
 function openFileBrowser() {
     fileInput.value?.click();
 }
@@ -57,15 +83,12 @@ function onDrop(event: DragEvent) {
 
     const droppedFiles = Array.from(event.dataTransfer.files);
 
-    // Filter files by accepted extensions if specified
+    // Filter files by accepted extensions and MIME type
     const acceptedExtensions = props.accept
         .split(',')
         .map((ext) => ext.trim().toLowerCase());
 
-    const validFiles = droppedFiles.filter((file) => {
-        const fileName = file.name.toLowerCase();
-        return acceptedExtensions.some((ext) => fileName.endsWith(ext));
-    });
+    const validFiles = droppedFiles.filter((file) => isValidFile(file, acceptedExtensions));
 
     const invalidFiles = droppedFiles.filter((file) => !validFiles.includes(file));
     if (invalidFiles.length > 0) {

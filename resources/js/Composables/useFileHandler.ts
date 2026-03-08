@@ -2,13 +2,32 @@ import { ref, computed } from 'vue';
 import type { Ref, ComputedRef } from 'vue';
 import type { UploadedFile } from '@/types';
 
+/** Maximum file size in bytes (200 MB). */
+const MAX_FILE_SIZE = 200 * 1024 * 1024;
+
 export function useFileHandler(accept: string, multiple: boolean) {
     const files: Ref<UploadedFile[]> = ref([]);
+    const rejectedFiles: Ref<string[]> = ref([]);
 
     const hasFiles: ComputedRef<boolean> = computed(() => files.value.length > 0);
 
     function addFiles(fileList: File[]): void {
-        const newFiles: UploadedFile[] = fileList.map((file) => ({
+        const accepted: File[] = [];
+        const rejected: string[] = [];
+
+        for (const file of fileList) {
+            if (file.size > MAX_FILE_SIZE) {
+                rejected.push(file.name);
+            } else {
+                accepted.push(file);
+            }
+        }
+
+        rejectedFiles.value = rejected;
+
+        if (accepted.length === 0) return;
+
+        const newFiles: UploadedFile[] = accepted.map((file) => ({
             id: crypto.randomUUID(),
             file,
             name: file.name,
@@ -53,5 +72,6 @@ export function useFileHandler(accept: string, multiple: boolean) {
         moveFile,
         removeAll,
         hasFiles,
+        rejectedFiles,
     };
 }

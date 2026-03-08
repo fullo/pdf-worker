@@ -1,5 +1,5 @@
 import { PDFDocument, rgb, degrees, StandardFonts, PDFPage } from 'pdf-lib';
-import { loadPdf, savePdfAsBlob, stampDefaultMetadata } from '../pdfUtils';
+import { loadPdf, savePdfAsBlob, stampDefaultMetadata, MAX_IMAGE_DIMENSION } from '../pdfUtils';
 
 export interface WatermarkOptions {
     type: 'text' | 'image';
@@ -139,6 +139,10 @@ export async function addWatermark(
             image = await pdfDoc.embedJpg(options.imageBytes);
         } else {
             throw new Error(`Unsupported image type: ${options.imageMimeType}. Use PNG or JPEG.`);
+        }
+
+        if (image.width > MAX_IMAGE_DIMENSION || image.height > MAX_IMAGE_DIMENSION) {
+            throw new Error(`Watermark image is too large (${image.width}x${image.height}px, max ${MAX_IMAGE_DIMENSION}px per side)`);
         }
 
         // Use provided dimensions or fall back to the image's native size

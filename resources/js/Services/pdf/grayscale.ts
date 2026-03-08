@@ -1,6 +1,6 @@
 import { PDFDocument } from 'pdf-lib';
 import * as pdfjsLib from 'pdfjs-dist';
-import { savePdfAsBlob, stampDefaultMetadata, createCanvas, canvasToBlob } from '../pdfUtils';
+import { savePdfAsBlob, stampDefaultMetadata, createCanvas, canvasToBlob, MAX_PDF_PAGES } from '../pdfUtils';
 
 const JPEG_QUALITY = 0.85;
 const RENDER_SCALE = 2.0;
@@ -16,6 +16,9 @@ export async function grayscalePdf(
     const arrayBuffer = await file.arrayBuffer();
     const pdfDoc = await pdfjsLib.getDocument({ data: new Uint8Array(arrayBuffer) }).promise;
     const pageCount = pdfDoc.numPages;
+    if (pageCount > MAX_PDF_PAGES) {
+        throw new Error(`PDF has ${pageCount} pages (max ${MAX_PDF_PAGES})`);
+    }
 
     const newPdf = await PDFDocument.create();
 

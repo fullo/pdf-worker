@@ -1,5 +1,5 @@
 import { PDFDocument } from 'pdf-lib';
-import { savePdfAsBlob, stampDefaultMetadata } from '../pdfUtils';
+import { savePdfAsBlob, stampDefaultMetadata, MAX_IMAGE_DIMENSION } from '../pdfUtils';
 
 export interface JpgToPdfOptions {
     orientation: 'portrait' | 'landscape';
@@ -25,6 +25,10 @@ function loadImage(file: File): Promise<HTMLImageElement> {
 
         img.onload = () => {
             URL.revokeObjectURL(url);
+            if (img.naturalWidth > MAX_IMAGE_DIMENSION || img.naturalHeight > MAX_IMAGE_DIMENSION) {
+                reject(new Error(`Image "${file.name}" is too large (${img.naturalWidth}x${img.naturalHeight}px, max ${MAX_IMAGE_DIMENSION}px per side)`));
+                return;
+            }
             resolve(img);
         };
 
