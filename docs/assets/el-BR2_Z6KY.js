@@ -540,4 +540,22 @@ const i=[{slug:"pos-na-synenosete-arxeia-pdf-online",lang:"el",title:"Pos na Syn
 <p>To ergaleio <a href="#/pdf-to-epub">PDF se EPUB</a> exagei to periexomeno keimenoy apo kathe selida PDF kai to paketarei se ena egkyro arxeio EPUB 3 me sosti ploigisi kefalaion, pinaka periexomenon kai morfopolisi.</p>
 <h2>Kalctera Apotelesmata</h2>
 <p>Afto to ergaleio leitourgei kalytera me PDF pou periexoun poly keimeno. Gia skanarismena eggrafa (PDF mono me eikones), ekteleste prota to ergaleio <a href="#/ocr-pdf">OCR</a> gia na exagete to keimeno kai meta metatrepste se EPUB.</p>
-<p>To prokypton EPUB perilamvanei enan pinaka periexomenon me mia kataxorisiana arxiki selida, diasfalizo ntas efkoli ploigisi sto metatetrammeno eggrafo.</p>`,date:"2026-03-10",tool:"pdf-to-epub",tags:["epub","e-vivlio","metatropi","kindle"]}];export{i as blogPostsEl};
+<p>To prokypton EPUB perilamvanei enan pinaka periexomenon me mia kataxorisiana arxiki selida, diasfalizo ntas efkoli ploigisi sto metatetrammeno eggrafo.</p>`,date:"2026-03-10",tool:"pdf-to-epub",tags:["epub","e-vivlio","metatropi","kindle"]},{slug:"create-pdf-booklet-for-printing",lang:"el",title:"Pos na Dimioyrgisete ena PDF Fyladio gia Ektyposi Diplis Opsis",excerpt:"Anadiataxteto selides PDF gia ektyposi fyllidioy me syraptiko. Ektyposestediplis opsis, diplosteto sta dio kai syraptiste gia na dimioyrgisete ena epaggelmatiko fylladio.",body:`<p>I dimiourgia fyladiou apo PDF simainei anadiataxi ton selidon oste otan ektypothoun kai stis dio plevres tou xartiou kai diplothoun sta dio, na emfanizontai sti sosti seira anagnosis.</p>
+<h2>Ti Einai i Ektyposi Fyladiou;</h2>
+<p>I ektyposi fyladiou (i syraptiki vivissis) topothetei dio selides dipla-dipla se kathe plevra enos fyllou. Meta tin ektyposi, diplonete ta fylla sta dio kai syraptete katamikoston rachis gia na dimioyrgisete ena sympa ges fylladio.</p>
+<h2>Pos Leitoyrgei</h2>
+<p>To ergaleio <a href="#/booklet-pdf">PDF Fylladio</a> anadiatatei aftomata tis selides sas sti sosti seira fyladiou. Gia paradeigma, ena eggrafo 8 selidon anadiatattetai oste oi selides na ektypothoun sti seira pou xreiazetai gia to diploma.</p>
+<h2>Vima pros Vima</h2>
+<ol>
+<li>Anevaste to PDF eggrafo sas</li>
+<li>Kanete klik sto "Dimioyrgia Fyladiou" — oi selides anadiatassontai aftomata</li>
+<li>Ektyposetoapelesma diplis opsis (duplex) ston ektypoti sas</li>
+<li>Diploseta typomena fylla sta dio kai syraptiste katamikos to diploma</li>
+</ol>
+<h2>Symvoules</h2>
+<ul>
+<li>To ergaleio gemizei aftomata to eggrafo sas se pollaplasio ton 4 selidon</li>
+<li>Xrisimopoiiste xarti A4 i Letter gia kalytera apotelesmata</li>
+<li>Rythmiste ton ektypoti sas se "anastrofi sti mikri akri" gia sosti ektyposi diplis opsis</li>
+</ul>
+<p>Gia alles anagkes diataxis selidon, dokimaste to ergaleio <a href="#/nup-pdf">N-Up PDF</a> gia pollaples selides ana fyllo, i <a href="#/reverse-pages">Antistrofi Selidon</a> gia anastrofi tis seiras selidon.</p>`,date:"2026-03-10",tool:"booklet-pdf",tags:["fylladio","ektyposi","duplex","diploma"]}];export{i as blogPostsEl};

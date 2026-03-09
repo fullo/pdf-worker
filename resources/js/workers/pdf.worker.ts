@@ -38,6 +38,7 @@ import { reversePages } from '@/Services/pdf/reversePages';
 import { invertColors } from '@/Services/pdf/invertColors';
 import { repairPdf } from '@/Services/pdf/repairPdf';
 import { pdfToEpub } from '@/Services/pdf/pdfToEpub';
+import { bookletPdf } from '@/Services/pdf/bookletPdf';
 
 self.onmessage = async (e: MessageEvent) => {
     const { id, tool, files, options } = e.data;
@@ -188,6 +189,10 @@ self.onmessage = async (e: MessageEvent) => {
 
             case 'pdf-to-epub':
                 result = await pdfToEpub(files[0], onProgress);
+                break;
+
+            case 'booklet-pdf':
+                result = await bookletPdf(files[0], onProgress);
                 break;
 
             default:

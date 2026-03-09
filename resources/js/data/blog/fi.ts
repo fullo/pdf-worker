@@ -1023,4 +1023,32 @@ export const blogPostsFi: BlogPost[] = [
         tool: 'pdf-to-epub',
         tags: ['epub', 'sähkökirja', 'muuntaminen', 'kindle'],
     },
+    {
+        slug: 'create-pdf-booklet-for-printing',
+        lang: 'fi',
+        title: 'PDF-vihkon luominen kaksipuolista tulostusta varten',
+        excerpt: 'Järjestä PDF-sivut uudelleen nidotun vihkon tulostamiseksi. Tulosta kaksipuolisesti, taita kahtia ja nido luodaksesi ammattimaisen vihkon.',
+        body: `<p>Vihkon luominen PDF-tiedostosta tarkoittaa sivujen järjestämistä uudelleen niin, että kun ne tulostetaan paperin molemmille puolille ja taitetaan kahtia, ne näkyvät oikeassa lukujärjestyksessä.</p>
+<h2>Mitä on vihkotulostus?</h2>
+<p>Vihkotulostus (tai nidonta) asettaa kaksi sivua vierekkäin arkin kummallekin puolelle. Tulostuksen jälkeen taitat arkit kahtia ja nidot selkämyksen kohdalta luodaksesi kompaktin vihkon.</p>
+<h2>Kuinka se toimii</h2>
+<p><a href="#/booklet-pdf">PDF-vihkotyökalu</a> järjestää sivusi automaattisesti oikeaan vihkojärjestykseen. Esimerkiksi 8-sivuinen asiakirja järjestetään uudelleen niin, että sivut tulostuvat taittamisen vaatimassa järjestyksessä.</p>
+<h2>Vaihe vaiheelta</h2>
+<ol>
+<li>Lataa PDF-asiakirjasi</li>
+<li>Napsauta "Luo vihko" — sivut järjestetään automaattisesti uudelleen</li>
+<li>Tulosta tulos kaksipuolisesti (duplex) tulostimellasi</li>
+<li>Taita tulostetut arkit kahtia ja nido taitoksen kohdalta</li>
+</ol>
+<h2>Vinkkejä</h2>
+<ul>
+<li>Työkalu täydentää asiakirjasi automaattisesti neljällä jaolliseksi sivumääräksi</li>
+<li>Käytä A4- tai Letter-paperia parhaisiin tuloksiin</li>
+<li>Aseta tulostimesi "käännä lyhyeltä reunalta" oikeaa kaksipuolista tulostusta varten</li>
+</ul>
+<p>Muihin sivujen asettelutarpeisiin tutustu <a href="#/nup-pdf">N-Up PDF</a> -työkaluun useille sivuille per arkki, tai <a href="#/reverse-pages">Käännä sivujärjestys</a> sivujärjestyksen kääntämiseksi.</p>`,
+        date: '2026-03-10',
+        tool: 'booklet-pdf',
+        tags: ['vihko', 'tulostus', 'kaksipuolinen', 'taitto'],
+    },
 ];

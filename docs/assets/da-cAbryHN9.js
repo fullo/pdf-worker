@@ -540,4 +540,22 @@ const e=[{slug:"saadan-sammenfojer-du-pdf-filer-online",lang:"da",title:"Saml PD
 <p><a href="#/pdf-to-epub">PDF til EPUB-vaerktoejet</a> udtraekker tekstindhold fra hver PDF-side og pakker det i en gyldig EPUB 3-fil med korrekt kapitelnavigation, indholdsfortegnelse og styling.</p>
 <h2>Bedste resultater</h2>
 <p>Dette vaerktoej fungerer bedst med teksttunge PDF-filer. Til scannede dokumenter (kun billed-PDF-filer) skal du foerst koere <a href="#/ocr-pdf">OCR-vaerktoejet</a> for at udtraekke teksten og derefter konvertere til EPUB.</p>
-<p>Den resulterende EPUB inkluderer en indholdsfortegnelse med en post per original side, hvilket goer det nemt at navigere i det konverterede dokument.</p>`,date:"2026-03-10",tool:"pdf-to-epub",tags:["epub","ebog","konverter","kindle"]}];export{e as blogPostsDa};
+<p>Den resulterende EPUB inkluderer en indholdsfortegnelse med en post per original side, hvilket goer det nemt at navigere i det konverterede dokument.</p>`,date:"2026-03-10",tool:"pdf-to-epub",tags:["epub","ebog","konverter","kindle"]},{slug:"create-pdf-booklet-for-printing",lang:"da",title:"Saadan opretter du en PDF-brochure til dobbeltsidet udskrivning",excerpt:"Omarranger PDF-sider til sadelhæftningsudskrivning. Udskriv dobbeltsidet, fold paa midten og hæft for at lave en professionel brochure.",body:`<p>At oprette en brochure fra en PDF betyder at omarrangere siderne, saa de vises i korrekt læserækkefølge, naar de udskrives paa begge sider af papiret og foldes paa midten.</p>
+<h2>Hvad er brochureudskrivning?</h2>
+<p>Brochure- (eller sadelhæftnings-) udskrivning placerer to sider side om side paa hver side af et ark. Efter udskrivning folder du arkene paa midten og hæfter langs ryggen for at lave en kompakt brochure.</p>
+<h2>Saadan virker det</h2>
+<p>Vaerktoejet <a href="#/booklet-pdf">PDF-brochure</a> omarrangerer automatisk dine sider i den korrekte brochurerækkefølge. For eksempel bliver et 8-siders dokument omarrangeret, saa siderne udskrives i den rækkefølge, der er noedvendig for foldning.</p>
+<h2>Trin for trin</h2>
+<ol>
+<li>Upload dit PDF-dokument</li>
+<li>Klik paa "Opret brochure" — siderne omarrangeres automatisk</li>
+<li>Udskriv resultatet dobbeltsidet (duplex) paa din printer</li>
+<li>Fold de udskrevne ark paa midten og hæft langs folden</li>
+</ol>
+<h2>Tips</h2>
+<ul>
+<li>Vaerktoejet udfylder automatisk dit dokument til et multiplum af 4 sider</li>
+<li>Brug A4- eller Letter-papir for bedste resultater</li>
+<li>Indstil din printer til "vend paa kort kant" for korrekt dobbeltsidet udskrivning</li>
+</ul>
+<p>Til andre sidearrangeringsbehov kan du proeve vaerktoejet <a href="#/nup-pdf">N-Up PDF</a> til flere sider pr. ark, eller <a href="#/reverse-pages">Vend siderækkefølge</a> for at vende sideordenen.</p>`,date:"2026-03-10",tool:"booklet-pdf",tags:["brochure","udskriv","duplex","fold"]}];export{e as blogPostsDa};

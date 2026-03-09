@@ -561,5 +561,20 @@
     "tools.pdf-to-epub.step_2": "Kliknite Pretvori v EPUB.",
     "tools.pdf-to-epub.step_3": "Prenesite datoteko EPUB.",
     "tools.pdf-to-epub.faq_1_q": "Ali to deluje s skeniranimi PDF-ji?",
-    "tools.pdf-to-epub.faq_1_a": "Ne. To orodje izvleče vdelano besedilo. Skenirani PDF-ji najprej potrebujejo OCR, da bo besedilo na voljo."
+    "tools.pdf-to-epub.faq_1_a": "Ne. To orodje izvleče vdelano besedilo. Skenirani PDF-ji najprej potrebujejo OCR, da bo besedilo na voljo.",
+
+    "tools.booklet-pdf.name": "PDF-knjižica",
+    "tools.booklet-pdf.description": "Prerazporedite strani za obojestransko tiskanje knjižice. Prepognite in spnite za knjižico.",
+    "tool.booklet.action": "Ustvari knjižico",
+    "tools.booklet-pdf.how_title": "Kako ustvariti PDF-knjižico",
+    "tools.booklet-pdf.how_text": "Naložite svoj PDF in orodje bo samodejno prerazporedilo strani za tiskanje knjižice (saddle-stitch). Natisnite obojestransko, prepognite na polovico in spnite.",
+    "tools.booklet-pdf.step_1": "Naložite datoteko PDF.",
+    "tools.booklet-pdf.step_2": "Strani se samodejno prerazporedijo v format knjižice.",
+    "tools.booklet-pdf.step_3": "Prenesite prerazporejeni PDF in natisnite obojestransko.",
+    "tools.booklet-pdf.faq_1_q": "Koliko strani ima lahko moj PDF?",
+    "tools.booklet-pdf.faq_1_a": "Poljubno število strani. Orodje samodejno doda prazne strani do najbližjega večkratnika 4.",
+    "tools.booklet-pdf.faq_2_q": "Kako naj natisnem rezultat?",
+    "tools.booklet-pdf.faq_2_a": "Natisnite rezultat v obojestranem načinu (duplex) z obračanjem na kratki strani. Nato prepognite vse liste na polovico in spnite na sredini.",
+    "tools.booklet-pdf.faq_3_q": "Ali se velikosti strani spremenijo?",
+    "tools.booklet-pdf.faq_3_a": "Ne. Strani ohranijo prvotne mere. Samo prerazporedijo se v pravilni vrstni red za prepogib knjižice."
 }

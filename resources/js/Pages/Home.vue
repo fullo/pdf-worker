@@ -60,6 +60,7 @@ const tools: ToolItem[] = [
     { slug: 'invert-colors', icon: '🔲', color: 'text-gray-600', bgColor: 'bg-gray-100' },
     { slug: 'repair-pdf', icon: '🔧', color: 'text-red-600', bgColor: 'bg-red-50' },
     { slug: 'pdf-to-epub', icon: '📖', color: 'text-violet-600', bgColor: 'bg-violet-50' },
+    { slug: 'booklet-pdf', icon: '📕', color: 'text-rose-600', bgColor: 'bg-rose-50' },
 ];
 
 const filteredTools = computed(() => {

@@ -595,5 +595,19 @@
     "tools.pdf-to-epub.step_2": "Clique em Converter para EPUB.",
     "tools.pdf-to-epub.step_3": "Descarregue o ficheiro EPUB.",
     "tools.pdf-to-epub.faq_1_q": "Funciona com PDFs digitalizados?",
-    "tools.pdf-to-epub.faq_1_a": "Não. Esta ferramenta extrai texto incorporado. PDFs digitalizados necessitam de OCR primeiro para tornar o texto disponível."
+    "tools.pdf-to-epub.faq_1_a": "Não. Esta ferramenta extrai texto incorporado. PDFs digitalizados necessitam de OCR primeiro para tornar o texto disponível.",
+    "tools.booklet-pdf.name": "Folheto PDF",
+    "tools.booklet-pdf.description": "Reorganiza as páginas para impressão frente e verso em folheto. Dobre e agrafe para criar um folheto.",
+    "tool.booklet.action": "Criar Folheto",
+    "tools.booklet-pdf.how_title": "Como criar um folheto PDF",
+    "tools.booklet-pdf.how_text": "Carregue o seu PDF e a ferramenta reorganizará automaticamente as páginas para impressão em folheto (agrafamento na lombada). Imprima frente e verso, dobre ao meio e agrafe.",
+    "tools.booklet-pdf.step_1": "Carregue o seu ficheiro PDF",
+    "tools.booklet-pdf.step_2": "As páginas são reorganizadas automaticamente para o formato de folheto",
+    "tools.booklet-pdf.step_3": "Descarregue o PDF reorganizado e imprima-o frente e verso",
+    "tools.booklet-pdf.faq_1_q": "Quantas páginas pode ter o meu PDF?",
+    "tools.booklet-pdf.faq_1_a": "Qualquer número de páginas. A ferramenta adiciona automaticamente páginas em branco para arredondar ao múltiplo de 4 mais próximo.",
+    "tools.booklet-pdf.faq_2_q": "Como devo imprimir o resultado?",
+    "tools.booklet-pdf.faq_2_a": "Imprima o ficheiro resultante em modo frente e verso (duplex) com viragem pelo lado curto. Depois dobre todas as folhas ao meio e agrafe no centro.",
+    "tools.booklet-pdf.faq_3_q": "As dimensões das páginas mudam?",
+    "tools.booklet-pdf.faq_3_a": "Não. As páginas mantêm as suas dimensões originais. São apenas reorganizadas na ordem correta para a dobragem em folheto."
 }

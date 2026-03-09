@@ -540,4 +540,22 @@ const e=[{slug:"how-to-merge-pdf-files-online",lang:"en",title:"How to Merge PDF
 <p>The <a href="#/pdf-to-epub">PDF to EPUB tool</a> extracts text content from each PDF page and packages it into a valid EPUB 3 file with proper chapter navigation, table of contents, and styling.</p>
 <h2>Best Results</h2>
 <p>This tool works best with text-heavy PDFs. For scanned documents (image-only PDFs), run the <a href="#/ocr-pdf">OCR tool</a> first to extract the text, then convert to EPUB.</p>
-<p>The resulting EPUB includes a table of contents with one entry per original page, making it easy to navigate the converted document.</p>`,date:"2026-03-10",tool:"pdf-to-epub",tags:["epub","ebook","convert","kindle"]}];export{e as blogPostsEn};
+<p>The resulting EPUB includes a table of contents with one entry per original page, making it easy to navigate the converted document.</p>`,date:"2026-03-10",tool:"pdf-to-epub",tags:["epub","ebook","convert","kindle"]},{slug:"create-pdf-booklet-for-printing",lang:"en",title:"How to Create a PDF Booklet for Double-Sided Printing",excerpt:"Rearrange PDF pages for saddle-stitch booklet printing. Print double-sided, fold in half, and staple to create a professional booklet.",body:`<p>Creating a booklet from a PDF means rearranging the pages so that when printed on both sides of the paper and folded in half, they appear in the correct reading order.</p>
+<h2>What Is Booklet Printing?</h2>
+<p>Booklet (or saddle-stitch) printing places two pages side by side on each side of a sheet. After printing, you fold the sheets in half and staple along the spine to create a compact booklet.</p>
+<h2>How It Works</h2>
+<p>The <a href="#/booklet-pdf">PDF Booklet tool</a> automatically reorders your pages into the correct booklet sequence. For example, an 8-page document gets rearranged so pages print in the order needed for folding.</p>
+<h2>Step-by-Step</h2>
+<ol>
+<li>Upload your PDF document</li>
+<li>Click "Create Booklet" — pages are automatically rearranged</li>
+<li>Print the result double-sided (duplex) on your printer</li>
+<li>Fold the printed sheets in half and staple along the fold</li>
+</ol>
+<h2>Tips</h2>
+<ul>
+<li>The tool pads your document to a multiple of 4 pages automatically</li>
+<li>Use A4 or Letter paper for best results</li>
+<li>Set your printer to "flip on short edge" for correct double-sided output</li>
+</ul>
+<p>For other page arrangement needs, check the <a href="#/nup-pdf">N-Up PDF</a> tool for multiple pages per sheet, or <a href="#/reverse-pages">Reverse Pages</a> to flip page order.</p>`,date:"2026-03-10",tool:"booklet-pdf",tags:["booklet","print","duplex","fold"]}];export{e as blogPostsEn};

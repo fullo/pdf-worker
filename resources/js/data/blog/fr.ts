@@ -1031,4 +1031,32 @@ export const blogPostsFr: BlogPost[] = [
         tool: 'pdf-to-epub',
         tags: ['epub', 'ebook', 'convert', 'kindle'],
     },
+    {
+        slug: 'create-pdf-booklet-for-printing',
+        lang: 'fr',
+        title: 'Comment Creer un Livret PDF pour l\'Impression Recto-Verso',
+        excerpt: 'Reorganisez les pages de votre PDF pour l\'impression en livret pique a cheval. Imprimez en recto-verso, pliez en deux et agrafez pour creer un livret professionnel.',
+        body: `<p>Creer un livret a partir d'un PDF signifie reorganiser les pages de sorte que, lorsqu'elles sont imprimees des deux cotes du papier et pliees en deux, elles apparaissent dans le bon ordre de lecture.</p>
+<h2>Qu'est-ce que l'Impression en Livret ?</h2>
+<p>L'impression en livret (ou piqure a cheval) place deux pages cote a cote sur chaque face de la feuille. Apres l'impression, vous pliez les feuilles en deux et agrafez le long du dos pour creer un livret compact.</p>
+<h2>Comment Ca Fonctionne</h2>
+<p>L'outil <a href="#/booklet-pdf">Livret PDF</a> reorganise automatiquement vos pages dans la bonne sequence pour le livret. Par exemple, un document de 8 pages est reorganise pour que les pages s'impriment dans l'ordre necessaire au pliage.</p>
+<h2>Etape par Etape</h2>
+<ol>
+<li>Telechargez votre document PDF</li>
+<li>Cliquez sur « Creer un Livret » — les pages sont automatiquement reorganisees</li>
+<li>Imprimez le resultat en recto-verso (duplex) sur votre imprimante</li>
+<li>Pliez les feuilles imprimees en deux et agrafez le long du pli</li>
+</ol>
+<h2>Conseils</h2>
+<ul>
+<li>L'outil complete automatiquement votre document a un multiple de 4 pages</li>
+<li>Utilisez du papier A4 ou Letter pour de meilleurs resultats</li>
+<li>Reglez votre imprimante sur « retourner sur le bord court » pour une impression recto-verso correcte</li>
+</ul>
+<p>Pour d'autres besoins de mise en page, consultez l'outil <a href="#/nup-pdf">PDF N-Up</a> pour plusieurs pages par feuille, ou <a href="#/reverse-pages">Inverser les Pages</a> pour inverser l'ordre des pages.</p>`,
+        date: '2026-03-10',
+        tool: 'booklet-pdf',
+        tags: ['livret', 'impression', 'duplex', 'pliage'],
+    },
 ];

@@ -608,5 +608,20 @@
     "tools.pdf-to-epub.step_2": "Click Convert to EPUB.",
     "tools.pdf-to-epub.step_3": "Download the EPUB file.",
     "tools.pdf-to-epub.faq_1_q": "Does this work with scanned PDFs?",
-    "tools.pdf-to-epub.faq_1_a": "No. This tool extracts embedded text. Scanned PDFs need OCR first to make the text available."
+    "tools.pdf-to-epub.faq_1_a": "No. This tool extracts embedded text. Scanned PDFs need OCR first to make the text available.",
+
+    "tools.booklet-pdf.name": "PDF Booklet",
+    "tools.booklet-pdf.description": "Rearrange pages for double-sided booklet printing. Fold and staple to create a booklet.",
+    "tool.booklet.action": "Create Booklet",
+    "tools.booklet-pdf.how_title": "How to Create a PDF Booklet",
+    "tools.booklet-pdf.how_text": "Rearrange your PDF pages so you can print double-sided, fold and staple to make a booklet.",
+    "tools.booklet-pdf.step_1": "Upload a PDF file.",
+    "tools.booklet-pdf.step_2": "Click Create Booklet.",
+    "tools.booklet-pdf.step_3": "Download the rearranged PDF and print double-sided.",
+    "tools.booklet-pdf.faq_1_q": "How does booklet page ordering work?",
+    "tools.booklet-pdf.faq_1_a": "Pages are rearranged so that when printed on both sides and folded in half, they form a booklet. The tool automatically pads to a multiple of 4 pages if needed.",
+    "tools.booklet-pdf.faq_2_q": "Do I need a special printer?",
+    "tools.booklet-pdf.faq_2_a": "You need a printer that supports double-sided (duplex) printing. Print the resulting PDF double-sided, then fold and staple.",
+    "tools.booklet-pdf.faq_3_q": "What if my PDF has an odd number of pages?",
+    "tools.booklet-pdf.faq_3_a": "The tool automatically adds blank pages to make the total a multiple of 4, which is required for booklet layout."
 }

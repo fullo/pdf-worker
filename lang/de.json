@@ -597,5 +597,19 @@
     "tools.pdf-to-epub.step_2": "Klicken Sie auf In EPUB umwandeln.",
     "tools.pdf-to-epub.step_3": "Laden Sie die EPUB-Datei herunter.",
     "tools.pdf-to-epub.faq_1_q": "Funktioniert das mit gescannten PDFs?",
-    "tools.pdf-to-epub.faq_1_a": "Nein. Dieses Tool extrahiert eingebetteten Text. Gescannte PDFs benötigen zuerst OCR, um den Text verfügbar zu machen."
+    "tools.pdf-to-epub.faq_1_a": "Nein. Dieses Tool extrahiert eingebetteten Text. Gescannte PDFs benötigen zuerst OCR, um den Text verfügbar zu machen.",
+    "tools.booklet-pdf.name": "PDF-Broschüre",
+    "tools.booklet-pdf.description": "Seiten für den beidseitigen Broschürendruck neu anordnen. Falten und heften für eine Broschüre.",
+    "tool.booklet.action": "Broschüre erstellen",
+    "tools.booklet-pdf.how_title": "So erstellen Sie eine PDF-Broschüre",
+    "tools.booklet-pdf.how_text": "Laden Sie Ihr PDF hoch und das Tool ordnet die Seiten automatisch für den Broschürendruck (Rückenstichheftung) neu an. Beidseitig drucken, in der Mitte falten und heften.",
+    "tools.booklet-pdf.step_1": "Laden Sie Ihre PDF-Datei hoch",
+    "tools.booklet-pdf.step_2": "Die Seiten werden automatisch für das Broschürenformat neu angeordnet",
+    "tools.booklet-pdf.step_3": "Laden Sie das neu angeordnete PDF herunter und drucken Sie es beidseitig",
+    "tools.booklet-pdf.faq_1_q": "Wie viele Seiten kann mein PDF haben?",
+    "tools.booklet-pdf.faq_1_a": "Beliebig viele Seiten. Das Tool fügt automatisch leere Seiten hinzu, um auf das nächste Vielfache von 4 aufzurunden.",
+    "tools.booklet-pdf.faq_2_q": "Wie soll ich das Ergebnis drucken?",
+    "tools.booklet-pdf.faq_2_a": "Drucken Sie die Ergebnisdatei im beidseitigen Modus (Duplex) mit Wenden an der kurzen Seite. Falten Sie dann alle Blätter in der Mitte und heften Sie sie in der Mitte.",
+    "tools.booklet-pdf.faq_3_q": "Ändern sich die Seitenabmessungen?",
+    "tools.booklet-pdf.faq_3_a": "Nein. Die Seiten behalten ihre Originalabmessungen. Sie werden nur in der richtigen Reihenfolge für die Broschürenfaltung neu angeordnet."
 }

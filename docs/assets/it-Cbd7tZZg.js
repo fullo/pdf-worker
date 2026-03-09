@@ -533,4 +533,22 @@ const i=[{slug:"come-unire-pdf-online-gratis",lang:"it",title:"Come Unire PDF On
 <p>Lo strumento <a href="#/pdf-to-epub">PDF in EPUB</a> estrae il contenuto testuale da ogni pagina PDF e lo confeziona in un file EPUB 3 valido con navigazione tra capitoli, indice e stili appropriati.</p>
 <h2>Risultati Migliori</h2>
 <p>Questo strumento funziona meglio con PDF ricchi di testo. Per documenti scansionati (PDF composti solo da immagini), esegui prima lo strumento <a href="#/ocr-pdf">OCR</a> per estrarre il testo, poi converti in EPUB.</p>
-<p>L'EPUB risultante include un indice con una voce per ogni pagina originale, rendendo facile la navigazione del documento convertito.</p>`,date:"2026-03-10",tool:"pdf-to-epub",tags:["epub","ebook","convertire","kindle"]}];export{i as blogPostsIt};
+<p>L'EPUB risultante include un indice con una voce per ogni pagina originale, rendendo facile la navigazione del documento convertito.</p>`,date:"2026-03-10",tool:"pdf-to-epub",tags:["epub","ebook","convertire","kindle"]},{slug:"create-pdf-booklet-for-printing",lang:"it",title:"Come Creare un Opuscolo PDF per la Stampa Fronte-Retro",excerpt:"Riordina le pagine del PDF per la stampa a sella. Stampa fronte-retro, piega a metà e pinza per creare un opuscolo professionale.",body:`<p>Creare un opuscolo da un PDF significa riordinare le pagine in modo che, stampate su entrambi i lati del foglio e piegate a metà, appaiano nel corretto ordine di lettura.</p>
+<h2>Cos'è la Stampa a Opuscolo?</h2>
+<p>La stampa a opuscolo (o a sella) posiziona due pagine affiancate su ogni lato del foglio. Dopo la stampa, si piegano i fogli a metà e si pinzano lungo il dorso per creare un opuscolo compatto.</p>
+<h2>Come Funziona</h2>
+<p>Lo strumento <a href="#/booklet-pdf">Opuscolo PDF</a> riordina automaticamente le pagine nella sequenza corretta per l'opuscolo. Ad esempio, un documento di 8 pagine viene riorganizzato in modo che le pagine vengano stampate nell'ordine necessario per la piegatura.</p>
+<h2>Procedura Passo per Passo</h2>
+<ol>
+<li>Carica il tuo documento PDF</li>
+<li>Clicca "Crea Opuscolo" — le pagine vengono riordinate automaticamente</li>
+<li>Stampa il risultato fronte-retro (duplex) sulla tua stampante</li>
+<li>Piega i fogli stampati a metà e pinza lungo la piega</li>
+</ol>
+<h2>Suggerimenti</h2>
+<ul>
+<li>Lo strumento completa automaticamente il documento a un multiplo di 4 pagine</li>
+<li>Usa carta A4 o Letter per i migliori risultati</li>
+<li>Imposta la stampante su "ribalta sul lato corto" per una corretta stampa fronte-retro</li>
+</ul>
+<p>Per altre esigenze di disposizione delle pagine, consulta lo strumento <a href="#/nup-pdf">PDF N-Up</a> per più pagine per foglio, oppure <a href="#/reverse-pages">Inverti Pagine</a> per invertire l'ordine delle pagine.</p>`,date:"2026-03-10",tool:"booklet-pdf",tags:["opuscolo","stampa","duplex","piegatura"]}];export{i as blogPostsIt};

@@ -1023,4 +1023,32 @@ export const blogPostsCs: BlogPost[] = [
         tool: 'pdf-to-epub',
         tags: ['epub', 'ekniha', 'prevod', 'kindle'],
     },
+    {
+        slug: 'create-pdf-booklet-for-printing',
+        lang: 'cs',
+        title: 'Jak vytvořit PDF brožuru pro oboustranný tisk',
+        excerpt: 'Přeuspořádejte stránky PDF pro brožurový tisk s vazbou V1. Tiskněte oboustranně, přeložte napůl a sešijte pro vytvoření profesionální brožury.',
+        body: `<p>Vytvoření brožury z PDF znamená přeuspořádání stránek tak, aby se při oboustranném tisku a přeložení napůl zobrazily ve správném pořadí čtení.</p>
+<h2>Co je brožurový tisk?</h2>
+<p>Brožurový tisk (neboli vazba V1) umístí dvě stránky vedle sebe na každou stranu listu. Po vytištění listy přeložíte napůl a sešijete podél hřbetu, čímž vytvoříte kompaktní brožuru.</p>
+<h2>Jak to funguje</h2>
+<p>Nástroj <a href="#/booklet-pdf">PDF brožura</a> automaticky přeuspořádá vaše stránky do správného pořadí pro brožuru. Například 8stránkový dokument se přeuspořádá tak, aby se stránky vytiskly v pořadí potřebném pro skládání.</p>
+<h2>Postup krok za krokem</h2>
+<ol>
+<li>Nahrajte svůj PDF dokument</li>
+<li>Klikněte na "Vytvořit brožuru" — stránky se automaticky přeuspořádají</li>
+<li>Vytiskněte výsledek oboustranně (duplexně) na své tiskárně</li>
+<li>Přeložte vytištěné listy napůl a sešijte podél přeložení</li>
+</ol>
+<h2>Tipy</h2>
+<ul>
+<li>Nástroj automaticky doplní váš dokument na násobek 4 stránek</li>
+<li>Pro nejlepší výsledky použijte papír A4 nebo Letter</li>
+<li>Nastavte tiskárnu na "překlápění přes krátkou hranu" pro správný oboustranný tisk</li>
+</ul>
+<p>Pro další potřeby uspořádání stránek vyzkoušejte nástroj <a href="#/nup-pdf">N-Up PDF</a> pro více stránek na list nebo <a href="#/reverse-pages">Obrátit stránky</a> pro obrácení pořadí stránek.</p>`,
+        date: '2026-03-10',
+        tool: 'booklet-pdf',
+        tags: ['brozura', 'tisk', 'duplexni', 'skladani'],
+    },
 ];

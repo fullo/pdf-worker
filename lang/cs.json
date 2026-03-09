@@ -561,5 +561,20 @@
     "tools.pdf-to-epub.step_2": "Klikněte na Převést na EPUB.",
     "tools.pdf-to-epub.step_3": "Stáhněte soubor EPUB.",
     "tools.pdf-to-epub.faq_1_q": "Funguje to se skenovanými PDF?",
-    "tools.pdf-to-epub.faq_1_a": "Ne. Tento nástroj extrahuje vložený text. Skenované PDF nejprve potřebují OCR, aby byl text dostupný."
+    "tools.pdf-to-epub.faq_1_a": "Ne. Tento nástroj extrahuje vložený text. Skenované PDF nejprve potřebují OCR, aby byl text dostupný.",
+
+    "tools.booklet-pdf.name": "PDF brožura",
+    "tools.booklet-pdf.description": "Přeuspořádejte stránky pro oboustranný tisk brožury. Přeložte a sešijte do brožury.",
+    "tool.booklet.action": "Vytvořit brožuru",
+    "tools.booklet-pdf.how_title": "Jak vytvořit PDF brožuru",
+    "tools.booklet-pdf.how_text": "Nahrajte PDF a nástroj automaticky přeuspořádá stránky pro tisk brožury (saddle-stitch). Vytiskněte oboustranně, přeložte napůl a sešijte.",
+    "tools.booklet-pdf.step_1": "Nahrajte soubor PDF.",
+    "tools.booklet-pdf.step_2": "Stránky se automaticky přeuspořádají do formátu brožury.",
+    "tools.booklet-pdf.step_3": "Stáhněte přeuspořádaný PDF a vytiskněte oboustranně.",
+    "tools.booklet-pdf.faq_1_q": "Kolik stránek může mít můj PDF?",
+    "tools.booklet-pdf.faq_1_a": "Libovolný počet stránek. Nástroj automaticky přidá prázdné stránky k nejbližšímu násobku 4.",
+    "tools.booklet-pdf.faq_2_q": "Jak mám vytisknout výsledek?",
+    "tools.booklet-pdf.faq_2_a": "Vytiskněte výsledek v oboustranném režimu (duplex) s otáčením na krátké straně. Poté přeložte všechny listy napůl a sešijte uprostřed.",
+    "tools.booklet-pdf.faq_3_q": "Změní se velikosti stránek?",
+    "tools.booklet-pdf.faq_3_a": "Ne. Stránky si zachovají své původní rozměry. Jsou pouze přeuspořádány ve správném pořadí pro složení brožury."
 }

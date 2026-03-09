@@ -1023,4 +1023,32 @@ export const blogPostsSl: BlogPost[] = [
         tool: 'pdf-to-epub',
         tags: ['epub', 'e-knjiga', 'pretvorba', 'kindle'],
     },
+    {
+        slug: 'create-pdf-booklet-for-printing',
+        lang: 'sl',
+        title: 'Kako ustvariti PDF-knjižico za obojestransko tiskanje',
+        excerpt: 'Prerazporedite strani PDF za tiskanje knjižice s šivanjem na hrbet. Natisnite obojestransko, prepognite na pol in spnite za profesionalno knjižico.',
+        body: `<p>Ustvarjanje knjižice iz PDF pomeni prerazporeditev strani, tako da se ob obojestranskemtiskanju in prepognitvi na pol prikažejo v pravilnem bralnem vrstnem redu.</p>
+<h2>Kaj je tiskanje knjižice?</h2>
+<p>Tiskanje knjižice (ali šivanje na hrbet) postavi dve strani eno ob drugo na vsako stran lista. Po tiskanju liste prepognete na pol in spnete vzdolž hrbta, da ustvarite kompaktno knjižico.</p>
+<h2>Kako deluje</h2>
+<p>Orodje <a href="#/booklet-pdf">PDF-knjižica</a> samodejno prerazporedi vaše strani v pravilen vrstni red za knjižico. Na primer, 8-stranski dokument se prerazporedi, tako da se strani natisnejo v vrstnem redu, potrebnem za prepogibanje.</p>
+<h2>Po korakih</h2>
+<ol>
+<li>Naložite svoj PDF-dokument</li>
+<li>Kliknite "Ustvari knjižico" — strani se samodejno prerazporedijo</li>
+<li>Natisnite rezultat obojestransko (dupleks) na svojem tiskalniku</li>
+<li>Prepognite natisnjene liste na pol in jih spnite vzdolž pregiba</li>
+</ol>
+<h2>Nasveti</h2>
+<ul>
+<li>Orodje samodejno dopolni vaš dokument na večkratnik 4 strani</li>
+<li>Za najboljše rezultate uporabite papir A4 ali Letter</li>
+<li>Tiskalnik nastavite na "obrat po kratkem robu" za pravilno obojestransko tiskanje</li>
+</ul>
+<p>Za druge potrebe razporeditve strani preizkusite orodje <a href="#/nup-pdf">N-Up PDF</a> za več strani na list ali <a href="#/reverse-pages">Obrni strani</a> za obrnitev vrstnega reda strani.</p>`,
+        date: '2026-03-10',
+        tool: 'booklet-pdf',
+        tags: ['knjizica', 'tiskanje', 'dupleks', 'prepogibanje'],
+    },
 ];

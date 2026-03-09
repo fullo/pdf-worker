@@ -540,4 +540,22 @@ const e=[{slug:"hoe-pdf-bestanden-online-samenvoegen",lang:"nl",title:"Hoe PDF-b
 <p>De <a href="#/pdf-to-epub">PDF naar EPUB tool</a> extraheert tekstinhoud van elke PDF-pagina en verpakt deze in een geldig EPUB 3-bestand met correcte hoofdstuknavigatie, inhoudsopgave en opmaak.</p>
 <h2>Beste Resultaten</h2>
 <p>Deze tool werkt het best met tekst-zware PDF's. Voor gescande documenten (PDF's die alleen uit afbeeldingen bestaan), voer eerst de <a href="#/ocr-pdf">OCR tool</a> uit om de tekst te extraheren en converteer daarna naar EPUB.</p>
-<p>De resulterende EPUB bevat een inhoudsopgave met één item per originele pagina, waardoor het eenvoudig is om door het geconverteerde document te navigeren.</p>`,date:"2026-03-10",tool:"pdf-to-epub",tags:["epub","ebook","converteren","kindle"]}];export{e as blogPostsNl};
+<p>De resulterende EPUB bevat een inhoudsopgave met één item per originele pagina, waardoor het eenvoudig is om door het geconverteerde document te navigeren.</p>`,date:"2026-03-10",tool:"pdf-to-epub",tags:["epub","ebook","converteren","kindle"]},{slug:"create-pdf-booklet-for-printing",lang:"nl",title:"Een PDF-boekje Maken voor Dubbelzijdig Afdrukken",excerpt:"Herschik PDF-pagina's voor zadelsteek-boekjesdruk. Druk dubbelzijdig af, vouw dubbel en niet vast om een professioneel boekje te maken.",body:`<p>Een boekje maken van een PDF betekent dat je de pagina's herschikt zodat ze bij dubbelzijdig afdrukken en dubbelvouwen in de juiste leesvolgorde verschijnen.</p>
+<h2>Wat Is Boekjesdruk?</h2>
+<p>Bij boekjesdruk (of zadelsteek) worden twee pagina's naast elkaar op elke zijde van een vel geplaatst. Na het afdrukken vouw je de vellen dubbel en niet je ze langs de rug om een compact boekje te maken.</p>
+<h2>Hoe Het Werkt</h2>
+<p>De <a href="#/booklet-pdf">PDF-boekjestool</a> herschikt je pagina's automatisch in de juiste boekjesvolgorde. Bijvoorbeeld, een document van 8 pagina's wordt zo herschikt dat de pagina's in de juiste volgorde voor vouwen worden afgedrukt.</p>
+<h2>Stap voor Stap</h2>
+<ol>
+<li>Upload je PDF-document</li>
+<li>Klik op "Boekje Maken" — pagina's worden automatisch herschikt</li>
+<li>Druk het resultaat dubbelzijdig (duplex) af op je printer</li>
+<li>Vouw de afgedrukte vellen dubbel en niet ze langs de vouw</li>
+</ol>
+<h2>Tips</h2>
+<ul>
+<li>De tool vult je document automatisch aan tot een veelvoud van 4 pagina's</li>
+<li>Gebruik A4- of Letter-papier voor de beste resultaten</li>
+<li>Stel je printer in op "omslaan over korte zijde" voor correct dubbelzijdig afdrukken</li>
+</ul>
+<p>Voor andere pagina-indelingsbehoeften, bekijk de <a href="#/nup-pdf">N-Up PDF</a>-tool voor meerdere pagina's per vel, of <a href="#/reverse-pages">Pagina's Omkeren</a> om de paginavolgorde om te draaien.</p>`,date:"2026-03-10",tool:"booklet-pdf",tags:["boekje","afdrukken","duplex","vouwen"]}];export{e as blogPostsNl};

@@ -133,6 +133,7 @@ const toolConfig = computed(() => {
         'invert-colors': { accept: '.pdf', multiple: true, color: 'bg-gray-500', bgColor: 'bg-gray-100' },
         'repair-pdf': { accept: '.pdf', multiple: true, color: 'bg-red-500', bgColor: 'bg-red-50' },
         'pdf-to-epub': { accept: '.pdf', multiple: true, color: 'bg-violet-500', bgColor: 'bg-violet-50' },
+        'booklet-pdf': { accept: '.pdf', multiple: true, color: 'bg-rose-500', bgColor: 'bg-rose-50' },
     };
     return configs[props.tool] ?? configs['merge-pdf'];
 });
@@ -251,6 +252,7 @@ const actionLabel = computed(() => {
         'invert-colors': 'tool.invert.action',
         'repair-pdf': 'tool.repair.action',
         'pdf-to-epub': 'tool.pdftoepub.action',
+        'booklet-pdf': 'tool.booklet.action',
     };
     return trans(labels[props.tool] ?? 'tool.process');
 });
@@ -263,6 +265,7 @@ const batchEligibleTools = [
     'edit-metadata',
     'pdf-to-webp', 'nup-pdf', 'add-blank-page', 'remove-blank-pages',
     'ocr-pdf', 'reverse-pages', 'invert-colors', 'repair-pdf', 'pdf-to-epub',
+    'booklet-pdf',
 ];
 const isBatchMode = computed(() =>
     batchEligibleTools.includes(props.tool) && files.value.length > 1
@@ -362,6 +365,10 @@ async function processSingleFile(
         case 'reverse-pages': {
             const blob = await runInWorker('reverse-pages', [file], {}, onProgress) as Blob;
             return { name: `reversed_${file.name}`, blob };
+        }
+        case 'booklet-pdf': {
+            const blob = await runInWorker('booklet-pdf', [file], {}, onProgress) as Blob;
+            return { name: `booklet_${file.name}`, blob };
         }
         case 'invert-colors': {
             const blob = await runInWorker('invert-colors', [file], {}, onProgress) as Blob;
@@ -611,6 +618,11 @@ async function process() {
                     setResult(blob, `reversed_${rawFiles[0].name}`);
                     break;
                 }
+                case 'booklet-pdf': {
+                    const blob = await runInWorker('booklet-pdf', rawFiles, {}, updateProgress) as Blob;
+                    setResult(blob, `booklet_${rawFiles[0].name}`);
+                    break;
+                }
                 case 'invert-colors': {
                     const blob = await runInWorker('invert-colors', rawFiles, {}, updateProgress) as Blob;
                     setResult(blob, `inverted_${rawFiles[0].name}`);
@@ -678,7 +690,7 @@ function onAddMoreFiles(event: Event) {
 
 // Tools that don't need extra options panel
 const noOptionsTools = ['merge-pdf', 'extract-images', 'grayscale-pdf', 'flatten-pdf', 'pdf-to-text',
-    'remove-blank-pages', 'reverse-pages', 'invert-colors', 'repair-pdf', 'pdf-to-epub', 'compare-pdf'];
+    'remove-blank-pages', 'reverse-pages', 'invert-colors', 'repair-pdf', 'pdf-to-epub', 'compare-pdf', 'booklet-pdf'];
 
 // Text-input tools (no file upload)
 const isTextInputTool = computed(() => props.tool === 'markdown-to-pdf' || props.tool === 'text-to-pdf');

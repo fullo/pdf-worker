@@ -548,4 +548,22 @@ const e=[{slug:"pdf-dateien-online-zusammenfuehren",lang:"de",title:"PDF-Dateien
 <p>Das <a href="#/pdf-to-epub">PDF-zu-EPUB-Tool</a> extrahiert Textinhalte aus jeder PDF-Seite und verpackt sie in eine gültige EPUB-3-Datei mit korrekter Kapitelnavigation, Inhaltsverzeichnis und Formatierung.</p>
 <h2>Beste Ergebnisse</h2>
 <p>Dieses Tool funktioniert am besten mit textlastigen PDFs. Für gescannte Dokumente (rein bildbasierte PDFs) führen Sie zuerst das <a href="#/ocr-pdf">OCR-Tool</a> aus, um den Text zu extrahieren, und wandeln Sie dann in EPUB um.</p>
-<p>Das resultierende EPUB enthält ein Inhaltsverzeichnis mit einem Eintrag pro Originalseite, was die Navigation im konvertierten Dokument erleichtert.</p>`,date:"2026-03-10",tool:"pdf-to-epub",tags:["epub","ebook","umwandeln","kindle"]}];export{e as blogPostsDe};
+<p>Das resultierende EPUB enthält ein Inhaltsverzeichnis mit einem Eintrag pro Originalseite, was die Navigation im konvertierten Dokument erleichtert.</p>`,date:"2026-03-10",tool:"pdf-to-epub",tags:["epub","ebook","umwandeln","kindle"]},{slug:"create-pdf-booklet-for-printing",lang:"de",title:"PDF-Broschure fur den beidseitigen Druck erstellen",excerpt:"PDF-Seiten fur den Ruckstich-Broschurendruck neu anordnen. Beidseitig drucken, in der Mitte falten und heften, um eine professionelle Broschure zu erstellen.",body:`<p>Eine Broschure aus einem PDF zu erstellen bedeutet, die Seiten so umzuordnen, dass sie beim beidseitigen Druck und Falten in der Mitte in der richtigen Lesereihenfolge erscheinen.</p>
+<h2>Was ist Broschurendruck?</h2>
+<p>Beim Broschurendruck (oder Ruckstich-Druck) werden zwei Seiten nebeneinander auf jede Seite eines Blattes gedruckt. Nach dem Drucken falten Sie die Blatter in der Mitte und heften sie am Rucken, um eine kompakte Broschure zu erstellen.</p>
+<h2>So funktioniert es</h2>
+<p>Das <a href="#/booklet-pdf">PDF-Broschure-Tool</a> ordnet Ihre Seiten automatisch in die richtige Broschuren-Reihenfolge um. Zum Beispiel wird ein 8-seitiges Dokument so umgeordnet, dass die Seiten in der zum Falten benotigten Reihenfolge gedruckt werden.</p>
+<h2>Schritt fur Schritt</h2>
+<ol>
+<li>Laden Sie Ihr PDF-Dokument hoch</li>
+<li>Klicken Sie auf „Broschure erstellen" — die Seiten werden automatisch neu angeordnet</li>
+<li>Drucken Sie das Ergebnis beidseitig (Duplex) auf Ihrem Drucker</li>
+<li>Falten Sie die gedruckten Blatter in der Mitte und heften Sie entlang der Falte</li>
+</ol>
+<h2>Tipps</h2>
+<ul>
+<li>Das Tool erganzt Ihr Dokument automatisch auf ein Vielfaches von 4 Seiten</li>
+<li>Verwenden Sie A4- oder Letter-Papier fur beste Ergebnisse</li>
+<li>Stellen Sie Ihren Drucker auf „an kurzer Kante spiegeln" fur korrekten beidseitigen Druck</li>
+</ul>
+<p>Fur andere Seitenanordnungswunsche schauen Sie sich das <a href="#/nup-pdf">N-Up PDF</a>-Tool fur mehrere Seiten pro Blatt an, oder <a href="#/reverse-pages">Seiten umkehren</a>, um die Seitenreihenfolge umzudrehen.</p>`,date:"2026-03-10",tool:"booklet-pdf",tags:["broschure","drucken","duplex","falten"]}];export{e as blogPostsDe};

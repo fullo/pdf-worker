@@ -561,5 +561,20 @@
     "tools.pdf-to-epub.step_2": "Klik op Converteren naar EPUB.",
     "tools.pdf-to-epub.step_3": "Download het EPUB-bestand.",
     "tools.pdf-to-epub.faq_1_q": "Werkt dit met gescande PDF-bestanden?",
-    "tools.pdf-to-epub.faq_1_a": "Nee. Deze tool extraheert ingebedde tekst. Gescande PDF-bestanden hebben eerst OCR nodig om de tekst beschikbaar te maken."
+    "tools.pdf-to-epub.faq_1_a": "Nee. Deze tool extraheert ingebedde tekst. Gescande PDF-bestanden hebben eerst OCR nodig om de tekst beschikbaar te maken.",
+
+    "tools.booklet-pdf.name": "PDF-boekje",
+    "tools.booklet-pdf.description": "Herschik pagina's voor dubbelzijdig boekje afdrukken. Vouw en niet voor een boekje.",
+    "tool.booklet.action": "Boekje maken",
+    "tools.booklet-pdf.how_title": "Hoe een PDF-boekje maken",
+    "tools.booklet-pdf.how_text": "Upload uw PDF en de tool herschikt automatisch de pagina's voor boekjesafdruk (saddle-stitch). Druk dubbelzijdig af, vouw dubbel en niet.",
+    "tools.booklet-pdf.step_1": "Upload een PDF-bestand.",
+    "tools.booklet-pdf.step_2": "De pagina's worden automatisch herschikt voor boekjesformaat.",
+    "tools.booklet-pdf.step_3": "Download de herschikte PDF en druk dubbelzijdig af.",
+    "tools.booklet-pdf.faq_1_q": "Hoeveel pagina's mag mijn PDF hebben?",
+    "tools.booklet-pdf.faq_1_a": "Eender welk aantal. De tool voegt automatisch blanco pagina's toe tot het dichtstbijzijnde veelvoud van 4.",
+    "tools.booklet-pdf.faq_2_q": "Hoe druk ik het resultaat af?",
+    "tools.booklet-pdf.faq_2_a": "Druk het resultaat af in dubbelzijdige modus (duplex) met omslaan op de korte zijde. Vouw daarna alle vellen dubbel en niet in het midden.",
+    "tools.booklet-pdf.faq_3_q": "Veranderen de paginaformaten?",
+    "tools.booklet-pdf.faq_3_a": "Nee. De pagina's behouden hun originele afmetingen. Ze worden enkel herschikt in de juiste volgorde voor de boekjesvouw."
 }

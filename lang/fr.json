@@ -597,5 +597,19 @@
     "tools.pdf-to-epub.step_2": "Cliquez sur Convertir en EPUB.",
     "tools.pdf-to-epub.step_3": "Téléchargez le fichier EPUB.",
     "tools.pdf-to-epub.faq_1_q": "Cela fonctionne-t-il avec les PDF numérisés ?",
-    "tools.pdf-to-epub.faq_1_a": "Non. Cet outil extrait le texte intégré. Les PDF numérisés nécessitent d'abord un OCR pour rendre le texte disponible."
+    "tools.pdf-to-epub.faq_1_a": "Non. Cet outil extrait le texte intégré. Les PDF numérisés nécessitent d'abord un OCR pour rendre le texte disponible.",
+    "tools.booklet-pdf.name": "Livret PDF",
+    "tools.booklet-pdf.description": "Réorganise les pages pour l'impression recto verso en livret. Pliez et agrafez pour créer un livret.",
+    "tool.booklet.action": "Créer un Livret",
+    "tools.booklet-pdf.how_title": "Comment créer un livret PDF",
+    "tools.booklet-pdf.how_text": "Téléchargez votre PDF et l'outil réorganisera automatiquement les pages pour l'impression en livret (piqûre à cheval). Imprimez recto verso, pliez en deux et agrafez.",
+    "tools.booklet-pdf.step_1": "Téléchargez votre fichier PDF",
+    "tools.booklet-pdf.step_2": "Les pages sont automatiquement réorganisées au format livret",
+    "tools.booklet-pdf.step_3": "Téléchargez le PDF réorganisé et imprimez-le recto verso",
+    "tools.booklet-pdf.faq_1_q": "Combien de pages mon PDF peut-il avoir ?",
+    "tools.booklet-pdf.faq_1_a": "N'importe quel nombre de pages. L'outil ajoute automatiquement des pages vierges pour arrondir au multiple de 4 le plus proche.",
+    "tools.booklet-pdf.faq_2_q": "Comment dois-je imprimer le résultat ?",
+    "tools.booklet-pdf.faq_2_a": "Imprimez le fichier résultant en mode recto verso (duplex) avec retournement sur le côté court. Puis pliez toutes les feuilles en deux et agrafez au centre.",
+    "tools.booklet-pdf.faq_3_q": "Les dimensions des pages changent-elles ?",
+    "tools.booklet-pdf.faq_3_a": "Non. Les pages conservent leurs dimensions d'origine. Elles sont simplement réorganisées dans l'ordre correct pour le pliage en livret."
 }

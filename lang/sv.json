@@ -561,5 +561,19 @@
     "tools.pdf-to-epub.step_2": "Klicka på Konvertera till EPUB.",
     "tools.pdf-to-epub.step_3": "Ladda ner EPUB-filen.",
     "tools.pdf-to-epub.faq_1_q": "Fungerar detta med skannade PDF-filer?",
-    "tools.pdf-to-epub.faq_1_a": "Nej. Detta verktyg extraherar inbäddad text. Skannade PDF-filer behöver OCR först för att göra texten tillgänglig."
+    "tools.pdf-to-epub.faq_1_a": "Nej. Detta verktyg extraherar inbäddad text. Skannade PDF-filer behöver OCR först för att göra texten tillgänglig.",
+    "tools.booklet-pdf.name": "PDF-häfte",
+    "tools.booklet-pdf.description": "Ordna om sidor för dubbelsidig häftesutskrift. Vik och häfta för att skapa ett häfte.",
+    "tool.booklet.action": "Skapa häfte",
+    "tools.booklet-pdf.how_title": "Hur man skapar ett PDF-häfte",
+    "tools.booklet-pdf.how_text": "Ladda upp din PDF och verktyget ordnar automatiskt om sidorna för häftesutskrift (sadelhäftning). Skriv ut dubbelsidigt, vik på mitten och häfta.",
+    "tools.booklet-pdf.step_1": "Ladda upp din PDF-fil",
+    "tools.booklet-pdf.step_2": "Sidorna ordnas automatiskt om till häftesformat",
+    "tools.booklet-pdf.step_3": "Ladda ner den omordnade PDF-filen och skriv ut dubbelsidigt",
+    "tools.booklet-pdf.faq_1_q": "Hur många sidor kan min PDF ha?",
+    "tools.booklet-pdf.faq_1_a": "Valfritt antal sidor. Verktyget lägger automatiskt till tomma sidor för att avrunda till närmaste multipel av 4.",
+    "tools.booklet-pdf.faq_2_q": "Hur ska jag skriva ut resultatet?",
+    "tools.booklet-pdf.faq_2_a": "Skriv ut den resulterande filen i dubbelsidigt läge (duplex) med vändning på kortsidan. Vik sedan alla ark på mitten och häfta i mitten.",
+    "tools.booklet-pdf.faq_3_q": "Ändras sidornas dimensioner?",
+    "tools.booklet-pdf.faq_3_a": "Nej. Sidorna behåller sina ursprungliga dimensioner. De ordnas bara om i rätt ordning för häftesvikning."
 }

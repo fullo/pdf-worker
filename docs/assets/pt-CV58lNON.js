@@ -548,4 +548,22 @@ const a=[{slug:"como-juntar-ficheiros-pdf-online",lang:"pt",title:"Como Juntar F
 <p>A ferramenta <a href="#/pdf-to-epub">PDF para EPUB</a> extrai o conteúdo de texto de cada página do PDF e empacota-o num ficheiro EPUB 3 válido com navegação por capítulos, índice e estilos adequados.</p>
 <h2>Melhores Resultados</h2>
 <p>Esta ferramenta funciona melhor com PDFs com muito texto. Para documentos digitalizados (PDFs apenas com imagens), execute primeiro a ferramenta <a href="#/ocr-pdf">OCR</a> para extrair o texto e depois converta para EPUB.</p>
-<p>O EPUB resultante inclui um índice com uma entrada por página original, facilitando a navegação no documento convertido.</p>`,date:"2026-03-10",tool:"pdf-to-epub",tags:["epub","ebook","convert","kindle"]}];export{a as blogPostsPt};
+<p>O EPUB resultante inclui um índice com uma entrada por página original, facilitando a navegação no documento convertido.</p>`,date:"2026-03-10",tool:"pdf-to-epub",tags:["epub","ebook","convert","kindle"]},{slug:"create-pdf-booklet-for-printing",lang:"pt",title:"Como Criar um Folheto PDF para Impressão Frente e Verso",excerpt:"Reorganize as páginas do PDF para impressão de folhetos com agrafamento central. Imprima frente e verso, dobre ao meio e agrafe para criar um folheto profissional.",body:`<p>Criar um folheto a partir de um PDF significa reorganizar as páginas para que, quando impressas em ambos os lados do papel e dobradas ao meio, apareçam na ordem correta de leitura.</p>
+<h2>O Que É a Impressão de Folhetos?</h2>
+<p>A impressão de folhetos (ou agrafamento central) coloca duas páginas lado a lado em cada face da folha. Após a impressão, dobra as folhas ao meio e agrafa ao longo da lombada para criar um folheto compacto.</p>
+<h2>Como Funciona</h2>
+<p>A ferramenta <a href="#/booklet-pdf">Folheto PDF</a> reordena automaticamente as suas páginas na sequência correta para folheto. Por exemplo, um documento de 8 páginas é reorganizado para que as páginas sejam impressas na ordem necessária para a dobragem.</p>
+<h2>Passo a Passo</h2>
+<ol>
+<li>Carregue o seu documento PDF</li>
+<li>Clique em "Criar Folheto" — as páginas são reorganizadas automaticamente</li>
+<li>Imprima o resultado em frente e verso (duplex) na sua impressora</li>
+<li>Dobre as folhas impressas ao meio e agrafe ao longo da dobra</li>
+</ol>
+<h2>Dicas</h2>
+<ul>
+<li>A ferramenta completa o seu documento para um múltiplo de 4 páginas automaticamente</li>
+<li>Use papel A4 ou Letter para melhores resultados</li>
+<li>Configure a sua impressora para "virar na margem curta" para uma impressão frente e verso correta</li>
+</ul>
+<p>Para outras necessidades de disposição de páginas, consulte a ferramenta <a href="#/nup-pdf">N-Up PDF</a> para várias páginas por folha, ou <a href="#/reverse-pages">Inverter Páginas</a> para inverter a ordem das páginas.</p>`,date:"2026-03-10",tool:"booklet-pdf",tags:["folheto","impressão","duplex","dobrar"]}];export{a as blogPostsPt};

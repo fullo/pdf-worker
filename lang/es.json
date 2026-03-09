@@ -595,5 +595,19 @@
     "tools.pdf-to-epub.step_2": "Haz clic en Convertir a EPUB.",
     "tools.pdf-to-epub.step_3": "Descarga el archivo EPUB.",
     "tools.pdf-to-epub.faq_1_q": "¿Funciona con PDF escaneados?",
-    "tools.pdf-to-epub.faq_1_a": "No. Esta herramienta extrae texto incorporado. Los PDF escaneados necesitan OCR primero para hacer el texto disponible."
+    "tools.pdf-to-epub.faq_1_a": "No. Esta herramienta extrae texto incorporado. Los PDF escaneados necesitan OCR primero para hacer el texto disponible.",
+    "tools.booklet-pdf.name": "Folleto PDF",
+    "tools.booklet-pdf.description": "Reordena las páginas para impresión a doble cara tipo folleto. Dobla y grapa para crear un folleto.",
+    "tool.booklet.action": "Crear Folleto",
+    "tools.booklet-pdf.how_title": "Cómo crear un folleto PDF",
+    "tools.booklet-pdf.how_text": "Sube tu PDF y la herramienta reordenará automáticamente las páginas para impresión tipo folleto (saddle-stitch). Imprime a doble cara, dobla por la mitad y grapa.",
+    "tools.booklet-pdf.step_1": "Sube tu archivo PDF",
+    "tools.booklet-pdf.step_2": "Las páginas se reordenan automáticamente para el formato de folleto",
+    "tools.booklet-pdf.step_3": "Descarga el PDF reordenado e imprímelo a doble cara",
+    "tools.booklet-pdf.faq_1_q": "¿Cuántas páginas puede tener mi PDF?",
+    "tools.booklet-pdf.faq_1_a": "Cualquier número de páginas. La herramienta añade automáticamente páginas en blanco para redondear al múltiplo de 4 más cercano.",
+    "tools.booklet-pdf.faq_2_q": "¿Cómo debo imprimir el resultado?",
+    "tools.booklet-pdf.faq_2_a": "Imprime el archivo resultante en modo doble cara (dúplex) con volteo por el lado corto. Luego dobla todas las hojas por la mitad y grapa en el centro.",
+    "tools.booklet-pdf.faq_3_q": "¿Cambian las dimensiones de las páginas?",
+    "tools.booklet-pdf.faq_3_a": "No. Las páginas mantienen sus dimensiones originales. Solo se reordenan en el orden correcto para el plegado tipo folleto."
 }

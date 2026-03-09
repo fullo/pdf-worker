@@ -1023,4 +1023,32 @@ export const blogPostsSv: BlogPost[] = [
         tool: 'pdf-to-epub',
         tags: ['epub', 'ebook', 'convert', 'kindle'],
     },
+    {
+        slug: 'create-pdf-booklet-for-printing',
+        lang: 'sv',
+        title: 'Skapa ett PDF-haftle for Dubbelsidigt Utskrift',
+        excerpt: 'Ordna om PDF-sidor for klammerhaftad utskrift. Skriv ut dubbelsidigt, vik pa mitten och hafta for att skapa ett professionellt haftle.',
+        body: `<p>Att skapa ett haftle fran en PDF innebar att sidorna ordnas om sa att de visas i ratt lasordning nar de skrivs ut pa bada sidor av papperet och viks pa mitten.</p>
+<h2>Vad ar Haftlesutskrift?</h2>
+<p>Haftlesutskrift (eller klammerhaftning) placerar tva sidor sida vid sida pa varje sida av ett ark. Efter utskrift viker du arken pa mitten och haftar langs ryggen for att skapa ett kompakt haftle.</p>
+<h2>Hur det Fungerar</h2>
+<p><a href="#/booklet-pdf">PDF-haftlesverktyget</a> ordnar automatiskt om dina sidor i ratt haftlessekvens. Till exempel ordnas ett 8-sidigt dokument om sa att sidorna skrivs ut i den ordning som kravs for vikning.</p>
+<h2>Steg for Steg</h2>
+<ol>
+<li>Ladda upp ditt PDF-dokument</li>
+<li>Klicka pa "Skapa Haftle" — sidorna ordnas om automatiskt</li>
+<li>Skriv ut resultatet dubbelsidigt (duplex) pa din skrivare</li>
+<li>Vik de utskrivna arken pa mitten och hafta langs vikningen</li>
+</ol>
+<h2>Tips</h2>
+<ul>
+<li>Verktyget fyller automatiskt pa ditt dokument till ett antal sidor delbart med 4</li>
+<li>Anvand A4- eller Letter-papper for basta resultat</li>
+<li>Stall in din skrivare pa "vand pa kortsidan" for korrekt dubbelsidig utskrift</li>
+</ul>
+<p>For andra sidlayoutbehov, kolla in <a href="#/nup-pdf">N-Up PDF</a>-verktyget for flera sidor per ark, eller <a href="#/reverse-pages">Vand Sidordning</a> for att vanda pa sidordningen.</p>`,
+        date: '2026-03-10',
+        tool: 'booklet-pdf',
+        tags: ['haftle', 'utskrift', 'duplex', 'vik'],
+    },
 ];

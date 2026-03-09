@@ -561,5 +561,20 @@
     "tools.pdf-to-epub.step_2": "Napsauta Muunna EPUB:ksi.",
     "tools.pdf-to-epub.step_3": "Lataa EPUB-tiedosto.",
     "tools.pdf-to-epub.faq_1_q": "Toimiiko tämä skannattujen PDF-tiedostojen kanssa?",
-    "tools.pdf-to-epub.faq_1_a": "Ei. Tämä työkalu poimii upotettua tekstiä. Skannatut PDF-tiedostot vaativat ensin OCR-käsittelyn tekstin saamiseksi saataville."
+    "tools.pdf-to-epub.faq_1_a": "Ei. Tämä työkalu poimii upotettua tekstiä. Skannatut PDF-tiedostot vaativat ensin OCR-käsittelyn tekstin saamiseksi saataville.",
+
+    "tools.booklet-pdf.name": "PDF-vihko",
+    "tools.booklet-pdf.description": "Järjestä sivut uudelleen kaksipuolista vihkotulostusta varten. Taita ja nido vihkoksi.",
+    "tool.booklet.action": "Luo vihko",
+    "tools.booklet-pdf.how_title": "Kuinka luoda PDF-vihko",
+    "tools.booklet-pdf.how_text": "Lataa PDF-tiedosto ja työkalu järjestää sivut automaattisesti vihkotulostusta (saddle-stitch) varten. Tulosta kaksipuolisesti, taita puoliksi ja nido.",
+    "tools.booklet-pdf.step_1": "Lataa PDF-tiedosto.",
+    "tools.booklet-pdf.step_2": "Sivut järjestetään automaattisesti vihkomuotoon.",
+    "tools.booklet-pdf.step_3": "Lataa uudelleenjärjestetty PDF ja tulosta kaksipuolisesti.",
+    "tools.booklet-pdf.faq_1_q": "Kuinka monta sivua PDF-tiedostossani voi olla?",
+    "tools.booklet-pdf.faq_1_a": "Mikä tahansa sivumäärä. Työkalu lisää automaattisesti tyhjiä sivuja lähimpään neljän kerrannaiseen.",
+    "tools.booklet-pdf.faq_2_q": "Miten tulostan tuloksen?",
+    "tools.booklet-pdf.faq_2_a": "Tulosta tulos kaksipuolisena (duplex) lyhyen sivun käännöllä. Taita sitten kaikki arkit puoliksi ja nido keskeltä.",
+    "tools.booklet-pdf.faq_3_q": "Muuttuvatko sivujen koot?",
+    "tools.booklet-pdf.faq_3_a": "Eivät. Sivut säilyttävät alkuperäiset mittansa. Ne vain järjestetään uudelleen oikeaan järjestykseen vihkotaitosta varten."
 }

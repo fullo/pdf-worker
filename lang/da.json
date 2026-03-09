@@ -561,5 +561,19 @@
     "tools.pdf-to-epub.step_2": "Klik paa Konverter til EPUB.",
     "tools.pdf-to-epub.step_3": "Download EPUB-filen.",
     "tools.pdf-to-epub.faq_1_q": "Virker dette med scannede PDF-filer?",
-    "tools.pdf-to-epub.faq_1_a": "Nej. Dette vaerktoej udtraekker indlejret tekst. Scannede PDF-filer kraever foerst OCR for at goere teksten tilgaengelig."
+    "tools.pdf-to-epub.faq_1_a": "Nej. Dette vaerktoej udtraekker indlejret tekst. Scannede PDF-filer kraever foerst OCR for at goere teksten tilgaengelig.",
+    "tools.booklet-pdf.name": "PDF-brochure",
+    "tools.booklet-pdf.description": "Omarranger sider til dobbeltsidet brochureudskrivning. Fold og heft for at lave en brochure.",
+    "tool.booklet.action": "Opret brochure",
+    "tools.booklet-pdf.how_title": "Saadan opretter du en PDF-brochure",
+    "tools.booklet-pdf.how_text": "Upload din PDF, og vaernktoejet omarrangerer automatisk siderne til brochureudskrivning (rygsyring). Udskriv dobbeltsidet, fold paa midten og heft.",
+    "tools.booklet-pdf.step_1": "Upload din PDF-fil",
+    "tools.booklet-pdf.step_2": "Siderne omarrangeres automatisk til brochureformat",
+    "tools.booklet-pdf.step_3": "Download den omarrangerede PDF og udskriv dobbeltsidet",
+    "tools.booklet-pdf.faq_1_q": "Hvor mange sider kan min PDF have?",
+    "tools.booklet-pdf.faq_1_a": "Et vilkaarligt antal sider. Vaernktoejet tilføjer automatisk blanke sider for at runde op til naermeste multiplum af 4.",
+    "tools.booklet-pdf.faq_2_q": "Hvordan skal jeg udskrive resultatet?",
+    "tools.booklet-pdf.faq_2_a": "Udskriv den resulterende fil i dobbeltsidet tilstand (duplex) med vending paa den korte side. Fold derefter alle ark paa midten og heft i midten.",
+    "tools.booklet-pdf.faq_3_q": "AEndres sidedimensionerne?",
+    "tools.booklet-pdf.faq_3_a": "Nej. Siderne beholder deres originale dimensioner. De omarrangeres kun i den korrekte raekkefoelge til brochurefoldning."
 }

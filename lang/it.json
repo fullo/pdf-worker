@@ -606,5 +606,19 @@
     "tools.pdf-to-epub.step_2": "Clicca Converti in EPUB.",
     "tools.pdf-to-epub.step_3": "Scarica il file EPUB.",
     "tools.pdf-to-epub.faq_1_q": "Funziona con i PDF scansionati?",
-    "tools.pdf-to-epub.faq_1_a": "No. Questo strumento estrae il testo incorporato. I PDF scansionati necessitano prima dell'OCR per rendere disponibile il testo."
+    "tools.pdf-to-epub.faq_1_a": "No. Questo strumento estrae il testo incorporato. I PDF scansionati necessitano prima dell'OCR per rendere disponibile il testo.",
+    "tools.booklet-pdf.name": "Libretto PDF",
+    "tools.booklet-pdf.description": "Riordina le pagine per la stampa fronte/retro a libretto. Piega e pinza per creare un libretto.",
+    "tool.booklet.action": "Crea Libretto",
+    "tools.booklet-pdf.how_title": "Come creare un libretto PDF",
+    "tools.booklet-pdf.how_text": "Carica il tuo PDF e lo strumento riordinerà automaticamente le pagine per la stampa a libretto (saddle-stitch). Stampa fronte/retro, piega a metà e pinza.",
+    "tools.booklet-pdf.step_1": "Carica il tuo file PDF",
+    "tools.booklet-pdf.step_2": "Le pagine vengono riordinate automaticamente per il formato libretto",
+    "tools.booklet-pdf.step_3": "Scarica il PDF riordinato e stampalo fronte/retro",
+    "tools.booklet-pdf.faq_1_q": "Quante pagine può avere il mio PDF?",
+    "tools.booklet-pdf.faq_1_a": "Qualsiasi numero di pagine. Il tool aggiunge automaticamente pagine vuote per arrotondare al multiplo di 4 più vicino.",
+    "tools.booklet-pdf.faq_2_q": "Come devo stampare il risultato?",
+    "tools.booklet-pdf.faq_2_a": "Stampa il file risultante in modalità fronte/retro (duplex) con ribaltamento sul lato corto. Poi piega tutti i fogli a metà e pinza al centro.",
+    "tools.booklet-pdf.faq_3_q": "Le dimensioni delle pagine cambiano?",
+    "tools.booklet-pdf.faq_3_a": "No. Le pagine mantengono le dimensioni originali. Vengono solo riordinate nell'ordine corretto per la piega a libretto."
 }

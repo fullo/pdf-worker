@@ -1023,4 +1023,32 @@ export const blogPostsNo: BlogPost[] = [
         tool: 'pdf-to-epub',
         tags: ['epub', 'ebok', 'konverter', 'kindle'],
     },
+    {
+        slug: 'create-pdf-booklet-for-printing',
+        lang: 'no',
+        title: 'Slik lager du et PDF-hefte for tosidig utskrift',
+        excerpt: 'Omarranger PDF-sider for sadelstomsutskrift. Skriv ut tosidig, brett i to og stift for aa lage et profesjonelt hefte.',
+        body: `<p>Aa lage et hefte fra en PDF betyr aa omarrangere sidene slik at de vises i riktig leserekkefoelje naar de skrives ut paa begge sider av papiret og brettes i to.</p>
+<h2>Hva er hefteutskrift?</h2>
+<p>Hefte- (eller sadelstomsutskrift) plasserer to sider side ved side paa hver side av et ark. Etter utskrift bretter du arkene i to og stifter langs ryggen for aa lage et kompakt hefte.</p>
+<h2>Slik fungerer det</h2>
+<p>Verktoeyet <a href="#/booklet-pdf">PDF-hefte</a> omarrangerer automatisk sidene dine i riktig hefterekkefoelje. For eksempel blir et 8-siders dokument omarrangert slik at sidene skrives ut i den rekkefoelgen som trengs for bretting.</p>
+<h2>Steg for steg</h2>
+<ol>
+<li>Last opp PDF-dokumentet ditt</li>
+<li>Klikk paa "Lag hefte" — sidene omarrangeres automatisk</li>
+<li>Skriv ut resultatet tosidig (dupleks) paa skriveren din</li>
+<li>Brett de utskrevne arkene i to og stift langs bretten</li>
+</ol>
+<h2>Tips</h2>
+<ul>
+<li>Verktoeyet fyller automatisk dokumentet til et multiplum av 4 sider</li>
+<li>Bruk A4- eller Letter-papir for beste resultater</li>
+<li>Still skriveren til "vend paa kort kant" for korrekt tosidig utskrift</li>
+</ul>
+<p>For andre sidearrangeringsbehov kan du proeve verktoeyet <a href="#/nup-pdf">N-Up PDF</a> for flere sider per ark, eller <a href="#/reverse-pages">Reverser sider</a> for aa snu siderekkefoeljen.</p>`,
+        date: '2026-03-10',
+        tool: 'booklet-pdf',
+        tags: ['hefte', 'utskrift', 'dupleks', 'brett'],
+    },
 ];

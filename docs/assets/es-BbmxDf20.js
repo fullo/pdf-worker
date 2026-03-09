@@ -548,4 +548,22 @@ const a=[{slug:"como-combinar-archivos-pdf-en-linea",lang:"es",title:"Como combi
 <p>La herramienta <a href="#/pdf-to-epub">PDF a EPUB</a> extrae el contenido de texto de cada pagina del PDF y lo empaqueta en un archivo EPUB 3 valido con navegacion por capitulos, tabla de contenidos y estilos adecuados.</p>
 <h2>Mejores resultados</h2>
 <p>Esta herramienta funciona mejor con PDFs que contienen mucho texto. Para documentos escaneados (PDFs solo de imagen), ejecuta primero la herramienta <a href="#/ocr-pdf">OCR</a> para extraer el texto y luego convierte a EPUB.</p>
-<p>El EPUB resultante incluye una tabla de contenidos con una entrada por pagina original, facilitando la navegacion del documento convertido.</p>`,date:"2026-03-10",tool:"pdf-to-epub",tags:["epub","libro-electronico","convertir","kindle"]}];export{a as blogPostsEs};
+<p>El EPUB resultante incluye una tabla de contenidos con una entrada por pagina original, facilitando la navegacion del documento convertido.</p>`,date:"2026-03-10",tool:"pdf-to-epub",tags:["epub","libro-electronico","convertir","kindle"]},{slug:"create-pdf-booklet-for-printing",lang:"es",title:"Como crear un folleto PDF para impresion a doble cara",excerpt:"Reordena las paginas del PDF para impresion en folleto con grapa. Imprime a doble cara, dobla por la mitad y grapa para crear un folleto profesional.",body:`<p>Crear un folleto a partir de un PDF significa reordenar las paginas para que, al imprimirlas en ambas caras del papel y doblarlas por la mitad, aparezcan en el orden de lectura correcto.</p>
+<h2>Que es la impresion en folleto?</h2>
+<p>La impresion en folleto (o a caballete) coloca dos paginas una al lado de la otra en cada cara de la hoja. Despues de imprimir, se doblan las hojas por la mitad y se grapan a lo largo del lomo para crear un folleto compacto.</p>
+<h2>Como funciona</h2>
+<p>La herramienta <a href="#/booklet-pdf">Folleto PDF</a> reordena automaticamente las paginas en la secuencia correcta para el folleto. Por ejemplo, un documento de 8 paginas se reorganiza para que las paginas se impriman en el orden necesario para el plegado.</p>
+<h2>Paso a paso</h2>
+<ol>
+<li>Sube tu documento PDF</li>
+<li>Haz clic en "Crear Folleto" — las paginas se reordenan automaticamente</li>
+<li>Imprime el resultado a doble cara (duplex) en tu impresora</li>
+<li>Dobla las hojas impresas por la mitad y grapa a lo largo del pliegue</li>
+</ol>
+<h2>Consejos</h2>
+<ul>
+<li>La herramienta completa automaticamente el documento a un multiplo de 4 paginas</li>
+<li>Usa papel A4 o Carta para mejores resultados</li>
+<li>Configura tu impresora en "voltear por el borde corto" para una correcta impresion a doble cara</li>
+</ul>
+<p>Para otras necesidades de disposicion de paginas, consulta la herramienta <a href="#/nup-pdf">PDF N-Up</a> para multiples paginas por hoja, o <a href="#/reverse-pages">Invertir Paginas</a> para invertir el orden de las paginas.</p>`,date:"2026-03-10",tool:"booklet-pdf",tags:["folleto","imprimir","duplex","plegar"]}];export{a as blogPostsEs};
