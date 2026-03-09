@@ -27,6 +27,17 @@ import { pdfToText } from '@/Services/pdf/pdfToText';
 import { editPdf } from '@/Services/pdf/editPdf';
 import { markdownToPdf } from '@/Services/pdf/markdownToPdf';
 import { editMetadata, type MetadataOptions } from '@/Services/pdf/editMetadata';
+import { pdfToWebp } from '@/Services/pdf/pdfToWebp';
+import { nupPdf, type NupLayout } from '@/Services/pdf/nup';
+import { addBlankPage, type InsertPosition } from '@/Services/pdf/addBlankPage';
+import { removeBlankPages } from '@/Services/pdf/removeBlankPages';
+import { ocrPdf } from '@/Services/pdf/ocrPdf';
+import { comparePdf } from '@/Services/pdf/comparePdf';
+import { textToPdf } from '@/Services/pdf/textToPdf';
+import { reversePages } from '@/Services/pdf/reversePages';
+import { invertColors } from '@/Services/pdf/invertColors';
+import { repairPdf } from '@/Services/pdf/repairPdf';
+import { pdfToEpub } from '@/Services/pdf/pdfToEpub';
 
 self.onmessage = async (e: MessageEvent) => {
     const { id, tool, files, options } = e.data;
@@ -133,6 +144,50 @@ self.onmessage = async (e: MessageEvent) => {
 
             case 'edit-metadata':
                 result = await editMetadata(files[0], options as MetadataOptions, onProgress);
+                break;
+
+            case 'pdf-to-webp':
+                result = await pdfToWebp(files[0], options, onProgress);
+                break;
+
+            case 'nup-pdf':
+                result = await nupPdf(files[0], options.layout as NupLayout, onProgress);
+                break;
+
+            case 'add-blank-page':
+                result = await addBlankPage(files[0], options.position as InsertPosition, onProgress);
+                break;
+
+            case 'remove-blank-pages':
+                result = await removeBlankPages(files[0], onProgress);
+                break;
+
+            case 'ocr-pdf':
+                result = await ocrPdf(files[0], options.language as string, onProgress);
+                break;
+
+            case 'compare-pdf':
+                result = await comparePdf(files[0], files[1], onProgress);
+                break;
+
+            case 'text-to-pdf':
+                result = await textToPdf(options.text as string, onProgress);
+                break;
+
+            case 'reverse-pages':
+                result = await reversePages(files[0], onProgress);
+                break;
+
+            case 'invert-colors':
+                result = await invertColors(files[0], onProgress);
+                break;
+
+            case 'repair-pdf':
+                result = await repairPdf(files[0], onProgress);
+                break;
+
+            case 'pdf-to-epub':
+                result = await pdfToEpub(files[0], onProgress);
                 break;
 
             default:

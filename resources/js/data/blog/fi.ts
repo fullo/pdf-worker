@@ -770,4 +770,257 @@ export const blogPostsFi: BlogPost[] = [
         tool: 'edit-metadata',
         tags: ['metadata', 'properties', 'edit', 'privacy'],
     },
+    {
+        slug: 'pdf-muuntaminen-webp-moderni-formaatti',
+        lang: 'fi',
+        title: 'PDF:n muuntaminen WebP-muotoon: moderni kuvaformaatti',
+        excerpt: 'Muunna PDF-sivut WebP-kuviksi ylivertaisen pakkauksen ja laadun saavuttamiseksi. Ihanteellinen verkkokäyttöön, nopeampaan lataukseen ja pienempiin tiedostokokoihin kuin JPG tai PNG.',
+        body: `<p>WebP on Googlen kehittämä moderni kuvaformaatti, joka tarjoaa ylivertaisen häviöttömän ja häviöllisen pakkauksen verkkokuville. PDF-tiedostojen muuntaminen WebP-muotoon antaa pienempiä tiedostoja vastaavalla laadulla.</p>
+<h2>Miksi valita WebP?</h2>
+<ul>
+<li><strong>Pienemmät tiedostot</strong> — WebP-kuvat ovat tyypillisesti 25-35 % pienempiä kuin JPG vastaavalla laadulla</li>
+<li><strong>Parempi laatu</strong> — samalla tiedostokoolla WebP tarjoaa terävämpiä kuvia vähemmillä artefakteilla</li>
+<li><strong>Laaja tuki</strong> — kaikki suuret selaimet (Chrome, Firefox, Safari, Edge) tukevat WebP-muotoa</li>
+</ul>
+<h2>Kuinka muuntaa</h2>
+<p><a href="#/pdf-to-webp">PDF WebP:ksi -työkalu</a> antaa säätää laatuliukusäädintä tiedostokoon ja kuvan selkeyden tasapainottamiseksi. Jokainen PDF-sivu muuttuu erilliseksi WebP-tiedostoksi.</p>
+<h2>Milloin käyttää WebP vs JPG vs PNG</h2>
+<p>Valitse WebP verkkojulkaisuun, jossa tiedostokoko on tärkeä. Käytä <a href="#/pdf-to-jpg">JPG:tä</a> maksimaalisen yhteensopivuuden saavuttamiseksi vanhemman ohjelmiston kanssa. Käytä <a href="#/pdf-to-png">PNG:tä</a>, kun tarvitset läpinäkyviä taustoja tai häviötöntä laatua.</p>`,
+        date: '2026-03-10',
+        tool: 'pdf-to-webp',
+        tags: ['webp', 'muuntaminen', 'moderni', 'verkko'],
+    },
+    {
+        slug: 'nup-pdf-useita-sivuja-yhdelle-arkille',
+        lang: 'fi',
+        title: 'Useiden PDF-sivujen tulostaminen yhdelle arkille (N-Up)',
+        excerpt: 'Yhdistä 2, 4 tai 9 PDF-sivua yhdelle arkille paperin säästämiseksi, monisteiden luomiseksi tai tiiviiden asiakirjakatsausten tuottamiseksi.',
+        body: `<p>N-Up-tulostus järjestää useita sivuja yhdelle arkille. Tämä sopii erinomaisesti monisteiden luomiseen, paperin säästämiseen tai pitkän asiakirjan tiiviin yleiskatsauksen saamiseen.</p>
+<h2>Käytettävissä olevat asettelut</h2>
+<p><a href="#/nup-pdf">N-Up PDF -työkalu</a> tarjoaa kolme asetteluvaihtoehtoa:</p>
+<ul>
+<li><strong>2-Up</strong> — kaksi sivua vierekkäin vaaka-arkilla</li>
+<li><strong>4-Up</strong> — neljä sivua 2×2-ruudukossa pystyarkilla</li>
+<li><strong>9-Up</strong> — yhdeksän sivua 3×3-ruudukossa maksimaalisen paperinsäästön saavuttamiseksi</li>
+</ul>
+<h2>Yleiset käyttötapaukset</h2>
+<ul>
+<li>Luentomonisteiden luominen useilla dioilla sivua kohden</li>
+<li>Luonnosasiakirjojen tulostaminen tarkistusta varten paperia säästäen</li>
+<li>Tiiviiden viitekorttien tekeminen pidemmistä asiakirjoista</li>
+</ul>
+<p>Parhaan luettavuuden saavuttamiseksi käytä 2-Up-asettelua tekstipainotteisille asiakirjoille ja 4-Up- tai 9-Up-asettelua diaesityksille.</p>`,
+        date: '2026-03-10',
+        tool: 'nup-pdf',
+        tags: ['nup', 'tulostus', 'moniste', 'paperi'],
+    },
+    {
+        slug: 'tyhjan-sivun-lisaaminen-pdf-asiakirjaan',
+        lang: 'fi',
+        title: 'Tyhjän sivun lisääminen PDF-asiakirjaan',
+        excerpt: 'Lisää tyhjä sivu PDF-tiedoston alkuun tai loppuun. Hyödyllinen kansisivuille, välisivuille tai kaksipuolisen tulostuksen valmisteluun.',
+        body: `<p>Tyhjän sivun lisääminen PDF-tiedostoon on yksinkertainen mutta usein tarvittava toimenpide. Tarvitsetpa paikkamerkin, välisivun tai kaksipuolisen tulostuksen valmistelun, tämä työkalu hoitaa sen sekunneissa.</p>
+<h2>Milloin tarvitset tyhjän sivun</h2>
+<ul>
+<li><strong>Kansisivut</strong> — lisää tyhjä ensimmäinen sivu, jonka voit myöhemmin täyttää kansisivuksi</li>
+<li><strong>Kaksipuolinen tulostus</strong> — varmista, että luvut alkavat oikeanpuoleiselta (parittomalta) sivulta</li>
+<li><strong>Osioiden erottimet</strong> — lisää visuaalisia taukoja asiakirjan osioiden väliin</li>
+<li><strong>Täyte</strong> — lisää tyhjä viimeinen sivu vihkotulostusta varten</li>
+</ul>
+<h2>Käyttöohjeet</h2>
+<p><a href="#/add-blank-page">Tyhjän sivun lisäys -työkalu</a> antaa valita, lisätäänkö tyhjä sivu PDF:n alkuun vai loppuun. Sivukoko vastaa asiakirjasi ensimmäistä sivua.</p>
+<p>Monimutkaisempaan sivujen hallintaan käytä <a href="#/organize-pdf">PDF-järjestelytyökalua</a>, joka mahdollistaa sivujen uudelleenjärjestämisen ja kopioinnin visuaalisesti.</p>`,
+        date: '2026-03-10',
+        tool: 'add-blank-page',
+        tags: ['tyhjä', 'sivu', 'lisäys', 'kaksipuolinen'],
+    },
+    {
+        slug: 'tyhjien-sivujen-poistaminen-pdf-tiedostosta',
+        lang: 'fi',
+        title: 'Tyhjien sivujen automaattinen tunnistaminen ja poistaminen PDF-tiedostosta',
+        excerpt: 'Siisti PDF-tiedostosi tunnistamalla ja poistamalla tyhjät sivut automaattisesti. Täydellinen skannatuille asiakirjoille, joissa on ei-toivottuja tyhjiä arkkeja.',
+        body: `<p>Skannatut asiakirjat sisältävät usein tyhjiä sivuja yksipuolisten alkuperäisten kaksipuolisesta skannauksesta. Niiden manuaalinen poistaminen sivu sivulta on työlästä.</p>
+<h2>Kuinka se toimii</h2>
+<p><a href="#/remove-blank-pages">Tyhjien sivujen poisto -työkalu</a> analysoi jokaisen PDF-sivun renderöimällä sen ja tarkistamalla pikselisisällön. Sivut, joissa on 99,5 % tai enemmän valkoisia pikseleitä, tunnistetaan automaattisesti tyhjiksi.</p>
+<h2>Tyhjien sivujen yleiset lähteet</h2>
+<ul>
+<li>Yksipuolisten asiakirjojen kaksipuolinen skannaus</li>
+<li>Faksilähetykset täytesivuilla</li>
+<li>Ohjelmiston tuottamat raportit tyhjillä välisivuilla</li>
+<li>Kirjaskannaukset tyhjillä kääntösivuilla</li>
+</ul>
+<h2>Älykäs tunnistus</h2>
+<p>Työkalu on riittävän älykäs erottamaan aidosti tyhjät sivut ja sivut, joissa on vähäistä sisältöä. Sivut, joissa on pienikin määrä tekstiä tai grafiikkaa, säilytetään. Jos kaikki sivut ovat tyhjiä, työkalu ilmoittaa sinulle sen sijaan, että loisi tyhjän asiakirjan.</p>`,
+        date: '2026-03-10',
+        tool: 'remove-blank-pages',
+        tags: ['tyhjä', 'poistaminen', 'siistiminen', 'skannaus'],
+    },
+    {
+        slug: 'ocr-skannattu-pdf-haettavaksi',
+        lang: 'fi',
+        title: 'OCR: tee skannatuista PDF-tiedostoista haettavia ja valittavia',
+        excerpt: 'Käytä optista tekstintunnistusta lisätäksesi tekstikerroksen skannattuihin PDF-asiakirjoihin. Tee kuvapohjaista PDF-tiedostoista haettavia, valittavia ja saavutettavia.',
+        body: `<p>Skannatut asiakirjat ovat käytännössä kuvia PDF:n sisällä — niistä ei voi hakea, valita tai kopioida tekstiä. OCR (optinen tekstintunnistus) ratkaisee tämän tunnistamalla tekstin kuvista ja lisäämällä näkymättömän haettavan kerroksen.</p>
+<h2>Kuinka OCR toimii</h2>
+<p><a href="#/ocr-pdf">OCR PDF -työkalu</a> käsittelee jokaisen sivun kolmessa vaiheessa:</p>
+<ol>
+<li>Renderöi sivun korkearesoluutioiseksi kuvaksi</li>
+<li>Suorittaa OCR-tunnistuksen kuvan tekstin tunnistamiseksi</li>
+<li>Luo uuden PDF:n, jossa on alkuperäinen kuva sekä näkymätön tekstikerros päällä</li>
+</ol>
+<h2>Tuetut kielet</h2>
+<p>Työkalu tukee 14 kieltä, mukaan lukien englanti, espanja, ranska, saksa, italia, portugali, hollanti ja muita. Valitse oikea kieli parhaan tunnistustarkkuuden saavuttamiseksi.</p>
+<h2>Käyttötapaukset</h2>
+<ul>
+<li>Skannattujen sopimusten tekeminen haettaviksi oikeudellista tarkastelua varten</li>
+<li>Vanhojen paperiasiakirjojen digitointi arkistojärjestelmiä varten</li>
+<li>Tekstin poiminnan mahdollistaminen skannatuista kuiteista ja laskuista</li>
+</ul>
+<p>OCR-käsittelyn jälkeen voit käyttää <a href="#/pdf-to-text">PDF tekstiksi -työkalua</a> tunnistetun tekstin poimimiseen.</p>`,
+        date: '2026-03-10',
+        tool: 'ocr-pdf',
+        tags: ['ocr', 'skannaus', 'haettava', 'tekstintunnistus'],
+    },
+    {
+        slug: 'kahden-pdf-asiakirjan-visuaalinen-vertailu',
+        lang: 'fi',
+        title: 'Kahden PDF-asiakirjan visuaalinen vertailu',
+        excerpt: 'Havaitse erot kahden PDF-asiakirjan version välillä visuaalisella rinnakkaisvertailulla ja automaattisella erojen korostuksella.',
+        body: `<p>Asiakirjojen muutoksia, sopimusmuutoksia tai suunnittelumuutoksia tarkasteltaessa sinun on nopeasti tunnistettava, mikä on muuttunut PDF:n kahden version välillä.</p>
+<h2>Kuinka se toimii</h2>
+<p><a href="#/compare-pdf">PDF-vertailutyökalu</a> ottaa kaksi PDF-tiedostoa ja luo visuaalisen vertailuasiakirjan. Jokainen sivupari renderöidään vierekkäin, ja pikselitason erot korostetaan punaisella.</p>
+<h2>Mitä havaitaan</h2>
+<ul>
+<li>Tekstimuutokset — lisätyt, poistetut tai muokatut sanat</li>
+<li>Asettelumuutokset — siirretyt elementit, muutetut välistykset</li>
+<li>Kuvaerot — korvatut tai muokatut grafiikat</li>
+<li>Muotoilumuutokset — kirjasinkoon, värin tai tyylin muutokset</li>
+</ul>
+<h2>Käytännön sovellukset</h2>
+<ul>
+<li>Sopimusmuutosten tarkastelu ennen allekirjoitusta</li>
+<li>Suunnitteluvedosten vertaaminen alkuperäisiin</li>
+<li>Käännettyjen asiakirjojen tarkistaminen lähteen asettelua vasten</li>
+<li>Laadunvarmistus asiakirjojen tuotantoputkissa</li>
+</ul>
+<p>Lataa molemmat versiot, ja työkalu tuottaa ladattavan vertailu-PDF:n, jonka voit tarkistaa omaan tahtiisi.</p>`,
+        date: '2026-03-10',
+        tool: 'compare-pdf',
+        tags: ['vertailu', 'erot', 'tarkistus', 'versiot'],
+    },
+    {
+        slug: 'pelkan-tekstin-muuntaminen-pdf-muotoon',
+        lang: 'fi',
+        title: 'Pelkän tekstin muuntaminen PDF-muotoon: nopeasti ja helposti',
+        excerpt: 'Muunna tekstitiedostot tai liitetty teksti hyvin muotoilluiksi PDF-asiakirjoiksi. Automaattinen rivinvaihto, sivutus ja ammattimainen asettelu.',
+        body: `<p>Joskus tarvitset vain pelkän tekstin muuntamista siistiksi, jaettavaksi PDF-tiedostoksi — ei hienoa muotoilua, vain luettavaa tekstiä ammattimaisessa asiakirja-asettelussa.</p>
+<h2>Kuinka se toimii</h2>
+<p><a href="#/text-to-pdf">Teksti PDF:ksi -työkalu</a> ottaa pelkän tekstisyötteesi ja luo A4-kokoisen PDF-asiakirjan automaattisella rivinvaihdolla, oikeilla marginaaleilla ja tasavälistysfontilla johdonmukaista kohdistusta varten.</p>
+<h2>Ominaisuudet</h2>
+<ul>
+<li><strong>Automaattinen rivinvaihto</strong> — pitkät rivit vaihtuvat automaattisesti sanarajoilla</li>
+<li><strong>Sivutus</strong> — teksti jaetaan useille sivuille tarpeen mukaan</li>
+<li><strong>Johdonmukainen asettelu</strong> — Courier-fontti varmistaa merkkien kohdistuksen koodille tai datalle</li>
+<li><strong>Rivinvaihdot säilytetään</strong> — kappalerakenteesi säilyy</li>
+</ul>
+<h2>Käyttötapaukset</h2>
+<ul>
+<li>Lokitiedostojen tai koodinpätkien muuntaminen PDF:ksi dokumentointia varten</li>
+<li>Pelkkien tekstimuistiinpanojen tulostettavien versioiden luominen</li>
+<li>Tekstisisällön arkistointi yleisesti luettavassa muodossa</li>
+</ul>
+<p>Rikkaampaan muotoiluun otsikoilla, listoilla ja linkeillä käytä sen sijaan <a href="#/markdown-to-pdf">Markdown PDF:ksi</a> -työkalua.</p>`,
+        date: '2026-03-10',
+        tool: 'text-to-pdf',
+        tags: ['teksti', 'muuntaminen', 'luominen', 'pelkkä-teksti'],
+    },
+    {
+        slug: 'pdf-sivujarjestyksen-kaantaminen',
+        lang: 'fi',
+        title: 'PDF-sivujärjestyksen kääntäminen',
+        excerpt: 'Käännä PDF-asiakirjasi sivujärjestys niin, että viimeinen sivu tulee ensimmäiseksi. Täydellinen käänteisten skannausten tai tulostusjonojen korjaamiseen.',
+        body: `<p>Joskus asiakirjat päätyvät väärään järjestykseen — käänteiset skannaukset, käännetyt tulostusjonot tai yksinkertaisesti tarve lukea takaa eteenpäin. Kääntäminen korjaa tämän yhdellä napsautuksella.</p>
+<h2>Milloin kääntää sivuja</h2>
+<ul>
+<li><strong>Skannerin tuloste</strong> — monet skannerit tuottavat sivut käänteisessä järjestyksessä paperipinosta</li>
+<li><strong>Tulostusjonon ongelmat</strong> — kuvapuoli ylöspäin tulostetut asiakirjat tulevat käänteisessä järjestyksessä</li>
+<li><strong>Esitysjärjestys</strong> — järjestä sisältö uudelleen tiedon esittämiseksi alhaalta ylöspäin</li>
+<li><strong>Vihkon valmistelu</strong> — jotkin vihkoasettelut vaativat käänteisen sivujärjestyksen</li>
+</ul>
+<h2>Kuinka se toimii</h2>
+<p><a href="#/reverse-pages">Sivujen kääntö -työkalu</a> ottaa PDF-tiedostosi ja luo uuden asiakirjan, jossa kaikki sivut ovat käänteisessä järjestyksessä. Viimeisestä sivusta tulee ensimmäinen, toiseksi viimeisestä toinen ja niin edelleen.</p>
+<p>Valikoivampaan sivujen uudelleenjärjestelyyn käytä <a href="#/organize-pdf">PDF-järjestelytyökalua</a>, jossa voit vetää ja pudottaa yksittäisiä sivuja.</p>`,
+        date: '2026-03-10',
+        tool: 'reverse-pages',
+        tags: ['kääntäminen', 'järjestys', 'sivut', 'kääntö'],
+    },
+    {
+        slug: 'pdf-varien-kaantaminen-tumma-tila',
+        lang: 'fi',
+        title: 'PDF-värien kääntäminen tummaa tilaa varten',
+        excerpt: 'Muunna valkotaustaiset PDF-tiedostot tummaan tilaan käännetyillä väreillä. Vähennä silmien rasitusta, säästä mustetta tai luo taiteellisia efektejä.',
+        body: `<p>Värien kääntäminen muuttaa valkotaustaisen asiakirjan tummataustaiseksi (ja päinvastoin). Tämä on hyödyllistä mukavaan tumman tilan lukemiseen tai visuaalisten efektien luomiseen.</p>
+<h2>Värien kääntämisen edut</h2>
+<ul>
+<li><strong>Silmien mukavuus</strong> — tumma tausta vähentää silmien rasitusta hämärässä ympäristössä</li>
+<li><strong>Saavutettavuus</strong> — joillekin käyttäjille käännetyt värit ovat helpompia lukea</li>
+<li><strong>Musteen säästö</strong> — käännettyjen asiakirjojen tulostaminen tummalle paperille käyttää vähemmän mustetta</li>
+<li><strong>Luovat käyttötarkoitukset</strong> — tuota negatiivitehosteisia kuvia suunnitteluprojekteihin</li>
+</ul>
+<h2>Kuinka se toimii</h2>
+<p><a href="#/invert-colors">Värien kääntö -työkalu</a> renderöi jokaisen sivun ja kääntää jokaisen pikselin: mustasta tulee valkoinen, valkoisesta musta ja kaikki värit siirtyvät vastaväreihinsä. Tuloksena on uusi PDF käännetyllä ulkoasulla.</p>
+<p>Väriasiakirjojen muuntamiseen harmaasävyisiksi käytä sen sijaan <a href="#/grayscale-pdf">Harmaasävy-PDF</a> -työkalua.</p>`,
+        date: '2026-03-10',
+        tool: 'invert-colors',
+        tags: ['kääntäminen', 'tumma-tila', 'värit', 'saavutettavuus'],
+    },
+    {
+        slug: 'vaurioituneiden-pdf-tiedostojen-korjaaminen',
+        lang: 'fi',
+        title: 'Vaurioituneiden tai vahingoittuneiden PDF-tiedostojen korjaaminen',
+        excerpt: 'Korjaa rikkinäiset PDF-tiedostot, jotka eivät avaudu tai näyttävät virheitä. Korjaustyökalu jäsentää ja rakentaa asiakirjan rakenteen uudelleen sisällön palauttamiseksi.',
+        body: `<p>PDF-tiedostot voivat vaurioitua keskeneräisten latausten, tallennusvirheiden tai ohjelmistovirheiden vuoksi. Kun PDF ei avaudu tai näkyy väärin, korjausyritys voi usein palauttaa sisällön.</p>
+<h2>Yleiset PDF-ongelmat</h2>
+<ul>
+<li>Tiedosto ei avaudu PDF-katseluohjelmissa</li>
+<li>Tyhjät sivut tai puuttuva sisältö</li>
+<li>Virheilmoitukset virheellisestä rakenteesta</li>
+<li>Osittainen renderöinti tai rikkinäiset fontit</li>
+</ul>
+<h2>Kuinka korjaus toimii</h2>
+<p><a href="#/repair-pdf">PDF-korjaustyökalu</a> lataa vaurioituneen tiedostosi maksimaalisella virheensiedolla ja rakentaa sen uudelleen puhtaaksi uudeksi asiakirjaksi. Tämä prosessi palauttaa usein sivuja ja sisältöä, joita tavalliset katseluohjelmat eivät pysty näyttämään.</p>
+<h2>Mitä korjataan</h2>
+<ul>
+<li>Vioittuneet ristiviittaustaulukot</li>
+<li>Rikkinäiset sisäiset linkit ja sivuviittaukset</li>
+<li>Virheelliset objektirakenteet</li>
+<li>Puuttuvat tai vaurioituneet otsikot</li>
+</ul>
+<p>Huomaa: vakavasti vaurioituneet tiedostot, joissa ydindata on tuhoutunut, eivät välttämättä ole palautettavissa. Useimpien yleisten vaurioongelmien kohdalla korjaustyökalu kuitenkin palauttaa asiakirjan onnistuneesti.</p>`,
+        date: '2026-03-10',
+        tool: 'repair-pdf',
+        tags: ['korjaaminen', 'korjaus', 'vaurioitunut', 'palautus'],
+    },
+    {
+        slug: 'pdf-muuntaminen-epub-sahkokirjaksi',
+        lang: 'fi',
+        title: 'PDF:n muuntaminen EPUB-muotoon sähkökirjalukijoille',
+        excerpt: 'Muunna PDF-asiakirjat EPUB-muotoon mukavaan lukemiseen Kindlellä, Kobolla ja muilla sähkökirjalukijoilla. Teksti mukautuu minkä tahansa näytön kokoon.',
+        body: `<p>PDF-tiedostot on suunniteltu kiinteään asetteluun, mikä tekee niistä vaikeita lukea pienillä näytöillä. EPUB on sähkökirjojen vakiomuoto, jossa teksti mukautuu mihin tahansa näyttökokoon.</p>
+<h2>Miksi muuntaa EPUB-muotoon?</h2>
+<ul>
+<li><strong>Mukautuva teksti</strong> — sisältö sopeutuu mihin tahansa näyttökokoon puhelimista tabletteihin</li>
+<li><strong>Lukuominaisuudet</strong> — säädä kirjasinkokoa, tyyliä ja taustaväriä mieltymystesi mukaan</li>
+<li><strong>Sähkökirjalukijoiden yhteensopivuus</strong> — toimii Kindlen, Kobon, Apple Booksin ja muiden laitteiden kanssa</li>
+<li><strong>Pienemmät tiedostot</strong> — tekstipohjaiset EPUB-tiedostot ovat paljon pienempiä kuin kuvapohjaiset PDF-tiedostot</li>
+</ul>
+<h2>Kuinka se toimii</h2>
+<p><a href="#/pdf-to-epub">PDF EPUB:ksi -työkalu</a> poimii tekstisisällön jokaiselta PDF-sivulta ja paketoi sen kelvolliseksi EPUB 3 -tiedostoksi asianmukaisella lukukappalenavigoinnilla, sisällysluettelolla ja tyyleillä.</p>
+<h2>Parhaat tulokset</h2>
+<p>Tämä työkalu toimii parhaiten tekstipainotteisilla PDF-tiedostoilla. Skannatuille asiakirjoille (vain kuvia sisältävät PDF-tiedostot) suorita ensin <a href="#/ocr-pdf">OCR-työkalu</a> tekstin poimimiseksi ja muunna sitten EPUB-muotoon.</p>
+<p>Tuloksena syntyvä EPUB sisältää sisällysluettelon, jossa on yksi merkintä kutakin alkuperäistä sivua kohden, mikä helpottaa muunnetun asiakirjan selaamista.</p>`,
+        date: '2026-03-10',
+        tool: 'pdf-to-epub',
+        tags: ['epub', 'sähkökirja', 'muuntaminen', 'kindle'],
+    },
 ];

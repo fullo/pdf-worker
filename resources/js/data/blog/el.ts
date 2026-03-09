@@ -770,4 +770,257 @@ export const blogPostsEl: BlogPost[] = [
         tool: 'edit-metadata',
         tags: ['metadata', 'properties', 'edit', 'privacy'],
     },
+    {
+        slug: 'convert-pdf-to-webp-modern-format',
+        lang: 'el',
+        title: 'Metatropi PDF se WebP: To Moderno Format Eikonas',
+        excerpt: 'Metatrepste tis selides PDF se eikones WebP gia anotero syrriknosi kai poiotita. Ideano gia xrisi sto diadiktyo, tachyteri fortosi kai mikrotera megethi arxeion apo JPG i PNG.',
+        body: `<p>To WebP einai ena moderno format eikonas pou anaptychthike apo tin Google pou parexei anotero syrriknosi me kai xoris apoleia gia eikones sto diadiktyo. I metatropi PDF se WebP sas dinei mikrotera arxeia me synkrisimi poiotita.</p>
+<h2>Giati na Epilexete WebP;</h2>
+<ul>
+<li><strong>Mikrotera arxeia</strong> — oi eikones WebP einai synithios 25-35% mikroteres apo JPG se antistoixi poiotita</li>
+<li><strong>Kalyteri poiotita</strong> — sto idio megethos arxeiou, to WebP prosferei pio kathares eikones me ligotera artefact</li>
+<li><strong>Efria ypostirixi</strong> — oloi oi kyrioi perigites (Chrome, Firefox, Safari, Edge) ypostirizoun WebP</li>
+</ul>
+<h2>Pos na Metatrepsete</h2>
+<p>To ergaleio <a href="#/pdf-to-webp">PDF se WebP</a> sas epitrepei na prosar mosete to slider poiotitas gia na isorropiisete megethos arxeiou kai evkrineia eikonas. Kathe selida PDF ginetai ena xexoristo arxeio WebP.</p>
+<h2>Pote na Xrisimopoiisete WebP se sygkrisi me JPG i PNG</h2>
+<p>Epilexte WebP gia dimosievsi sto diadiktyo opou to megethos arxeiou metrai. Xrisimopoiiste <a href="#/pdf-to-jpg">JPG</a> gia megisti symvatotita me paliotero logismiko. Xrisimopoiiste <a href="#/pdf-to-png">PNG</a> otan xreiazeste diafana fonta i poiotita xoris apoleia.</p>`,
+        date: '2026-03-10',
+        tool: 'pdf-to-webp',
+        tags: ['webp', 'metatropi', 'moderno', 'diadiktyo'],
+    },
+    {
+        slug: 'nup-pdf-multiple-pages-per-sheet',
+        lang: 'el',
+        title: 'Pos na Ektypothoun Polles Selides PDF se Ena Fyllo (N-Up)',
+        excerpt: 'Syndyaste 2, 4 i 9 selides PDF se ena mono fyllo gia na exoikonomiisete xarti, na dimioyrgisite entypa i na paragete sympagia episkopisi eggrafon.',
+        body: `<p>I ektyposi N-Up topothetei polles selides se ena mono fyllo. Afto einai ideano gia ti dimiourgia entypon, tin exoikonomisi xartiou i tin apokitisi mias sympagouss episkopisis enos makrou eggrafou.</p>
+<h2>Diathesimes Diataxeis</h2>
+<p>To ergaleio <a href="#/nup-pdf">N-Up PDF</a> prosferei treis epiloges diataxis:</p>
+<ul>
+<li><strong>2-Up</strong> — dyo selides dipla-dipla se orizontio fyllo</li>
+<li><strong>4-Up</strong> — tesseris selides se pllegma 2x2 se katheto fyllo</li>
+<li><strong>9-Up</strong> — ennea selides se plegma 3x3 gia megisti exoikonomisi xartiou</li>
+</ul>
+<h2>Syxnes Periptoseis Xrisis</h2>
+<ul>
+<li>Dimiourgia entypon diale xeon me polles diafaneies ana selida</li>
+<li>Ektyposi proschidion eggrafon gia elegxo me exoikonomisi xartiou</li>
+<li>Dimiourgia synoiptikon karton anaforas apo makrytera eggrafa</li>
+</ul>
+<p>Gia kalyteri anagnosimotita, xrisimopoiiste 2-Up gia eggrafa me poly keimeno kai 4-Up i 9-Up gia parousias eis me diafaneies.</p>`,
+        date: '2026-03-10',
+        tool: 'nup-pdf',
+        tags: ['nup', 'ektyposi', 'entypo', 'xarti'],
+    },
+    {
+        slug: 'add-blank-page-to-pdf',
+        lang: 'el',
+        title: 'Pos na Prosthesete mia Keni Selida se Eggrafo PDF',
+        excerpt: 'Eisagete mia keni selida stin arxi i sto telos tou PDF sas. Xrisimo gia exofylla, diaxoristika i proetoimasia gia amfiplefri ektyposi.',
+        body: `<p>I prosthiki mias kenis selidas se ena PDF einai mia apli alla syxna aparaititi leitourgia. Eite xreiazeste ena kenothesi, ena diaxoristiko i proetoimasia gia diplismeni ektyposi, afto to ergaleio to diachirizete se defterolepta.</p>
+<h2>Pote Xreiazeste mia Keni Selida</h2>
+<ul>
+<li><strong>Exofylla</strong> — prostheste mia keni proti selida gia na ti symplisosete argotera os exofyllo</li>
+<li><strong>Amfiplefri ektyposi</strong> — vevaiothiite oti ta kefaloea arxizoun stin dexia (perititi) selida</li>
+<li><strong>Diaxoristika tmimaton</strong> — eisagete optika dialeimmata metaxy tmimaton eggrafon</li>
+<li><strong>Gemisma</strong> — prostheste mia keni teleytaia selida gia ektyposi fyllidiou</li>
+</ul>
+<h2>Pos na to Xrisimopoiisete</h2>
+<p>To ergaleio <a href="#/add-blank-page">Prosthiki Kenis Selidas</a> sas epitrepei na epilexete na eisagete tin keni selida stin arxi i sto telos tou PDF sas. To megethos selidas antistetoixei stin proti selida tou eggrafou sas.</p>
+<p>Gia pio simbloki diaxeirisi selidon, xrisimopoiiste to ergaleio <a href="#/organize-pdf">Organosi PDF</a> pou sas epitrepei na anadiataxete kai na diplasiosete selides optika.</p>`,
+        date: '2026-03-10',
+        tool: 'add-blank-page',
+        tags: ['keni', 'selida', 'eisagogi', 'amfiplefri'],
+    },
+    {
+        slug: 'remove-blank-pages-from-pdf',
+        lang: 'el',
+        title: 'Pos na Anixnefsete kai Afairesete Aftomata Kenes Selides apo PDF',
+        excerpt: 'Kathariste ta PDF sas anixnevotas kai afairontas aftomata kenes selides. Ideano gia skanarismena eggrafa me anyepithymita kena fylla.',
+        body: `<p>Ta skanarismena eggrafa periexoun syxna kenes selides apo amfiplefri skan aristimon monoplefron prototypon. I xeirokiniti afairesi tous selida-selida einai kourast iki.</p>
+<h2>Pos Leitoyrgei</h2>
+<p>To ergaleio <a href="#/remove-blank-pages">Afairesi Kenon Selidon</a> analyei kathe selida tou PDF sas apodidontastin kai elegxontas to periexomeno se epipedo pixel. Oi selides pou einai 99,5% i perisotero lefka pixel anixnevontai aftomata os kenes.</p>
+<h2>Syxnes Piges Kenon Selidon</h2>
+<ul>
+<li>Amfiplefri skanarismo monoplefron eggrafon</li>
+<li>Metadoseis fax me selides gemismatos</li>
+<li>Ektheseis pou paragontai apo logismiko me kenes selides diaxorismou</li>
+<li>Skanarismata vivlion me kenes opisthen selides</li>
+</ul>
+<h2>Exypni Anixnefsi</h2>
+<p>To ergaleio einai arketa exypno oste na xexorizei pragmatika kenes selides apo selides me elaxisto periexomeno. Oi selides me esto kai mikri posotita keimenoy i grafikon diatirountai. An oles oi selides einai kenes, to ergaleio tha sas eidopoiisei anti na dimioyrgisei ena adeio eggrafo.</p>`,
+        date: '2026-03-10',
+        tool: 'remove-blank-pages',
+        tags: ['keni', 'afairesi', 'katharismo', 'skanarismo'],
+    },
+    {
+        slug: 'ocr-scanned-pdf-searchable',
+        lang: 'el',
+        title: 'OCR: Kanete ta Skanarismena PDF Anazitisima kai Epilexima',
+        excerpt: 'Xrisimopoiiste optiki anagnorisi charaktiron gia na prosthesete ena epipedo keimenoy se skanarismena eggrafa PDF. Kanete ta PDF vasismena se eikones anazitisima, epilexima kai prosvasima.',
+        body: `<p>Ta skanarismena eggrafa einai ousiast ika eikones mesa se ena PDF — den mporite na anazitisete, na epilexete i na antigrapsete keimeno apo afta. To OCR (Optiki Anagnorisi Charaktiron) lyni afto anixnenontas keimeno se eikones kai prosthetondas ena aorato anazitisimo epipedo.</p>
+<h2>Pos Leitoyrgei to OCR</h2>
+<p>To ergaleio <a href="#/ocr-pdf">OCR PDF</a> epexergazetai kathe selida se tria vimata:</p>
+<ol>
+<li>Apodidei ti selida os eikona ypsilis analysi</li>
+<li>Ektelei OCR gia anagnorisi keimenoy stin eikona</li>
+<li>Dimioyrgei ena neo PDF me tin arxiki eikona syn ena aorato epipedo keimenoy apo pano</li>
+</ol>
+<h2>Ypostorizomenes Glosses</h2>
+<p>To ergaleio ypostirizei 14 glosses perilamvanomennon Agglikon, Ispanikon, Gallikon, Germanikon, Italikon, Portogalikon, Ollandikon kai allon. Epilexte ti sosti glossa gia tin kalyteri akriveia anagnorisis.</p>
+<h2>Periptoseis Xrisis</h2>
+<ul>
+<li>Kanoste anazitisimes tis skanarismenes symvaseis gia nomiko elegxo</li>
+<li>Psifiopoiiste palia xartina eggrafa gia systimata arxeiothitisis</li>
+<li>Energopoiiste tin exagogi keimenoy apo skanarismenes apodeijeis kai timologia</li>
+</ul>
+<p>Meta tin epexergasia OCR, mporite na xrisimopoiisete to ergaleio <a href="#/pdf-to-text">PDF se Keimeno</a> gia na exagete to anagnorismenno keimeno.</p>`,
+        date: '2026-03-10',
+        tool: 'ocr-pdf',
+        tags: ['ocr', 'skanarismo', 'anazitisimo', 'anagnorisi-keimenoy'],
+    },
+    {
+        slug: 'compare-two-pdf-documents-visually',
+        lang: 'el',
+        title: 'Pos na Synkrinete Optika Dyo Eggrafa PDF',
+        excerpt: 'Entopiste diafores metaxy dyo ekdoseon enos eggrafou PDF me optiki synkrisi plevra-plevra kai aftomati episimansi diaforon.',
+        body: `<p>Otan elegxete anatheoriseis eggrafon, tropolities symvaseon i allages sxediasmou, xreiazeste na entopisete grigora ti exei allaxei metaxy dyo ekdoseon enos PDF.</p>
+<h2>Pos Leitoyrgei</h2>
+<p>To ergaleio <a href="#/compare-pdf">Synkrisi PDF</a> dexetai dyo arxeia PDF kai dimioyrgei ena eggrafo optikis synkrisis. Kathe zeygari selidon apodidei plevra-plevra, me tis diafores se epipedo pixel episima smenes me kokkino.</p>
+<h2>Ti Anixneyetai</h2>
+<ul>
+<li>Allages keimenoy — prosthikes, afaireseis i tropopoiiseis lekseon</li>
+<li>Metakineseis diataxis — metakinimena stoixeia, allagmena diastimataa</li>
+<li>Diafores eikonon — antikatestathmena i tropopoiimena grafika</li>
+<li>Allages morfopolisis — megethos grammatoseiras, chroma i styl tropopoiiseis</li>
+</ul>
+<h2>Praktikes Efarmoges</h2>
+<ul>
+<li>Elegxos anatheoriseon symvaseon prin tin ypografi</li>
+<li>Epivevaios i proschidion sxediasmou se sxesi me ta prototypa</li>
+<li>Elegxos metafrasmenon eggrafon se sxesi me tin archiki diataxis</li>
+<li>Diasfalisi poiotitas gia seiras paragogis eggrafon</li>
+</ul>
+<p>Anevaste kai tis dyo ekdoseis kai to ergaleio paragei ena PDF synkrisis pou mporite na katevaste kai na elegxete me ton diko sas rythmo.</p>`,
+        date: '2026-03-10',
+        tool: 'compare-pdf',
+        tags: ['synkrisi', 'diafores', 'elegxos', 'ekdoseis'],
+    },
+    {
+        slug: 'convert-plain-text-to-pdf',
+        lang: 'el',
+        title: 'Metatropi Aplou Keimenoy se PDF: Grigora kai Apla',
+        excerpt: 'Metatrepste arxeia aplou keimenoy i epikolimeno keimeno se kala morfopolimena eggrafa PDF. Aftomati anadiplosi lekseon, selidopolisi kai epangelmatiki diataxis.',
+        body: `<p>Merikles fores apla xreiazeste na metatrepsete aplo keimeno se ena katharo, koinopoiisimo PDF — xoris periergimorfopolisi, apla efanagnostokeimeno se mia epangelmatiki diataxis eggrafou.</p>
+<h2>Pos Leitoyrgei</h2>
+<p>To ergaleio <a href="#/text-to-pdf">Keimeno se PDF</a> dexetai tin eisagogi aplou keimenoy sas kai dimioyrgei ena eggrafo PDF megethos A4 me aftomati anadiplosi lekseon, sosta perithoria kai grammatoseira monodiastimatos gia syneplevthynsi.</p>
+<h2>Xaraktiristika</h2>
+<ul>
+<li><strong>Aftomati anadiplosi lekseon</strong> — oi makries grammes anadiplonontai aftomata sta oria ton lekseon</li>
+<li><strong>Selidopolisi</strong> — to keimeno moirazetai se polles selides opos apaiteitai</li>
+<li><strong>Synepi diataxis</strong> — grammatoseira Courier gia efthygram misi charaktiron se kodika i dedomena</li>
+<li><strong>Diatirisi allagoon grammis</strong> — i domi ton paragrafon sas diatireitai</li>
+</ul>
+<h2>Periptoseis Xrisis</h2>
+<ul>
+<li>Metatropi arxeion katastasis i apokommaton kodika se PDF gia tekmiirosi</li>
+<li>Dimiourgia ektyposion ekdoseon simioseon aplou keimenoy</li>
+<li>Arxeiothetisi periexomenou keimenoy se mia pagkosmia anagnosimi morfi</li>
+</ul>
+<p>Gia plousioteri morfopolisi me epikefaliies, listes kai syndesmous, xrisimopoiiste to ergaleio <a href="#/markdown-to-pdf">Markdown se PDF</a> anti aftou.</p>`,
+        date: '2026-03-10',
+        tool: 'text-to-pdf',
+        tags: ['keimeno', 'metatropi', 'dimiourgia', 'aplo-keimeno'],
+    },
+    {
+        slug: 'reverse-pdf-page-order',
+        lang: 'el',
+        title: 'Pos na Antistrepsete ti Seira Selidon PDF',
+        excerpt: 'Antistrepsete ti seira selidon tou eggrafou PDF sas oste i teleytaia selida na ginei i proi. Ideano gia dior thosi antistramenon skanarismaton i anestrammenon ouron ektyposis.',
+        body: `<p>Merikles fores ta eggrafa kataligoune me lathi seira — anestrammenem skanarismata, anestramemenes oures ektyposis i apla i anagi na diavasi kaneis apo to telos pros tin arxi. I antistrofi to dior thoni me ena klik.</p>
+<h2>Pote na Antistrepsete Selides</h2>
+<ul>
+<li><strong>Exodos skaneri</strong> — polla skaneri paragoyn selides me antistrof iseira apo ti stoiva xartiou</li>
+<li><strong>Provlimata ouras ektyposis</strong> — eggrafa pou ektypothikane me tin opsi pros ta pano vgainoun me antistrofi seira</li>
+<li><strong>Seira parousias is</strong> — anadiataxte to periexomeno gia parousiasi pliroforion apo kato pros ta pano</li>
+<li><strong>Proetoimasia fyllidiou</strong> — orismenes diataxeis fylladiou apaitoun antistrofes akolouthies selidon</li>
+</ul>
+<h2>Pos Leitoyrgei</h2>
+<p>To ergaleio <a href="#/reverse-pages">Antistrofi Selidon</a> dexetai to PDF sas kai dimioyrgei ena neo eggrafo me oles tis selides se antistrofi seira. I teleytaia selida ginetai i proti, i prodeleytaia ginetai i defteri, kai outos kathexis.</p>
+<p>Gia pio epilektiki anadiataxis selidon, xrisimopoiiste to ergaleio <a href="#/organize-pdf">Organosi PDF</a> pou sas epitrepei na syrete kai na afinate memonomen es selides.</p>`,
+        date: '2026-03-10',
+        tool: 'reverse-pages',
+        tags: ['antistrofi', 'seira', 'anapodi', 'selides'],
+    },
+    {
+        slug: 'invert-pdf-colors-dark-mode',
+        lang: 'el',
+        title: 'Antistrofi Chromaton PDF gia Anagnosi se Skoteini Leitourgia',
+        excerpt: 'Metatrepste PDF me lefko fonto se skoteini leitourgia me antistramena chromata. Meioste tin kourasi ton mation, exoikonomiiste melani se ektypotes skoteinou thematos i dimiourgiste kallitexnika apotelesmata.',
+        body: `<p>I antistrofi chromaton metatrepei ena eggrafo me lefko fonto se ena me skoteino fonto (kai antistrora). Afto einai xrisimo gia anetianagnosi se skoteini leitourgia i ti dimiourgia optikon efect.</p>
+<h2>Ofel i tis Antistrofis Chromaton</h2>
+<ul>
+<li><strong>Anesi mation</strong> — ta skoteina fonta meionoun tin kourasi ton mation se perivallonta me xamilo fotismo</li>
+<li><strong>Prosvasimotita</strong> — orismeno ixristes vriskoun ta antistramena chromata pio efkola sto diavasm a</li>
+<li><strong>Exoikonomisi melanion</strong> — i ektyposi eggrafon me antistramena chromata se skoteino xarti xrisimopoiei ligotero melani</li>
+<li><strong>Dimiourgikes xriseis</strong> — paragogi eikonon me efect arnitikoygia sxediastika erga</li>
+</ul>
+<h2>Pos Leitoyrgei</h2>
+<p>To ergaleio <a href="#/invert-colors">Antistrofi Chromaton</a> apodidei kathe selida kai antistrefi kathe pixel: to mavro ginetai lefko, to lefko ginetai mavro kai ola ta chromata metakinountai stis sympliromatikes tous times. To apotelestima einai ena neo PDF me tin antistrameni emfanisi.</p>
+<p>Gia metatropi egxromon eggrafon se klimaka tou gkri, xrisimopoiiste to ergaleio <a href="#/grayscale-pdf">PDF se Klimaka tou Gkri</a>.</p>`,
+        date: '2026-03-10',
+        tool: 'invert-colors',
+        tags: ['antistrofi', 'skoteini-leitourgia', 'chromata', 'prosvasimotita'],
+    },
+    {
+        slug: 'repair-corrupted-pdf-files',
+        lang: 'el',
+        title: 'Pos na Episkefasete Katestramena i Vlammena Arxeia PDF',
+        excerpt: 'Dior thoste spasmena PDF pou den anoigoun i emfanizoun sfalmata. To ergaleio episkefis epananalyi kai anakatas keya zi ti domi tou eggrafou gia na anakyipsei to periexomeno.',
+        body: `<p>Ta arxeia PDF mporoun na katastrafoyn logo atelon lipson, sfalmat on apothikefsis i sfalmaton logismikou. Otan ena PDF den anoigei i emfanizetai latha, mia prospatheia episkefis mporei syxna na anakyipsei to periexomeno.</p>
+<h2>Syxna Provlimata PDF</h2>
+<ul>
+<li>To arxeio den anoigei se provoleis PDF</li>
+<li>Kenes selides i periexomeno pou leipi</li>
+<li>Minimata sfalmatos gia mi egkyri domi</li>
+<li>Meriki apodosi i katestramenes grammatosires</li>
+</ul>
+<h2>Pos Leitoyrgei i Episkevi</h2>
+<p>To ergaleio <a href="#/repair-pdf">Episkevi PDF</a> fortoni to katestrameno arxeio sas me megisti anoxi se sfalmata kai meta to anakatas kevazi os katharo neo eggrafo. Afti i diadikasia syxna anaktiselides kai periexomeno pou oi kanoniko i provoleis den mporoun na emfanisoun.</p>
+<h2>Ti Dior thonetai</h2>
+<ul>
+<li>Katestrammenoi pinakes stayron anaforon</li>
+<li>Spasmeni esoterikoi syndesmoi kai anafores selidon</li>
+<li>Mi egkyres domes antikeimenvn</li>
+<li>Kefali des pou leipoun i einai katestramenes</li>
+</ul>
+<p>Simiosi: sovara katestramena arxeia opou ta vasika dedomena exoun katastrafei mporei na min einai anaktisima. Omeges, gia ta perissoterasychna provlimata katastrofis, to ergaleio episkefis apokathistai me epitychiatho eggrafo.</p>`,
+        date: '2026-03-10',
+        tool: 'repair-pdf',
+        tags: ['episkevi', 'dior thosi', 'katestramena', 'anaktisi'],
+    },
+    {
+        slug: 'convert-pdf-to-epub-ebook',
+        lang: 'el',
+        title: 'Metatropi PDF se EPUB gia Symskeves Anagnosis E-Vivlion',
+        excerpt: 'Metatrepste eggrafa PDF se morfi EPUB gia anetianagnosi se Kindle, Kobo kai alles symskeves anagnosis e-vivlion. To keimeno prosarmozetai gia na taxiriaze se opoiodipote megethos othonis.',
+        body: `<p>Ta PDF exoun sxediastei gia provoli me statheri diataxis, pragma pou ta kanei dyskola stin anagnosi se mikres othones. To EPUB einai to protypo format e-vivlion pou anadiamorfonei to keimeno gia na taxiriaxe se opoiodipote megethos othonis.</p>
+<h2>Giati na Metatrepsete se EPUB;</h2>
+<ul>
+<li><strong>Anadiamorfosimokeimeno</strong> — to periexomeno prosarmozetai se opoiodipote megethos othonis, apo tilefona eos tablet</li>
+<li><strong>Dynatotites anagnosti</strong> — prosar moste megethos grammatoseirasas, styl kai chroma fontou kata tis prorimiseis sas</li>
+<li><strong>Symvatotita me symskeves anagnosis</strong> — leitourgei me Kindle, Kobo, Apple Books kai alles symskeves</li>
+<li><strong>Mikrotera arxeia</strong> — ta EPUB vasismena se keimeno einai poly mikrotera apo ta PDF vasismena se eikones</li>
+</ul>
+<h2>Pos Leitoyrgei</h2>
+<p>To ergaleio <a href="#/pdf-to-epub">PDF se EPUB</a> exagei to periexomeno keimenoy apo kathe selida PDF kai to paketarei se ena egkyro arxeio EPUB 3 me sosti ploigisi kefalaion, pinaka periexomenon kai morfopolisi.</p>
+<h2>Kalctera Apotelesmata</h2>
+<p>Afto to ergaleio leitourgei kalytera me PDF pou periexoun poly keimeno. Gia skanarismena eggrafa (PDF mono me eikones), ekteleste prota to ergaleio <a href="#/ocr-pdf">OCR</a> gia na exagete to keimeno kai meta metatrepste se EPUB.</p>
+<p>To prokypton EPUB perilamvanei enan pinaka periexomenon me mia kataxorisiana arxiki selida, diasfalizo ntas efkoli ploigisi sto metatetrammeno eggrafo.</p>`,
+        date: '2026-03-10',
+        tool: 'pdf-to-epub',
+        tags: ['epub', 'e-vivlio', 'metatropi', 'kindle'],
+    },
 ];

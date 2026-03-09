@@ -770,4 +770,257 @@ export const blogPostsNl: BlogPost[] = [
         tool: 'edit-metadata',
         tags: ['metadata', 'properties', 'edit', 'privacy'],
     },
+    {
+        slug: 'convert-pdf-to-webp-modern-format',
+        lang: 'nl',
+        title: 'PDF naar WebP Converteren: Het Moderne Afbeeldingsformaat',
+        excerpt: 'Zet PDF-pagina\'s om naar WebP-afbeeldingen voor superieure compressie en kwaliteit. Ideaal voor webgebruik, snellere laadtijden en kleinere bestanden dan JPG of PNG.',
+        body: `<p>WebP is een modern afbeeldingsformaat ontwikkeld door Google dat superieure verliesloze en verliesgevende compressie biedt voor afbeeldingen op het web. PDF's naar WebP converteren geeft je kleinere bestanden met vergelijkbare kwaliteit.</p>
+<h2>Waarom WebP Kiezen?</h2>
+<ul>
+<li><strong>Kleinere bestanden</strong> — WebP-afbeeldingen zijn doorgaans 25-35% kleiner dan JPG bij gelijkwaardige kwaliteit</li>
+<li><strong>Betere kwaliteit</strong> — bij dezelfde bestandsgrootte biedt WebP scherpere afbeeldingen met minder artefacten</li>
+<li><strong>Brede ondersteuning</strong> — alle grote browsers (Chrome, Firefox, Safari, Edge) ondersteunen WebP</li>
+</ul>
+<h2>Hoe te Converteren</h2>
+<p>De <a href="#/pdf-to-webp">PDF naar WebP tool</a> laat je de kwaliteitsschuifregelaar aanpassen om de balans tussen bestandsgrootte en beeldscherpte te bepalen. Elke PDF-pagina wordt een apart WebP-bestand.</p>
+<h2>Wanneer WebP vs JPG vs PNG Gebruiken</h2>
+<p>Kies WebP voor webpublicatie waar bestandsgrootte belangrijk is. Gebruik <a href="#/pdf-to-jpg">JPG</a> voor maximale compatibiliteit met oudere software. Gebruik <a href="#/pdf-to-png">PNG</a> wanneer je transparante achtergronden of verliesloze kwaliteit nodig hebt.</p>`,
+        date: '2026-03-10',
+        tool: 'pdf-to-webp',
+        tags: ['webp', 'converteren', 'modern', 'web'],
+    },
+    {
+        slug: 'nup-pdf-multiple-pages-per-sheet',
+        lang: 'nl',
+        title: 'Meerdere PDF-pagina\'s op Eén Vel Afdrukken (N-Up)',
+        excerpt: 'Combineer 2, 4 of 9 PDF-pagina\'s op één vel om papier te besparen, hand-outs te maken of compacte documentoverzichten te produceren.',
+        body: `<p>N-Up afdrukken rangschikt meerdere pagina's op één vel. Dit is perfect voor het maken van hand-outs, papier besparen of een compact overzicht krijgen van een lang document.</p>
+<h2>Beschikbare Indelingen</h2>
+<p>De <a href="#/nup-pdf">N-Up PDF tool</a> biedt drie indelingsopties:</p>
+<ul>
+<li><strong>2-Up</strong> — twee pagina's naast elkaar op een liggend vel</li>
+<li><strong>4-Up</strong> — vier pagina's in een 2×2 raster op een staand vel</li>
+<li><strong>9-Up</strong> — negen pagina's in een 3×3 raster voor maximale papierbesparing</li>
+</ul>
+<h2>Veelvoorkomende Toepassingen</h2>
+<ul>
+<li>Hand-outs maken voor colleges met meerdere dia's per pagina</li>
+<li>Conceptdocumenten afdrukken ter beoordeling met papierbesparing</li>
+<li>Compacte referentiekaarten maken van langere documenten</li>
+</ul>
+<p>Voor de beste leesbaarheid gebruik je 2-Up voor tekst-zware documenten en 4-Up of 9-Up voor diapresentaties.</p>`,
+        date: '2026-03-10',
+        tool: 'nup-pdf',
+        tags: ['nup', 'afdrukken', 'hand-out', 'papier'],
+    },
+    {
+        slug: 'add-blank-page-to-pdf',
+        lang: 'nl',
+        title: 'Een Lege Pagina Toevoegen aan een PDF-document',
+        excerpt: 'Voeg een lege pagina in aan het begin of einde van je PDF. Handig voor voorbladen, scheidingspagina\'s of voorbereiding op dubbelzijdig afdrukken.',
+        body: `<p>Een lege pagina toevoegen aan een PDF is een eenvoudige maar veelgevraagde bewerking. Of je nu een tijdelijke aanduiding, een scheidingspagina of voorbereiding voor dubbelzijdig afdrukken nodig hebt, deze tool regelt het in enkele seconden.</p>
+<h2>Wanneer Heb Je een Lege Pagina Nodig</h2>
+<ul>
+<li><strong>Voorbladen</strong> — voeg een lege eerste pagina toe om later als voorblad in te vullen</li>
+<li><strong>Dubbelzijdig afdrukken</strong> — zorg dat hoofdstukken op de rechterpagina (oneven) beginnen</li>
+<li><strong>Sectiescheidingen</strong> — voeg visuele onderbrekingen in tussen documentsecties</li>
+<li><strong>Opvulling</strong> — voeg een lege laatste pagina toe voor boekjesafdruk</li>
+</ul>
+<h2>Hoe te Gebruiken</h2>
+<p>De <a href="#/add-blank-page">Lege Pagina Toevoegen tool</a> laat je kiezen of je de lege pagina aan het begin of einde van je PDF wilt invoegen. Het paginaformaat komt overeen met de eerste pagina van je document.</p>
+<p>Voor complexer paginabeheer gebruik je de <a href="#/organize-pdf">PDF Organiseren</a> tool waarmee je pagina's visueel kunt herordenen en dupliceren.</p>`,
+        date: '2026-03-10',
+        tool: 'add-blank-page',
+        tags: ['leeg', 'pagina', 'invoegen', 'dubbelzijdig'],
+    },
+    {
+        slug: 'remove-blank-pages-from-pdf',
+        lang: 'nl',
+        title: 'Automatisch Lege Pagina\'s Detecteren en Verwijderen uit PDF',
+        excerpt: 'Ruim je PDF\'s op door automatisch lege pagina\'s te detecteren en te verwijderen. Perfect voor gescande documenten met ongewenste lege vellen.',
+        body: `<p>Gescande documenten bevatten vaak lege pagina's doordat enkelzijdige originelen dubbelzijdig worden gescand. Ze handmatig pagina voor pagina verwijderen is tijdrovend.</p>
+<h2>Hoe Het Werkt</h2>
+<p>De <a href="#/remove-blank-pages">Lege Pagina's Verwijderen tool</a> analyseert elke pagina in je PDF door deze te renderen en de pixelinhoud te controleren. Pagina's die 99,5% of meer witte pixels bevatten, worden automatisch als leeg gedetecteerd.</p>
+<h2>Veelvoorkomende Bronnen van Lege Pagina's</h2>
+<ul>
+<li>Dubbelzijdig scannen van enkelzijdige documenten</li>
+<li>Faxverzendingen met opvulpagina's</li>
+<li>Door software gegenereerde rapporten met lege scheidingspagina's</li>
+<li>Boekscans met lege keerzijdepagina's</li>
+</ul>
+<h2>Slimme Detectie</h2>
+<p>De tool is slim genoeg om onderscheid te maken tussen echt lege pagina's en pagina's met minimale inhoud. Pagina's met zelfs kleine hoeveelheden tekst of afbeeldingen worden behouden. Als alle pagina's leeg zijn, waarschuwt de tool je in plaats van een leeg document te maken.</p>`,
+        date: '2026-03-10',
+        tool: 'remove-blank-pages',
+        tags: ['leeg', 'verwijderen', 'opruimen', 'scan'],
+    },
+    {
+        slug: 'ocr-scanned-pdf-searchable',
+        lang: 'nl',
+        title: 'OCR: Gescande PDF\'s Doorzoekbaar en Selecteerbaar Maken',
+        excerpt: 'Gebruik optische tekenherkenning om een tekstlaag toe te voegen aan gescande PDF-documenten. Maak op afbeeldingen gebaseerde PDF\'s doorzoekbaar, selecteerbaar en toegankelijk.',
+        body: `<p>Gescande documenten zijn in feite afbeeldingen in een PDF — je kunt er geen tekst in zoeken, selecteren of kopiëren. OCR (Optical Character Recognition) lost dit op door tekst in afbeeldingen te detecteren en een onzichtbare doorzoekbare laag toe te voegen.</p>
+<h2>Hoe OCR Werkt</h2>
+<p>De <a href="#/ocr-pdf">OCR PDF tool</a> verwerkt elke pagina in drie stappen:</p>
+<ol>
+<li>Rendert de pagina als een afbeelding met hoge resolutie</li>
+<li>Voert OCR uit om tekst in de afbeelding te herkennen</li>
+<li>Maakt een nieuwe PDF met de originele afbeelding plus een onzichtbare tekstlaag erbovenop</li>
+</ol>
+<h2>Ondersteunde Talen</h2>
+<p>De tool ondersteunt 14 talen waaronder Engels, Spaans, Frans, Duits, Italiaans, Portugees, Nederlands en meer. Selecteer de juiste taal voor de beste herkenningsnauwkeurigheid.</p>
+<h2>Toepassingen</h2>
+<ul>
+<li>Gescande contracten doorzoekbaar maken voor juridische beoordeling</li>
+<li>Oude papieren documenten digitaliseren voor archiefsystemen</li>
+<li>Tekstextractie mogelijk maken uit gescande bonnen en facturen</li>
+</ul>
+<p>Na OCR-verwerking kun je de <a href="#/pdf-to-text">PDF naar Tekst tool</a> gebruiken om de herkende tekst te extraheren.</p>`,
+        date: '2026-03-10',
+        tool: 'ocr-pdf',
+        tags: ['ocr', 'scan', 'doorzoekbaar', 'tekstherkenning'],
+    },
+    {
+        slug: 'compare-two-pdf-documents-visually',
+        lang: 'nl',
+        title: 'Twee PDF-documenten Visueel Vergelijken',
+        excerpt: 'Ontdek verschillen tussen twee versies van een PDF-document met visuele zij-aan-zij vergelijking en automatische verschilmarkering.',
+        body: `<p>Bij het beoordelen van documentrevisies, contractwijzigingen of ontwerpveranderingen moet je snel kunnen vaststellen wat er is gewijzigd tussen twee versies van een PDF.</p>
+<h2>Hoe Het Werkt</h2>
+<p>De <a href="#/compare-pdf">PDF Vergelijken tool</a> neemt twee PDF-bestanden en maakt een visueel vergelijkingsdocument. Elk paginapaar wordt naast elkaar weergegeven, met pixelverschillen rood gemarkeerd.</p>
+<h2>Wat Wordt Gedetecteerd</h2>
+<ul>
+<li>Tekstwijzigingen — toegevoegde, verwijderde of aangepaste woorden</li>
+<li>Lay-outverschuivingen — verplaatste elementen, gewijzigde afstanden</li>
+<li>Afbeeldingsverschillen — vervangen of gewijzigde afbeeldingen</li>
+<li>Opmaakwijzigingen — wijzigingen in lettergrootte, kleur of stijl</li>
+</ul>
+<h2>Praktische Toepassingen</h2>
+<ul>
+<li>Contractrevisies beoordelen voordat je tekent</li>
+<li>Ontwerpproeven verifiëren ten opzichte van originelen</li>
+<li>Vertaalde documenten controleren tegen de bronlay-out</li>
+<li>Kwaliteitscontrole voor documentgeneratiepijplijnen</li>
+</ul>
+<p>Upload beide versies en de tool produceert een downloadbare vergelijkings-PDF die je op je eigen tempo kunt bekijken.</p>`,
+        date: '2026-03-10',
+        tool: 'compare-pdf',
+        tags: ['vergelijken', 'verschil', 'beoordelen', 'versies'],
+    },
+    {
+        slug: 'convert-plain-text-to-pdf',
+        lang: 'nl',
+        title: 'Platte Tekst naar PDF Converteren: Snel en Eenvoudig',
+        excerpt: 'Zet platte tekstbestanden of geplakte tekst om in goed opgemaakte PDF-documenten. Automatische woordafbreking, paginering en professionele lay-out.',
+        body: `<p>Soms wil je gewoon platte tekst omzetten in een nette, deelbare PDF — geen ingewikkelde opmaak, alleen leesbare tekst in een professionele documentlay-out.</p>
+<h2>Hoe Het Werkt</h2>
+<p>De <a href="#/text-to-pdf">Tekst naar PDF tool</a> neemt je platte tekstinvoer en maakt een A4 PDF-document met automatische woordafbreking, juiste marges en een monospace-lettertype voor consistente uitlijning.</p>
+<h2>Functies</h2>
+<ul>
+<li><strong>Automatische woordafbreking</strong> — lange regels worden automatisch afgebroken op woordgrenzen</li>
+<li><strong>Paginering</strong> — tekst wordt indien nodig verdeeld over meerdere pagina's</li>
+<li><strong>Consistente lay-out</strong> — Courier-lettertype zorgt voor tekenuitlijning bij code of gegevens</li>
+<li><strong>Regelafbrekingen behouden</strong> — je alineastructuur wordt gehandhaafd</li>
+</ul>
+<h2>Toepassingen</h2>
+<ul>
+<li>Logbestanden of codefragmenten converteren naar PDF voor documentatie</li>
+<li>Afdrukbare versies maken van platte tekstnotities</li>
+<li>Tekstinhoud archiveren in een universeel leesbaar formaat</li>
+</ul>
+<p>Voor rijkere opmaak met koppen, lijsten en links, gebruik in plaats daarvan de <a href="#/markdown-to-pdf">Markdown naar PDF</a> tool.</p>`,
+        date: '2026-03-10',
+        tool: 'text-to-pdf',
+        tags: ['tekst', 'converteren', 'maken', 'platte-tekst'],
+    },
+    {
+        slug: 'reverse-pdf-page-order',
+        lang: 'nl',
+        title: 'PDF-paginavolgorde Omkeren',
+        excerpt: 'Draai de paginavolgorde van je PDF-document om zodat de laatste pagina de eerste wordt. Perfect voor het corrigeren van omgekeerde scans of omgedraaide afdrukwachtrijen.',
+        body: `<p>Soms komen documenten in de verkeerde volgorde terecht — omgekeerde scans, omgedraaide afdrukwachtrijen, of simpelweg de behoefte om van achteren naar voren te lezen. Omkeren lost dit op met één klik.</p>
+<h2>Wanneer Pagina's Omkeren</h2>
+<ul>
+<li><strong>Scanneruitvoer</strong> — veel scanners produceren pagina's in omgekeerde volgorde vanuit de papierstapel</li>
+<li><strong>Afdrukwachtrijproblemen</strong> — documenten die met de voorkant omhoog worden afgedrukt komen in omgekeerde volgorde uit</li>
+<li><strong>Presentatievolgorde</strong> — inhoud herschikken om informatie van onder naar boven te presenteren</li>
+<li><strong>Boekjesvoorbereiding</strong> — sommige boekjesindelingen vereisen omgekeerde paginavolgordes</li>
+</ul>
+<h2>Hoe Het Werkt</h2>
+<p>De <a href="#/reverse-pages">Pagina's Omkeren tool</a> neemt je PDF en maakt een nieuw document met alle pagina's in omgekeerde volgorde. De laatste pagina wordt de eerste, de voorlaatste wordt de tweede, enzovoort.</p>
+<p>Voor selectievere paginaherordening gebruik je de <a href="#/organize-pdf">PDF Organiseren</a> tool waarmee je individuele pagina's kunt slepen en neerzetten.</p>`,
+        date: '2026-03-10',
+        tool: 'reverse-pages',
+        tags: ['omkeren', 'volgorde', 'omdraaien', 'paginas'],
+    },
+    {
+        slug: 'invert-pdf-colors-dark-mode',
+        lang: 'nl',
+        title: 'PDF-kleuren Inverteren voor Lezen in Donkere Modus',
+        excerpt: 'Zet PDF\'s met witte achtergrond om naar donkere modus met geïnverteerde kleuren. Verminder oogvermoeidheid, bespaar inkt op donkere printers of creëer artistieke effecten.',
+        body: `<p>Kleuren inverteren verandert een document met witte achtergrond in één met donkere achtergrond (en vice versa). Dit is handig voor comfortabel lezen in donkere modus of het creëren van visuele effecten.</p>
+<h2>Voordelen van Kleurinversie</h2>
+<ul>
+<li><strong>Oogcomfort</strong> — donkere achtergronden verminderen oogvermoeidheid in omgevingen met weinig licht</li>
+<li><strong>Toegankelijkheid</strong> — sommige gebruikers vinden geïnverteerde kleuren makkelijker te lezen</li>
+<li><strong>Inktbesparing</strong> — geïnverteerde documenten afdrukken op donker papier verbruikt minder inkt</li>
+<li><strong>Creatieve toepassingen</strong> — produceer negatief-effect afbeeldingen voor ontwerpprojecten</li>
+</ul>
+<h2>Hoe Het Werkt</h2>
+<p>De <a href="#/invert-colors">Kleuren Inverteren tool</a> rendert elke pagina en inverteert elke pixel: zwart wordt wit, wit wordt zwart, en alle kleuren verschuiven naar hun complementaire waarden. Het resultaat is een nieuwe PDF met het geïnverteerde uiterlijk.</p>
+<p>Om kleurdocumenten in plaats daarvan naar grijstinten te converteren, gebruik je de <a href="#/grayscale-pdf">Grijstinten PDF</a> tool.</p>`,
+        date: '2026-03-10',
+        tool: 'invert-colors',
+        tags: ['inverteren', 'donkere-modus', 'kleuren', 'toegankelijkheid'],
+    },
+    {
+        slug: 'repair-corrupted-pdf-files',
+        lang: 'nl',
+        title: 'Beschadigde of Corrupte PDF-bestanden Repareren',
+        excerpt: 'Herstel kapotte PDF\'s die niet openen of fouten weergeven. De reparatietool parseert en herbouwt de documentstructuur om inhoud te herstellen.',
+        body: `<p>PDF-bestanden kunnen beschadigd raken door onvolledige downloads, opslagfouten of softwarebugs. Wanneer een PDF niet opent of onjuist wordt weergegeven, kan een reparatiepoging vaak de inhoud herstellen.</p>
+<h2>Veelvoorkomende PDF-problemen</h2>
+<ul>
+<li>Bestand opent niet in PDF-viewers</li>
+<li>Lege pagina's of ontbrekende inhoud</li>
+<li>Foutmeldingen over ongeldige structuur</li>
+<li>Gedeeltelijke weergave of kapotte lettertypen</li>
+</ul>
+<h2>Hoe Reparatie Werkt</h2>
+<p>De <a href="#/repair-pdf">PDF Repareren tool</a> laadt je beschadigde bestand met maximale fouttolerantie en herbouwt het vervolgens als een schoon nieuw document. Dit proces herstelt vaak pagina's en inhoud die gewone viewers niet kunnen weergeven.</p>
+<h2>Wat Wordt Gerepareerd</h2>
+<ul>
+<li>Corrupte kruisverwijzingstabellen</li>
+<li>Kapotte interne links en paginaverwijzingen</li>
+<li>Ongeldige objectstructuren</li>
+<li>Ontbrekende of beschadigde headers</li>
+</ul>
+<p>Let op: ernstig beschadigde bestanden waarvan de kerngegevens zijn vernietigd, zijn mogelijk niet herstelbaar. Voor de meeste veelvoorkomende beschadigingsproblemen herstelt de reparatietool het document echter met succes.</p>`,
+        date: '2026-03-10',
+        tool: 'repair-pdf',
+        tags: ['repareren', 'herstellen', 'beschadigd', 'corruptie'],
+    },
+    {
+        slug: 'convert-pdf-to-epub-ebook',
+        lang: 'nl',
+        title: 'PDF naar EPUB Converteren voor E-readers',
+        excerpt: 'Zet PDF-documenten om naar EPUB-formaat voor comfortabel lezen op Kindle, Kobo en andere e-readers. Tekst past zich aan elk schermformaat aan.',
+        body: `<p>PDF's zijn ontworpen voor weergave met een vaste lay-out, wat ze moeilijk leesbaar maakt op kleine schermen. EPUB is het standaard e-bookformaat dat tekst laat meevloeien om op elk schermformaat te passen.</p>
+<h2>Waarom naar EPUB Converteren?</h2>
+<ul>
+<li><strong>Meevloeiende tekst</strong> — inhoud past zich aan elk schermformaat aan, van telefoons tot tablets</li>
+<li><strong>Lezerfuncties</strong> — pas lettergrootte, stijl en achtergrondkleur aan naar je voorkeur</li>
+<li><strong>E-reader compatibiliteit</strong> — werkt met Kindle, Kobo, Apple Books en andere apparaten</li>
+<li><strong>Kleinere bestanden</strong> — op tekst gebaseerde EPUB's zijn veel kleiner dan op afbeeldingen gebaseerde PDF's</li>
+</ul>
+<h2>Hoe Het Werkt</h2>
+<p>De <a href="#/pdf-to-epub">PDF naar EPUB tool</a> extraheert tekstinhoud van elke PDF-pagina en verpakt deze in een geldig EPUB 3-bestand met correcte hoofdstuknavigatie, inhoudsopgave en opmaak.</p>
+<h2>Beste Resultaten</h2>
+<p>Deze tool werkt het best met tekst-zware PDF's. Voor gescande documenten (PDF's die alleen uit afbeeldingen bestaan), voer eerst de <a href="#/ocr-pdf">OCR tool</a> uit om de tekst te extraheren en converteer daarna naar EPUB.</p>
+<p>De resulterende EPUB bevat een inhoudsopgave met één item per originele pagina, waardoor het eenvoudig is om door het geconverteerde document te navigeren.</p>`,
+        date: '2026-03-10',
+        tool: 'pdf-to-epub',
+        tags: ['epub', 'ebook', 'converteren', 'kindle'],
+    },
 ];

@@ -780,4 +780,257 @@ export const blogPostsDe: BlogPost[] = [
         tool: 'edit-metadata',
         tags: ['metadata', 'properties', 'edit', 'privacy'],
     },
+    {
+        slug: 'pdf-zu-webp-modernes-format',
+        lang: 'de',
+        title: 'PDF in WebP umwandeln: Das moderne Bildformat',
+        excerpt: 'Wandeln Sie PDF-Seiten in WebP-Bilder um — für überlegene Komprimierung und Qualität. Ideal für den Webeinsatz, schnelleres Laden und kleinere Dateien als JPG oder PNG.',
+        body: `<p>WebP ist ein modernes Bildformat, das von Google entwickelt wurde und eine überlegene verlustfreie und verlustbehaftete Komprimierung für Bilder im Web bietet. Die Umwandlung von PDFs in WebP liefert kleinere Dateien bei vergleichbarer Qualität.</p>
+<h2>Warum WebP wählen?</h2>
+<ul>
+<li><strong>Kleinere Dateien</strong> — WebP-Bilder sind typischerweise 25–35 % kleiner als JPG bei gleicher Qualität</li>
+<li><strong>Bessere Qualität</strong> — bei gleicher Dateigröße bietet WebP schärfere Bilder mit weniger Artefakten</li>
+<li><strong>Breite Unterstützung</strong> — alle gängigen Browser (Chrome, Firefox, Safari, Edge) unterstützen WebP</li>
+</ul>
+<h2>So funktioniert die Umwandlung</h2>
+<p>Das <a href="#/pdf-to-webp">PDF-zu-WebP-Tool</a> ermöglicht es Ihnen, den Qualitätsregler anzupassen, um Dateigröße und Bildklarheit auszubalancieren. Jede PDF-Seite wird zu einer separaten WebP-Datei.</p>
+<h2>Wann WebP, JPG oder PNG verwenden?</h2>
+<p>Wählen Sie WebP für die Veröffentlichung im Web, wenn die Dateigröße wichtig ist. Verwenden Sie <a href="#/pdf-to-jpg">JPG</a> für maximale Kompatibilität mit älterer Software. Verwenden Sie <a href="#/pdf-to-png">PNG</a>, wenn Sie transparente Hintergründe oder verlustfreie Qualität benötigen.</p>`,
+        date: '2026-03-10',
+        tool: 'pdf-to-webp',
+        tags: ['webp', 'umwandeln', 'modern', 'web'],
+    },
+    {
+        slug: 'nup-pdf-mehrere-seiten-pro-blatt',
+        lang: 'de',
+        title: 'Mehrere PDF-Seiten auf ein Blatt drucken (N-Up)',
+        excerpt: 'Kombinieren Sie 2, 4 oder 9 PDF-Seiten auf einem Blatt, um Papier zu sparen, Handouts zu erstellen oder kompakte Dokumentübersichten zu erzeugen.',
+        body: `<p>N-Up-Druck ordnet mehrere Seiten auf einem einzigen Blatt an. Dies ist ideal zum Erstellen von Handouts, zum Papiersparen oder für einen kompakten Überblick über ein langes Dokument.</p>
+<h2>Verfügbare Layouts</h2>
+<p>Das <a href="#/nup-pdf">N-Up-PDF-Tool</a> bietet drei Layout-Optionen:</p>
+<ul>
+<li><strong>2-Up</strong> — zwei Seiten nebeneinander auf einem Querformat-Blatt</li>
+<li><strong>4-Up</strong> — vier Seiten in einem 2×2-Raster auf einem Hochformat-Blatt</li>
+<li><strong>9-Up</strong> — neun Seiten in einem 3×3-Raster für maximale Papierersparnis</li>
+</ul>
+<h2>Häufige Anwendungsfälle</h2>
+<ul>
+<li>Erstellen von Vorlesungshandouts mit mehreren Folien pro Seite</li>
+<li>Drucken von Dokumententwürfen zur Überprüfung bei gleichzeitigem Papiersparen</li>
+<li>Erstellen kompakter Referenzkarten aus längeren Dokumenten</li>
+</ul>
+<p>Für beste Lesbarkeit verwenden Sie 2-Up für textlastige Dokumente und 4-Up oder 9-Up für Folienpräsentationen.</p>`,
+        date: '2026-03-10',
+        tool: 'nup-pdf',
+        tags: ['nup', 'drucken', 'handout', 'papier'],
+    },
+    {
+        slug: 'leere-seite-zu-pdf-hinzufuegen',
+        lang: 'de',
+        title: 'So fügen Sie eine leere Seite in ein PDF-Dokument ein',
+        excerpt: 'Fügen Sie eine leere Seite am Anfang oder Ende Ihres PDFs ein. Nützlich für Deckblätter, Trennseiten oder die Vorbereitung auf Duplexdruck.',
+        body: `<p>Das Hinzufügen einer leeren Seite zu einem PDF ist eine einfache, aber häufig benötigte Operation. Ob Sie einen Platzhalter, eine Trennseite oder eine Vorbereitung für beidseitigen Druck benötigen — dieses Tool erledigt es in Sekunden.</p>
+<h2>Wann Sie eine leere Seite benötigen</h2>
+<ul>
+<li><strong>Deckblätter</strong> — fügen Sie eine leere erste Seite hinzu, die Sie später als Deckblatt ausfüllen</li>
+<li><strong>Duplexdruck</strong> — stellen Sie sicher, dass Kapitel auf der rechten (ungeraden) Seite beginnen</li>
+<li><strong>Abschnittstrennseiten</strong> — fügen Sie visuelle Trennungen zwischen Dokumentabschnitten ein</li>
+<li><strong>Auffüllung</strong> — fügen Sie eine leere letzte Seite für den Broschürendruck hinzu</li>
+</ul>
+<h2>So funktioniert es</h2>
+<p>Das <a href="#/add-blank-page">Leere-Seite-hinzufügen-Tool</a> ermöglicht es Ihnen zu wählen, ob die leere Seite am Anfang oder am Ende Ihres PDFs eingefügt werden soll. Die Seitengröße entspricht der ersten Seite Ihres Dokuments.</p>
+<p>Für komplexere Seitenverwaltung verwenden Sie das <a href="#/organize-pdf">PDF-organisieren-Tool</a>, mit dem Sie Seiten visuell neu anordnen und duplizieren können.</p>`,
+        date: '2026-03-10',
+        tool: 'add-blank-page',
+        tags: ['leer', 'seite', 'einfuegen', 'duplex'],
+    },
+    {
+        slug: 'leere-seiten-aus-pdf-entfernen',
+        lang: 'de',
+        title: 'Leere Seiten automatisch erkennen und aus PDF entfernen',
+        excerpt: 'Bereinigen Sie Ihre PDFs, indem Sie leere Seiten automatisch erkennen und entfernen. Perfekt für gescannte Dokumente mit unerwünschten leeren Blättern.',
+        body: `<p>Gescannte Dokumente enthalten häufig leere Seiten vom beidseitigen Scannen einseitig bedruckter Vorlagen. Das manuelle Entfernen Seite für Seite ist mühsam.</p>
+<h2>So funktioniert es</h2>
+<p>Das <a href="#/remove-blank-pages">Leere-Seiten-entfernen-Tool</a> analysiert jede Seite in Ihrem PDF, indem es sie rendert und den Pixelinhalt überprüft. Seiten, die zu 99,5 % oder mehr aus weißen Pixeln bestehen, werden automatisch als leer erkannt.</p>
+<h2>Häufige Ursachen für leere Seiten</h2>
+<ul>
+<li>Beidseitiges Scannen von einseitig bedruckten Dokumenten</li>
+<li>Faxübertragungen mit Füllseiten</li>
+<li>Software-generierte Berichte mit leeren Trennseiten</li>
+<li>Buchscans mit leeren Rückseiten</li>
+</ul>
+<h2>Intelligente Erkennung</h2>
+<p>Das Tool ist intelligent genug, um zwischen wirklich leeren Seiten und Seiten mit minimalem Inhalt zu unterscheiden. Seiten mit auch nur geringen Mengen an Text oder Grafiken werden beibehalten. Wenn alle Seiten leer sind, warnt Sie das Tool, anstatt ein leeres Dokument zu erstellen.</p>`,
+        date: '2026-03-10',
+        tool: 'remove-blank-pages',
+        tags: ['leer', 'entfernen', 'bereinigen', 'scan'],
+    },
+    {
+        slug: 'ocr-gescannte-pdf-durchsuchbar',
+        lang: 'de',
+        title: 'OCR: Gescannte PDFs durchsuchbar und markierbar machen',
+        excerpt: 'Verwenden Sie optische Zeichenerkennung, um gescannten PDF-Dokumenten eine Textebene hinzuzufügen. Machen Sie bildbasierte PDFs durchsuchbar, markierbar und barrierefrei.',
+        body: `<p>Gescannte Dokumente sind im Wesentlichen Bilder in einem PDF — Sie können Text darin nicht suchen, markieren oder kopieren. OCR (Optical Character Recognition, optische Zeichenerkennung) löst dieses Problem, indem es Text in Bildern erkennt und eine unsichtbare durchsuchbare Ebene hinzufügt.</p>
+<h2>So funktioniert OCR</h2>
+<p>Das <a href="#/ocr-pdf">OCR-PDF-Tool</a> verarbeitet jede Seite in drei Schritten:</p>
+<ol>
+<li>Rendert die Seite als hochauflösendes Bild</li>
+<li>Führt OCR durch, um Text im Bild zu erkennen</li>
+<li>Erstellt ein neues PDF mit dem Originalbild und einer unsichtbaren Textebene darüber</li>
+</ol>
+<h2>Unterstützte Sprachen</h2>
+<p>Das Tool unterstützt 14 Sprachen, darunter Englisch, Spanisch, Französisch, Deutsch, Italienisch, Portugiesisch, Niederländisch und weitere. Wählen Sie die richtige Sprache für die beste Erkennungsgenauigkeit.</p>
+<h2>Anwendungsfälle</h2>
+<ul>
+<li>Gescannte Verträge für die rechtliche Prüfung durchsuchbar machen</li>
+<li>Alte Papierdokumente für Archivsysteme digitalisieren</li>
+<li>Textextraktion aus gescannten Quittungen und Rechnungen ermöglichen</li>
+</ul>
+<p>Nach der OCR-Verarbeitung können Sie das <a href="#/pdf-to-text">PDF-zu-Text-Tool</a> verwenden, um den erkannten Text zu extrahieren.</p>`,
+        date: '2026-03-10',
+        tool: 'ocr-pdf',
+        tags: ['ocr', 'scan', 'durchsuchbar', 'texterkennung'],
+    },
+    {
+        slug: 'zwei-pdf-dokumente-visuell-vergleichen',
+        lang: 'de',
+        title: 'Zwei PDF-Dokumente visuell vergleichen',
+        excerpt: 'Erkennen Sie Unterschiede zwischen zwei Versionen eines PDF-Dokuments mit visuellem Seite-an-Seite-Vergleich und automatischer Hervorhebung der Unterschiede.',
+        body: `<p>Beim Überprüfen von Dokumentrevisionen, Vertragsänderungen oder Designänderungen müssen Sie schnell erkennen, was sich zwischen zwei Versionen eines PDFs geändert hat.</p>
+<h2>So funktioniert es</h2>
+<p>Das <a href="#/compare-pdf">PDF-Vergleichen-Tool</a> nimmt zwei PDF-Dateien und erstellt ein visuelles Vergleichsdokument. Jedes Seitenpaar wird nebeneinander dargestellt, wobei Unterschiede auf Pixelebene rot hervorgehoben werden.</p>
+<h2>Was wird erkannt</h2>
+<ul>
+<li>Textänderungen — hinzugefügte, entfernte oder geänderte Wörter</li>
+<li>Layout-Verschiebungen — verschobene Elemente, geänderter Abstand</li>
+<li>Bildunterschiede — ersetzte oder veränderte Grafiken</li>
+<li>Formatierungsänderungen — Änderungen der Schriftgröße, Farbe oder des Stils</li>
+</ul>
+<h2>Praktische Anwendungen</h2>
+<ul>
+<li>Überprüfung von Vertragsrevisionen vor der Unterzeichnung</li>
+<li>Verifizierung von Designentwürfen gegen Originale</li>
+<li>Prüfung übersetzter Dokumente gegen das Quelllayout</li>
+<li>Qualitätssicherung für Dokumentenerstellungspipelines</li>
+</ul>
+<p>Laden Sie beide Versionen hoch und das Tool erstellt ein herunterladbares Vergleichs-PDF, das Sie in Ihrem eigenen Tempo durchsehen können.</p>`,
+        date: '2026-03-10',
+        tool: 'compare-pdf',
+        tags: ['vergleichen', 'unterschied', 'pruefung', 'versionen'],
+    },
+    {
+        slug: 'klartext-in-pdf-umwandeln',
+        lang: 'de',
+        title: 'Klartext in PDF umwandeln: Schnell und einfach',
+        excerpt: 'Verwandeln Sie Klartextdateien oder eingefügten Text in gut formatierte PDF-Dokumente. Automatischer Zeilenumbruch, Seitenaufteilung und professionelles Layout.',
+        body: `<p>Manchmal müssen Sie einfach nur Klartext in ein sauberes, teilbares PDF umwandeln — keine aufwendige Formatierung, nur lesbarer Text in einem professionellen Dokumentenlayout.</p>
+<h2>So funktioniert es</h2>
+<p>Das <a href="#/text-to-pdf">Text-zu-PDF-Tool</a> nimmt Ihren Klartext-Eingang und erstellt ein A4-PDF-Dokument mit automatischem Zeilenumbruch, korrekten Rändern und einer Monospace-Schrift für gleichmäßige Ausrichtung.</p>
+<h2>Funktionen</h2>
+<ul>
+<li><strong>Automatischer Zeilenumbruch</strong> — lange Zeilen werden automatisch an Wortgrenzen umbrochen</li>
+<li><strong>Seitenaufteilung</strong> — Text wird bei Bedarf auf mehrere Seiten verteilt</li>
+<li><strong>Einheitliches Layout</strong> — Courier-Schrift sorgt für Zeichenausrichtung bei Code oder Daten</li>
+<li><strong>Zeilenumbrüche erhalten</strong> — Ihre Absatzstruktur bleibt erhalten</li>
+</ul>
+<h2>Anwendungsfälle</h2>
+<ul>
+<li>Konvertierung von Protokolldateien oder Code-Ausschnitten in PDF zur Dokumentation</li>
+<li>Erstellung druckbarer Versionen von Klartext-Notizen</li>
+<li>Archivierung von Textinhalten in einem universell lesbaren Format</li>
+</ul>
+<p>Für eine reichhaltigere Formatierung mit Überschriften, Listen und Links verwenden Sie stattdessen das <a href="#/markdown-to-pdf">Markdown-zu-PDF-Tool</a>.</p>`,
+        date: '2026-03-10',
+        tool: 'text-to-pdf',
+        tags: ['text', 'umwandeln', 'erstellen', 'klartext'],
+    },
+    {
+        slug: 'pdf-seitenreihenfolge-umkehren',
+        lang: 'de',
+        title: 'PDF-Seitenreihenfolge umkehren',
+        excerpt: 'Kehren Sie die Seitenreihenfolge Ihres PDF-Dokuments um, sodass die letzte Seite zur ersten wird. Perfekt zum Korrigieren umgekehrter Scans oder invertierter Druckwarteschlangen.',
+        body: `<p>Manchmal landen Dokumente in der falschen Reihenfolge — umgekehrte Scans, invertierte Druckwarteschlangen oder schlicht der Wunsch, von hinten nach vorne zu lesen. Das Umkehren behebt dies mit einem Klick.</p>
+<h2>Wann Seiten umkehren?</h2>
+<ul>
+<li><strong>Scanner-Ausgabe</strong> — viele Scanner erzeugen Seiten in umgekehrter Reihenfolge vom Papierstapel</li>
+<li><strong>Druckwarteschlangen-Probleme</strong> — mit der Vorderseite nach oben gedruckte Dokumente kommen in umgekehrter Reihenfolge heraus</li>
+<li><strong>Präsentationsreihenfolge</strong> — Inhalte umordnen, um Informationen von unten nach oben darzustellen</li>
+<li><strong>Broschürenvorbereitung</strong> — manche Broschürenlayouts erfordern umgekehrte Seitenfolgen</li>
+</ul>
+<h2>So funktioniert es</h2>
+<p>Das <a href="#/reverse-pages">Seiten-umkehren-Tool</a> nimmt Ihr PDF und erstellt ein neues Dokument mit allen Seiten in umgekehrter Reihenfolge. Die letzte Seite wird zur ersten, die vorletzte zur zweiten, und so weiter.</p>
+<p>Für gezieltere Seitenneuordnung verwenden Sie das <a href="#/organize-pdf">PDF-organisieren-Tool</a>, mit dem Sie einzelne Seiten per Drag & Drop verschieben können.</p>`,
+        date: '2026-03-10',
+        tool: 'reverse-pages',
+        tags: ['umkehren', 'reihenfolge', 'wenden', 'seiten'],
+    },
+    {
+        slug: 'pdf-farben-invertieren-dunkelmodus',
+        lang: 'de',
+        title: 'PDF-Farben invertieren für Dunkelmodus-Lesen',
+        excerpt: 'Wandeln Sie PDFs mit weißem Hintergrund in den Dunkelmodus um, indem Sie die Farben invertieren. Reduzieren Sie die Augenbelastung, sparen Sie Tinte oder erzeugen Sie künstlerische Effekte.',
+        body: `<p>Das Invertieren der Farben verwandelt ein Dokument mit weißem Hintergrund in eines mit dunklem Hintergrund (und umgekehrt). Dies ist nützlich für komfortables Lesen im Dunkelmodus oder zum Erzeugen visueller Effekte.</p>
+<h2>Vorteile der Farbinvertierung</h2>
+<ul>
+<li><strong>Augenkomfort</strong> — dunkle Hintergründe reduzieren die Augenbelastung in Umgebungen mit wenig Licht</li>
+<li><strong>Barrierefreiheit</strong> — manche Nutzer finden invertierte Farben leichter lesbar</li>
+<li><strong>Tintenersparnis</strong> — das Drucken invertierter Dokumente auf dunklem Papier verbraucht weniger Tinte</li>
+<li><strong>Kreative Nutzung</strong> — erzeugen Sie Negativ-Effekt-Bilder für Designprojekte</li>
+</ul>
+<h2>So funktioniert es</h2>
+<p>Das <a href="#/invert-colors">Farben-invertieren-Tool</a> rendert jede Seite und invertiert jeden Pixel: Schwarz wird zu Weiß, Weiß wird zu Schwarz, und alle Farben verschieben sich zu ihren Komplementärfarben. Das Ergebnis ist ein neues PDF mit dem invertierten Erscheinungsbild.</p>
+<p>Um Farbdokumente stattdessen in Graustufen umzuwandeln, verwenden Sie das <a href="#/grayscale-pdf">Graustufen-PDF-Tool</a>.</p>`,
+        date: '2026-03-10',
+        tool: 'invert-colors',
+        tags: ['invertieren', 'dunkelmodus', 'farben', 'barrierefreiheit'],
+    },
+    {
+        slug: 'beschaedigte-pdf-dateien-reparieren',
+        lang: 'de',
+        title: 'Beschädigte oder defekte PDF-Dateien reparieren',
+        excerpt: 'Reparieren Sie defekte PDFs, die sich nicht öffnen lassen oder Fehler anzeigen. Das Reparatur-Tool analysiert und erstellt die Dokumentstruktur neu, um den Inhalt wiederherzustellen.',
+        body: `<p>PDF-Dateien können durch unvollständige Downloads, Speicherfehler oder Software-Bugs beschädigt werden. Wenn sich ein PDF nicht öffnen lässt oder fehlerhaft angezeigt wird, kann ein Reparaturversuch den Inhalt oft wiederherstellen.</p>
+<h2>Häufige PDF-Probleme</h2>
+<ul>
+<li>Datei lässt sich nicht in PDF-Viewern öffnen</li>
+<li>Leere Seiten oder fehlende Inhalte</li>
+<li>Fehlermeldungen über ungültige Struktur</li>
+<li>Teilweise Darstellung oder defekte Schriftarten</li>
+</ul>
+<h2>So funktioniert die Reparatur</h2>
+<p>Das <a href="#/repair-pdf">PDF-Reparieren-Tool</a> lädt Ihre beschädigte Datei mit maximaler Fehlertoleranz und erstellt sie als sauberes neues Dokument neu. Dieser Prozess stellt oft Seiten und Inhalte wieder her, die reguläre Viewer nicht anzeigen können.</p>
+<h2>Was wird repariert</h2>
+<ul>
+<li>Beschädigte Querverweistabellen</li>
+<li>Defekte interne Verknüpfungen und Seitenreferenzen</li>
+<li>Ungültige Objektstrukturen</li>
+<li>Fehlende oder beschädigte Kopfzeilen</li>
+</ul>
+<p>Hinweis: Schwer beschädigte Dateien, bei denen die Kerndaten zerstört sind, können möglicherweise nicht wiederhergestellt werden. Für die meisten gängigen Beschädigungsprobleme stellt das Reparatur-Tool das Dokument jedoch erfolgreich wieder her.</p>`,
+        date: '2026-03-10',
+        tool: 'repair-pdf',
+        tags: ['reparieren', 'beheben', 'beschaedigt', 'wiederherstellen'],
+    },
+    {
+        slug: 'pdf-zu-epub-ebook-umwandeln',
+        lang: 'de',
+        title: 'PDF in EPUB für E-Book-Reader umwandeln',
+        excerpt: 'Wandeln Sie PDF-Dokumente in das EPUB-Format um, für komfortables Lesen auf Kindle, Kobo und anderen E-Readern. Text passt sich fließend an jede Bildschirmgröße an.',
+        body: `<p>PDFs sind für die Darstellung mit festem Layout konzipiert, was das Lesen auf kleinen Bildschirmen erschwert. EPUB ist das Standard-E-Book-Format, das Text fließend an jede Bildschirmgröße anpasst.</p>
+<h2>Warum in EPUB umwandeln?</h2>
+<ul>
+<li><strong>Fließender Text</strong> — Inhalte passen sich an jede Bildschirmgröße an, vom Smartphone bis zum Tablet</li>
+<li><strong>Reader-Funktionen</strong> — passen Sie Schriftgröße, Schriftstil und Hintergrundfarbe nach Ihren Wünschen an</li>
+<li><strong>E-Reader-Kompatibilität</strong> — funktioniert mit Kindle, Kobo, Apple Books und anderen Geräten</li>
+<li><strong>Kleinere Dateien</strong> — textbasierte EPUBs sind deutlich kleiner als bildbasierte PDFs</li>
+</ul>
+<h2>So funktioniert es</h2>
+<p>Das <a href="#/pdf-to-epub">PDF-zu-EPUB-Tool</a> extrahiert Textinhalte aus jeder PDF-Seite und verpackt sie in eine gültige EPUB-3-Datei mit korrekter Kapitelnavigation, Inhaltsverzeichnis und Formatierung.</p>
+<h2>Beste Ergebnisse</h2>
+<p>Dieses Tool funktioniert am besten mit textlastigen PDFs. Für gescannte Dokumente (rein bildbasierte PDFs) führen Sie zuerst das <a href="#/ocr-pdf">OCR-Tool</a> aus, um den Text zu extrahieren, und wandeln Sie dann in EPUB um.</p>
+<p>Das resultierende EPUB enthält ein Inhaltsverzeichnis mit einem Eintrag pro Originalseite, was die Navigation im konvertierten Dokument erleichtert.</p>`,
+        date: '2026-03-10',
+        tool: 'pdf-to-epub',
+        tags: ['epub', 'ebook', 'umwandeln', 'kindle'],
+    },
 ];

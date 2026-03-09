@@ -122,6 +122,17 @@ const toolConfig = computed(() => {
         'pdf-to-text': { accept: '.pdf', multiple: true, color: 'bg-blue-500', bgColor: 'bg-blue-50' },
         'markdown-to-pdf': { accept: '', multiple: false, color: 'bg-violet-500', bgColor: 'bg-violet-50' },
         'edit-metadata': { accept: '.pdf', multiple: true, color: 'bg-cyan-500', bgColor: 'bg-cyan-50' },
+        'pdf-to-webp': { accept: '.pdf', multiple: true, color: 'bg-emerald-500', bgColor: 'bg-emerald-50' },
+        'nup-pdf': { accept: '.pdf', multiple: true, color: 'bg-indigo-500', bgColor: 'bg-indigo-50' },
+        'add-blank-page': { accept: '.pdf', multiple: true, color: 'bg-sky-500', bgColor: 'bg-sky-50' },
+        'remove-blank-pages': { accept: '.pdf', multiple: true, color: 'bg-rose-500', bgColor: 'bg-rose-50' },
+        'ocr-pdf': { accept: '.pdf', multiple: true, color: 'bg-purple-500', bgColor: 'bg-purple-50' },
+        'compare-pdf': { accept: '.pdf', multiple: true, color: 'bg-amber-500', bgColor: 'bg-amber-50' },
+        'text-to-pdf': { accept: '', multiple: false, color: 'bg-teal-500', bgColor: 'bg-teal-50' },
+        'reverse-pages': { accept: '.pdf', multiple: true, color: 'bg-orange-500', bgColor: 'bg-orange-50' },
+        'invert-colors': { accept: '.pdf', multiple: true, color: 'bg-gray-500', bgColor: 'bg-gray-100' },
+        'repair-pdf': { accept: '.pdf', multiple: true, color: 'bg-red-500', bgColor: 'bg-red-50' },
+        'pdf-to-epub': { accept: '.pdf', multiple: true, color: 'bg-violet-500', bgColor: 'bg-violet-50' },
     };
     return configs[props.tool] ?? configs['merge-pdf'];
 });
@@ -183,6 +194,16 @@ const organizeToolRef = ref<InstanceType<typeof OrganizeTool> | null>(null);
 const editMetadataToolRef = ref<InstanceType<typeof EditMetadataTool> | null>(null);
 // Markdown to PDF
 const markdownText = ref('');
+// Text to PDF
+const textContent = ref('');
+// PDF to WebP
+const webpQuality = ref(0.8);
+// N-Up
+const nupLayout = ref<2 | 4 | 9>(4);
+// Add Blank Page
+const blankPagePosition = ref<'start' | 'end'>('end');
+// OCR
+const ocrLanguage = ref('eng');
 
 // Multi-file results
 const multiResults = ref<{ name: string; blob: Blob }[]>([]);
@@ -219,6 +240,17 @@ const actionLabel = computed(() => {
         'pdf-to-text': 'tool.pdftotext.action',
         'markdown-to-pdf': 'tool.markdown.action',
         'edit-metadata': 'tool.metadata.action',
+        'pdf-to-webp': 'tool.pdftowebp.action',
+        'nup-pdf': 'tool.nup.action',
+        'add-blank-page': 'tool.blankpage.action',
+        'remove-blank-pages': 'tool.removeblank.action',
+        'ocr-pdf': 'tool.ocr.action',
+        'compare-pdf': 'tool.compare.action',
+        'text-to-pdf': 'tool.texttopdf.action',
+        'reverse-pages': 'tool.reverse.action',
+        'invert-colors': 'tool.invert.action',
+        'repair-pdf': 'tool.repair.action',
+        'pdf-to-epub': 'tool.pdftoepub.action',
     };
     return trans(labels[props.tool] ?? 'tool.process');
 });
@@ -229,6 +261,8 @@ const batchEligibleTools = [
     'resize-pdf', 'page-numbers', 'header-footer', 'protect-pdf', 'unlock-pdf',
     'pdf-to-jpg', 'pdf-to-png', 'extract-images', 'pdf-to-text', 'split-pdf',
     'edit-metadata',
+    'pdf-to-webp', 'nup-pdf', 'add-blank-page', 'remove-blank-pages',
+    'ocr-pdf', 'reverse-pages', 'invert-colors', 'repair-pdf', 'pdf-to-epub',
 ];
 const isBatchMode = computed(() =>
     batchEligibleTools.includes(props.tool) && files.value.length > 1
@@ -306,6 +340,40 @@ async function processSingleFile(
             const opts = editMetadataToolRef.value?.getMetadataOptions() ?? {};
             const blob = await runInWorker('edit-metadata', [file], opts, onProgress) as Blob;
             return { name: `metadata_${file.name}`, blob };
+        }
+        case 'pdf-to-webp':
+            return await runInWorker('pdf-to-webp', [file], { quality: webpQuality.value }, onProgress) as { name: string; blob: Blob }[];
+        case 'nup-pdf': {
+            const blob = await runInWorker('nup-pdf', [file], { layout: nupLayout.value }, onProgress) as Blob;
+            return { name: `nup_${file.name}`, blob };
+        }
+        case 'add-blank-page': {
+            const blob = await runInWorker('add-blank-page', [file], { position: blankPagePosition.value }, onProgress) as Blob;
+            return { name: `blank_${file.name}`, blob };
+        }
+        case 'remove-blank-pages': {
+            const blob = await runInWorker('remove-blank-pages', [file], {}, onProgress) as Blob;
+            return { name: `cleaned_${file.name}`, blob };
+        }
+        case 'ocr-pdf': {
+            const blob = await runInWorker('ocr-pdf', [file], { language: ocrLanguage.value }, onProgress) as Blob;
+            return { name: `ocr_${file.name}`, blob };
+        }
+        case 'reverse-pages': {
+            const blob = await runInWorker('reverse-pages', [file], {}, onProgress) as Blob;
+            return { name: `reversed_${file.name}`, blob };
+        }
+        case 'invert-colors': {
+            const blob = await runInWorker('invert-colors', [file], {}, onProgress) as Blob;
+            return { name: `inverted_${file.name}`, blob };
+        }
+        case 'repair-pdf': {
+            const blob = await runInWorker('repair-pdf', [file], {}, onProgress) as Blob;
+            return { name: `repaired_${file.name}`, blob };
+        }
+        case 'pdf-to-epub': {
+            const blob = await runInWorker('pdf-to-epub', [file], {}, onProgress) as Blob;
+            return { name: `${baseName}.epub`, blob };
         }
         default:
             throw new Error(`Tool ${toolName} does not support batch processing`);
@@ -502,6 +570,63 @@ async function process() {
                     setResult(blob, `metadata_${rawFiles[0].name}`);
                     break;
                 }
+                case 'pdf-to-webp': {
+                    const results = await runInWorker('pdf-to-webp', rawFiles, { quality: webpQuality.value }, updateProgress) as { name: string; blob: Blob }[];
+                    multiResults.value = results;
+                    break;
+                }
+                case 'nup-pdf': {
+                    const blob = await runInWorker('nup-pdf', rawFiles, { layout: nupLayout.value }, updateProgress) as Blob;
+                    setResult(blob, `nup_${rawFiles[0].name}`);
+                    break;
+                }
+                case 'add-blank-page': {
+                    const blob = await runInWorker('add-blank-page', rawFiles, { position: blankPagePosition.value }, updateProgress) as Blob;
+                    setResult(blob, `blank_${rawFiles[0].name}`);
+                    break;
+                }
+                case 'remove-blank-pages': {
+                    const blob = await runInWorker('remove-blank-pages', rawFiles, {}, updateProgress) as Blob;
+                    setResult(blob, `cleaned_${rawFiles[0].name}`);
+                    break;
+                }
+                case 'ocr-pdf': {
+                    const blob = await runInWorker('ocr-pdf', rawFiles, { language: ocrLanguage.value }, updateProgress) as Blob;
+                    setResult(blob, `ocr_${rawFiles[0].name}`);
+                    break;
+                }
+                case 'compare-pdf': {
+                    if (rawFiles.length < 2) throw new Error('Please upload two PDF files to compare');
+                    const blob = await runInWorker('compare-pdf', rawFiles, {}, updateProgress) as Blob;
+                    setResult(blob, 'comparison.pdf');
+                    break;
+                }
+                case 'text-to-pdf': {
+                    const blob = await runInWorker('text-to-pdf', [], { text: textContent.value }, updateProgress) as Blob;
+                    setResult(blob, 'text.pdf');
+                    break;
+                }
+                case 'reverse-pages': {
+                    const blob = await runInWorker('reverse-pages', rawFiles, {}, updateProgress) as Blob;
+                    setResult(blob, `reversed_${rawFiles[0].name}`);
+                    break;
+                }
+                case 'invert-colors': {
+                    const blob = await runInWorker('invert-colors', rawFiles, {}, updateProgress) as Blob;
+                    setResult(blob, `inverted_${rawFiles[0].name}`);
+                    break;
+                }
+                case 'repair-pdf': {
+                    const blob = await runInWorker('repair-pdf', rawFiles, {}, updateProgress) as Blob;
+                    setResult(blob, `repaired_${rawFiles[0].name}`);
+                    break;
+                }
+                case 'pdf-to-epub': {
+                    const blob = await runInWorker('pdf-to-epub', rawFiles, {}, updateProgress) as Blob;
+                    const epubName = rawFiles[0].name.replace(/\.pdf$/i, '.epub');
+                    setResult(blob, epubName);
+                    break;
+                }
             }
         }
         finishProcessing();
@@ -534,6 +659,7 @@ function resetTool() {
     multiResultUrls.value.forEach(url => URL.revokeObjectURL(url));
     multiResultUrls.value = [];
     markdownText.value = '';
+    textContent.value = '';
 }
 
 const addMoreInput = ref<HTMLInputElement | null>(null);
@@ -551,11 +677,16 @@ function onAddMoreFiles(event: Event) {
 }
 
 // Tools that don't need extra options panel
-const noOptionsTools = ['merge-pdf', 'extract-images', 'grayscale-pdf', 'flatten-pdf', 'pdf-to-text'];
+const noOptionsTools = ['merge-pdf', 'extract-images', 'grayscale-pdf', 'flatten-pdf', 'pdf-to-text',
+    'remove-blank-pages', 'reverse-pages', 'invert-colors', 'repair-pdf', 'pdf-to-epub', 'compare-pdf'];
 
 // Text-input tools (no file upload)
-const isTextInputTool = computed(() => props.tool === 'markdown-to-pdf');
-const hasTextContent = computed(() => markdownText.value.trim().length > 0);
+const isTextInputTool = computed(() => props.tool === 'markdown-to-pdf' || props.tool === 'text-to-pdf');
+const hasTextContent = computed(() => {
+    if (props.tool === 'markdown-to-pdf') return markdownText.value.trim().length > 0;
+    if (props.tool === 'text-to-pdf') return textContent.value.trim().length > 0;
+    return false;
+});
 </script>
 
 <template>
@@ -586,7 +717,8 @@ const hasTextContent = computed(() => markdownText.value.trim().length > 0);
                 leave-to-class="opacity-0"
             >
             <div v-if="isTextInputTool && state.status !== 'done'" class="space-y-6">
-                <div class="rounded-xl border border-gray-200 bg-white p-6 dark:border-gray-700 dark:bg-gray-800">
+                <!-- Markdown to PDF -->
+                <div v-if="tool === 'markdown-to-pdf'" class="rounded-xl border border-gray-200 bg-white p-6 dark:border-gray-700 dark:bg-gray-800">
                     <h3 class="mb-3 font-semibold text-gray-900 dark:text-white">{{ trans('tool.markdown.title') }}</h3>
                     <textarea
                         v-model="markdownText"
@@ -595,6 +727,16 @@ const hasTextContent = computed(() => markdownText.value.trim().length > 0);
                         :placeholder="trans('tool.markdown.placeholder')"
                     />
                     <p class="mt-2 text-xs text-gray-400">{{ trans('tool.markdown.hint') }}</p>
+                </div>
+                <!-- Text to PDF -->
+                <div v-else-if="tool === 'text-to-pdf'" class="rounded-xl border border-gray-200 bg-white p-6 dark:border-gray-700 dark:bg-gray-800">
+                    <h3 class="mb-3 font-semibold text-gray-900 dark:text-white">{{ trans('tool.texttopdf.title') }}</h3>
+                    <textarea
+                        v-model="textContent"
+                        rows="14"
+                        class="w-full rounded-lg border border-gray-300 bg-gray-50 px-4 py-3 font-mono text-sm text-gray-800 placeholder-gray-400 focus:border-teal-500 focus:ring-teal-500 dark:border-gray-600 dark:bg-gray-700 dark:text-gray-200 dark:placeholder-gray-500"
+                        :placeholder="trans('tool.texttopdf.placeholder')"
+                    />
                 </div>
                 <ProcessButton :status="state.status" :progress="state.progress" :label="actionLabel" :color="toolConfig.color" :error-message="state.message" @process="process" />
             </div>
@@ -839,6 +981,60 @@ const hasTextContent = computed(() => markdownText.value.trim().length > 0);
 
                     <!-- EDIT METADATA -->
                     <EditMetadataTool v-else-if="tool === 'edit-metadata'" ref="editMetadataToolRef" :pdf-file="hasFiles ? files[0]?.file ?? null : null" />
+
+                    <!-- PDF TO WEBP -->
+                    <div v-else-if="tool === 'pdf-to-webp'" class="space-y-4">
+                        <h3 class="font-semibold text-gray-900 dark:text-white">{{ trans('tool.pdftowebp.action') }}</h3>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1 dark:text-gray-300">{{ trans('tool.pdftowebp.quality') }}: {{ Math.round(webpQuality * 100) }}%</label>
+                            <input v-model.number="webpQuality" type="range" min="0.1" max="1" step="0.1" class="w-full accent-emerald-500" />
+                        </div>
+                    </div>
+
+                    <!-- N-UP PDF -->
+                    <div v-else-if="tool === 'nup-pdf'" class="space-y-4">
+                        <h3 class="font-semibold text-gray-900 dark:text-white">{{ trans('tool.nup.action') }}</h3>
+                        <div class="flex flex-wrap gap-3">
+                            <button v-for="n in ([2, 4, 9] as const)" :key="n" type="button" class="flex items-center gap-2 rounded-lg border-2 px-4 py-3 text-sm font-medium transition-colors" :class="nupLayout === n ? 'border-indigo-500 bg-indigo-50 text-indigo-700' : 'border-gray-200 bg-white text-gray-700 hover:border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-gray-200'" @click="nupLayout = n">
+                                {{ n }} {{ trans('tool.nup.pages_per_sheet') }}
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- ADD BLANK PAGE -->
+                    <div v-else-if="tool === 'add-blank-page'" class="space-y-4">
+                        <h3 class="font-semibold text-gray-900 dark:text-white">{{ trans('tool.blankpage.action') }}</h3>
+                        <div class="flex flex-wrap gap-3">
+                            <button v-for="pos in (['start', 'end'] as const)" :key="pos" type="button" class="flex items-center gap-2 rounded-lg border-2 px-4 py-3 text-sm font-medium transition-colors" :class="blankPagePosition === pos ? 'border-sky-500 bg-sky-50 text-sky-700' : 'border-gray-200 bg-white text-gray-700 hover:border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-gray-200'" @click="blankPagePosition = pos">
+                                {{ trans(`tool.blankpage.${pos}`) }}
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- OCR PDF -->
+                    <div v-else-if="tool === 'ocr-pdf'" class="space-y-4">
+                        <h3 class="font-semibold text-gray-900 dark:text-white">{{ trans('tool.ocr.action') }}</h3>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1 dark:text-gray-300">{{ trans('tool.ocr.language') }}</label>
+                            <select v-model="ocrLanguage" class="w-full rounded-lg border border-gray-300 px-4 py-2 text-sm dark:border-gray-600 dark:bg-gray-700 dark:text-gray-200 focus:border-purple-500 focus:ring-purple-500">
+                                <option value="eng">English</option>
+                                <option value="ita">Italiano</option>
+                                <option value="fra">Français</option>
+                                <option value="deu">Deutsch</option>
+                                <option value="spa">Español</option>
+                                <option value="por">Português</option>
+                                <option value="nld">Nederlands</option>
+                                <option value="swe">Svenska</option>
+                                <option value="dan">Dansk</option>
+                                <option value="nor">Norsk</option>
+                                <option value="fin">Suomi</option>
+                                <option value="ell">Ελληνικά</option>
+                                <option value="ces">Čeština</option>
+                                <option value="slv">Slovenščina</option>
+                            </select>
+                        </div>
+                        <p class="text-xs text-gray-400">{{ trans('tool.ocr.hint') }}</p>
+                    </div>
 
                     <!-- Default: no extra options -->
                     <div v-else class="text-center text-sm text-gray-500">

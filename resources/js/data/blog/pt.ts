@@ -778,4 +778,257 @@ export const blogPostsPt: BlogPost[] = [
         tool: 'edit-metadata',
         tags: ['metadata', 'properties', 'edit', 'privacy'],
     },
+    {
+        slug: 'convert-pdf-to-webp-modern-format',
+        lang: 'pt',
+        title: 'Converter PDF para WebP: O Formato de Imagem Moderno',
+        excerpt: 'Transforme páginas PDF em imagens WebP com compressão e qualidade superiores. Ideal para uso na web, carregamento mais rápido e ficheiros mais pequenos que JPG ou PNG.',
+        body: `<p>WebP é um formato de imagem moderno desenvolvido pela Google que oferece compressão superior, tanto com perda como sem perda, para imagens na web. Converter PDFs para WebP resulta em ficheiros mais pequenos com qualidade comparável.</p>
+<h2>Porquê Escolher WebP?</h2>
+<ul>
+<li><strong>Ficheiros mais pequenos</strong> — as imagens WebP são tipicamente 25-35% mais pequenas que JPG com qualidade equivalente</li>
+<li><strong>Melhor qualidade</strong> — com o mesmo tamanho de ficheiro, o WebP oferece imagens mais nítidas com menos artefactos</li>
+<li><strong>Amplo suporte</strong> — todos os principais navegadores (Chrome, Firefox, Safari, Edge) suportam WebP</li>
+</ul>
+<h2>Como Converter</h2>
+<p>A ferramenta <a href="#/pdf-to-webp">PDF para WebP</a> permite ajustar o controlo de qualidade para equilibrar o tamanho do ficheiro e a nitidez da imagem. Cada página do PDF torna-se um ficheiro WebP separado.</p>
+<h2>Quando Usar WebP vs JPG vs PNG</h2>
+<p>Escolha WebP para publicação na web onde o tamanho do ficheiro é importante. Use <a href="#/pdf-to-jpg">JPG</a> para máxima compatibilidade com software mais antigo. Use <a href="#/pdf-to-png">PNG</a> quando precisar de fundos transparentes ou qualidade sem perda.</p>`,
+        date: '2026-03-10',
+        tool: 'pdf-to-webp',
+        tags: ['webp', 'convert', 'modern', 'web'],
+    },
+    {
+        slug: 'nup-pdf-multiple-pages-per-sheet',
+        lang: 'pt',
+        title: 'Como Imprimir Múltiplas Páginas PDF numa Folha (N-Up)',
+        excerpt: 'Combine 2, 4 ou 9 páginas PDF numa única folha para poupar papel, criar folhetos ou produzir resumos compactos de documentos.',
+        body: `<p>A impressão N-Up organiza múltiplas páginas numa única folha. Isto é perfeito para criar folhetos, poupar papel ou obter uma visão compacta de um documento longo.</p>
+<h2>Layouts Disponíveis</h2>
+<p>A ferramenta <a href="#/nup-pdf">N-Up PDF</a> oferece três opções de layout:</p>
+<ul>
+<li><strong>2-Up</strong> — duas páginas lado a lado numa folha paisagem</li>
+<li><strong>4-Up</strong> — quatro páginas numa grelha 2×2 numa folha retrato</li>
+<li><strong>9-Up</strong> — nove páginas numa grelha 3×3 para máxima poupança de papel</li>
+</ul>
+<h2>Casos de Uso Comuns</h2>
+<ul>
+<li>Criar folhetos de aulas com múltiplos slides por página</li>
+<li>Imprimir rascunhos de documentos para revisão poupando papel</li>
+<li>Criar cartões de referência compactos a partir de documentos mais longos</li>
+</ul>
+<p>Para melhor legibilidade, use 2-Up para documentos com muito texto e 4-Up ou 9-Up para apresentações de slides.</p>`,
+        date: '2026-03-10',
+        tool: 'nup-pdf',
+        tags: ['nup', 'print', 'handout', 'paper'],
+    },
+    {
+        slug: 'add-blank-page-to-pdf',
+        lang: 'pt',
+        title: 'Como Adicionar uma Página em Branco a um Documento PDF',
+        excerpt: 'Insira uma página em branco no início ou no fim do seu PDF. Útil para páginas de capa, separadores ou preparação para impressão frente e verso.',
+        body: `<p>Adicionar uma página em branco a um PDF é uma operação simples mas frequentemente necessária. Quer precise de um espaço reservado, um separador ou preparação para impressão frente e verso, esta ferramenta resolve em segundos.</p>
+<h2>Quando Precisa de uma Página em Branco</h2>
+<ul>
+<li><strong>Páginas de capa</strong> — adicione uma primeira página em branco para mais tarde preencher como capa</li>
+<li><strong>Impressão frente e verso</strong> — garanta que os capítulos começam na página da direita (ímpar)</li>
+<li><strong>Separadores de secção</strong> — insira quebras visuais entre secções do documento</li>
+<li><strong>Preenchimento</strong> — adicione uma última página em branco para impressão de livretos</li>
+</ul>
+<h2>Como Usar</h2>
+<p>A ferramenta <a href="#/add-blank-page">Adicionar Página em Branco</a> permite escolher inserir a página em branco no início ou no fim do seu PDF. O tamanho da página corresponde à primeira página do seu documento.</p>
+<p>Para uma gestão de páginas mais complexa, use a ferramenta <a href="#/organize-pdf">Organizar PDF</a> que permite reordenar e duplicar páginas visualmente.</p>`,
+        date: '2026-03-10',
+        tool: 'add-blank-page',
+        tags: ['blank', 'page', 'insert', 'duplex'],
+    },
+    {
+        slug: 'remove-blank-pages-from-pdf',
+        lang: 'pt',
+        title: 'Como Detetar e Remover Automaticamente Páginas em Branco de um PDF',
+        excerpt: 'Limpe os seus PDFs detetando e removendo automaticamente páginas em branco. Perfeito para documentos digitalizados com folhas vazias indesejadas.',
+        body: `<p>Documentos digitalizados contêm frequentemente páginas em branco resultantes da digitalização frente e verso de originais impressos apenas num lado. Removê-las manualmente página a página é tedioso.</p>
+<h2>Como Funciona</h2>
+<p>A ferramenta <a href="#/remove-blank-pages">Remover Páginas em Branco</a> analisa cada página do seu PDF, renderizando-a e verificando o conteúdo dos píxeis. Páginas com 99,5% ou mais de píxeis brancos são automaticamente detetadas como em branco.</p>
+<h2>Fontes Comuns de Páginas em Branco</h2>
+<ul>
+<li>Digitalização frente e verso de documentos impressos num só lado</li>
+<li>Transmissões de fax com páginas de preenchimento</li>
+<li>Relatórios gerados por software com páginas separadoras vazias</li>
+<li>Digitalizações de livros com páginas verso em branco</li>
+</ul>
+<h2>Deteção Inteligente</h2>
+<p>A ferramenta é suficientemente inteligente para distinguir entre páginas verdadeiramente em branco e páginas com conteúdo mínimo. Páginas com mesmo pequenas quantidades de texto ou gráficos são preservadas. Se todas as páginas estiverem em branco, a ferramenta alerta-o em vez de criar um documento vazio.</p>`,
+        date: '2026-03-10',
+        tool: 'remove-blank-pages',
+        tags: ['blank', 'remove', 'clean', 'scan'],
+    },
+    {
+        slug: 'ocr-scanned-pdf-searchable',
+        lang: 'pt',
+        title: 'OCR: Torne PDFs Digitalizados Pesquisáveis e Selecionáveis',
+        excerpt: 'Utilize o reconhecimento ótico de caracteres para adicionar uma camada de texto a documentos PDF digitalizados. Torne PDFs baseados em imagens pesquisáveis, selecionáveis e acessíveis.',
+        body: `<p>Documentos digitalizados são essencialmente imagens dentro de um PDF — não é possível pesquisar, selecionar ou copiar texto deles. O OCR (Reconhecimento Ótico de Caracteres) resolve este problema detetando texto nas imagens e adicionando uma camada pesquisável invisível.</p>
+<h2>Como Funciona o OCR</h2>
+<p>A ferramenta <a href="#/ocr-pdf">OCR PDF</a> processa cada página em três passos:</p>
+<ol>
+<li>Renderiza a página como uma imagem de alta resolução</li>
+<li>Executa o OCR para reconhecer texto na imagem</li>
+<li>Cria um novo PDF com a imagem original mais uma camada de texto invisível sobreposta</li>
+</ol>
+<h2>Idiomas Suportados</h2>
+<p>A ferramenta suporta 14 idiomas incluindo inglês, espanhol, francês, alemão, italiano, português, holandês e mais. Selecione o idioma correto para obter a melhor precisão de reconhecimento.</p>
+<h2>Casos de Uso</h2>
+<ul>
+<li>Tornar contratos digitalizados pesquisáveis para revisão jurídica</li>
+<li>Digitalizar documentos antigos em papel para sistemas de arquivo</li>
+<li>Permitir a extração de texto de recibos e faturas digitalizados</li>
+</ul>
+<p>Após o processamento OCR, pode usar a ferramenta <a href="#/pdf-to-text">PDF para Texto</a> para extrair o texto reconhecido.</p>`,
+        date: '2026-03-10',
+        tool: 'ocr-pdf',
+        tags: ['ocr', 'scan', 'searchable', 'text-recognition'],
+    },
+    {
+        slug: 'compare-two-pdf-documents-visually',
+        lang: 'pt',
+        title: 'Como Comparar Visualmente Dois Documentos PDF',
+        excerpt: 'Detete diferenças entre duas versões de um documento PDF com comparação visual lado a lado e destaque automático de diferenças.',
+        body: `<p>Ao rever revisões de documentos, alterações a contratos ou mudanças de design, precisa de identificar rapidamente o que mudou entre duas versões de um PDF.</p>
+<h2>Como Funciona</h2>
+<p>A ferramenta <a href="#/compare-pdf">Comparar PDF</a> recebe dois ficheiros PDF e cria um documento de comparação visual. Cada par de páginas é renderizado lado a lado, com diferenças ao nível do píxel destacadas a vermelho.</p>
+<h2>O Que É Detetado</h2>
+<ul>
+<li>Alterações de texto — palavras adicionadas, removidas ou modificadas</li>
+<li>Mudanças de layout — elementos movidos, espaçamento alterado</li>
+<li>Diferenças em imagens — gráficos substituídos ou modificados</li>
+<li>Alterações de formatação — modificações no tamanho da fonte, cor ou estilo</li>
+</ul>
+<h2>Aplicações Práticas</h2>
+<ul>
+<li>Rever revisões de contratos antes de assinar</li>
+<li>Verificar provas de design contra os originais</li>
+<li>Verificar documentos traduzidos em relação ao layout de origem</li>
+<li>Garantia de qualidade para pipelines de geração de documentos</li>
+</ul>
+<p>Carregue ambas as versões e a ferramenta produz um PDF de comparação descarregável que pode rever ao seu próprio ritmo.</p>`,
+        date: '2026-03-10',
+        tool: 'compare-pdf',
+        tags: ['compare', 'diff', 'review', 'versions'],
+    },
+    {
+        slug: 'convert-plain-text-to-pdf',
+        lang: 'pt',
+        title: 'Converter Texto Simples para PDF: Rápido e Simples',
+        excerpt: 'Transforme ficheiros de texto simples ou texto colado em documentos PDF bem formatados. Quebra de linha automática, paginação e layout profissional.',
+        body: `<p>Por vezes, basta transformar texto simples num PDF limpo e partilhável — sem formatação elaborada, apenas texto legível num layout de documento profissional.</p>
+<h2>Como Funciona</h2>
+<p>A ferramenta <a href="#/text-to-pdf">Texto para PDF</a> recebe o seu texto simples e cria um documento PDF A4 com quebra de linha automática, margens adequadas e fonte monoespaçada para alinhamento consistente.</p>
+<h2>Funcionalidades</h2>
+<ul>
+<li><strong>Quebra de linha automática</strong> — linhas longas são quebradas automaticamente nos limites das palavras</li>
+<li><strong>Paginação</strong> — o texto é distribuído por múltiplas páginas conforme necessário</li>
+<li><strong>Layout consistente</strong> — a fonte Courier garante alinhamento de caracteres para código ou dados</li>
+<li><strong>Quebras de linha preservadas</strong> — a estrutura dos seus parágrafos é mantida</li>
+</ul>
+<h2>Casos de Uso</h2>
+<ul>
+<li>Converter ficheiros de registo ou trechos de código para PDF para documentação</li>
+<li>Criar versões imprimíveis de notas em texto simples</li>
+<li>Arquivar conteúdo de texto num formato universalmente legível</li>
+</ul>
+<p>Para formatação mais rica com cabeçalhos, listas e ligações, use a ferramenta <a href="#/markdown-to-pdf">Markdown para PDF</a> em alternativa.</p>`,
+        date: '2026-03-10',
+        tool: 'text-to-pdf',
+        tags: ['text', 'convert', 'create', 'plain-text'],
+    },
+    {
+        slug: 'reverse-pdf-page-order',
+        lang: 'pt',
+        title: 'Como Inverter a Ordem das Páginas de um PDF',
+        excerpt: 'Inverta a ordem das páginas do seu documento PDF para que a última página se torne a primeira. Perfeito para corrigir digitalizações invertidas ou filas de impressão revertidas.',
+        body: `<p>Por vezes, os documentos acabam na ordem errada — digitalizações invertidas, filas de impressão revertidas ou simplesmente a necessidade de ler de trás para a frente. Inverter resolve isto com um clique.</p>
+<h2>Quando Inverter Páginas</h2>
+<ul>
+<li><strong>Saída do digitalizador</strong> — muitos digitalizadores produzem páginas na ordem inversa a partir da pilha de papel</li>
+<li><strong>Problemas na fila de impressão</strong> — documentos impressos com a face para cima saem na ordem inversa</li>
+<li><strong>Ordem de apresentação</strong> — reorganizar conteúdo para apresentar informação de baixo para cima</li>
+<li><strong>Preparação de livretos</strong> — alguns layouts de livretos requerem sequências de páginas invertidas</li>
+</ul>
+<h2>Como Funciona</h2>
+<p>A ferramenta <a href="#/reverse-pages">Inverter Páginas</a> recebe o seu PDF e cria um novo documento com todas as páginas na ordem inversa. A última página torna-se a primeira, a penúltima torna-se a segunda, e assim sucessivamente.</p>
+<p>Para uma reordenação de páginas mais seletiva, use a ferramenta <a href="#/organize-pdf">Organizar PDF</a> que permite arrastar e soltar páginas individualmente.</p>`,
+        date: '2026-03-10',
+        tool: 'reverse-pages',
+        tags: ['reverse', 'order', 'flip', 'pages'],
+    },
+    {
+        slug: 'invert-pdf-colors-dark-mode',
+        lang: 'pt',
+        title: 'Inverter Cores do PDF para Leitura em Modo Escuro',
+        excerpt: 'Converta PDFs com fundo branco para modo escuro com cores invertidas. Reduza a fadiga visual, poupe tinta em impressoras de tema escuro ou crie efeitos artísticos.',
+        body: `<p>Inverter cores transforma um documento com fundo branco num documento com fundo escuro (e vice-versa). Isto é útil para leitura confortável em modo escuro ou para criar efeitos visuais.</p>
+<h2>Benefícios da Inversão de Cores</h2>
+<ul>
+<li><strong>Conforto visual</strong> — fundos escuros reduzem a fadiga visual em ambientes com pouca luz</li>
+<li><strong>Acessibilidade</strong> — alguns utilizadores consideram as cores invertidas mais fáceis de ler</li>
+<li><strong>Poupança de tinta</strong> — imprimir documentos invertidos em papel escuro usa menos tinta</li>
+<li><strong>Usos criativos</strong> — produzir imagens com efeito negativo para projetos de design</li>
+</ul>
+<h2>Como Funciona</h2>
+<p>A ferramenta <a href="#/invert-colors">Inverter Cores</a> renderiza cada página e inverte cada píxel: preto torna-se branco, branco torna-se preto e todas as cores mudam para os seus valores complementares. O resultado é um novo PDF com a aparência invertida.</p>
+<p>Para converter documentos a cores para escala de cinzentos em alternativa, use a ferramenta <a href="#/grayscale-pdf">PDF Escala de Cinzentos</a>.</p>`,
+        date: '2026-03-10',
+        tool: 'invert-colors',
+        tags: ['invert', 'dark-mode', 'colors', 'accessibility'],
+    },
+    {
+        slug: 'repair-corrupted-pdf-files',
+        lang: 'pt',
+        title: 'Como Reparar Ficheiros PDF Corrompidos ou Danificados',
+        excerpt: 'Corrija PDFs danificados que não abrem ou apresentam erros. A ferramenta de reparação re-analisa e reconstrói a estrutura do documento para recuperar o conteúdo.',
+        body: `<p>Ficheiros PDF podem ficar corrompidos devido a descarregamentos incompletos, erros de armazenamento ou falhas de software. Quando um PDF não abre ou é apresentado incorretamente, uma tentativa de reparação pode frequentemente recuperar o conteúdo.</p>
+<h2>Problemas Comuns em PDFs</h2>
+<ul>
+<li>Ficheiro não abre em leitores de PDF</li>
+<li>Páginas em branco ou conteúdo em falta</li>
+<li>Mensagens de erro sobre estrutura inválida</li>
+<li>Renderização parcial ou fontes corrompidas</li>
+</ul>
+<h2>Como Funciona a Reparação</h2>
+<p>A ferramenta <a href="#/repair-pdf">Reparar PDF</a> carrega o seu ficheiro danificado com tolerância máxima a erros e depois reconstrói-o como um novo documento limpo. Este processo frequentemente recupera páginas e conteúdo que os leitores comuns não conseguem apresentar.</p>
+<h2>O Que É Corrigido</h2>
+<ul>
+<li>Tabelas de referência cruzada corrompidas</li>
+<li>Ligações internas e referências de páginas danificadas</li>
+<li>Estruturas de objetos inválidas</li>
+<li>Cabeçalhos em falta ou danificados</li>
+</ul>
+<p>Nota: ficheiros gravemente danificados onde os dados centrais foram destruídos podem não ser recuperáveis. No entanto, para a maioria dos problemas comuns de corrupção, a ferramenta de reparação restaura o documento com sucesso.</p>`,
+        date: '2026-03-10',
+        tool: 'repair-pdf',
+        tags: ['repair', 'fix', 'corrupted', 'recover'],
+    },
+    {
+        slug: 'convert-pdf-to-epub-ebook',
+        lang: 'pt',
+        title: 'Converter PDF para EPUB para Leitores de E-Books',
+        excerpt: 'Transforme documentos PDF em formato EPUB para leitura confortável no Kindle, Kobo e outros leitores eletrónicos. O texto adapta-se a qualquer tamanho de ecrã.',
+        body: `<p>Os PDFs foram concebidos para visualização com layout fixo, o que os torna difíceis de ler em ecrãs pequenos. O EPUB é o formato padrão de e-books que adapta o texto a qualquer tamanho de ecrã.</p>
+<h2>Porquê Converter para EPUB?</h2>
+<ul>
+<li><strong>Texto adaptável</strong> — o conteúdo adapta-se a qualquer tamanho de ecrã, de telemóveis a tablets</li>
+<li><strong>Funcionalidades de leitura</strong> — ajuste o tamanho da fonte, estilo e cor de fundo conforme a sua preferência</li>
+<li><strong>Compatibilidade com leitores eletrónicos</strong> — funciona com Kindle, Kobo, Apple Books e outros dispositivos</li>
+<li><strong>Ficheiros mais pequenos</strong> — EPUBs baseados em texto são muito mais pequenos que PDFs baseados em imagens</li>
+</ul>
+<h2>Como Funciona</h2>
+<p>A ferramenta <a href="#/pdf-to-epub">PDF para EPUB</a> extrai o conteúdo de texto de cada página do PDF e empacota-o num ficheiro EPUB 3 válido com navegação por capítulos, índice e estilos adequados.</p>
+<h2>Melhores Resultados</h2>
+<p>Esta ferramenta funciona melhor com PDFs com muito texto. Para documentos digitalizados (PDFs apenas com imagens), execute primeiro a ferramenta <a href="#/ocr-pdf">OCR</a> para extrair o texto e depois converta para EPUB.</p>
+<p>O EPUB resultante inclui um índice com uma entrada por página original, facilitando a navegação no documento convertido.</p>`,
+        date: '2026-03-10',
+        tool: 'pdf-to-epub',
+        tags: ['epub', 'ebook', 'convert', 'kindle'],
+    },
 ];

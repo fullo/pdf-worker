@@ -126,6 +126,61 @@
         <priority>0.8</priority>
     </url>
     <url>
+        <loc>https://www.pdfworker.eu/#/pdf-to-webp</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.pdfworker.eu/#/nup-pdf</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.pdfworker.eu/#/add-blank-page</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.pdfworker.eu/#/remove-blank-pages</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.pdfworker.eu/#/ocr-pdf</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.pdfworker.eu/#/compare-pdf</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.pdfworker.eu/#/text-to-pdf</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.pdfworker.eu/#/reverse-pages</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.pdfworker.eu/#/invert-colors</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.pdfworker.eu/#/repair-pdf</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.pdfworker.eu/#/pdf-to-epub</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
         <loc>https://www.pdfworker.eu/#/privacy</loc>
         <changefreq>yearly</changefreq>
         <priority>0.3</priority>

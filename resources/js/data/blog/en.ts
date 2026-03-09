@@ -772,4 +772,257 @@ export const blogPostsEn: BlogPost[] = [
         tool: 'edit-metadata',
         tags: ['metadata', 'properties', 'edit', 'privacy'],
     },
+    {
+        slug: 'convert-pdf-to-webp-modern-format',
+        lang: 'en',
+        title: 'Convert PDF to WebP: The Modern Image Format',
+        excerpt: 'Transform PDF pages into WebP images for superior compression and quality. Ideal for web use, faster loading, and smaller file sizes than JPG or PNG.',
+        body: `<p>WebP is a modern image format developed by Google that provides superior lossless and lossy compression for images on the web. Converting PDFs to WebP gives you smaller files with comparable quality.</p>
+<h2>Why Choose WebP?</h2>
+<ul>
+<li><strong>Smaller files</strong> — WebP images are typically 25-35% smaller than JPG at equivalent quality</li>
+<li><strong>Better quality</strong> — at the same file size, WebP offers sharper images with fewer artifacts</li>
+<li><strong>Wide support</strong> — all major browsers (Chrome, Firefox, Safari, Edge) support WebP</li>
+</ul>
+<h2>How to Convert</h2>
+<p>The <a href="#/pdf-to-webp">PDF to WebP tool</a> lets you adjust the quality slider to balance file size and image clarity. Each PDF page becomes a separate WebP file.</p>
+<h2>When to Use WebP vs JPG vs PNG</h2>
+<p>Choose WebP for web publishing where file size matters. Use <a href="#/pdf-to-jpg">JPG</a> for maximum compatibility with older software. Use <a href="#/pdf-to-png">PNG</a> when you need transparent backgrounds or lossless quality.</p>`,
+        date: '2026-03-10',
+        tool: 'pdf-to-webp',
+        tags: ['webp', 'convert', 'modern', 'web'],
+    },
+    {
+        slug: 'nup-pdf-multiple-pages-per-sheet',
+        lang: 'en',
+        title: 'How to Print Multiple PDF Pages on One Sheet (N-Up)',
+        excerpt: 'Combine 2, 4, or 9 PDF pages onto a single sheet to save paper, create handouts, or produce compact document overviews.',
+        body: `<p>N-Up printing arranges multiple pages onto a single sheet. This is perfect for creating handouts, saving paper, or getting a compact overview of a long document.</p>
+<h2>Available Layouts</h2>
+<p>The <a href="#/nup-pdf">N-Up PDF tool</a> offers three layout options:</p>
+<ul>
+<li><strong>2-Up</strong> — two pages side by side on a landscape sheet</li>
+<li><strong>4-Up</strong> — four pages in a 2×2 grid on a portrait sheet</li>
+<li><strong>9-Up</strong> — nine pages in a 3×3 grid for maximum paper savings</li>
+</ul>
+<h2>Common Use Cases</h2>
+<ul>
+<li>Creating lecture handouts with multiple slides per page</li>
+<li>Printing draft documents for review while saving paper</li>
+<li>Making compact reference cards from longer documents</li>
+</ul>
+<p>For best readability, use 2-Up for text-heavy documents and 4-Up or 9-Up for slide presentations.</p>`,
+        date: '2026-03-10',
+        tool: 'nup-pdf',
+        tags: ['nup', 'print', 'handout', 'paper'],
+    },
+    {
+        slug: 'add-blank-page-to-pdf',
+        lang: 'en',
+        title: 'How to Add a Blank Page to a PDF Document',
+        excerpt: 'Insert a blank page at the beginning or end of your PDF. Useful for cover pages, separators, or duplex printing preparation.',
+        body: `<p>Adding a blank page to a PDF is a simple but frequently needed operation. Whether you need a placeholder, a separator, or preparation for double-sided printing, this tool handles it in seconds.</p>
+<h2>When You Need a Blank Page</h2>
+<ul>
+<li><strong>Cover pages</strong> — add a blank first page to later fill in as a cover</li>
+<li><strong>Duplex printing</strong> — ensure chapters start on the right-hand (odd) page</li>
+<li><strong>Section separators</strong> — insert visual breaks between document sections</li>
+<li><strong>Padding</strong> — add a blank last page for booklet printing</li>
+</ul>
+<h2>How to Use</h2>
+<p>The <a href="#/add-blank-page">Add Blank Page tool</a> lets you choose to insert the blank page at the start or end of your PDF. The page size matches the first page of your document.</p>
+<p>For more complex page management, use the <a href="#/organize-pdf">Organize PDF</a> tool which lets you reorder and duplicate pages visually.</p>`,
+        date: '2026-03-10',
+        tool: 'add-blank-page',
+        tags: ['blank', 'page', 'insert', 'duplex'],
+    },
+    {
+        slug: 'remove-blank-pages-from-pdf',
+        lang: 'en',
+        title: 'How to Automatically Detect and Remove Blank Pages from PDF',
+        excerpt: 'Clean up your PDFs by automatically detecting and removing blank pages. Perfect for scanned documents with unwanted empty sheets.',
+        body: `<p>Scanned documents frequently contain blank pages from double-sided scanning of single-sided originals. Manually removing them page by page is tedious.</p>
+<h2>How It Works</h2>
+<p>The <a href="#/remove-blank-pages">Remove Blank Pages tool</a> analyzes every page in your PDF by rendering it and checking the pixel content. Pages that are 99.5% or more white pixels are automatically detected as blank.</p>
+<h2>Common Sources of Blank Pages</h2>
+<ul>
+<li>Double-sided scanning of single-sided documents</li>
+<li>Fax transmissions with padding pages</li>
+<li>Software-generated reports with empty separator pages</li>
+<li>Book scans with blank verso pages</li>
+</ul>
+<h2>Smart Detection</h2>
+<p>The tool is smart enough to distinguish between truly blank pages and pages with minimal content. Pages with even small amounts of text or graphics are preserved. If all pages are blank, the tool will alert you rather than creating an empty document.</p>`,
+        date: '2026-03-10',
+        tool: 'remove-blank-pages',
+        tags: ['blank', 'remove', 'clean', 'scan'],
+    },
+    {
+        slug: 'ocr-scanned-pdf-searchable',
+        lang: 'en',
+        title: 'OCR: Make Scanned PDFs Searchable and Selectable',
+        excerpt: 'Use optical character recognition to add a text layer to scanned PDF documents. Make image-based PDFs searchable, selectable, and accessible.',
+        body: `<p>Scanned documents are essentially images inside a PDF — you cannot search, select, or copy text from them. OCR (Optical Character Recognition) solves this by detecting text in images and adding an invisible searchable layer.</p>
+<h2>How OCR Works</h2>
+<p>The <a href="#/ocr-pdf">OCR PDF tool</a> processes each page in three steps:</p>
+<ol>
+<li>Renders the page as a high-resolution image</li>
+<li>Runs OCR to recognize text in the image</li>
+<li>Creates a new PDF with the original image plus an invisible text layer on top</li>
+</ol>
+<h2>Supported Languages</h2>
+<p>The tool supports 14 languages including English, Spanish, French, German, Italian, Portuguese, Dutch, and more. Select the correct language for the best recognition accuracy.</p>
+<h2>Use Cases</h2>
+<ul>
+<li>Making scanned contracts searchable for legal review</li>
+<li>Digitizing old paper documents for archive systems</li>
+<li>Enabling text extraction from scanned receipts and invoices</li>
+</ul>
+<p>After OCR processing, you can use the <a href="#/pdf-to-text">PDF to Text tool</a> to extract the recognized text.</p>`,
+        date: '2026-03-10',
+        tool: 'ocr-pdf',
+        tags: ['ocr', 'scan', 'searchable', 'text-recognition'],
+    },
+    {
+        slug: 'compare-two-pdf-documents-visually',
+        lang: 'en',
+        title: 'How to Visually Compare Two PDF Documents',
+        excerpt: 'Spot differences between two versions of a PDF document with visual side-by-side comparison and automatic difference highlighting.',
+        body: `<p>When reviewing document revisions, contract amendments, or design changes, you need to quickly identify what has changed between two versions of a PDF.</p>
+<h2>How It Works</h2>
+<p>The <a href="#/compare-pdf">Compare PDF tool</a> takes two PDF files and creates a visual comparison document. Each page pair is rendered side by side, with pixel-level differences highlighted in red.</p>
+<h2>What Gets Detected</h2>
+<ul>
+<li>Text changes — added, removed, or modified words</li>
+<li>Layout shifts — moved elements, changed spacing</li>
+<li>Image differences — replaced or modified graphics</li>
+<li>Formatting changes — font size, color, or style modifications</li>
+</ul>
+<h2>Practical Applications</h2>
+<ul>
+<li>Reviewing contract revisions before signing</li>
+<li>Verifying design proofs against originals</li>
+<li>Checking translated documents against source layout</li>
+<li>Quality assurance for document generation pipelines</li>
+</ul>
+<p>Upload both versions and the tool produces a downloadable comparison PDF you can review at your own pace.</p>`,
+        date: '2026-03-10',
+        tool: 'compare-pdf',
+        tags: ['compare', 'diff', 'review', 'versions'],
+    },
+    {
+        slug: 'convert-plain-text-to-pdf',
+        lang: 'en',
+        title: 'Convert Plain Text to PDF: Quick and Simple',
+        excerpt: 'Turn plain text files or pasted text into well-formatted PDF documents. Automatic word wrapping, pagination, and professional layout.',
+        body: `<p>Sometimes you just need to turn plain text into a clean, shareable PDF — no fancy formatting, just readable text in a professional document layout.</p>
+<h2>How It Works</h2>
+<p>The <a href="#/text-to-pdf">Text to PDF tool</a> takes your plain text input and creates an A4 PDF document with automatic word wrapping, proper margins, and monospace font for consistent alignment.</p>
+<h2>Features</h2>
+<ul>
+<li><strong>Auto word-wrapping</strong> — long lines wrap automatically at word boundaries</li>
+<li><strong>Pagination</strong> — text is split across multiple pages as needed</li>
+<li><strong>Consistent layout</strong> — Courier font ensures character alignment for code or data</li>
+<li><strong>Line breaks preserved</strong> — your paragraph structure is maintained</li>
+</ul>
+<h2>Use Cases</h2>
+<ul>
+<li>Converting log files or code snippets to PDF for documentation</li>
+<li>Creating printable versions of plain text notes</li>
+<li>Archiving text content in a universally readable format</li>
+</ul>
+<p>For richer formatting with headings, lists, and links, use the <a href="#/markdown-to-pdf">Markdown to PDF</a> tool instead.</p>`,
+        date: '2026-03-10',
+        tool: 'text-to-pdf',
+        tags: ['text', 'convert', 'create', 'plain-text'],
+    },
+    {
+        slug: 'reverse-pdf-page-order',
+        lang: 'en',
+        title: 'How to Reverse PDF Page Order',
+        excerpt: 'Flip the page order of your PDF document so the last page becomes the first. Perfect for fixing reversed scans or inverted print queues.',
+        body: `<p>Sometimes documents end up in the wrong order — reversed scans, inverted print queues, or simply needing to read from back to front. Reversing fixes this in one click.</p>
+<h2>When to Reverse Pages</h2>
+<ul>
+<li><strong>Scanner output</strong> — many scanners produce pages in reverse order from the paper stack</li>
+<li><strong>Print queue issues</strong> — documents printed face-up come out in reverse</li>
+<li><strong>Presentation order</strong> — rearrange content to present information bottom-up</li>
+<li><strong>Booklet preparation</strong> — some booklet layouts require reversed page sequences</li>
+</ul>
+<h2>How It Works</h2>
+<p>The <a href="#/reverse-pages">Reverse Pages tool</a> takes your PDF and creates a new document with all pages in reverse order. The last page becomes the first, the second-to-last becomes the second, and so on.</p>
+<p>For more selective page reordering, use the <a href="#/organize-pdf">Organize PDF</a> tool which lets you drag and drop individual pages.</p>`,
+        date: '2026-03-10',
+        tool: 'reverse-pages',
+        tags: ['reverse', 'order', 'flip', 'pages'],
+    },
+    {
+        slug: 'invert-pdf-colors-dark-mode',
+        lang: 'en',
+        title: 'Invert PDF Colors for Dark Mode Reading',
+        excerpt: 'Convert white-background PDFs to dark mode with inverted colors. Reduce eye strain, save ink on dark-theme printers, or create artistic effects.',
+        body: `<p>Inverting colors transforms a white-background document into a dark-background one (and vice versa). This is useful for comfortable dark-mode reading or creating visual effects.</p>
+<h2>Benefits of Color Inversion</h2>
+<ul>
+<li><strong>Eye comfort</strong> — dark backgrounds reduce eye strain in low-light environments</li>
+<li><strong>Accessibility</strong> — some users find inverted colors easier to read</li>
+<li><strong>Ink savings</strong> — printing inverted documents on dark paper uses less ink</li>
+<li><strong>Creative uses</strong> — produce negative-effect images for design projects</li>
+</ul>
+<h2>How It Works</h2>
+<p>The <a href="#/invert-colors">Invert Colors tool</a> renders each page and inverts every pixel: black becomes white, white becomes black, and all colors shift to their complementary values. The result is a new PDF with the inverted appearance.</p>
+<p>For converting color documents to grayscale instead, use the <a href="#/grayscale-pdf">Grayscale PDF</a> tool.</p>`,
+        date: '2026-03-10',
+        tool: 'invert-colors',
+        tags: ['invert', 'dark-mode', 'colors', 'accessibility'],
+    },
+    {
+        slug: 'repair-corrupted-pdf-files',
+        lang: 'en',
+        title: 'How to Repair Corrupted or Damaged PDF Files',
+        excerpt: 'Fix broken PDFs that fail to open or display errors. The repair tool re-parses and rebuilds the document structure to recover content.',
+        body: `<p>PDF files can become corrupted due to incomplete downloads, storage errors, or software bugs. When a PDF fails to open or displays incorrectly, a repair attempt can often recover the content.</p>
+<h2>Common PDF Problems</h2>
+<ul>
+<li>File won't open in PDF viewers</li>
+<li>Blank pages or missing content</li>
+<li>Error messages about invalid structure</li>
+<li>Partial rendering or broken fonts</li>
+</ul>
+<h2>How Repair Works</h2>
+<p>The <a href="#/repair-pdf">Repair PDF tool</a> loads your damaged file with maximum error tolerance, then rebuilds it as a clean new document. This process often recovers pages and content that regular viewers cannot display.</p>
+<h2>What Gets Fixed</h2>
+<ul>
+<li>Corrupt cross-reference tables</li>
+<li>Broken internal links and page references</li>
+<li>Invalid object structures</li>
+<li>Missing or damaged headers</li>
+</ul>
+<p>Note: severely damaged files where the core data is destroyed may not be recoverable. However, for most common corruption issues, the repair tool successfully restores the document.</p>`,
+        date: '2026-03-10',
+        tool: 'repair-pdf',
+        tags: ['repair', 'fix', 'corrupted', 'recover'],
+    },
+    {
+        slug: 'convert-pdf-to-epub-ebook',
+        lang: 'en',
+        title: 'Convert PDF to EPUB for E-Book Readers',
+        excerpt: 'Transform PDF documents into EPUB format for comfortable reading on Kindle, Kobo, and other e-readers. Text reflows to fit any screen size.',
+        body: `<p>PDFs are designed for fixed-layout viewing, which makes them difficult to read on small screens. EPUB is the standard e-book format that reflows text to fit any display size.</p>
+<h2>Why Convert to EPUB?</h2>
+<ul>
+<li><strong>Reflowable text</strong> — content adapts to any screen size, from phones to tablets</li>
+<li><strong>Reader features</strong> — adjust font size, style, and background color to your preference</li>
+<li><strong>E-reader compatibility</strong> — works with Kindle, Kobo, Apple Books, and other devices</li>
+<li><strong>Smaller files</strong> — text-based EPUBs are much smaller than image-based PDFs</li>
+</ul>
+<h2>How It Works</h2>
+<p>The <a href="#/pdf-to-epub">PDF to EPUB tool</a> extracts text content from each PDF page and packages it into a valid EPUB 3 file with proper chapter navigation, table of contents, and styling.</p>
+<h2>Best Results</h2>
+<p>This tool works best with text-heavy PDFs. For scanned documents (image-only PDFs), run the <a href="#/ocr-pdf">OCR tool</a> first to extract the text, then convert to EPUB.</p>
+<p>The resulting EPUB includes a table of contents with one entry per original page, making it easy to navigate the converted document.</p>`,
+        date: '2026-03-10',
+        tool: 'pdf-to-epub',
+        tags: ['epub', 'ebook', 'convert', 'kindle'],
+    },
 ];

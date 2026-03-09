@@ -770,4 +770,257 @@ export const blogPostsSv: BlogPost[] = [
         tool: 'edit-metadata',
         tags: ['metadata', 'properties', 'edit', 'privacy'],
     },
+    {
+        slug: 'konvertera-pdf-till-webp-modernt-format',
+        lang: 'sv',
+        title: 'Konvertera PDF till WebP: Det Moderna Bildformatet',
+        excerpt: 'Omvandla PDF-sidor till WebP-bilder for overlagsen komprimering och kvalitet. Perfekt for webbanvandning, snabbare laddning och mindre filstorlekar an JPG eller PNG.',
+        body: `<p>WebP ar ett modernt bildformat utvecklat av Google som ger overlagsen forlustfri och forlustbaserad komprimering for bilder pa webben. Att konvertera PDF:er till WebP ger dig mindre filer med jamforbar kvalitet.</p>
+<h2>Varfor Valja WebP?</h2>
+<ul>
+<li><strong>Mindre filer</strong> — WebP-bilder ar vanligtvis 25-35% mindre an JPG vid motsvarande kvalitet</li>
+<li><strong>Battre kvalitet</strong> — vid samma filstorlek erbjuder WebP skarpare bilder med farre artefakter</li>
+<li><strong>Brett stod</strong> — alla stora webblasare (Chrome, Firefox, Safari, Edge) stodjer WebP</li>
+</ul>
+<h2>Hur man Konverterar</h2>
+<p><a href="#/pdf-to-webp">PDF till WebP-verktyget</a> later dig justera kvalitetsreglaget for att balansera filstorlek och bildskarpa. Varje PDF-sida blir en separat WebP-fil.</p>
+<h2>Nar ska man Anvanda WebP vs JPG vs PNG</h2>
+<p>Valj WebP for webbpublicering dar filstorlek spelar roll. Anvand <a href="#/pdf-to-jpg">JPG</a> for maximal kompatibilitet med aldre programvara. Anvand <a href="#/pdf-to-png">PNG</a> nar du behover transparenta bakgrunder eller forlustfri kvalitet.</p>`,
+        date: '2026-03-10',
+        tool: 'pdf-to-webp',
+        tags: ['webp', 'convert', 'modern', 'web'],
+    },
+    {
+        slug: 'nup-pdf-flera-sidor-per-ark',
+        lang: 'sv',
+        title: 'Hur man Skriver ut Flera PDF-sidor pa ett Ark (N-Up)',
+        excerpt: 'Kombinera 2, 4 eller 9 PDF-sidor pa ett enda ark for att spara papper, skapa utdelningsblad eller ta fram kompakta dokumentoversikter.',
+        body: `<p>N-Up-utskrift arrangerar flera sidor pa ett enda ark. Det ar perfekt for att skapa utdelningsblad, spara papper eller fa en kompakt oversikt over ett langt dokument.</p>
+<h2>Tillgangliga Layouter</h2>
+<p><a href="#/nup-pdf">N-Up PDF-verktyget</a> erbjuder tre layoutalternativ:</p>
+<ul>
+<li><strong>2-Up</strong> — tva sidor sida vid sida pa ett liggande ark</li>
+<li><strong>4-Up</strong> — fyra sidor i ett 2x2-rutnatt pa ett staende ark</li>
+<li><strong>9-Up</strong> — nio sidor i ett 3x3-rutnatt for maximal papperbesparing</li>
+</ul>
+<h2>Vanliga Anvandningsomraden</h2>
+<ul>
+<li>Skapa forelasningsutdelningar med flera bilder per sida</li>
+<li>Skriva ut utkast for granskning och spara papper</li>
+<li>Gora kompakta referenskort fran langre dokument</li>
+</ul>
+<p>For basta lasbarhet, anvand 2-Up for texttunga dokument och 4-Up eller 9-Up for bildpresentationer.</p>`,
+        date: '2026-03-10',
+        tool: 'nup-pdf',
+        tags: ['nup', 'print', 'handout', 'paper'],
+    },
+    {
+        slug: 'lagg-till-tom-sida-i-pdf',
+        lang: 'sv',
+        title: 'Hur man Lagger till en Tom Sida i ett PDF-dokument',
+        excerpt: 'Infoga en tom sida i borjan eller slutet av din PDF. Anvandbart for omslagssidor, avdelare eller forberedelse for dubbelsidig utskrift.',
+        body: `<p>Att lagga till en tom sida i en PDF ar en enkel men ofta behovd operation. Oavsett om du behover en platshallare, en avdelare eller forberedelse for dubbelsidig utskrift hanterar det har verktyget det pa nagra sekunder.</p>
+<h2>Nar du Behover en Tom Sida</h2>
+<ul>
+<li><strong>Omslagssidor</strong> — lagg till en tom forsta sida for att senare fylla i som omslag</li>
+<li><strong>Dubbelsidig utskrift</strong> — sakerstall att kapitel borjar pa hogersidan (udda sida)</li>
+<li><strong>Sektionsavdelare</strong> — infoga visuella avbrott mellan dokumentsektioner</li>
+<li><strong>Utfyllnad</strong> — lagg till en tom sista sida for haftutskrift</li>
+</ul>
+<h2>Hur man Anvander det</h2>
+<p><a href="#/add-blank-page">Lagg till Tom Sida-verktyget</a> later dig valja att infoga den tomma sidan i borjan eller slutet av din PDF. Sidstorleken matchar forsta sidan i ditt dokument.</p>
+<p>For mer avancerad sidhantering, anvand <a href="#/organize-pdf">Organisera PDF-verktyget</a> som later dig ordna om och duplicera sidor visuellt.</p>`,
+        date: '2026-03-10',
+        tool: 'add-blank-page',
+        tags: ['blank', 'page', 'insert', 'duplex'],
+    },
+    {
+        slug: 'ta-bort-tomma-sidor-fran-pdf',
+        lang: 'sv',
+        title: 'Hur man Automatiskt Upptacker och Tar Bort Tomma Sidor fran PDF',
+        excerpt: 'Rensa dina PDF:er genom att automatiskt upptacka och ta bort tomma sidor. Perfekt for skannade dokument med oonskade tomma ark.',
+        body: `<p>Skannade dokument innehaller ofta tomma sidor fran dubbelsidig skanning av enkelsidiga original. Att manuellt ta bort dem sida for sida ar omstandligt.</p>
+<h2>Hur det Fungerar</h2>
+<p><a href="#/remove-blank-pages">Ta Bort Tomma Sidor-verktyget</a> analyserar varje sida i din PDF genom att rendera den och kontrollera pixelinnehallet. Sidor som ar 99,5% eller mer vita pixlar upptacks automatiskt som tomma.</p>
+<h2>Vanliga Kallor till Tomma Sidor</h2>
+<ul>
+<li>Dubbelsidig skanning av enkelsidiga dokument</li>
+<li>Faxoverforingar med utfyllnadssidor</li>
+<li>Programvarugenererade rapporter med tomma avdelarsidor</li>
+<li>Bokskanningar med tomma baksidor</li>
+</ul>
+<h2>Smart Detektering</h2>
+<p>Verktyget ar smart nog att skilja mellan verkligt tomma sidor och sidor med minimalt innehall. Sidor med aven sma mangder text eller grafik bevaras. Om alla sidor ar tomma varnar verktyget dig istallet for att skapa ett tomt dokument.</p>`,
+        date: '2026-03-10',
+        tool: 'remove-blank-pages',
+        tags: ['blank', 'remove', 'clean', 'scan'],
+    },
+    {
+        slug: 'ocr-skannad-pdf-sokbar',
+        lang: 'sv',
+        title: 'OCR: Gor Skannade PDF:er Sokbara och Markerbara',
+        excerpt: 'Anvand optisk teckenigenkanningfor att lagga till ett textlager i skannade PDF-dokument. Gor bildbaserade PDF:er sokbara, markerbara och tillgangliga.',
+        body: `<p>Skannade dokument ar i grunden bilder inuti en PDF — du kan inte soka, markera eller kopiera text fran dem. OCR (Optical Character Recognition) loser detta genom att upptacka text i bilder och lagga till ett osynligt sokbart lager.</p>
+<h2>Hur OCR Fungerar</h2>
+<p><a href="#/ocr-pdf">OCR PDF-verktyget</a> bearbetar varje sida i tre steg:</p>
+<ol>
+<li>Renderar sidan som en hogupplost bild</li>
+<li>Kor OCR for att kanna igen text i bilden</li>
+<li>Skapar en ny PDF med originalbilden plus ett osynligt textlager ovanpa</li>
+</ol>
+<h2>Sprak som Stods</h2>
+<p>Verktyget stodjer 14 sprak inklusive engelska, spanska, franska, tyska, italienska, portugisiska, nederlandska och fler. Valj ratt sprak for basta igenkannningsnoggrannhet.</p>
+<h2>Anvandningsomraden</h2>
+<ul>
+<li>Gora skannade kontrakt sokbara for juridisk granskning</li>
+<li>Digitalisera gamla pappersdokument for arkivsystem</li>
+<li>Mojliggora textutdrag fran skannade kvitton och fakturor</li>
+</ul>
+<p>Efter OCR-bearbetning kan du anvanda <a href="#/pdf-to-text">PDF till Text-verktyget</a> for att extrahera den igenkanda texten.</p>`,
+        date: '2026-03-10',
+        tool: 'ocr-pdf',
+        tags: ['ocr', 'scan', 'searchable', 'text-recognition'],
+    },
+    {
+        slug: 'jamfor-tva-pdf-dokument-visuellt',
+        lang: 'sv',
+        title: 'Hur man Visuellt Jamfor Tva PDF-dokument',
+        excerpt: 'Upptack skillnader mellan tva versioner av ett PDF-dokument med visuell sida-vid-sida-jamforelse och automatisk skillnadsmarkering.',
+        body: `<p>Nar du granskar dokumentrevisioner, kontraktsandringar eller designforandringar behover du snabbt identifiera vad som har andrats mellan tva versioner av en PDF.</p>
+<h2>Hur det Fungerar</h2>
+<p><a href="#/compare-pdf">Jamfor PDF-verktyget</a> tar tva PDF-filer och skapar ett visuellt jamforelsedokument. Varje sidpar renderas sida vid sida, med skillnader pa pixelniva markerade i rott.</p>
+<h2>Vad som Upptacks</h2>
+<ul>
+<li>Textandringar — tillagda, borttagna eller andrade ord</li>
+<li>Layoutforandringar — flyttade element, andrat avstand</li>
+<li>Bildskillnader — utbytt eller andrad grafik</li>
+<li>Formateringsandringar — andrad teckenstorlek, farg eller stil</li>
+</ul>
+<h2>Praktiska Tillampningar</h2>
+<ul>
+<li>Granska kontraktsrevisioner fore signering</li>
+<li>Verifiera designkorrektur mot original</li>
+<li>Kontrollera oversatta dokument mot kallans layout</li>
+<li>Kvalitetssakring for dokumentgenereringspipelines</li>
+</ul>
+<p>Ladda upp bada versionerna och verktyget producerar en nedladdningsbar jamforelse-PDF som du kan granska i din egen takt.</p>`,
+        date: '2026-03-10',
+        tool: 'compare-pdf',
+        tags: ['compare', 'diff', 'review', 'versions'],
+    },
+    {
+        slug: 'konvertera-ren-text-till-pdf',
+        lang: 'sv',
+        title: 'Konvertera Ren Text till PDF: Snabbt och Enkelt',
+        excerpt: 'Omvandla rena textfiler eller inklistrad text till valformaterade PDF-dokument. Automatisk radbrytning, paginering och professionell layout.',
+        body: `<p>Ibland behover du bara omvandla ren text till en snygg, delbar PDF — ingen avancerad formatering, bara lasbar text i en professionell dokumentlayout.</p>
+<h2>Hur det Fungerar</h2>
+<p><a href="#/text-to-pdf">Text till PDF-verktyget</a> tar din rena textinmatning och skapar ett A4 PDF-dokument med automatisk radbrytning, korrekta marginaler och monospace-teckensnitt for konsekvent justering.</p>
+<h2>Funktioner</h2>
+<ul>
+<li><strong>Automatisk radbrytning</strong> — langa rader bryts automatiskt vid ordgranser</li>
+<li><strong>Paginering</strong> — text delas upp over flera sidor efter behov</li>
+<li><strong>Konsekvent layout</strong> — Courier-teckensnitt sakerstaller teckenjustering for kod eller data</li>
+<li><strong>Radbrytningar bevaras</strong> — din styckestruktur bibehalls</li>
+</ul>
+<h2>Anvandningsomraden</h2>
+<ul>
+<li>Konvertera loggfiler eller kodsnuttar till PDF for dokumentation</li>
+<li>Skapa utskrivbara versioner av rena textanteckningar</li>
+<li>Arkivera textinnehall i ett universellt lasbart format</li>
+</ul>
+<p>For rikare formatering med rubriker, listor och lankar, anvand <a href="#/markdown-to-pdf">Markdown till PDF-verktyget</a> istallet.</p>`,
+        date: '2026-03-10',
+        tool: 'text-to-pdf',
+        tags: ['text', 'convert', 'create', 'plain-text'],
+    },
+    {
+        slug: 'vand-pdf-sidordning',
+        lang: 'sv',
+        title: 'Hur man Vander PDF-sidordningen',
+        excerpt: 'Vand sidordningen i ditt PDF-dokument sa att sista sidan blir den forsta. Perfekt for att fixa omvanda skanningar eller inverterade utskriftskoer.',
+        body: `<p>Ibland hamnar dokument i fel ordning — omvanda skanningar, inverterade utskriftskoer, eller helt enkelt behov av att lasa bakifran. Att vanda fixar detta med ett klick.</p>
+<h2>Nar man ska Vanda Sidor</h2>
+<ul>
+<li><strong>Skannerutdata</strong> — manga skannrar producerar sidor i omvand ordning fran pappersbunten</li>
+<li><strong>Utskriftskoproblem</strong> — dokument som skrivs ut med framsidan upp kommer ut i omvand ordning</li>
+<li><strong>Presentationsordning</strong> — omordna innehall for att presentera information nedifranan och upp</li>
+<li><strong>Haftesforebredelse</strong> — vissa hafteslayouter kraver omvanda sidsekvenser</li>
+</ul>
+<h2>Hur det Fungerar</h2>
+<p><a href="#/reverse-pages">Vand Sidor-verktyget</a> tar din PDF och skapar ett nytt dokument med alla sidor i omvand ordning. Sista sidan blir den forsta, nast sista blir den andra, och sa vidare.</p>
+<p>For mer selektiv sidomordning, anvand <a href="#/organize-pdf">Organisera PDF-verktyget</a> som later dig dra och slappa enskilda sidor.</p>`,
+        date: '2026-03-10',
+        tool: 'reverse-pages',
+        tags: ['reverse', 'order', 'flip', 'pages'],
+    },
+    {
+        slug: 'invertera-pdf-farger-morkt-lage',
+        lang: 'sv',
+        title: 'Invertera PDF-farger for Lasning i Morkt Lage',
+        excerpt: 'Konvertera PDF:er med vit bakgrund till morkt lage med inverterade farger. Minska ogonanstrangning, spara black pa morka skrivare eller skapa konstniarliga effekter.',
+        body: `<p>Att invertera farger omvandlar ett dokument med vit bakgrund till ett med mork bakgrund (och tvartom). Det ar anvandbart for bekvam lasning i morkt lage eller for att skapa visuella effekter.</p>
+<h2>Fordelar med Farginvertering</h2>
+<ul>
+<li><strong>Ogonkomfort</strong> — morka bakgrunder minskar ogonanstrangning i svagt ljus</li>
+<li><strong>Tillganglighet</strong> — vissa anvandare tycker att inverterade farger ar lattare att lasa</li>
+<li><strong>Blackbesparing</strong> — utskrift av inverterade dokument pa morkt papper anvander mindre black</li>
+<li><strong>Kreativa anvandningsomraden</strong> — skapa negativeffektbilder for designprojekt</li>
+</ul>
+<h2>Hur det Fungerar</h2>
+<p><a href="#/invert-colors">Invertera Farger-verktyget</a> renderar varje sida och inverterar varje pixel: svart blir vitt, vitt blir svart och alla farger skiftar till sina komplementara varden. Resultatet ar en ny PDF med det inverterade utseendet.</p>
+<p>For att konvertera fargdokument till graskaala istallet, anvand <a href="#/grayscale-pdf">Graskaala PDF-verktyget</a>.</p>`,
+        date: '2026-03-10',
+        tool: 'invert-colors',
+        tags: ['invert', 'dark-mode', 'colors', 'accessibility'],
+    },
+    {
+        slug: 'reparera-skadade-pdf-filer',
+        lang: 'sv',
+        title: 'Hur man Reparerar Skadade eller Korrupta PDF-filer',
+        excerpt: 'Fixa trasiga PDF:er som inte gar att oppna eller visar fel. Reparationsverktyget tolkar om och ateruppbygger dokumentstrukturen for att aterstalla innehallet.',
+        body: `<p>PDF-filer kan bli skadade pa grund av ofullstandiga nedladdningar, lagringsfel eller programvarubuggar. Nar en PDF inte gar att oppna eller visas felaktigt kan ett reparationsforsok ofta aterstalla innehallet.</p>
+<h2>Vanliga PDF-problem</h2>
+<ul>
+<li>Filen gar inte att oppna i PDF-lasare</li>
+<li>Tomma sidor eller saknat innehall</li>
+<li>Felmeddelanden om ogiltig struktur</li>
+<li>Delvis rendering eller trasiga teckensnitt</li>
+</ul>
+<h2>Hur Reparation Fungerar</h2>
+<p><a href="#/repair-pdf">Reparera PDF-verktyget</a> laddar din skadade fil med maximal feltolerans och ateruppbygger den sedan som ett rent nytt dokument. Denna process aterstaller ofta sidor och innehall som vanliga lasare inte kan visa.</p>
+<h2>Vad som Fixas</h2>
+<ul>
+<li>Korrupta korsreferenstabeller</li>
+<li>Trasiga interna lankar och sidreferenser</li>
+<li>Ogiltiga objektstrukturer</li>
+<li>Saknade eller skadade rubriker</li>
+</ul>
+<p>Observera: allvarligt skadade filer dar karndata ar forstord kan kanske inte aterhamtas. For de flesta vanliga korruptionsproblem aterstaller dock reparationsverktyget dokumentet framgangsrikt.</p>`,
+        date: '2026-03-10',
+        tool: 'repair-pdf',
+        tags: ['repair', 'fix', 'corrupted', 'recover'],
+    },
+    {
+        slug: 'konvertera-pdf-till-epub-ebok',
+        lang: 'sv',
+        title: 'Konvertera PDF till EPUB for E-bokslasare',
+        excerpt: 'Omvandla PDF-dokument till EPUB-format for bekvam lasning pa Kindle, Kobo och andra e-bokslasare. Texten flodas om for att passa alla skarmstorlekar.',
+        body: `<p>PDF:er ar designade for visning med fast layout, vilket gor dem svara att lasa pa sma skarmar. EPUB ar standardformatet for e-bocker som flodsar om text for att passa alla skarmstorlekar.</p>
+<h2>Varfor Konvertera till EPUB?</h2>
+<ul>
+<li><strong>Omflodesbar text</strong> — innehallet anpassas till alla skarmstorlekar, fran telefoner till surfplattor</li>
+<li><strong>Lasarfunktioner</strong> — justera teckenstorlek, stil och bakgrundsarg efter eget val</li>
+<li><strong>E-bokslasarkompatibilitet</strong> — fungerar med Kindle, Kobo, Apple Books och andra enheter</li>
+<li><strong>Mindre filer</strong> — textbaserade EPUB:er ar mycket mindre an bildbaserade PDF:er</li>
+</ul>
+<h2>Hur det Fungerar</h2>
+<p><a href="#/pdf-to-epub">PDF till EPUB-verktyget</a> extraherar textinnehall fran varje PDF-sida och paketerar det i en giltig EPUB 3-fil med korrekt kapitelnavigering, innehallsforteckning och stilsattning.</p>
+<h2>Basta Resultat</h2>
+<p>Det har verktyget fungerar bast med texttunga PDF:er. For skannade dokument (enbart bildbaserade PDF:er), kor <a href="#/ocr-pdf">OCR-verktyget</a> forst for att extrahera texten och konvertera sedan till EPUB.</p>
+<p>Den resulterande EPUB:en inkluderar en innehallsforteckning med en post per originalsida, vilket gor det enkelt att navigera i det konverterade dokumentet.</p>`,
+        date: '2026-03-10',
+        tool: 'pdf-to-epub',
+        tags: ['epub', 'ebook', 'convert', 'kindle'],
+    },
 ];

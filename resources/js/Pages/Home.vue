@@ -49,6 +49,17 @@ const tools: ToolItem[] = [
     { slug: 'pdf-to-text', icon: '\uD83D\uDCDD', color: 'text-blue-600', bgColor: 'bg-blue-50' },
     { slug: 'markdown-to-pdf', icon: '\uD83D\uDCDD', color: 'text-violet-600', bgColor: 'bg-violet-50' },
     { slug: 'edit-metadata', icon: '📋', color: 'text-cyan-700', bgColor: 'bg-cyan-50' },
+    { slug: 'pdf-to-webp', icon: '🌐', color: 'text-emerald-600', bgColor: 'bg-emerald-50' },
+    { slug: 'nup-pdf', icon: '📑', color: 'text-indigo-600', bgColor: 'bg-indigo-50' },
+    { slug: 'add-blank-page', icon: '📃', color: 'text-sky-600', bgColor: 'bg-sky-50' },
+    { slug: 'remove-blank-pages', icon: '🧹', color: 'text-rose-600', bgColor: 'bg-rose-50' },
+    { slug: 'ocr-pdf', icon: '👁️', color: 'text-purple-600', bgColor: 'bg-purple-50' },
+    { slug: 'compare-pdf', icon: '🔍', color: 'text-amber-600', bgColor: 'bg-amber-50' },
+    { slug: 'text-to-pdf', icon: '📝', color: 'text-teal-600', bgColor: 'bg-teal-50' },
+    { slug: 'reverse-pages', icon: '🔃', color: 'text-orange-600', bgColor: 'bg-orange-50' },
+    { slug: 'invert-colors', icon: '🔲', color: 'text-gray-600', bgColor: 'bg-gray-100' },
+    { slug: 'repair-pdf', icon: '🔧', color: 'text-red-600', bgColor: 'bg-red-50' },
+    { slug: 'pdf-to-epub', icon: '📖', color: 'text-violet-600', bgColor: 'bg-violet-50' },
 ];
 
 const filteredTools = computed(() => {

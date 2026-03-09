@@ -770,4 +770,257 @@ export const blogPostsCs: BlogPost[] = [
         tool: 'edit-metadata',
         tags: ['metadata', 'properties', 'edit', 'privacy'],
     },
+    {
+        slug: 'prevod-pdf-do-webp-moderni-format',
+        lang: 'cs',
+        title: 'Převod PDF do WebP: moderní obrazový formát',
+        excerpt: 'Převeďte stránky PDF na obrázky WebP pro lepší kompresi a kvalitu. Ideální pro webové použití, rychlejší načítání a menší velikost souborů než JPG nebo PNG.',
+        body: `<p>WebP je moderní obrazový formát vyvinutý společností Google, který poskytuje vynikající bezeztrátovou i ztrátovou kompresi obrázků na webu. Převod PDF do WebP vám přinese menší soubory se srovnatelnou kvalitou.</p>
+<h2>Proč zvolit WebP?</h2>
+<ul>
+<li><strong>Menší soubory</strong> — obrázky WebP jsou obvykle o 25–35 % menší než JPG při srovnatelné kvalitě</li>
+<li><strong>Lepší kvalita</strong> — při stejné velikosti souboru nabízí WebP ostřejší obrázky s méně artefakty</li>
+<li><strong>Široká podpora</strong> — všechny hlavní prohlížeče (Chrome, Firefox, Safari, Edge) podporují WebP</li>
+</ul>
+<h2>Jak převést</h2>
+<p>Nástroj <a href="#/pdf-to-webp">PDF do WebP</a> vám umožňuje nastavit posuvník kvality pro vyvážení velikosti souboru a ostrosti obrazu. Každá stránka PDF se stane samostatným souborem WebP.</p>
+<h2>Kdy použít WebP vs JPG vs PNG</h2>
+<p>Zvolte WebP pro publikování na webu, kde záleží na velikosti souboru. Použijte <a href="#/pdf-to-jpg">JPG</a> pro maximální kompatibilitu se starším softwarem. Použijte <a href="#/pdf-to-png">PNG</a>, když potřebujete průhledné pozadí nebo bezeztrátovou kvalitu.</p>`,
+        date: '2026-03-10',
+        tool: 'pdf-to-webp',
+        tags: ['webp', 'prevod', 'moderni', 'web'],
+    },
+    {
+        slug: 'nup-pdf-vice-stranek-na-list',
+        lang: 'cs',
+        title: 'Jak tisknout více stránek PDF na jeden list (N-Up)',
+        excerpt: 'Uspořádejte 2, 4 nebo 9 stránek PDF na jeden list pro úsporu papíru, tvorbu podkladů nebo vytvoření kompaktního přehledu dokumentu.',
+        body: `<p>N-Up tisk uspořádá více stránek na jeden list. To je ideální pro tvorbu podkladů k prezentacím, úsporu papíru nebo získání kompaktního přehledu dlouhého dokumentu.</p>
+<h2>Dostupná rozložení</h2>
+<p>Nástroj <a href="#/nup-pdf">N-Up PDF</a> nabízí tři varianty rozložení:</p>
+<ul>
+<li><strong>2-Up</strong> — dvě stránky vedle sebe na list na šířku</li>
+<li><strong>4-Up</strong> — čtyři stránky v mřížce 2×2 na list na výšku</li>
+<li><strong>9-Up</strong> — devět stránek v mřížce 3×3 pro maximální úsporu papíru</li>
+</ul>
+<h2>Běžné případy použití</h2>
+<ul>
+<li>Tvorba podkladů k přednáškám s více snímky na stránku</li>
+<li>Tisk konceptů dokumentů k revizi při úspoře papíru</li>
+<li>Vytváření kompaktních referenčních karet z delších dokumentů</li>
+</ul>
+<p>Pro nejlepší čitelnost použijte 2-Up pro dokumenty s převahou textu a 4-Up nebo 9-Up pro prezentace.</p>`,
+        date: '2026-03-10',
+        tool: 'nup-pdf',
+        tags: ['nup', 'tisk', 'podklady', 'papir'],
+    },
+    {
+        slug: 'pridani-prazdne-stranky-do-pdf',
+        lang: 'cs',
+        title: 'Jak přidat prázdnou stránku do PDF dokumentu',
+        excerpt: 'Vložte prázdnou stránku na začátek nebo konec vašeho PDF. Užitečné pro titulní strany, oddělovače nebo přípravu na oboustranný tisk.',
+        body: `<p>Přidání prázdné stránky do PDF je jednoduchá, ale často potřebná operace. Ať už potřebujete zástupnou stránku, oddělovač nebo přípravu na oboustranný tisk, tento nástroj to zvládne za pár sekund.</p>
+<h2>Kdy potřebujete prázdnou stránku</h2>
+<ul>
+<li><strong>Titulní strany</strong> — přidejte prázdnou první stránku, kterou později vyplníte jako obálku</li>
+<li><strong>Oboustranný tisk</strong> — zajistěte, aby kapitoly začínaly na pravé (liché) stránce</li>
+<li><strong>Oddělovače sekcí</strong> — vložte vizuální předěly mezi sekce dokumentu</li>
+<li><strong>Doplnění</strong> — přidejte prázdnou poslední stránku pro brožurový tisk</li>
+</ul>
+<h2>Jak na to</h2>
+<p>Nástroj <a href="#/add-blank-page">Přidat prázdnou stránku</a> vám umožňuje zvolit, zda se prázdná stránka vloží na začátek nebo konec PDF. Velikost stránky odpovídá první stránce vašeho dokumentu.</p>
+<p>Pro složitější správu stránek použijte nástroj <a href="#/organize-pdf">Organizace PDF</a>, který umožňuje vizuálně přeřazovat a duplikovat stránky.</p>`,
+        date: '2026-03-10',
+        tool: 'add-blank-page',
+        tags: ['prazdna', 'stranka', 'vlozeni', 'oboustranný'],
+    },
+    {
+        slug: 'odstraneni-prazdnych-stranek-z-pdf',
+        lang: 'cs',
+        title: 'Jak automaticky detekovat a odstranit prázdné stránky z PDF',
+        excerpt: 'Vyčistěte své PDF soubory automatickou detekcí a odstraněním prázdných stránek. Ideální pro naskenované dokumenty s nežádoucími prázdnými listy.',
+        body: `<p>Naskenované dokumenty často obsahují prázdné stránky z oboustranného skenování jednostranných originálů. Ruční odstraňování stránku po stránce je únavné.</p>
+<h2>Jak to funguje</h2>
+<p>Nástroj <a href="#/remove-blank-pages">Odstranit prázdné stránky</a> analyzuje každou stránku vašeho PDF tak, že ji vykreslí a zkontroluje obsah pixelů. Stránky, které jsou z 99,5 % nebo více bílé, jsou automaticky rozpoznány jako prázdné.</p>
+<h2>Běžné zdroje prázdných stránek</h2>
+<ul>
+<li>Oboustranné skenování jednostranných dokumentů</li>
+<li>Faxové přenosy s výplňovými stránkami</li>
+<li>Softwarově generované zprávy s prázdnými oddělovacími stránkami</li>
+<li>Skeny knih s prázdnými rubovými stránkami</li>
+</ul>
+<h2>Chytrá detekce</h2>
+<p>Nástroj je dostatečně chytrý na to, aby rozlišil skutečně prázdné stránky od stránek s minimálním obsahem. Stránky s byť i malým množstvím textu nebo grafiky jsou zachovány. Pokud jsou všechny stránky prázdné, nástroj vás upozorní místo toho, aby vytvořil prázdný dokument.</p>`,
+        date: '2026-03-10',
+        tool: 'remove-blank-pages',
+        tags: ['prazdne', 'odstraneni', 'cisteni', 'sken'],
+    },
+    {
+        slug: 'ocr-skenovane-pdf-prohledavatelne',
+        lang: 'cs',
+        title: 'OCR: Převeďte naskenované PDF na prohledávatelný a označitelný text',
+        excerpt: 'Použijte optické rozpoznávání znaků k přidání textové vrstvy do naskenovaných PDF dokumentů. Udělejte z obrázkových PDF prohledávatelné, označitelné a přístupné soubory.',
+        body: `<p>Naskenované dokumenty jsou v podstatě obrázky uvnitř PDF — nelze v nich vyhledávat, označovat ani kopírovat text. OCR (optické rozpoznávání znaků) to řeší detekcí textu v obrázcích a přidáním neviditelné prohledávatelné vrstvy.</p>
+<h2>Jak OCR funguje</h2>
+<p>Nástroj <a href="#/ocr-pdf">OCR PDF</a> zpracovává každou stránku ve třech krocích:</p>
+<ol>
+<li>Vykreslí stránku jako obrázek ve vysokém rozlišení</li>
+<li>Spustí OCR pro rozpoznání textu v obrázku</li>
+<li>Vytvoří nové PDF s původním obrázkem a neviditelnou textovou vrstvou navrch</li>
+</ol>
+<h2>Podporované jazyky</h2>
+<p>Nástroj podporuje 14 jazyků včetně angličtiny, španělštiny, francouzštiny, němčiny, italštiny, portugalštiny, holandštiny a dalších. Vyberte správný jazyk pro nejlepší přesnost rozpoznávání.</p>
+<h2>Případy použití</h2>
+<ul>
+<li>Zpřístupnění naskenovaných smluv pro právní kontrolu</li>
+<li>Digitalizace starých papírových dokumentů pro archivní systémy</li>
+<li>Umožnění extrakce textu z naskenovaných účtenek a faktur</li>
+</ul>
+<p>Po zpracování OCR můžete použít nástroj <a href="#/pdf-to-text">PDF do textu</a> k extrakci rozpoznaného textu.</p>`,
+        date: '2026-03-10',
+        tool: 'ocr-pdf',
+        tags: ['ocr', 'sken', 'prohledavatelne', 'rozpoznavani-textu'],
+    },
+    {
+        slug: 'vizualni-porovnani-dvou-pdf-dokumentu',
+        lang: 'cs',
+        title: 'Jak vizuálně porovnat dva PDF dokumenty',
+        excerpt: 'Odhalte rozdíly mezi dvěma verzemi PDF dokumentu pomocí vizuálního porovnání vedle sebe a automatického zvýraznění rozdílů.',
+        body: `<p>Při kontrole revizí dokumentů, dodatků ke smlouvám nebo změn v designu potřebujete rychle zjistit, co se mezi dvěma verzemi PDF změnilo.</p>
+<h2>Jak to funguje</h2>
+<p>Nástroj <a href="#/compare-pdf">Porovnat PDF</a> vezme dva soubory PDF a vytvoří dokument s vizuálním porovnáním. Každý pár stránek je vykreslen vedle sebe a rozdíly na úrovni pixelů jsou zvýrazněny červeně.</p>
+<h2>Co se detekuje</h2>
+<ul>
+<li>Změny textu — přidaná, odstraněná nebo upravená slova</li>
+<li>Posuny rozložení — přesunuté prvky, změněné mezery</li>
+<li>Rozdíly v obrázcích — nahrazená nebo upravená grafika</li>
+<li>Změny formátování — úpravy velikosti písma, barvy nebo stylu</li>
+</ul>
+<h2>Praktické využití</h2>
+<ul>
+<li>Kontrola revizí smluv před podpisem</li>
+<li>Ověření designových korektur proti originálům</li>
+<li>Kontrola přeložených dokumentů vůči zdrojovému rozložení</li>
+<li>Zajištění kvality v procesech generování dokumentů</li>
+</ul>
+<p>Nahrajte obě verze a nástroj vytvoří porovnávací PDF ke stažení, které si můžete prohlédnout ve vlastním tempu.</p>`,
+        date: '2026-03-10',
+        tool: 'compare-pdf',
+        tags: ['porovnani', 'rozdily', 'kontrola', 'verze'],
+    },
+    {
+        slug: 'prevod-cistyho-textu-do-pdf',
+        lang: 'cs',
+        title: 'Převod čistého textu do PDF: rychle a jednoduše',
+        excerpt: 'Převeďte textové soubory nebo vložený text na úhledně naformátované PDF dokumenty. Automatické zalamování slov, stránkování a profesionální rozložení.',
+        body: `<p>Někdy prostě potřebujete převést čistý text na přehledné sdílitelné PDF — žádné složité formátování, jen čitelný text v profesionálním rozvržení dokumentu.</p>
+<h2>Jak to funguje</h2>
+<p>Nástroj <a href="#/text-to-pdf">Text do PDF</a> vezme váš textový vstup a vytvoří PDF dokument formátu A4 s automatickým zalamováním slov, správnými okraji a neproporcionálním písmem pro konzistentní zarovnání.</p>
+<h2>Funkce</h2>
+<ul>
+<li><strong>Automatické zalamování slov</strong> — dlouhé řádky se automaticky zalamují na hranicích slov</li>
+<li><strong>Stránkování</strong> — text se podle potřeby rozdělí na více stránek</li>
+<li><strong>Konzistentní rozložení</strong> — písmo Courier zajišťuje zarovnání znaků pro kód nebo data</li>
+<li><strong>Zachování zalomení řádků</strong> — struktura vašich odstavců je zachována</li>
+</ul>
+<h2>Případy použití</h2>
+<ul>
+<li>Převod log souborů nebo úryvků kódu do PDF pro dokumentaci</li>
+<li>Vytváření tisknutelných verzí textových poznámek</li>
+<li>Archivace textového obsahu v univerzálně čitelném formátu</li>
+</ul>
+<p>Pro bohatší formátování s nadpisy, seznamy a odkazy použijte místo toho nástroj <a href="#/markdown-to-pdf">Markdown do PDF</a>.</p>`,
+        date: '2026-03-10',
+        tool: 'text-to-pdf',
+        tags: ['text', 'prevod', 'vytvoreni', 'cisty-text'],
+    },
+    {
+        slug: 'obraceni-poradi-stranek-pdf',
+        lang: 'cs',
+        title: 'Jak obrátit pořadí stránek v PDF',
+        excerpt: 'Otočte pořadí stránek v PDF dokumentu tak, aby se poslední stránka stala první. Ideální pro opravu obráceně naskenovaných dokumentů nebo převrácených tiskových front.',
+        body: `<p>Někdy se dokumenty dostanou do špatného pořadí — obrácené skeny, převrácené tiskové fronty nebo prostě potřeba číst od konce. Obrácení pořadí to opraví jedním kliknutím.</p>
+<h2>Kdy obracet stránky</h2>
+<ul>
+<li><strong>Výstup ze skeneru</strong> — mnoho skenerů vytváří stránky v obráceném pořadí ze stohu papíru</li>
+<li><strong>Problémy s tiskovou frontou</strong> — dokumenty vytištěné lícem nahoru vycházejí pozpátku</li>
+<li><strong>Pořadí prezentace</strong> — přeuspořádání obsahu pro prezentaci informací odspodu nahoru</li>
+<li><strong>Příprava brožury</strong> — některá brožurová rozložení vyžadují obrácené pořadí stránek</li>
+</ul>
+<h2>Jak to funguje</h2>
+<p>Nástroj <a href="#/reverse-pages">Obrátit stránky</a> vezme vaše PDF a vytvoří nový dokument se všemi stránkami v obráceném pořadí. Poslední stránka se stane první, předposlední druhou a tak dále.</p>
+<p>Pro selektivnější přeřazování stránek použijte nástroj <a href="#/organize-pdf">Organizace PDF</a>, který umožňuje přetahování jednotlivých stránek.</p>`,
+        date: '2026-03-10',
+        tool: 'reverse-pages',
+        tags: ['obraceni', 'poradi', 'otoceni', 'stranky'],
+    },
+    {
+        slug: 'inverze-barev-pdf-tmavý-rezim',
+        lang: 'cs',
+        title: 'Inverze barev PDF pro čtení v tmavém režimu',
+        excerpt: 'Převeďte PDF s bílým pozadím do tmavého režimu s invertovanými barvami. Snižte únavu očí, ušetřete inkoust na tiskárnách s tmavým tématem nebo vytvořte umělecké efekty.',
+        body: `<p>Inverze barev transformuje dokument s bílým pozadím na dokument s tmavým pozadím (a naopak). To je užitečné pro pohodlné čtení v tmavém režimu nebo vytváření vizuálních efektů.</p>
+<h2>Výhody inverze barev</h2>
+<ul>
+<li><strong>Pohodlí očí</strong> — tmavé pozadí snižuje únavu očí v prostředí se slabým osvětlením</li>
+<li><strong>Přístupnost</strong> — někteří uživatelé považují invertované barvy za lépe čitelné</li>
+<li><strong>Úspora inkoustu</strong> — tisk invertovaných dokumentů na tmavý papír spotřebuje méně inkoustu</li>
+<li><strong>Kreativní využití</strong> — vytváření negativních efektů obrázků pro designové projekty</li>
+</ul>
+<h2>Jak to funguje</h2>
+<p>Nástroj <a href="#/invert-colors">Invertovat barvy</a> vykreslí každou stránku a invertuje každý pixel: černá se změní na bílou, bílá na černou a všechny barvy se posunou na své komplementární hodnoty. Výsledkem je nové PDF s invertovaným vzhledem.</p>
+<p>Pro převod barevných dokumentů do odstínů šedi použijte místo toho nástroj <a href="#/grayscale-pdf">PDF do odstínů šedi</a>.</p>`,
+        date: '2026-03-10',
+        tool: 'invert-colors',
+        tags: ['inverze', 'tmavy-rezim', 'barvy', 'pristupnost'],
+    },
+    {
+        slug: 'oprava-poskozenych-pdf-souboru',
+        lang: 'cs',
+        title: 'Jak opravit poškozené nebo zničené PDF soubory',
+        excerpt: 'Opravte poškozené PDF soubory, které se nedaří otevřít nebo zobrazují chyby. Nástroj pro opravu znovu analyzuje a přestaví strukturu dokumentu pro obnovu obsahu.',
+        body: `<p>PDF soubory se mohou poškodit kvůli neúplnému stahování, chybám úložiště nebo softwarovým chybám. Když se PDF nedaří otevřít nebo se zobrazuje nesprávně, pokus o opravu často dokáže obsah obnovit.</p>
+<h2>Běžné problémy s PDF</h2>
+<ul>
+<li>Soubor nejde otevřít v prohlížečích PDF</li>
+<li>Prázdné stránky nebo chybějící obsah</li>
+<li>Chybové hlášení o neplatné struktuře</li>
+<li>Částečné vykreslení nebo poškozená písma</li>
+</ul>
+<h2>Jak oprava funguje</h2>
+<p>Nástroj <a href="#/repair-pdf">Opravit PDF</a> načte váš poškozený soubor s maximální tolerancí chyb a poté jej přestaví jako čistý nový dokument. Tento proces často obnoví stránky a obsah, které běžné prohlížeče nedokáží zobrazit.</p>
+<h2>Co se opraví</h2>
+<ul>
+<li>Poškozené křížové referenční tabulky</li>
+<li>Nefunkční interní odkazy a reference na stránky</li>
+<li>Neplatné struktury objektů</li>
+<li>Chybějící nebo poškozené hlavičky</li>
+</ul>
+<p>Poznámka: závažně poškozené soubory, kde jsou základní data zničena, nemusí být obnovitelné. Nicméně u většiny běžných problémů s poškozením nástroj pro opravu úspěšně obnoví dokument.</p>`,
+        date: '2026-03-10',
+        tool: 'repair-pdf',
+        tags: ['oprava', 'poškozené', 'obnovení', 'zotavení'],
+    },
+    {
+        slug: 'prevod-pdf-do-epub-elektronicka-kniha',
+        lang: 'cs',
+        title: 'Převod PDF do EPUB pro čtečky elektronických knih',
+        excerpt: 'Převeďte PDF dokumenty do formátu EPUB pro pohodlné čtení na Kindle, Kobo a dalších čtečkách. Text se přizpůsobí jakékoli velikosti obrazovky.',
+        body: `<p>PDF soubory jsou navrženy pro zobrazení s pevným rozložením, což ztěžuje čtení na malých obrazovkách. EPUB je standardní formát elektronických knih, který přizpůsobuje text jakékoli velikosti displeje.</p>
+<h2>Proč převádět do EPUB?</h2>
+<ul>
+<li><strong>Přizpůsobitelný text</strong> — obsah se přizpůsobí jakékoli velikosti obrazovky, od telefonů po tablety</li>
+<li><strong>Funkce čtečky</strong> — upravte velikost písma, styl a barvu pozadí podle svých preferencí</li>
+<li><strong>Kompatibilita s čtečkami</strong> — funguje s Kindle, Kobo, Apple Books a dalšími zařízeními</li>
+<li><strong>Menší soubory</strong> — textové EPUB soubory jsou mnohem menší než obrázkové PDF</li>
+</ul>
+<h2>Jak to funguje</h2>
+<p>Nástroj <a href="#/pdf-to-epub">PDF do EPUB</a> extrahuje textový obsah z každé stránky PDF a zabalí jej do platného souboru EPUB 3 se správnou navigací po kapitolách, obsahem a stylováním.</p>
+<h2>Nejlepší výsledky</h2>
+<p>Tento nástroj funguje nejlépe s PDF soubory s převahou textu. Pro naskenované dokumenty (PDF obsahující pouze obrázky) nejprve spusťte nástroj <a href="#/ocr-pdf">OCR</a> pro extrakci textu a poté převeďte do EPUB.</p>
+<p>Výsledný EPUB obsahuje obsah s jednou položkou na každou původní stránku, což usnadňuje navigaci v převedeném dokumentu.</p>`,
+        date: '2026-03-10',
+        tool: 'pdf-to-epub',
+        tags: ['epub', 'ekniha', 'prevod', 'kindle'],
+    },
 ];

@@ -770,4 +770,257 @@ export const blogPostsSl: BlogPost[] = [
         tool: 'edit-metadata',
         tags: ['metadata', 'properties', 'edit', 'privacy'],
     },
+    {
+        slug: 'pretvorba-pdf-v-webp-sodoben-format',
+        lang: 'sl',
+        title: 'Pretvorite PDF v WebP: sodobni slikovni format',
+        excerpt: 'Pretvorite strani PDF v slike WebP za boljše stiskanje in kakovost. Idealno za spletno uporabo, hitrejše nalaganje in manjše datoteke kot JPG ali PNG.',
+        body: `<p>WebP je sodoben slikovni format, ki ga je razvil Google in zagotavlja vrhunsko stiskanje brez izgub in z izgubami za slike na spletu. Pretvorba PDF-jev v WebP vam omogoča manjše datoteke s primerljivo kakovostjo.</p>
+<h2>Zakaj izbrati WebP?</h2>
+<ul>
+<li><strong>Manjše datoteke</strong> — slike WebP so običajno 25–35 % manjše od JPG pri enakovredni kakovosti</li>
+<li><strong>Boljša kakovost</strong> — pri enaki velikosti datoteke WebP ponuja ostrejše slike z manj artefakti</li>
+<li><strong>Široka podpora</strong> — vsi glavni brskalniki (Chrome, Firefox, Safari, Edge) podpirajo WebP</li>
+</ul>
+<h2>Kako pretvoriti</h2>
+<p>Orodje <a href="#/pdf-to-webp">PDF v WebP</a> vam omogoča prilagajanje drsnika kakovosti za uravnoteženje velikosti datoteke in jasnosti slike. Vsaka stran PDF postane ločena datoteka WebP.</p>
+<h2>Kdaj uporabiti WebP, JPG ali PNG</h2>
+<p>Izberite WebP za objavljanje na spletu, kjer je velikost datoteke pomembna. Uporabite <a href="#/pdf-to-jpg">JPG</a> za največjo združljivost s starejšo programsko opremo. Uporabite <a href="#/pdf-to-png">PNG</a>, kadar potrebujete prosojno ozadje ali kakovost brez izgub.</p>`,
+        date: '2026-03-10',
+        tool: 'pdf-to-webp',
+        tags: ['webp', 'pretvorba', 'sodobno', 'splet'],
+    },
+    {
+        slug: 'nup-pdf-vec-strani-na-list',
+        lang: 'sl',
+        title: 'Kako natisniti več strani PDF na en list (N-Up)',
+        excerpt: 'Združite 2, 4 ali 9 strani PDF na en list, da prihranite papir, ustvarite izročke ali pripravite kompaktne preglede dokumentov.',
+        body: `<p>Tiskanje N-Up razporedi več strani na en list. To je odlično za ustvarjanje izročkov, prihranek papirja ali pridobitev kompaktnega pregleda dolgega dokumenta.</p>
+<h2>Razpoložljive postavitve</h2>
+<p>Orodje <a href="#/nup-pdf">N-Up PDF</a> ponuja tri možnosti postavitve:</p>
+<ul>
+<li><strong>2-Up</strong> — dve strani ena ob drugi na ležečem listu</li>
+<li><strong>4-Up</strong> — štiri strani v mreži 2×2 na pokončnem listu</li>
+<li><strong>9-Up</strong> — devet strani v mreži 3×3 za največji prihranek papirja</li>
+</ul>
+<h2>Pogoste uporabe</h2>
+<ul>
+<li>Ustvarjanje izročkov predavanj z več diapozitivi na stran</li>
+<li>Tiskanje osnutkov dokumentov za pregled ob prihranku papirja</li>
+<li>Izdelava kompaktnih referenčnih kartic iz daljših dokumentov</li>
+</ul>
+<p>Za najboljšo berljivost uporabite 2-Up za besedilno bogate dokumente in 4-Up ali 9-Up za diapozitivne predstavitve.</p>`,
+        date: '2026-03-10',
+        tool: 'nup-pdf',
+        tags: ['nup', 'tiskanje', 'izroček', 'papir'],
+    },
+    {
+        slug: 'dodajanje-prazne-strani-v-pdf',
+        lang: 'sl',
+        title: 'Kako dodati prazno stran v PDF dokument',
+        excerpt: 'Vstavite prazno stran na začetek ali konec PDF-ja. Uporabno za naslovne strani, ločilnike ali pripravo na obojestransko tiskanje.',
+        body: `<p>Dodajanje prazne strani v PDF je preprosta, a pogosto potrebna operacija. Ne glede na to, ali potrebujete ogrado, ločilnik ali pripravo za obojestransko tiskanje, to orodje opravi nalogo v nekaj sekundah.</p>
+<h2>Kdaj potrebujete prazno stran</h2>
+<ul>
+<li><strong>Naslovne strani</strong> — dodajte prazno prvo stran, ki jo pozneje izpolnite kot naslovnico</li>
+<li><strong>Obojestransko tiskanje</strong> — zagotovite, da se poglavja začnejo na desni (lihi) strani</li>
+<li><strong>Ločilniki razdelkov</strong> — vstavite vizualne prekinitve med razdelki dokumenta</li>
+<li><strong>Polnilo</strong> — dodajte prazno zadnjo stran za tiskanje knjižic</li>
+</ul>
+<h2>Kako uporabiti</h2>
+<p>Orodje <a href="#/add-blank-page">Dodaj prazno stran</a> vam omogoča izbiro, ali želite vstaviti prazno stran na začetek ali konec PDF-ja. Velikost strani se ujema s prvo stranjo vašega dokumenta.</p>
+<p>Za bolj zapleteno upravljanje strani uporabite orodje <a href="#/organize-pdf">Organiziraj PDF</a>, ki vam omogoča vizualno prerazporejanje in podvajanje strani.</p>`,
+        date: '2026-03-10',
+        tool: 'add-blank-page',
+        tags: ['prazna', 'stran', 'vstavljanje', 'obojestransko'],
+    },
+    {
+        slug: 'odstranjevanje-praznih-strani-iz-pdf',
+        lang: 'sl',
+        title: 'Kako samodejno zaznati in odstraniti prazne strani iz PDF',
+        excerpt: 'Očistite svoje PDF-je s samodejnim zaznavanjem in odstranjevanjem praznih strani. Odlično za optično prebrane dokumente z neželenimi praznimi listi.',
+        body: `<p>Optično prebrani dokumenti pogosto vsebujejo prazne strani zaradi obojestranskegga prebiranja enostranskih izvirnikov. Ročno odstranjevanje stran po stran je dolgočasno.</p>
+<h2>Kako deluje</h2>
+<p>Orodje <a href="#/remove-blank-pages">Odstrani prazne strani</a> analizira vsako stran v vašem PDF-ju tako, da jo upodobi in preveri vsebino slikovnih pik. Strani, ki so 99,5 % ali več belih slikovnih pik, se samodejno zaznajo kot prazne.</p>
+<h2>Pogosti viri praznih strani</h2>
+<ul>
+<li>Obojestransko prebiranje enostranskih dokumentov</li>
+<li>Faksni prenosi s stranmi za polnilo</li>
+<li>Programsko ustvarjena poročila s praznimi ločilnimi stranmi</li>
+<li>Prebiranje knjig s praznimi hrbtnimi stranmi</li>
+</ul>
+<h2>Pametno zaznavanje</h2>
+<p>Orodje je dovolj pametno, da razlikuje med resnično praznimi stranmi in stranmi z minimalno vsebino. Strani z tudi majhno količino besedila ali grafike so ohranjene. Če so vse strani prazne, vas orodje opozori, namesto da bi ustvarilo prazen dokument.</p>`,
+        date: '2026-03-10',
+        tool: 'remove-blank-pages',
+        tags: ['prazna', 'odstranjevanje', 'čiščenje', 'prebiranje'],
+    },
+    {
+        slug: 'ocr-prebrani-pdf-iskljiv',
+        lang: 'sl',
+        title: 'OCR: naredite prebrane PDF-je iskljive in označljive',
+        excerpt: 'Uporabite optično prepoznavanje znakov za dodajanje besedilne plasti prebranim PDF dokumentom. Naredite slikovne PDF-je iskljive, označljive in dostopne.',
+        body: `<p>Prebrani dokumenti so v bistvu slike znotraj PDF-ja — besedila v njih ne morete iskati, označiti ali kopirati. OCR (optično prepoznavanje znakov) to reši tako, da zazna besedilo v slikah in doda nevidno iskljivo plast.</p>
+<h2>Kako deluje OCR</h2>
+<p>Orodje <a href="#/ocr-pdf">OCR PDF</a> obdela vsako stran v treh korakih:</p>
+<ol>
+<li>Upodobi stran kot sliko visoke ločljivosti</li>
+<li>Zažene OCR za prepoznavanje besedila v sliki</li>
+<li>Ustvari nov PDF z izvorno sliko ter nevidno besedilno plastjo na vrhu</li>
+</ol>
+<h2>Podprti jeziki</h2>
+<p>Orodje podpira 14 jezikov, vključno z angleščino, španščino, francoščino, nemščino, italijanščino, portugalščino, nizozemščino in drugimi. Izberite pravilen jezik za najboljšo natančnost prepoznavanja.</p>
+<h2>Primeri uporabe</h2>
+<ul>
+<li>Omogočanje iskanja prebranih pogodb za pravni pregled</li>
+<li>Digitalizacija starih papirnatih dokumentov za arhivske sisteme</li>
+<li>Omogočanje izvlečka besedila iz prebranih računov in faktur</li>
+</ul>
+<p>Po obdelavi z OCR lahko uporabite orodje <a href="#/pdf-to-text">PDF v besedilo</a> za izvleček prepoznanega besedila.</p>`,
+        date: '2026-03-10',
+        tool: 'ocr-pdf',
+        tags: ['ocr', 'prebiranje', 'iskljivo', 'prepoznavanje-besedila'],
+    },
+    {
+        slug: 'vizualna-primerjava-dveh-pdf-dokumentov',
+        lang: 'sl',
+        title: 'Kako vizualno primerjati dva PDF dokumenta',
+        excerpt: 'Odkrijte razlike med dvema različicama PDF dokumenta z vizualno primerjavo ob strani in samodejnim poudarjanjem razlik.',
+        body: `<p>Pri pregledovanju popravkov dokumentov, sprememb pogodb ali oblikovnih sprememb morate hitro ugotoviti, kaj se je spremenilo med dvema različicama PDF-ja.</p>
+<h2>Kako deluje</h2>
+<p>Orodje <a href="#/compare-pdf">Primerjaj PDF</a> vzame dve datoteki PDF in ustvari dokument za vizualno primerjavo. Vsak par strani je upodobljen ob strani, pri čemer so razlike na ravni slikovnih pik poudarjene z rdečo barvo.</p>
+<h2>Kaj se zazna</h2>
+<ul>
+<li>Spremembe besedila — dodane, odstranjene ali spremenjene besede</li>
+<li>Premiki postavitve — premaknjeni elementi, spremenjen razmik</li>
+<li>Razlike v slikah — zamenjana ali spremenjena grafika</li>
+<li>Spremembe oblikovanja — spremembe velikosti pisave, barve ali sloga</li>
+</ul>
+<h2>Praktične uporabe</h2>
+<ul>
+<li>Pregledovanje popravkov pogodb pred podpisom</li>
+<li>Preverjanje oblikovnih poskusov glede na izvirnike</li>
+<li>Preverjanje prevedenih dokumentov glede na izvorno postavitev</li>
+<li>Zagotavljanje kakovosti za cevovode za generiranje dokumentov</li>
+</ul>
+<p>Naložite obe različici in orodje ustvari primerjalni PDF za prenos, ki ga lahko pregledujete v svojem tempu.</p>`,
+        date: '2026-03-10',
+        tool: 'compare-pdf',
+        tags: ['primerjava', 'razlike', 'pregled', 'različice'],
+    },
+    {
+        slug: 'pretvorba-navadnega-besedila-v-pdf',
+        lang: 'sl',
+        title: 'Pretvorite navadno besedilo v PDF: hitro in preprosto',
+        excerpt: 'Pretvorite navadne besedilne datoteke ali prilepljeno besedilo v lepo oblikovane PDF dokumente. Samodejen prelom besed, oštevilčenje strani in profesionalna postavitev.',
+        body: `<p>Včasih morate preprosto pretvoriti navadno besedilo v čist PDF za deljenje — brez zahtevnega oblikovanja, le berljivo besedilo v profesionalni postavitvi dokumenta.</p>
+<h2>Kako deluje</h2>
+<p>Orodje <a href="#/text-to-pdf">Besedilo v PDF</a> vzame vaš vnos navadnega besedila in ustvari dokument PDF v formatu A4 s samodejnim prelomom besed, ustreznimi robovi in enoprostorsko pisavo za dosledno poravnavo.</p>
+<h2>Funkcije</h2>
+<ul>
+<li><strong>Samodejen prelom besed</strong> — dolge vrstice se samodejno prelomijo na mejah besed</li>
+<li><strong>Oštevilčenje strani</strong> — besedilo se po potrebi razdeli na več strani</li>
+<li><strong>Dosledna postavitev</strong> — pisava Courier zagotavlja poravnavo znakov za kodo ali podatke</li>
+<li><strong>Ohranjeni prelomi vrstic</strong> — struktura vaših odstavkov je ohranjena</li>
+</ul>
+<h2>Primeri uporabe</h2>
+<ul>
+<li>Pretvarjanje dnevniških datotek ali izrezkov kode v PDF za dokumentacijo</li>
+<li>Ustvarjanje natisljivih različic zapiskov v navadnem besedilu</li>
+<li>Arhiviranje besedilne vsebine v univerzalno berljivem formatu</li>
+</ul>
+<p>Za bogatejše oblikovanje z naslovi, seznami in povezavami namesto tega uporabite orodje <a href="#/markdown-to-pdf">Markdown v PDF</a>.</p>`,
+        date: '2026-03-10',
+        tool: 'text-to-pdf',
+        tags: ['besedilo', 'pretvorba', 'ustvarjanje', 'navadno-besedilo'],
+    },
+    {
+        slug: 'obrnjen-vrstni-red-strani-pdf',
+        lang: 'sl',
+        title: 'Kako obrniti vrstni red strani v PDF',
+        excerpt: 'Obrnite vrstni red strani v PDF dokumentu, tako da zadnja stran postane prva. Odlično za popravljanje obrnjenih prebiranj ali obrnjenih tiskalnih vrst.',
+        body: `<p>Včasih se dokumenti znajdejo v napačnem vrstnem redu — obrnjena prebiranja, obrnjene tiskalne vrste ali preprosto potreba po branju od zadaj naprej. Obrnitev to popravi z enim klikom.</p>
+<h2>Kdaj obrniti strani</h2>
+<ul>
+<li><strong>Izhod optičnega bralnika</strong> — mnogi optični bralniki ustvarijo strani v obrnjenem vrstnem redu iz kupčka papirja</li>
+<li><strong>Težave s tiskalno vrsto</strong> — dokumenti, natisnjeni z licem navzgor, pridejo v obrnjenem vrstnem redu</li>
+<li><strong>Vrstni red predstavitve</strong> — prerazporedite vsebino za predstavitev informacij od spodaj navzgor</li>
+<li><strong>Priprava knjižice</strong> — nekatere postavitve knjižic zahtevajo obrnjeno zaporedje strani</li>
+</ul>
+<h2>Kako deluje</h2>
+<p>Orodje <a href="#/reverse-pages">Obrni strani</a> vzame vaš PDF in ustvari nov dokument z vsemi stranmi v obrnjenem vrstnem redu. Zadnja stran postane prva, predzadnja postane druga in tako naprej.</p>
+<p>Za bolj selektivno prerazporejanje strani uporabite orodje <a href="#/organize-pdf">Organiziraj PDF</a>, ki vam omogoča vlečenje in spuščanje posameznih strani.</p>`,
+        date: '2026-03-10',
+        tool: 'reverse-pages',
+        tags: ['obrnitev', 'vrstni-red', 'obračanje', 'strani'],
+    },
+    {
+        slug: 'inverzija-barv-pdf-temni-nacin',
+        lang: 'sl',
+        title: 'Invertirajte barve PDF za branje v temnem načinu',
+        excerpt: 'Pretvorite PDF-je z belim ozadjem v temni način z invertiranimi barvami. Zmanjšajte obremenitev oči, prihranite črnilo na tiskalnikih s temno temo ali ustvarite umetniške učinke.',
+        body: `<p>Invertiranje barv pretvori dokument z belim ozadjem v dokument s temnim ozadjem (in obratno). To je uporabno za udobno branje v temnem načinu ali ustvarjanje vizualnih učinkov.</p>
+<h2>Prednosti inverzije barv</h2>
+<ul>
+<li><strong>Udobje za oči</strong> — temna ozadja zmanjšajo obremenitev oči v okoljih s šibko svetlobo</li>
+<li><strong>Dostopnost</strong> — nekateri uporabniki lažje berejo invertirane barve</li>
+<li><strong>Prihranek črnila</strong> — tiskanje invertiranih dokumentov na temnem papirju porabi manj črnila</li>
+<li><strong>Ustvarjalne uporabe</strong> — ustvarite slike z negativnim učinkom za oblikovne projekte</li>
+</ul>
+<h2>Kako deluje</h2>
+<p>Orodje <a href="#/invert-colors">Invertiraj barve</a> upodobi vsako stran in invertira vsako slikovno piko: črna postane bela, bela postane črna in vse barve se premaknejo na komplementarne vrednosti. Rezultat je nov PDF z invertiranim videzom.</p>
+<p>Za pretvorbo barvnih dokumentov v sivine namesto tega uporabite orodje <a href="#/grayscale-pdf">PDF v sivine</a>.</p>`,
+        date: '2026-03-10',
+        tool: 'invert-colors',
+        tags: ['inverzija', 'temni-nacin', 'barve', 'dostopnost'],
+    },
+    {
+        slug: 'popravilo-poskodovanih-pdf-datotek',
+        lang: 'sl',
+        title: 'Kako popraviti poškodovane ali okvarjene PDF datoteke',
+        excerpt: 'Popravite pokvarjene PDF-je, ki se ne odprejo ali prikazujejo napake. Orodje za popravilo ponovno razčleni in obnovi strukturo dokumenta za obnovitev vsebine.',
+        body: `<p>Datoteke PDF se lahko poškodujejo zaradi nepopolnih prenosov, napak pri shranjevanju ali programskih hroščev. Ko se PDF ne odpre ali se prikazuje nepravilno, poskus popravila pogosto obnovi vsebino.</p>
+<h2>Pogoste težave s PDF</h2>
+<ul>
+<li>Datoteke se ne odprejo v pregledovalnikih PDF</li>
+<li>Prazne strani ali manjkajoča vsebina</li>
+<li>Sporočila o napakah glede neveljavne strukture</li>
+<li>Delno upodabljanje ali pokvarjene pisave</li>
+</ul>
+<h2>Kako deluje popravilo</h2>
+<p>Orodje <a href="#/repair-pdf">Popravi PDF</a> naloži vašo poškodovano datoteko z največjo toleranco napak in jo nato obnovi kot čist nov dokument. Ta postopek pogosto obnovi strani in vsebino, ki je običajni pregledovalniki ne morejo prikazati.</p>
+<h2>Kaj se popravi</h2>
+<ul>
+<li>Poškodovane tabele navzkrižnih referenc</li>
+<li>Pokvarjene notranje povezave in reference strani</li>
+<li>Neveljavne objektne strukture</li>
+<li>Manjkajoče ali poškodovane glave</li>
+</ul>
+<p>Opomba: hudo poškodovane datoteke, pri katerih so osnovni podatki uničeni, morda ne bodo obnovljive. Vendar za večino pogostih težav s poškodovanjem orodje za popravilo uspešno obnovi dokument.</p>`,
+        date: '2026-03-10',
+        tool: 'repair-pdf',
+        tags: ['popravilo', 'popravljanje', 'poskodovano', 'obnovitev'],
+    },
+    {
+        slug: 'pretvorba-pdf-v-epub-e-knjiga',
+        lang: 'sl',
+        title: 'Pretvorite PDF v EPUB za bralnike e-knjig',
+        excerpt: 'Pretvorite PDF dokumente v format EPUB za udobno branje na napravah Kindle, Kobo in drugih bralnikih e-knjig. Besedilo se prilagodi kateri koli velikosti zaslona.',
+        body: `<p>PDF-ji so zasnovani za ogled s fiksno postavitvijo, kar jih otežuje za branje na majhnih zaslonih. EPUB je standardni format e-knjig, ki besedilo prilagodi kateri koli velikosti zaslona.</p>
+<h2>Zakaj pretvoriti v EPUB?</h2>
+<ul>
+<li><strong>Prilagodljivo besedilo</strong> — vsebina se prilagodi kateri koli velikosti zaslona, od telefonov do tablic</li>
+<li><strong>Funkcije bralnika</strong> — prilagodite velikost pisave, slog in barvo ozadja po svojih željah</li>
+<li><strong>Združljivost z bralniki e-knjig</strong> — deluje z napravami Kindle, Kobo, Apple Books in drugimi</li>
+<li><strong>Manjše datoteke</strong> — besedilni EPUB-i so veliko manjši od slikovnih PDF-jev</li>
+</ul>
+<h2>Kako deluje</h2>
+<p>Orodje <a href="#/pdf-to-epub">PDF v EPUB</a> izvleče besedilno vsebino iz vsake strani PDF in jo zapakira v veljavno datoteko EPUB 3 z ustrezno navigacijo po poglavjih, kazalom vsebine in oblikovanjem.</p>
+<h2>Najboljši rezultati</h2>
+<p>To orodje najbolje deluje z besedilno bogatimi PDF-ji. Za prebrane dokumente (slikovne PDF-je) najprej zaženite orodje <a href="#/ocr-pdf">OCR</a> za izvleček besedila, nato pretvorite v EPUB.</p>
+<p>Nastali EPUB vključuje kazalo vsebine z enim vnosom na izvorno stran, kar olajša navigacijo po pretvorjenem dokumentu.</p>`,
+        date: '2026-03-10',
+        tool: 'pdf-to-epub',
+        tags: ['epub', 'e-knjiga', 'pretvorba', 'kindle'],
+    },
 ];

@@ -770,4 +770,257 @@ export const blogPostsDa: BlogPost[] = [
         tool: 'edit-metadata',
         tags: ['metadata', 'properties', 'edit', 'privacy'],
     },
+    {
+        slug: 'konverter-pdf-til-webp-moderne-format',
+        lang: 'da',
+        title: 'Konverter PDF til WebP: Det moderne billedformat',
+        excerpt: 'Omdan PDF-sider til WebP-billeder for overlegen komprimering og kvalitet. Ideel til webbrug, hurtigere indlaesning og mindre filstoerrelser end JPG eller PNG.',
+        body: `<p>WebP er et moderne billedformat udviklet af Google, der giver overlegen tabsfri og tabsgivende komprimering til billeder paa nettet. Konvertering af PDF-filer til WebP giver dig mindre filer med sammenlignelig kvalitet.</p>
+<h2>Hvorfor vaelge WebP?</h2>
+<ul>
+<li><strong>Mindre filer</strong> — WebP-billeder er typisk 25-35% mindre end JPG ved tilsvarende kvalitet</li>
+<li><strong>Bedre kvalitet</strong> — ved samme filstoerrelse tilbyder WebP skarpere billeder med faerre artefakter</li>
+<li><strong>Bred understoettelse</strong> — alle store browsere (Chrome, Firefox, Safari, Edge) understoetter WebP</li>
+</ul>
+<h2>Saadan konverterer du</h2>
+<p><a href="#/pdf-to-webp">PDF til WebP-vaerktoejet</a> lader dig justere kvalitetsskyderen for at balancere filstoerrelse og billedklarhed. Hver PDF-side bliver til en separat WebP-fil.</p>
+<h2>Hvornaar skal man bruge WebP vs JPG vs PNG</h2>
+<p>Vaelg WebP til webpublicering, hvor filstoerrelse er vigtig. Brug <a href="#/pdf-to-jpg">JPG</a> for maksimal kompatibilitet med aeldre software. Brug <a href="#/pdf-to-png">PNG</a>, naar du har brug for gennemsigtige baggrunde eller tabsfri kvalitet.</p>`,
+        date: '2026-03-10',
+        tool: 'pdf-to-webp',
+        tags: ['webp', 'konverter', 'moderne', 'web'],
+    },
+    {
+        slug: 'nup-pdf-flere-sider-per-ark',
+        lang: 'da',
+        title: 'Saadan udskriver du flere PDF-sider paa et ark (N-Up)',
+        excerpt: 'Kombiner 2, 4 eller 9 PDF-sider paa et enkelt ark for at spare papir, oprette uddelingsark eller producere kompakte dokumentoversigter.',
+        body: `<p>N-Up-udskrivning arrangerer flere sider paa et enkelt ark. Dette er perfekt til at oprette uddelingsark, spare papir eller faa et kompakt overblik over et langt dokument.</p>
+<h2>Tilgaengelige layouts</h2>
+<p><a href="#/nup-pdf">N-Up PDF-vaerktoejet</a> tilbyder tre layoutmuligheder:</p>
+<ul>
+<li><strong>2-Up</strong> — to sider side om side paa et liggende ark</li>
+<li><strong>4-Up</strong> — fire sider i et 2×2 gitter paa et staaende ark</li>
+<li><strong>9-Up</strong> — ni sider i et 3×3 gitter for maksimal papirbesparelse</li>
+</ul>
+<h2>Almindelige anvendelsestilfaelde</h2>
+<ul>
+<li>Oprettelse af forelaeningsuddelingsark med flere slides per side</li>
+<li>Udskrivning af kladder til gennemgang med papirbesparelse</li>
+<li>Fremstilling af kompakte referencekort fra laengere dokumenter</li>
+</ul>
+<p>For bedste laeselighed skal du bruge 2-Up til teksttunge dokumenter og 4-Up eller 9-Up til slidepraesentationer.</p>`,
+        date: '2026-03-10',
+        tool: 'nup-pdf',
+        tags: ['nup', 'udskriv', 'uddelingsark', 'papir'],
+    },
+    {
+        slug: 'tilfoej-blank-side-til-pdf',
+        lang: 'da',
+        title: 'Saadan tilfoejer du en blank side til et PDF-dokument',
+        excerpt: 'Indsaet en blank side i begyndelsen eller slutningen af din PDF. Nyttigt til forsider, separatorer eller forberedelse til duplexudskrivning.',
+        body: `<p>At tilfoeje en blank side til en PDF er en enkel, men hyppigt noedvendig operation. Uanset om du har brug for en pladsholder, en separator eller forberedelse til dobbeltsidet udskrivning, klaerer dette vaerktoej det paa faa sekunder.</p>
+<h2>Hvornaar har du brug for en blank side</h2>
+<ul>
+<li><strong>Forsider</strong> — tilfoej en blank foerste side, som senere kan udfyldes som forside</li>
+<li><strong>Duplexudskrivning</strong> — sikre at kapitler starter paa den hoejre (ulige) side</li>
+<li><strong>Sektionsseparatorer</strong> — indsaet visuelle pauser mellem dokumentsektioner</li>
+<li><strong>Udfyldning</strong> — tilfoej en blank sidste side til haefteudskrivning</li>
+</ul>
+<h2>Saadan bruger du det</h2>
+<p><a href="#/add-blank-page">Tilfoej blank side-vaerktoejet</a> lader dig vaelge at indsaette den blanke side i begyndelsen eller slutningen af din PDF. Sidestoerrrelsen matcher foerste side i dit dokument.</p>
+<p>For mere kompleks sidehaandtering kan du bruge <a href="#/organize-pdf">Organiser PDF-vaerktoejet</a>, som lader dig omarrangere og duplikere sider visuelt.</p>`,
+        date: '2026-03-10',
+        tool: 'add-blank-page',
+        tags: ['blank', 'side', 'indsaet', 'duplex'],
+    },
+    {
+        slug: 'fjern-blanke-sider-fra-pdf',
+        lang: 'da',
+        title: 'Saadan finder og fjerner du automatisk blanke sider fra PDF',
+        excerpt: 'Ryd op i dine PDF-filer ved automatisk at finde og fjerne blanke sider. Perfekt til scannede dokumenter med uoenskede tomme ark.',
+        body: `<p>Scannede dokumenter indeholder ofte blanke sider fra dobbeltsidet scanning af enkeltsidede originaler. Manuel fjernelse af dem side for side er kedsommeligt.</p>
+<h2>Saadan virker det</h2>
+<p><a href="#/remove-blank-pages">Fjern blanke sider-vaerktoejet</a> analyserer hver side i din PDF ved at rendere den og tjekke pixelindholdet. Sider der er 99,5% eller mere hvide pixels bliver automatisk registreret som blanke.</p>
+<h2>Almindelige kilder til blanke sider</h2>
+<ul>
+<li>Dobbeltsidet scanning af enkeltsidede dokumenter</li>
+<li>Faxtransmissioner med udfyldningssider</li>
+<li>Softwaregenererede rapporter med tomme separatorsider</li>
+<li>Bogscanning med blanke bagsider</li>
+</ul>
+<h2>Intelligent registrering</h2>
+<p>Vaerktoejet er intelligent nok til at skelne mellem virkelig blanke sider og sider med minimalt indhold. Sider med selv smaa maengder tekst eller grafik bevares. Hvis alle sider er blanke, vil vaerktoejet advare dig i stedet for at oprette et tomt dokument.</p>`,
+        date: '2026-03-10',
+        tool: 'remove-blank-pages',
+        tags: ['blank', 'fjern', 'oprydning', 'scanning'],
+    },
+    {
+        slug: 'ocr-scannet-pdf-soegbar',
+        lang: 'da',
+        title: 'OCR: Goer scannede PDF-filer soegbare og markerbare',
+        excerpt: 'Brug optisk tegngenkendelses til at tilfoeje et tekstlag til scannede PDF-dokumenter. Goer billedbaserede PDF-filer soegbare, markerbare og tilgaengelige.',
+        body: `<p>Scannede dokumenter er i bund og grund billeder inde i en PDF — du kan ikke soege, markere eller kopiere tekst fra dem. OCR (Optical Character Recognition) loeser dette ved at registrere tekst i billeder og tilfoeje et usynligt soegbart lag.</p>
+<h2>Saadan virker OCR</h2>
+<p><a href="#/ocr-pdf">OCR PDF-vaerktoejet</a> behandler hver side i tre trin:</p>
+<ol>
+<li>Renderer siden som et hoejoploeseligt billede</li>
+<li>Koerer OCR for at genkende tekst i billedet</li>
+<li>Opretter en ny PDF med det originale billede plus et usynligt tekstlag ovenpaa</li>
+</ol>
+<h2>Understoettede sprog</h2>
+<p>Vaerktoejet understoetter 14 sprog, herunder engelsk, spansk, fransk, tysk, italiensk, portugisisk, hollandsk og flere. Vaelg det korrekte sprog for den bedste genkendelsesnoejagtighed.</p>
+<h2>Anvendelsestilfaelde</h2>
+<ul>
+<li>Goere scannede kontrakter soegbare til juridisk gennemgang</li>
+<li>Digitalisering af gamle papirdokumenter til arkivsystemer</li>
+<li>Aktivering af tekstudtraek fra scannede kvitteringer og fakturaer</li>
+</ul>
+<p>Efter OCR-behandling kan du bruge <a href="#/pdf-to-text">PDF til tekst-vaerktoejet</a> til at udtraekke den genkendte tekst.</p>`,
+        date: '2026-03-10',
+        tool: 'ocr-pdf',
+        tags: ['ocr', 'scanning', 'soegbar', 'tekstgenkendelse'],
+    },
+    {
+        slug: 'sammenlign-to-pdf-dokumenter-visuelt',
+        lang: 'da',
+        title: 'Saadan sammenligner du to PDF-dokumenter visuelt',
+        excerpt: 'Find forskelle mellem to versioner af et PDF-dokument med visuel side-om-side-sammenligning og automatisk fremhaevning af forskelle.',
+        body: `<p>Naar du gennemgaar dokumentrevisioner, kontraktaendringer eller designaendringer, har du brug for hurtigt at identificere, hvad der er aendret mellem to versioner af en PDF.</p>
+<h2>Saadan virker det</h2>
+<p><a href="#/compare-pdf">Sammenlign PDF-vaerktoejet</a> tager to PDF-filer og opretter et visuelt sammenligningsdokument. Hvert sidepar renderes side om side med pixelbaserede forskelle fremhaevet med roedt.</p>
+<h2>Hvad registreres</h2>
+<ul>
+<li>Tekstaendringer — tilfoejede, fjernede eller aendrede ord</li>
+<li>Layoutforskydninger — flyttede elementer, aendret afstand</li>
+<li>Billedforskelle — udskiftede eller aendrede grafik</li>
+<li>Formateringsaendringer — aendringer i skrifttyper, farver eller typografi</li>
+</ul>
+<h2>Praktiske anvendelser</h2>
+<ul>
+<li>Gennemgang af kontraktrevisioner foer underskrift</li>
+<li>Verificering af designprover mod originaler</li>
+<li>Kontrol af oversatte dokumenter mod kildelayoutet</li>
+<li>Kvalitetssikring af dokumentgenereringspipelines</li>
+</ul>
+<p>Upload begge versioner, og vaerktoejet producerer en downloadbar sammenlignings-PDF, du kan gennemgaa i dit eget tempo.</p>`,
+        date: '2026-03-10',
+        tool: 'compare-pdf',
+        tags: ['sammenlign', 'forskelle', 'gennemgang', 'versioner'],
+    },
+    {
+        slug: 'konverter-ren-tekst-til-pdf',
+        lang: 'da',
+        title: 'Konverter ren tekst til PDF: Hurtigt og enkelt',
+        excerpt: 'Omdan rene tekstfiler eller indsat tekst til velformaterede PDF-dokumenter. Automatisk ordbrydning, sideinddeling og professionelt layout.',
+        body: `<p>Nogle gange har du bare brug for at omdanne ren tekst til en ren, delbar PDF — ingen avanceret formatering, bare laesbar tekst i et professionelt dokumentlayout.</p>
+<h2>Saadan virker det</h2>
+<p><a href="#/text-to-pdf">Tekst til PDF-vaerktoejet</a> tager din rene tekstinput og opretter et A4 PDF-dokument med automatisk ordbrydning, korrekte margener og monospace-skrifttype for ensartet justering.</p>
+<h2>Funktioner</h2>
+<ul>
+<li><strong>Automatisk ordbrydning</strong> — lange linjer brydes automatisk ved ordgraenser</li>
+<li><strong>Sideinddeling</strong> — tekst fordeles paa flere sider efter behov</li>
+<li><strong>Ensartet layout</strong> — Courier-skrifttype sikrer tegnjustering til kode eller data</li>
+<li><strong>Linjeskift bevares</strong> — din afsnitsstruktur opretholdes</li>
+</ul>
+<h2>Anvendelsestilfaelde</h2>
+<ul>
+<li>Konvertering af logfiler eller kodestykker til PDF til dokumentation</li>
+<li>Oprettelse af printbare versioner af rene tekstnoter</li>
+<li>Arkivering af tekstindhold i et universelt laesbart format</li>
+</ul>
+<p>For rigere formatering med overskrifter, lister og links kan du bruge <a href="#/markdown-to-pdf">Markdown til PDF-vaerktoejet</a> i stedet.</p>`,
+        date: '2026-03-10',
+        tool: 'text-to-pdf',
+        tags: ['tekst', 'konverter', 'opret', 'ren-tekst'],
+    },
+    {
+        slug: 'vend-pdf-sideraekkefoelge',
+        lang: 'da',
+        title: 'Saadan vender du PDF-sideraekkefoelgen',
+        excerpt: 'Vend sideraekkefoelgen i dit PDF-dokument, saa den sidste side bliver den foerste. Perfekt til at rette omvendte scanninger eller inverterede udskriftskoeer.',
+        body: `<p>Nogle gange ender dokumenter i forkert raekkefoelge — omvendte scanninger, inverterede udskriftskoeer eller simpelthen behov for at laese bagfra og frem. Vendning loeser dette med et enkelt klik.</p>
+<h2>Hvornaar skal man vende sider</h2>
+<ul>
+<li><strong>Scanneroutput</strong> — mange scannere producerer sider i omvendt raekkefoelge fra papirstakken</li>
+<li><strong>Udskriftskoepoblemer</strong> — dokumenter udskrevet med forsiden opad kommer ud i omvendt raekkefoelge</li>
+<li><strong>Praesentationsraekkefoelge</strong> — omarranger indhold for at praesentere information nedefra og op</li>
+<li><strong>Haefteforberedelse</strong> — nogle haeftelayouts kraever omvendte sidesekvenser</li>
+</ul>
+<h2>Saadan virker det</h2>
+<p><a href="#/reverse-pages">Vend sider-vaerktoejet</a> tager din PDF og opretter et nyt dokument med alle sider i omvendt raekkefoelge. Den sidste side bliver den foerste, den naestsidste bliver den anden, og saa videre.</p>
+<p>For mere selektiv sideomarrangering kan du bruge <a href="#/organize-pdf">Organiser PDF-vaerktoejet</a>, som lader dig traekke og slippe individuelle sider.</p>`,
+        date: '2026-03-10',
+        tool: 'reverse-pages',
+        tags: ['vend', 'raekkefoelge', 'omvend', 'sider'],
+    },
+    {
+        slug: 'inverter-pdf-farver-moerk-tilstand',
+        lang: 'da',
+        title: 'Inverter PDF-farver til laesning i moerk tilstand',
+        excerpt: 'Konverter PDF-filer med hvid baggrund til moerk tilstand med inverterede farver. Reducer oejenbelastning, spar blaek paa moerke printere eller skab kunstneriske effekter.',
+        body: `<p>Invertering af farver omdanner et dokument med hvid baggrund til et med moerk baggrund (og omvendt). Dette er nyttigt for behagelig laesning i moerk tilstand eller til at skabe visuelle effekter.</p>
+<h2>Fordele ved farveinvertering</h2>
+<ul>
+<li><strong>Oejenkomfort</strong> — moerke baggrunde reducerer oejenbelastning i svagt oplyste omgivelser</li>
+<li><strong>Tilgaengelighed</strong> — nogle brugere finder inverterede farver nemmere at laese</li>
+<li><strong>Blaekbesparelse</strong> — udskrivning af inverterede dokumenter paa moerkt papir bruger mindre blaek</li>
+<li><strong>Kreative anvendelser</strong> — producer billeder med negativeffekt til designprojekter</li>
+</ul>
+<h2>Saadan virker det</h2>
+<p><a href="#/invert-colors">Inverter farver-vaerktoejet</a> renderer hver side og inverterer hver pixel: sort bliver hvidt, hvidt bliver sort, og alle farver skifter til deres komplementaere vaerdier. Resultatet er en ny PDF med det inverterede udseende.</p>
+<p>For at konvertere farvedokumenter til graatoner i stedet kan du bruge <a href="#/grayscale-pdf">Graatone PDF-vaerktoejet</a>.</p>`,
+        date: '2026-03-10',
+        tool: 'invert-colors',
+        tags: ['inverter', 'moerk-tilstand', 'farver', 'tilgaengelighed'],
+    },
+    {
+        slug: 'reparer-beskadigede-pdf-filer',
+        lang: 'da',
+        title: 'Saadan reparerer du beskadigede PDF-filer',
+        excerpt: 'Ret oedelagte PDF-filer, der ikke kan aabnes eller viser fejl. Reparationsvaerktoejet genparser og genopbygger dokumentstrukturen for at gendanne indhold.',
+        body: `<p>PDF-filer kan blive beskadigede paa grund af ufuldstaendige downloads, lagringsfejl eller softwarefejl. Naar en PDF ikke kan aabnes eller vises forkert, kan et reparationsforsoeg ofte gendanne indholdet.</p>
+<h2>Almindelige PDF-problemer</h2>
+<ul>
+<li>Filen kan ikke aabnes i PDF-laesere</li>
+<li>Blanke sider eller manglende indhold</li>
+<li>Fejlmeddelelser om ugyldig struktur</li>
+<li>Delvis rendering eller oedelagte skrifttyper</li>
+</ul>
+<h2>Saadan virker reparation</h2>
+<p><a href="#/repair-pdf">Reparer PDF-vaerktoejet</a> indlaeser din beskadigede fil med maksimal fejltolerance og genopbygger den derefter som et nyt rent dokument. Denne proces gendanner ofte sider og indhold, som almindelige laesere ikke kan vise.</p>
+<h2>Hvad bliver rettet</h2>
+<ul>
+<li>Korrupte krydsreferencetabeller</li>
+<li>Oedelagte interne links og sidereferencer</li>
+<li>Ugyldige objektstrukturer</li>
+<li>Manglende eller beskadigede headere</li>
+</ul>
+<p>Bemærk: alvorligt beskadigede filer, hvor kernedata er oedelagt, kan muligvis ikke gendannes. For de fleste almindelige korruptionsproblemer gendanner reparationsvaerktoejet dog dokumentet med succes.</p>`,
+        date: '2026-03-10',
+        tool: 'repair-pdf',
+        tags: ['reparer', 'ret', 'beskadiget', 'gendan'],
+    },
+    {
+        slug: 'konverter-pdf-til-epub-ebog',
+        lang: 'da',
+        title: 'Konverter PDF til EPUB til e-boglaesere',
+        excerpt: 'Omdan PDF-dokumenter til EPUB-format for behagelig laesning paa Kindle, Kobo og andre e-laesere. Teksten tilpasser sig enhver skaermstoerelse.',
+        body: `<p>PDF-filer er designet til visning med fast layout, hvilket goer dem svaere at laese paa smaa skaerme. EPUB er standardformatet for e-boeger, der tilpasser tekst til enhver skaermstoerelse.</p>
+<h2>Hvorfor konvertere til EPUB?</h2>
+<ul>
+<li><strong>Tilpasselig tekst</strong> — indhold tilpasser sig enhver skaermstoerelse, fra telefoner til tablets</li>
+<li><strong>Laeserfunktioner</strong> — juster skrifttyper, stoerrelse og baggrundsfarve efter dine praeferencer</li>
+<li><strong>E-laeserkompatibilitet</strong> — fungerer med Kindle, Kobo, Apple Books og andre enheder</li>
+<li><strong>Mindre filer</strong> — tekstbaserede EPUB-filer er meget mindre end billedbaserede PDF-filer</li>
+</ul>
+<h2>Saadan virker det</h2>
+<p><a href="#/pdf-to-epub">PDF til EPUB-vaerktoejet</a> udtraekker tekstindhold fra hver PDF-side og pakker det i en gyldig EPUB 3-fil med korrekt kapitelnavigation, indholdsfortegnelse og styling.</p>
+<h2>Bedste resultater</h2>
+<p>Dette vaerktoej fungerer bedst med teksttunge PDF-filer. Til scannede dokumenter (kun billed-PDF-filer) skal du foerst koere <a href="#/ocr-pdf">OCR-vaerktoejet</a> for at udtraekke teksten og derefter konvertere til EPUB.</p>
+<p>Den resulterende EPUB inkluderer en indholdsfortegnelse med en post per original side, hvilket goer det nemt at navigere i det konverterede dokument.</p>`,
+        date: '2026-03-10',
+        tool: 'pdf-to-epub',
+        tags: ['epub', 'ebog', 'konverter', 'kindle'],
+    },
 ];
