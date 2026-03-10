@@ -5,6 +5,7 @@
  * Attaches a global API for running benchmarks from the browser console.
  */
 import { generateBenchmarkPdf } from './benchmarkPdf';
+import { runInWorker } from '../runInWorker';
 import {
     profileTool,
     printResult,
@@ -17,6 +18,26 @@ import {
     type ProfileResult,
     type SciConfig,
 } from './sciProfiler';
+
+// ── Project-specific helpers ────────────────────────────────────────────────
+function blobSize(result: Blob | { name: string; blob: Blob }[]): number {
+    if (result instanceof Blob) return result.size;
+    return result.reduce((sum, r) => sum + r.blob.size, 0);
+}
+
+function totalFileSize(files: File[]): number {
+    return files.reduce((sum, f) => sum + f.size, 0);
+}
+
+/** Profile a PDF tool via runInWorker, measuring input/output sizes. */
+function profilePdfTool(name: string, files: File[], options: Record<string, any>): Promise<ProfileResult> {
+    return profileTool(
+        name,
+        () => runInWorker(name, files, options),
+        totalFileSize(files),
+        blobSize,
+    );
+}
 
 // ── Types ───────────────────────────────────────────────────────────────────
 interface ToolEntry {
@@ -300,7 +321,7 @@ async function runSingleBenchmark(toolName: string): Promise<ProfileResult> {
         options = args.options;
     }
 
-    const result = await profileTool(toolName, files, options);
+    const result = await profilePdfTool(toolName, files, options);
     printResult(result);
     return result;
 }
@@ -330,7 +351,7 @@ async function runAllBenchmarks(): Promise<ProfileResult[]> {
                 options = args.options;
             }
 
-            const result = await profileTool(entry.name, files, options);
+            const result = await profilePdfTool(entry.name, files, options);
             printResult(result);
             results.push(result);
         } catch (err: any) {

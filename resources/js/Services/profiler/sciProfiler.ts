@@ -1,15 +1,17 @@
 /**
- * SCI (Software Carbon Intensity) profiler for PDF services.
+ * SCI (Software Carbon Intensity) profiler — framework-agnostic.
  *
- * Measures wall time via performance.now() around runInWorker calls,
+ * Measures wall time via performance.now() around any async operation,
  * then computes SCI = ((E × I) + M) / R per the Green Software Foundation spec.
  *
- * Constants sourced from:
+ * This module has ZERO project-specific dependencies. It can be used with any
+ * client-side application by passing an arbitrary async function to profileTool().
+ *
+ * Default constants sourced from:
  * - Apple 14-inch MacBook Pro Product Environmental Report (Oct 2021)
  * - CarbonRunner GitHub Actions Carbon Calculator (grid intensity)
  * - Eclectic Light Co. (M1 Pro power measurements)
  */
-import { runInWorker } from '../runInWorker';
 
 // ── SCI Default Constants ────────────────────────────────────────────────────
 /** Software-attributable device power in Watts (M1 Pro: CPU ~7W + mem ctrl ~6W + SSD/system ~5W) */
@@ -99,29 +101,25 @@ function getHeapUsed(): number | null {
     return mem ? mem.usedJSHeapSize : null;
 }
 
-function blobSize(result: Blob | { name: string; blob: Blob }[]): number {
-    if (result instanceof Blob) return result.size;
-    return result.reduce((sum, r) => sum + r.blob.size, 0);
-}
-
-function totalFileSize(files: File[]): number {
-    return files.reduce((sum, f) => sum + f.size, 0);
-}
-
 // ── Core ────────────────────────────────────────────────────────────────────
 /**
- * Profile a single tool invocation, measuring wall time and computing SCI.
+ * Profile any async operation, measuring wall time and computing SCI.
+ *
+ * @param name        Human-readable operation name (e.g. 'merge-pdf', 'image-resize')
+ * @param operation   The async function to measure — can be anything
+ * @param inputBytes  Known input size in bytes (0 if not applicable)
+ * @param measureOutput  Optional callback to extract output size from the operation result
  */
-export async function profileTool(
-    tool: string,
-    files: File[],
-    options: Record<string, any> = {},
+export async function profileTool<T = unknown>(
+    name: string,
+    operation: () => Promise<T>,
+    inputBytes: number = 0,
+    measureOutput?: (result: T) => number,
 ): Promise<ProfileResult> {
-    const inputSizeBytes = totalFileSize(files);
     const heapBefore = getHeapUsed();
 
     const t0 = performance.now();
-    const result = await runInWorker(tool, files, options);
+    const result = await operation();
     const t1 = performance.now();
 
     const heapAfter = getHeapUsed();
@@ -142,10 +140,10 @@ export async function profileTool(
     const sciMgCO2eq = carbonOperationalMg + carbonEmbodiedMg;
 
     return {
-        tool,
+        tool: name,
         wallTimeMs: Math.round(wallTimeMs),
-        inputSizeBytes,
-        outputSizeBytes: blobSize(result),
+        inputSizeBytes: inputBytes,
+        outputSizeBytes: measureOutput ? measureOutput(result) : 0,
         heapDeltaBytes: heapBefore !== null && heapAfter !== null ? heapAfter - heapBefore : null,
         energyKwh,
         carbonOperationalMg,
