@@ -92,6 +92,16 @@ npm run build
 
 Output goes to `docs/` for GitHub Pages deployment.
 
+## Testing
+
+```bash
+npm run test              # run all tests once
+npm run test:watch        # watch mode (re-runs on file changes)
+npm run test:coverage     # coverage report
+```
+
+Tests use [Vitest](https://vitest.dev/) and cover the 22 pdf-lib-based PDF services (136 tests). Each service has a co-located `.test.ts` file under `resources/js/Services/`.
+
 ## Accessibility & Quality Audit
 
 Automated Lighthouse CI audit for accessibility, performance, and best practices:

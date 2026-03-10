@@ -13,6 +13,9 @@ npm install
 npm run dev          # dev server on :5173
 npm run build        # production build → docs/
 npm run audit:a11y   # Lighthouse accessibility + performance + best-practices audit
+npm run test         # run all tests once
+npm run test:watch   # watch mode (re-runs on file changes)
+npm run test:coverage # coverage report for Services/
 ```
 
 ## Git submodules
@@ -50,6 +53,11 @@ Each tool follows a strict pattern across 4 files + translations:
    - Keys: `tools.{slug}.name`, `.description`, `.how_title`, `.how_text`, `.step_1`–`.step_3`, `.faq_1_q`–`.faq_3_a`
 
 6. **Update sustainability data** — if the tool affects WSG compliance, update `wsg-report/wsg-compliance.json`
+
+7. **Write tests** — `resources/js/Services/pdf/{toolName}.test.ts`
+   - Import the service + helpers from `@/__tests__/helpers/fixtures` and `@/__tests__/helpers/assertions`
+   - Test: happy path, edge cases, error paths, progress callback
+   - Run `npm run test` — all tests must pass before committing
 
 ## Translations (i18n)
 
@@ -119,6 +127,60 @@ Current scores (2026-03-10):
 | merge-pdf | 94 | 93 | 100 |
 | SCI Report | 95 | 84 | 100 |
 | WSG Report | 95 | 84 | 100 |
+
+## Testing
+
+Tests use **Vitest** with a dedicated `vitest.config.ts` (separate from `vite.config.ts` to avoid Vue/Tailwind/PWA plugins).
+
+### Running tests
+
+```bash
+npm run test              # run once
+npm run test:watch        # watch mode
+npm run test:coverage     # coverage report (v8 provider)
+```
+
+### Test infrastructure
+
+- **Config**: `vitest.config.ts` — node environment, forks pool, `@` alias, pdfjs-dist legacy build alias
+- **Setup**: `resources/js/__tests__/setup.ts` — DOMMatrix, Path2D, Map.getOrInsertComputed polyfills
+- **Fixtures**: `resources/js/__tests__/helpers/fixtures.ts` — programmatic PDF factories via pdf-lib
+- **Assertions**: `resources/js/__tests__/helpers/assertions.ts` — `expectValidPdf()`, `expectDefaultMetadata()`
+
+### Writing tests
+
+Every PDF service gets a co-located test file: `Services/pdf/{toolName}.test.ts`
+
+Pattern:
+
+```typescript
+import { describe, it, expect } from 'vitest';
+import { myTool } from '@/Services/pdf/myTool';
+import { createSimplePdf } from '@/__tests__/helpers/fixtures';
+import { expectValidPdf, expectDefaultMetadata } from '@/__tests__/helpers/assertions';
+
+describe('myTool', () => {
+    it('produces a valid PDF', async () => {
+        const file = await createSimplePdf(3);
+        const result = await myTool(file);
+        const doc = await expectValidPdf(result, 3);
+        expectDefaultMetadata(doc, 'my tool');
+    });
+
+    it('reports progress', async () => {
+        const file = await createSimplePdf(2);
+        const values: number[] = [];
+        await myTool(file, (p) => values.push(p));
+        expect(values.length).toBeGreaterThan(0);
+    });
+});
+```
+
+### Coverage scope
+
+- **Included**: `resources/js/Services/**/*.ts`
+- **Excluded**: `resources/js/Services/profiler/**`
+- **Not yet tested** (require `canvas` native module): grayscale, invertColors, pdfToJpg, pdfToPng, pdfToWebp, compress, compare, nup, resize, removeBlankPages, extractImages, ocrPdf, pdfToEpub, jpgToPdf
 
 ## Performance budget
 

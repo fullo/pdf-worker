@@ -6,7 +6,10 @@
     "scripts": {
         "build": "vite build",
         "dev": "vite",
-        "audit:a11y": "lhci autorun"
+        "audit:a11y": "lhci autorun",
+        "test": "vitest run",
+        "test:watch": "vitest",
+        "test:coverage": "vitest run --coverage"
     },
     "devDependencies": {
         "@lhci/cli": "^0.15.1",
@@ -14,10 +17,12 @@
         "@types/dompurify": "^3.0.5",
         "@types/file-saver": "^2.0.7",
         "@types/sortablejs": "^1.15.9",
+        "@vitest/coverage-v8": "^4.0.18",
         "sharp": "^0.34.5",
         "tailwindcss": "^4.2.1",
         "vite": "^7.0.7",
-        "vite-plugin-pwa": "^1.2.0"
+        "vite-plugin-pwa": "^1.2.0",
+        "vitest": "^4.0.18"
     },
     "overrides": {
         "serialize-javascript": ">=7.0.3"
