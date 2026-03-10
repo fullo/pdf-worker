@@ -64,6 +64,10 @@ const currentYear = new Date().getFullYear();
                     <RouterLink to="/sci-report" class="underline underline-offset-2 transition-colors hover:text-gray-300">
                         SCI Report
                     </RouterLink>
+                    <span class="text-gray-600">|</span>
+                    <RouterLink to="/sustainability" class="underline underline-offset-2 transition-colors hover:text-gray-300">
+                        WSG Report
+                    </RouterLink>
                 </div>
             </div>
         </div>
