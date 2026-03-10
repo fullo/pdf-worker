@@ -17,7 +17,7 @@ import {
     getSciConfig,
     type ProfileResult,
     type SciConfig,
-} from './sciProfiler';
+} from '../../../../lib/sci-profiler/src/sciProfiler';
 
 // ── Project-specific helpers ────────────────────────────────────────────────
 function blobSize(result: Blob | { name: string; blob: Blob }[]): number {
