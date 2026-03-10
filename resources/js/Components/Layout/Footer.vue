@@ -60,6 +60,10 @@ const currentYear = new Date().getFullYear();
                     <RouterLink to="/privacy" class="underline underline-offset-2 transition-colors hover:text-gray-300">
                         {{ trans('privacy.title') }}
                     </RouterLink>
+                    <span class="text-gray-600">|</span>
+                    <RouterLink to="/sci-report" class="underline underline-offset-2 transition-colors hover:text-gray-300">
+                        SCI Report
+                    </RouterLink>
                 </div>
             </div>
         </div>

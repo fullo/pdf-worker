@@ -73,6 +73,43 @@ npm run build
 
 Output goes to `docs/` for GitHub Pages deployment.
 
+## Updating the SCI Report
+
+The [SCI (Software Carbon Intensity)](https://sci-guide.greensoftware.foundation/) report measures the carbon footprint of each PDF tool. It uses pre-computed data stored in `sci-report/latest-results.json` — the profiler does **not** run during production builds.
+
+To update the benchmark data:
+
+1. Start the dev server:
+   ```bash
+   npm run dev
+   ```
+
+2. Open the browser console (the SCI profiler loads automatically in dev mode).
+
+3. Run all benchmarks:
+   ```js
+   await __sciProfiler.runAll()
+   ```
+
+4. Export the JSON report and copy the output:
+   ```js
+   await __sciProfiler.exportReport('COMMIT_HASH', '14-inch MacBook Pro M1 Pro, 16GB, macOS 15.3')
+   ```
+   Copy the JSON output and save it to `sci-report/latest-results.json`.
+
+5. Export the markdown report and copy the output:
+   ```js
+   await __sciProfiler.exportMarkdown('COMMIT_HASH', '14-inch MacBook Pro M1 Pro, 16GB, macOS 15.3')
+   ```
+   Copy the markdown output and save it to `sci-report/latest-report.md`.
+
+6. Rebuild:
+   ```bash
+   npm run build
+   ```
+
+The profiler is tree-shaken from production builds — it only runs in dev mode.
+
 ## Privacy
 
 - No file uploads — all processing is client-side
