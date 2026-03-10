@@ -1,3 +1,6 @@
 [submodule "lib/sci-profiler"]
 	path = lib/sci-profiler
 	url = https://github.com/fullo/sci-profiler.git
+[submodule "prompts/sustainable-project-setup"]
+	path = prompts/sustainable-project-setup
+	url = https://github.com/fullo/sustainable-code-skill-setup.git
