@@ -10,9 +10,75 @@ Privacy-first, client-side PDF toolkit with 36 tools. All processing runs in the
 
 ```bash
 npm install
-npm run dev     # dev server on :5173
-npm run build   # production build → docs/
+npm run dev          # dev server on :5173
+npm run build        # production build → docs/
+npm run audit:a11y   # Lighthouse accessibility + performance + best-practices audit
 ```
+
+## Git submodules
+
+The SCI profiler lives in a separate repo and is linked as a submodule:
+
+```bash
+# After cloning
+git submodule update --init
+
+# Update to latest sci-profiler
+cd lib/sci-profiler && git pull origin main && cd ../..
+git add lib/sci-profiler && git commit -m "chore: update sci-profiler submodule"
+```
+
+## Adding a new PDF tool
+
+Each tool follows a strict pattern across 4 files + translations:
+
+1. **Create the service** — `resources/js/Services/pdf/{toolName}.ts`
+   - Export a function `(file: File, options?, onProgress?) => Promise<Blob>`
+   - Use pdf-lib or pdfjs-dist for PDF operations
+
+2. **Register in worker** — `resources/js/workers/pdf.worker.ts`
+   - Add `import` at top
+   - Add `case 'tool-slug':` to the switch statement
+
+3. **Add to home page** — `resources/js/Pages/Home.vue`
+   - Add entry to the `tools` array: `{ slug, icon, color, bgColor }`
+
+4. **Add tool config** — `resources/js/Pages/Tool.vue`
+   - Add entry to `toolConfig`: `{ accept, multiple, color, bgColor }`
+
+5. **Add translations** — `lang/en.json` (then all other 14 languages)
+   - Keys: `tools.{slug}.name`, `.description`, `.how_title`, `.how_text`, `.step_1`–`.step_3`, `.faq_1_q`–`.faq_3_a`
+
+6. **Update sustainability data** — if the tool affects WSG compliance, update `wsg-report/wsg-compliance.json`
+
+## Translations (i18n)
+
+- **Files**: `lang/{locale}.json` — 15 locales (en, it, es, fr, de, pt, nl, sv, fi, da, no, be, el, sl, cs)
+- **API**: `trans('key')` in scripts, `{{ trans('key') }}` or `$t('key')` in templates
+- **Fallback**: missing key → English → raw key string
+- **Exception**: SCI Report and WSG Report pages are English-only (no `trans()` calls)
+
+## Updating SCI benchmarks
+
+Run in the dev browser console:
+
+```js
+// 1. Run all benchmarks
+const r = await __sciProfiler.runAll()
+
+// 2. Export JSON report
+const report = await __sciProfiler.exportReport('COMMIT_HASH', 'machine description')
+// Copy output → sci-report/latest-results.json
+
+// 3. Export markdown report
+const md = await __sciProfiler.exportMarkdown('COMMIT_HASH', 'machine description')
+// Copy output → sci-report/latest-report.md
+
+// 4. Rebuild
+npm run build
+```
+
+The SCI profiler is dev-only (`import.meta.env.DEV`) and stripped from production bundles.
 
 ## Sustainability tracking
 
@@ -36,6 +102,39 @@ When modifying the project, check if changes affect WSG compliance:
 - Changing data collection practices → review guidelines 5.18, 4.12
 - Adding new UI patterns → review section 2 (User Experience Design)
 
+### Accessibility (Lighthouse)
+
+Run `npm run audit:a11y` to audit accessibility, performance, and best practices via Lighthouse CI.
+
+- **Config**: `lighthouserc.json` — audits 4 representative pages (home, tool, SCI, WSG)
+- **Thresholds**: accessibility ≥ 90 (error), performance ≥ 80 (warn), best-practices ≥ 90 (warn)
+- **Reports**: saved to `.lighthouseci/` (gitignored)
+- **Browser**: uses Microsoft Edge (Chromium) — update `chromePath` in config if different
+
+Current scores (2026-03-10):
+
+| Page | Accessibility | Performance | Best Practices |
+|---|---|---|---|
+| Home | 93 | 98 | 100 |
+| merge-pdf | 94 | 93 | 100 |
+| SCI Report | 95 | 84 | 100 |
+| WSG Report | 95 | 84 | 100 |
+
+## Performance budget
+
+- **Chunk warning**: Vite warns on chunks > 500 KB (3 chunks exceed: pdfjs, pdf-lib, index)
+- **System fonts**: zero web font downloads
+- **Tree-shaking**: profiler code absent from production (verify: `grep -r "profileTool" docs/assets/`)
+- **Lazy loading**: all routes except Home are dynamically imported
+
+## Commit conventions
+
+- `feat:` — new feature or tool
+- `fix:` — bug fix
+- `refactor:` — code restructuring without behavior change
+- `docs:` — documentation only
+- `chore:` — maintenance (deps, config, submodule updates)
+
 ## Key architecture decisions
 
 - **Client-side only**: zero server processing, zero file uploads
@@ -43,3 +142,5 @@ When modifying the project, check if changes affect WSG compliance:
 - **Tree-shaking**: SCI profiler is dev-only (`import.meta.env.DEV`), stripped from production
 - **System fonts**: no web font downloads, zero font-related network requests
 - **i18n**: all tool UI is translatable, but SCI Report and WSG Report are English-only
+- **Hash routing**: `createWebHashHistory()` for GitHub Pages compatibility
+- **Submodule**: SCI profiler at `lib/sci-profiler` → `fullo/sci-profiler` repo
