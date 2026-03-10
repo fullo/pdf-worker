@@ -1,48 +1,48 @@
 # SCI Benchmark Report
 
-**Date**: 2026-03-10T08:25:09.223Z
-**Commit**: 45ae4d7
+**Date**: 2026-03-10T08:51:39.733Z
+**Commit**: 37dd444
 **Machine**: 14-inch MacBook Pro M1 Pro, 16GB, macOS 15.3
 **Constants**: E power=18W, I=332 gCO₂eq/kWh, M embodied=211000g, lifetime=11680h
 **LCA Source**: Apple 14-inch MacBook Pro Product Environmental Report (Oct 2021)
 
 | Tool | Time (ms) | Input | Output | E (mgCO₂) | M (mgCO₂) | SCI (mgCO₂eq) |
 |------|-----------|-------|--------|------------|------------|----------------|
-| merge-pdf | 86 | 20.8 KB | 19.2 KB | 142.262 | 0.430 | 142.692 |
-| split-pdf | 8 | 10.4 KB | 10.3 KB | 13.778 | 0.042 | 13.820 |
-| compress-pdf | 0 | 0 B | 0 B | 0.000 | 0.000 | 0.000 |
-| rotate-pdf | 9 | 10.4 KB | 10.4 KB | 15.604 | 0.047 | 15.651 |
-| watermark-pdf | 24 | 10.4 KB | 12.6 KB | 39.840 | 0.120 | 39.960 |
-| page-numbers | 10 | 10.4 KB | 12.3 KB | 16.600 | 0.050 | 16.650 |
-| pdf-to-jpg | 0 | 0 B | 0 B | 0.000 | 0.000 | 0.000 |
-| organize-pdf | 0 | 0 B | 0 B | 0.000 | 0.000 | 0.000 |
-| crop-pdf | 10 | 10.4 KB | 10.4 KB | 16.600 | 0.050 | 16.650 |
-| pdf-to-png | 0 | 0 B | 0 B | 0.000 | 0.000 | 0.000 |
+| merge-pdf | 11 | 20.8 KB | 19.2 KB | 18.592 | 0.056 | 18.648 |
+| split-pdf | 7 | 10.4 KB | 10.3 KB | 12.118 | 0.037 | 12.155 |
+| compress-pdf | 101 | 10.4 KB | 182.9 KB | 167.328 | 0.506 | 167.834 |
+| rotate-pdf | 7 | 10.4 KB | 10.4 KB | 11.454 | 0.035 | 11.489 |
+| watermark-pdf | 16 | 10.4 KB | 12.6 KB | 26.228 | 0.079 | 26.307 |
+| page-numbers | 16 | 10.4 KB | 12.3 KB | 26.560 | 0.080 | 26.640 |
+| pdf-to-jpg | 181 | 10.4 KB | 1008.5 KB | 299.962 | 0.907 | 300.869 |
+| organize-pdf | 10 | 10.4 KB | 10.4 KB | 15.770 | 0.048 | 15.818 |
+| crop-pdf | 7 | 10.4 KB | 10.4 KB | 12.284 | 0.037 | 12.321 |
+| pdf-to-png | 206 | 10.4 KB | 1.52 MB | 341.794 | 1.033 | 342.827 |
 | extract-images | 0 | 0 B | 0 B | 0.000 | 0.000 | 0.000 |
-| grayscale-pdf | 0 | 0 B | 0 B | 0.000 | 0.000 | 0.000 |
-| resize-pdf | 0 | 0 B | 0 B | 0.000 | 0.000 | 0.000 |
-| header-footer | 10 | 10.4 KB | 12.9 KB | 16.932 | 0.051 | 16.983 |
-| flatten-pdf | 9 | 10.4 KB | 10.4 KB | 14.940 | 0.045 | 14.985 |
-| pdf-to-text | 48 | 10.4 KB | 8.1 KB | 79.348 | 0.240 | 79.588 |
-| edit-metadata | 9 | 10.4 KB | 10.3 KB | 14.774 | 0.045 | 14.819 |
-| pdf-to-webp | 0 | 0 B | 0 B | 0.000 | 0.000 | 0.000 |
-| nup-pdf | 0 | 0 B | 0 B | 0.000 | 0.000 | 0.000 |
-| add-blank-page | 19 | 10.4 KB | 10.4 KB | 31.872 | 0.096 | 31.968 |
-| remove-blank-pages | 0 | 0 B | 0 B | 0.000 | 0.000 | 0.000 |
-| ocr-pdf | 0 | 0 B | 0 B | 0.000 | 0.000 | 0.000 |
-| compare-pdf | 0 | 0 B | 0 B | 0.000 | 0.000 | 0.000 |
-| reverse-pages | 11 | 10.4 KB | 10.3 KB | 17.762 | 0.054 | 17.816 |
-| invert-colors | 0 | 0 B | 0 B | 0.000 | 0.000 | 0.000 |
-| repair-pdf | 10 | 10.4 KB | 10.3 KB | 16.268 | 0.049 | 16.317 |
+| grayscale-pdf | 572 | 10.4 KB | 1.04 MB | 949.354 | 2.870 | 952.224 |
+| resize-pdf | 186 | 10.4 KB | 1.23 MB | 309.258 | 0.935 | 310.193 |
+| header-footer | 15 | 10.4 KB | 12.9 KB | 25.232 | 0.076 | 25.308 |
+| flatten-pdf | 9 | 10.4 KB | 10.4 KB | 15.604 | 0.047 | 15.651 |
+| pdf-to-text | 50 | 10.4 KB | 8.1 KB | 83.000 | 0.251 | 83.251 |
+| edit-metadata | 8 | 10.4 KB | 10.3 KB | 13.944 | 0.042 | 13.986 |
+| pdf-to-webp | 883 | 10.4 KB | 516.3 KB | 1466.444 | 4.433 | 1470.877 |
+| nup-pdf | 827 | 10.4 KB | 530.6 KB | 1373.484 | 4.152 | 1377.636 |
+| add-blank-page | 7 | 10.4 KB | 10.4 KB | 11.454 | 0.035 | 11.489 |
+| remove-blank-pages | 109 | 10.4 KB | 10.4 KB | 181.272 | 0.548 | 181.820 |
+| ocr-pdf | 9481 | 10.4 KB | 901.0 KB | 15738.128 | 47.575 | 15785.703 |
+| compare-pdf | 3258 | 20.8 KB | 823.1 KB | 5408.446 | 16.349 | 5424.795 |
+| reverse-pages | 10 | 10.4 KB | 10.3 KB | 16.932 | 0.051 | 16.983 |
+| invert-colors | 2697 | 10.4 KB | 901.0 KB | 4476.356 | 13.532 | 4489.888 |
+| repair-pdf | 11 | 10.4 KB | 10.3 KB | 18.426 | 0.056 | 18.482 |
 | pdf-to-epub | 42 | 10.4 KB | 18.7 KB | 70.218 | 0.212 | 70.430 |
-| booklet-pdf | 3 | 10.4 KB | 10.3 KB | 5.478 | 0.017 | 5.495 |
-| text-to-pdf | 8 | 0 B | 2.8 KB | 13.612 | 0.041 | 13.653 |
-| markdown-to-pdf | 11 | 0 B | 1.7 KB | 17.762 | 0.054 | 17.816 |
-| protect-pdf | 3 | 10.4 KB | 10.4 KB | 4.482 | 0.014 | 4.496 |
+| booklet-pdf | 6 | 10.4 KB | 10.3 KB | 10.458 | 0.032 | 10.490 |
+| text-to-pdf | 10 | 0 B | 2.8 KB | 17.098 | 0.052 | 17.150 |
+| markdown-to-pdf | 13 | 0 B | 1.7 KB | 20.916 | 0.063 | 20.979 |
+| protect-pdf | 7 | 10.4 KB | 10.4 KB | 11.122 | 0.034 | 11.156 |
 | jpg-to-pdf | 0 | 0 B | 0 B | 0.000 | 0.000 | 0.000 |
-| unlock-pdf | 2 | 10.4 KB | 10.4 KB | 3.486 | 0.011 | 3.497 |
-| redact-pdf | 3 | 10.4 KB | 10.7 KB | 4.814 | 0.015 | 4.829 |
-| sign-pdf | 4 | 10.4 KB | 11.1 KB | 6.640 | 0.020 | 6.660 |
-| edit-pdf | 3 | 10.4 KB | 10.8 KB | 5.146 | 0.016 | 5.162 |
+| unlock-pdf | 8 | 10.4 KB | 10.4 KB | 12.948 | 0.039 | 12.987 |
+| redact-pdf | 8 | 10.4 KB | 10.7 KB | 13.944 | 0.042 | 13.986 |
+| sign-pdf | 10 | 10.4 KB | 11.1 KB | 16.766 | 0.051 | 16.817 |
+| edit-pdf | 8 | 10.4 KB | 10.8 KB | 13.944 | 0.042 | 13.986 |
 
-**Total**: 569.936 mgCO₂eq across 36 tools in 342ms
+**Total**: 31301.174 mgCO₂eq across 36 tools in 18797ms
