@@ -125,14 +125,153 @@ function buildMixedPages(doc: PDFDocument, helvetica: any, helveticaBold: any) {
 }
 
 /**
- * Build page 8: Intentionally blank (for removeBlankPages)
+ * Generate a minimal 80×80 PNG with a colorful gradient pattern.
+ * This creates a valid PNG from raw bytes so extract-images has a raster
+ * image to find. Uses RGBA pixel data packed into an uncompressed PNG.
+ */
+function generateTestPng(): Uint8Array {
+    const W = 80;
+    const H = 80;
+
+    // Build raw RGBA pixel data
+    const pixels = new Uint8Array(W * H * 4);
+    for (let y = 0; y < H; y++) {
+        for (let x = 0; x < W; x++) {
+            const i = (y * W + x) * 4;
+            pixels[i] = Math.floor((x / W) * 255);       // R: horizontal gradient
+            pixels[i + 1] = Math.floor((y / H) * 255);   // G: vertical gradient
+            pixels[i + 2] = 128;                           // B: constant
+            pixels[i + 3] = 255;                           // A: opaque
+        }
+    }
+
+    // Build unfiltered scanlines (filter byte 0 + row data)
+    const rawData = new Uint8Array(H * (1 + W * 4));
+    for (let y = 0; y < H; y++) {
+        rawData[y * (1 + W * 4)] = 0; // filter: None
+        rawData.set(pixels.subarray(y * W * 4, (y + 1) * W * 4), y * (1 + W * 4) + 1);
+    }
+
+    // Deflate with pako-less approach: store blocks (no compression)
+    // zlib header (78 01) + deflate stored blocks + adler32
+    function adler32(data: Uint8Array): number {
+        let a = 1, b = 0;
+        for (let i = 0; i < data.length; i++) {
+            a = (a + data[i]) % 65521;
+            b = (b + a) % 65521;
+        }
+        return (b << 16) | a;
+    }
+
+    // Build deflate stored blocks (max 65535 bytes each)
+    const blocks: Uint8Array[] = [];
+    const MAX_BLOCK = 65535;
+    for (let offset = 0; offset < rawData.length; offset += MAX_BLOCK) {
+        const end = Math.min(offset + MAX_BLOCK, rawData.length);
+        const len = end - offset;
+        const isLast = end === rawData.length;
+        const block = new Uint8Array(5 + len);
+        block[0] = isLast ? 0x01 : 0x00; // BFINAL + BTYPE=00 (stored)
+        block[1] = len & 0xff;
+        block[2] = (len >> 8) & 0xff;
+        block[3] = ~len & 0xff;
+        block[4] = (~len >> 8) & 0xff;
+        block.set(rawData.subarray(offset, end), 5);
+        blocks.push(block);
+    }
+
+    const deflateLen = blocks.reduce((s, b) => s + b.length, 0);
+    const zlibData = new Uint8Array(2 + deflateLen + 4);
+    zlibData[0] = 0x78; zlibData[1] = 0x01; // zlib header
+    let pos = 2;
+    for (const b of blocks) { zlibData.set(b, pos); pos += b.length; }
+    const adler = adler32(rawData);
+    zlibData[pos] = (adler >> 24) & 0xff;
+    zlibData[pos + 1] = (adler >> 16) & 0xff;
+    zlibData[pos + 2] = (adler >> 8) & 0xff;
+    zlibData[pos + 3] = adler & 0xff;
+
+    // PNG file assembly
+    function crc32(data: Uint8Array): number {
+        let crc = 0xffffffff;
+        for (let i = 0; i < data.length; i++) {
+            crc ^= data[i];
+            for (let j = 0; j < 8; j++) crc = (crc >>> 1) ^ (crc & 1 ? 0xedb88320 : 0);
+        }
+        return (crc ^ 0xffffffff) >>> 0;
+    }
+
+    function pngChunk(type: string, data: Uint8Array): Uint8Array {
+        const chunk = new Uint8Array(12 + data.length);
+        const dv = new DataView(chunk.buffer);
+        dv.setUint32(0, data.length);
+        for (let i = 0; i < 4; i++) chunk[4 + i] = type.charCodeAt(i);
+        chunk.set(data, 8);
+        const crcData = new Uint8Array(4 + data.length);
+        for (let i = 0; i < 4; i++) crcData[i] = type.charCodeAt(i);
+        crcData.set(data, 4);
+        dv.setUint32(8 + data.length, crc32(crcData));
+        return chunk;
+    }
+
+    // IHDR
+    const ihdr = new Uint8Array(13);
+    const ihdrDv = new DataView(ihdr.buffer);
+    ihdrDv.setUint32(0, W);
+    ihdrDv.setUint32(4, H);
+    ihdr[8] = 8;  // bit depth
+    ihdr[9] = 6;  // color type: RGBA
+    ihdr[10] = 0; ihdr[11] = 0; ihdr[12] = 0;
+
+    const signature = new Uint8Array([137, 80, 78, 71, 13, 10, 26, 10]);
+    const ihdrChunk = pngChunk('IHDR', ihdr);
+    const idatChunk = pngChunk('IDAT', zlibData);
+    const iendChunk = pngChunk('IEND', new Uint8Array(0));
+
+    const png = new Uint8Array(signature.length + ihdrChunk.length + idatChunk.length + iendChunk.length);
+    let p = 0;
+    png.set(signature, p); p += signature.length;
+    png.set(ihdrChunk, p); p += ihdrChunk.length;
+    png.set(idatChunk, p); p += idatChunk.length;
+    png.set(iendChunk, p);
+
+    return png;
+}
+
+/**
+ * Build page 8: Raster image page (for extract-images)
+ * Embeds a programmatically generated PNG so extract-images has content to find.
+ * Also includes text so the page is not blank.
+ */
+async function buildImagePage(doc: PDFDocument, helvetica: any) {
+    const page = doc.addPage([A4_WIDTH, A4_HEIGHT]);
+    page.drawText('Page 8 — Embedded Raster Image', { x: 50, y: A4_HEIGHT - 60, size: 16, font: helvetica, color: rgb(0.1, 0.1, 0.4) });
+    page.drawText('This page contains an embedded PNG for extract-images benchmarking.', { x: 50, y: A4_HEIGHT - 85, size: 10, font: helvetica, color: rgb(0.4, 0.4, 0.4) });
+
+    const pngBytes = generateTestPng();
+    const pngImage = await doc.embedPng(pngBytes);
+
+    // Draw the image scaled up to 240×240 centered on the page
+    const imgSize = 240;
+    page.drawImage(pngImage, {
+        x: (A4_WIDTH - imgSize) / 2,
+        y: (A4_HEIGHT - imgSize) / 2 - 30,
+        width: imgSize,
+        height: imgSize,
+    });
+
+    page.drawText('80×80 RGBA gradient — generated from raw pixel data', { x: 140, y: (A4_HEIGHT - imgSize) / 2 - 55, size: 9, font: helvetica, color: rgb(0.5, 0.5, 0.5) });
+}
+
+/**
+ * Build page 9: Intentionally blank (for removeBlankPages)
  */
 function buildBlankPage(doc: PDFDocument) {
     doc.addPage([A4_WIDTH, A4_HEIGHT]);
 }
 
 /**
- * Build page 9: Sparse single-line text
+ * Build page 10: Sparse single-line text
  */
 function buildSparsePage(doc: PDFDocument, helvetica: any) {
     const page = doc.addPage([A4_WIDTH, A4_HEIGHT]);
@@ -140,7 +279,7 @@ function buildSparsePage(doc: PDFDocument, helvetica: any) {
 }
 
 /**
- * Build page 10: Footer + checkerboard pattern (exercises booklet padding to 12)
+ * Build page 11: Footer + checkerboard pattern
  */
 function buildCheckerboardPage(doc: PDFDocument, helvetica: any) {
     const page = doc.addPage([A4_WIDTH, A4_HEIGHT]);
@@ -166,7 +305,7 @@ function buildCheckerboardPage(doc: PDFDocument, helvetica: any) {
 }
 
 /**
- * Generate a deterministic 10-page A4 benchmark PDF.
+ * Generate a deterministic 11-page A4 benchmark PDF.
  * Result is memoized — subsequent calls return the same File.
  */
 export async function generateBenchmarkPdf(): Promise<File> {
@@ -183,12 +322,13 @@ export async function generateBenchmarkPdf(): Promise<File> {
     doc.setCreator('pdfLover');
 
     buildPage1(doc, helvetica, helveticaBold);                 // Page 1: Title + metadata
-    buildTextPages(doc, helvetica);                           // Pages 2-3: Dense text
-    buildGraphicPages(doc, helveticaBold);                    // Pages 4-5: Graphics
-    buildMixedPages(doc, helvetica, helveticaBold);           // Pages 6-7: Mixed
-    buildBlankPage(doc);                                      // Page 8: Blank
-    buildSparsePage(doc, helvetica);                           // Page 9: Sparse
-    buildCheckerboardPage(doc, helvetica);                     // Page 10: Checkerboard
+    buildTextPages(doc, helvetica);                            // Pages 2-3: Dense text
+    buildGraphicPages(doc, helveticaBold);                     // Pages 4-5: Graphics
+    buildMixedPages(doc, helvetica, helveticaBold);            // Pages 6-7: Mixed
+    await buildImagePage(doc, helvetica);                      // Page 8: Raster image
+    buildBlankPage(doc);                                       // Page 9: Blank
+    buildSparsePage(doc, helvetica);                            // Page 10: Sparse
+    buildCheckerboardPage(doc, helvetica);                      // Page 11: Checkerboard
 
     const bytes = await doc.save();
     const blob = new Blob([bytes as unknown as BlobPart], { type: 'application/pdf' });

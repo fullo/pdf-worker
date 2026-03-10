@@ -91,7 +91,7 @@ const TOOL_REGISTRY: ToolEntry[] = [
     },
     {
         name: 'organize-pdf',
-        args: (f) => ({ files: [f], options: { type: 'reorder', pageOrder: [9, 8, 7, 6, 5, 4, 3, 2, 1, 0] } }),
+        args: (f) => ({ files: [f], options: { type: 'reorder', pageOrder: [10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 0] } }),
     },
     {
         name: 'crop-pdf',

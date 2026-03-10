@@ -183,7 +183,7 @@ const measuredTimeTotal = computed(() =>
             <section>
                 <h2 class="mb-3 text-xl font-semibold text-gray-900 dark:text-white">Benchmark PDF</h2>
                 <p class="mb-3">
-                    A deterministic 10-page A4 PDF generated with pdf-lib. Each page exercises different tool capabilities:
+                    A deterministic 11-page A4 PDF generated with pdf-lib. Each page exercises different tool capabilities:
                 </p>
                 <div class="overflow-x-auto">
                     <table class="w-full text-sm">
@@ -199,9 +199,10 @@ const measuredTimeTotal = computed(() =>
                             <tr><td class="py-2 pr-4 font-mono">2–3</td><td class="py-2 pr-4">Dense lorem ipsum</td><td class="py-2">OCR, pdf-to-epub, pdf-to-text</td></tr>
                             <tr><td class="py-2 pr-4 font-mono">4–5</td><td class="py-2 pr-4">Colored shapes + text</td><td class="py-2">invert-colors, compare-pdf, grayscale</td></tr>
                             <tr><td class="py-2 pr-4 font-mono">6–7</td><td class="py-2 pr-4">Mixed text + shapes</td><td class="py-2">nup layout, reverse-pages, organize</td></tr>
-                            <tr><td class="py-2 pr-4 font-mono">8</td><td class="py-2 pr-4">Intentionally blank</td><td class="py-2">remove-blank-pages</td></tr>
-                            <tr><td class="py-2 pr-4 font-mono">9</td><td class="py-2 pr-4">Sparse single-line</td><td class="py-2">header-footer, general processing</td></tr>
-                            <tr><td class="py-2 pr-4 font-mono">10</td><td class="py-2 pr-4">Checkerboard pattern</td><td class="py-2">booklet-pdf (padded to 12 pages)</td></tr>
+                            <tr><td class="py-2 pr-4 font-mono">8</td><td class="py-2 pr-4">Embedded raster image (80×80 PNG)</td><td class="py-2">extract-images</td></tr>
+                            <tr><td class="py-2 pr-4 font-mono">9</td><td class="py-2 pr-4">Intentionally blank</td><td class="py-2">remove-blank-pages</td></tr>
+                            <tr><td class="py-2 pr-4 font-mono">10</td><td class="py-2 pr-4">Sparse single-line</td><td class="py-2">header-footer, general processing</td></tr>
+                            <tr><td class="py-2 pr-4 font-mono">11</td><td class="py-2 pr-4">Checkerboard pattern</td><td class="py-2">booklet-pdf</td></tr>
                         </tbody>
                     </table>
                 </div>
@@ -213,7 +214,7 @@ const measuredTimeTotal = computed(() =>
                 <p class="mb-4">
                     {{ sortedResults.length }} tools measured successfully.
                     <template v-if="failedTools.length > 0">
-                        {{ failedTools.length }} tools require browser canvas APIs that are unavailable in the benchmark worker and are excluded.
+                        {{ failedTools.length }} tool{{ failedTools.length === 1 ? ' requires' : 's require' }} browser canvas APIs unavailable in the benchmark worker and {{ failedTools.length === 1 ? 'is' : 'are' }} excluded.
                     </template>
                 </p>
                 <div class="overflow-x-auto rounded-lg border border-gray-200 dark:border-gray-700">
