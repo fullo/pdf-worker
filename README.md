@@ -93,13 +93,13 @@ To update the benchmark data:
 
 4. Export the JSON report and copy the output:
    ```js
-   await __sciProfiler.exportReport('COMMIT_HASH', '14-inch MacBook Pro M1 Pro, 16GB, macOS 15.3')
+   await __sciProfiler.exportReport('COMMIT_HASH')
    ```
    Copy the JSON output and save it to `sci-report/latest-results.json`.
 
 5. Export the markdown report and copy the output:
    ```js
-   await __sciProfiler.exportMarkdown('COMMIT_HASH', '14-inch MacBook Pro M1 Pro, 16GB, macOS 15.3')
+   await __sciProfiler.exportMarkdown('COMMIT_HASH')
    ```
    Copy the markdown output and save it to `sci-report/latest-report.md`.
 
@@ -109,6 +109,49 @@ To update the benchmark data:
    ```
 
 The profiler is tree-shaken from production builds — it only runs in dev mode.
+
+### Custom device parameters
+
+The SCI profiler ships with default constants for a 14-inch MacBook Pro M1 Pro. If you're running on a different machine, configure your own parameters **before** running benchmarks:
+
+```js
+__sciProfiler.configure({
+    devicePowerW: 25,           // Your device's software-attributable power (Watts)
+    carbonIntensity: 450,       // Grid carbon intensity (gCO₂eq/kWh) for your region
+    embodiedTotalG: 300_000,    // Embodied carbon (g CO₂e) from your device's LCA
+    lifetimeHours: 14_600,      // Expected lifetime (hours): e.g. 5 years × 365d × 8h
+    lcaSource: 'Dell XPS 15 Product Carbon Footprint 2024',
+    machine: 'Dell XPS 15 9530, i7-13700H, 32GB, Ubuntu 24.04',
+})
+```
+
+You only need to supply the values you want to override — omitted fields keep their defaults:
+
+```js
+// Only change grid carbon intensity for your region
+__sciProfiler.configure({ carbonIntensity: 50 })
+```
+
+Other configuration commands:
+
+```js
+// View current configuration
+__sciProfiler.getConfig()
+
+// Reset all parameters to defaults
+__sciProfiler.resetConfig()
+```
+
+| Parameter | Default | Description |
+|-----------|---------|-------------|
+| `devicePowerW` | 18 | Software-attributable device power (Watts) |
+| `carbonIntensity` | 332 | Grid carbon intensity (gCO₂eq/kWh) |
+| `embodiedTotalG` | 211,000 | Embodied carbon excluding use-phase (grams CO₂e) |
+| `lifetimeHours` | 11,680 | Device lifetime (hours) |
+| `lcaSource` | Apple 14-inch MacBook Pro PER Oct 2021 | LCA data source description |
+| `machine` | 14-inch MacBook Pro M1 Pro, 16GB, macOS 15.3 | Machine description for reports |
+
+The configured values are used by `exportReport()` and `exportMarkdown()` automatically — you no longer need to pass the machine description manually.
 
 ## Privacy
 

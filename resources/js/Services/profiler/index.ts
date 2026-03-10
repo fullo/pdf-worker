@@ -1,7 +1,7 @@
 /**
  * SCI Profiler — tool registry and window.__sciProfiler API.
  *
- * Maps all 35 PDF tools to their worker name + argument builder.
+ * Maps all 36 PDF tools to their worker name + argument builder.
  * Attaches a global API for running benchmarks from the browser console.
  */
 import { generateBenchmarkPdf } from './benchmarkPdf';
@@ -11,7 +11,11 @@ import {
     printSummary,
     generateMarkdownReport,
     generateJsonReport,
+    configureSci,
+    resetSciConfig,
+    getSciConfig,
     type ProfileResult,
+    type SciConfig,
 } from './sciProfiler';
 
 // ── Types ───────────────────────────────────────────────────────────────────
@@ -356,6 +360,9 @@ declare global {
     interface Window {
         __sciProfiler?: {
             tools: string[];
+            configure: (overrides: Partial<SciConfig>) => SciConfig;
+            resetConfig: () => SciConfig;
+            getConfig: () => SciConfig;
             runBenchmark: (tool: string) => Promise<ProfileResult>;
             runAll: () => Promise<ProfileResult[]>;
             generateBenchmarkPdf: () => Promise<File>;
@@ -366,12 +373,14 @@ declare global {
 }
 
 export function attachProfiler(): void {
-    const defaultMachine = '14-inch MacBook Pro M1 Pro, 16GB, macOS 15.3';
-
     let lastResults: ProfileResult[] | null = null;
 
     window.__sciProfiler = {
         tools: TOOL_REGISTRY.map((t) => t.name),
+
+        configure: configureSci,
+        resetConfig: resetSciConfig,
+        getConfig: getSciConfig,
 
         runBenchmark: runSingleBenchmark,
 
@@ -386,7 +395,7 @@ export function attachProfiler(): void {
             return f;
         },
 
-        exportReport: async (commit = 'unknown', machine = defaultMachine) => {
+        exportReport: async (commit = 'unknown', machine?: string) => {
             const results = lastResults ?? await runAllBenchmarks();
             lastResults = results;
             const report = generateJsonReport(results, { commit, machine });
@@ -394,7 +403,7 @@ export function attachProfiler(): void {
             return report;
         },
 
-        exportMarkdown: async (commit = 'unknown', machine = defaultMachine) => {
+        exportMarkdown: async (commit = 'unknown', machine?: string) => {
             const results = lastResults ?? await runAllBenchmarks();
             lastResults = results;
             const md = generateMarkdownReport(results, { commit, machine });
