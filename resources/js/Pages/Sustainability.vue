@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { onMounted } from 'vue';
 import { useSeoMeta } from '@/Composables/useSeoMeta';
+import report from '../../../wsg-report/wsg-compliance.json';
 
 onMounted(() => {
     useSeoMeta(
@@ -11,107 +12,8 @@ onMounted(() => {
     );
 });
 
-interface Guideline {
-    id: string;
-    title: string;
-    status: 'full' | 'partial' | 'na';
-    detail: string;
-}
-
-interface Category {
-    name: string;
-    icon: string;
-    description: string;
-    guidelines: Guideline[];
-}
-
-const categories: Category[] = [
-    {
-        name: 'User Experience Design',
-        icon: '🎨',
-        description: 'Guidelines 2.1–2.21 — designing experiences that are efficient, inclusive, and respectful of user attention.',
-        guidelines: [
-            { id: '2.2', title: 'Understand user requirements or constraints, resolving barriers to access', status: 'full', detail: 'All tools work with standard PDF files in any modern browser. No account, plugin, or installation required.' },
-            { id: '2.4', title: 'Minimize non-essential content, interactivity, or journeys', status: 'full', detail: 'Each tool is a single-purpose page: drop a file, get a result. No onboarding wizards, pop-ups, or multi-step funnels.' },
-            { id: '2.5', title: 'Ensure that navigation and wayfinding are well-structured', status: 'full', detail: 'Flat navigation: home page lists all 36 tools. Each tool has a descriptive name, icon, and direct URL.' },
-            { id: '2.6', title: 'Design to assist and not to distract', status: 'full', detail: 'No autoplaying media, no animations beyond minimal transitions, no infinite scroll.' },
-            { id: '2.7', title: 'Avoid being manipulative or deceptive', status: 'full', detail: 'No dark patterns, no fake urgency, no forced sign-ups. Tool results are delivered immediately without gates.' },
-            { id: '2.9', title: 'Use a design system for interface consistency', status: 'full', detail: 'Tailwind CSS utility classes with a shared component library ensure visual consistency across all tools.' },
-            { id: '2.10', title: 'Provide clear, inclusive content with purpose', status: 'full', detail: 'Each tool has a clear title, description, and expected input/output format. Available in multiple languages via i18n.' },
-            { id: '2.11', title: 'Optimize media to reduce resource use', status: 'full', detail: 'Minimal imagery. Icons are inline SVGs. No stock photos, hero images, or video backgrounds.' },
-            { id: '2.12', title: 'Ensure animation is proportionate and easy to control', status: 'full', detail: 'Only CSS transitions for state changes (hover, toggle). Respects prefers-reduced-motion media query.' },
-            { id: '2.13', title: 'Use optimized and appropriate web typography', status: 'full', detail: 'System font stack — no custom web fonts downloaded. Zero font-related network requests.' },
-            { id: '2.14', title: 'Offer suitable alternatives for every format used', status: 'full', detail: 'Output is always a downloadable file. Multiple conversion formats available (PDF, images, text, EPUB).' },
-            { id: '2.15', title: 'Provide accessible, usable, minimal web forms', status: 'full', detail: 'Tool interfaces use minimal form elements: a file input and optional settings. No mandatory fields beyond the file itself.' },
-            { id: '2.16', title: 'Avoid unwanted notifications', status: 'full', detail: 'Zero push notifications. No email collection. No permission requests for notifications or location.' },
-            { id: '2.17', title: 'Reduce the impact of downloadable and physical documents', status: 'full', detail: 'Tools like compress-pdf, grayscale-pdf, and remove-blank-pages directly reduce document size and print impact.' },
-            { id: '2.19', title: 'Audit and test for bugs or issues requiring resolution', status: 'full', detail: 'SCI profiler runs automated benchmarks across all 36 tools. Build pipeline includes type checking and linting.' },
-            { id: '2.21', title: 'Regularly test and maintain compatibility', status: 'full', detail: 'Tested on Chrome, Firefox, Safari. Uses standard Web APIs and progressive enhancement.' },
-        ],
-    },
-    {
-        name: 'Web Development',
-        icon: '⚙️',
-        description: 'Guidelines 3.1–3.20 — writing efficient, secure, standards-based code.',
-        guidelines: [
-            { id: '3.1', title: 'Set goals based on performance and energy impact', status: 'full', detail: 'SCI profiler measures energy consumption and carbon emissions per tool. Results published in the SCI Report page.' },
-            { id: '3.2', title: 'Remove unnecessary or redundant information', status: 'full', detail: 'Production build uses Vite tree-shaking. Dev-only code (SCI profiler) is stripped from production bundles.' },
-            { id: '3.3', title: 'Modularize bandwidth-heavy components', status: 'full', detail: 'Each tool is a lazy-loaded Web Worker. Only the selected tool\'s code is loaded on demand.' },
-            { id: '3.4', title: 'Remove unnecessary code', status: 'full', detail: 'Vite tree-shaking + code splitting. Dead code elimination verified by grepping production bundles.' },
-            { id: '3.5', title: 'Avoid redundancy and duplication in code', status: 'full', detail: 'Shared utilities (runInWorker, file helpers) are centralized. Tool implementations follow a uniform pattern.' },
-            { id: '3.6', title: 'Give third parties the same priority as first parties during assessment', status: 'partial', detail: 'Google AdSense is the only third-party script. It is loaded asynchronously and does not block rendering.' },
-            { id: '3.7', title: 'Ensure code follows good semantic practices', status: 'full', detail: 'Semantic HTML5 elements (main, nav, section, article). ARIA attributes where needed.' },
-            { id: '3.8', title: 'Defer the loading of non-critical resources', status: 'full', detail: 'Route-based code splitting with dynamic imports. Tool workers load only when the user selects a tool.' },
-            { id: '3.9', title: 'Provide information to help understand the usefulness of a page', status: 'full', detail: 'SEO meta tags on every page. Structured descriptions for each tool. Open Graph metadata for sharing.' },
-            { id: '3.11', title: 'Structure metadata for machine readability', status: 'full', detail: 'SEO composable generates title, description, and Open Graph tags for every route.' },
-            { id: '3.12', title: 'Use sustainability beneficial user preference media queries', status: 'full', detail: 'Supports prefers-color-scheme (dark mode) and prefers-reduced-motion. No unnecessary resource loading for either preference.' },
-            { id: '3.13', title: 'Ensure layouts work for different devices and requirements', status: 'full', detail: 'Fully responsive design with Tailwind breakpoints (sm, md, lg). Mobile-first approach.' },
-            { id: '3.14', title: 'Use standards-based JavaScript and APIs', status: 'full', detail: 'Standard Web APIs: File API, Web Workers, Blob, performance.now(). No proprietary browser APIs.' },
-            { id: '3.15', title: 'Ensure that your code is secure', status: 'full', detail: 'All processing is client-side. No data leaves the browser. No server-side attack surface for user files.' },
-            { id: '3.16', title: 'Use dependencies appropriately and ensure maintenance', status: 'full', detail: 'Minimal dependency tree. Core libraries (pdf-lib, pdfjs-dist, tesseract.js) are actively maintained open-source projects.' },
-            { id: '3.17', title: 'Include expected and beneficial files', status: 'full', detail: 'Includes robots.txt, sitemap, privacy policy, and this sustainability page.' },
-            { id: '3.18', title: 'Use the most efficient solution for your service', status: 'full', detail: 'Client-side processing eliminates server round-trips entirely. Files never leave the user\'s device.' },
-            { id: '3.19', title: 'Use the latest stable language version', status: 'full', detail: 'TypeScript with ES2022 target. Vite build with modern browser output.' },
-        ],
-    },
-    {
-        name: 'Hosting, Infrastructure, and Systems',
-        icon: '🌐',
-        description: 'Guidelines 4.1–4.12 — efficient hosting, caching, and data transfer.',
-        guidelines: [
-            { id: '4.1', title: 'Use sustainable hosting', status: 'full', detail: 'Hosted on GitHub Pages — a static CDN. No dedicated server running 24/7 for this application.' },
-            { id: '4.2', title: 'Optimize caching and support offline access', status: 'full', detail: 'Static assets served with long-lived cache headers via GitHub Pages CDN. Content-hashed filenames enable aggressive caching.' },
-            { id: '4.3', title: 'Reduce data transfer with compression', status: 'full', detail: 'GitHub Pages serves gzip/brotli compressed assets. Vite produces minified JS/CSS bundles.' },
-            { id: '4.4', title: 'Setup necessary error pages and redirection links', status: 'full', detail: 'Custom 404.html redirects to hash-based SPA routing. No broken links.' },
-            { id: '4.5', title: 'Avoid maintaining unnecessary virtualized environments or containers', status: 'full', detail: 'No server infrastructure at all. The entire application is a static site — zero containers, zero VMs.' },
-            { id: '4.9', title: 'Consider the impact and requirements of data processing', status: 'full', detail: 'All processing happens on the user\'s existing device. No additional server energy consumption per operation.' },
-            { id: '4.10', title: 'Use Content Delivery Networks (CDNs) appropriately', status: 'full', detail: 'GitHub Pages CDN distributes static assets globally. Minimal latency, no origin server required.' },
-            { id: '4.12', title: 'Store data according to the needs of your users', status: 'full', detail: 'No user data stored whatsoever — not on servers, not in databases, not in cookies (beyond consent).' },
-        ],
-    },
-    {
-        name: 'Business Strategy and Product Management',
-        icon: '📋',
-        description: 'Guidelines 5.1–5.27 — organizational sustainability practices.',
-        guidelines: [
-            { id: '5.1', title: 'Have an ethical and sustainable product strategy', status: 'full', detail: 'Privacy-first by design. No data collection, no tracking, no user profiling. Open source codebase.' },
-            { id: '5.4', title: 'Communicate the environmental impact of user choices', status: 'full', detail: 'SCI Report page publishes per-tool carbon emissions. Users can see the environmental cost of each operation.' },
-            { id: '5.5', title: 'Calculate the environmental impact', status: 'full', detail: 'SCI profiler implements the Green Software Foundation specification to measure mgCO₂eq per tool invocation.' },
-            { id: '5.11', title: 'Implement continuous improvement procedures', status: 'full', detail: 'SCI history tracking compares carbon emissions across commits. Regressions are detectable over time.' },
-            { id: '5.13', title: 'Establish if a digital product or service is necessary', status: 'full', detail: 'PDF Worker replaces the need to upload files to remote servers for processing, reducing both privacy risk and network energy.' },
-            { id: '5.18', title: 'Promote responsible data practices', status: 'full', detail: 'Zero data collection by design. Files are processed in-browser and never transmitted. Privacy policy is explicit about this.' },
-            { id: '5.23', title: 'Plan for a digital product or service\'s care and end-of-life', status: 'full', detail: 'Static site with no server dependency. Even if the project is abandoned, the hosted version continues to work.' },
-            { id: '5.25', title: 'Define performance and environmental budgets', status: 'full', detail: 'SCI benchmarks define measurable carbon budgets per tool. Performance regressions are tracked in sci-history.json.' },
-            { id: '5.26', title: 'Use open source where possible', status: 'full', detail: 'All core dependencies are open source. The SCI profiler itself is published as an open-source library.' },
-        ],
-    },
-];
-
-const stats = {
-    total: categories.reduce((sum, c) => sum + c.guidelines.length, 0),
-    full: categories.reduce((sum, c) => sum + c.guidelines.filter(g => g.status === 'full').length, 0),
-    partial: categories.reduce((sum, c) => sum + c.guidelines.filter(g => g.status === 'partial').length, 0),
-};
+const categories = report.categories;
+const stats = report.summary;
 
 function statusLabel(status: Guideline['status']): string {
     return status === 'full' ? 'Addressed' : status === 'partial' ? 'Partial' : 'N/A';
