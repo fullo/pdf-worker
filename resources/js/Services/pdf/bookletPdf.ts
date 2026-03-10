@@ -53,19 +53,6 @@ export async function bookletPdf(
 
     onProgress?.(30);
 
-    // Copy existing pages we need (only valid indices)
-    const validIndices = bookletIndices.filter((idx): idx is number => idx !== null);
-    const uniqueIndices = [...new Set(validIndices)].sort((a, b) => a - b);
-    const copiedPagesMap = new Map<number, ReturnType<PDFDocument['addPage']>>();
-
-    if (uniqueIndices.length > 0) {
-        const copied = await PDFDocument.create();
-        const pages = await copied.copyPages(srcDoc, uniqueIndices);
-        for (let i = 0; i < uniqueIndices.length; i++) {
-            copiedPagesMap.set(uniqueIndices[i], pages[i]);
-        }
-    }
-
     // Build the new document
     const newDoc = await PDFDocument.create();
 
@@ -73,15 +60,25 @@ export async function bookletPdf(
     const refPage = srcDoc.getPage(0);
     const refSize: [number, number] = [refPage.getWidth(), refPage.getHeight()];
 
+    // Batch-copy all needed pages at once for efficiency
+    const uniqueIndices = [...new Set(
+        bookletIndices.filter((idx): idx is number => idx !== null)
+    )].sort((a, b) => a - b);
+
+    const copiedPages = uniqueIndices.length > 0
+        ? await newDoc.copyPages(srcDoc, uniqueIndices)
+        : [];
+    const pageMap = new Map<number, (typeof copiedPages)[0]>();
+    for (let i = 0; i < uniqueIndices.length; i++) {
+        pageMap.set(uniqueIndices[i], copiedPages[i]);
+    }
+
     for (let i = 0; i < bookletIndices.length; i++) {
         const idx = bookletIndices[i];
         if (idx === null) {
-            // Add a blank page
             newDoc.addPage(refSize);
         } else {
-            // Copy the page from the source via intermediate doc
-            const [copiedPage] = await newDoc.copyPages(srcDoc, [idx]);
-            newDoc.addPage(copiedPage);
+            newDoc.addPage(pageMap.get(idx)!);
         }
         onProgress?.(30 + Math.round(((i + 1) / bookletIndices.length) * 60));
     }

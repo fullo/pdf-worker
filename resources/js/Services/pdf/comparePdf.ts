@@ -90,16 +90,22 @@ export async function comparePdf(
                 const d1 = data1.data as Uint8ClampedArray;
                 const d2 = data2.data as Uint8ClampedArray;
 
-                // Draw red overlay on differing pixels (on doc2 side)
+                // Batch-read the doc2 region from the combined canvas, blend red
+                // on differing pixels, then write back in one operation.
+                const overlayData = (ctx as any).getImageData(w1 + GAP, 0, minW, minH);
+                const overlay = overlayData.data as Uint8ClampedArray;
+
                 for (let p = 0; p < d1.length; p += 4) {
                     const diff = Math.abs(d1[p] - d2[p]) + Math.abs(d1[p + 1] - d2[p + 1]) + Math.abs(d1[p + 2] - d2[p + 2]);
                     if (diff > 30) {
-                        const px = ((p / 4) % minW) + w1 + GAP;
-                        const py = Math.floor((p / 4) / minW);
-                        (ctx as any).fillStyle = 'rgba(255, 0, 0, 0.3)';
-                        (ctx as any).fillRect(px, py, 1, 1);
+                        // Blend 30% red over the existing pixel
+                        overlay[p]     = Math.min(255, Math.round(overlay[p] * 0.7 + 255 * 0.3));
+                        overlay[p + 1] = Math.round(overlay[p + 1] * 0.7);
+                        overlay[p + 2] = Math.round(overlay[p + 2] * 0.7);
                     }
                 }
+
+                (ctx as any).putImageData(overlayData, w1 + GAP, 0);
             }
         }
 
