@@ -5,6 +5,26 @@
  * that don't exist in Node.js.
  */
 
+import * as pdfjsLib from 'pdfjs-dist';
+import { resolve } from 'path';
+import { pathToFileURL } from 'url';
+
+// --- Fix pdfjs-dist worker path for Vitest ---
+// pdfUtils.ts sets GlobalWorkerOptions.workerSrc via:
+//   new URL('pdfjs-dist/build/pdf.worker.mjs', import.meta.url)
+// In Vitest, import.meta.url points to pdfUtils.ts's file path, producing
+// an invalid worker path (resources/js/Services/pdfjs-dist/...).
+// We override the property to return the correct node_modules path and
+// silently ignore writes from pdfUtils.ts.
+const workerPath = resolve(process.cwd(), 'node_modules/pdfjs-dist/build/pdf.worker.mjs');
+const correctWorkerSrc = pathToFileURL(workerPath).href;
+
+Object.defineProperty(pdfjsLib.GlobalWorkerOptions, 'workerSrc', {
+    get: () => correctWorkerSrc,
+    set: () => {},          // silently ignore writes from pdfUtils.ts
+    configurable: true,
+});
+
 // --- DOMMatrix polyfill (pdfjs-dist requires it) ---
 if (typeof globalThis.DOMMatrix === 'undefined') {
     (globalThis as any).DOMMatrix = class DOMMatrix {

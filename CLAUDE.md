@@ -143,9 +143,10 @@ npm run test:coverage     # coverage report (v8 provider)
 ### Test infrastructure
 
 - **Config**: `vitest.config.ts` — node environment, forks pool, `@` alias, pdfjs-dist legacy build alias
-- **Setup**: `resources/js/__tests__/setup.ts` — DOMMatrix, Path2D, Map.getOrInsertComputed polyfills
+- **Setup**: `resources/js/__tests__/setup.ts` — DOMMatrix, Path2D, Map.getOrInsertComputed polyfills, pdfjs-dist workerSrc fix
 - **Fixtures**: `resources/js/__tests__/helpers/fixtures.ts` — programmatic PDF factories via pdf-lib
 - **Assertions**: `resources/js/__tests__/helpers/assertions.ts` — `expectValidPdf()`, `expectDefaultMetadata()`
+- **Canvas mock**: `resources/js/__tests__/helpers/canvasMock.ts` — MockCanvas, MockContext2D, mockCanvasToBlob (uses `sharp` for valid image blobs)
 
 ### Writing tests
 
@@ -176,11 +177,34 @@ describe('myTool', () => {
 });
 ```
 
+### Canvas-dependent services
+
+Services that use pdfjs-dist rendering (canvas) are tested by mocking `createCanvas` and `canvasToBlob` from `pdfUtils.ts`:
+
+```typescript
+vi.mock('@/Services/pdfUtils', async (importOriginal) => {
+    const actual = await importOriginal<typeof import('@/Services/pdfUtils')>();
+    const { MockCanvas, mockCanvasToBlob } = await import('@/__tests__/helpers/canvasMock');
+    return {
+        ...actual,
+        createCanvas: (w: number, h: number) => new MockCanvas(w, h),
+        canvasToBlob: mockCanvasToBlob,
+    };
+});
+```
+
+Special cases:
+- **jpgToPdf**: polyfills `URL.createObjectURL`, `URL.revokeObjectURL`, `Image` in `beforeAll`
+- **ocrPdf**: mocks `tesseract.js` (`createWorker` returns synthetic OCR data)
+- **pdfToEpub**: no canvas mock needed (uses pdfjs-dist text extraction only)
+- **removeBlankPages**: mock returns gray pixels → always throws "No blank pages found" (expected)
+- **extractImages**: simple PDFs have no embedded images → throws "No images found" (expected)
+
 ### Coverage scope
 
 - **Included**: `resources/js/Services/**/*.ts`
 - **Excluded**: `resources/js/Services/profiler/**`
-- **Not yet tested** (require `canvas` native module): grayscale, invertColors, pdfToJpg, pdfToPng, pdfToWebp, compress, compare, nup, resize, removeBlankPages, extractImages, ocrPdf, pdfToEpub, jpgToPdf
+- **All 36 PDF services covered** (187 tests across 36 test files)
 
 ## Performance budget
 
