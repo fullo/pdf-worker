@@ -34,3 +34,8 @@ if (import.meta.env.PROD) {
         console.debug('[Web Vitals]', metric.name, metric.value.toFixed(2));
     });
 }
+
+// SCI Profiler (dev only — tree-shaken from production build)
+if (import.meta.env.DEV) {
+    import('./Services/profiler/index').then((m) => m.attachProfiler());
+}
