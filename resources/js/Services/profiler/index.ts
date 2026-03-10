@@ -135,7 +135,7 @@ const TOOL_REGISTRY: ToolEntry[] = [
         name: 'edit-metadata',
         args: (f) => ({
             files: [f],
-            options: { title: 'Benchmark Edited', author: 'SCI Profiler', subject: 'Test', keywords: 'test' },
+            options: { title: 'Benchmark Edited', author: 'SCI Profiler', subject: 'Test', keywords: ['benchmark', 'test'] },
         }),
     },
     {
