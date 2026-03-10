@@ -80,12 +80,6 @@ export function getSciConfig(): SciConfig {
     return { ..._config };
 }
 
-// Legacy aliases for backward compatibility
-export const DEVICE_POWER_W = DEFAULT_DEVICE_POWER_W;
-export const CARBON_INTENSITY = DEFAULT_CARBON_INTENSITY;
-export const EMBODIED_TOTAL_G = DEFAULT_EMBODIED_TOTAL_G;
-export const LIFETIME_HOURS = DEFAULT_LIFETIME_HOURS;
-
 // ── Types ───────────────────────────────────────────────────────────────────
 export interface ProfileResult {
     tool: string;
@@ -141,7 +135,7 @@ export async function profileTool(
     const carbonOperationalMg = energyKwh * _config.carbonIntensity * 1_000_000;
 
     // Embodied carbon amortized to this operation (in mg)
-    // M = (EMBODIED_TOTAL_G / LIFETIME_HOURS) × (wallTimeS / 3600) → grams, × 1000 → mg
+    // M = (embodiedTotalG / lifetimeHours) × (wallTimeS / 3600) → grams, × 1000 → mg
     const carbonEmbodiedMg = (_config.embodiedTotalG / _config.lifetimeHours) * (wallTimeS / 3600) * 1000;
 
     // SCI = ((E × I) + M) / R, R=1, result in mg CO2eq
