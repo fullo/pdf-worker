@@ -112,6 +112,31 @@ export async function createPdfWithFormFields(): Promise<File> {
 }
 
 /**
+ * Create a PDF heavy enough for compression tests to produce a smaller output.
+ * Each page contains many text lines, making the content streams large
+ * while the render-based compress path (which rasterises to tiny mock JPEGs)
+ * produces a significantly smaller file.
+ */
+export async function createBloatedPdf(pageCount: number = 3): Promise<File> {
+    const doc = await PDFDocument.create();
+    const font = await doc.embedFont(StandardFonts.Helvetica);
+
+    for (let i = 0; i < pageCount; i++) {
+        const page = doc.addPage([A4_WIDTH, A4_HEIGHT]);
+        for (let line = 0; line < 60; line++) {
+            page.drawText(
+                `Page ${i + 1} Line ${line}: The quick brown fox jumps over the lazy dog repeatedly to create content.`,
+                { x: 50, y: 780 - line * 12, size: 10, font, color: rgb(0, 0, 0) },
+            );
+        }
+    }
+
+    const bytes = await doc.save();
+    const blob = new Blob([bytes], { type: 'application/pdf' });
+    return new File([blob], 'test-bloated.pdf', { type: 'application/pdf' });
+}
+
+/**
  * Create a minimal valid PNG image as Uint8Array.
  * 1×1 red pixel. Useful for image watermark tests.
  */

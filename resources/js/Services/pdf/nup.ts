@@ -4,6 +4,11 @@ import { createCanvas, canvasToBlob, savePdfAsBlob, stampDefaultMetadata, MAX_PD
 
 export type NupLayout = 2 | 4 | 9;
 
+/** Padding between cells and around the edges, in points. */
+const CELL_PADDING = 12;
+/** Light border colour for cell separators. */
+const BORDER_COLOR = '#cccccc';
+
 /**
  * Combine multiple pages onto each sheet (N-Up layout).
  */
@@ -27,9 +32,11 @@ export async function nupPdf(
     const pageWidth = layout === 2 ? 842 : 595;   // A4 points
     const pageHeight = layout === 2 ? 595 : 842;
     const scale = 2.0;
+    const pad = CELL_PADDING * scale;
 
-    const cellW = (pageWidth * scale) / cols;
-    const cellH = (pageHeight * scale) / rows;
+    // Cell dimensions with padding subtracted
+    const cellW = ((pageWidth * scale) - pad * (cols + 1)) / cols;
+    const cellH = ((pageHeight * scale) - pad * (rows + 1)) / rows;
     const sheetsNeeded = Math.ceil(pageCount / layout);
 
     const newPdf = await PDFDocument.create();
@@ -58,15 +65,24 @@ export async function nupPdf(
             const fitScale = Math.min(scaleX, scaleY);
             const renderVp = page.getViewport({ scale: fitScale });
 
-            // Center in cell
-            const offsetX = slotCol * cellW + (cellW - renderVp.width) / 2;
-            const offsetY = slotRow * cellH + (cellH - renderVp.height) / 2;
+            // Cell origin (top-left of each cell area, accounting for padding)
+            const cellX = pad + slotCol * (cellW + pad);
+            const cellY = pad + slotRow * (cellH + pad);
+
+            // Center page within its cell
+            const offsetX = cellX + (cellW - renderVp.width) / 2;
+            const offsetY = cellY + (cellH - renderVp.height) / 2;
 
             const tmpCanvas = createCanvas(renderVp.width, renderVp.height);
             const tmpCtx = tmpCanvas.getContext('2d');
             if (!tmpCtx) throw new Error('Failed to get canvas 2d context');
 
             await page.render({ canvas: tmpCanvas as any, canvasContext: tmpCtx as any, viewport: renderVp }).promise;
+
+            // Draw light border around the cell
+            (ctx as any).strokeStyle = BORDER_COLOR;
+            (ctx as any).lineWidth = 1;
+            (ctx as any).strokeRect(cellX, cellY, cellW, cellH);
 
             (ctx as any).drawImage(tmpCanvas as any, offsetX, offsetY);
         }

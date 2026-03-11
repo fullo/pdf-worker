@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref, watch, onUnmounted } from 'vue';
+import { ref, watch, onUnmounted, onMounted } from 'vue';
 import { trans } from '@/i18n';
 import pdfjsLib from '@/Services/pdfjsSetup';
 
@@ -15,6 +15,11 @@ const loading = ref(false);
 const error = ref(false);
 const dragIndex = ref<number | null>(null);
 const dragOverIndex = ref<number | null>(null);
+
+// Touch drag state
+const touchDragging = ref(false);
+const touchClone = ref<HTMLElement | null>(null);
+const gridRef = ref<HTMLElement | null>(null);
 
 watch(() => props.pdfFile, async (file) => {
     cleanup();
@@ -50,11 +55,15 @@ watch(() => props.pdfFile, async (file) => {
 
 function cleanup() {
     pages.value = [];
+    removeTouchClone();
 }
 
 onUnmounted(cleanup);
 
-// Drag & drop
+// -------------------------------------------------------------------------
+// Desktop: HTML5 Drag & Drop
+// -------------------------------------------------------------------------
+
 function onDragStart(index: number) {
     dragIndex.value = index;
 }
@@ -69,22 +78,107 @@ function onDragLeave() {
 }
 
 function onDrop(targetIndex: number) {
-    if (dragIndex.value === null || dragIndex.value === targetIndex) {
+    movePage(dragIndex.value, targetIndex);
+}
+
+function onDragEnd() {
+    dragIndex.value = null;
+    dragOverIndex.value = null;
+}
+
+// -------------------------------------------------------------------------
+// Mobile: Touch-based drag & drop
+// -------------------------------------------------------------------------
+
+function onTouchStart(index: number, e: TouchEvent) {
+    // Don't start drag if touching a button (duplicate/delete)
+    const target = e.target as HTMLElement;
+    if (target.closest('button')) return;
+
+    dragIndex.value = index;
+    touchDragging.value = true;
+
+    // Create a visual clone that follows the finger
+    const touch = e.touches[0];
+    const card = (e.currentTarget as HTMLElement);
+    const clone = card.cloneNode(true) as HTMLElement;
+    clone.style.position = 'fixed';
+    clone.style.width = `${card.offsetWidth}px`;
+    clone.style.zIndex = '9999';
+    clone.style.opacity = '0.85';
+    clone.style.pointerEvents = 'none';
+    clone.style.transform = 'rotate(2deg) scale(1.05)';
+    clone.style.boxShadow = '0 8px 25px rgba(0,0,0,0.3)';
+    clone.style.left = `${touch.clientX - card.offsetWidth / 2}px`;
+    clone.style.top = `${touch.clientY - card.offsetHeight / 2}px`;
+    document.body.appendChild(clone);
+    touchClone.value = clone;
+}
+
+function onTouchMove(e: TouchEvent) {
+    if (!touchDragging.value || dragIndex.value === null) return;
+    e.preventDefault(); // Prevent scrolling while dragging
+
+    const touch = e.touches[0];
+
+    // Move the floating clone
+    if (touchClone.value) {
+        touchClone.value.style.left = `${touch.clientX - touchClone.value.offsetWidth / 2}px`;
+        touchClone.value.style.top = `${touch.clientY - touchClone.value.offsetHeight / 2}px`;
+    }
+
+    // Determine which card the finger is over
+    const target = document.elementFromPoint(touch.clientX, touch.clientY);
+    if (!target) {
+        dragOverIndex.value = null;
+        return;
+    }
+
+    // Walk up to find the [data-page-index] card
+    const card = (target as HTMLElement).closest('[data-page-index]') as HTMLElement | null;
+    if (card) {
+        const idx = parseInt(card.dataset.pageIndex ?? '', 10);
+        if (!isNaN(idx)) {
+            dragOverIndex.value = idx;
+        }
+    } else {
+        dragOverIndex.value = null;
+    }
+}
+
+function onTouchEnd() {
+    if (touchDragging.value && dragIndex.value !== null && dragOverIndex.value !== null) {
+        movePage(dragIndex.value, dragOverIndex.value);
+    }
+    dragIndex.value = null;
+    dragOverIndex.value = null;
+    touchDragging.value = false;
+    removeTouchClone();
+}
+
+function removeTouchClone() {
+    if (touchClone.value) {
+        touchClone.value.remove();
+        touchClone.value = null;
+    }
+}
+
+// -------------------------------------------------------------------------
+// Shared reorder logic
+// -------------------------------------------------------------------------
+
+function movePage(fromIndex: number | null, toIndex: number) {
+    if (fromIndex === null || fromIndex === toIndex) {
         dragIndex.value = null;
         dragOverIndex.value = null;
         return;
     }
 
     const arr = [...pages.value];
-    const [moved] = arr.splice(dragIndex.value, 1);
-    arr.splice(targetIndex, 0, moved);
+    const [moved] = arr.splice(fromIndex, 1);
+    arr.splice(toIndex, 0, moved);
     pages.value = arr;
 
-    dragIndex.value = null;
-    dragOverIndex.value = null;
-}
-
-function onDragEnd() {
     dragIndex.value = null;
     dragOverIndex.value = null;
 }
@@ -123,12 +217,18 @@ defineExpose({ getPageOrder });
         <div v-else-if="pages.length > 0">
             <p class="mb-4 text-sm text-gray-500 dark:text-gray-400">{{ trans('tool.organize.drag_hint') }}</p>
 
-            <div class="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4">
+            <div ref="gridRef" class="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4"
+                @touchmove.passive="false"
+                @touchmove="onTouchMove"
+                @touchend="onTouchEnd"
+                @touchcancel="onTouchEnd"
+            >
                 <div
                     v-for="(page, i) in pages"
                     :key="`${page.index}-${i}`"
+                    :data-page-index="i"
                     draggable="true"
-                    class="group relative cursor-grab rounded-lg border-2 bg-white p-2 shadow-sm transition-all dark:bg-gray-800"
+                    class="group relative cursor-grab rounded-lg border-2 bg-white p-2 shadow-sm transition-all select-none dark:bg-gray-800"
                     :class="{
                         'border-cyan-400 ring-2 ring-cyan-200': dragOverIndex === i,
                         'border-gray-200 hover:border-gray-300 hover:shadow-md dark:border-gray-600 dark:hover:border-gray-500': dragOverIndex !== i,
@@ -139,34 +239,35 @@ defineExpose({ getPageOrder });
                     @dragleave="onDragLeave"
                     @drop="onDrop(i)"
                     @dragend="onDragEnd"
+                    @touchstart="onTouchStart(i, $event)"
                 >
-                    <img :src="page.url" alt="" class="w-full rounded" />
+                    <img :src="page.url" alt="" class="w-full rounded pointer-events-none" />
 
                     <!-- Page number badge -->
                     <span class="absolute bottom-1 left-1/2 -translate-x-1/2 rounded bg-gray-800/70 px-2 py-0.5 text-xs font-medium text-white">
                         {{ i + 1 }}
                     </span>
 
-                    <!-- Action buttons -->
-                    <div class="absolute right-1 top-1 flex gap-1 opacity-0 transition-opacity group-hover:opacity-100">
+                    <!-- Action buttons (visible on hover for desktop, always visible on mobile) -->
+                    <div class="absolute right-1 top-1 flex gap-1 opacity-100 sm:opacity-0 transition-opacity sm:group-hover:opacity-100">
                         <button
                             type="button"
-                            class="rounded bg-cyan-500 p-1 text-white shadow hover:bg-cyan-600"
+                            class="rounded bg-cyan-500 p-1.5 sm:p-1 text-white shadow hover:bg-cyan-600"
                             :title="trans('tool.organize.duplicate')"
                             @click.stop="duplicatePage(i)"
                         >
-                            <svg class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <svg class="h-4 w-4 sm:h-3.5 sm:w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M8 7v8a2 2 0 002 2h6M8 7V5a2 2 0 012-2h4.586a1 1 0 01.707.293l4.414 4.414a1 1 0 01.293.707V15a2 2 0 01-2 2h-2M8 7H6a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2v-2" />
                             </svg>
                         </button>
                         <button
                             type="button"
-                            class="rounded bg-red-500 p-1 text-white shadow hover:bg-red-600"
+                            class="rounded bg-red-500 p-1.5 sm:p-1 text-white shadow hover:bg-red-600"
                             :title="trans('tool.organize.delete')"
                             :disabled="pages.length <= 1"
                             @click.stop="deletePage(i)"
                         >
-                            <svg class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <svg class="h-4 w-4 sm:h-3.5 sm:w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
                             </svg>
                         </button>

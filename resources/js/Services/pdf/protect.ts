@@ -1,69 +1,91 @@
-import { PDFDocument } from 'pdf-lib';
-import { stampDefaultMetadata } from '../pdfUtils';
+import * as pdfjsLib from 'pdfjs-dist';
+import { createCanvas, canvasToBlob, MAX_PDF_PAGES } from '../pdfUtils';
+import { buildEncryptedPdf, buildPermissionFlags, type PageImage, type PdfPermissions } from './pdfCrypto';
 
 export interface ProtectOptions {
     userPassword: string;
     ownerPassword: string;
-    permissions?: {
-        printing?: boolean;
-        copying?: boolean;
-        modifying?: boolean;
-    };
+    permissions?: PdfPermissions;
 }
 
+/** Render scale for page images — high quality to minimise visual loss. */
+const RENDER_SCALE = 2.0;
+/** JPEG quality for embedded page images. */
+const JPEG_QUALITY = 0.92;
+
 /**
- * Add password protection and permission restrictions to a PDF.
+ * Add password protection to a PDF.
  *
- * Passes encryption options (userPassword, ownerPassword, permissions) to
- * pdf-lib's save() method. The type definitions in pdf-lib 1.17.x do not
- * expose these options, so we cast through `as any` to access the runtime
- * encryption support that is available in compatible builds / forks.
+ * Renders every page as a high-quality JPEG, then builds a new PDF with
+ * Standard Security Handler V2/R3 (RC4-128) encryption.
  *
- * @param file       - The source PDF File.
- * @param options    - Protection options including passwords and permissions.
- * @param onProgress - Optional callback reporting progress from 0 to 100.
- * @returns A Blob containing the password-protected PDF.
+ * This is a lossy operation (text becomes rasterised), but the output is
+ * genuinely encrypted and requires the user password to open.
  */
 export async function protectPdf(
     file: File,
     options: ProtectOptions,
-    onProgress?: (progress: number) => void
+    onProgress?: (progress: number) => void,
 ): Promise<Blob> {
     if (!options.userPassword && !options.ownerPassword) {
         throw new Error('At least one password (user or owner) must be provided');
     }
 
     const arrayBuffer = await file.arrayBuffer();
-    onProgress?.(20);
+    onProgress?.(5);
 
-    const pdfDoc = await PDFDocument.load(arrayBuffer, { ignoreEncryption: true });
-    onProgress?.(50);
+    const pdfDoc = await pdfjsLib.getDocument({ data: new Uint8Array(arrayBuffer) }).promise;
+    const pageCount = pdfDoc.numPages;
+    if (pageCount > MAX_PDF_PAGES) {
+        throw new Error(`PDF has ${pageCount} pages (max ${MAX_PDF_PAGES})`);
+    }
 
-    const permissions = options.permissions ?? {};
+    onProgress?.(10);
 
-    onProgress?.(70);
+    // Render every page as a JPEG image
+    const pages: PageImage[] = [];
 
-    // Build save options with encryption parameters.
-    // pdf-lib's TypeScript types do not include encryption fields, but compatible
-    // runtime builds support them. We use `as any` to bypass the type check.
-    const saveOptions: Record<string, unknown> = {
-        userPassword: options.userPassword,
-        ownerPassword: options.ownerPassword,
-        permissions: {
-            printing: permissions.printing !== false ? 'highResolution' : undefined,
-            copying: permissions.copying !== false,
-            modifying: permissions.modifying !== false,
-            annotating: permissions.modifying !== false,
-            fillingForms: permissions.modifying !== false,
-            contentAccessibility: true,
-            documentAssembly: permissions.modifying !== false,
-        },
-    };
+    for (let i = 1; i <= pageCount; i++) {
+        const page = await pdfDoc.getPage(i);
+        const origViewport = page.getViewport({ scale: 1.0 });
+        const renderViewport = page.getViewport({ scale: RENDER_SCALE });
 
-    stampDefaultMetadata(pdfDoc, 'protect pdf');
-    const pdfBytes = await pdfDoc.save(saveOptions as any);
+        const canvas = createCanvas(renderViewport.width, renderViewport.height);
+        const ctx = canvas.getContext('2d');
+        if (!ctx) throw new Error('Failed to get canvas context');
+
+        await page.render({
+            canvas: canvas as any,
+            canvasContext: ctx as any,
+            viewport: renderViewport,
+        }).promise;
+
+        const jpegBlob = await canvasToBlob(canvas, 'image/jpeg', JPEG_QUALITY);
+        const jpegBytes = new Uint8Array(await jpegBlob.arrayBuffer());
+
+        pages.push({
+            jpegBytes,
+            widthPt: origViewport.width,
+            heightPt: origViewport.height,
+            widthPx: Math.round(renderViewport.width),
+            heightPx: Math.round(renderViewport.height),
+        });
+
+        onProgress?.(10 + Math.round((i / pageCount) * 70));
+    }
+
+    onProgress?.(85);
+
+    // Build the encrypted PDF
+    const permissions = buildPermissionFlags(options.permissions ?? {});
+    const encryptedBytes = buildEncryptedPdf(
+        pages,
+        options.userPassword,
+        options.ownerPassword || options.userPassword,
+        permissions,
+    );
 
     onProgress?.(100);
 
-    return new Blob([pdfBytes as BlobPart], { type: 'application/pdf' });
+    return new Blob([encryptedBytes], { type: 'application/pdf' });
 }

@@ -2,7 +2,7 @@
   "version": "WSG 1.0",
   "spec": "https://www.w3.org/TR/web-sustainability-guidelines/",
   "totalGuidelines": 80,
-  "date": "2026-03-10",
+  "date": "2026-03-11",
   "summary": {
     "full": 50,
     "partial": 1,
@@ -29,7 +29,7 @@
         { "id": "2.15", "title": "Provide accessible, usable, minimal web forms", "status": "full", "detail": "Tool interfaces use minimal form elements: a file input and optional settings. No mandatory fields beyond the file itself." },
         { "id": "2.16", "title": "Avoid unwanted notifications", "status": "full", "detail": "Zero push notifications. No email collection. No permission requests for notifications or location." },
         { "id": "2.17", "title": "Reduce the impact of downloadable and physical documents", "status": "full", "detail": "Tools like compress-pdf, grayscale-pdf, and remove-blank-pages directly reduce document size and print impact." },
-        { "id": "2.19", "title": "Audit and test for bugs or issues requiring resolution", "status": "full", "detail": "SCI profiler runs automated benchmarks across all 36 tools. Build pipeline includes type checking and linting." },
+        { "id": "2.19", "title": "Audit and test for bugs or issues requiring resolution", "status": "full", "detail": "SCI profiler runs automated benchmarks across all 36 tools. Vitest suite with 202 tests covering all PDF services. Build pipeline includes type checking and linting." },
         { "id": "2.21", "title": "Regularly test and maintain compatibility", "status": "full", "detail": "Tested on Chrome, Firefox, Safari. Uses standard Web APIs and progressive enhancement." }
       ]
     },

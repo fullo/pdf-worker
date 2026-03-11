@@ -4,55 +4,24 @@ import { savePdfAsBlob, stampDefaultMetadata, createCanvas, canvasToBlob, MAX_PD
 
 export type CompressionLevel = 'low' | 'medium' | 'high';
 
+/** JPEG quality per level (0-1, lower = smaller file). */
 const QUALITY_MAP: Record<CompressionLevel, number> = {
-    low: 0.8,
-    medium: 0.5,
-    high: 0.3,
+    low: 0.85,
+    medium: 0.65,
+    high: 0.4,
 };
 
+/** Render scale per level (1 = native resolution). */
 const SCALE_MAP: Record<CompressionLevel, number> = {
-    low: 1.0,
-    medium: 0.75,
-    high: 0.5,
+    low: 1.5,
+    medium: 1.0,
+    high: 0.75,
 };
 
 /**
- * Re-encode an image from raw data to JPEG using canvas.
- * Uses createImageBitmap for worker compatibility.
- */
-async function reencodeImageAsJpeg(
-    imageBytes: Uint8Array,
-    quality: number,
-    scale: number
-): Promise<Uint8Array> {
-    let bitmap: ImageBitmap;
-    try {
-        const blob = new Blob([imageBytes as BlobPart]);
-        bitmap = await createImageBitmap(blob);
-    } catch {
-        // If the image can't be decoded, skip reencoding
-        return imageBytes;
-    }
-
-    const width = Math.round(bitmap.width * scale);
-    const height = Math.round(bitmap.height * scale);
-
-    const canvas = createCanvas(width, height);
-    const ctx = canvas.getContext('2d');
-    if (!ctx) {
-        bitmap.close();
-        return imageBytes;
-    }
-
-    (ctx as any).drawImage(bitmap, 0, 0, width, height);
-    bitmap.close();
-
-    const jpegBlob = await canvasToBlob(canvas, 'image/jpeg', quality);
-    return new Uint8Array(await jpegBlob.arrayBuffer());
-}
-
-/**
- * Render each page at reduced quality using pdf.js and reassemble.
+ * Render each page as a JPEG image and reassemble into a new PDF.
+ * This is a lossy compression: text becomes rasterised, but file size
+ * is typically much smaller for image-heavy documents.
  */
 async function renderBasedCompress(
     file: File,
@@ -94,7 +63,7 @@ async function renderBasedCompress(
             height: origViewport.height,
         });
 
-        onProgress?.(Math.round((i / pageCount) * 100));
+        onProgress?.(Math.round((i / pageCount) * 90));
     }
 
     stampDefaultMetadata(newPdf, 'compress pdf');
@@ -103,6 +72,7 @@ async function renderBasedCompress(
 
 /**
  * Light compression: reload the PDF with pdf-lib and re-save it.
+ * Strips all metadata and re-serialises (which can shrink bloated PDFs).
  */
 async function lightCompress(
     file: File,
@@ -124,20 +94,48 @@ async function lightCompress(
     onProgress?.(80);
 
     const blob = await savePdfAsBlob(pdfDoc);
-    onProgress?.(100);
+    onProgress?.(90);
     return blob;
 }
 
 /**
  * Compress a PDF file.
+ *
+ * Strategy:
+ * - low: re-serialise via pdf-lib (lossless, strips metadata)
+ * - medium / high: render pages as JPEG and rebuild (lossy, significant savings)
+ *
+ * After compression, the output is compared to the input.
+ * If the result is not smaller, a descriptive error is thrown so the user
+ * gets clear feedback instead of silently downloading a larger file.
  */
 export async function compressPdf(
     file: File,
     level: CompressionLevel,
     onProgress?: (progress: number) => void
 ): Promise<Blob> {
-    if (level === 'low') {
-        return lightCompress(file, onProgress);
+    const inputSize = file.size;
+
+    const result = level === 'low'
+        ? await lightCompress(file, onProgress)
+        : await renderBasedCompress(file, level, onProgress);
+
+    onProgress?.(100);
+
+    if (result.size >= inputSize) {
+        throw new Error(
+            `This PDF is already well optimised. ` +
+            `Compression would increase the size from ${formatSize(inputSize)} to ${formatSize(result.size)}.`
+        );
     }
-    return renderBasedCompress(file, level, onProgress);
+
+    return result;
+}
+
+/** Human-readable file size. */
+function formatSize(bytes: number): string {
+    if (bytes < 1024) return `${bytes} B`;
+    const kb = bytes / 1024;
+    if (kb < 1024) return `${kb.toFixed(1)} KB`;
+    return `${(kb / 1024).toFixed(1)} MB`;
 }
