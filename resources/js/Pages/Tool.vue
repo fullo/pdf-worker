@@ -704,7 +704,7 @@ const hasTextContent = computed(() => {
 <template>
     <div>
         <!-- Tool Header -->
-        <section :class="[toolConfig.bgColor, 'px-4 py-12 sm:py-16']">
+        <section :class="[toolConfig.bgColor, 'px-4 py-12 sm:py-16 dark:bg-gray-800']">
             <div class="mx-auto max-w-3xl text-center">
                 <h1 class="mb-3 text-3xl font-bold text-gray-900 sm:text-4xl dark:text-white">
                     {{ trans(`tools.${tool}.name`) }}

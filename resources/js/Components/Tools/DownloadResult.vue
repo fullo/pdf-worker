@@ -17,8 +17,10 @@ const emit = defineEmits<{
 
 const adContainer = ref<HTMLElement | null>(null);
 const showAd = ref(false);
+const adsenseEnabled = import.meta.env.VITE_ADSENSE === 'true';
 
 onMounted(() => {
+    if (!adsenseEnabled) return;
     if (localStorage.getItem('cookie_consent') !== 'accepted') return;
     if (!adContainer.value) return;
     showAd.value = true;

@@ -50,7 +50,7 @@ const currentYear = new Date().getFullYear();
                 </a>
 
                 <!-- Copyright + Privacy -->
-                <div class="flex items-center gap-3 text-xs text-gray-500">
+                <div class="flex flex-wrap justify-center items-center gap-3 text-xs text-gray-500">
                     <span>&copy; {{ currentYear }} PDF Worker. {{ trans('All rights reserved.') }}</span>
                     <span class="text-gray-600">|</span>
                     <RouterLink to="/blog" class="underline underline-offset-2 transition-colors hover:text-gray-300">
@@ -68,6 +68,14 @@ const currentYear = new Date().getFullYear();
                     <RouterLink to="/sustainability" class="underline underline-offset-2 transition-colors hover:text-gray-300">
                         WSG Report
                     </RouterLink>
+                    <span class="text-gray-600">|</span>
+                    <a href="https://github.com/fullo/pdf-worker/" target="_blank" rel="noopener noreferrer" class="underline underline-offset-2 transition-colors hover:text-gray-300">
+                        GitHub
+                    </a>
+                    <span class="text-gray-600">|</span>
+                    <a href="https://github.com/fullo/pdf-worker/issues" target="_blank" rel="noopener noreferrer" class="underline underline-offset-2 transition-colors hover:text-gray-300">
+                        {{ trans('footer.report_bug') }}
+                    </a>
                 </div>
             </div>
         </div>

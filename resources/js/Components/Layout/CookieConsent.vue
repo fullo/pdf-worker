@@ -3,8 +3,10 @@ import { ref, onMounted } from 'vue';
 import { trans } from '@/i18n';
 
 const visible = ref(false);
+const adsenseEnabled = import.meta.env.VITE_ADSENSE === 'true';
 
 onMounted(() => {
+    if (!adsenseEnabled) return;
     if (!localStorage.getItem('cookie_consent')) {
         visible.value = true;
     }
