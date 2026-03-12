@@ -1,11 +1,67 @@
 import { PDFDocument } from 'pdf-lib';
 import * as pdfjsLib from 'pdfjs-dist';
+import type { DocumentInitParameters, PDFDocumentProxy } from 'pdfjs-dist/types/src/display/api';
 
 // Configure pdf.js worker
 pdfjsLib.GlobalWorkerOptions.workerSrc = new URL(
     'pdfjs-dist/build/pdf.worker.mjs',
     import.meta.url
 ).href;
+
+/**
+ * CanvasFactory for Web Worker contexts where `document` is unavailable.
+ * Uses OffscreenCanvas instead of document.createElement('canvas').
+ */
+/**
+ * CanvasFactory for Web Worker contexts where `document` is unavailable.
+ * Uses OffscreenCanvas instead of document.createElement('canvas').
+ */
+class OffscreenCanvasFactory {
+    create(width: number, height: number) {
+        const canvas = new OffscreenCanvas(width, height);
+        return { canvas, context: canvas.getContext('2d') };
+    }
+    reset(canvasAndContext: any, width: number, height: number) {
+        canvasAndContext.canvas.width = width;
+        canvasAndContext.canvas.height = height;
+    }
+    destroy(canvasAndContext: any) {
+        canvasAndContext.canvas.width = 0;
+        canvasAndContext.canvas.height = 0;
+        canvasAndContext.canvas = null;
+        canvasAndContext.context = null;
+    }
+}
+
+/**
+ * No-op FilterFactory for Web Worker contexts where DOM SVG filters are unavailable.
+ * pdfjs DOMFilterFactory uses document.createElement/createElementNS which fails in workers.
+ */
+class NoopFilterFactory {
+    addFilter() { return 'none'; }
+    addHCMFilter() { return 'none'; }
+    addAlphaFilter() { return 'none'; }
+    addLuminosityFilter() { return 'none'; }
+    addHighlightHCMFilter() { return 'none'; }
+    destroy() {}
+}
+
+const isWorker = typeof document === 'undefined';
+
+/**
+ * Load a PDF with pdfjs-dist, automatically using OffscreenCanvas and
+ * no-op filters in Web Worker contexts where `document` is unavailable.
+ */
+export function getPdfjsDocument(
+    options: DocumentInitParameters & { data: Uint8Array }
+): Promise<PDFDocumentProxy> {
+    const opts: any = { ...options };
+    if (isWorker) {
+        opts.CanvasFactory = OffscreenCanvasFactory;
+        opts.FilterFactory = NoopFilterFactory;
+    }
+    return pdfjsLib.getDocument(opts).promise;
+}
 
 /** Maximum number of pages allowed in a PDF to prevent CPU exhaustion. */
 export const MAX_PDF_PAGES = 5000;
@@ -87,7 +143,7 @@ export async function renderPageAsImage(
     scale: number = 2.0
 ): Promise<Blob> {
     const arrayBuffer = await file.arrayBuffer();
-    const pdfDoc = await pdfjsLib.getDocument({ data: new Uint8Array(arrayBuffer) }).promise;
+    const pdfDoc = await getPdfjsDocument({ data: new Uint8Array(arrayBuffer) });
     const page = await pdfDoc.getPage(pageNum);
     const viewport = page.getViewport({ scale });
 
@@ -104,7 +160,7 @@ export async function renderPageAsImage(
  */
 export async function getPageCount(file: File | Blob): Promise<number> {
     const arrayBuffer = await file.arrayBuffer();
-    const pdfDoc = await pdfjsLib.getDocument({ data: new Uint8Array(arrayBuffer) }).promise;
+    const pdfDoc = await getPdfjsDocument({ data: new Uint8Array(arrayBuffer) });
     return pdfDoc.numPages;
 }
 

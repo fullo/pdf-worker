@@ -1,6 +1,5 @@
 import { PDFDocument } from 'pdf-lib';
-import * as pdfjsLib from 'pdfjs-dist';
-import { savePdfAsBlob, stampDefaultMetadata, createCanvas, canvasToBlob, MAX_PDF_PAGES } from '../pdfUtils';
+import { savePdfAsBlob, stampDefaultMetadata, createCanvas, canvasToBlob, MAX_PDF_PAGES, getPdfjsDocument } from '../pdfUtils';
 
 export type CompressionLevel = 'low' | 'medium' | 'high';
 
@@ -32,7 +31,7 @@ async function renderBasedCompress(
     const scale = SCALE_MAP[level];
     const arrayBuffer = await file.arrayBuffer();
 
-    const pdfDoc = await pdfjsLib.getDocument({ data: new Uint8Array(arrayBuffer) }).promise;
+    const pdfDoc = await getPdfjsDocument({ data: new Uint8Array(arrayBuffer) });
     const pageCount = pdfDoc.numPages;
     if (pageCount > MAX_PDF_PAGES) {
         throw new Error(`PDF has ${pageCount} pages (max ${MAX_PDF_PAGES})`);

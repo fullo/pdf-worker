@@ -1,6 +1,6 @@
-import * as pdfjsLib from 'pdfjs-dist';
 import { PDFDocument } from 'pdf-lib';
-import { savePdfAsBlob, stampDefaultMetadata, createCanvas, canvasToBlob, MAX_PDF_PAGES } from '../pdfUtils';
+import type { PDFDocumentProxy } from 'pdfjs-dist';
+import { savePdfAsBlob, stampDefaultMetadata, createCanvas, canvasToBlob, MAX_PDF_PAGES, getPdfjsDocument } from '../pdfUtils';
 
 /** Render scale for page images — high quality to minimise visual loss. */
 const RENDER_SCALE = 2.0;
@@ -33,12 +33,12 @@ export async function unlockPdf(
     // Attempt to open with the supplied password.
     // pdfjs-dist validates the password against the PDF's encryption dict
     // and throws PasswordException if it's incorrect.
-    let pdfDoc: pdfjsLib.PDFDocumentProxy;
+    let pdfDoc: PDFDocumentProxy;
     try {
-        pdfDoc = await pdfjsLib.getDocument({
+        pdfDoc = await getPdfjsDocument({
             data: new Uint8Array(arrayBuffer),
             password,
-        }).promise;
+        });
     } catch (error: any) {
         if (error?.name === 'PasswordException') {
             throw new Error('Incorrect password. Please check and try again.');

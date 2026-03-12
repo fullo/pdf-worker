@@ -1,5 +1,4 @@
-import * as pdfjsLib from 'pdfjs-dist';
-import { createCanvas, canvasToBlob, MAX_PDF_PAGES } from '../pdfUtils';
+import { createCanvas, canvasToBlob, MAX_PDF_PAGES, getPdfjsDocument } from '../pdfUtils';
 import { buildEncryptedPdf, buildPermissionFlags, type PageImage, type PdfPermissions } from './pdfCrypto';
 
 export interface ProtectOptions {
@@ -34,7 +33,7 @@ export async function protectPdf(
     const arrayBuffer = await file.arrayBuffer();
     onProgress?.(5);
 
-    const pdfDoc = await pdfjsLib.getDocument({ data: new Uint8Array(arrayBuffer) }).promise;
+    const pdfDoc = await getPdfjsDocument({ data: new Uint8Array(arrayBuffer) });
     const pageCount = pdfDoc.numPages;
     if (pageCount > MAX_PDF_PAGES) {
         throw new Error(`PDF has ${pageCount} pages (max ${MAX_PDF_PAGES})`);

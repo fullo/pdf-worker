@@ -1,6 +1,5 @@
-import * as pdfjsLib from 'pdfjs-dist';
 import { PDFDocument } from 'pdf-lib';
-import { createCanvas, canvasToBlob, savePdfAsBlob, stampDefaultMetadata, MAX_PDF_PAGES } from '../pdfUtils';
+import { createCanvas, canvasToBlob, savePdfAsBlob, stampDefaultMetadata, MAX_PDF_PAGES, getPdfjsDocument } from '../pdfUtils';
 
 /**
  * Compare two PDFs visually.
@@ -14,8 +13,8 @@ export async function comparePdf(
 ): Promise<Blob> {
     const [ab1, ab2] = await Promise.all([file1.arrayBuffer(), file2.arrayBuffer()]);
     const [doc1, doc2] = await Promise.all([
-        pdfjsLib.getDocument({ data: new Uint8Array(ab1) }).promise,
-        pdfjsLib.getDocument({ data: new Uint8Array(ab2) }).promise,
+        getPdfjsDocument({ data: new Uint8Array(ab1) }),
+        getPdfjsDocument({ data: new Uint8Array(ab2) }),
     ]);
 
     if (doc1.numPages > MAX_PDF_PAGES || doc2.numPages > MAX_PDF_PAGES) {

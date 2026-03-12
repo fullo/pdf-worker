@@ -1,7 +1,6 @@
-import * as pdfjsLib from 'pdfjs-dist';
 import { PDFDocument } from 'pdf-lib';
 import { createWorker } from 'tesseract.js';
-import { createCanvas, canvasToBlob, savePdfAsBlob, stampDefaultMetadata, MAX_PDF_PAGES } from '../pdfUtils';
+import { createCanvas, canvasToBlob, savePdfAsBlob, stampDefaultMetadata, MAX_PDF_PAGES, getPdfjsDocument } from '../pdfUtils';
 
 /**
  * OCR a PDF: render each page, run Tesseract OCR, and create a new PDF
@@ -13,7 +12,7 @@ export async function ocrPdf(
     onProgress?: (progress: number) => void
 ): Promise<Blob> {
     const arrayBuffer = await file.arrayBuffer();
-    const renderDoc = await pdfjsLib.getDocument({ data: new Uint8Array(arrayBuffer) }).promise;
+    const renderDoc = await getPdfjsDocument({ data: new Uint8Array(arrayBuffer) });
     const pageCount = renderDoc.numPages;
     if (pageCount > MAX_PDF_PAGES) {
         throw new Error(`PDF has ${pageCount} pages (max ${MAX_PDF_PAGES})`);

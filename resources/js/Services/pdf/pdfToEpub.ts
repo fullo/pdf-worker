@@ -1,6 +1,5 @@
-import * as pdfjsLib from 'pdfjs-dist';
 import JSZip from 'jszip';
-import { MAX_PDF_PAGES } from '../pdfUtils';
+import { MAX_PDF_PAGES, getPdfjsDocument } from '../pdfUtils';
 
 /**
  * Convert a PDF to EPUB format.
@@ -13,7 +12,7 @@ export async function pdfToEpub(
     onProgress?: (progress: number) => void
 ): Promise<Blob> {
     const arrayBuffer = await file.arrayBuffer();
-    const pdfDoc = await pdfjsLib.getDocument({ data: new Uint8Array(arrayBuffer) }).promise;
+    const pdfDoc = await getPdfjsDocument({ data: new Uint8Array(arrayBuffer) });
     const pageCount = pdfDoc.numPages;
     if (pageCount > MAX_PDF_PAGES) {
         throw new Error(`PDF has ${pageCount} pages (max ${MAX_PDF_PAGES})`);

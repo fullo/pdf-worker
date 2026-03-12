@@ -1,6 +1,5 @@
 import { PDFDocument } from 'pdf-lib';
-import * as pdfjsLib from 'pdfjs-dist';
-import { createCanvas, canvasToBlob, savePdfAsBlob, stampDefaultMetadata, MAX_PDF_PAGES } from '../pdfUtils';
+import { createCanvas, canvasToBlob, savePdfAsBlob, stampDefaultMetadata, MAX_PDF_PAGES, getPdfjsDocument } from '../pdfUtils';
 
 /**
  * Invert all colors in a PDF document.
@@ -10,7 +9,7 @@ export async function invertColors(
     onProgress?: (progress: number) => void
 ): Promise<Blob> {
     const arrayBuffer = await file.arrayBuffer();
-    const renderDoc = await pdfjsLib.getDocument({ data: new Uint8Array(arrayBuffer) }).promise;
+    const renderDoc = await getPdfjsDocument({ data: new Uint8Array(arrayBuffer) });
     const pageCount = renderDoc.numPages;
     if (pageCount > MAX_PDF_PAGES) {
         throw new Error(`PDF has ${pageCount} pages (max ${MAX_PDF_PAGES})`);

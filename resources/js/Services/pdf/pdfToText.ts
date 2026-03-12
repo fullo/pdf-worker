@@ -1,5 +1,4 @@
-import * as pdfjsLib from 'pdfjs-dist';
-import { MAX_PDF_PAGES } from '../pdfUtils';
+import { MAX_PDF_PAGES, getPdfjsDocument } from '../pdfUtils';
 
 /**
  * Extract all text content from a PDF file.
@@ -16,7 +15,7 @@ export async function pdfToText(
     onProgress?: (progress: number) => void
 ): Promise<Blob> {
     const arrayBuffer = await file.arrayBuffer();
-    const pdfDoc = await pdfjsLib.getDocument({ data: new Uint8Array(arrayBuffer) }).promise;
+    const pdfDoc = await getPdfjsDocument({ data: new Uint8Array(arrayBuffer) });
     const pageCount = pdfDoc.numPages;
     if (pageCount > MAX_PDF_PAGES) {
         throw new Error(`PDF has ${pageCount} pages (max ${MAX_PDF_PAGES})`);
