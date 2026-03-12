@@ -48,6 +48,22 @@ describe('nupPdf', () => {
         expect(doc.getPageCount()).toBe(2);
     });
 
+    it('handles 3 pages with 4-up (empty cell filled)', async () => {
+        const file = await createSimplePdf(3);
+        const result = await nupPdf(file, 4);
+        const doc = await expectValidPdf(result);
+        // 3 pages → 1 sheet with 1 empty cell
+        expect(doc.getPageCount()).toBe(1);
+    });
+
+    it('handles 3 pages with 9-up (6 empty cells filled)', async () => {
+        const file = await createSimplePdf(3);
+        const result = await nupPdf(file, 9);
+        const doc = await expectValidPdf(result);
+        // 3 pages → 1 sheet with 6 empty cells
+        expect(doc.getPageCount()).toBe(1);
+    });
+
     it('reports progress', async () => {
         const file = await createSimplePdf(4);
         const values: number[] = [];

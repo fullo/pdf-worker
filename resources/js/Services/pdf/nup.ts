@@ -52,22 +52,29 @@ export async function nupPdf(
 
         for (let slot = 0; slot < layout; slot++) {
             const pageIdx = sheet * layout + slot + 1;
-            if (pageIdx > pageCount) break;
+            const slotCol = slot % cols;
+            const slotRow = Math.floor(slot / cols);
+
+            // Cell origin (top-left of each cell area, accounting for padding)
+            const cellX = pad + slotCol * (cellW + pad);
+            const cellY = pad + slotRow * (cellH + pad);
+
+            // Draw light border around every cell (including empty ones)
+            (ctx as any).strokeStyle = BORDER_COLOR;
+            (ctx as any).lineWidth = 1;
+            (ctx as any).strokeRect(cellX, cellY, cellW, cellH);
+
+            // Skip rendering for slots beyond the actual page count
+            if (pageIdx > pageCount) continue;
 
             const page = await pdfDoc.getPage(pageIdx);
             const vp = page.getViewport({ scale: 1.0 });
-            const slotCol = slot % cols;
-            const slotRow = Math.floor(slot / cols);
 
             // Scale page to fit cell while preserving aspect ratio
             const scaleX = cellW / vp.width;
             const scaleY = cellH / vp.height;
             const fitScale = Math.min(scaleX, scaleY);
             const renderVp = page.getViewport({ scale: fitScale });
-
-            // Cell origin (top-left of each cell area, accounting for padding)
-            const cellX = pad + slotCol * (cellW + pad);
-            const cellY = pad + slotRow * (cellH + pad);
 
             // Center page within its cell
             const offsetX = cellX + (cellW - renderVp.width) / 2;
@@ -78,12 +85,6 @@ export async function nupPdf(
             if (!tmpCtx) throw new Error('Failed to get canvas 2d context');
 
             await page.render({ canvas: tmpCanvas as any, canvasContext: tmpCtx as any, viewport: renderVp }).promise;
-
-            // Draw light border around the cell
-            (ctx as any).strokeStyle = BORDER_COLOR;
-            (ctx as any).lineWidth = 1;
-            (ctx as any).strokeRect(cellX, cellY, cellW, cellH);
-
             (ctx as any).drawImage(tmpCanvas as any, offsetX, offsetY);
         }
 
