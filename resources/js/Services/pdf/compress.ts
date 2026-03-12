@@ -7,11 +7,15 @@ export type CompressionLevel = 'low' | 'medium' | 'high';
 const IMAGE_QUALITY_MAP: Record<CompressionLevel, number> = {
     low: 0.85,
     medium: 0.55,
-    high: 0.30,
+    high: 0.15,
 };
 
 /** Minimum pixel area to consider an image for recompression. */
-const MIN_PIXEL_AREA = 10_000; // ~100×100
+const MIN_PIXEL_AREA: Record<CompressionLevel, number> = {
+    low: 10_000,    // ~100×100
+    medium: 10_000, // ~100×100
+    high: 2_500,    // ~50×50  — compress almost everything
+};
 
 // ─── Image XObject discovery ───────────────────────────────────────
 
@@ -65,14 +69,16 @@ function findImageXObjects(pdfDoc: PDFDocument): ImageInfo[] {
  * Check if an image is eligible for recompression at the given level.
  */
 function isEligible(img: ImageInfo, level: CompressionLevel): boolean {
-    // Skip tiny images (icons, logos)
-    if (img.width * img.height < MIN_PIXEL_AREA) return false;
+    // Skip tiny images based on level threshold
+    if (img.width * img.height < MIN_PIXEL_AREA[level]) return false;
 
     // Skip images with transparency (JPEG has no alpha)
     if (img.hasSMask) return false;
 
-    // Skip CMYK and exotic color spaces (only DeviceRGB and DeviceGray)
-    if (img.colorSpace !== '/DeviceRGB' && img.colorSpace !== '/DeviceGray') return false;
+    // Color space filtering depends on level
+    const supportedCS = ['/DeviceRGB', '/DeviceGray'];
+    if (level === 'high') supportedCS.push('/DeviceCMYK');
+    if (!supportedCS.includes(img.colorSpace)) return false;
 
     if (level === 'medium') {
         // Medium: only recompress existing JPEG images
@@ -109,7 +115,8 @@ async function recompressImage(info: ImageInfo, quality: number): Promise<Uint8A
         bitmap = await createImageBitmap(blob);
     } else {
         // FlateDecode: interpret raw pixels as ImageData
-        const channels = info.colorSpace === '/DeviceGray' ? 1 : 3;
+        const channels = info.colorSpace === '/DeviceCMYK' ? 4
+            : info.colorSpace === '/DeviceGray' ? 1 : 3;
         const expectedBytes = info.width * info.height * channels;
         if (pixelData.length < expectedBytes) {
             throw new Error('Pixel data too short for image dimensions');
@@ -119,8 +126,19 @@ async function recompressImage(info: ImageInfo, quality: number): Promise<Uint8A
         const rgba = new Uint8ClampedArray(info.width * info.height * 4);
         for (let i = 0; i < info.width * info.height; i++) {
             if (channels === 1) {
+                // Grayscale
                 rgba[i * 4] = rgba[i * 4 + 1] = rgba[i * 4 + 2] = pixelData[i];
+            } else if (channels === 4) {
+                // CMYK → RGB (simple subtractive conversion)
+                const c = pixelData[i * 4] / 255;
+                const m = pixelData[i * 4 + 1] / 255;
+                const y = pixelData[i * 4 + 2] / 255;
+                const k = pixelData[i * 4 + 3] / 255;
+                rgba[i * 4] = Math.round(255 * (1 - c) * (1 - k));
+                rgba[i * 4 + 1] = Math.round(255 * (1 - m) * (1 - k));
+                rgba[i * 4 + 2] = Math.round(255 * (1 - y) * (1 - k));
             } else {
+                // RGB
                 rgba[i * 4] = pixelData[i * 3];
                 rgba[i * 4 + 1] = pixelData[i * 3 + 1];
                 rgba[i * 4 + 2] = pixelData[i * 3 + 2];
