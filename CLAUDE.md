@@ -88,6 +88,8 @@ npm run build
 
 The SCI profiler is dev-only (`import.meta.env.DEV`) and stripped from production bundles.
 
+Every time a tool is created the SCI benchmarks has to be updated.
+
 ## Sustainability tracking
 
 These files are the single source of truth for sustainability data. Update them when adding tools, changing architecture, or modifying dependencies.
@@ -139,6 +141,8 @@ npm run test              # run once
 npm run test:watch        # watch mode
 npm run test:coverage     # coverage report (v8 provider)
 ```
+
+Run the test suite before a push.
 
 ### Test infrastructure
 
