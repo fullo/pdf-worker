@@ -100,5 +100,56 @@
       { "service": "edit-pdf", "wallTimeMs": 7, "inputBytes": 23732, "outputBytes": 24103, "sciMgCO2eq": 11.156 }
     ],
     "totalSciMg": 34077.425
+  },
+  {
+    "commit": "4adf2f8",
+    "date": "2026-03-12T13:30:01.732Z",
+    "machine": "MacBook dev machine",
+    "lcaSource": "Apple 14-inch MacBook Pro PER Oct 2021",
+    "constants": {
+      "devicePowerW": 18,
+      "carbonIntensity": 332,
+      "embodiedG": 211000,
+      "lifetimeH": 11680
+    },
+    "results": [
+      { "service": "merge-pdf", "wallTimeMs": 93, "inputBytes": 47468, "outputBytes": 45744, "sciMgCO2eq": 154.68 },
+      { "service": "split-pdf", "wallTimeMs": 6, "inputBytes": 23734, "outputBytes": 22215, "sciMgCO2eq": 9.824 },
+      { "service": "compress-pdf", "wallTimeMs": 0, "inputBytes": 0, "outputBytes": 0, "sciMgCO2eq": 0 },
+      { "service": "rotate-pdf", "wallTimeMs": 4, "inputBytes": 23734, "outputBytes": 23727, "sciMgCO2eq": 7.16 },
+      { "service": "watermark-pdf", "wallTimeMs": 22, "inputBytes": 23734, "outputBytes": 26237, "sciMgCO2eq": 37.13 },
+      { "service": "page-numbers", "wallTimeMs": 6, "inputBytes": 23734, "outputBytes": 25806, "sciMgCO2eq": 9.99 },
+      { "service": "pdf-to-jpg", "wallTimeMs": 221, "inputBytes": 23734, "outputBytes": 1075138, "sciMgCO2eq": 368.468 },
+      { "service": "organize-pdf", "wallTimeMs": 4, "inputBytes": 23734, "outputBytes": 23775, "sciMgCO2eq": 6.327 },
+      { "service": "crop-pdf", "wallTimeMs": 5, "inputBytes": 23734, "outputBytes": 23738, "sciMgCO2eq": 7.826 },
+      { "service": "pdf-to-png", "wallTimeMs": 221, "inputBytes": 23734, "outputBytes": 1666975, "sciMgCO2eq": 368.635 },
+      { "service": "extract-images", "wallTimeMs": 18, "inputBytes": 23734, "outputBytes": 723, "sciMgCO2eq": 29.304 },
+      { "service": "grayscale-pdf", "wallTimeMs": 409, "inputBytes": 23734, "outputBytes": 1133073, "sciMgCO2eq": 680.493 },
+      { "service": "resize-pdf", "wallTimeMs": 219, "inputBytes": 23734, "outputBytes": 1348487, "sciMgCO2eq": 365.138 },
+      { "service": "header-footer", "wallTimeMs": 6, "inputBytes": 23734, "outputBytes": 26561, "sciMgCO2eq": 9.657 },
+      { "service": "flatten-pdf", "wallTimeMs": 7, "inputBytes": 23734, "outputBytes": 23761, "sciMgCO2eq": 10.989 },
+      { "service": "pdf-to-text", "wallTimeMs": 27, "inputBytes": 23734, "outputBytes": 8462, "sciMgCO2eq": 44.789 },
+      { "service": "edit-metadata", "wallTimeMs": 3, "inputBytes": 23734, "outputBytes": 23661, "sciMgCO2eq": 4.496 },
+      { "service": "pdf-to-webp", "wallTimeMs": 1188, "inputBytes": 23734, "outputBytes": 547220, "sciMgCO2eq": 1978.541 },
+      { "service": "nup-pdf", "wallTimeMs": 874, "inputBytes": 23734, "outputBytes": 558869, "sciMgCO2eq": 1455.559 },
+      { "service": "add-blank-page", "wallTimeMs": 10, "inputBytes": 23734, "outputBytes": 23743, "sciMgCO2eq": 17.15 },
+      { "service": "remove-blank-pages", "wallTimeMs": 74, "inputBytes": 23734, "outputBytes": 23733, "sciMgCO2eq": 122.712 },
+      { "service": "ocr-pdf", "wallTimeMs": 13651, "inputBytes": 23734, "outputBytes": 962182, "sciMgCO2eq": 22728.829 },
+      { "service": "compare-pdf", "wallTimeMs": 3843, "inputBytes": 47468, "outputBytes": 885820, "sciMgCO2eq": 6398.664 },
+      { "service": "reverse-pages", "wallTimeMs": 10, "inputBytes": 23734, "outputBytes": 23625, "sciMgCO2eq": 16.817 },
+      { "service": "invert-colors", "wallTimeMs": 2911, "inputBytes": 23734, "outputBytes": 962194, "sciMgCO2eq": 4846.368 },
+      { "service": "repair-pdf", "wallTimeMs": 8, "inputBytes": 23734, "outputBytes": 23609, "sciMgCO2eq": 12.488 },
+      { "service": "pdf-to-epub", "wallTimeMs": 62, "inputBytes": 23734, "outputBytes": 20044, "sciMgCO2eq": 103.731 },
+      { "service": "booklet-pdf", "wallTimeMs": 10, "inputBytes": 23734, "outputBytes": 23630, "sciMgCO2eq": 16.317 },
+      { "service": "text-to-pdf", "wallTimeMs": 13, "inputBytes": 0, "outputBytes": 2915, "sciMgCO2eq": 21.978 },
+      { "service": "markdown-to-pdf", "wallTimeMs": 27, "inputBytes": 0, "outputBytes": 1708, "sciMgCO2eq": 44.456 },
+      { "service": "protect-pdf", "wallTimeMs": 370, "inputBytes": 23734, "outputBytes": 1425356, "sciMgCO2eq": 615.724 },
+      { "service": "jpg-to-pdf", "wallTimeMs": 0, "inputBytes": 0, "outputBytes": 0, "sciMgCO2eq": 0 },
+      { "service": "unlock-pdf", "wallTimeMs": 290, "inputBytes": 1425356, "outputBytes": 1391609, "sciMgCO2eq": 483.521 },
+      { "service": "redact-pdf", "wallTimeMs": 16, "inputBytes": 23734, "outputBytes": 24038, "sciMgCO2eq": 25.974 },
+      { "service": "sign-pdf", "wallTimeMs": 12, "inputBytes": 23734, "outputBytes": 24437, "sciMgCO2eq": 19.814 },
+      { "service": "edit-pdf", "wallTimeMs": 11, "inputBytes": 23734, "outputBytes": 24103, "sciMgCO2eq": 18.981 }
+    ],
+    "totalSciMg": 41042.529
   }
 ]
